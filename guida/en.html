@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>User guide — Giornale di Scavo</title>
+<link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+<p class="lingue"><a href="index.html">Italiano</a> <strong>English</strong>
+<a href="de.html">Deutsch</a> <a href="es.html">Español</a> <a href="ar.html">العربية</a></p>
+
+<h1>Giornale di Scavo — User guide</h1>
+<p class="sotto">The digital excavation diary for iPhone and iPad. 100% offline: your data stays on your device.</p>
+
+<h2>In a nutshell</h2>
+<p>One idea drives everything: <strong>every dig day is a page</strong> that
+fills itself in. You record things wherever they belong — a GNSS point in
+Survey, a photo in Media, hours in Site — and the day's page in the
+<kbd>Diary</kbd> collects them all automatically. At the end of the week, or of
+the excavation, reports build themselves from the pages.</p>
+
+<h2>A typical day</h2>
+<ol class="flusso">
+<li><b>Morning</b>Open the day's page, note the weather and diary (or speak it with <kbd>Dictate</kbd>)</li>
+<li><b>Crew</b>In <kbd>Site</kbd>, record who is present and their hours</li>
+<li><b>Survey</b>Capture GNSS points; check a benchmark first if you use RTK</li>
+<li><b>Photos</b>Shoot from <kbd>Media</kbd>: coordinates are attached automatically</li>
+<li><b>Drawings</b>Trace the section or plan over a photo (digital tracing sheet)</li>
+<li><b>Evening</b>From <kbd>Reports</kbd>, generate the daily report: a PDF ready to send</li>
+</ol>
+
+<h2>First steps</h2>
+<ol class="passi">
+<li>On first launch you'll find a sample site. To create your own, tap the site
+name at the top (the <kbd>🗺</kbd> icon) → <kbd>New site…</kbd> and give it a
+name (e.g. "Colle Sant'Angelo — Trench 3").</li>
+<li>The active site's name is always visible at the top: every tab shows that
+site's data. Tap the name again to switch site.</li>
+<li>Grant permissions when asked: <em>location</em> (for points),
+<em>camera</em> (for photos), <em>microphone</em> (for dictation),
+<em>Bluetooth</em> (only if you use an external receiver).</li>
+</ol>
+
+<h2>The five tabs</h2>
+
+<h3>📓 Diary</h3>
+<ol class="passi">
+<li>Tap a day to open its page: diary, weather, crew, points, photos and
+drawings of that day are already there.</li>
+<li>Write the diary or tap <kbd>Dictate</kbd> and speak: transcription happens
+on the device and works with no network.</li>
+<li>The weather is noted at the top of the page (e.g. "Clear, 28 °C, light wind").</li>
+</ol>
+
+<h3>📍 Survey</h3>
+<ol class="passi">
+<li>The panel at the top shows the live position: coordinates, elevations,
+accuracy and fix type (GPS / RTK Float / RTK Fix).</li>
+<li>If you use a pole, set the <kbd>Antenna height (m)</kbd>: the point's
+elevation is reduced to the ground automatically.</li>
+<li>Tap <kbd>Capture point</kbd>. Names are sequential (P001, P002…), but you
+can type your own (e.g. "SU 102 — pit bottom") and add a note.</li>
+<li>Switch between <kbd>List</kbd> and <kbd>Map</kbd> to see points in place;
+from the map you can enable a cadastre or another WMS service.</li>
+<li>Benchmarks (🏁) live in their own section: import them from CSV or create
+them, then use <kbd>Check</kbd> to watch the ΔN/ΔE/ΔZ residuals live before
+you survey.</li>
+</ol>
+<p class="nota">Every point stores <strong>both elevations</strong>:
+ellipsoidal and orthometric (a.s.l.). With the phone's internal GPS the
+orthometric height may be unavailable: that needs an external receiver (see
+below).</p>
+
+<h3>📷 Media</h3>
+<ol class="passi">
+<li>Shoot with the camera button or import from the photo library.</li>
+<li>Photos are named sequentially (F001, F002…) and are geotagged with the
+latest available GNSS position.</li>
+<li>Tap a photo to set its title and notes (e.g. "SU 102 from north").</li>
+</ol>
+
+<h3>✏️ Drawings (in Media)</h3>
+<ol class="passi">
+<li>Create a new sheet and pick a site photo as its background: that's your
+digital tracing sheet.</li>
+<li>Trace layers, cuts and stones with a finger or Apple Pencil; adjust the
+photo's opacity to see your strokes better.</li>
+<li>Add text boxes for labels (e.g. "SU 1002") and the north arrow.</li>
+<li>When you're done, hide the photo: the clean drawing stays, ready for the
+report.</li>
+</ol>
+
+<h3>👷 Site</h3>
+<ol class="passi">
+<li>Record the day's attendance: each person's name, role and hours.</li>
+<li>Keep the equipment inventory and who each item is assigned to.</li>
+</ol>
+
+<h3>📄 Reports</h3>
+<ol class="passi">
+<li>Pick the type: <strong>daily</strong> (free, watermarked),
+<strong>weekly</strong>, <strong>monthly</strong> or <strong>final</strong>
+with full appendices <span class="pro">PRO</span>.</li>
+<li>Pick the report language — English, Italian, German, Spanish or Arabic —
+independent of the app's language.</li>
+<li>Generate the PDF, or export DOCX with your logo and photos
+<span class="pro">PRO</span>, CSV of the points, GeoJSON for QGIS
+<span class="pro">PRO</span>.</li>
+</ol>
+
+<h2>External GNSS receiver and NTRIP</h2>
+<p>With an external receiver (centimetre-grade antenna) the app reaches RTK
+accuracy. The internal GPS always remains available as a fallback.</p>
+<ol class="passi">
+<li>Turn the receiver on and enable Bluetooth on the phone.</li>
+<li>In <kbd>Survey</kbd>, choose the position source: <em>External GNSS
+(BLE/NMEA)</em> <span class="pro">PRO</span> and pick your receiver from the
+list. MFi receivers (free) and receivers that stream NMEA over the network are
+supported too.</li>
+<li>For RTK corrections configure <strong>NTRIP</strong>: caster address, port,
+mountpoint, username and password (stored in the device keychain). The app
+sends your position to the caster and receives corrections.</li>
+<li>Wait for <strong>RTK Fix</strong>: centimetre accuracy. Check against a
+benchmark before you start.</li>
+</ol>
+
+<h2>Backup and exchange</h2>
+<ol class="passi">
+<li>From the site menu tap <kbd>Export site (.zip)</kbd>: everything is inside
+— diary, points, photos, drawings, hours, benchmarks.</li>
+<li>Keep the ZIP wherever you like (Files, Drive, e-mail…). It is your backup:
+the app has no cloud, by design.</li>
+<li><kbd>Import site (.zip)…</kbd> recreates the site on another device, even
+between iPhone and Android.</li>
+</ol>
+<p class="nota">⚠️ <kbd>Delete site…</kbd> removes the site with everything in
+it and is <strong>irreversible</strong>: export a ZIP first if in doubt.</p>
+
+<h2>Free and Pro</h2>
+<table>
+<tr><th></th><th>Free</th><th>Pro</th></tr>
+<tr><td>Sites</td><td>1</td><td>Unlimited</td></tr>
+<tr><td>GNSS</td><td>Internal GPS, MFi receivers</td><td>+ BLE/NMEA, NTRIP</td></tr>
+<tr><td>Reports</td><td>Daily, watermarked</td><td>All, no watermark</td></tr>
+<tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX with logo and photos, GeoJSON</td></tr>
+<tr><td>Voice dictation</td><td>✓</td><td>✓</td></tr>
+<tr><td>Report languages</td><td>5</td><td>5</td></tr>
+</table>
+<p>Pro is a monthly or yearly auto-renewing subscription, or a one-time
+lifetime purchase. Manage or cancel it any time in your Apple Account
+settings.</p>
+
+<h2>Troubleshooting</h2>
+
+<details><summary>The Bluetooth receiver doesn't appear or won't connect</summary>
+<p>Check, in order:</p>
+<ul>
+<li>the receiver is on and not already connected to another app or phone;</li>
+<li>system Bluetooth is on and the app has the Bluetooth permission
+(Settings → Giornale di Scavo);</li>
+<li>the source chosen in Survey is <em>External GNSS (BLE/NMEA)</em>;</li>
+<li>power-cycle the receiver, then search again.</li>
+</ul></details>
+
+<details><summary>I never reach RTK Fix</summary>
+<ul>
+<li>An active NTRIP connection is required: check caster, mountpoint and
+credentials.</li>
+<li>Check the phone's data coverage: corrections travel over the internet.</li>
+<li>Open sky matters: dense trees and nearby walls degrade the signal. In poor
+conditions you may stay in RTK Float (decimetre level).</li>
+<li>Choose a nearby mountpoint (&lt; 30–40 km) or a VRS network.</li>
+</ul></details>
+
+<details><summary>NTRIP won't connect</summary>
+<ul>
+<li>Verify address and port (often 2101) and that the mountpoint exists: most
+casters publish the list (sourcetable).</li>
+<li>Wrong username or password gives a 401/403 error: re-check the credentials.</li>
+<li>Some networks require your position (GGA): the app sends it automatically,
+but the receiver needs an initial fix first.</li>
+</ul></details>
+
+<details><summary>The elevation a.s.l. is empty or zero</summary>
+<p>Phone GPS provides only the ellipsoidal height. The orthometric height
+(a.s.l.) comes from the GGA sentence of an external receiver. Without one,
+points still store the ellipsoidal height.</p></details>
+
+<details><summary>Dictation doesn't work</summary>
+<ul>
+<li>Check the microphone and speech recognition permissions in Settings.</li>
+<li>Transcription is on-device: the first time, the system may need to download
+the language model (network needed once, then it works offline).</li>
+<li>Speak in short sentences; the text is appended to the diary.</li>
+</ul></details>
+
+<details><summary>The cadastral map (WMS) doesn't show</summary>
+<p>The app is offline, but WMS layers are web services: they need a connection
+and a working service. The Italian cadastre is preconfigured; for other
+countries enter your national service's WMS endpoint (it must support
+EPSG:3857). Out of data coverage, the base map and your points remain
+visible.</p></details>
+
+<details><summary>Photos have no coordinates</summary>
+<p>A photo takes the position from the latest GNSS fix: open Survey first and
+wait for a position, then shoot. If the location permission is denied, photos
+are saved without coordinates.</p></details>
+
+<details><summary>Photos or the logo are missing from a report</summary>
+<p>Photos in reports, the logo and the custom header are part of Pro and apply
+to DOCX and PDF. The free daily report carries a watermark and does not include
+photos.</p></details>
+
+<details><summary>I deleted a site by mistake</summary>
+<p>Deletion is final: the data cannot be recovered (there is no cloud). If you
+exported a ZIP earlier, import it to restore the site as of that date. Tip:
+export a ZIP at the end of each day.</p></details>
+
+<details><summary>I bought Pro but it's still locked</summary>
+<p>Tap <kbd>Restore purchases</kbd> on the Pro screen, using the same Apple
+Account as the purchase. If you changed device, restoring recovers the
+subscription or the lifetime licence.</p></details>
+
+<footer>
+<p>Questions not covered here? Write to
+<a href="mailto:enzo.ccc@gmail.com">enzo.ccc@gmail.com</a> ·
+<a href="../index.html">Privacy policy</a></p>
+</footer>
+
+</body>
+</html>

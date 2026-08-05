@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guida all'uso — Giornale di Scavo</title>
+<link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+<p class="lingue"><strong>Italiano</strong> <a href="en.html">English</a>
+<a href="de.html">Deutsch</a> <a href="es.html">Español</a> <a href="ar.html">العربية</a></p>
+
+<h1>Giornale di Scavo — Guida all'uso</h1>
+<p class="sotto">Il diario di scavo digitale per iPhone e iPad. 100% offline: i tuoi dati restano sul dispositivo.</p>
+
+<h2>In due parole</h2>
+<p>L'idea è una sola: <strong>ogni giornata di scavo è una pagina</strong> che si
+compila da sola. Tu registri le cose dove capita — un punto GNSS nel Rilievo, una
+foto nei Media, le ore nel Cantiere — e la pagina del giorno nel
+<kbd>Giornale</kbd> le raccoglie tutte automaticamente. A fine settimana o a fine
+scavo, i report si generano da soli a partire dalle pagine.</p>
+
+<h2>La giornata tipo</h2>
+<ol class="flusso">
+<li><b>Mattina</b>Apri la pagina del giorno, annota meteo e diario (anche a voce con <kbd>Detta</kbd>)</li>
+<li><b>Presenze</b>Nel <kbd>Cantiere</kbd> registra chi c'è e le ore</li>
+<li><b>Rilievo</b>Acquisisci i punti GNSS; verifica un caposaldo se usi l'RTK</li>
+<li><b>Foto</b>Scatta dai <kbd>Media</kbd>: le coordinate si agganciano da sole</li>
+<li><b>Disegni</b>Ricalca la sezione o la pianta su una foto («lucido»)</li>
+<li><b>Sera</b>Dal tab <kbd>Report</kbd> genera il giornaliero: PDF pronto da inviare</li>
+</ol>
+
+<h2>Primi passi</h2>
+<ol class="passi">
+<li>Al primo avvio trovi già un sito di esempio. Per crearne uno tuo tocca il
+nome del sito in alto (icona <kbd>🗺</kbd>) → <kbd>Nuovo sito…</kbd> e dagli un
+nome (es. «Colle Sant'Angelo — Saggio 3»).</li>
+<li>Il nome del sito attivo è sempre visibile in alto: tutte le schede mostrano
+i dati di quel sito. Per cambiare sito, tocca di nuovo il nome.</li>
+<li>Concedi i permessi quando richiesti: <em>posizione</em> (per i punti),
+<em>fotocamera</em> (per le foto), <em>microfono</em> (per la dettatura),
+<em>Bluetooth</em> (solo se usi un ricevitore esterno).</li>
+</ol>
+
+<h2>Le cinque schede</h2>
+
+<h3>📓 Giornale</h3>
+<ol class="passi">
+<li>Tocca una giornata per aprire la sua pagina: diario, meteo, presenze, punti,
+foto e disegni del giorno sono già lì.</li>
+<li>Scrivi il diario o tocca <kbd>Detta</kbd> e parla: la trascrizione avviene
+sul dispositivo, funziona anche senza rete.</li>
+<li>Il meteo si annota in testa alla pagina (es. «Sereno, 28 °C, vento leggero»).</li>
+</ol>
+
+<h3>📍 Rilievo</h3>
+<ol class="passi">
+<li>Il pannello in alto mostra la posizione live: coordinate, quote, precisione
+e tipo di fix (GPS / RTK Float / RTK Fix).</li>
+<li>Se usi un'asta, imposta l'<kbd>Altezza antenna (m)</kbd>: la quota del punto
+viene ridotta a terra automaticamente.</li>
+<li>Tocca <kbd>Acquisisci punto</kbd>. Il nome è progressivo (P001, P002…), ma
+puoi digitarne uno tuo (es. «US 102 — quota fondo») e aggiungere una nota.</li>
+<li>Passa da <kbd>Lista</kbd> a <kbd>Mappa</kbd> per vedere i punti sul posto;
+dalla mappa puoi attivare il catasto o un altro servizio WMS.</li>
+<li>I capisaldi (🏁) vivono nella loro sezione: importali da CSV o creali, poi
+usa la <kbd>Verifica</kbd> per controllare gli scarti ΔN/ΔE/ΔQ in tempo reale
+prima di rilevare.</li>
+</ol>
+<p class="nota">Ogni punto salva <strong>entrambe le quote</strong>: ellissoidica
+e ortometrica (s.l.m.). Col GPS interno del telefono la quota s.l.m. può non
+essere disponibile: serve un ricevitore esterno (vedi sotto).</p>
+
+<h3>📷 Media</h3>
+<ol class="passi">
+<li>Scatta con il pulsante fotocamera o importa dal rullino.</li>
+<li>Le foto prendono nome progressivo (F001, F002…) e vengono georeferenziate
+con l'ultima posizione GNSS disponibile.</li>
+<li>Tocca una foto per titolo e note (es. «US 102 da nord»).</li>
+</ol>
+
+<h3>✏️ Disegni (nei Media)</h3>
+<ol class="passi">
+<li>Crea una nuova tavola e scegli una foto del sito come sfondo: è il tuo
+«lucido» digitale.</li>
+<li>Ricalca strati, tagli e pietre con il dito o con la Apple Pencil; regola
+l'opacità della foto per vedere meglio il tratto.</li>
+<li>Aggiungi caselle di testo per le etichette (es. «US 1002») e la freccia del
+nord.</li>
+<li>Quando hai finito, nascondi la foto: resta il disegno pulito, pronto per il
+report.</li>
+</ol>
+
+<h3>👷 Cantiere</h3>
+<ol class="passi">
+<li>Registra le presenze del giorno: nome, mansione e ore di ciascuno.</li>
+<li>Tieni l'inventario delle attrezzature e a chi sono assegnate.</li>
+</ol>
+
+<h3>📄 Report</h3>
+<ol class="passi">
+<li>Scegli il tipo: <strong>giornaliero</strong> (gratuito, con filigrana),
+<strong>settimanale</strong>, <strong>mensile</strong> o <strong>finale</strong>
+con appendici complete <span class="pro">PRO</span>.</li>
+<li>Scegli la lingua del report — italiano, inglese, tedesco, spagnolo o arabo —
+indipendente dalla lingua dell'app.</li>
+<li>Genera il PDF, oppure esporta DOCX con logo e foto <span class="pro">PRO</span>,
+CSV dei punti, GeoJSON per QGIS <span class="pro">PRO</span>.</li>
+</ol>
+
+<h2>Ricevitore GNSS esterno e NTRIP</h2>
+<p>Con un ricevitore esterno (antenna centimetrica) l'app arriva alla precisione
+RTK. Il GPS interno resta sempre disponibile come ripiego.</p>
+<ol class="passi">
+<li>Accendi il ricevitore e attiva il Bluetooth del telefono.</li>
+<li>Nel <kbd>Rilievo</kbd> scegli la sorgente di posizione: <em>GNSS esterno
+(BLE/NMEA)</em> <span class="pro">PRO</span> e seleziona il tuo ricevitore
+dall'elenco. Sono supportati anche i ricevitori MFi (gratis) e quelli che
+pubblicano NMEA in rete.</li>
+<li>Per le correzioni RTK configura l'<strong>NTRIP</strong>: indirizzo del
+caster, porta, mountpoint, utente e password (restano nel portachiavi del
+dispositivo). L'app invia la posizione al caster e riceve le correzioni.</li>
+<li>Attendi il passaggio a <strong>RTK Fix</strong>: precisione centimetrica.
+Verifica su un caposaldo prima di iniziare.</li>
+</ol>
+
+<h2>Backup e scambio</h2>
+<ol class="passi">
+<li>Dal menu del sito tocca <kbd>Esporta sito (.zip)</kbd>: dentro c'è tutto —
+giornale, punti, foto, disegni, ore, capisaldi.</li>
+<li>Conserva lo ZIP dove vuoi (Files, Drive, e-mail…). È il tuo backup: l'app
+non ha cloud, per scelta.</li>
+<li><kbd>Importa sito (.zip)…</kbd> ricrea il sito su un altro dispositivo,
+anche tra iPhone e Android.</li>
+</ol>
+<p class="nota">⚠️ <kbd>Elimina sito…</kbd> cancella il sito con tutto il suo
+contenuto ed è <strong>irreversibile</strong>: esporta prima uno ZIP se hai dubbi.</p>
+
+<h2>Gratis e Pro</h2>
+<table>
+<tr><th></th><th>Gratis</th><th>Pro</th></tr>
+<tr><td>Siti</td><td>1</td><td>Illimitati</td></tr>
+<tr><td>GNSS</td><td>GPS interno, ricevitori MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
+<tr><td>Report</td><td>Giornaliero con filigrana</td><td>Tutti, senza filigrana</td></tr>
+<tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX con logo e foto, GeoJSON</td></tr>
+<tr><td>Dettatura vocale</td><td>✓</td><td>✓</td></tr>
+<tr><td>Lingue dei report</td><td>5</td><td>5</td></tr>
+</table>
+<p>Pro è un abbonamento mensile o annuale con rinnovo automatico, oppure un
+acquisto unico a vita. Si gestisce e si disdice dalle impostazioni dell'ID Apple.</p>
+
+<h2>Risoluzione dei problemi</h2>
+
+<details><summary>Il ricevitore Bluetooth non compare o non si collega</summary>
+<p>Controlla nell'ordine:</p>
+<ul>
+<li>il ricevitore è acceso e non è già collegato a un'altra app o telefono;</li>
+<li>il Bluetooth di sistema è attivo e l'app ha il permesso Bluetooth
+(Impostazioni → Giornale di Scavo);</li>
+<li>la sorgente scelta nel Rilievo è <em>GNSS esterno (BLE/NMEA)</em>;</li>
+<li>spegni e riaccendi il ricevitore, poi riprova la ricerca.</li>
+</ul></details>
+
+<details><summary>Non arrivo mai a RTK Fix</summary>
+<ul>
+<li>Serve una connessione NTRIP attiva: controlla caster, mountpoint e credenziali.</li>
+<li>Controlla la copertura dati del telefono: le correzioni viaggiano su internet.</li>
+<li>Cielo aperto: alberi fitti e pareti vicine degradano il segnale. Con
+copertura scarsa puoi restare in RTK Float (decimetrico).</li>
+<li>Scegli un mountpoint vicino (&lt; 30–40 km) o una rete VRS.</li>
+</ul></details>
+
+<details><summary>NTRIP non si connette</summary>
+<ul>
+<li>Verifica indirizzo e porta (spesso 2101) e che il mountpoint esista:
+molti caster pubblicano l'elenco (sourcetable).</li>
+<li>Utente o password errati danno errore 401/403: ricontrolla le credenziali.</li>
+<li>Alcune reti richiedono l'invio della posizione (GGA): l'app lo fa da sola,
+ma serve che il ricevitore abbia già un fix.</li>
+</ul></details>
+
+<details><summary>La quota s.l.m. è vuota o zero</summary>
+<p>Il GPS interno dei telefoni fornisce solo la quota ellissoidica. La quota
+ortometrica (s.l.m.) arriva dalla frase GGA di un ricevitore esterno. Senza
+ricevitore, i punti salvano comunque l'ellissoidica.</p></details>
+
+<details><summary>La dettatura non funziona</summary>
+<ul>
+<li>Controlla il permesso microfono e riconoscimento vocale in Impostazioni.</li>
+<li>La trascrizione è on-device: la prima volta il sistema può dover scaricare
+il modello della lingua (serve rete una tantum, poi funziona offline).</li>
+<li>Parla a frasi brevi; il testo si inserisce in fondo al diario.</li>
+</ul></details>
+
+<details><summary>La mappa catastale (WMS) non si vede</summary>
+<p>L'app è offline, ma i layer WMS sono servizi web: servono una connessione e
+un servizio attivo. Il catasto italiano è preconfigurato; per altri paesi
+inserisci l'endpoint WMS del servizio nazionale (deve supportare EPSG:3857).
+Lontano dalla copertura dati, la mappa base e i punti restano visibili.</p></details>
+
+<details><summary>Le foto non hanno coordinate</summary>
+<p>La foto prende la posizione dall'ultimo fix GNSS: apri prima il Rilievo e
+aspetta che la posizione sia agganciata, poi scatta. Col permesso posizione
+negato, le foto si salvano senza coordinate.</p></details>
+
+<details><summary>Nel report mancano foto o logo</summary>
+<p>Foto nei report, logo e intestazione personalizzata fanno parte di Pro e
+valgono per DOCX e PDF. Nel giornaliero gratuito c'è la filigrana e le foto
+non sono incluse.</p></details>
+
+<details><summary>Ho eliminato un sito per errore</summary>
+<p>L'eliminazione è definitiva: i dati non sono recuperabili (non esiste un
+cloud). Se hai uno ZIP esportato in precedenza, importalo per ripristinare il
+sito a quella data. Consiglio: esporta uno ZIP a fine giornata.</p></details>
+
+<details><summary>Ho comprato Pro ma risulta ancora bloccato</summary>
+<p>Tocca <kbd>Ripristina acquisti</kbd> nella schermata Pro, con lo stesso ID
+Apple dell'acquisto. Se hai cambiato dispositivo, il ripristino recupera
+l'abbonamento o la licenza a vita.</p></details>
+
+<footer>
+<p>Domande o problemi non elencati? Scrivi a
+<a href="mailto:enzo.ccc@gmail.com">enzo.ccc@gmail.com</a> ·
+<a href="../index.html">Informativa sulla privacy</a></p>
+</footer>
+
+</body>
+</html>

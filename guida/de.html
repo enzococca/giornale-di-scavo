@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Benutzerhandbuch — Giornale di Scavo</title>
+<link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+<p class="lingue"><a href="index.html">Italiano</a> <a href="en.html">English</a>
+<strong>Deutsch</strong> <a href="es.html">Español</a> <a href="ar.html">العربية</a></p>
+
+<h1>Giornale di Scavo — Benutzerhandbuch</h1>
+<p class="sotto">Das digitale Grabungstagebuch für iPhone und iPad. 100 % offline: Ihre Daten bleiben auf dem Gerät.</p>
+
+<h2>Kurz gesagt</h2>
+<p>Eine einzige Idee trägt alles: <strong>Jeder Grabungstag ist eine Seite</strong>,
+die sich von selbst füllt. Sie erfassen die Dinge dort, wo sie hingehören — einen
+GNSS-Punkt in der Vermessung, ein Foto in den Medien, Stunden in der Grabung —
+und die Tagesseite im <kbd>Tagebuch</kbd> sammelt alles automatisch. Am Ende der
+Woche oder der Grabung entstehen die Berichte von selbst aus den Seiten.</p>
+
+<h2>Ein typischer Tag</h2>
+<ol class="flusso">
+<li><b>Morgens</b>Tagesseite öffnen, Wetter und Tagebuch notieren (oder mit <kbd>Diktieren</kbd> sprechen)</li>
+<li><b>Team</b>In der <kbd>Grabung</kbd> Anwesenheit und Stunden erfassen</li>
+<li><b>Vermessung</b>GNSS-Punkte aufnehmen; bei RTK zuerst einen Festpunkt prüfen</li>
+<li><b>Fotos</b>Aus den <kbd>Medien</kbd> fotografieren: Koordinaten werden automatisch angehängt</li>
+<li><b>Zeichnungen</b>Profil oder Planum auf einem Foto durchpausen (digitales Transparentpapier)</li>
+<li><b>Abends</b>Unter <kbd>Berichte</kbd> den Tagesbericht erzeugen: ein PDF, fertig zum Versand</li>
+</ol>
+
+<h2>Erste Schritte</h2>
+<ol class="passi">
+<li>Beim ersten Start finden Sie einen Beispiel-Fundplatz. Für einen eigenen
+tippen Sie oben auf den Namen (Symbol <kbd>🗺</kbd>) → <kbd>Neuer Fundplatz…</kbd>
+und vergeben einen Namen (z. B. „Colle Sant'Angelo — Schnitt 3“).</li>
+<li>Der Name des aktiven Fundplatzes ist oben immer sichtbar: Alle Reiter zeigen
+dessen Daten. Zum Wechseln tippen Sie erneut auf den Namen.</li>
+<li>Erteilen Sie die Berechtigungen, wenn Sie gefragt werden:
+<em>Standort</em> (für Punkte), <em>Kamera</em> (für Fotos),
+<em>Mikrofon</em> (fürs Diktieren), <em>Bluetooth</em> (nur mit externem
+Empfänger).</li>
+</ol>
+
+<h2>Die fünf Reiter</h2>
+
+<h3>📓 Tagebuch</h3>
+<ol class="passi">
+<li>Tippen Sie auf einen Tag, um seine Seite zu öffnen: Tagebuch, Wetter, Team,
+Punkte, Fotos und Zeichnungen des Tages sind schon da.</li>
+<li>Schreiben Sie das Tagebuch oder tippen Sie <kbd>Diktieren</kbd> und
+sprechen Sie: Die Transkription läuft auf dem Gerät und funktioniert ohne
+Netz.</li>
+<li>Das Wetter wird oben auf der Seite notiert (z. B. „Heiter, 28 °C, leichter
+Wind“).</li>
+</ol>
+
+<h3>📍 Vermessung</h3>
+<ol class="passi">
+<li>Das Feld oben zeigt die Live-Position: Koordinaten, Höhen, Genauigkeit und
+Fix-Typ (GPS / RTK Float / RTK Fix).</li>
+<li>Bei Lotstab die <kbd>Antennenhöhe (m)</kbd> eintragen: Die Punkthöhe wird
+automatisch auf den Boden reduziert.</li>
+<li>Tippen Sie auf <kbd>Punkt aufnehmen</kbd>. Die Namen laufen fortlaufend
+(P001, P002…), eigene Namen (z. B. „Bef. 102 — Grubensohle“) und Notizen sind
+möglich.</li>
+<li>Wechseln Sie zwischen <kbd>Liste</kbd> und <kbd>Karte</kbd>; in der Karte
+lassen sich Kataster- oder andere WMS-Dienste einblenden.</li>
+<li>Festpunkte (🏁) haben ihren eigenen Bereich: aus CSV importieren oder
+anlegen, dann mit der Prüfung die Abweichungen ΔN/ΔE/ΔH live kontrollieren,
+bevor Sie messen.</li>
+</ol>
+<p class="nota">Jeder Punkt speichert <strong>beide Höhen</strong>:
+ellipsoidisch und orthometrisch (ü. NN). Mit dem internen GPS des Telefons kann
+die orthometrische Höhe fehlen — dafür braucht es einen externen Empfänger
+(siehe unten).</p>
+
+<h3>📷 Medien</h3>
+<ol class="passi">
+<li>Fotografieren Sie mit der Kamerataste oder importieren Sie aus der
+Fotobibliothek.</li>
+<li>Fotos werden fortlaufend benannt (F001, F002…) und mit der letzten
+GNSS-Position georeferenziert.</li>
+<li>Tippen Sie auf ein Foto für Titel und Notizen (z. B. „Bef. 102 von
+Norden“).</li>
+</ol>
+
+<h3>✏️ Zeichnungen (in den Medien)</h3>
+<ol class="passi">
+<li>Neues Blatt anlegen und ein Grabungsfoto als Hintergrund wählen: Ihr
+digitales Transparentpapier.</li>
+<li>Schichten, Befunde und Steine mit dem Finger oder dem Apple Pencil
+durchpausen; die Deckkraft des Fotos regeln, um die Linien besser zu sehen.</li>
+<li>Textfelder für Beschriftungen (z. B. „Bef. 1002“) und den Nordpfeil
+hinzufügen.</li>
+<li>Am Ende das Foto ausblenden: Die saubere Zeichnung bleibt, fertig für den
+Bericht.</li>
+</ol>
+
+<h3>👷 Grabung</h3>
+<ol class="passi">
+<li>Anwesenheit des Tages erfassen: Name, Aufgabe und Stunden jeder Person.</li>
+<li>Geräte-Inventar führen, samt Zuordnung.</li>
+</ol>
+
+<h3>📄 Berichte</h3>
+<ol class="passi">
+<li>Typ wählen: <strong>täglich</strong> (gratis, mit Wasserzeichen),
+<strong>wöchentlich</strong>, <strong>monatlich</strong> oder
+<strong>Abschlussbericht</strong> mit vollständigen Anhängen
+<span class="pro">PRO</span>.</li>
+<li>Berichtssprache wählen — Deutsch, Italienisch, Englisch, Spanisch oder
+Arabisch — unabhängig von der App-Sprache.</li>
+<li>PDF erzeugen, oder DOCX mit Logo und Fotos exportieren
+<span class="pro">PRO</span>, CSV der Punkte, GeoJSON für QGIS
+<span class="pro">PRO</span>.</li>
+</ol>
+
+<h2>Externer GNSS-Empfänger und NTRIP</h2>
+<p>Mit einem externen Empfänger (zentimetergenaue Antenne) erreicht die App
+RTK-Genauigkeit. Das interne GPS bleibt immer als Rückfallebene verfügbar.</p>
+<ol class="passi">
+<li>Empfänger einschalten und Bluetooth am Telefon aktivieren.</li>
+<li>In der <kbd>Vermessung</kbd> die Positionsquelle wählen: <em>Externes GNSS
+(BLE/NMEA)</em> <span class="pro">PRO</span> und den Empfänger aus der Liste
+auswählen. Auch MFi-Empfänger (gratis) und Empfänger mit NMEA über Netzwerk
+werden unterstützt.</li>
+<li>Für RTK-Korrekturen <strong>NTRIP</strong> einrichten: Caster-Adresse,
+Port, Mountpoint, Benutzer und Passwort (bleiben im Schlüsselbund des Geräts).
+Die App sendet die Position an den Caster und empfängt die Korrekturen.</li>
+<li>Auf <strong>RTK Fix</strong> warten: Zentimetergenauigkeit. Vor Beginn an
+einem Festpunkt prüfen.</li>
+</ol>
+
+<h2>Sicherung und Austausch</h2>
+<ol class="passi">
+<li>Im Fundplatz-Menü <kbd>Fundplatz exportieren (.zip)</kbd> antippen: Alles
+ist enthalten — Tagebuch, Punkte, Fotos, Zeichnungen, Stunden, Festpunkte.</li>
+<li>Die ZIP-Datei beliebig aufbewahren (Dateien, Drive, E-Mail…). Sie ist Ihre
+Sicherung: Die App hat bewusst keine Cloud.</li>
+<li><kbd>Fundplatz importieren (.zip)…</kbd> stellt den Fundplatz auf einem
+anderen Gerät wieder her, auch zwischen iPhone und Android.</li>
+</ol>
+<p class="nota">⚠️ <kbd>Fundplatz löschen…</kbd> entfernt den Fundplatz mit
+allem Inhalt und ist <strong>unumkehrbar</strong>: im Zweifel vorher eine ZIP
+exportieren.</p>
+
+<h2>Gratis und Pro</h2>
+<table>
+<tr><th></th><th>Gratis</th><th>Pro</th></tr>
+<tr><td>Fundplätze</td><td>1</td><td>Unbegrenzt</td></tr>
+<tr><td>GNSS</td><td>Internes GPS, MFi-Empfänger</td><td>+ BLE/NMEA, NTRIP</td></tr>
+<tr><td>Berichte</td><td>Tagesbericht mit Wasserzeichen</td><td>Alle, ohne Wasserzeichen</td></tr>
+<tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX mit Logo und Fotos, GeoJSON</td></tr>
+<tr><td>Diktierfunktion</td><td>✓</td><td>✓</td></tr>
+<tr><td>Berichtssprachen</td><td>5</td><td>5</td></tr>
+</table>
+<p>Pro gibt es als Monats- oder Jahresabo mit automatischer Verlängerung oder
+als einmaligen Lifetime-Kauf. Verwaltung und Kündigung jederzeit in den
+Einstellungen des Apple-Kontos.</p>
+
+<h2>Problemlösung</h2>
+
+<details><summary>Der Bluetooth-Empfänger erscheint nicht oder verbindet sich nicht</summary>
+<p>Prüfen Sie der Reihe nach:</p>
+<ul>
+<li>Der Empfänger ist eingeschaltet und nicht schon mit einer anderen App oder
+einem anderen Telefon verbunden.</li>
+<li>Bluetooth ist aktiv und die App hat die Bluetooth-Berechtigung
+(Einstellungen → Giornale di Scavo).</li>
+<li>Als Quelle ist in der Vermessung <em>Externes GNSS (BLE/NMEA)</em>
+gewählt.</li>
+<li>Empfänger aus- und einschalten, dann erneut suchen.</li>
+</ul></details>
+
+<details><summary>Ich erreiche nie RTK Fix</summary>
+<ul>
+<li>Es braucht eine aktive NTRIP-Verbindung: Caster, Mountpoint und Zugangsdaten
+prüfen.</li>
+<li>Mobilfunkabdeckung prüfen: Die Korrekturen kommen über das Internet.</li>
+<li>Freier Himmel zählt: dichte Bäume und nahe Wände verschlechtern das Signal.
+Bei schlechten Bedingungen bleibt es u. U. bei RTK Float (Dezimeter).</li>
+<li>Einen nahen Mountpoint (&lt; 30–40 km) oder ein VRS-Netz wählen.</li>
+</ul></details>
+
+<details><summary>NTRIP verbindet sich nicht</summary>
+<ul>
+<li>Adresse und Port (oft 2101) prüfen, und ob der Mountpoint existiert: Die
+meisten Caster veröffentlichen die Liste (Sourcetable).</li>
+<li>Falscher Benutzer oder falsches Passwort ergibt 401/403: Zugangsdaten
+kontrollieren.</li>
+<li>Manche Netze verlangen die Position (GGA): Die App sendet sie automatisch,
+der Empfänger braucht aber zuerst einen Fix.</li>
+</ul></details>
+
+<details><summary>Die Höhe ü. NN ist leer oder null</summary>
+<p>Das Telefon-GPS liefert nur die ellipsoidische Höhe. Die orthometrische Höhe
+(ü. NN) kommt aus der GGA-Meldung eines externen Empfängers. Ohne Empfänger
+wird trotzdem die ellipsoidische Höhe gespeichert.</p></details>
+
+<details><summary>Das Diktieren funktioniert nicht</summary>
+<ul>
+<li>Berechtigungen für Mikrofon und Spracherkennung in den Einstellungen
+prüfen.</li>
+<li>Die Transkription läuft auf dem Gerät: Beim ersten Mal lädt das System ggf.
+das Sprachmodell (einmalig Netz nötig, danach offline).</li>
+<li>In kurzen Sätzen sprechen; der Text wird ans Tagebuch angehängt.</li>
+</ul></details>
+
+<details><summary>Die Katasterkarte (WMS) erscheint nicht</summary>
+<p>Die App ist offline, WMS-Ebenen sind aber Webdienste: Sie brauchen eine
+Verbindung und einen funktionierenden Dienst. Das italienische Kataster ist
+vorkonfiguriert; für andere Länder den WMS-Endpunkt des nationalen Dienstes
+eintragen (EPSG:3857 erforderlich). Ohne Netz bleiben Basiskarte und Punkte
+sichtbar.</p></details>
+
+<details><summary>Fotos haben keine Koordinaten</summary>
+<p>Ein Foto übernimmt die Position vom letzten GNSS-Fix: Zuerst die Vermessung
+öffnen und auf eine Position warten, dann fotografieren. Ohne
+Standort-Berechtigung werden Fotos ohne Koordinaten gespeichert.</p></details>
+
+<details><summary>Im Bericht fehlen Fotos oder das Logo</summary>
+<p>Fotos in Berichten, Logo und eigene Kopfzeile gehören zu Pro und gelten für
+DOCX und PDF. Der kostenlose Tagesbericht trägt ein Wasserzeichen und enthält
+keine Fotos.</p></details>
+
+<details><summary>Ich habe einen Fundplatz versehentlich gelöscht</summary>
+<p>Das Löschen ist endgültig: Die Daten sind nicht wiederherstellbar (es gibt
+keine Cloud). Mit einer früher exportierten ZIP lässt sich der Stand jenes
+Tages wieder importieren. Tipp: am Ende jedes Tages eine ZIP
+exportieren.</p></details>
+
+<details><summary>Ich habe Pro gekauft, es ist aber noch gesperrt</summary>
+<p>Auf dem Pro-Bildschirm <kbd>Käufe wiederherstellen</kbd> antippen, mit
+demselben Apple-Konto wie beim Kauf. Nach einem Gerätewechsel stellt das die
+Mitgliedschaft oder die Lifetime-Lizenz wieder her.</p></details>
+
+<footer>
+<p>Fragen, die hier fehlen? Schreiben Sie an
+<a href="mailto:enzo.ccc@gmail.com">enzo.ccc@gmail.com</a> ·
+<a href="../index.html">Datenschutzerklärung</a></p>
+</footer>
+
+</body>
+</html>
