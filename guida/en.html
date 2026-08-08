@@ -51,7 +51,13 @@ site's data. Tap the name again to switch site.</li>
 drawings of that day are already there.</li>
 <li>Write the diary or tap <kbd>Dictate</kbd> and speak: transcription happens
 on the device and works with no network.</li>
-<li>The weather is noted at the top of the page (e.g. "Clear, 28 °C, light wind").</li>
+<li>The weather can be typed by hand (e.g. "Clear, 28 °C, light wind") or fetched
+with <kbd>Fetch</kbd>, which asks the Norwegian meteorological service for the
+current conditions. It needs a network and only works on today's page:
+yesterday's weather can no longer be recovered. A second tap in the afternoon
+adds another measurement. Anything you type by hand always wins.</li>
+<li>When fetching, only the area's position leaves the device, rounded to about
+11 metres, and in reports the line appears in the report's language.</li>
 </ol>
 <div class="schermate"><figure><img src="img/en/01-diario.webp" alt="The list of dig days" width="640" height="1391" loading="lazy"><figcaption>The list of dig days</figcaption></figure><figure><img src="img/en/02-giornata.webp" alt="A day's page" width="640" height="1391" loading="lazy"><figcaption>A day's page</figcaption></figure></div>
 
@@ -228,6 +234,14 @@ export a ZIP at the end of each day.</p></details>
 <p>Tap <kbd>Restore purchases</kbd> on the Pro screen, using the same Apple
 Account as the purchase. If you changed device, restoring recovers the
 subscription or the lifetime licence.</p></details>
+
+<details><summary>“Fetch” is greyed out, or says “Weather unavailable”</summary>
+<ul>
+<li>if the button is greyed out you are on a past day's page: weather can only
+be fetched on today's;</li>
+<li>if you see “Weather unavailable” there is no network, or the site has no
+GNSS point yet to take the position from — record a point and try again.</li>
+</ul></details>
 
 <footer>
 <p>Questions not covered here? Write to

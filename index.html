@@ -17,10 +17,10 @@
 </head>
 <body>
 
-<p style="background:#f7f2e8;border-radius:.5rem;padding:.6rem .9rem;">📖 <a href="guida/"><strong>Guida all'uso — User guide</strong></a> (Italiano · English · Deutsch · Español · العربية)</p>
+<p style="background:#f7f2e8;border-radius:.5rem;padding:.6rem .9rem;">📖 <a href="guida/"><strong>Guida all'uso — User guide</strong></a> (Italiano · English · Deutsch · Español · العربية) · 📄 <a href="termini.html"><strong>Termini d'uso — Terms of use</strong></a></p>
 
 <h1>Informativa sulla privacy — Giornale di Scavo</h1>
-<p class="data">Ultimo aggiornamento: 20 luglio 2026</p>
+<p class="data">Ultimo aggiornamento: 8 agosto 2026</p>
 
 <p><strong>Giornale di Scavo</strong> è un'app per la documentazione di scavo
 archeologico che funziona interamente sul dispositivo. Non raccogliamo,
@@ -30,10 +30,11 @@ server: non c'è account da creare e non c'è nulla da sincronizzare.</p>
 <h2>Dati trattati e dove restano</h2>
 <p>Tutto ciò che registri — diario di scavo, punti GPS/GNSS, capisaldi, disegni,
 fotografie, ore di lavoro, attrezzature — viene salvato <strong>esclusivamente
-nella memoria del tuo iPhone o iPad</strong>. Questi dati non lasciano mai il
-dispositivo, se non quando sei tu a esportarli o condividerli (PDF, DOCX, CSV,
-GeoJSON) tramite le funzioni di condivisione di iOS, scegliendo tu la
-destinazione. Disinstallando l'app, i dati vengono eliminati con essa.</p>
+nella memoria del tuo dispositivo</strong> (iPhone, iPad o telefono Android).
+Questi dati non lasciano mai il dispositivo, se non quando sei tu a esportarli
+o condividerli (PDF, DOCX, CSV, GeoJSON) tramite le funzioni di condivisione
+del sistema, scegliendo tu la destinazione. Disinstallando l'app, i dati
+vengono eliminati con essa.</p>
 
 <h2>Autorizzazioni richieste</h2>
 <p><strong>Posizione.</strong> Serve a registrare le coordinate dei punti di
@@ -47,22 +48,24 @@ sul dispositivo.</p>
 <p><strong>Microfono e riconoscimento vocale.</strong> Servono alla dettatura
 del diario. La trascrizione avviene <strong>interamente sul dispositivo</strong>
 (riconoscimento offline): l'audio non viene inviato ad alcun server, né nostro
-né di Apple, e non viene conservato.</p>
+né di Apple o Google, e non viene conservato.</p>
 
 <p><strong>Bluetooth.</strong> Serve a collegarsi ai ricevitori GNSS esterni
 per leggerne le coordinate. Non viene usato per rilevare la tua presenza né
 per finalità pubblicitarie.</p>
 
 <h2>Funzioni facoltative che usano internet</h2>
-<p>L'app è progettata per lavorare offline. Solo due funzioni, se le attivi tu,
-stabiliscono una connessione, e in entrambi i casi verso server scelti da te:</p>
+<p>L'app è progettata per lavorare offline. Solo tre funzioni, se le attivi tu,
+stabiliscono una connessione: le prime due verso server che scegli tu, la terza
+verso il servizio meteo indicato qui sotto.</p>
 
 <p><strong>Correzioni NTRIP.</strong> Se configuri un caster NTRIP per il
 posizionamento RTK, l'app si collega all'indirizzo che hai inserito e, come
 previsto dal protocollo per le reti VRS, gli trasmette la tua posizione
 approssimativa (frase NMEA GGA) per ricevere le correzioni della zona. Le
-credenziali del caster restano sul dispositivo, la password nel portachiavi
-di iOS. Il trattamento dei dati da parte del gestore del caster è regolato
+credenziali del caster restano sul dispositivo, la password protetta dal
+portachiavi del sistema (Keychain su iOS, Android Keystore su Android). Il
+trattamento dei dati da parte del gestore del caster è regolato
 dall'informativa di quel gestore.</p>
 
 <p><strong>Livelli cartografici WMS.</strong> Se attivi una mappa catastale o
@@ -71,11 +74,21 @@ un livello WMS, l'app richiede le immagini della mappa al server indicato
 dell'area geografica visualizzata al server che la fornisce. I tuoi punti
 non vengono mai inviati.</p>
 
+<p><strong>Meteo automatico.</strong> Toccando «Rileva» accanto al campo meteo
+del diario, l'app chiede le condizioni attuali al servizio pubblico dell'istituto
+meteorologico norvegese (MET Norway). Vengono inviate solo le coordinate della
+zona, <strong>arrotondate a circa 11 metri</strong>: la posizione esatta del
+punto di scavo non lascia mai il dispositivo. La risposta viene usata per
+scrivere la riga del diario e non viene conservata altrove. I dati meteo sono
+di MET Norway, distribuiti con licenza CC BY 4.0.</p>
+
 <h2>Acquisti in-app</h2>
-<p>La versione Pro si attiva tramite acquisto in-app gestito da Apple
-(StoreKit). Non vediamo né trattiamo i tuoi dati di pagamento: la transazione
-avviene tra te e Apple. L'app conserva solo l'informazione se la versione Pro
-sia attiva o meno.</p>
+<p>La versione Pro si attiva tramite acquisto in-app gestito dallo store:
+Apple (StoreKit) su iPhone e iPad, Google (Play Billing) su Android. Non
+vediamo né trattiamo i tuoi dati di pagamento: la transazione avviene tra te
+e Apple o Google. L'app conserva solo l'informazione se la versione Pro sia
+attiva o meno. Le condizioni di vendita sono nei
+<a href="termini.html">termini d'uso</a>.</p>
 
 <h2>Assenza di tracciamento</h2>
 <p>Non usiamo strumenti di analisi, pubblicità, profilazione o tracciamento.
@@ -103,7 +116,7 @@ pagina, con la data di revisione aggiornata.</p>
 <hr>
 
 <h1>Privacy Policy — Giornale di Scavo</h1>
-<p class="data">Last updated: 20 July 2026</p>
+<p class="data">Last updated: 8 August 2026</p>
 
 <p><strong>Giornale di Scavo</strong> is an archaeological excavation
 documentation app that runs entirely on your device. We do not collect,
@@ -113,10 +126,10 @@ to create and nothing to sync.</p>
 <h2>What data is handled, and where it stays</h2>
 <p>Everything you record — excavation diary, GPS/GNSS points, benchmarks,
 drawings, photographs, working hours, equipment — is stored
-<strong>solely in your iPhone's or iPad's storage</strong>. This data never
-leaves the device unless you choose to export or share it (PDF, DOCX, CSV,
-GeoJSON) through the iOS share sheet, picking the destination yourself.
-Deleting the app deletes the data with it.</p>
+<strong>solely in your device's storage</strong> (iPhone, iPad or Android
+phone). This data never leaves the device unless you choose to export or share
+it (PDF, DOCX, CSV, GeoJSON) through the system share sheet, picking the
+destination yourself. Deleting the app deletes the data with it.</p>
 
 <h2>Permissions we request</h2>
 <p><strong>Location.</strong> Used to record the coordinates of survey points.
@@ -128,22 +141,24 @@ and to pick a logo for reports. Images stay on the device.</p>
 
 <p><strong>Microphone and speech recognition.</strong> Used for diary
 dictation. Transcription happens <strong>entirely on the device</strong>
-(offline recognition): audio is never sent to any server, ours or Apple's,
-and is not retained.</p>
+(offline recognition): audio is never sent to any server — ours, Apple's or
+Google's — and is not retained.</p>
 
 <p><strong>Bluetooth.</strong> Used to connect to external GNSS receivers and
 read their coordinates. It is not used for presence detection or advertising.</p>
 
 <h2>Optional features that use the internet</h2>
-<p>The app is designed to work offline. Only two features, and only if you
-enable them, open a connection — in both cases to servers you choose:</p>
+<p>The app is designed to work offline. Only three features, and only if you
+enable them, open a connection: the first two to servers you choose, the third
+to the weather service named below.</p>
 
 <p><strong>NTRIP corrections.</strong> If you configure an NTRIP caster for RTK
 positioning, the app connects to the address you entered and, as the protocol
 requires for VRS networks, sends it your approximate position (NMEA GGA
 sentence) in order to receive corrections for your area. Caster credentials
-remain on the device, with the password stored in the iOS Keychain. How the
-caster operator handles data is governed by that operator's own policy.</p>
+remain on the device, with the password protected by the system's secure
+storage (Keychain on iOS, Android Keystore on Android). How the caster
+operator handles data is governed by that operator's own policy.</p>
 
 <p><strong>WMS map layers.</strong> If you enable a cadastral or custom WMS
 layer, the app requests map imagery from the server you specified (for example
@@ -151,10 +166,20 @@ the Italian Agenzia delle Entrate). That request necessarily discloses the map
 area being viewed to the server providing it. Your survey points are never
 sent.</p>
 
+<p><strong>Automatic weather.</strong> Tapping “Fetch” next to the diary's
+weather field asks the Norwegian Meteorological Institute's public service (MET
+Norway) for current conditions. Only the coordinates of the area are sent,
+<strong>rounded to about 11 metres</strong>: the exact location of the
+excavation point never leaves the device. The response is used to write the
+diary line and is not stored anywhere else. Weather data is provided by MET
+Norway under a CC BY 4.0 licence.</p>
+
 <h2>In-app purchases</h2>
-<p>The Pro version is unlocked through an in-app purchase handled by Apple
-(StoreKit). We never see or process your payment details: the transaction is
-between you and Apple. The app only stores whether Pro is active.</p>
+<p>The Pro version is unlocked through an in-app purchase handled by the store:
+Apple (StoreKit) on iPhone and iPad, Google (Play Billing) on Android. We never
+see or process your payment details: the transaction is between you and Apple
+or Google. The app only stores whether Pro is active. Sale conditions are in
+the <a href="termini.html">terms of use</a>.</p>
 
 <h2>No tracking</h2>
 <p>We use no analytics, advertising, profiling or tracking technologies. There
