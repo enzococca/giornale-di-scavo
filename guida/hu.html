@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Használati útmutató — Giornale di Scavo</title>
+<link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+<p class="lingue"><a href="index.html">Italiano</a> <a href="en.html">English</a> <a href="de.html">Deutsch</a> <a href="es.html">Español</a>
+<a href="fr.html">Français</a> <a href="pt.html">Português</a> <a href="pl.html">Polski</a> <a href="ro.html">Română</a>
+<strong>Magyar</strong> <a href="ru.html">Русский</a> <a href="ar.html">العربية</a> <a href="zh-Hans.html">简体中文</a>
+<a href="ja.html">日本語</a> <a href="ko.html">한국어</a></p>
+
+<h1>Giornale di Scavo — Használati útmutató</h1>
+<p class="sotto">A digitális feltárási napló iPhone-ra és iPadre. 100%-ban offline: az adatok a készüléken maradnak.</p>
+
+<h2>Röviden</h2>
+<p>Egyetlen elven alapul minden: <strong>minden feltárási nap egy oldal</strong>,
+amely magától kitöltődik. A dolgokat ott kell rögzíteni, ahol történnek — egy
+GNSS-pontot a Felmérésben, egy fényképet a Médiában, az órákat a Helyszínen —,
+a <kbd>Napló</kbd> napi oldala pedig mindezt automatikusan összegyűjti. A hét
+vagy a feltárás végén a jelentések maguktól elkészülnek az oldalak alapján.</p>
+
+<h2>Egy jellemző nap</h2>
+<ol class="flusso">
+<li><b>Reggel</b>Nyissa meg a nap oldalát, jegyezze fel az időjárást és a naplóbejegyzést (akár hangosan is, a <kbd>Diktálás</kbd> gombbal)</li>
+<li><b>Létszám</b>A <kbd>Helyszín</kbd>en rögzítse, ki van jelen, és mindenki óráit</li>
+<li><b>Felmérés</b>Vegye fel a GNSS-pontokat; RTK esetén előbb ellenőrizzen egy alappontot</li>
+<li><b>Fényképek</b>Fényképezzen a <kbd>Média</kbd>ból: a koordináták automatikusan hozzákapcsolódnak</li>
+<li><b>Rajzok</b>Pausolja át a metszetet vagy az alaprajzot egy fényképen (digitális pauszpapír)</li>
+<li><b>Este</b>A <kbd>Jelentés</kbd> fülön készítse el a napi jelentést: a PDF küldésre kész</li>
+</ol>
+
+<h2>Első lépések</h2>
+<ol class="passi">
+<li>Az első indításkor már található egy mintalelőhely. Sajátjának
+létrehozásához érintse meg a lelőhely nevét fent (<kbd>🗺</kbd> ikon) →
+<kbd>Új lelőhely…</kbd>, majd adjon neki nevet (pl. „Colle Sant'Angelo —
+Szelvény 3”).</li>
+<li>Az aktív lelőhely neve mindig látható fent: minden fül ennek a
+lelőhelynek az adatait mutatja. A lelőhely váltásához érintse meg ismét a
+nevet.</li>
+<li>Kéréskor adja meg az engedélyeket: <em>helyadatok</em> (a pontokhoz),
+<em>kamera</em> (a fényképekhez), <em>mikrofon</em> (a diktáláshoz),
+<em>Bluetooth</em> (csak külső vevő használatakor).</li>
+</ol>
+
+<h2>Az öt fül</h2>
+
+<h3>📓 Napló</h3>
+<ol class="passi">
+<li>Érintsen meg egy napot az oldalának megnyitásához: az adott nap
+naplóbejegyzése, időjárása, létszáma, pontjai, fényképei és rajzai már ott
+vannak.</li>
+<li>Írja meg a naplóbejegyzést, vagy érintse meg a <kbd>Diktálás</kbd> gombot,
+és beszéljen: az átirat a készüléken készül, hálózat nélkül is működik.</li>
+<li>Az időjárást kézzel is beírhatja (pl. „Derült, 28 °C, gyenge szél”), vagy
+lekérheti a <kbd>Lekérés</kbd> gombbal, amely a norvég meteorológiai
+szolgálattól kéri le a pillanatnyi állapotot. Ehhez hálózat szükséges, és csak
+a mai napra vonatkozik: a tegnapi időjárás már nem állítható vissza. Egy
+második érintés délután újabb mérést ad hozzá. Ami kézzel van beírva, mindig
+elsőbbséget élvez.</li>
+<li>Lekéréskor csak a terület kb. 11 méterre kerekített helyzete hagyja el a
+készüléket, a jelentésekben pedig a sor a jelentés nyelvén jelenik meg.</li>
+</ol>
+<div class="schermate"><figure><img src="img/hu/01-diario.webp" alt="A napok listája" width="640" height="1391" loading="lazy"><figcaption>A napok listája</figcaption></figure><figure><img src="img/hu/02-giornata.webp" alt="Egy nap oldala" width="640" height="1391" loading="lazy"><figcaption>Egy nap oldala</figcaption></figure></div>
+
+<h3>📍 Felmérés</h3>
+<ol class="passi">
+<li>A felső panel mutatja az élő helyzetet: koordináták, magasságok,
+pontosság és fixtípus (GPS / RTK Float / RTK Fix).</li>
+<li>Mérőrúd használatakor állítsa be az <kbd>Antenna magassága (m)</kbd>
+értéket: a pont magassága automatikusan a talajra vetül.</li>
+<li>Érintse meg a <kbd>Pont rögzítése</kbd> gombot. A nevek sorban
+következnek (P001, P002…), de megadhat sajátot is (pl. „SE 102 — gödör
+alja”), és jegyzetet is hozzáadhat.</li>
+<li>Váltson a <kbd>Lista</kbd> és a <kbd>Térkép</kbd> között a pontok
+helyszíni megtekintéséhez; a térképről bekapcsolhatja a katasztert vagy egy
+másik WMS-szolgáltatást.</li>
+<li>Az alappontok (🏁) saját szakasszal rendelkeznek: importálja őket
+CSV-ből, vagy hozza létre őket, majd az <kbd>Ellenőrzés</kbd> gombbal kövesse
+élőben a ΔÉszak/ΔKelet/ΔMag. eltéréseket a felmérés előtt.</li>
+</ol>
+<div class="schermate"><figure><img src="img/hu/03-rilievo.webp" alt="A Felmérés GNSS-panelje" width="640" height="1391" loading="lazy"><figcaption>A Felmérés GNSS-panelje</figcaption></figure><figure><img src="img/hu/04-mappa.webp" alt="Pontok és alappontok a térképen" width="640" height="1391" loading="lazy"><figcaption>Pontok és alappontok a térképen</figcaption></figure></div>
+<p class="nota">Minden pont <strong>mindkét magasságot</strong> tárolja: az
+ellipszoidit és az ortometrit (tszf.). A telefon belső GPS-ével a tszf.
+magasság nem biztos, hogy elérhető: ehhez külső vevő szükséges (lásd lent).</p>
+
+<h3>📷 Média</h3>
+<ol class="passi">
+<li>Fényképezzen a kamera gombbal, vagy importáljon a fényképtárból.</li>
+<li>A fényképek sorban kapnak nevet (F001, F002…), és a legutóbb elérhető
+GNSS-pozícióval kerülnek georeferálásra.</li>
+<li>Érintsen meg egy fényképet a cím és a megjegyzések megadásához (pl.
+„SE 102 északról”).</li>
+</ol>
+<div class="schermate"><figure><img src="img/hu/05-media.webp" alt="A fényképgaléria" width="640" height="1391" loading="lazy"><figcaption>A fényképgaléria</figcaption></figure></div>
+
+<h3>✏️ Rajzok (a Médiában)</h3>
+<ol class="passi">
+<li>Hozzon létre egy új lapot, és válasszon háttérnek egy lelőhelyi
+fényképet: ez lesz a digitális pauszpapírja.</li>
+<li>Pausolja át a rétegeket, metszeteket és köveket ujjal vagy Apple
+Pencillel; állítsa be a fénykép átlátszóságát, hogy jobban lássa a
+vonalakat.</li>
+<li>Adjon hozzá szövegdobozokat a feliratokhoz (pl. „SE 1002”) és az északi
+nyilat.</li>
+<li>Ha végzett, rejtse el a fényképet: a tiszta rajz megmarad, készen a
+jelentéshez.</li>
+</ol>
+<div class="schermate"><figure><img src="img/hu/06-disegno.webp" alt="A digitális pauszpapír" width="640" height="1391" loading="lazy"><figcaption>A digitális pauszpapír</figcaption></figure></div>
+
+<h3>👷 Helyszín</h3>
+<ol class="passi">
+<li>Rögzítse a nap létszámát: mindenki nevét, feladatkörét és óráit.</li>
+<li>Vezesse a felszerelés nyilvántartását és azt, hogy kihez van rendelve.</li>
+</ol>
+<div class="schermate"><figure><img src="img/hu/07-ore.webp" alt="Létszám és órák" width="640" height="1391" loading="lazy"><figcaption>Létszám és órák</figcaption></figure></div>
+
+<h3>📄 Jelentés</h3>
+<ol class="passi">
+<li>Válassza ki a típust: <strong>napi</strong> (ingyenes, vízjellel),
+<strong>heti</strong>, <strong>havi</strong> vagy <strong>záró</strong>
+jelentés teljes függelékekkel <span class="pro">PRO</span>.</li>
+<li>Válassza ki a jelentés nyelvét a <strong>tizennégy</strong> közül,
+függetlenül az alkalmazás nyelvétől: a jelentés angolul is elkészülhet, akkor
+is, ha az alkalmazást magyarul használja.</li>
+<li>Készítsen PDF-et, vagy exportáljon DOCX-et logóval és fényképekkel
+<span class="pro">PRO</span>, CSV-t a pontokról, GeoJSON-t QGIS-hez
+<span class="pro">PRO</span>.</li>
+</ol>
+<div class="schermate"><figure><img src="img/hu/08-report.webp" alt="Jelentések készítése" width="640" height="1391" loading="lazy"><figcaption>Jelentések készítése</figcaption></figure></div>
+
+<h2>Külső GNSS-vevő és NTRIP</h2>
+<p>Külső vevővel (centiméteres pontosságú antenna) az alkalmazás eléri az RTK
+pontosságot. A belső GPS mindig elérhető marad tartalékként.</p>
+<ol class="passi">
+<li>Kapcsolja be a vevőt, és aktiválja a Bluetooth-ot a telefonon.</li>
+<li>A <kbd>Felmérés</kbd>ben válassza ki a helyzetforrást: <em>Külső GNSS
+(BLE/NMEA)</em> <span class="pro">PRO</span>, majd válassza ki a vevőt a
+listából. Az MFi-vevők (ingyenesek) és a hálózaton NMEA-t közvetítő vevők is
+támogatottak.</li>
+<li>Az RTK-korrekciókhoz állítsa be az <strong>NTRIP</strong>-et: a caster
+címét, a portot, a mountpointot, a felhasználónevet és a jelszót (ezek a
+készülék kulcstartójában maradnak). Az alkalmazás elküldi a helyzetét a
+casternek, és megkapja a korrekciókat.</li>
+<li>Várja meg az <strong>RTK Fix</strong> állapotot: centiméteres pontosság.
+Kezdés előtt ellenőrizze egy alapponton.</li>
+</ol>
+
+<h2>Biztonsági mentés és csere</h2>
+<ol class="passi">
+<li>A lelőhely menüjéből érintse meg a <kbd>Lelőhely exportálása (.zip)</kbd>
+lehetőséget: minden benne van — napló, pontok, fényképek, rajzok, órák,
+alappontok.</li>
+<li>Őrizze meg a ZIP-fájlt bárhol (Fájlok, Drive, e-mail…). Ez a biztonsági
+mentése: az alkalmazásnak szándékosan nincs felhője.</li>
+<li>A <kbd>Lelőhely importálása (.zip)…</kbd> újra létrehozza a lelőhelyet
+egy másik készüléken, akár iPhone és Android között is.</li>
+</ol>
+<p class="nota">⚠️ A <kbd>Lelőhely törlése…</kbd> a teljes tartalmával együtt
+törli a lelőhelyet, és <strong>visszafordíthatatlan</strong>: kétség esetén
+előbb exportáljon egy ZIP-et.</p>
+
+<h2>Ingyenes és Pro</h2>
+<table>
+<tr><th></th><th>Ingyenes</th><th>Pro</th></tr>
+<tr><td>Lelőhelyek</td><td>1</td><td>Korlátlan</td></tr>
+<tr><td>GNSS</td><td>Belső GPS, MFi-vevők</td><td>+ BLE/NMEA, NTRIP</td></tr>
+<tr><td>Jelentés</td><td>Napi, vízjellel</td><td>Az összes, vízjel nélkül</td></tr>
+<tr><td>Exportálás</td><td>PDF, CSV</td><td>+ DOCX logóval és fényképekkel, GeoJSON</td></tr>
+<tr><td>Hangalapú diktálás</td><td>✓</td><td>✓</td></tr>
+<tr><td>Jelentés nyelvei</td><td>14</td><td>14</td></tr>
+</table>
+<p>A Pro havi vagy éves, automatikusan megújuló előfizetés, vagy egyszeri,
+örökös vásárlás. Az Apple ID beállításaiban bármikor kezelhető és
+lemondható.</p>
+
+<h2>Hibaelhárítás</h2>
+
+<details><summary>A Bluetooth-vevő nem jelenik meg, vagy nem csatlakozik</summary>
+<p>Ellenőrizze sorban:</p>
+<ul>
+<li>a vevő be van kapcsolva, és még nincs csatlakoztatva másik alkalmazáshoz
+vagy telefonhoz;</li>
+<li>a rendszer Bluetooth-ja be van kapcsolva, és az alkalmazás rendelkezik
+Bluetooth-engedéllyel (Beállítások → Giornale di Scavo);</li>
+<li>a Felmérésben kiválasztott forrás a <em>Külső GNSS (BLE/NMEA)</em>;</li>
+<li>kapcsolja ki, majd be a vevőt, és próbálja újra a keresést.</li>
+</ul></details>
+
+<details><summary>Sosem sikerül elérni az RTK Fix állapotot</summary>
+<ul>
+<li>Aktív NTRIP-kapcsolat szükséges: ellenőrizze a castert, a mountpointot és
+a hitelesítő adatokat.</li>
+<li>Ellenőrizze a telefon mobiladat-lefedettségét: a korrekciók az
+interneten keresztül érkeznek.</li>
+<li>Fontos a szabad rálátás az égre: a sűrű fák és a közeli falak rontják a
+jelet. Gyenge körülmények között RTK Float (deciméteres) állapotban
+maradhat.</li>
+<li>Válasszon közeli mountpointot (&lt; 30–40 km) vagy VRS-hálózatot.</li>
+</ul></details>
+
+<details><summary>Az NTRIP nem csatlakozik</summary>
+<ul>
+<li>Ellenőrizze a címet és a portot (gyakran 2101), valamint hogy létezik-e a
+mountpoint: a legtöbb caster közzéteszi a listát (sourcetable).</li>
+<li>A hibás felhasználónév vagy jelszó 401/403 hibát eredményez: ellenőrizze
+újra a hitelesítő adatokat.</li>
+<li>Egyes hálózatok megkövetelik a helyzet (GGA) elküldését: ezt az
+alkalmazás automatikusan megteszi, de a vevőnek előbb fixet kell szereznie.</li>
+</ul></details>
+
+<details><summary>A tszf. magasság üres vagy nulla</summary>
+<p>A telefonok belső GPS-e csak az ellipszoidi magasságot adja meg. Az
+ortometrikus (tszf.) magasság egy külső vevő GGA-mondatából származik. Vevő
+nélkül a pontok akkor is elmentik az ellipszoidi magasságot.</p></details>
+
+<details><summary>A diktálás nem működik</summary>
+<ul>
+<li>Ellenőrizze a mikrofon és a beszédfelismerés engedélyét a
+Beállításokban.</li>
+<li>Az átirat a készüléken készül: első alkalommal a rendszernek le kell
+töltenie a nyelvi modellt (egyszeri hálózat szükséges, utána offline is
+működik).</li>
+<li>Beszéljen rövid mondatokban; a szöveg a napló végéhez kerül.</li>
+</ul></details>
+
+<details><summary>A kataszteri térkép (WMS) nem jelenik meg</summary>
+<p>Az alkalmazás offline működik, de a WMS-rétegek webszolgáltatások:
+kapcsolat és működő szolgáltatás szükséges hozzájuk. Az olasz kataszter előre
+be van állítva; más országokhoz adja meg az adott ország nemzeti
+szolgáltatásának WMS-végpontját (EPSG:3857 támogatás szükséges).
+Adatlefedettségen kívül az alaptérkép és a pontok láthatók maradnak.</p></details>
+
+<details><summary>A fényképeknek nincs koordinátája</summary>
+<p>A fénykép az utolsó GNSS-fixből veszi a helyzetet: előbb nyissa meg a
+Felmérést, várja meg a helyzet rögzülését, majd fényképezzen. Ha a
+helyadat-engedély meg van tagadva, a fényképek koordináták nélkül kerülnek
+mentésre.</p></details>
+
+<details><summary>A jelentésből hiányoznak a fényképek vagy a logó</summary>
+<p>A jelentésekben szereplő fényképek, a logó és az egyéni fejléc a Pro
+részét képezik, és a DOCX-re és a PDF-re egyaránt vonatkoznak. Az ingyenes
+napi jelentés vízjelet tartalmaz, és nem foglal magában fényképeket.</p></details>
+
+<details><summary>Véletlenül töröltem egy lelőhelyet</summary>
+<p>A törlés végleges: az adatok nem állíthatók vissza (nincs felhő). Ha
+korábban exportált egy ZIP-et, importálja azt a lelőhely adott dátum
+szerinti visszaállításához. Tanács: minden nap végén exportáljon egy
+ZIP-et.</p></details>
+
+<details><summary>Megvásároltam a Pro-t, de még mindig zárolva van</summary>
+<p>Érintse meg a <kbd>Vásárlások visszaállítása</kbd> gombot a Pro képernyőn,
+ugyanazzal az Apple ID-vel, amellyel a vásárlás történt. Ha készüléket
+váltott, a visszaállítás helyreállítja az előfizetést vagy az örökös
+licencet.</p></details>
+
+<details><summary>A „Lekérés” szürkén jelenik meg, vagy azt írja: „Az időjárás nem elérhető”</summary>
+<ul>
+<li>ha a gomb szürke, egy múltbeli nap oldalán tartózkodik: az időjárás csak
+a mai napra kérhető le;</li>
+<li>ha megjelenik az „Az időjárás nem elérhető” üzenet, nincs hálózat, vagy a
+lelőhelynek még nincs GNSS-pontja, amelyből a helyzetet venni lehetne —
+rögzítsen egy pontot, és próbálja újra.</li>
+</ul></details>
+
+<footer>
+<p>Van olyan kérdése vagy problémája, ami itt nem szerepel? Írjon a
+<a href="mailto:enzo.ccc@gmail.com">enzo.ccc@gmail.com</a> címre ·
+<a href="../index.html">Adatvédelmi tájékoztató</a></p>
+</footer>
+
+</body>
+</html>

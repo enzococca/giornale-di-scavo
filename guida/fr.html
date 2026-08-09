@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guide d'utilisation — Giornale di Scavo</title>
+<link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+<p class="lingue"><a href="index.html">Italiano</a> <a href="en.html">English</a> <a href="de.html">Deutsch</a> <a href="es.html">Español</a>
+<strong>Français</strong> <a href="pt.html">Português</a> <a href="pl.html">Polski</a> <a href="ro.html">Română</a>
+<a href="hu.html">Magyar</a> <a href="ru.html">Русский</a> <a href="ar.html">العربية</a> <a href="zh-Hans.html">简体中文</a>
+<a href="ja.html">日本語</a> <a href="ko.html">한국어</a></p>
+
+<h1>Giornale di Scavo — Guide d'utilisation</h1>
+<p class="sotto">Le journal de fouille numérique pour iPhone et iPad. 100 % hors ligne : vos données restent sur votre appareil.</p>
+
+<h2>En deux mots</h2>
+<p>Une seule idée gouverne tout : <strong>chaque journée de fouille est une
+page</strong> qui se remplit toute seule. Vous enregistrez les choses là où elles se
+produisent — un point GNSS dans le Relevé, une photo dans les Médias, les heures
+dans le Chantier — et la page du jour dans le <kbd>Journal</kbd> les rassemble
+toutes automatiquement. En fin de semaine ou en fin de chantier, les rapports se
+génèrent tout seuls à partir des pages.</p>
+
+<h2>Une journée type</h2>
+<ol class="flusso">
+<li><b>Matin</b>Ouvrez la page du jour, notez la météo et le journal (ou dites-le avec <kbd>Dicter</kbd>)</li>
+<li><b>Équipe</b>Dans le <kbd>Chantier</kbd>, enregistrez qui est présent et ses heures</li>
+<li><b>Relevé</b>Acquérez les points GNSS ; vérifiez un repère au préalable si vous utilisez le RTK</li>
+<li><b>Photos</b>Photographiez depuis les <kbd>Médias</kbd> : les coordonnées s'attachent automatiquement</li>
+<li><b>Dessins</b>Décalquez la coupe ou le plan sur une photo (calque numérique)</li>
+<li><b>Soir</b>Depuis l'onglet <kbd>Rapports</kbd>, générez le rapport journalier : un PDF prêt à envoyer</li>
+</ol>
+
+<h2>Premiers pas</h2>
+<ol class="passi">
+<li>Au premier lancement, vous trouverez déjà un site d'exemple. Pour en créer
+un à vous, touchez le nom du site en haut (icône <kbd>🗺</kbd>) →
+<kbd>Nouveau site…</kbd> et donnez-lui un nom (p. ex. « Colle Sant'Angelo — Sondage 3 »).</li>
+<li>Le nom du site actif est toujours visible en haut : tous les onglets
+affichent les données de ce site. Pour changer de site, touchez à nouveau le nom.</li>
+<li>Accordez les permissions lorsqu'elles sont demandées : <em>position</em>
+(pour les points), <em>appareil photo</em> (pour les photos), <em>microphone</em>
+(pour la dictée), <em>Bluetooth</em> (seulement si vous utilisez un récepteur externe).</li>
+</ol>
+
+<h2>Les cinq onglets</h2>
+
+<h3>📓 Journal</h3>
+<ol class="passi">
+<li>Touchez une journée pour ouvrir sa page : journal, météo, équipe, points,
+photos et dessins du jour y sont déjà.</li>
+<li>Écrivez le journal ou touchez <kbd>Dicter</kbd> et parlez : la transcription
+se fait sur l'appareil et fonctionne même sans réseau.</li>
+<li>La météo s'écrit à la main (p. ex. « Ensoleillé, 28 °C, vent léger ») ou se
+récupère avec <kbd>Récupérer</kbd>, qui demande les conditions du moment au
+service météorologique norvégien. Cela nécessite le réseau et ne vaut que pour
+la journée d'aujourd'hui : la météo d'hier n'est plus récupérable. Un second
+appui dans l'après-midi ajoute une nouvelle mesure. Ce que vous écrivez à la
+main l'emporte toujours.</li>
+<li>Lors de la récupération, seule la position de la zone arrondie à environ
+11 mètres quitte l'appareil, et dans les rapports la ligne apparaît dans la
+langue du rapport.</li>
+</ol>
+<div class="schermate"><figure><img src="img/fr/01-diario.webp" alt="La liste des journées" width="640" height="1391" loading="lazy"><figcaption>La liste des journées</figcaption></figure><figure><img src="img/fr/02-giornata.webp" alt="La page d'une journée" width="640" height="1391" loading="lazy"><figcaption>La page d'une journée</figcaption></figure></div>
+
+<h3>📍 Relevé</h3>
+<ol class="passi">
+<li>Le panneau en haut affiche la position en direct : coordonnées, altitudes,
+précision et type de fix (GPS / RTK Float / RTK Fix).</li>
+<li>Si vous utilisez une canne, réglez la <kbd>Hauteur d'antenne (m)</kbd> :
+l'altitude du point est ramenée au sol automatiquement.</li>
+<li>Touchez <kbd>Acquérir le point</kbd>. Le nom est progressif (P001, P002…),
+mais vous pouvez en saisir un à vous (p. ex. « US 102 — fond de fosse ») et
+ajouter une note.</li>
+<li>Passez de <kbd>Liste</kbd> à <kbd>Carte</kbd> pour voir les points sur
+place ; depuis la carte, vous pouvez activer le cadastre ou un autre service WMS.</li>
+<li>Les repères (🏁) vivent dans leur propre section : importez-les depuis un
+CSV ou créez-les, puis utilisez la vérification pour surveiller les écarts
+ΔN/ΔE/ΔZ en temps réel avant de lever.</li>
+</ol>
+<div class="schermate"><figure><img src="img/fr/03-rilievo.webp" alt="Le panneau GNSS du Relevé" width="640" height="1391" loading="lazy"><figcaption>Le panneau GNSS du Relevé</figcaption></figure><figure><img src="img/fr/04-mappa.webp" alt="Points et repères sur la carte" width="640" height="1391" loading="lazy"><figcaption>Points et repères sur la carte</figcaption></figure></div>
+<p class="nota">Chaque point enregistre <strong>les deux altitudes</strong> :
+ellipsoïdale et orthométrique (alt. orth.). Avec le GPS interne du téléphone,
+l'altitude orthométrique peut ne pas être disponible : il faut alors un
+récepteur externe (voir plus bas).</p>
+
+<h3>📷 Médias</h3>
+<ol class="passi">
+<li>Photographiez avec le bouton appareil photo ou importez depuis la pellicule.</li>
+<li>Les photos prennent un nom progressif (F001, F002…) et sont géoréférencées
+avec la dernière position GNSS disponible.</li>
+<li>Touchez une photo pour son titre et ses notes (p. ex. « US 102 depuis le nord »).</li>
+</ol>
+<div class="schermate"><figure><img src="img/fr/05-media.webp" alt="La galerie photo" width="640" height="1391" loading="lazy"><figcaption>La galerie photo</figcaption></figure></div>
+
+<h3>✏️ Dessins (dans les Médias)</h3>
+<ol class="passi">
+<li>Créez une nouvelle planche et choisissez une photo du site comme fond :
+c'est votre calque numérique.</li>
+<li>Décalquez les couches, les coupes et les pierres du doigt ou avec l'Apple
+Pencil ; réglez l'opacité de la photo pour mieux voir le tracé.</li>
+<li>Ajoutez des zones de texte pour les étiquettes (p. ex. « US 1002 ») et la
+flèche du nord.</li>
+<li>Une fois terminé, masquez la photo : le dessin propre reste, prêt pour le rapport.</li>
+</ol>
+<div class="schermate"><figure><img src="img/fr/06-disegno.webp" alt="Le calque numérique" width="640" height="1391" loading="lazy"><figcaption>Le calque numérique</figcaption></figure></div>
+
+<h3>👷 Chantier</h3>
+<ol class="passi">
+<li>Enregistrez les présences du jour : nom, fonction et heures de chacun.</li>
+<li>Tenez l'inventaire des équipements et à qui ils sont attribués.</li>
+</ol>
+<div class="schermate"><figure><img src="img/fr/07-ore.webp" alt="Présences et heures" width="640" height="1391" loading="lazy"><figcaption>Présences et heures</figcaption></figure></div>
+
+<h3>📄 Rapports</h3>
+<ol class="passi">
+<li>Choisissez le type : <strong>journalier</strong> (gratuit, avec filigrane),
+<strong>hebdomadaire</strong>, <strong>mensuel</strong> ou <strong>final</strong>
+avec annexes complètes <span class="pro">PRO</span>.</li>
+<li>Choisissez la langue du rapport parmi <strong>quatorze</strong>,
+indépendante de la langue de l'application : le rapport peut sortir en
+italien même si vous utilisez l'application en français.</li>
+<li>Générez le PDF, ou exportez en DOCX avec logo et photos
+<span class="pro">PRO</span>, CSV des points, GeoJSON pour QGIS
+<span class="pro">PRO</span>.</li>
+</ol>
+<div class="schermate"><figure><img src="img/fr/08-report.webp" alt="Génération des rapports" width="640" height="1391" loading="lazy"><figcaption>Génération des rapports</figcaption></figure></div>
+
+<h2>Récepteur GNSS externe et NTRIP</h2>
+<p>Avec un récepteur externe (antenne centimétrique), l'application atteint la
+précision RTK. Le GPS interne reste toujours disponible en solution de repli.</p>
+<ol class="passi">
+<li>Allumez le récepteur et activez le Bluetooth du téléphone.</li>
+<li>Dans le <kbd>Relevé</kbd>, choisissez la source de position : <em>GNSS
+externe (BLE/NMEA)</em> <span class="pro">PRO</span> et sélectionnez votre
+récepteur dans la liste. Les récepteurs MFi (gratuits) et ceux qui diffusent le
+NMEA sur le réseau sont aussi pris en charge.</li>
+<li>Pour les corrections RTK, configurez le <strong>NTRIP</strong> : adresse du
+caster, port, mountpoint, utilisateur et mot de passe (conservés dans le
+trousseau de l'appareil). L'application envoie votre position au caster et
+reçoit les corrections.</li>
+<li>Attendez le passage en <strong>RTK Fix</strong> : précision centimétrique.
+Vérifiez sur un repère avant de commencer.</li>
+</ol>
+
+<h2>Sauvegarde et échange</h2>
+<ol class="passi">
+<li>Depuis le menu du site, touchez <kbd>Exporter le site (.zip)</kbd> : tout
+s'y trouve — journal, points, photos, dessins, heures, repères.</li>
+<li>Conservez le ZIP où vous voulez (Fichiers, Drive, e-mail…). C'est votre
+sauvegarde : l'application n'a pas de cloud, par choix.</li>
+<li><kbd>Importer le site (.zip)…</kbd> recrée le site sur un autre appareil,
+même entre iPhone et Android.</li>
+</ol>
+<p class="nota">⚠️ <kbd>Supprimer le site…</kbd> efface le site avec tout son
+contenu et c'est <strong>irréversible</strong> : exportez d'abord un ZIP en cas de doute.</p>
+
+<h2>Gratuit et Pro</h2>
+<table>
+<tr><th></th><th>Gratuit</th><th>Pro</th></tr>
+<tr><td>Sites</td><td>1</td><td>Illimités</td></tr>
+<tr><td>GNSS</td><td>GPS interne, récepteurs MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
+<tr><td>Rapports</td><td>Journalier avec filigrane</td><td>Tous, sans filigrane</td></tr>
+<tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX avec logo et photos, GeoJSON</td></tr>
+<tr><td>Dictée vocale</td><td>✓</td><td>✓</td></tr>
+<tr><td>Langues des rapports</td><td>14</td><td>14</td></tr>
+</table>
+<p>Pro est un abonnement mensuel ou annuel à renouvellement automatique, ou un
+achat unique à vie. Il se gère et se résilie depuis les réglages de votre
+identifiant Apple.</p>
+
+<h2>Résolution des problèmes</h2>
+
+<details><summary>Le récepteur Bluetooth n'apparaît pas ou ne se connecte pas</summary>
+<p>Vérifiez, dans l'ordre :</p>
+<ul>
+<li>le récepteur est allumé et n'est pas déjà connecté à une autre application ou à un autre téléphone ;</li>
+<li>le Bluetooth du système est activé et l'application a la permission
+Bluetooth (Réglages → Giornale di Scavo) ;</li>
+<li>la source choisie dans le Relevé est <em>GNSS externe (BLE/NMEA)</em> ;</li>
+<li>éteignez et rallumez le récepteur, puis relancez la recherche.</li>
+</ul></details>
+
+<details><summary>Je n'arrive jamais au RTK Fix</summary>
+<ul>
+<li>Une connexion NTRIP active est nécessaire : vérifiez le caster, le mountpoint et les identifiants.</li>
+<li>Vérifiez la couverture data du téléphone : les corrections voyagent par internet.</li>
+<li>Le ciel dégagé compte : les arbres denses et les murs proches dégradent le
+signal. Avec une couverture faible, vous pouvez rester en RTK Float (décimétrique).</li>
+<li>Choisissez un mountpoint proche (&lt; 30–40 km) ou un réseau VRS.</li>
+</ul></details>
+
+<details><summary>Le NTRIP ne se connecte pas</summary>
+<ul>
+<li>Vérifiez l'adresse et le port (souvent 2101) et que le mountpoint existe :
+de nombreux casters publient la liste (sourcetable).</li>
+<li>Un utilisateur ou un mot de passe erroné donne une erreur 401/403 :
+revérifiez les identifiants.</li>
+<li>Certains réseaux exigent l'envoi de la position (GGA) : l'application le
+fait seule, mais le récepteur doit déjà avoir un fix.</li>
+</ul></details>
+
+<details><summary>L'altitude orthométrique est vide ou nulle</summary>
+<p>Le GPS interne des téléphones ne fournit que l'altitude ellipsoïdale.
+L'altitude orthométrique (alt. orth.) provient de la trame GGA d'un récepteur
+externe. Sans récepteur, les points enregistrent tout de même l'ellipsoïdale.</p></details>
+
+<details><summary>La dictée ne fonctionne pas</summary>
+<ul>
+<li>Vérifiez la permission microphone et la reconnaissance vocale dans les Réglages.</li>
+<li>La transcription se fait sur l'appareil : la première fois, le système peut
+devoir télécharger le modèle de la langue (réseau nécessaire une seule fois,
+puis cela fonctionne hors ligne).</li>
+<li>Parlez par phrases courtes ; le texte s'insère à la fin du journal.</li>
+</ul></details>
+
+<details><summary>La carte cadastrale (WMS) ne s'affiche pas</summary>
+<p>L'application est hors ligne, mais les couches WMS sont des services web :
+elles nécessitent une connexion et un service actif. Le cadastre italien est
+préconfiguré ; pour d'autres pays, saisissez le point de terminaison WMS du
+service national (il doit prendre en charge l'EPSG:3857). Hors couverture
+data, la carte de base et les points restent visibles.</p></details>
+
+<details><summary>Les photos n'ont pas de coordonnées</summary>
+<p>La photo prend la position du dernier fix GNSS : ouvrez d'abord le Relevé
+et attendez que la position soit acquise, puis photographiez. Si la permission
+de position est refusée, les photos s'enregistrent sans coordonnées.</p></details>
+
+<details><summary>Il manque des photos ou le logo dans le rapport</summary>
+<p>Les photos dans les rapports, le logo et l'en-tête personnalisé font partie
+de Pro et s'appliquent au DOCX et au PDF. Le rapport journalier gratuit porte
+un filigrane et les photos n'y sont pas incluses.</p></details>
+
+<details><summary>J'ai supprimé un site par erreur</summary>
+<p>La suppression est définitive : les données ne sont pas récupérables (il
+n'y a pas de cloud). Si vous avez exporté un ZIP auparavant, importez-le pour
+restaurer le site à cette date. Conseil : exportez un ZIP en fin de journée.</p></details>
+
+<details><summary>J'ai acheté Pro mais c'est encore verrouillé</summary>
+<p>Touchez <kbd>Restaurer les achats</kbd> sur l'écran Pro, avec le même
+identifiant Apple que celui de l'achat. Si vous avez changé d'appareil, la
+restauration récupère l'abonnement ou la licence à vie.</p></details>
+
+<details><summary>« Récupérer » est grisé, ou indique « Météo non disponible »</summary>
+<ul>
+<li>si le bouton est grisé, vous êtes sur la page d'un jour passé : la météo
+se récupère uniquement pour la journée d'aujourd'hui ;</li>
+<li>si « Météo non disponible » s'affiche, le réseau manque, ou le site n'a
+pas encore de point GNSS pour en tirer la position — relevez un point et réessayez.</li>
+</ul></details>
+
+<footer>
+<p>Des questions ou des problèmes non répertoriés ? Écrivez à
+<a href="mailto:enzo.ccc@gmail.com">enzo.ccc@gmail.com</a> ·
+<a href="../index.html">Politique de confidentialité</a></p>
+</footer>
+
+</body>
+</html>

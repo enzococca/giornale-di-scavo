@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ghid de utilizare — Giornale di Scavo</title>
+<link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+<p class="lingue"><a href="index.html">Italiano</a> <a href="en.html">English</a> <a href="de.html">Deutsch</a> <a href="es.html">Español</a>
+<a href="fr.html">Français</a> <a href="pt.html">Português</a> <a href="pl.html">Polski</a> <strong>Română</strong>
+<a href="hu.html">Magyar</a> <a href="ru.html">Русский</a> <a href="ar.html">العربية</a> <a href="zh-Hans.html">简体中文</a>
+<a href="ja.html">日本語</a> <a href="ko.html">한국어</a></p>
+
+<h1>Giornale di Scavo — Ghid de utilizare</h1>
+<p class="sotto">Jurnalul digital de săpătură pentru iPhone și iPad. 100% offline: datele dumneavoastră rămân pe dispozitiv.</p>
+
+<h2>Pe scurt</h2>
+<p>Totul se bazează pe o singură idee: <strong>fiecare zi de săpătură este o
+pagină</strong> care se completează singură. Înregistrați lucrurile acolo unde
+se petrec — un punct GNSS în Ridicare, o fotografie în Media, orele în
+Șantier — iar pagina zilei din <kbd>Jurnal</kbd> le adună pe toate automat. La
+sfârșitul săptămânii sau al săpăturii, rapoartele se generează singure
+pornind de la pagini.</p>
+
+<h2>O zi obișnuită</h2>
+<ol class="flusso">
+<li><b>Dimineața</b>Deschideți pagina zilei, notați vremea și jurnalul (sau rostiți-l cu <kbd>Dictați</kbd>)</li>
+<li><b>Echipa</b>În <kbd>Șantier</kbd> înregistrați cine este prezent și orele fiecăruia</li>
+<li><b>Ridicare</b>Achiziționați punctele GNSS; verificați un reper dacă folosiți RTK</li>
+<li><b>Fotografii</b>Fotografiați din <kbd>Media</kbd>: coordonatele se atașează singure</li>
+<li><b>Desene</b>Decalcați secțiunea sau planul pe o fotografie (calc digital)</li>
+<li><b>Seara</b>Din fila <kbd>Rapoarte</kbd> generați raportul zilnic: un PDF gata de trimis</li>
+</ol>
+
+<h2>Primii pași</h2>
+<ol class="passi">
+<li>La prima pornire găsiți deja un sit demonstrativ. Pentru a crea unul
+propriu, atingeți numele sitului din partea de sus (pictograma <kbd>🗺</kbd>)
+→ <kbd>Sit nou…</kbd> și dați-i un nume (de ex. „Colle Sant'Angelo —
+Sondaj 3”).</li>
+<li>Numele sitului activ este mereu vizibil în partea de sus: toate filele
+afișează datele acelui sit. Pentru a schimba situl, atingeți din nou numele.</li>
+<li>Acordați permisiunile atunci când vă sunt cerute: <em>locație</em>
+(pentru puncte), <em>cameră</em> (pentru fotografii), <em>microfon</em>
+(pentru dictare), <em>Bluetooth</em> (doar dacă folosiți un receptor extern).</li>
+</ol>
+
+<h2>Cele cinci file</h2>
+
+<h3>📓 Jurnal</h3>
+<ol class="passi">
+<li>Atingeți o zi pentru a-i deschide pagina: jurnalul, vremea, echipa,
+punctele, fotografiile și desenele acelei zile sunt deja acolo.</li>
+<li>Scrieți jurnalul sau atingeți <kbd>Dictați</kbd> și vorbiți: transcrierea
+are loc pe dispozitiv și funcționează și fără rețea.</li>
+<li>Vremea se scrie manual (de ex. „Senin, 28 °C, vânt slab”) sau se preia cu
+<kbd>Preluați</kbd>, care cere condițiile de moment serviciului meteorologic
+norvegian. Este nevoie de rețea și funcționează doar pentru ziua de azi:
+vremea de ieri nu mai poate fi recuperată. O a doua atingere după-amiaza
+adaugă o nouă măsurătoare. Ceea ce scrieți manual are întotdeauna prioritate.</li>
+<li>La preluare, de pe dispozitiv iese doar poziția zonei rotunjită la
+aproximativ 11 metri, iar în rapoarte rândul apare în limba raportului.</li>
+</ol>
+<div class="schermate"><figure><img src="img/ro/01-diario.webp" alt="Lista zilelor" width="640" height="1391" loading="lazy"><figcaption>Lista zilelor</figcaption></figure><figure><img src="img/ro/02-giornata.webp" alt="Pagina unei zile" width="640" height="1391" loading="lazy"><figcaption>Pagina unei zile</figcaption></figure></div>
+
+<h3>📍 Ridicare</h3>
+<ol class="passi">
+<li>Panoul din partea de sus arată poziția în timp real: coordonate,
+altitudini, precizia și tipul de fix (GPS / RTK Float / RTK Fix).</li>
+<li>Dacă folosiți un jalon, setați <kbd>Înălțimea antenei (m)</kbd>:
+altitudinea punctului este redusă automat la sol.</li>
+<li>Atingeți <kbd>Achiziționați punctul</kbd>. Numele este progresiv (P001,
+P002…), dar puteți introduce unul propriu (de ex. „US 102 — fundul gropii”)
+și adăuga o notă.</li>
+<li>Comutați între <kbd>Listă</kbd> și <kbd>Hartă</kbd> pentru a vedea
+punctele la fața locului; din hartă puteți activa cadastrul sau un alt
+serviciu WMS.</li>
+<li>Reperele (🏁) au propria lor secțiune: importați-le din CSV sau
+creați-le, apoi folosiți verificarea pentru a urmări abaterile ΔN/ΔE/ΔZ în
+timp real înainte de a ridica.</li>
+</ol>
+<div class="schermate"><figure><img src="img/ro/03-rilievo.webp" alt="Panoul GNSS al Ridicării" width="640" height="1391" loading="lazy"><figcaption>Panoul GNSS al Ridicării</figcaption></figure><figure><img src="img/ro/04-mappa.webp" alt="Puncte și repere pe hartă" width="640" height="1391" loading="lazy"><figcaption>Puncte și repere pe hartă</figcaption></figure></div>
+<p class="nota">Fiecare punct salvează <strong>ambele altitudini</strong>:
+elipsoidală și ortometrică (alt. ortom.). Cu GPS-ul intern al telefonului,
+altitudinea ortometrică poate să nu fie disponibilă: este nevoie de un
+receptor extern (vedeți mai jos).</p>
+
+<h3>📷 Media</h3>
+<ol class="passi">
+<li>Fotografiați cu butonul camerei sau importați din galerie.</li>
+<li>Fotografiile primesc un nume progresiv (F001, F002…) și sunt
+georeferențiate cu ultima poziție GNSS disponibilă.</li>
+<li>Atingeți o fotografie pentru titlu și note (de ex. „US 102 dinspre nord”).</li>
+</ol>
+<div class="schermate"><figure><img src="img/ro/05-media.webp" alt="Galeria foto" width="640" height="1391" loading="lazy"><figcaption>Galeria foto</figcaption></figure></div>
+
+<h3>✏️ Desene (în Media)</h3>
+<ol class="passi">
+<li>Creați o planșă nouă și alegeți o fotografie a sitului ca fundal: este
+foaia dumneavoastră de calc digitală.</li>
+<li>Decalcați straturile, secțiunile și pietrele cu degetul sau cu Apple
+Pencil; reglați opacitatea fotografiei pentru a vedea mai bine trăsăturile.</li>
+<li>Adăugați casete de text pentru etichete (de ex. „US 1002”) și săgeata nordului.</li>
+<li>Când ați terminat, ascundeți fotografia: rămâne desenul curat, gata pentru raport.</li>
+</ol>
+<div class="schermate"><figure><img src="img/ro/06-disegno.webp" alt="Foaia de calc digitală" width="640" height="1391" loading="lazy"><figcaption>Foaia de calc digitală</figcaption></figure></div>
+
+<h3>👷 Șantier</h3>
+<ol class="passi">
+<li>Înregistrați prezențele zilei: numele, ocupația și orele fiecăruia.</li>
+<li>Țineți inventarul echipamentelor și cui îi sunt atribuite.</li>
+</ol>
+<div class="schermate"><figure><img src="img/ro/07-ore.webp" alt="Prezențe și ore" width="640" height="1391" loading="lazy"><figcaption>Prezențe și ore</figcaption></figure></div>
+
+<h3>📄 Rapoarte</h3>
+<ol class="passi">
+<li>Alegeți tipul: <strong>zilnic</strong> (gratuit, cu filigran),
+<strong>săptămânal</strong>, <strong>lunar</strong> sau <strong>final</strong>
+cu anexe complete <span class="pro">PRO</span>.</li>
+<li>Alegeți limba raportului dintre <strong>paisprezece</strong>, independentă
+de limba aplicației: raportul poate ieși în germană chiar dacă folosiți
+aplicația în română.</li>
+<li>Generați PDF-ul, sau exportați DOCX cu logo și fotografii
+<span class="pro">PRO</span>, CSV al punctelor, GeoJSON pentru QGIS
+<span class="pro">PRO</span>.</li>
+</ol>
+<div class="schermate"><figure><img src="img/ro/08-report.webp" alt="Generarea rapoartelor" width="640" height="1391" loading="lazy"><figcaption>Generarea rapoartelor</figcaption></figure></div>
+
+<h2>Receptor GNSS extern și NTRIP</h2>
+<p>Cu un receptor extern (antenă cu precizie centimetrică), aplicația atinge
+precizia RTK. GPS-ul intern rămâne mereu disponibil ca soluție de rezervă.</p>
+<ol class="passi">
+<li>Porniți receptorul și activați Bluetooth-ul telefonului.</li>
+<li>În <kbd>Ridicare</kbd> alegeți sursa poziției: <em>GNSS extern
+(BLE/NMEA)</em> <span class="pro">PRO</span> și selectați receptorul
+dumneavoastră din listă. Sunt acceptate și receptoarele MFi (gratuite),
+precum și cele care transmit NMEA prin rețea.</li>
+<li>Pentru corecțiile RTK configurați <strong>NTRIP</strong>: adresa
+caster-ului, portul, mountpoint-ul, utilizatorul și parola (rămân în
+portofelul de chei al dispozitivului). Aplicația trimite poziția
+dumneavoastră către caster și primește corecțiile.</li>
+<li>Așteptați trecerea la <strong>RTK Fix</strong>: precizie centimetrică.
+Verificați pe un reper înainte de a începe.</li>
+</ol>
+
+<h2>Copie de siguranță și schimb</h2>
+<ol class="passi">
+<li>Din meniul sitului atingeți <kbd>Exportați situl (.zip)</kbd>: înăuntru
+este totul — jurnalul, punctele, fotografiile, desenele, orele, reperele.</li>
+<li>Păstrați arhiva ZIP unde doriți (Fișiere, Drive, e-mail…). Este copia
+dumneavoastră de siguranță: aplicația nu are cloud, în mod deliberat.</li>
+<li><kbd>Importați situl (.zip)…</kbd> recreează situl pe alt dispozitiv,
+chiar și între iPhone și Android.</li>
+</ol>
+<p class="nota">⚠️ <kbd>Ștergeți situl…</kbd> elimină situl împreună cu tot
+conținutul său și este <strong>ireversibil</strong>: exportați mai întâi o
+arhivă ZIP dacă aveți dubii.</p>
+
+<h2>Gratuit și Pro</h2>
+<table>
+<tr><th></th><th>Gratuit</th><th>Pro</th></tr>
+<tr><td>Situri</td><td>1</td><td>Nelimitate</td></tr>
+<tr><td>GNSS</td><td>GPS intern, receptoare MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
+<tr><td>Rapoarte</td><td>Zilnic cu filigran</td><td>Toate, fără filigran</td></tr>
+<tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX cu logo și fotografii, GeoJSON</td></tr>
+<tr><td>Dictare vocală</td><td>✓</td><td>✓</td></tr>
+<tr><td>Limbi ale rapoartelor</td><td>14</td><td>14</td></tr>
+</table>
+<p>Pro este un abonament lunar sau anual cu reînnoire automată, sau o
+achiziție unică pe viață. Se gestionează și se anulează din setările
+ID-ului dumneavoastră Apple.</p>
+
+<h2>Rezolvarea problemelor</h2>
+
+<details><summary>Receptorul Bluetooth nu apare sau nu se conectează</summary>
+<p>Verificați, în ordine:</p>
+<ul>
+<li>receptorul este pornit și nu este deja conectat la o altă aplicație sau la un alt telefon;</li>
+<li>Bluetooth-ul sistemului este activ, iar aplicația are permisiunea
+Bluetooth (Setări → Giornale di Scavo);</li>
+<li>sursa aleasă în Ridicare este <em>GNSS extern (BLE/NMEA)</em>;</li>
+<li>opriți și reporniți receptorul, apoi căutați din nou.</li>
+</ul></details>
+
+<details><summary>Nu ajung niciodată la RTK Fix</summary>
+<ul>
+<li>Este nevoie de o conexiune NTRIP activă: verificați caster-ul,
+mountpoint-ul și datele de conectare.</li>
+<li>Verificați acoperirea de date a telefonului: corecțiile circulă prin internet.</li>
+<li>Cerul deschis contează: copacii deși și pereții apropiați degradează
+semnalul. Cu o acoperire slabă, puteți rămâne în RTK Float (precizie decimetrică).</li>
+<li>Alegeți un mountpoint apropiat (&lt; 30–40 km) sau o rețea VRS.</li>
+</ul></details>
+
+<details><summary>NTRIP nu se conectează</summary>
+<ul>
+<li>Verificați adresa și portul (adesea 2101) și că mountpoint-ul există:
+multe caster-e publică lista (sourcetable).</li>
+<li>Un utilizator sau o parolă greșite dau eroarea 401/403: verificați din
+nou datele de conectare.</li>
+<li>Unele rețele necesită trimiterea poziției (GGA): aplicația o face
+singură, dar receptorul trebuie să aibă deja un fix.</li>
+</ul></details>
+
+<details><summary>Altitudinea ortometrică este goală sau zero</summary>
+<p>GPS-ul intern al telefoanelor oferă doar altitudinea elipsoidală.
+Altitudinea ortometrică (alt. ortom.) provine din fraza GGA a unui receptor
+extern. Fără receptor, punctele salvează totuși altitudinea elipsoidală.</p></details>
+
+<details><summary>Dictarea nu funcționează</summary>
+<ul>
+<li>Verificați permisiunea de microfon și recunoașterea vocală din Setări.</li>
+<li>Transcrierea are loc pe dispozitiv: prima dată, sistemul poate avea
+nevoie să descarce modelul limbii (este nevoie de rețea o singură dată, apoi
+funcționează offline).</li>
+<li>Vorbiți în propoziții scurte; textul se adaugă la finalul jurnalului.</li>
+</ul></details>
+
+<details><summary>Harta cadastrală (WMS) nu se vede</summary>
+<p>Aplicația este offline, dar straturile WMS sunt servicii web: au nevoie
+de o conexiune și de un serviciu activ. Cadastrul italian este preconfigurat;
+pentru alte țări introduceți endpoint-ul WMS al serviciului național (trebuie
+să accepte EPSG:3857). În afara acoperirii de date, harta de bază și
+punctele rămân vizibile.</p></details>
+
+<details><summary>Fotografiile nu au coordonate</summary>
+<p>Fotografia preia poziția de la ultimul fix GNSS: deschideți mai întâi
+Ridicarea și așteptați ca poziția să fie obținută, apoi fotografiați. Cu
+permisiunea de locație refuzată, fotografiile se salvează fără coordonate.</p></details>
+
+<details><summary>Lipsesc fotografiile sau logo-ul din raport</summary>
+<p>Fotografiile din rapoarte, logo-ul și antetul personalizat fac parte din
+Pro și se aplică la DOCX și PDF. Raportul zilnic gratuit are filigran și nu
+include fotografii.</p></details>
+
+<details><summary>Am șters un sit din greșeală</summary>
+<p>Ștergerea este definitivă: datele nu pot fi recuperate (nu există cloud).
+Dacă ați exportat anterior o arhivă ZIP, importați-o pentru a restaura situl
+la acea dată. Sfat: exportați o arhivă ZIP la sfârșitul fiecărei zile.</p></details>
+
+<details><summary>Am cumpărat Pro, dar este încă blocat</summary>
+<p>Atingeți <kbd>Restaurați achizițiile</kbd> pe ecranul Pro, folosind
+același ID Apple cu care ați făcut achiziția. Dacă ați schimbat dispozitivul,
+restaurarea recuperează abonamentul sau licența pe viață.</p></details>
+
+<details><summary>„Preluați” este dezactivat sau afișează „Vreme indisponibilă”</summary>
+<ul>
+<li>dacă butonul este dezactivat, vă aflați pe pagina unei zile trecute:
+vremea poate fi preluată doar în ziua de azi;</li>
+<li>dacă apare „Vreme indisponibilă”, lipsește rețeaua sau situl nu are
+încă un punct GNSS din care să preia poziția — înregistrați un punct și
+încercați din nou.</li>
+</ul></details>
+
+<footer>
+<p>Aveți întrebări sau probleme care nu apar aici? Scrieți la
+<a href="mailto:enzo.ccc@gmail.com">enzo.ccc@gmail.com</a> ·
+<a href="../index.html">Politica de confidențialitate</a></p>
+</footer>
+
+</body>
+</html>

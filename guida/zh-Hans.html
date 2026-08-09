@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使用指南 — Giornale di Scavo</title>
+<link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+<p class="lingue"><a href="index.html">Italiano</a> <a href="en.html">English</a> <a href="de.html">Deutsch</a> <a href="es.html">Español</a>
+<a href="fr.html">Français</a> <a href="pt.html">Português</a> <a href="pl.html">Polski</a> <a href="ro.html">Română</a>
+<a href="hu.html">Magyar</a> <a href="ru.html">Русский</a> <a href="ar.html">العربية</a> <strong>简体中文</strong>
+<a href="ja.html">日本語</a> <a href="ko.html">한국어</a></p>
+
+<h1>Giornale di Scavo — 使用指南</h1>
+<p class="sotto">iPhone 与 iPad 上的数字发掘日志。100% 离线：数据始终保存在设备本地。</p>
+
+<h2>简而言之</h2>
+<p>核心理念只有一个：<strong>每一个发掘日都是一页</strong>，会自动填充内容。你在哪里
+记录，数据就出现在哪里——在「测量」中记录一个 GNSS 测点，在「媒体」中拍一张照
+片，在「工地」记一笔工时——当天的这一页会在 <kbd>日志</kbd> 中自动把它们全部汇
+总。到了周末，或发
+掘结束时，报告会直接从这些页面自动生成。</p>
+
+<h2>典型的一天</h2>
+<ol class="flusso">
+<li><b>早上</b>打开当天的页面，记录天气和日记（也可以用 <kbd>听写</kbd> 说出来）</li>
+<li><b>出勤</b>在 <kbd>工地</kbd> 中登记在场人员和工时</li>
+<li><b>测量</b>采集 GNSS 测点；如果使用 RTK，先校核一个控制点</li>
+<li><b>照片</b>在 <kbd>媒体</kbd> 中拍照：坐标会自动附加</li>
+<li><b>图纸</b>在照片上描摹剖面图或平面图（数字硫酸纸）</li>
+<li><b>晚上</b>在 <kbd>报告</kbd> 标签页生成日报告：PDF 随时可以发送</li>
+</ol>
+
+<h2>快速上手</h2>
+<ol class="passi">
+<li>首次启动时，你会看到一个示例遗址。要创建自己的遗址，点击顶部的遗址名称
+（<kbd>🗺</kbd> 图标）→ <kbd>新建遗址…</kbd>，然后给它起个名字（例如“Colle
+Sant'Angelo — 探方 3”）。</li>
+<li>当前使用的遗址名称始终显示在顶部：所有标签页显示的都是该遗址的数据。要切换
+遗址，再次点击名称即可。</li>
+<li>在系统请求时授予相应权限：<em>定位</em>（用于测点）、<em>相机</em>（用于拍
+照）、<em>麦克风</em>（用于听写）、<em>蓝牙</em>（仅在使用外部接收机时需要）。</li>
+</ol>
+
+<h2>五个标签页</h2>
+
+<h3>📓 日志</h3>
+<ol class="passi">
+<li>点击某一天以打开它的页面：当天的日记、天气、出勤、测点、照片和图纸都已经在
+那里了。</li>
+<li>写下日记，或点击 <kbd>听写</kbd> 说话：转写在设备本地进行，没有网络也能使
+用。</li>
+<li>天气可以手动填写（例如“晴，28 °C，微风”），也可以点击 <kbd>获取</kbd> 自动
+获取，此时会向挪威气象局查询当前的天气状况。这需要网络连接，并且只对今天的页面
+有效：昨天的天气已经无法再取回。下午再次点击会追加一条记录。手动填写的内容始终
+优先。</li>
+<li>获取天气时，发送出去的只有精度约为 11 米、经过模糊处理的区域位置，报告中这
+一行会使用报告所选择的语言显示。</li>
+</ol>
+<div class="schermate"><figure><img src="img/zh-Hans/01-diario.webp" alt="发掘日列表" width="640" height="1391" loading="lazy"><figcaption>发掘日列表</figcaption></figure><figure><img src="img/zh-Hans/02-giornata.webp" alt="某一天的页面" width="640" height="1391" loading="lazy"><figcaption>某一天的页面</figcaption></figure></div>
+
+<h3>📍 测量</h3>
+<ol class="passi">
+<li>顶部面板显示实时位置：坐标、高程、精度以及 Fix 类型（GPS / RTK Float / RTK
+Fix）。</li>
+<li>如果使用对中杆，请设置 <kbd>天线高度（米）</kbd>：测点的高程会自动换算到地
+面。</li>
+<li>点击 <kbd>采集测点</kbd>。名称会自动编号（P001、P002……），但你也可以自己
+输入一个名称（例如“US 102——坑底高程”），并添加备注。</li>
+<li>在 <kbd>列表</kbd> 和 <kbd>地图</kbd> 之间切换，可以看到测点在现场的位置；
+在地图上可以启用地籍图或其他 WMS 服务。</li>
+<li>控制点（🏁）有自己的板块：可以从 CSV 导入，也可以手动创建，测量前用校核功
+能实时查看 Δ北/Δ东/Δ高程 的偏差。</li>
+</ol>
+<div class="schermate"><figure><img src="img/zh-Hans/03-rilievo.webp" alt="「测量」的 GNSS 面板" width="640" height="1391" loading="lazy"><figcaption>「测量」的 GNSS 面板</figcaption></figure><figure><img src="img/zh-Hans/04-mappa.webp" alt="地图上的测点与控制点" width="640" height="1391" loading="lazy"><figcaption>地图上的测点与控制点</figcaption></figure></div>
+<p class="nota">每个测点都会同时保存<strong>两种高程</strong>：椭球高和正高。使
+用手机内置 GPS 时，正高可能无法获取：这时需要一台外部接收机（见下文）。</p>
+
+<h3>📷 媒体</h3>
+<ol class="passi">
+<li>使用相机按钮拍照，或从相册导入。</li>
+<li>照片会自动按顺序命名（F001、F002……），并使用最近一次可用的 GNSS 位置进行
+地理定位。</li>
+<li>点击一张照片可以添加标题和备注（例如“US 102，北向拍摄”）。</li>
+</ol>
+<div class="schermate"><figure><img src="img/zh-Hans/05-media.webp" alt="照片图库" width="640" height="1391" loading="lazy"><figcaption>照片图库</figcaption></figure></div>
+
+<h3>✏️ 图纸（在媒体中）</h3>
+<ol class="passi">
+<li>创建一张新图纸，并选择一张遗址照片作为背景：这就是你的数字硫酸纸。</li>
+<li>用手指或 Apple Pencil 描摹地层、切割面和石块；调整照片的不透明度可以更清楚
+地看到笔迹。</li>
+<li>添加文本框用于标注（例如“US 1002”），以及指北箭头。</li>
+<li>完成后隐藏照片：留下干净的图纸，可以直接用于报告。</li>
+</ol>
+<div class="schermate"><figure><img src="img/zh-Hans/06-disegno.webp" alt="数字硫酸纸" width="640" height="1391" loading="lazy"><figcaption>数字硫酸纸</figcaption></figure></div>
+
+<h3>👷 工地</h3>
+<ol class="passi">
+<li>登记当天的出勤情况：每个人的姓名、工种和工时。</li>
+<li>维护设备清单以及各件设备的分配对象。</li>
+</ol>
+<div class="schermate"><figure><img src="img/zh-Hans/07-ore.webp" alt="出勤与工时" width="640" height="1391" loading="lazy"><figcaption>出勤与工时</figcaption></figure></div>
+
+<h3>📄 报告</h3>
+<ol class="passi">
+<li>选择类型：<strong>日</strong>报告（免费，带水印）、<strong>周</strong>报告、
+<strong>月</strong>报告，或包含完整附录的<strong>最终</strong>报告
+<span class="pro">PRO</span>。</li>
+<li>报告语言可以从<strong>十四种</strong>中选择，与应用界面所用的语言无关：即
+使应用界面使用简体中文，报告也可以用德语生成。</li>
+<li>生成 PDF，或者导出带有标志和照片的 DOCX <span class="pro">PRO</span>、测点
+的 CSV，以及用于 QGIS 的 GeoJSON <span class="pro">PRO</span>。</li>
+</ol>
+<div class="schermate"><figure><img src="img/zh-Hans/08-report.webp" alt="生成报告" width="640" height="1391" loading="lazy"><figcaption>生成报告</figcaption></figure></div>
+
+<h2>外部 GNSS 接收机与 NTRIP</h2>
+<p>使用外部接收机（厘米级天线），应用可以达到 RTK 精度。内置 GPS 始终作为备用方
+案保留可用。</p>
+<ol class="passi">
+<li>打开接收机电源，并启用手机的蓝牙。</li>
+<li>在 <kbd>测量</kbd> 中选择定位来源：<em>外部 GNSS（BLE/NMEA）</em>
+<span class="pro">PRO</span>，然后从列表中选择你的接收机。同时也支持 MFi 接收
+机（免费）以及通过网络发布 NMEA 数据的接收机。</li>
+<li>如需 RTK 改正数据，请配置 <strong>NTRIP</strong>：Caster 地址、端口、
+Mountpoint、用户名和密码（会保存在设备的钥匙串中）。应用会将位置发送给 Caster
+并接收改正数据。</li>
+<li>等待状态切换到 <strong>RTK Fix</strong>：厘米级精度。开始之前先在一个控制
+点上做校核。</li>
+</ol>
+
+<h2>备份与交换</h2>
+<ol class="passi">
+<li>在遗址菜单中点击 <kbd>导出遗址（.zip）</kbd>：里面包含了一切——日志、测
+点、照片、图纸、工时、控制点。</li>
+<li>把这个 ZIP 文件保存在任何你喜欢的地方（文件、Drive、邮件……）。这就是你的
+备份：应用刻意不提供云端存储。</li>
+<li><kbd>导入遗址（.zip）…</kbd> 可以在另一台设备上重新创建该遗址，甚至可以在
+iPhone 和 Android 之间互相导入。</li>
+</ol>
+<p class="nota">⚠️ <kbd>删除遗址…</kbd> 会删除该遗址及其全部内容，此操作<strong>
+不可撤销</strong>：如果不确定，请先导出一份 ZIP。</p>
+
+<h2>免费版与 Pro</h2>
+<table>
+<tr><th></th><th>免费</th><th>Pro</th></tr>
+<tr><td>遗址</td><td>1</td><td>不限</td></tr>
+<tr><td>GNSS</td><td>内置 GPS、MFi 接收机</td><td>+ BLE/NMEA、NTRIP</td></tr>
+<tr><td>报告</td><td>带水印的日报告</td><td>全部类型，无水印</td></tr>
+<tr><td>导出</td><td>PDF、CSV</td><td>+ 带标志和照片的 DOCX、GeoJSON</td></tr>
+<tr><td>语音听写</td><td>✓</td><td>✓</td></tr>
+<tr><td>报告语言</td><td>14</td><td>14</td></tr>
+</table>
+<p>Pro 是按月或按年自动续订的订阅，也可以选择一次性买断的终身版本。可以随时在
+Apple ID 设置中进行管理或取消。</p>
+
+<h2>常见问题排查</h2>
+
+<details><summary>蓝牙接收机没有出现，或无法连接</summary>
+<p>请依次检查：</p>
+<ul>
+<li>接收机已开机，并且没有连接到其他应用或其他手机；</li>
+<li>系统蓝牙已开启，且应用已获得蓝牙权限（设置 → Giornale di Scavo）；</li>
+<li>在「测量」中选择的定位来源是 <em>外部 GNSS（BLE/NMEA）</em>；</li>
+<li>关闭并重新打开接收机，然后再次搜索。</li>
+</ul></details>
+
+<details><summary>始终无法达到 RTK Fix</summary>
+<ul>
+<li>需要一个有效的 NTRIP 连接：检查 Caster、Mountpoint 和凭据。</li>
+<li>检查手机的数据网络覆盖：改正数据通过互联网传输。</li>
+<li>开阔的天空很重要：茂密的树木和附近的墙壁会削弱信号。信号较差时可能会一直
+停留在 RTK Float（分米级）。</li>
+<li>选择一个距离较近的 Mountpoint（&lt; 30–40 公里）或使用 VRS 网络。</li>
+</ul></details>
+
+<details><summary>NTRIP 无法连接</summary>
+<ul>
+<li>检查地址和端口（通常是 2101），并确认 Mountpoint 确实存在：许多 Caster 会
+公开列表（sourcetable）。</li>
+<li>用户名或密码错误会导致 401/403 错误：请重新检查凭据。</li>
+<li>部分网络要求发送位置信息（GGA）：应用会自动完成，但前提是接收机已经获得了
+一个 fix。</li>
+</ul></details>
+
+<details><summary>正高为空或为零</summary>
+<p>手机的内置 GPS 只能提供椭球高。正高来自外部接收机的 GGA 语句。如果没有接收
+机，测点仍然会保存椭球高。</p></details>
+
+<details><summary>听写功能不起作用</summary>
+<ul>
+<li>检查设置中的麦克风和语音识别权限。</li>
+<li>转写在设备本地进行：首次使用时系统可能需要下载语言模型（只需一次网络连
+接，之后就可以离线使用）。</li>
+<li>用简短的句子说话；文字会添加到日记的末尾。</li>
+</ul></details>
+
+<details><summary>地籍图（WMS）无法显示</summary>
+<p>应用本身是离线的，但 WMS 图层属于网络服务：需要网络连接以及一个可用的服
+务。意大利的地籍图已经预先配置好；对于其他国家，请输入该国官方服务的 WMS 端点
+（必须支持 EPSG:3857）。在没有网络覆盖的地方，底图和测点仍然可以正常显示。</p></details>
+
+<details><summary>照片没有坐标</summary>
+<p>照片的位置来自最近一次的 GNSS fix：请先打开「测量」，等待位置锁定后再拍
+照。如果拒绝了定位权限，照片会以没有坐标的方式保存。</p></details>
+
+<details><summary>报告中缺少照片或标志</summary>
+<p>报告中的照片、标志和自定义页眉都是 Pro 功能，同时适用于 DOCX 和 PDF。免费版
+的日报告带有水印，且不包含照片。</p></details>
+
+<details><summary>误删了一个遗址</summary>
+<p>删除是最终操作：数据无法恢复（不存在云端备份）。如果你之前导出过 ZIP，可以
+导入它，将遗址恢复到那个时间点的状态。建议：每天结束时导出一份 ZIP。</p></details>
+
+<details><summary>已经购买了 Pro，但仍然显示锁定</summary>
+<p>在 Pro 页面点击 <kbd>恢复购买</kbd>，并使用购买时所用的同一个 Apple ID。如
+果更换了设备，恢复操作会找回订阅或终身授权。</p></details>
+
+<details><summary>「获取」显示为灰色，或提示「天气数据不可用」</summary>
+<ul>
+<li>如果按钮是灰色的，说明你正在查看过去某一天的页面：天气只能在今天的页面上
+获取；</li>
+<li>如果出现「天气数据不可用」，说明没有网络，或者该遗址还没有可用来获取位置
+的 GNSS 测点——先采集一个测点，然后再试一次。</li>
+</ul></details>
+
+<footer>
+<p>还有其他问题？请写信给
+<a href="mailto:enzo.ccc@gmail.com">enzo.ccc@gmail.com</a> ·
+<a href="../index.html">隐私政策</a></p>
+</footer>
+
+</body>
+</html>

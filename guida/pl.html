@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instrukcja obsługi — Giornale di Scavo</title>
+<link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+<p class="lingue"><a href="index.html">Italiano</a> <a href="en.html">English</a> <a href="de.html">Deutsch</a> <a href="es.html">Español</a>
+<a href="fr.html">Français</a> <a href="pt.html">Português</a> <strong>Polski</strong> <a href="ro.html">Română</a>
+<a href="hu.html">Magyar</a> <a href="ru.html">Русский</a> <a href="ar.html">العربية</a> <a href="zh-Hans.html">简体中文</a>
+<a href="ja.html">日本語</a> <a href="ko.html">한국어</a></p>
+
+<h1>Giornale di Scavo — Instrukcja obsługi</h1>
+<p class="sotto">Cyfrowy dziennik wykopalisk na iPhone'a i iPada. 100% offline: dane pozostają na urządzeniu.</p>
+
+<h2>Krótko mówiąc</h2>
+<p>Liczy się jedna idea: <strong>każdy dzień wykopalisk to strona</strong>, która
+wypełnia się sama. Rzeczy rejestruje się tam, gdzie mają miejsce — punkt GNSS w
+zakładce Pomiar, zdjęcie w Mediach, godziny na Stanowisku — a strona dnia w
+zakładce <kbd>Dziennik</kbd> zbiera to wszystko automatycznie. Pod koniec
+tygodnia lub wykopalisk raporty powstają same na podstawie stron.</p>
+
+<h2>Typowy dzień</h2>
+<ol class="flusso">
+<li><b>Rano</b>Otworzyć stronę dnia, zanotować pogodę i wpis w dzienniku (można też podyktować przyciskiem <kbd>Dyktuj</kbd>)</li>
+<li><b>Obecność</b>Na zakładce <kbd>Stanowisko</kbd> zarejestrować, kto jest obecny, i godziny każdej osoby</li>
+<li><b>Pomiar</b>Zarejestrować punkty GNSS; przy RTK najpierw sprawdzić reper</li>
+<li><b>Zdjęcia</b>Fotografować w zakładce <kbd>Media</kbd>: współrzędne dołączają się same</li>
+<li><b>Rysunki</b>Odrysować przekrój lub plan na zdjęciu (cyfrowa kalka)</li>
+<li><b>Wieczorem</b>Z zakładki <kbd>Raporty</kbd> wygenerować raport dzienny: PDF gotowy do wysłania</li>
+</ol>
+
+<h2>Pierwsze kroki</h2>
+<ol class="passi">
+<li>Przy pierwszym uruchomieniu jest już dostępne przykładowe stanowisko. Aby
+utworzyć własne, dotknąć nazwy stanowiska u góry (ikona <kbd>🗺</kbd>) →
+<kbd>Nowe stanowisko…</kbd> i nadać mu nazwę (np. „Colle Sant'Angelo —
+Wykop 3”).</li>
+<li>Nazwa aktywnego stanowiska jest zawsze widoczna u góry: wszystkie zakładki
+pokazują dane tego stanowiska. Aby zmienić stanowisko, dotknąć nazwy
+ponownie.</li>
+<li>Udzielić uprawnień, gdy zostaną poproszone: <em>lokalizacja</em> (dla
+punktów), <em>aparat</em> (dla zdjęć), <em>mikrofon</em> (dla dyktowania),
+<em>Bluetooth</em> (tylko przy użyciu zewnętrznego odbiornika).</li>
+</ol>
+
+<h2>Pięć zakładek</h2>
+
+<h3>📓 Dziennik</h3>
+<ol class="passi">
+<li>Dotknąć dnia, aby otworzyć jego stronę: dziennik, pogoda, obecność,
+punkty, zdjęcia i rysunki tego dnia są już tam.</li>
+<li>Napisać dziennik lub dotknąć <kbd>Dyktuj</kbd> i mówić: transkrypcja
+odbywa się na urządzeniu i działa też bez sieci.</li>
+<li>Pogodę można wpisać ręcznie (np. „Słonecznie, 28°C, słaby wiatr”) lub
+pobrać przyciskiem <kbd>Pobierz</kbd>, który pyta norweską służbę
+meteorologiczną o aktualne warunki. Potrzebna jest sieć, a funkcja działa
+tylko dla dzisiejszej strony: pogody z wczoraj nie da się już odzyskać.
+Drugie dotknięcie po południu dodaje kolejny pomiar. To, co wpisano ręcznie,
+zawsze ma pierwszeństwo.</li>
+<li>Przy pobieraniu z urządzenia wychodzi tylko pozycja okolicy zaokrąglona do
+około 11 metrów, a w raportach wiersz pojawia się w języku raportu.</li>
+</ol>
+<div class="schermate"><figure><img src="img/pl/01-diario.webp" alt="Lista dni" width="640" height="1391" loading="lazy"><figcaption>Lista dni</figcaption></figure><figure><img src="img/pl/02-giornata.webp" alt="Strona dnia" width="640" height="1391" loading="lazy"><figcaption>Strona dnia</figcaption></figure></div>
+
+<h3>📍 Pomiar</h3>
+<ol class="passi">
+<li>Panel u góry pokazuje pozycję na żywo: współrzędne, wysokości, dokładność
+i typ fix (GPS / RTK Float / RTK Fix).</li>
+<li>Przy użyciu tyczki ustawić <kbd>Wysokość anteny (m)</kbd>: wysokość punktu
+jest automatycznie sprowadzana do gruntu.</li>
+<li>Dotknąć <kbd>Zarejestruj punkt</kbd>. Nazwy są nadawane kolejno (P001,
+P002…), ale można wpisać własną (np. „JS 102 — dno jamy”) i dodać notatkę.</li>
+<li>Przełączać się między <kbd>Lista</kbd> a <kbd>Mapa</kbd>, aby zobaczyć
+punkty w terenie; z mapy można włączyć katastr lub inną usługę WMS.</li>
+<li>Repery (🏁) mają własną sekcję: zaimportować je z CSV lub utworzyć, a
+następnie użyć <kbd>Weryfikacja</kbd>, aby na żywo obserwować odchyłki
+ΔPn./ΔWsch./ΔWys. przed pomiarem.</li>
+</ol>
+<div class="schermate"><figure><img src="img/pl/03-rilievo.webp" alt="Panel GNSS zakładki Pomiar" width="640" height="1391" loading="lazy"><figcaption>Panel GNSS zakładki Pomiar</figcaption></figure><figure><img src="img/pl/04-mappa.webp" alt="Punkty i repery na mapie" width="640" height="1391" loading="lazy"><figcaption>Punkty i repery na mapie</figcaption></figure></div>
+<p class="nota">Każdy punkt zapisuje <strong>obie wysokości</strong>:
+elipsoidalną i normalną (n.p.m.). Przy wewnętrznym GPS telefonu wysokość
+n.p.m. może być niedostępna: potrzebny jest wtedy zewnętrzny odbiornik
+(patrz niżej).</p>
+
+<h3>📷 Media</h3>
+<ol class="passi">
+<li>Fotografować przyciskiem aparatu lub importować z biblioteki zdjęć.</li>
+<li>Zdjęcia otrzymują kolejną nazwę (F001, F002…) i są georeferencjonowane
+ostatnią dostępną pozycją GNSS.</li>
+<li>Dotknąć zdjęcia, aby nadać tytuł i notatki (np. „JS 102 od północy”).</li>
+</ol>
+<div class="schermate"><figure><img src="img/pl/05-media.webp" alt="Galeria zdjęć" width="640" height="1391" loading="lazy"><figcaption>Galeria zdjęć</figcaption></figure></div>
+
+<h3>✏️ Rysunki (w Mediach)</h3>
+<ol class="passi">
+<li>Utworzyć nową planszę i wybrać zdjęcie stanowiska jako tło: to cyfrowa
+kalka.</li>
+<li>Odrysować warstwy, przekopy i kamienie palcem lub Apple Pencil;
+wyregulować przezroczystość zdjęcia, aby lepiej widzieć linie.</li>
+<li>Dodać pola tekstowe na etykiety (np. „JS 1002”) oraz strzałkę północy.</li>
+<li>Po zakończeniu ukryć zdjęcie: pozostaje czysty rysunek, gotowy do
+raportu.</li>
+</ol>
+<div class="schermate"><figure><img src="img/pl/06-disegno.webp" alt="Cyfrowa kalka" width="640" height="1391" loading="lazy"><figcaption>Cyfrowa kalka</figcaption></figure></div>
+
+<h3>👷 Stanowisko</h3>
+<ol class="passi">
+<li>Zarejestrować obecność danego dnia: imię i nazwisko, funkcję oraz godziny
+każdej osoby.</li>
+<li>Prowadzić ewidencję sprzętu i przypisania go do osób.</li>
+</ol>
+<div class="schermate"><figure><img src="img/pl/07-ore.webp" alt="Obecność i godziny" width="640" height="1391" loading="lazy"><figcaption>Obecność i godziny</figcaption></figure></div>
+
+<h3>📄 Raporty</h3>
+<ol class="passi">
+<li>Wybrać typ: <strong>dzienny</strong> (bezpłatny, ze znakiem wodnym),
+<strong>tygodniowy</strong>, <strong>miesięczny</strong> lub
+<strong>końcowy</strong> z pełnymi załącznikami <span class="pro">PRO</span>.</li>
+<li>Wybrać język raportu spośród <strong>czternastu</strong>, niezależnie od
+języka aplikacji: raport może zostać wygenerowany po angielsku, nawet jeśli
+aplikacja działa po polsku.</li>
+<li>Wygenerować PDF albo wyeksportować DOCX z logo i zdjęciami
+<span class="pro">PRO</span>, CSV punktów, GeoJSON dla QGIS
+<span class="pro">PRO</span>.</li>
+</ol>
+<div class="schermate"><figure><img src="img/pl/08-report.webp" alt="Generowanie raportów" width="640" height="1391" loading="lazy"><figcaption>Generowanie raportów</figcaption></figure></div>
+
+<h2>Zewnętrzny odbiornik GNSS i NTRIP</h2>
+<p>Z zewnętrznym odbiornikiem (antena o dokładności centymetrowej) aplikacja
+osiąga dokładność RTK. Wewnętrzny GPS pozostaje zawsze dostępny jako
+rozwiązanie zapasowe.</p>
+<ol class="passi">
+<li>Włączyć odbiornik i aktywować Bluetooth w telefonie.</li>
+<li>Na zakładce <kbd>Pomiar</kbd> wybrać źródło pozycji: <em>GNSS zewnętrzny
+(BLE/NMEA)</em> <span class="pro">PRO</span> i wybrać odbiornik z listy.
+Obsługiwane są też odbiorniki MFi (bezpłatnie) oraz odbiorniki udostępniające
+NMEA w sieci.</li>
+<li>Do poprawek RTK skonfigurować <strong>NTRIP</strong>: adres castera, port,
+mountpoint, nazwę użytkownika i hasło (przechowywane w pęku kluczy
+urządzenia). Aplikacja wysyła pozycję do castera i odbiera poprawki.</li>
+<li>Poczekać na przejście do <strong>RTK Fix</strong>: dokładność
+centymetrowa. Przed rozpoczęciem sprawdzić na reperze.</li>
+</ol>
+
+<h2>Kopia zapasowa i wymiana</h2>
+<ol class="passi">
+<li>Z menu stanowiska dotknąć <kbd>Eksportuj stanowisko (.zip)</kbd>: w środku
+jest wszystko — dziennik, punkty, zdjęcia, rysunki, godziny, repery.</li>
+<li>Przechowywać ZIP, gdzie się chce (Pliki, Drive, e-mail…). To kopia
+zapasowa: aplikacja celowo nie ma chmury.</li>
+<li><kbd>Importuj stanowisko (.zip)…</kbd> odtwarza stanowisko na innym
+urządzeniu, także między iPhone'em a Androidem.</li>
+</ol>
+<p class="nota">⚠️ <kbd>Usuń stanowisko…</kbd> usuwa stanowisko wraz z całą
+zawartością i jest to działanie <strong>nieodwracalne</strong>: w razie
+wątpliwości najpierw wyeksportować ZIP.</p>
+
+<h2>Bezpłatna i Pro</h2>
+<table>
+<tr><th></th><th>Bezpłatna</th><th>Pro</th></tr>
+<tr><td>Stanowiska</td><td>1</td><td>Bez ograniczeń</td></tr>
+<tr><td>GNSS</td><td>GPS wewnętrzny, odbiorniki MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
+<tr><td>Raporty</td><td>Dzienny ze znakiem wodnym</td><td>Wszystkie, bez znaku wodnego</td></tr>
+<tr><td>Eksport</td><td>PDF, CSV</td><td>+ DOCX z logo i zdjęciami, GeoJSON</td></tr>
+<tr><td>Dyktowanie głosowe</td><td>✓</td><td>✓</td></tr>
+<tr><td>Języki raportów</td><td>14</td><td>14</td></tr>
+</table>
+<p>Pro to subskrypcja miesięczna lub roczna z automatycznym odnawianiem, albo
+jednorazowy zakup dożywotni. Zarządzanie i anulowanie jest możliwe w dowolnym
+momencie w ustawieniach identyfikatora Apple.</p>
+
+<h2>Rozwiązywanie problemów</h2>
+
+<details><summary>Odbiornik Bluetooth nie pojawia się lub nie łączy się</summary>
+<p>Sprawdzić po kolei:</p>
+<ul>
+<li>odbiornik jest włączony i nie jest już połączony z inną aplikacją lub
+telefonem;</li>
+<li>Bluetooth systemowy jest włączony, a aplikacja ma uprawnienie Bluetooth
+(Ustawienia → Giornale di Scavo);</li>
+<li>źródło wybrane na Pomiarze to <em>GNSS zewnętrzny (BLE/NMEA)</em>;</li>
+<li>wyłączyć i włączyć ponownie odbiornik, a następnie powtórzyć
+wyszukiwanie.</li>
+</ul></details>
+
+<details><summary>Nigdy nie udaje się osiągnąć RTK Fix</summary>
+<ul>
+<li>Potrzebne jest aktywne połączenie NTRIP: sprawdzić caster, mountpoint i
+dane uwierzytelniające.</li>
+<li>Sprawdzić zasięg danych telefonu: poprawki docierają przez internet.</li>
+<li>Liczy się otwarte niebo: gęste drzewa i pobliskie ściany osłabiają
+sygnał. Przy słabych warunkach można pozostać w trybie RTK Float (dokładność
+decymetrowa).</li>
+<li>Wybrać bliski mountpoint (&lt; 30–40 km) lub sieć VRS.</li>
+</ul></details>
+
+<details><summary>NTRIP nie łączy się</summary>
+<ul>
+<li>Zweryfikować adres i port (często 2101) oraz istnienie mountpointu:
+większość casterów publikuje listę (sourcetable).</li>
+<li>Błędna nazwa użytkownika lub hasło dają błąd 401/403: ponownie sprawdzić
+dane uwierzytelniające.</li>
+<li>Niektóre sieci wymagają wysyłania pozycji (GGA): aplikacja robi to sama,
+ale odbiornik musi mieć wcześniej uzyskany fix.</li>
+</ul></details>
+
+<details><summary>Wysokość n.p.m. jest pusta lub równa zeru</summary>
+<p>Wewnętrzny GPS telefonów dostarcza tylko wysokość elipsoidalną. Wysokość
+normalna (n.p.m.) pochodzi z sekwencji GGA zewnętrznego odbiornika. Bez
+odbiornika punkty i tak zapisują wysokość elipsoidalną.</p></details>
+
+<details><summary>Dyktowanie nie działa</summary>
+<ul>
+<li>Sprawdzić uprawnienia mikrofonu i rozpoznawania mowy w Ustawieniach.</li>
+<li>Transkrypcja odbywa się na urządzeniu: za pierwszym razem system może
+pobrać model językowy (sieć potrzebna jednorazowo, potem działa offline).</li>
+<li>Mówić krótkimi zdaniami; tekst jest dodawany na końcu dziennika.</li>
+</ul></details>
+
+<details><summary>Mapa katastralna (WMS) się nie wyświetla</summary>
+<p>Aplikacja działa offline, ale warstwy WMS to usługi internetowe: potrzebne
+jest połączenie i działająca usługa. Włoski katastr jest wstępnie
+skonfigurowany; dla innych krajów wprowadzić adres endpointu WMS krajowej
+usługi (musi obsługiwać EPSG:3857). Poza zasięgiem danych mapa podstawowa i
+punkty pozostają widoczne.</p></details>
+
+<details><summary>Zdjęcia nie mają współrzędnych</summary>
+<p>Zdjęcie przejmuje pozycję z ostatniego fix GNSS: najpierw otworzyć Pomiar i
+poczekać na pozycję, dopiero potem fotografować. Przy odmowie uprawnienia do
+lokalizacji zdjęcia są zapisywane bez współrzędnych.</p></details>
+
+<details><summary>W raporcie brakuje zdjęć lub logo</summary>
+<p>Zdjęcia w raportach, logo i niestandardowy nagłówek są częścią Pro i
+dotyczą zarówno DOCX, jak i PDF. Bezpłatny raport dzienny zawiera znak wodny
+i nie obejmuje zdjęć.</p></details>
+
+<details><summary>Przez pomyłkę usunięto stanowisko</summary>
+<p>Usunięcie jest ostateczne: dane nie podlegają odzyskaniu (nie ma chmury).
+Jeśli wcześniej wyeksportowano ZIP, można go zaimportować, aby przywrócić
+stanowisko z tamtej daty. Wskazówka: eksportować ZIP na koniec każdego
+dnia.</p></details>
+
+<details><summary>Zakupiono Pro, a funkcje nadal są zablokowane</summary>
+<p>Dotknąć <kbd>Przywróć zakupy</kbd> na ekranie Pro, używając tego samego
+identyfikatora Apple co przy zakupie. W razie zmiany urządzenia przywrócenie
+odzyskuje subskrypcję lub licencję dożywotnią.</p></details>
+
+<details><summary>„Pobierz” jest wyszarzony albo pojawia się „Pogoda niedostępna”</summary>
+<ul>
+<li>jeśli przycisk jest wyszarzony, strona dotyczy minionego dnia: pogodę
+można pobrać tylko dla dzisiejszej strony;</li>
+<li>jeśli pojawia się „Pogoda niedostępna”, brak jest sieci albo stanowisko
+nie ma jeszcze punktu GNSS, z którego można wziąć pozycję — zarejestrować
+punkt i spróbować ponownie.</li>
+</ul></details>
+
+<footer>
+<p>Pytania lub problemy, których tu nie ma? Napisać na
+<a href="mailto:enzo.ccc@gmail.com">enzo.ccc@gmail.com</a> ·
+<a href="../index.html">Polityka prywatności</a></p>
+</footer>
+
+</body>
+</html>

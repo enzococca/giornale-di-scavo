@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guia de utilização — Giornale di Scavo</title>
+<link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+<p class="lingue"><a href="index.html">Italiano</a> <a href="en.html">English</a> <a href="de.html">Deutsch</a> <a href="es.html">Español</a>
+<a href="fr.html">Français</a> <strong>Português</strong> <a href="pl.html">Polski</a> <a href="ro.html">Română</a>
+<a href="hu.html">Magyar</a> <a href="ru.html">Русский</a> <a href="ar.html">العربية</a> <a href="zh-Hans.html">简体中文</a>
+<a href="ja.html">日本語</a> <a href="ko.html">한국어</a></p>
+
+<h1>Giornale di Scavo — Guia de utilização</h1>
+<p class="sotto">O diário de escavação digital para iPhone e iPad. 100% offline: os seus dados permanecem no dispositivo.</p>
+
+<h2>Em poucas palavras</h2>
+<p>Há uma única ideia por trás de tudo: <strong>cada dia de escavação é uma
+página</strong> que se preenche sozinha. Regista-se cada coisa onde acontece —
+um ponto GNSS no Levantamento, uma foto nos Media, as horas na Obra — e a
+página do dia no <kbd>Diário</kbd> reúne tudo automaticamente. No final da
+semana ou da escavação, os relatórios geram-se sozinhos a partir das páginas.</p>
+
+<h2>Um dia típico</h2>
+<ol class="flusso">
+<li><b>Manhã</b>Abra a página do dia, anote o tempo e o diário (ou diga-o com <kbd>Ditar</kbd>)</li>
+<li><b>Equipa</b>Na <kbd>Obra</kbd>, registe quem está presente e as respetivas horas</li>
+<li><b>Levantamento</b>Capture pontos GNSS; verifique um marco geodésico primeiro se usar RTK</li>
+<li><b>Fotos</b>Fotografe a partir dos <kbd>Media</kbd>: as coordenadas anexam-se sozinhas</li>
+<li><b>Desenhos</b>Decalque o corte ou a planta sobre uma foto (papel vegetal digital)</li>
+<li><b>Tarde</b>No separador <kbd>Relatórios</kbd>, gere o relatório diário: um PDF pronto a enviar</li>
+</ol>
+
+<h2>Primeiros passos</h2>
+<ol class="passi">
+<li>No primeiro arranque, encontrará já um sítio de exemplo. Para criar um
+seu, toque no nome do sítio no topo (ícone <kbd>🗺</kbd>) →
+<kbd>Novo sítio…</kbd> e dê-lhe um nome (por ex., «Colle Sant'Angelo — Sondagem 3»).</li>
+<li>O nome do sítio ativo está sempre visível no topo: todos os separadores
+mostram os dados desse sítio. Para mudar de sítio, toque novamente no nome.</li>
+<li>Conceda as permissões quando forem pedidas: <em>localização</em> (para os
+pontos), <em>câmara</em> (para as fotos), <em>microfone</em> (para o ditado),
+<em>Bluetooth</em> (apenas se usar um recetor externo).</li>
+</ol>
+
+<h2>Os cinco separadores</h2>
+
+<h3>📓 Diário</h3>
+<ol class="passi">
+<li>Toque num dia para abrir a sua página: diário, tempo, equipa, pontos,
+fotos e desenhos desse dia já lá estão.</li>
+<li>Escreva o diário ou toque em <kbd>Ditar</kbd> e fale: a transcrição é
+feita no dispositivo e funciona mesmo sem rede.</li>
+<li>O tempo escreve-se à mão (por ex., «Céu limpo, 28 °C, vento fraco») ou
+obtém-se com <kbd>Obter</kbd>, que pede as condições do momento ao serviço
+meteorológico norueguês. É necessária rede e só funciona no dia de hoje: o
+tempo de ontem já não pode ser recuperado. Um segundo toque à tarde acrescenta
+uma nova medição. O que escrever à mão prevalece sempre.</li>
+<li>Ao obter, só a posição da zona arredondada a cerca de 11 metros sai do
+dispositivo, e nos relatórios a linha aparece no idioma do relatório.</li>
+</ol>
+<div class="schermate"><figure><img src="img/pt/01-diario.webp" alt="A lista dos dias" width="640" height="1391" loading="lazy"><figcaption>A lista dos dias</figcaption></figure><figure><img src="img/pt/02-giornata.webp" alt="A página de um dia" width="640" height="1391" loading="lazy"><figcaption>A página de um dia</figcaption></figure></div>
+
+<h3>📍 Levantamento</h3>
+<ol class="passi">
+<li>O painel no topo mostra a posição em tempo real: coordenadas, altitudes,
+precisão e tipo de fix (GPS / RTK Float / RTK Fix).</li>
+<li>Se usar um bastão, defina a <kbd>Altura da antena (m)</kbd>: a altitude do
+ponto é reduzida ao solo automaticamente.</li>
+<li>Toque em <kbd>Capturar ponto</kbd>. O nome é progressivo (P001, P002…),
+mas pode introduzir um à sua escolha (por ex., «UE 102 — fundo da fossa») e
+acrescentar uma nota.</li>
+<li>Alterne entre <kbd>Lista</kbd> e <kbd>Mapa</kbd> para ver os pontos no
+terreno; a partir do mapa pode ativar o cadastro ou outro serviço WMS.</li>
+<li>Os marcos geodésicos (🏁) vivem na sua própria secção: importe-os de CSV
+ou crie-os, depois use a verificação para acompanhar os desvios ΔN/ΔE/ΔZ em
+tempo real antes de levantar.</li>
+</ol>
+<div class="schermate"><figure><img src="img/pt/03-rilievo.webp" alt="O painel GNSS do Levantamento" width="640" height="1391" loading="lazy"><figcaption>O painel GNSS do Levantamento</figcaption></figure><figure><img src="img/pt/04-mappa.webp" alt="Pontos e marcos geodésicos no mapa" width="640" height="1391" loading="lazy"><figcaption>Pontos e marcos geodésicos no mapa</figcaption></figure></div>
+<p class="nota">Cada ponto guarda <strong>as duas altitudes</strong>:
+elipsoidal e ortométrica (alt. ortom.). Com o GPS interno do telemóvel, a
+altitude ortométrica pode não estar disponível: é necessário um recetor
+externo (ver abaixo).</p>
+
+<h3>📷 Media</h3>
+<ol class="passi">
+<li>Fotografe com o botão da câmara ou importe da biblioteca de fotos.</li>
+<li>As fotos recebem um nome progressivo (F001, F002…) e são georreferenciadas
+com a última posição GNSS disponível.</li>
+<li>Toque numa foto para lhe dar título e notas (por ex., «UE 102 vista do norte»).</li>
+</ol>
+<div class="schermate"><figure><img src="img/pt/05-media.webp" alt="A galeria de fotos" width="640" height="1391" loading="lazy"><figcaption>A galeria de fotos</figcaption></figure></div>
+
+<h3>✏️ Desenhos (em Media)</h3>
+<ol class="passi">
+<li>Crie uma nova prancha e escolha uma foto do sítio como fundo: é o seu
+papel vegetal digital.</li>
+<li>Decalque estratos, cortes e pedras com o dedo ou com a Apple Pencil;
+ajuste a opacidade da foto para ver melhor o traço.</li>
+<li>Acrescente caixas de texto para as etiquetas (por ex., «UE 1002») e a
+seta do norte.</li>
+<li>Quando terminar, oculte a foto: fica o desenho limpo, pronto para o relatório.</li>
+</ol>
+<div class="schermate"><figure><img src="img/pt/06-disegno.webp" alt="O papel vegetal digital" width="640" height="1391" loading="lazy"><figcaption>O papel vegetal digital</figcaption></figure></div>
+
+<h3>👷 Obra</h3>
+<ol class="passi">
+<li>Registe as presenças do dia: nome, função e horas de cada pessoa.</li>
+<li>Mantenha o inventário dos equipamentos e a quem estão atribuídos.</li>
+</ol>
+<div class="schermate"><figure><img src="img/pt/07-ore.webp" alt="Presenças e horas" width="640" height="1391" loading="lazy"><figcaption>Presenças e horas</figcaption></figure></div>
+
+<h3>📄 Relatórios</h3>
+<ol class="passi">
+<li>Escolha o tipo: <strong>diário</strong> (gratuito, com marca de água),
+<strong>semanal</strong>, <strong>mensal</strong> ou <strong>final</strong>
+com apêndices completos <span class="pro">PRO</span>.</li>
+<li>Escolha o idioma do relatório entre <strong>catorze</strong>, independente
+do idioma da aplicação: o relatório pode sair em espanhol mesmo que utilize a
+aplicação em português.</li>
+<li>Gere o PDF, ou exporte em DOCX com logótipo e fotos
+<span class="pro">PRO</span>, CSV dos pontos, GeoJSON para o QGIS
+<span class="pro">PRO</span>.</li>
+</ol>
+<div class="schermate"><figure><img src="img/pt/08-report.webp" alt="Geração de relatórios" width="640" height="1391" loading="lazy"><figcaption>Geração de relatórios</figcaption></figure></div>
+
+<h2>Recetor GNSS externo e NTRIP</h2>
+<p>Com um recetor externo (antena centimétrica), a aplicação atinge a
+precisão RTK. O GPS interno permanece sempre disponível como alternativa.</p>
+<ol class="passi">
+<li>Ligue o recetor e ative o Bluetooth do telemóvel.</li>
+<li>No <kbd>Levantamento</kbd>, escolha a origem da posição: <em>GNSS externo
+(BLE/NMEA)</em> <span class="pro">PRO</span> e selecione o seu recetor na
+lista. Os recetores MFi (gratuitos) e os que transmitem NMEA em rede também
+são suportados.</li>
+<li>Para as correções RTK, configure o <strong>NTRIP</strong>: endereço do
+caster, porta, mountpoint, utilizador e palavra-passe (ficam guardados no
+chaveiro do dispositivo). A aplicação envia a sua posição ao caster e recebe
+as correções.</li>
+<li>Aguarde a passagem a <strong>RTK Fix</strong>: precisão centimétrica.
+Verifique num marco geodésico antes de começar.</li>
+</ol>
+
+<h2>Cópia de segurança e intercâmbio</h2>
+<ol class="passi">
+<li>No menu do sítio, toque em <kbd>Exportar sítio (.zip)</kbd>: lá dentro
+está tudo — diário, pontos, fotos, desenhos, horas, marcos geodésicos.</li>
+<li>Guarde o ZIP onde quiser (Ficheiros, Drive, e-mail…). É a sua cópia de
+segurança: a aplicação não tem nuvem, por opção de conceção.</li>
+<li><kbd>Importar sítio (.zip)…</kbd> recria o sítio noutro dispositivo,
+mesmo entre iPhone e Android.</li>
+</ol>
+<p class="nota">⚠️ <kbd>Eliminar sítio…</kbd> apaga o sítio com todo o seu
+conteúdo e é <strong>irreversível</strong>: exporte primeiro um ZIP em caso de dúvida.</p>
+
+<h2>Gratuito e Pro</h2>
+<table>
+<tr><th></th><th>Gratuito</th><th>Pro</th></tr>
+<tr><td>Sítios</td><td>1</td><td>Ilimitados</td></tr>
+<tr><td>GNSS</td><td>GPS interno, recetores MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
+<tr><td>Relatórios</td><td>Diário com marca de água</td><td>Todos, sem marca de água</td></tr>
+<tr><td>Exportação</td><td>PDF, CSV</td><td>+ DOCX com logótipo e fotos, GeoJSON</td></tr>
+<tr><td>Ditado por voz</td><td>✓</td><td>✓</td></tr>
+<tr><td>Idiomas dos relatórios</td><td>14</td><td>14</td></tr>
+</table>
+<p>Pro é uma subscrição mensal ou anual com renovação automática, ou uma
+compra única vitalícia. Gere-se e cancela-se nas definições do seu ID Apple.</p>
+
+<h2>Resolução de problemas</h2>
+
+<details><summary>O recetor Bluetooth não aparece ou não liga</summary>
+<p>Verifique, por ordem:</p>
+<ul>
+<li>o recetor está ligado e ainda não está associado a outra aplicação ou telemóvel;</li>
+<li>o Bluetooth do sistema está ativo e a aplicação tem a permissão de
+Bluetooth (Definições → Giornale di Scavo);</li>
+<li>a origem escolhida no Levantamento é <em>GNSS externo (BLE/NMEA)</em>;</li>
+<li>desligue e volte a ligar o recetor e procure de novo.</li>
+</ul></details>
+
+<details><summary>Nunca chego ao RTK Fix</summary>
+<ul>
+<li>É necessária uma ligação NTRIP ativa: verifique o caster, o mountpoint e as credenciais.</li>
+<li>Verifique a cobertura de dados do telemóvel: as correções viajam pela internet.</li>
+<li>O céu aberto conta: árvores densas e paredes próximas degradam o sinal.
+Com cobertura fraca, pode ficar em RTK Float (decimétrico).</li>
+<li>Escolha um mountpoint próximo (&lt; 30–40 km) ou uma rede VRS.</li>
+</ul></details>
+
+<details><summary>O NTRIP não liga</summary>
+<ul>
+<li>Verifique o endereço e a porta (geralmente 2101) e que o mountpoint
+existe: muitos casters publicam a lista (sourcetable).</li>
+<li>Um utilizador ou palavra-passe incorretos dão erro 401/403: reveja as credenciais.</li>
+<li>Algumas redes exigem o envio da posição (GGA): a aplicação fá-lo sozinha,
+mas o recetor precisa de já ter um fix.</li>
+</ul></details>
+
+<details><summary>A altitude ortométrica está vazia ou a zero</summary>
+<p>O GPS interno dos telemóveis fornece apenas a altitude elipsoidal. A
+altitude ortométrica (alt. ortom.) vem da frase GGA de um recetor externo.
+Sem recetor, os pontos guardam mesmo assim a elipsoidal.</p></details>
+
+<details><summary>O ditado não funciona</summary>
+<ul>
+<li>Verifique a permissão de microfone e de reconhecimento de voz nas Definições.</li>
+<li>A transcrição é feita no dispositivo: da primeira vez, o sistema pode ter
+de descarregar o modelo do idioma (é necessária rede uma vez, depois funciona offline).</li>
+<li>Fale em frases curtas; o texto é inserido no final do diário.</li>
+</ul></details>
+
+<details><summary>O mapa cadastral (WMS) não aparece</summary>
+<p>A aplicação é offline, mas as camadas WMS são serviços web: precisam de
+uma ligação e de um serviço ativo. O cadastro italiano vem pré-configurado;
+para outros países, introduza o endpoint WMS do serviço nacional (tem de
+suportar EPSG:3857). Fora de cobertura de dados, o mapa base e os pontos
+permanecem visíveis.</p></details>
+
+<details><summary>As fotos não têm coordenadas</summary>
+<p>A foto assume a posição do último fix GNSS: abra primeiro o Levantamento e
+aguarde que a posição seja obtida, depois fotografe. Com a permissão de
+localização negada, as fotos são guardadas sem coordenadas.</p></details>
+
+<details><summary>Faltam fotos ou o logótipo no relatório</summary>
+<p>As fotos nos relatórios, o logótipo e o cabeçalho personalizado fazem
+parte do Pro e aplicam-se ao DOCX e ao PDF. O relatório diário gratuito tem
+marca de água e não inclui fotos.</p></details>
+
+<details><summary>Eliminei um sítio por engano</summary>
+<p>A eliminação é definitiva: os dados não são recuperáveis (não existe
+nuvem). Se exportou um ZIP anteriormente, importe-o para restaurar o sítio a
+essa data. Sugestão: exporte um ZIP no final de cada dia.</p></details>
+
+<details><summary>Comprei o Pro mas continua bloqueado</summary>
+<p>Toque em <kbd>Restaurar compras</kbd> no ecrã Pro, com o mesmo ID Apple da
+compra. Se mudou de dispositivo, a restauração recupera a subscrição ou a
+licença vitalícia.</p></details>
+
+<details><summary>«Obter» está desativado, ou indica «Tempo indisponível»</summary>
+<ul>
+<li>se o botão estiver desativado, está na página de um dia passado: o tempo
+só se obtém no dia de hoje;</li>
+<li>se aparecer «Tempo indisponível», falta rede, ou o sítio ainda não tem um
+ponto GNSS de onde obter a posição — registe um ponto e tente novamente.</li>
+</ul></details>
+
+<footer>
+<p>Perguntas ou problemas não listados aqui? Escreva para
+<a href="mailto:enzo.ccc@gmail.com">enzo.ccc@gmail.com</a> ·
+<a href="../index.html">Política de privacidade</a></p>
+</footer>
+
+</body>
+</html>

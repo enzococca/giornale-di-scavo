@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使い方ガイド — Giornale di Scavo</title>
+<link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+<p class="lingue"><a href="index.html">Italiano</a> <a href="en.html">English</a> <a href="de.html">Deutsch</a> <a href="es.html">Español</a>
+<a href="fr.html">Français</a> <a href="pt.html">Português</a> <a href="pl.html">Polski</a> <a href="ro.html">Română</a>
+<a href="hu.html">Magyar</a> <a href="ru.html">Русский</a> <a href="ar.html">العربية</a> <a href="zh-Hans.html">简体中文</a>
+<strong>日本語</strong> <a href="ko.html">한국어</a></p>
+
+<h1>Giornale di Scavo — 使い方ガイド</h1>
+<p class="sotto">iPhoneとiPadのためのデジタル発掘日誌です。100%オフラインで、データは常にお使いの端末に保存されます。</p>
+
+<h2>ひとことで言うと</h2>
+<p>考え方はひとつだけです。<strong>発掘の一日一日がひとつのページ</strong>にな
+り、自動的に埋まっていきます。記録はそれぞれの場所で行います——測量でGNSS測点
+を、メディアで写真を、現場で作業時間を——すると、その日のページが
+<kbd>日誌</kbd>の中ですべてを自動的に集めてくれます。週の終わりや発掘の終わり
+には、報告書はそれらのページから自動的に作られます。</p>
+
+<h2>典型的な一日</h2>
+<ol class="flusso">
+<li><b>朝</b>その日のページを開き、天気と日記を記録します（<kbd>音声入力</kbd>で話して入力することもできます）</li>
+<li><b>出勤</b><kbd>現場</kbd>で出勤者とその時間を記録します</li>
+<li><b>測量</b>GNSS測点を取得します。RTKを使う場合は先に基準点を点検します</li>
+<li><b>写真</b><kbd>メディア</kbd>から撮影します。座標は自動的に付加されます</li>
+<li><b>図面</b>写真の上から断面図や平面図をなぞります（デジタルトレーシングペーパー）</li>
+<li><b>夜</b><kbd>報告書</kbd>タブから日次報告書を生成します。すぐに送信できるPDFが完成します</li>
+</ol>
+
+<h2>はじめに</h2>
+<ol class="passi">
+<li>初回起動時にはサンプルの遺跡がすでに用意されています。自分の遺跡を作成する
+には、上部の遺跡名（<kbd>🗺</kbd>アイコン）をタップし、<kbd>新規遺跡…</kbd>を
+選んで名前を付けます（例：「Colle Sant'Angelo — トレンチ3」）。</li>
+<li>使用中の遺跡名は常に上部に表示され、すべてのタブにその遺跡のデータが表示さ
+れます。遺跡を切り替えるには、名前をもう一度タップします。</li>
+<li>求められたら権限を許可してください。<em>位置情報</em>（測点のため）、
+<em>カメラ</em>（写真のため）、<em>マイク</em>（音声入力のため）、
+<em>Bluetooth</em>（外部受信機を使う場合のみ）です。</li>
+</ol>
+
+<h2>5つのタブ</h2>
+
+<h3>📓 日誌</h3>
+<ol class="passi">
+<li>ある日をタップするとそのページが開きます。その日の日記、天気、出勤、測
+点、写真、図面がすでにまとめられています。</li>
+<li>日記を書くか、<kbd>音声入力</kbd>をタップして話します。文字起こしは端末上
+で行われるため、ネットワークがなくても使えます。</li>
+<li>天気は手入力もできますし（例：「晴れ、28°C、微風」）、<kbd>取得</kbd>を
+タップしてノルウェー気象局にその時点の天気を問い合わせることもできます。取得に
+はネットワークが必要で、有効なのは本日のページのみです。昨日の天気はもう取得で
+きません。午後にもう一度タップすると、記録が追加されます。手入力した内容は常に
+優先されます。</li>
+<li>取得時に外部へ送信されるのは、約11メートル単位に丸められたおおよその位置情
+報だけです。報告書ではこの行が報告書の言語で表示されます。</li>
+</ol>
+<div class="schermate"><figure><img src="img/ja/01-diario.webp" alt="発掘日の一覧" width="640" height="1391" loading="lazy"><figcaption>発掘日の一覧</figcaption></figure><figure><img src="img/ja/02-giornata.webp" alt="ある一日のページ" width="640" height="1391" loading="lazy"><figcaption>ある一日のページ</figcaption></figure></div>
+
+<h3>📍 測量</h3>
+<ol class="passi">
+<li>上部のパネルにはリアルタイムの位置情報が表示されます。座標、高さ、精度、
+Fixの種類（GPS / RTK Float / RTK Fix）です。</li>
+<li>ポールを使用する場合は<kbd>アンテナ高（m）</kbd>を設定します。測点の標高は
+自動的に地面の高さに換算されます。</li>
+<li><kbd>測点取得</kbd>をタップします。名前は自動採番されます（P001、P002…）
+が、自分で名前を入力することもできます（例：「US 102 — 底面標高」）。メモを追
+加することもできます。</li>
+<li><kbd>リスト</kbd>と<kbd>地図</kbd>を切り替えると、測点を実際の場所で確認
+できます。地図では地籍図や別のWMSサービスを有効にできます。</li>
+<li>基準点（🏁）には専用のセクションがあります。CSVからインポートするか、自分
+で作成し、測量の前に点検機能でΔ北/Δ東/Δ標高の誤差をリアルタイムに確認できま
+す。</li>
+</ol>
+<div class="schermate"><figure><img src="img/ja/03-rilievo.webp" alt="測量のGNSSパネル" width="640" height="1391" loading="lazy"><figcaption>測量のGNSSパネル</figcaption></figure><figure><img src="img/ja/04-mappa.webp" alt="地図上の測点と基準点" width="640" height="1391" loading="lazy"><figcaption>地図上の測点と基準点</figcaption></figure></div>
+<p class="nota">各測点には<strong>2種類の高さ</strong>が保存されます。楕円体高
+と標高です。端末内蔵のGPSでは標高が取得できない場合があり、その場合は外部受信
+機が必要です（下記参照）。</p>
+
+<h3>📷 メディア</h3>
+<ol class="passi">
+<li>カメラボタンで撮影するか、写真ライブラリからインポートします。</li>
+<li>写真は自動採番され（F001、F002…）、直近に取得できたGNSS位置情報で位置情報
+が付加されます。</li>
+<li>写真をタップするとタイトルとメモを設定できます（例：「US 102、北から撮
+影」）。</li>
+</ol>
+<div class="schermate"><figure><img src="img/ja/05-media.webp" alt="写真ギャラリー" width="640" height="1391" loading="lazy"><figcaption>写真ギャラリー</figcaption></figure></div>
+
+<h3>✏️ 図面（メディア内）</h3>
+<ol class="passi">
+<li>新しい図面を作成し、遺跡の写真を背景として選びます。これがあなたのデジタル
+トレーシングペーパーです。</li>
+<li>指またはApple Pencilで層、切り合いの線、石をなぞります。写真の不透明度を調
+整すると線がより見やすくなります。</li>
+<li>ラベル用のテキストボックス（例：「US 1002」）や方位記号（北矢印）を追加し
+ます。</li>
+<li>完了したら写真を非表示にします。きれいな図面だけが残り、報告書にすぐ使えま
+す。</li>
+</ol>
+<div class="schermate"><figure><img src="img/ja/06-disegno.webp" alt="デジタルトレーシングペーパー" width="640" height="1391" loading="lazy"><figcaption>デジタルトレーシングペーパー</figcaption></figure></div>
+
+<h3>👷 現場</h3>
+<ol class="passi">
+<li>その日の出勤を記録します。各人の氏名、職務、作業時間です。</li>
+<li>機材の在庫と、それぞれの担当者を管理します。</li>
+</ol>
+<div class="schermate"><figure><img src="img/ja/07-ore.webp" alt="出勤と作業時間" width="640" height="1391" loading="lazy"><figcaption>出勤と作業時間</figcaption></figure></div>
+
+<h3>📄 報告書</h3>
+<ol class="passi">
+<li>種類を選びます。<strong>日次</strong>（無料、透かし入り）、<strong>週
+次</strong>、<strong>月次</strong>、または完全な付録付きの<strong>最終</strong>
+報告書 <span class="pro">PRO</span>です。</li>
+<li>報告書の言語は<strong>14言語</strong>から選べます。アプリの言語とは独立し
+ており、アプリを日本語で使っていても、報告書はドイツ語で出力できます。</li>
+<li>PDFを生成するほか、ロゴと写真付きのDOCX <span class="pro">PRO</span>、測点
+のCSV、QGIS用のGeoJSON <span class="pro">PRO</span>としてエクスポートできま
+す。</li>
+</ol>
+<div class="schermate"><figure><img src="img/ja/08-report.webp" alt="報告書の生成" width="640" height="1391" loading="lazy"><figcaption>報告書の生成</figcaption></figure></div>
+
+<h2>外部GNSS受信機とNTRIP</h2>
+<p>外部受信機（センチメートル級のアンテナ）を使うと、アプリはRTK精度に到達しま
+す。内蔵GPSは常にフォールバックとして利用できます。</p>
+<ol class="passi">
+<li>受信機の電源を入れ、iPhoneのBluetoothを有効にします。</li>
+<li><kbd>測量</kbd>で位置情報のソースを選びます。<em>外部GNSS（BLE/NMEA）</em>
+<span class="pro">PRO</span>を選び、リストから受信機を選択します。MFi受信機
+（無料）や、ネットワーク経由でNMEAを配信する受信機にも対応しています。</li>
+<li>RTK補正のために<strong>NTRIP</strong>を設定します。Casterのアドレス、ポー
+ト、Mountpoint、ユーザー名、パスワード（端末のキーチェーンに保存されます）で
+す。アプリは位置情報をCasterに送信し、補正データを受信します。</li>
+<li><strong>RTK Fix</strong>に切り替わるのを待ちます。センチメートル級の精度で
+す。作業を始める前に基準点で点検してください。</li>
+</ol>
+
+<h2>バックアップと交換</h2>
+<ol class="passi">
+<li>遺跡メニューから<kbd>遺跡をエクスポート（.zip）</kbd>をタップします。中に
+はすべてが入っています——日誌、測点、写真、図面、作業時間、基準点です。</li>
+<li>ZIPファイルは好きな場所に保存できます（ファイル、Drive、メールなど）。これ
+がバックアップです。このアプリはあえてクラウドを持たない設計になっています。</li>
+<li><kbd>遺跡をインポート（.zip）…</kbd>を使うと、別の端末で遺跡を再現できま
+す。iPhoneとAndroidの間でも可能です。</li>
+</ol>
+<p class="nota">⚠️ <kbd>遺跡を削除…</kbd>は、遺跡とその内容をすべて削除する操作
+で、<strong>元に戻せません</strong>。迷ったら先にZIPをエクスポートしてくださ
+い。</p>
+
+<h2>無料版とPro</h2>
+<table>
+<tr><th></th><th>無料</th><th>Pro</th></tr>
+<tr><td>遺跡</td><td>1</td><td>無制限</td></tr>
+<tr><td>GNSS</td><td>内蔵GPS、MFi受信機</td><td>+ BLE/NMEA、NTRIP</td></tr>
+<tr><td>報告書</td><td>透かし入りの日次報告書</td><td>すべて、透かしなし</td></tr>
+<tr><td>エクスポート</td><td>PDF、CSV</td><td>+ ロゴと写真付きDOCX、GeoJSON</td></tr>
+<tr><td>音声入力</td><td>✓</td><td>✓</td></tr>
+<tr><td>報告書の言語</td><td>14</td><td>14</td></tr>
+</table>
+<p>Proは月額または年額の自動更新サブスクリプションか、一度きりの買い切りライセ
+ンスとして提供されます。Apple IDの設定からいつでも管理・解約できます。</p>
+
+<h2>トラブルシューティング</h2>
+
+<details><summary>Bluetooth受信機が表示されない、または接続できない</summary>
+<p>次の順に確認してください。</p>
+<ul>
+<li>受信機の電源が入っていて、他のアプリや他の端末にすでに接続されていないこ
+と。</li>
+<li>システムのBluetoothがオンで、アプリにBluetoothの権限が与えられていること
+（設定 → Giornale di Scavo）。</li>
+<li>測量で選んだソースが<em>外部GNSS（BLE/NMEA）</em>になっていること。</li>
+<li>受信機の電源を入れ直してから、もう一度検索すること。</li>
+</ul></details>
+
+<details><summary>RTK Fixにならない</summary>
+<ul>
+<li>有効なNTRIP接続が必要です。Caster、Mountpoint、認証情報を確認してくださ
+い。</li>
+<li>端末のデータ通信の状態を確認してください。補正データはインターネット経由
+で届きます。</li>
+<li>空が開けていることが重要です。密な樹木や近くの壁は信号を劣化させます。状
+態が悪いとRTK Float（デシメートル級）のままになることがあります。</li>
+<li>近くのMountpoint（30〜40km未満）またはVRSネットワークを選んでください。</li>
+</ul></details>
+
+<details><summary>NTRIPが接続できない</summary>
+<ul>
+<li>アドレスとポート（多くは2101）を確認し、Mountpointが実在することを確認し
+てください。多くのCasterは一覧（sourcetable）を公開しています。</li>
+<li>ユーザー名またはパスワードが間違っていると401/403エラーになります。認証情
+報を再確認してください。</li>
+<li>一部のネットワークでは位置情報（GGA）の送信が必要です。アプリが自動的に送
+信しますが、受信機がすでにFixを得ている必要があります。</li>
+</ul></details>
+
+<details><summary>標高が空、またはゼロになる</summary>
+<p>端末内蔵のGPSでは楕円体高しか得られません。標高はGGA文を送ってくる外部受信
+機から得られます。受信機がない場合でも、測点には楕円体高が保存されます。</p></details>
+
+<details><summary>音声入力が機能しない</summary>
+<ul>
+<li>設定でマイクと音声認識の権限を確認してください。</li>
+<li>文字起こしは端末上で行われます。初回はシステムが言語モデルをダウンロード
+する必要がある場合があります（このときだけネットワークが必要で、以降はオフラ
+インで使えます）。</li>
+<li>短い文で話してください。テキストは日記の末尾に追加されます。</li>
+</ul></details>
+
+<details><summary>地籍図（WMS）が表示されない</summary>
+<p>アプリ自体はオフラインですが、WMSレイヤーはウェブサービスなので、通信と稼
+働中のサービスが必要です。イタリアの地籍図はあらかじめ設定されています。他の国
+の場合は、その国の公的サービスのWMSエンドポイントを入力してください
+（EPSG:3857に対応している必要があります）。データ通信の圏外でも、ベースの地図
+と測点は表示されたままです。</p></details>
+
+<details><summary>写真に座標が付かない</summary>
+<p>写真の位置情報は直近のGNSS Fixから取得されます。先に測量を開き、位置が確定
+するのを待ってから撮影してください。位置情報の権限が拒否されている場合、写真は
+座標なしで保存されます。</p></details>
+
+<details><summary>報告書に写真やロゴがない</summary>
+<p>報告書内の写真、ロゴ、カスタムヘッダーはProの機能で、DOCXとPDFの両方に適用
+されます。無料の日次報告書には透かしが入り、写真は含まれません。</p></details>
+
+<details><summary>誤って遺跡を削除してしまった</summary>
+<p>削除は完全なもので、データを復元することはできません（クラウドは存在しませ
+ん）。以前にエクスポートしたZIPがあれば、それをインポートしてその時点の状態に
+遺跡を復元できます。おすすめ：毎日の終わりにZIPをエクスポートしておきましょ
+う。</p></details>
+
+<details><summary>Proを購入したのにまだロックされている</summary>
+<p>Pro画面で<kbd>購入を復元</kbd>をタップします。購入時と同じApple IDを使用し
+てください。端末を変更した場合でも、復元によってサブスクリプションや買い切りラ
+イセンスを取り戻せます。</p></details>
+
+<details><summary>「取得」がグレーアウトしている、または「天気情報利用不可」と表示される</summary>
+<ul>
+<li>ボタンがグレーアウトしている場合は、過去の日のページを見ています。天気は
+本日のページでのみ取得できます。</li>
+<li>「天気情報利用不可」と表示される場合は、ネットワークがないか、位置情報の
+元となるGNSS測点がまだ遺跡にありません。測点を1つ取得してからもう一度試してく
+ださい。</li>
+</ul></details>
+
+<footer>
+<p>ここに載っていない質問や問題がありますか？
+<a href="mailto:enzo.ccc@gmail.com">enzo.ccc@gmail.com</a> までご連絡ください ·
+<a href="../index.html">プライバシーポリシー</a></p>
+</footer>
+
+</body>
+</html>
