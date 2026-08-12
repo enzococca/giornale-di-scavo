@@ -41,7 +41,9 @@ utworzyć własne, dotknąć nazwy stanowiska u góry (ikona <kbd>🗺</kbd>) �
 Wykop 3”).</li>
 <li>Nazwa aktywnego stanowiska jest zawsze widoczna u góry: wszystkie zakładki
 pokazują dane tego stanowiska. Aby zmienić stanowisko, dotknąć nazwy
-ponownie.</li>
+ponownie: lista znajduje się pod nagłówkiem „Twoje stanowiska”, a dzięki
+<kbd>Zmień nazwę stanowiska…</kbd> można poprawić nazwę, nie tracąc
+niczego.</li>
 <li>Udzielić uprawnień, gdy zostaną poproszone: <em>lokalizacja</em> (dla
 punktów), <em>aparat</em> (dla zdjęć), <em>mikrofon</em> (dla dyktowania),
 <em>Bluetooth</em> (tylko przy użyciu zewnętrznego odbiornika).</li>
@@ -79,6 +81,10 @@ punkty w terenie; z mapy można włączyć katastr lub inną usługę WMS.</li>
 <li>Repery (🏁) mają własną sekcję: zaimportować je z CSV lub utworzyć, a
 następnie użyć <kbd>Weryfikacja</kbd>, aby na żywo obserwować odchyłki
 ΔPn./ΔWsch./ΔWys. przed pomiarem.</li>
+<li><kbd>Dziennik niwelacji</kbd> to dziennik polowy dla niwelatora
+optycznego: stanowiska niwelatora, odczyty wstecz i w przód, wysokości
+obliczane od repera początkowego, z kontrolą zamknięcia. Punkty niwelowane
+trafiają do stanowiska z wysokością, tak jak punkty GNSS.</li>
 </ol>
 <div class="schermate"><figure><img src="img/pl/03-rilievo.webp" alt="Panel GNSS zakładki Pomiar" width="640" height="1391" loading="lazy"><figcaption>Panel GNSS zakładki Pomiar</figcaption></figure><figure><img src="img/pl/04-mappa.webp" alt="Punkty i repery na mapie" width="640" height="1391" loading="lazy"><figcaption>Punkty i repery na mapie</figcaption></figure></div>
 <p class="nota">Każdy punkt zapisuje <strong>obie wysokości</strong>:
@@ -91,17 +97,53 @@ n.p.m. może być niedostępna: potrzebny jest wtedy zewnętrzny odbiornik
 <li>Fotografować przyciskiem aparatu lub importować z biblioteki zdjęć.</li>
 <li>Zdjęcia otrzymują kolejną nazwę (F001, F002…) i są georeferencjonowane
 ostatnią dostępną pozycją GNSS.</li>
+<li>Przy robieniu zdjęcia aplikacja rejestruje też <strong>kierunek
+patrzenia</strong> z kompasu: w szczegółach zdjęcia i w raportach pojawia się
+opis „widok z SO — 214°”, a dla zdjęć wykonanych pionowo (rzut, dno warstwy)
+opis zenitalny z kierunkiem górnej krawędzi. Jeśli kompas jest zakłócony,
+aplikacja to sygnalizuje.</li>
 <li>Dotknąć zdjęcia, aby nadać tytuł i notatki (np. „JS 102 od północy”).</li>
+<li><kbd>Udostępnij kartę</kbd> <span class="pro">PRO</span> generuje
+<strong>fotograficzną kartę dokumentacyjną</strong>: zdjęcie, a pod nim dane
+wykonania (stanowisko, numer, data i godzina, współrzędne, wysokość,
+kierunek), widok satelitarny ze znacznikiem pozycji i stożkiem widzenia,
+pasek skali mapy oraz strzałka północy. Mapa wymaga sieci: bez niej karta i
+tak powstaje, z powiększonym panelem danych.</li>
 </ol>
 <div class="schermate"><figure><img src="img/pl/05-media.webp" alt="Galeria zdjęć" width="640" height="1391" loading="lazy"><figcaption>Galeria zdjęć</figcaption></figure></div>
 
 <h3>✏️ Rysunki (w Mediach)</h3>
 <ol class="passi">
 <li>Utworzyć nową planszę i wybrać zdjęcie stanowiska jako tło: to cyfrowa
-kalka.</li>
+kalka. Rysunek może być kontynuowany przez kilka dni.</li>
 <li>Odrysować warstwy, przekopy i kamienie palcem lub Apple Pencil;
-wyregulować przezroczystość zdjęcia, aby lepiej widzieć linie.</li>
-<li>Dodać pola tekstowe na etykiety (np. „JS 1002”) oraz strzałkę północy.</li>
+wyregulować przezroczystość zdjęcia, aby lepiej widzieć linie. <strong>Uszczypnąć,
+aby powiększyć</strong> (do 6×, podwójne stuknięcie dwoma palcami, aby wrócić
+do 1×).</li>
+<li><kbd>Automatyczne odrysowywanie</kbd> <span class="pro">PRO</span>
+rozpoznaje kontur dotykanego obiektu (kamienia, granicy warstwy) i zamienia go
+w linię: kolor i grubość można zmieniać bez wychodzenia z trybu. Wszystko
+odbywa się na urządzeniu, bez sieci.</li>
+<li>Dodać pola tekstowe na etykiety (np. „JS 1002”): można je przesuwać,
+zmieniać rozmiar uszczypnięciem i wybierać spośród czterech czcionek.</li>
+<li>Za pomocą narzędzia <kbd>Skala</kbd> (linijka) dotknąć dwóch końców
+znanego odcinka — na przykład odcinka łaty mierniczej — i wpisać
+rzeczywistą odległość: zdjęcie uzyskuje skalę, a od tej chwili eksporty
+operują w metrach.</li>
+<li>Za pomocą <kbd>Punkt wysokościowy</kbd> umieścić na zdjęciu krzyżyk
+punktu GNSS ze stanowiska (albo punktu wpisanego ręcznie): nazwa, wysokość i
+współrzędne pojawiają się w przeciągalnej etykiecie z linią odniesienia.</li>
+<li><kbd>Eksportuj z legendą</kbd> <span class="pro">PRO</span>: obraz
+wychodzi z białym paskiem na dole — pasek skali (jeśli skala jest ustawiona),
+strzałka północy dla zdjęć wykonanych pionowo, „widok z” dla zdjęć
+frontalnych.</li>
+<li><kbd>Eksportuj wektorowo</kbd> <span class="pro">PRO</span>: SVG dla
+rysunku albo <strong>DXF</strong> dla GIS. Przy co najmniej dwóch punktach
+wysokościowych ze współrzędnymi na zdjęciu wykonanym pionowo, DXF wychodzi
+<strong>georeferencjonowany w układzie UTM</strong> i w QGIS sam ustawia się
+na swoim miejscu na świecie; przy samej tylko skali wychodzi w metrach
+lokalnych; bez jednego i drugiego aplikacja to sygnalizuje i nie tworzy
+pliku bez jednostek.</li>
 <li>Po zakończeniu ukryć zdjęcie: pozostaje czysty rysunek, gotowy do
 raportu.</li>
 </ol>
@@ -126,6 +168,10 @@ aplikacja działa po polsku.</li>
 <li>Wygenerować PDF albo wyeksportować DOCX z logo i zdjęciami
 <span class="pro">PRO</span>, CSV punktów, GeoJSON dla QGIS
 <span class="pro">PRO</span>.</li>
+<li>Przy włączonych zdjęciach w raportach można wybrać <kbd>Karty
+fotograficzne zamiast zdjęć</kbd> <span class="pro">PRO</span>: każde
+zdjęcie trafia do PDF i DOCX jako pełna karta dokumentacyjna z danymi i mapą,
+w języku raportu.</li>
 </ol>
 <div class="schermate"><figure><img src="img/pl/08-report.webp" alt="Generowanie raportów" width="640" height="1391" loading="lazy"><figcaption>Generowanie raportów</figcaption></figure></div>
 
@@ -166,6 +212,9 @@ wątpliwości najpierw wyeksportować ZIP.</p>
 <tr><td>GNSS</td><td>GPS wewnętrzny, odbiorniki MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Raporty</td><td>Dzienny ze znakiem wodnym</td><td>Wszystkie, bez znaku wodnego</td></tr>
 <tr><td>Eksport</td><td>PDF, CSV</td><td>+ DOCX z logo i zdjęciami, GeoJSON</td></tr>
+<tr><td>Rysunki</td><td>Kalka, zoom, teksty, skala, punkty wysokościowe</td><td>+ Automatyczne odrysowywanie, eksport z legendą, SVG/DXF</td></tr>
+<tr><td>Dziennik niwelacji</td><td>✓</td><td>✓</td></tr>
+<tr><td>Karta fotograficzna</td><td>—</td><td>Udostępnianie i karty w raportach</td></tr>
 <tr><td>Dyktowanie głosowe</td><td>✓</td><td>✓</td></tr>
 <tr><td>Języki raportów</td><td>14</td><td>14</td></tr>
 </table>
@@ -257,6 +306,32 @@ można pobrać tylko dla dzisiejszej strony;</li>
 nie ma jeszcze punktu GNSS, z którego można wziąć pozycję — zarejestrować
 punkt i spróbować ponownie.</li>
 </ul></details>
+
+<details><summary>Karta fotograficzna wychodzi bez mapy</summary>
+<p>Widok satelitarny pochodzi od Apple i wymaga sieci: aplikacja czeka do 15
+sekund, a potem generuje kartę bez mapy (dane nie czekają na sieć). Przy
+wolnych sieciach na wykopaliskach może być potrzebne pełne oczekiwanie:
+spróbować ponownie pod Wi-Fi. Bez geotagu na zdjęciu mapy z definicji nie
+będzie.</p></details>
+
+<details><summary>DXF jest odrzucany albo otwiera się „blisko początku układu” w GIS</summary>
+<ul>
+<li>dla DXF <strong>georeferencjonowanego</strong> potrzebne są zdjęcie
+wykonane pionowo aparatem aplikacji i co najmniej <strong>dwa punkty
+wysokościowe ze współrzędnymi</strong> dobrze rozstawione na zdjęciu;</li>
+<li>przy samej tylko skali łaty mierniczej DXF wychodzi w <strong>metrach
+lokalnych</strong>: to poprawne, ale GIS pokazuje go blisko początku układu
+— aplikacja informuje o tym wcześniej;</li>
+<li>bez skali i bez punktów eksport jest odrzucany: DXF bez jednostek nie
+byłby sensownie czytelny w żadnym GIS.</li>
+</ul></details>
+
+<details><summary>Strzałka północy nie pojawia się w eksporcie z legendą</summary>
+<p>Strzałka pojawia się tylko dla zdjęć <strong>wykonanych pionowo aparatem
+aplikacji</strong>, który rejestruje azymut w momencie zdjęcia. Dla zdjęć
+frontalnych pojawia się napis „widok z …” (strzałka północy na płaszczyźnie
+elewacji byłaby geometrycznym kłamstwem); dla zdjęć zaimportowanych z
+biblioteki nie pojawia się żadna z nich, bo brakuje danych zdjęcia.</p></details>
 
 <footer>
 <p>Pytania lub problemy, których tu nie ma? Napisać na

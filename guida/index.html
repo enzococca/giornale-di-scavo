@@ -39,7 +39,9 @@ scavo, i report si generano da soli a partire dalle pagine.</p>
 nome del sito in alto (icona <kbd>🗺</kbd>) → <kbd>Nuovo sito…</kbd> e dagli un
 nome (es. «Colle Sant'Angelo — Saggio 3»).</li>
 <li>Il nome del sito attivo è sempre visibile in alto: tutte le schede mostrano
-i dati di quel sito. Per cambiare sito, tocca di nuovo il nome.</li>
+i dati di quel sito. Per cambiare sito, tocca di nuovo il nome: l'elenco è
+sotto il titolo «I tuoi siti», e con <kbd>Rinomina sito…</kbd> correggi un nome
+senza perdere niente.</li>
 <li>Concedi i permessi quando richiesti: <em>posizione</em> (per i punti),
 <em>fotocamera</em> (per le foto), <em>microfono</em> (per la dettatura),
 <em>Bluetooth</em> (solo se usi un ricevitore esterno).</li>
@@ -76,6 +78,10 @@ dalla mappa puoi attivare il catasto o un altro servizio WMS.</li>
 <li>I capisaldi (🏁) vivono nella loro sezione: importali da CSV o creali, poi
 usa la <kbd>Verifica</kbd> per controllare gli scarti ΔN/ΔE/ΔQ in tempo reale
 prima di rilevare.</li>
+<li>Il <kbd>Libretto delle livellazioni</kbd> è il libretto di campagna per il
+livello ottico: stazioni, letture indietro e avanti, quote calcolate da un
+caposaldo di partenza, con il controllo di chiusura. I punti livellati entrano
+nel sito con la loro quota, come quelli GNSS.</li>
 </ol>
 <div class="schermate"><figure><img src="img/it/03-rilievo.webp" alt="Il pannello GNSS del Rilievo" width="640" height="1391" loading="lazy"><figcaption>Il pannello GNSS del Rilievo</figcaption></figure><figure><img src="img/it/04-mappa.webp" alt="Punti e capisaldi sulla mappa" width="640" height="1391" loading="lazy"><figcaption>Punti e capisaldi sulla mappa</figcaption></figure></div>
 <p class="nota">Ogni punto salva <strong>entrambe le quote</strong>: ellissoidica
@@ -87,18 +93,48 @@ essere disponibile: serve un ricevitore esterno (vedi sotto).</p>
 <li>Scatta con il pulsante fotocamera o importa dal rullino.</li>
 <li>Le foto prendono nome progressivo (F001, F002…) e vengono georeferenziate
 con l'ultima posizione GNSS disponibile.</li>
+<li>Allo scatto l'app registra anche la <strong>direzione di ripresa</strong>
+dalla bussola: nel dettaglio della foto e nei report leggi «vista da SO — 214°»,
+e per gli scatti a piombo (pianta, fondo di una US) la dicitura zenitale con la
+direzione del bordo alto. Se la bussola è disturbata, l'app lo dice.</li>
 <li>Tocca una foto per titolo e note (es. «US 102 da nord»).</li>
+<li><kbd>Condividi scheda</kbd> <span class="pro">PRO</span> genera la
+<strong>scheda fotografica di documentazione</strong>: la foto con sotto i dati
+di scatto (sito, numero, data e ora, coordinate, quota, direzione), una vista
+satellitare con il segnaposto e il cono di ripresa, la barra della scala della
+mappa e la freccia del nord. La mappa richiede la rete: senza, la scheda esce
+comunque, con il pannello dati allargato.</li>
 </ol>
 <div class="schermate"><figure><img src="img/it/05-media.webp" alt="La galleria delle foto" width="640" height="1391" loading="lazy"><figcaption>La galleria delle foto</figcaption></figure></div>
 
 <h3>✏️ Disegni (nei Media)</h3>
 <ol class="passi">
 <li>Crea una nuova tavola e scegli una foto del sito come sfondo: è il tuo
-«lucido» digitale.</li>
+«lucido» digitale. Un disegno può proseguire su più giornate.</li>
 <li>Ricalca strati, tagli e pietre con il dito o con la Apple Pencil; regola
-l'opacità della foto per vedere meglio il tratto.</li>
-<li>Aggiungi caselle di testo per le etichette (es. «US 1002») e la freccia del
-nord.</li>
+l'opacità della foto per vedere meglio il tratto. <strong>Pizzica per
+zoomare</strong> (fino a 6×, doppio tocco a due dita per tornare a 1×).</li>
+<li>Il <kbd>Ricalco automatico</kbd> <span class="pro">PRO</span> riconosce il
+contorno dell'oggetto che tocchi (una pietra, il limite di uno strato) e lo
+trasforma in tratto: colore e spessore si cambiano senza uscire dalla
+modalità. Tutto avviene sul dispositivo, senza rete.</li>
+<li>Aggiungi caselle di testo per le etichette (es. «US 1002»): si spostano,
+si ridimensionano col pizzico e hanno quattro caratteri tra cui scegliere.</li>
+<li>Con lo strumento <kbd>Scala</kbd> (righello) tocchi i due estremi di una
+misura nota — un segmento della palina — e scrivi la distanza vera: la foto
+acquisisce la scala, e da lì in poi le esportazioni parlano in metri.</li>
+<li>Con <kbd>Punto quotato</kbd> metti sulla foto la crocetta di un punto GNSS
+del sito (o un punto scritto a mano): nome, quota e coordinate compaiono in
+un'etichetta trascinabile con la lineetta di richiamo.</li>
+<li><kbd>Esporta con legenda</kbd> <span class="pro">PRO</span>: l'immagine
+esce con una fascia bianca sotto — barra metrica (se la scala c'è), freccia
+del nord per le foto scattate a piombo, «vista da» per le frontali.</li>
+<li><kbd>Esporta vettoriale</kbd> <span class="pro">PRO</span>: SVG per il
+disegno, oppure <strong>DXF</strong> per il GIS. Con almeno due punti quotati
+con coordinate su una foto a piombo, il DXF esce <strong>georeferenziato in
+UTM</strong> e in QGIS si posiziona da solo sul mondo; con la sola scala esce
+in metri locali; senza né l'una né gli altri l'app lo dice e non produce un
+file senza unità.</li>
 <li>Quando hai finito, nascondi la foto: resta il disegno pulito, pronto per il
 report.</li>
 </ol>
@@ -121,6 +157,10 @@ indipendente dalla lingua dell'app: la relazione può uscire in tedesco anche se
 l'app la usi in italiano.</li>
 <li>Genera il PDF, oppure esporta DOCX con logo e foto <span class="pro">PRO</span>,
 CSV dei punti, GeoJSON per QGIS <span class="pro">PRO</span>.</li>
+<li>Con le foto nei report attive puoi scegliere <kbd>Schede fotografiche al
+posto delle foto</kbd> <span class="pro">PRO</span>: ogni foto entra nel PDF e
+nel DOCX come scheda di documentazione completa di dati e mappa, nella lingua
+del report.</li>
 </ol>
 <div class="schermate"><figure><img src="img/it/08-report.webp" alt="Generazione dei report" width="640" height="1391" loading="lazy"><figcaption>Generazione dei report</figcaption></figure></div>
 
@@ -159,6 +199,9 @@ contenuto ed è <strong>irreversibile</strong>: esporta prima uno ZIP se hai dub
 <tr><td>GNSS</td><td>GPS interno, ricevitori MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Report</td><td>Giornaliero con filigrana</td><td>Tutti, senza filigrana</td></tr>
 <tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX con logo e foto, GeoJSON</td></tr>
+<tr><td>Disegni</td><td>Lucido, zoom, testi, scala, punti quotati</td><td>+ Ricalco automatico, esporta con legenda, SVG/DXF</td></tr>
+<tr><td>Libretto livellazioni</td><td>✓</td><td>✓</td></tr>
+<tr><td>Scheda fotografica</td><td>—</td><td>Condivisione e schede nei report</td></tr>
 <tr><td>Dettatura vocale</td><td>✓</td><td>✓</td></tr>
 <tr><td>Lingue dei report</td><td>14</td><td>14</td></tr>
 </table>
@@ -241,6 +284,30 @@ rileva solo nella giornata di oggi;</li>
 <li>se compare «Meteo non disponibile» manca la rete, oppure il sito non ha
 ancora un punto GNSS da cui prendere la posizione — batti un punto e riprova.</li>
 </ul></details>
+
+<details><summary>La scheda fotografica esce senza mappa</summary>
+<p>La vista satellitare arriva da Apple e richiede la rete: l'app aspetta fino
+a 15 secondi, poi genera la scheda senza mappa (i dati non aspettano la rete).
+Su reti lente da cantiere può volerci l'intera attesa: riprova sotto Wi-Fi.
+Senza geotag sulla foto, la mappa non c'è per definizione.</p></details>
+
+<details><summary>Il DXF viene rifiutato, o si apre «vicino all'origine» nel GIS</summary>
+<ul>
+<li>per il DXF <strong>georeferenziato</strong> servono una foto scattata a
+piombo con la fotocamera dell'app e almeno <strong>due punti quotati con
+coordinate</strong> ben distanziati sulla foto;</li>
+<li>con la sola scala della palina il DXF esce in <strong>metri locali</strong>:
+è corretto, ma il GIS lo mostra vicino all'origine — l'app te lo dice prima;</li>
+<li>senza scala né punti l'esportazione si rifiuta: un DXF senza unità non
+sarebbe leggibile sensatamente da nessun GIS.</li>
+</ul></details>
+
+<details><summary>La freccia del nord non compare nell'esportazione con legenda</summary>
+<p>La freccia compare solo per le foto <strong>scattate a piombo con la
+fotocamera dell'app</strong>, che registra l'azimut nello scatto. Per le foto
+frontali esce la scritta «vista da …» (una freccia del nord sul piano di un
+prospetto sarebbe una bugia geometrica); per le foto importate dal rullino non
+c'è nessuna delle due, perché mancano i dati di ripresa.</p></details>
 
 <footer>
 <p>Domande o problemi non elencati? Scrivi a

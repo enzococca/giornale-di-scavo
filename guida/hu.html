@@ -41,7 +41,9 @@ létrehozásához érintse meg a lelőhely nevét fent (<kbd>🗺</kbd> ikon) �
 Szelvény 3”).</li>
 <li>Az aktív lelőhely neve mindig látható fent: minden fül ennek a
 lelőhelynek az adatait mutatja. A lelőhely váltásához érintse meg ismét a
-nevet.</li>
+nevet: a lista a „Saját lelőhelyek” cím alatt található, a <kbd>Lelőhely
+átnevezése…</kbd> lehetőséggel pedig anélkül javíthatja ki a nevet, hogy
+bármit is elveszítene.</li>
 <li>Kéréskor adja meg az engedélyeket: <em>helyadatok</em> (a pontokhoz),
 <em>kamera</em> (a fényképekhez), <em>mikrofon</em> (a diktáláshoz),
 <em>Bluetooth</em> (csak külső vevő használatakor).</li>
@@ -82,6 +84,10 @@ másik WMS-szolgáltatást.</li>
 <li>Az alappontok (🏁) saját szakasszal rendelkeznek: importálja őket
 CSV-ből, vagy hozza létre őket, majd az <kbd>Ellenőrzés</kbd> gombbal kövesse
 élőben a ΔÉszak/ΔKelet/ΔMag. eltéréseket a felmérés előtt.</li>
+<li>A <kbd>Szintezési jegyzőkönyv</kbd> az optikai szintező műszer terepi
+jegyzőkönyve: állomások, hátra- és előremérések, egy kiinduló alapponttól
+számított magasságok, záróhiba-ellenőrzéssel. A szintezett pontok a
+magasságukkal kerülnek be a lelőhelyre, akárcsak a GNSS-pontok.</li>
 </ol>
 <div class="schermate"><figure><img src="img/hu/03-rilievo.webp" alt="A Felmérés GNSS-panelje" width="640" height="1391" loading="lazy"><figcaption>A Felmérés GNSS-panelje</figcaption></figure><figure><img src="img/hu/04-mappa.webp" alt="Pontok és alappontok a térképen" width="640" height="1391" loading="lazy"><figcaption>Pontok és alappontok a térképen</figcaption></figure></div>
 <p class="nota">Minden pont <strong>mindkét magasságot</strong> tárolja: az
@@ -93,20 +99,54 @@ magasság nem biztos, hogy elérhető: ehhez külső vevő szükséges (lásd le
 <li>Fényképezzen a kamera gombbal, vagy importáljon a fényképtárból.</li>
 <li>A fényképek sorban kapnak nevet (F001, F002…), és a legutóbb elérhető
 GNSS-pozícióval kerülnek georeferálásra.</li>
+<li>Fényképezéskor az alkalmazás az iránytű alapján a <strong>felvétel
+irányát</strong> is rögzíti: a fénykép részleteiben és a jelentésekben ez
+olvasható: „nézet: SO — 214°”, a függőlegesen (zenitre) készített
+felvételeknél (alaprajz, egy SE alja) pedig a zenitális felirat jelenik meg
+a felső szél irányával. Ha az iránytűt zavarás éri, az alkalmazás jelzi.</li>
 <li>Érintsen meg egy fényképet a cím és a megjegyzések megadásához (pl.
 „SE 102 északról”).</li>
+<li>A <kbd>Lap megosztása</kbd> <span class="pro">PRO</span> elkészíti a
+<strong>dokumentációs fotólapot</strong>: a fényképet, alatta a felvétel
+adataival (lelőhely, szám, dátum és időpont, koordináták, magasság, irány),
+egy műholdas nézetet a helyjelölővel és a felvételi kúppal, a térkép
+méretarány-sávjával és az északi nyíllal. A térképhez hálózat szükséges:
+enélkül a lap akkor is elkészül, kibővített adatpanellel.</li>
 </ol>
 <div class="schermate"><figure><img src="img/hu/05-media.webp" alt="A fényképgaléria" width="640" height="1391" loading="lazy"><figcaption>A fényképgaléria</figcaption></figure></div>
 
 <h3>✏️ Rajzok (a Médiában)</h3>
 <ol class="passi">
 <li>Hozzon létre egy új lapot, és válasszon háttérnek egy lelőhelyi
-fényképet: ez lesz a digitális pauszpapírja.</li>
+fényképet: ez lesz a digitális pauszpapírja. Egy rajz több napon át is
+folytatható.</li>
 <li>Pausolja át a rétegeket, metszeteket és köveket ujjal vagy Apple
 Pencillel; állítsa be a fénykép átlátszóságát, hogy jobban lássa a
-vonalakat.</li>
-<li>Adjon hozzá szövegdobozokat a feliratokhoz (pl. „SE 1002”) és az északi
-nyilat.</li>
+vonalakat. <strong>Csippentéssel nagyíthat</strong> (6×-ig, két ujjal való
+dupla koppintással vissza 1×-re).</li>
+<li>Az <kbd>Automatikus pausolás</kbd> <span class="pro">PRO</span>
+felismeri az érintett tárgy körvonalát (egy követ, egy réteg határát), és
+vonallá alakítja: a szín és a vastagság a mód elhagyása nélkül módosítható.
+Minden a készüléken történik, hálózat nélkül.</li>
+<li>Adjon hozzá szövegdobozokat a feliratokhoz (pl. „SE 1002”): mozgathatók,
+csippentéssel átméretezhetők, és négyféle betűtípus közül választhat.</li>
+<li>A <kbd>Lépték</kbd> eszközzel (vonalzó) érintse meg egy ismert méret két
+végpontját — egy mérőléc szakaszát —, és írja be a valós távolságot: a
+fénykép megkapja a léptéket, és onnantól az exportált fájlok méterben
+beszélnek.</li>
+<li>A <kbd>Magassági pont</kbd> eszközzel a fényképre helyezi a lelőhely
+egy GNSS-pontjának (vagy egy kézzel megadott pontnak) a keresztjét: a név,
+a magasság és a koordináták egy húzható címkében jelennek meg,
+mutatóvonallal.</li>
+<li><kbd>Exportálás jelmagyarázattal</kbd> <span class="pro">PRO</span>: a
+kép alján fehér sáv jelenik meg — méterskála (ha van lépték), északi nyíl a
+függőlegesen készített fényképeknél, „nézet innen” a frontális felvételeknél.</li>
+<li><kbd>Vektoros exportálás</kbd> <span class="pro">PRO</span>: SVG a
+rajzhoz, vagy <strong>DXF</strong> a GIS-hez. Legalább két, koordinátákkal
+ellátott magassági ponttal egy függőlegesen készített fényképen a DXF
+<strong>UTM-ben georeferálva</strong> készül el, és a QGIS-ben magától a
+helyére kerül; csak léptékkel, helyi méterben készül el; egyik nélkül sem az
+alkalmazás jelzi ezt, és nem hoz létre mértékegység nélküli fájlt.</li>
 <li>Ha végzett, rejtse el a fényképet: a tiszta rajz megmarad, készen a
 jelentéshez.</li>
 </ol>
@@ -130,6 +170,10 @@ is, ha az alkalmazást magyarul használja.</li>
 <li>Készítsen PDF-et, vagy exportáljon DOCX-et logóval és fényképekkel
 <span class="pro">PRO</span>, CSV-t a pontokról, GeoJSON-t QGIS-hez
 <span class="pro">PRO</span>.</li>
+<li>A jelentésekben szereplő fényképek bekapcsolásával választhatja a
+<kbd>Fotólapok a fényképek helyett</kbd> <span class="pro">PRO</span>
+lehetőséget: minden fénykép teljes, adatokkal és térképpel ellátott
+dokumentációs lapként kerül be a PDF-be és a DOCX-be, a jelentés nyelvén.</li>
 </ol>
 <div class="schermate"><figure><img src="img/hu/08-report.webp" alt="Jelentések készítése" width="640" height="1391" loading="lazy"><figcaption>Jelentések készítése</figcaption></figure></div>
 
@@ -171,6 +215,9 @@ előbb exportáljon egy ZIP-et.</p>
 <tr><td>GNSS</td><td>Belső GPS, MFi-vevők</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Jelentés</td><td>Napi, vízjellel</td><td>Az összes, vízjel nélkül</td></tr>
 <tr><td>Exportálás</td><td>PDF, CSV</td><td>+ DOCX logóval és fényképekkel, GeoJSON</td></tr>
+<tr><td>Rajzok</td><td>Pauszpapír, nagyítás, szövegek, lépték, magassági pontok</td><td>+ Automatikus pausolás, exportálás jelmagyarázattal, SVG/DXF</td></tr>
+<tr><td>Szintezési jegyzőkönyv</td><td>✓</td><td>✓</td></tr>
+<tr><td>Fotólap</td><td>—</td><td>Megosztás és lapok a jelentésekben</td></tr>
 <tr><td>Hangalapú diktálás</td><td>✓</td><td>✓</td></tr>
 <tr><td>Jelentés nyelvei</td><td>14</td><td>14</td></tr>
 </table>
@@ -266,6 +313,33 @@ a mai napra kérhető le;</li>
 lelőhelynek még nincs GNSS-pontja, amelyből a helyzetet venni lehetne —
 rögzítsen egy pontot, és próbálja újra.</li>
 </ul></details>
+
+<details><summary>A fotólap térkép nélkül készül el</summary>
+<p>A műholdas nézet az Apple-től érkezik, és hálózatot igényel: az alkalmazás
+legfeljebb 15 másodpercet vár, majd térkép nélkül készíti el a lapot (az
+adatok nem várnak a hálózatra). Lassú, ásatási helyszíni hálózaton a teljes
+várakozási idő eltelhet: próbálja újra Wi-Fi hálózaton. Geotag nélküli
+fényképnél a térkép definíció szerint hiányzik.</p></details>
+
+<details><summary>A DXF-et elutasítja, vagy „az origó közelében” nyílik meg a GIS-ben</summary>
+<ul>
+<li>a <strong>georeferált</strong> DXF-hez az alkalmazás kamerájával
+függőlegesen készített fénykép és legalább <strong>két, koordinátákkal
+ellátott, jól szétosztott magassági pont</strong> szükséges a fényképen;</li>
+<li>csak a mérőléc léptékével a DXF <strong>helyi méterben</strong> készül
+el: ez helyes, de a GIS az origó közelében jeleníti meg — az alkalmazás
+előre jelzi ezt;</li>
+<li>lépték és pontok nélkül az exportálás elutasításra kerül: mértékegység
+nélküli DXF-et egyetlen GIS sem tudna értelmesen megjeleníteni.</li>
+</ul></details>
+
+<details><summary>Az északi nyíl nem jelenik meg a jelmagyarázattal történő exportálásnál</summary>
+<p>A nyíl csak az alkalmazás kamerájával <strong>függőlegesen készített
+fényképeknél</strong> jelenik meg, amelyek rögzítik az azimutot a felvétel
+pillanatában. A frontális fényképeknél a „nézet innen …” felirat jelenik meg
+(egy homlokzat síkján az északi nyíl geometriai hazugság lenne); a
+fényképtárból importált fényképeknél egyik sem jelenik meg, mivel hiányoznak
+a felvételi adatok.</p></details>
 
 <footer>
 <p>Van olyan kérdése vagy problémája, ami itt nem szerepel? Írjon a

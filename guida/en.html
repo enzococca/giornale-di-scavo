@@ -39,7 +39,9 @@ the excavation, reports build themselves from the pages.</p>
 name at the top (the <kbd>🗺</kbd> icon) → <kbd>New site…</kbd> and give it a
 name (e.g. "Colle Sant'Angelo — Trench 3").</li>
 <li>The active site's name is always visible at the top: every tab shows that
-site's data. Tap the name again to switch site.</li>
+site's data. Tap the name again to switch site: the list is under the
+“Your sites” heading, and <kbd>Rename site…</kbd> lets you fix a name without
+losing anything.</li>
 <li>Grant permissions when asked: <em>location</em> (for points),
 <em>camera</em> (for photos), <em>microphone</em> (for dictation),
 <em>Bluetooth</em> (only if you use an external receiver).</li>
@@ -76,6 +78,10 @@ from the map you can enable a cadastre or another WMS service.</li>
 <li>Benchmarks (🏁) live in their own section: import them from CSV or create
 them, then use <kbd>Check</kbd> to watch the ΔN/ΔE/ΔZ residuals live before
 you survey.</li>
+<li><kbd>Level books</kbd> are the field book for the optical level: stations,
+backsights and foresights, elevations calculated from a starting benchmark,
+with a closure check. Levelled points enter the site with their elevation,
+just like GNSS ones.</li>
 </ol>
 <div class="schermate"><figure><img src="img/en/03-rilievo.webp" alt="The Survey GNSS panel" width="640" height="1391" loading="lazy"><figcaption>The Survey GNSS panel</figcaption></figure><figure><img src="img/en/04-mappa.webp" alt="Points and benchmarks on the map" width="640" height="1391" loading="lazy"><figcaption>Points and benchmarks on the map</figcaption></figure></div>
 <p class="nota">Every point stores <strong>both elevations</strong>:
@@ -88,17 +94,50 @@ below).</p>
 <li>Shoot with the camera button or import from the photo library.</li>
 <li>Photos are named sequentially (F001, F002…) and are geotagged with the
 latest available GNSS position.</li>
+<li>When you shoot, the app also records the <strong>shooting direction</strong>
+from the compass: the photo's detail view and reports show “viewed from
+SO — 214°”, and for shots taken straight down (plan view, the bottom of an SU)
+a nadir caption with the direction of the top edge. If the compass is
+disturbed, the app tells you.</li>
 <li>Tap a photo to set its title and notes (e.g. "SU 102 from north").</li>
+<li><kbd>Share photo record</kbd> <span class="pro">PRO</span> generates the
+<strong>photo documentation record</strong>: the photo with the shot's data
+below it (site, number, date and time, coordinates, elevation, direction), a
+satellite view with a pin and the shooting cone, the map's scale bar and the
+north arrow. The map needs a network: without one, the record still comes
+out, with a larger data panel.</li>
 </ol>
 <div class="schermate"><figure><img src="img/en/05-media.webp" alt="The photo gallery" width="640" height="1391" loading="lazy"><figcaption>The photo gallery</figcaption></figure></div>
 
 <h3>✏️ Drawings (in Media)</h3>
 <ol class="passi">
 <li>Create a new sheet and pick a site photo as its background: that's your
-digital tracing sheet.</li>
+digital tracing sheet. A drawing can continue across several days.</li>
 <li>Trace layers, cuts and stones with a finger or Apple Pencil; adjust the
-photo's opacity to see your strokes better.</li>
-<li>Add text boxes for labels (e.g. "SU 1002") and the north arrow.</li>
+photo's opacity to see your strokes better. <strong>Pinch to zoom</strong> (up
+to 6×, two-finger double-tap to return to 1×).</li>
+<li><kbd>Automatic tracing</kbd> <span class="pro">PRO</span> recognises the
+outline of the object you tap (a stone, the edge of a layer) and turns it
+into a stroke: colour and thickness can be changed without leaving the mode.
+Everything happens on the device, with no network.</li>
+<li>Add text boxes for labels (e.g. "SU 1002"): they can be moved, resized
+with a pinch, and come with four fonts to choose from.</li>
+<li>With the <kbd>Scale</kbd> tool (ruler) you tap the two ends of a known
+measurement — a length of the ranging pole — and enter the true distance: the
+photo picks up the scale, and from then on exports speak in metres.</li>
+<li>With <kbd>Point with elevation</kbd> you place the crosshair of a GNSS
+point from the site (or a hand-entered point) on the photo: name, elevation
+and coordinates appear in a draggable label with a leader line.</li>
+<li><kbd>Export with legend</kbd> <span class="pro">PRO</span>: the image
+comes out with a white band underneath — a metric scale bar (if the scale is
+set), a north arrow for photos taken straight down, “viewed from” for frontal
+ones.</li>
+<li><kbd>Export vector</kbd> <span class="pro">PRO</span>: SVG for the
+drawing, or <strong>DXF</strong> for the GIS. With at least two points with
+elevation and coordinates on a photo taken straight down, the DXF comes out
+<strong>georeferenced in UTM</strong> and positions itself in QGIS
+automatically; with only the scale set it comes out in local metres; with
+neither, the app says so and won't produce a file with no units.</li>
 <li>When you're done, hide the photo: the clean drawing stays, ready for the
 report.</li>
 </ol>
@@ -122,6 +161,10 @@ English.</li>
 <li>Generate the PDF, or export DOCX with your logo and photos
 <span class="pro">PRO</span>, CSV of the points, GeoJSON for QGIS
 <span class="pro">PRO</span>.</li>
+<li>With photos in reports switched on, you can choose <kbd>Photo records
+instead of photos</kbd> <span class="pro">PRO</span>: every photo enters the
+PDF and DOCX as a full documentation record with data and map, in the
+report's language.</li>
 </ol>
 <div class="schermate"><figure><img src="img/en/08-report.webp" alt="Report generation" width="640" height="1391" loading="lazy"><figcaption>Report generation</figcaption></figure></div>
 
@@ -160,6 +203,9 @@ it and is <strong>irreversible</strong>: export a ZIP first if in doubt.</p>
 <tr><td>GNSS</td><td>Internal GPS, MFi receivers</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Reports</td><td>Daily, watermarked</td><td>All, no watermark</td></tr>
 <tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX with logo and photos, GeoJSON</td></tr>
+<tr><td>Drawings</td><td>Tracing sheet, zoom, text boxes, scale, points with elevation</td><td>+ Automatic tracing, export with legend, SVG/DXF</td></tr>
+<tr><td>Level books</td><td>✓</td><td>✓</td></tr>
+<tr><td>Photo record</td><td>—</td><td>Sharing and records in reports</td></tr>
 <tr><td>Voice dictation</td><td>✓</td><td>✓</td></tr>
 <tr><td>Report languages</td><td>14</td><td>14</td></tr>
 </table>
@@ -245,6 +291,32 @@ be fetched on today's;</li>
 <li>if you see “Weather unavailable” there is no network, or the site has no
 GNSS point yet to take the position from — record a point and try again.</li>
 </ul></details>
+
+<details><summary>The photo record comes out without a map</summary>
+<p>The satellite view comes from Apple and needs a network: the app waits up
+to 15 seconds, then generates the record without a map (the data doesn't wait
+for the network). On slow site networks it can take the full wait: try again
+under Wi-Fi. Without coordinates on the photo, there is no map by
+definition.</p></details>
+
+<details><summary>The DXF is rejected, or opens “near the origin” in the GIS</summary>
+<ul>
+<li>a <strong>georeferenced</strong> DXF needs a photo taken straight down
+with the app's camera and at least <strong>two points with elevation and
+coordinates</strong>, well spread out on the photo;</li>
+<li>with only the ranging pole's scale, the DXF comes out in <strong>local
+metres</strong>: that's correct, but the GIS shows it near the origin — the
+app tells you beforehand;</li>
+<li>without scale or points, the export is refused: a DXF with no units
+wouldn't be meaningfully readable by any GIS.</li>
+</ul></details>
+
+<details><summary>The north arrow doesn't appear in the export with legend</summary>
+<p>The arrow only appears for photos <strong>taken straight down with the
+app's camera</strong>, which records the azimuth at the moment of the shot.
+Frontal photos get the “viewed from …” caption instead (a north arrow on the
+plane of a front elevation would be a geometric lie); photos imported from
+the library get neither, because the shooting data is missing.</p></details>
 
 <footer>
 <p>Questions not covered here? Write to

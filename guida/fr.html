@@ -40,7 +40,9 @@ génèrent tout seuls à partir des pages.</p>
 un à vous, touchez le nom du site en haut (icône <kbd>🗺</kbd>) →
 <kbd>Nouveau site…</kbd> et donnez-lui un nom (p. ex. « Colle Sant'Angelo — Sondage 3 »).</li>
 <li>Le nom du site actif est toujours visible en haut : tous les onglets
-affichent les données de ce site. Pour changer de site, touchez à nouveau le nom.</li>
+affichent les données de ce site. Pour changer de site, touchez à nouveau le
+nom : la liste se trouve sous le titre « Vos sites », et avec
+<kbd>Renommer le site…</kbd> vous corrigez un nom sans rien perdre.</li>
 <li>Accordez les permissions lorsqu'elles sont demandées : <em>position</em>
 (pour les points), <em>appareil photo</em> (pour les photos), <em>microphone</em>
 (pour la dictée), <em>Bluetooth</em> (seulement si vous utilisez un récepteur externe).</li>
@@ -80,6 +82,10 @@ place ; depuis la carte, vous pouvez activer le cadastre ou un autre service WMS
 <li>Les repères (🏁) vivent dans leur propre section : importez-les depuis un
 CSV ou créez-les, puis utilisez la vérification pour surveiller les écarts
 ΔN/ΔE/ΔZ en temps réel avant de lever.</li>
+<li>Le <kbd>Carnet de nivellement</kbd> est le carnet de terrain du niveau
+optique : stations, lectures arrière et avant, altitudes calculées à partir
+d'un repère de départ, avec le contrôle de fermeture. Les points nivelés
+entrent dans le site avec leur altitude, comme les points GNSS.</li>
 </ol>
 <div class="schermate"><figure><img src="img/fr/03-rilievo.webp" alt="Le panneau GNSS du Relevé" width="640" height="1391" loading="lazy"><figcaption>Le panneau GNSS du Relevé</figcaption></figure><figure><img src="img/fr/04-mappa.webp" alt="Points et repères sur la carte" width="640" height="1391" loading="lazy"><figcaption>Points et repères sur la carte</figcaption></figure></div>
 <p class="nota">Chaque point enregistre <strong>les deux altitudes</strong> :
@@ -92,18 +98,57 @@ récepteur externe (voir plus bas).</p>
 <li>Photographiez avec le bouton appareil photo ou importez depuis la pellicule.</li>
 <li>Les photos prennent un nom progressif (F001, F002…) et sont géoréférencées
 avec la dernière position GNSS disponible.</li>
+<li>Lors de la prise de vue, l'application enregistre aussi la <strong>direction
+de prise de vue</strong> donnée par la boussole : dans le détail de la photo
+et dans les rapports, vous lisez « vue depuis SO — 214° », et pour les
+prises de vue à plomb (plan, fond d'une US), la mention zénithale avec la
+direction du bord haut. Si la boussole est perturbée, l'application le
+signale.</li>
 <li>Touchez une photo pour son titre et ses notes (p. ex. « US 102 depuis le nord »).</li>
+<li><kbd>Partager la fiche</kbd> <span class="pro">PRO</span> génère la
+<strong>fiche photographique de documentation</strong> : la photo avec, en
+dessous, les données de prise de vue (site, numéro, date et heure,
+coordonnées, altitude, direction), une vue satellite avec l'épingle de
+position et le cône de prise de vue, la barre d'échelle de la carte et la
+flèche du nord. La carte nécessite le réseau : sans réseau, la fiche est
+quand même générée, avec le panneau de données agrandi.</li>
 </ol>
 <div class="schermate"><figure><img src="img/fr/05-media.webp" alt="La galerie photo" width="640" height="1391" loading="lazy"><figcaption>La galerie photo</figcaption></figure></div>
 
 <h3>✏️ Dessins (dans les Médias)</h3>
 <ol class="passi">
 <li>Créez une nouvelle planche et choisissez une photo du site comme fond :
-c'est votre calque numérique.</li>
+c'est votre calque numérique. Un dessin peut se poursuivre sur plusieurs
+journées.</li>
 <li>Décalquez les couches, les coupes et les pierres du doigt ou avec l'Apple
-Pencil ; réglez l'opacité de la photo pour mieux voir le tracé.</li>
-<li>Ajoutez des zones de texte pour les étiquettes (p. ex. « US 1002 ») et la
-flèche du nord.</li>
+Pencil ; réglez l'opacité de la photo pour mieux voir le tracé. <strong>Pincez
+pour zoomer</strong> (jusqu'à 6×, double-tapez à deux doigts pour revenir à
+1×).</li>
+<li>Le <kbd>Traçage automatique</kbd> <span class="pro">PRO</span> reconnaît
+le contour de l'objet que vous touchez (une pierre, la limite d'une couche) et
+le transforme en trait : la couleur et l'épaisseur se changent sans sortir du
+mode. Tout se passe sur l'appareil, sans réseau.</li>
+<li>Ajoutez des zones de texte pour les étiquettes (p. ex. « US 1002 ») :
+elles se déplacent, se redimensionnent avec le pincement, et il y a quatre
+polices au choix.</li>
+<li>Avec l'outil <kbd>Échelle</kbd> (règle), touchez les deux extrémités
+d'une mesure connue — un segment du jalon — et indiquez la distance réelle :
+la photo acquiert l'échelle, et à partir de là les exportations parlent en
+mètres.</li>
+<li>Avec <kbd>Point coté</kbd>, placez sur la photo la croix d'un point GNSS
+du site (ou un point saisi à la main) : le nom, l'altitude et les coordonnées
+apparaissent dans une étiquette déplaçable avec son trait de rappel.</li>
+<li><kbd>Exporter avec légende</kbd> <span class="pro">PRO</span> :
+l'image sort avec une bande blanche en bas — barre métrique (si l'échelle est
+définie), flèche du nord pour les photos prises à plomb, « vue depuis » pour
+les frontales.</li>
+<li><kbd>Exporter en vectoriel</kbd> <span class="pro">PRO</span> : SVG
+pour le dessin, ou <strong>DXF</strong> pour le SIG. Avec au moins deux
+points cotés avec coordonnées sur une photo à plomb, le DXF sort
+<strong>géoréférencé en UTM</strong> et se positionne tout seul dans le monde
+sous QGIS ; avec la seule échelle, il sort en mètres locaux ; sans l'un ni
+l'autre, l'application le signale et ne produit pas de fichier sans
+unité.</li>
 <li>Une fois terminé, masquez la photo : le dessin propre reste, prêt pour le rapport.</li>
 </ol>
 <div class="schermate"><figure><img src="img/fr/06-disegno.webp" alt="Le calque numérique" width="640" height="1391" loading="lazy"><figcaption>Le calque numérique</figcaption></figure></div>
@@ -126,6 +171,11 @@ italien même si vous utilisez l'application en français.</li>
 <li>Générez le PDF, ou exportez en DOCX avec logo et photos
 <span class="pro">PRO</span>, CSV des points, GeoJSON pour QGIS
 <span class="pro">PRO</span>.</li>
+<li>Avec les photos activées dans les rapports, vous pouvez choisir
+<kbd>Fiches photographiques à la place des photos</kbd>
+<span class="pro">PRO</span> : chaque photo entre dans le PDF et le DOCX
+comme une fiche de documentation complète avec données et carte, dans la
+langue du rapport.</li>
 </ol>
 <div class="schermate"><figure><img src="img/fr/08-report.webp" alt="Génération des rapports" width="640" height="1391" loading="lazy"><figcaption>Génération des rapports</figcaption></figure></div>
 
@@ -165,6 +215,9 @@ contenu et c'est <strong>irréversible</strong> : exportez d'abord un ZIP en cas
 <tr><td>GNSS</td><td>GPS interne, récepteurs MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Rapports</td><td>Journalier avec filigrane</td><td>Tous, sans filigrane</td></tr>
 <tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX avec logo et photos, GeoJSON</td></tr>
+<tr><td>Dessins</td><td>Calque, zoom, textes, échelle, points cotés</td><td>+ Traçage automatique, export avec légende, SVG/DXF</td></tr>
+<tr><td>Carnet de nivellement</td><td>✓</td><td>✓</td></tr>
+<tr><td>Fiche photographique</td><td>—</td><td>Partage et fiches dans les rapports</td></tr>
 <tr><td>Dictée vocale</td><td>✓</td><td>✓</td></tr>
 <tr><td>Langues des rapports</td><td>14</td><td>14</td></tr>
 </table>
@@ -251,6 +304,33 @@ se récupère uniquement pour la journée d'aujourd'hui ;</li>
 <li>si « Météo non disponible » s'affiche, le réseau manque, ou le site n'a
 pas encore de point GNSS pour en tirer la position — relevez un point et réessayez.</li>
 </ul></details>
+
+<details><summary>La fiche photographique sort sans carte</summary>
+<p>La vue satellite provient d'Apple et nécessite le réseau : l'application
+attend jusqu'à 15 secondes, puis génère la fiche sans carte (les données
+n'attendent pas le réseau). Sur les réseaux lents de chantier, l'attente
+complète peut être nécessaire : réessayez sous Wi-Fi. Sans géolocalisation
+sur la photo, la carte est absente par définition.</p></details>
+
+<details><summary>Le DXF est refusé, ou s'ouvre « près de l'origine » dans le SIG</summary>
+<ul>
+<li>pour le DXF <strong>géoréférencé</strong>, il faut une photo prise à
+plomb avec l'appareil photo de l'application et au moins <strong>deux points
+cotés avec coordonnées</strong> bien espacés sur la photo ;</li>
+<li>avec la seule échelle du jalon, le DXF sort en <strong>mètres
+locaux</strong> : c'est correct, mais le SIG l'affiche près de l'origine —
+l'application vous le signale avant ;</li>
+<li>sans échelle ni points, l'exportation est refusée : un DXF sans unité ne
+serait lisible de façon sensée par aucun SIG.</li>
+</ul></details>
+
+<details><summary>La flèche du nord n'apparaît pas dans l'export avec légende</summary>
+<p>La flèche n'apparaît que pour les photos <strong>prises à plomb avec
+l'appareil photo de l'application</strong>, qui enregistre l'azimut au moment
+de la prise de vue. Pour les photos frontales, c'est la mention « vue depuis
+… » qui sort (une flèche du nord sur le plan d'une élévation serait un
+mensonge géométrique) ; pour les photos importées de la pellicule, ni l'une
+ni l'autre n'apparaît, car les données de prise de vue manquent.</p></details>
 
 <footer>
 <p>Des questions ou des problèmes non répertoriés ? Écrivez à

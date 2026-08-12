@@ -39,7 +39,9 @@ semana ou da escavação, os relatórios geram-se sozinhos a partir das páginas
 seu, toque no nome do sítio no topo (ícone <kbd>🗺</kbd>) →
 <kbd>Novo sítio…</kbd> e dê-lhe um nome (por ex., «Colle Sant'Angelo — Sondagem 3»).</li>
 <li>O nome do sítio ativo está sempre visível no topo: todos os separadores
-mostram os dados desse sítio. Para mudar de sítio, toque novamente no nome.</li>
+mostram os dados desse sítio. Para mudar de sítio, toque novamente no nome:
+a lista fica sob o título «Os seus sítios», e com <kbd>Renomear sítio…</kbd>
+corrige um nome sem perder nada.</li>
 <li>Conceda as permissões quando forem pedidas: <em>localização</em> (para os
 pontos), <em>câmara</em> (para as fotos), <em>microfone</em> (para o ditado),
 <em>Bluetooth</em> (apenas se usar um recetor externo).</li>
@@ -77,6 +79,10 @@ terreno; a partir do mapa pode ativar o cadastro ou outro serviço WMS.</li>
 <li>Os marcos geodésicos (🏁) vivem na sua própria secção: importe-os de CSV
 ou crie-os, depois use a verificação para acompanhar os desvios ΔN/ΔE/ΔZ em
 tempo real antes de levantar.</li>
+<li>A <kbd>Caderneta de nivelamento</kbd> é a caderneta de campo do nível
+ótico: estações, leituras de ré e de vante, altitudes calculadas a partir de
+um marco geodésico de partida, com o controlo de fecho. Os pontos nivelados
+entram no sítio com a sua altitude, tal como os pontos GNSS.</li>
 </ol>
 <div class="schermate"><figure><img src="img/pt/03-rilievo.webp" alt="O painel GNSS do Levantamento" width="640" height="1391" loading="lazy"><figcaption>O painel GNSS do Levantamento</figcaption></figure><figure><img src="img/pt/04-mappa.webp" alt="Pontos e marcos geodésicos no mapa" width="640" height="1391" loading="lazy"><figcaption>Pontos e marcos geodésicos no mapa</figcaption></figure></div>
 <p class="nota">Cada ponto guarda <strong>as duas altitudes</strong>:
@@ -89,18 +95,52 @@ externo (ver abaixo).</p>
 <li>Fotografe com o botão da câmara ou importe da biblioteca de fotos.</li>
 <li>As fotos recebem um nome progressivo (F001, F002…) e são georreferenciadas
 com a última posição GNSS disponível.</li>
+<li>No momento do disparo, a aplicação regista também a <strong>direção de
+observação</strong> dada pela bússola: no detalhe da foto e nos relatórios
+lê-se «vista de SO — 214°», e para as fotos tiradas a prumo (planta, fundo
+de uma UE) a indicação zenital com a direção do bordo superior. Se a bússola
+estiver perturbada, a aplicação avisa.</li>
 <li>Toque numa foto para lhe dar título e notas (por ex., «UE 102 vista do norte»).</li>
+<li><kbd>Partilhar ficha</kbd> <span class="pro">PRO</span> gera a
+<strong>ficha fotográfica de documentação</strong>: a foto com, por baixo, os
+dados do disparo (sítio, número, data e hora, coordenadas, altitude,
+direção), uma vista de satélite com o marcador de posição e o cone de visão,
+a barra de escala do mapa e a seta do norte. O mapa requer rede: sem rede, a
+ficha sai na mesma, com o painel de dados alargado.</li>
 </ol>
 <div class="schermate"><figure><img src="img/pt/05-media.webp" alt="A galeria de fotos" width="640" height="1391" loading="lazy"><figcaption>A galeria de fotos</figcaption></figure></div>
 
 <h3>✏️ Desenhos (em Media)</h3>
 <ol class="passi">
 <li>Crie uma nova prancha e escolha uma foto do sítio como fundo: é o seu
-papel vegetal digital.</li>
+papel vegetal digital. Um desenho pode continuar ao longo de vários dias.</li>
 <li>Decalque estratos, cortes e pedras com o dedo ou com a Apple Pencil;
-ajuste a opacidade da foto para ver melhor o traço.</li>
-<li>Acrescente caixas de texto para as etiquetas (por ex., «UE 1002») e a
-seta do norte.</li>
+ajuste a opacidade da foto para ver melhor o traço. <strong>Belisque para
+ampliar</strong> (até 6×, toque duplo com dois dedos para voltar a 1×).</li>
+<li>O <kbd>Decalque automático</kbd> <span class="pro">PRO</span> reconhece
+o contorno do objeto que tocar (uma pedra, o limite de um estrato) e
+transforma-o em traço: a cor e a espessura mudam-se sem sair do modo. Tudo
+acontece no dispositivo, sem rede.</li>
+<li>Acrescente caixas de texto para as etiquetas (por ex., «UE 1002»):
+movem-se, redimensionam-se com o beliscão e há quatro tipos de letra à
+escolha.</li>
+<li>Com a ferramenta <kbd>Escala</kbd> (régua), toque nos dois extremos de
+uma medida conhecida — um segmento da baliza — e escreva a distância real: a
+foto adquire a escala, e a partir daí as exportações passam a falar em
+metros.</li>
+<li>Com <kbd>Ponto cotado</kbd>, coloque na foto a cruz de um ponto GNSS do
+sítio (ou um ponto introduzido manualmente): o nome, a altitude e as
+coordenadas aparecem numa etiqueta arrastável com a linha de chamada.</li>
+<li><kbd>Exportar com legenda</kbd> <span class="pro">PRO</span>: a
+imagem sai com uma faixa branca por baixo — barra métrica (se a escala
+existir), seta do norte para as fotos tiradas a prumo, «vista de» para as
+frontais.</li>
+<li><kbd>Exportar vetorial</kbd> <span class="pro">PRO</span>: SVG para o
+desenho, ou <strong>DXF</strong> para o SIG. Com pelo menos dois pontos
+cotados com coordenadas numa foto a prumo, o DXF sai
+<strong>georreferenciado em UTM</strong> e no QGIS posiciona-se sozinho no
+mundo; apenas com a escala sai em metros locais; sem uma coisa nem outra, a
+aplicação avisa e não produz um ficheiro sem unidades.</li>
 <li>Quando terminar, oculte a foto: fica o desenho limpo, pronto para o relatório.</li>
 </ol>
 <div class="schermate"><figure><img src="img/pt/06-disegno.webp" alt="O papel vegetal digital" width="640" height="1391" loading="lazy"><figcaption>O papel vegetal digital</figcaption></figure></div>
@@ -123,6 +163,10 @@ aplicação em português.</li>
 <li>Gere o PDF, ou exporte em DOCX com logótipo e fotos
 <span class="pro">PRO</span>, CSV dos pontos, GeoJSON para o QGIS
 <span class="pro">PRO</span>.</li>
+<li>Com as fotos ativadas nos relatórios, pode escolher <kbd>Fichas
+fotográficas em vez das fotos</kbd> <span class="pro">PRO</span>: cada foto
+entra no PDF e no DOCX como uma ficha de documentação completa, com dados e
+mapa, no idioma do relatório.</li>
 </ol>
 <div class="schermate"><figure><img src="img/pt/08-report.webp" alt="Geração de relatórios" width="640" height="1391" loading="lazy"><figcaption>Geração de relatórios</figcaption></figure></div>
 
@@ -162,6 +206,9 @@ conteúdo e é <strong>irreversível</strong>: exporte primeiro um ZIP em caso d
 <tr><td>GNSS</td><td>GPS interno, recetores MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Relatórios</td><td>Diário com marca de água</td><td>Todos, sem marca de água</td></tr>
 <tr><td>Exportação</td><td>PDF, CSV</td><td>+ DOCX com logótipo e fotos, GeoJSON</td></tr>
+<tr><td>Desenhos</td><td>Papel vegetal, zoom, textos, escala, pontos cotados</td><td>+ Decalque automático, exportar com legenda, SVG/DXF</td></tr>
+<tr><td>Caderneta de nivelamento</td><td>✓</td><td>✓</td></tr>
+<tr><td>Ficha fotográfica</td><td>—</td><td>Partilha e fichas nos relatórios</td></tr>
 <tr><td>Ditado por voz</td><td>✓</td><td>✓</td></tr>
 <tr><td>Idiomas dos relatórios</td><td>14</td><td>14</td></tr>
 </table>
@@ -245,6 +292,32 @@ só se obtém no dia de hoje;</li>
 <li>se aparecer «Tempo indisponível», falta rede, ou o sítio ainda não tem um
 ponto GNSS de onde obter a posição — registe um ponto e tente novamente.</li>
 </ul></details>
+
+<details><summary>A ficha fotográfica sai sem mapa</summary>
+<p>A vista de satélite vem da Apple e requer rede: a aplicação aguarda até
+15 segundos e depois gera a ficha sem mapa (os dados não esperam pela rede).
+Em redes lentas de estaleiro, pode ser necessária a espera completa: tente
+novamente sob Wi-Fi. Sem geolocalização na foto, o mapa não existe por
+definição.</p></details>
+
+<details><summary>O DXF é rejeitado, ou abre-se «perto da origem» no SIG</summary>
+<ul>
+<li>para o DXF <strong>georreferenciado</strong> são necessários uma foto
+tirada a prumo com a câmara da aplicação e pelo menos <strong>dois pontos
+cotados com coordenadas</strong> bem afastados na foto;</li>
+<li>com apenas a escala da baliza, o DXF sai em <strong>metros
+locais</strong>: é correto, mas o SIG mostra-o perto da origem — a aplicação
+avisa antes;</li>
+<li>sem escala nem pontos, a exportação é recusada: um DXF sem unidades não
+seria legível com sentido por nenhum SIG.</li>
+</ul></details>
+
+<details><summary>A seta do norte não aparece na exportação com legenda</summary>
+<p>A seta só aparece nas fotos <strong>tiradas a prumo com a câmara da
+aplicação</strong>, que regista o azimute no momento do disparo. Nas fotos
+frontais surge a indicação «vista de …» (uma seta do norte no plano de um
+alçado seria uma mentira geométrica); nas fotos importadas da biblioteca não
+aparece nenhuma das duas, porque faltam os dados de disparo.</p></details>
 
 <footer>
 <p>Perguntas ou problemas não listados aqui? Escreva para

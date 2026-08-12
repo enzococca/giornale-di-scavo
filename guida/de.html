@@ -39,7 +39,9 @@ Woche oder der Grabung entstehen die Berichte von selbst aus den Seiten.</p>
 tippen Sie oben auf den Namen (Symbol <kbd>🗺</kbd>) → <kbd>Neuer Fundplatz…</kbd>
 und vergeben einen Namen (z. B. „Colle Sant'Angelo — Schnitt 3“).</li>
 <li>Der Name des aktiven Fundplatzes ist oben immer sichtbar: Alle Reiter zeigen
-dessen Daten. Zum Wechseln tippen Sie erneut auf den Namen.</li>
+dessen Daten. Zum Wechseln tippen Sie erneut auf den Namen: Die Liste steht
+unter der Überschrift „Ihre Fundplätze“, und mit <kbd>Fundplatz
+umbenennen…</kbd> korrigieren Sie einen Namen, ohne etwas zu verlieren.</li>
 <li>Erteilen Sie die Berechtigungen, wenn Sie gefragt werden:
 <em>Standort</em> (für Punkte), <em>Kamera</em> (für Fotos),
 <em>Mikrofon</em> (fürs Diktieren), <em>Bluetooth</em> (nur mit externem
@@ -81,6 +83,10 @@ lassen sich Kataster- oder andere WMS-Dienste einblenden.</li>
 <li>Festpunkte (🏁) haben ihren eigenen Bereich: aus CSV importieren oder
 anlegen, dann mit der Prüfung die Abweichungen ΔN/ΔE/ΔH live kontrollieren,
 bevor Sie messen.</li>
+<li>Die <kbd>Nivellierbücher</kbd> dienen als Feldbuch für das
+Nivelliergerät: Stationen, Rück- und Vorblicke, ab einem Ausgangsfestpunkt
+berechnete Höhen, mit Kontrolle des Schlussfehlers. Nivellierte Punkte kommen
+mit ihrer Höhe in den Fundplatz, genau wie GNSS-Punkte.</li>
 </ol>
 <div class="schermate"><figure><img src="img/de/03-rilievo.webp" alt="Das GNSS-Feld der Vermessung" width="640" height="1391" loading="lazy"><figcaption>Das GNSS-Feld der Vermessung</figcaption></figure><figure><img src="img/de/04-mappa.webp" alt="Punkte und Festpunkte auf der Karte" width="640" height="1391" loading="lazy"><figcaption>Punkte und Festpunkte auf der Karte</figcaption></figure></div>
 <p class="nota">Jeder Punkt speichert <strong>beide Höhen</strong>:
@@ -94,19 +100,57 @@ die orthometrische Höhe fehlen — dafür braucht es einen externen Empfänger
 Fotobibliothek.</li>
 <li>Fotos werden fortlaufend benannt (F001, F002…) und mit der letzten
 GNSS-Position georeferenziert.</li>
+<li>Beim Auslösen zeichnet die App auch die <strong>Aufnahmerichtung</strong>
+vom Kompass auf: In der Fotodetailansicht und in den Berichten lesen Sie
+„aufgenommen aus SO — 214°“, und bei senkrecht aufgenommenen Fotos (Planum,
+Sohle eines Befunds) die Nadir-Angabe mit der Richtung der Oberkante. Ist der
+Kompass gestört, sagt die App das.</li>
 <li>Tippen Sie auf ein Foto für Titel und Notizen (z. B. „Bef. 102 von
 Norden“).</li>
+<li><kbd>Fotoblatt teilen</kbd> <span class="pro">PRO</span> erzeugt das
+<strong>Foto-Dokumentationsblatt</strong>: das Foto mit den Aufnahmedaten
+darunter (Fundplatz, Nummer, Datum und Uhrzeit, Koordinaten, Höhe, Richtung),
+eine Satellitenansicht mit Markierung und Aufnahmekegel, dem Kartenmaßstab
+und dem Nordpfeil. Die Karte braucht ein Netz: ohne Netz entsteht das Blatt
+trotzdem, mit einem größeren Datenfeld.</li>
 </ol>
 <div class="schermate"><figure><img src="img/de/05-media.webp" alt="Die Fotogalerie" width="640" height="1391" loading="lazy"><figcaption>Die Fotogalerie</figcaption></figure></div>
 
 <h3>✏️ Zeichnungen (in den Medien)</h3>
 <ol class="passi">
 <li>Neues Blatt anlegen und ein Grabungsfoto als Hintergrund wählen: Ihr
-digitales Transparentpapier.</li>
+digitales Transparentpapier. Eine Zeichnung kann sich über mehrere Tage
+erstrecken.</li>
 <li>Schichten, Befunde und Steine mit dem Finger oder dem Apple Pencil
-durchpausen; die Deckkraft des Fotos regeln, um die Linien besser zu sehen.</li>
-<li>Textfelder für Beschriftungen (z. B. „Bef. 1002“) und den Nordpfeil
-hinzufügen.</li>
+durchpausen; die Deckkraft des Fotos regeln, um die Linien besser zu sehen.
+<strong>Mit zwei Fingern zoomen</strong> (bis 6×, Doppeltipp mit zwei Fingern
+für zurück auf 1×).</li>
+<li><kbd>Automatisches Nachzeichnen</kbd> <span class="pro">PRO</span>
+erkennt die Kontur des Objekts, das Sie antippen (ein Stein, die Grenze einer
+Schicht), und verwandelt sie in eine Linie: Farbe und Strichstärke lassen
+sich ändern, ohne den Modus zu verlassen. Alles geschieht auf dem Gerät, ohne
+Netz.</li>
+<li>Textfelder für Beschriftungen (z. B. „Bef. 1002“) hinzufügen: Sie lassen
+sich verschieben, mit zwei Fingern skalieren und bieten vier Schriftarten zur
+Auswahl.</li>
+<li>Mit dem Werkzeug <kbd>Maßstab</kbd> (Lineal) tippen Sie die beiden Enden
+eines bekannten Maßes an — ein Abschnitt der Messlatte — und geben die wahre
+Entfernung ein: Das Foto erhält den Maßstab, und ab da sprechen die Exporte
+in Metern.</li>
+<li>Mit <kbd>Punkt mit Höhe</kbd> setzen Sie auf dem Foto das Fadenkreuz
+eines GNSS-Punkts des Fundplatzes (oder eines von Hand eingegebenen Punkts):
+Name, Höhe und Koordinaten erscheinen in einem verschiebbaren Etikett mit
+Hinweislinie.</li>
+<li><kbd>Mit Legende exportieren</kbd> <span class="pro">PRO</span>: Das Bild
+bekommt unten einen weißen Streifen — Maßstabsbalken (falls der Maßstab
+gesetzt ist), Nordpfeil bei senkrecht aufgenommenen Fotos, „aufgenommen
+aus“ bei Frontalaufnahmen.</li>
+<li><kbd>Als Vektor exportieren</kbd> <span class="pro">PRO</span>: SVG für
+die Zeichnung, oder <strong>DXF</strong> fürs GIS. Mit mindestens zwei
+Punkten mit Höhe und Koordinaten auf einem senkrecht aufgenommenen Foto kommt
+das DXF <strong>in UTM georeferenziert</strong> heraus und positioniert sich
+in QGIS von selbst; nur mit dem Maßstab kommt es in lokalen Metern heraus;
+ohne beides sagt die App das und erzeugt keine Datei ohne Einheit.</li>
 <li>Am Ende das Foto ausblenden: Die saubere Zeichnung bleibt, fertig für den
 Bericht.</li>
 </ol>
@@ -131,6 +175,10 @@ auf Deutsch verwenden.</li>
 <li>PDF erzeugen, oder DOCX mit Logo und Fotos exportieren
 <span class="pro">PRO</span>, CSV der Punkte, GeoJSON für QGIS
 <span class="pro">PRO</span>.</li>
+<li>Bei aktivierten Fotos in Berichten können Sie <kbd>Fotoblätter statt
+Fotos</kbd> <span class="pro">PRO</span> wählen: Jedes Foto kommt als
+vollständiges Dokumentationsblatt mit Daten und Karte ins PDF und DOCX, in
+der Sprache des Berichts.</li>
 </ol>
 <div class="schermate"><figure><img src="img/de/08-report.webp" alt="Berichte erzeugen" width="640" height="1391" loading="lazy"><figcaption>Berichte erzeugen</figcaption></figure></div>
 
@@ -170,6 +218,9 @@ exportieren.</p>
 <tr><td>GNSS</td><td>Internes GPS, MFi-Empfänger</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Berichte</td><td>Tagesbericht mit Wasserzeichen</td><td>Alle, ohne Wasserzeichen</td></tr>
 <tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX mit Logo und Fotos, GeoJSON</td></tr>
+<tr><td>Zeichnungen</td><td>Transparentpapier, Zoom, Textfelder, Maßstab, Punkte mit Höhe</td><td>+ Automatisches Nachzeichnen, mit Legende exportieren, SVG/DXF</td></tr>
+<tr><td>Nivellierbücher</td><td>✓</td><td>✓</td></tr>
+<tr><td>Fotoblatt</td><td>—</td><td>Teilen und Blätter in Berichten</td></tr>
 <tr><td>Diktierfunktion</td><td>✓</td><td>✓</td></tr>
 <tr><td>Berichtssprachen</td><td>14</td><td>14</td></tr>
 </table>
@@ -261,6 +312,33 @@ vergangenen Tages: Wetter lässt sich nur am heutigen Tag abrufen;</li>
 noch keinen GNSS-Punkt, aus dem die Position stammen könnte — messen Sie einen
 Punkt und versuchen Sie es erneut.</li>
 </ul></details>
+
+<details><summary>Das Fotoblatt kommt ohne Karte heraus</summary>
+<p>Die Satellitenansicht stammt von Apple und braucht ein Netz: Die App
+wartet bis zu 15 Sekunden, dann erzeugt sie das Blatt ohne Karte (die Daten
+warten nicht auf das Netz). Bei langsamen Netzen auf der Grabung kann die
+ganze Wartezeit nötig sein: unter WLAN erneut versuchen. Ohne Koordinaten im
+Foto gibt es die Karte grundsätzlich nicht.</p></details>
+
+<details><summary>Das DXF wird abgelehnt, oder öffnet sich „in der Nähe des Ursprungs“ im GIS</summary>
+<ul>
+<li>für ein <strong>georeferenziertes</strong> DXF sind ein mit der
+App-Kamera senkrecht aufgenommenes Foto und mindestens <strong>zwei gut
+verteilte Punkte mit Höhe und Koordinaten</strong> auf dem Foto nötig;</li>
+<li>nur mit dem Maßstab der Messlatte kommt das DXF in <strong>lokalen
+Metern</strong> heraus: das ist korrekt, aber das GIS zeigt es in der Nähe
+des Ursprungs — die App sagt das vorher;</li>
+<li>ohne Maßstab und ohne Punkte wird der Export verweigert: ein DXF ohne
+Einheit wäre in keinem GIS sinnvoll lesbar.</li>
+</ul></details>
+
+<details><summary>Der Nordpfeil erscheint nicht bei „Mit Legende exportieren“</summary>
+<p>Der Pfeil erscheint nur bei Fotos, die <strong>mit der App-Kamera
+senkrecht aufgenommen</strong> wurden, da nur dabei der Azimut mit
+aufgezeichnet wird. Bei Frontalaufnahmen erscheint stattdessen der Schriftzug
+„aufgenommen aus …“ (ein Nordpfeil auf der Fläche eines Aufrisses wäre
+geometrisch unsinnig); bei aus der Fotobibliothek importierten Fotos fehlt
+beides, weil die Aufnahmedaten fehlen.</p></details>
 
 <footer>
 <p>Fragen, die hier fehlen? Schreiben Sie an

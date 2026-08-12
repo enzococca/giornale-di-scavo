@@ -39,7 +39,8 @@
 （<kbd>🗺</kbd> 图标）→ <kbd>新建遗址…</kbd>，然后给它起个名字（例如“Colle
 Sant'Angelo — 探方 3”）。</li>
 <li>当前使用的遗址名称始终显示在顶部：所有标签页显示的都是该遗址的数据。要切换
-遗址，再次点击名称即可。</li>
+遗址，再次点击名称即可：列表位于“你的遗址”标题下方，用 <kbd>重命名遗址…</kbd>
+可以在不丢失任何内容的情况下更正名称。</li>
 <li>在系统请求时授予相应权限：<em>定位</em>（用于测点）、<em>相机</em>（用于拍
 照）、<em>麦克风</em>（用于听写）、<em>蓝牙</em>（仅在使用外部接收机时需要）。</li>
 </ol>
@@ -73,6 +74,9 @@ Fix）。</li>
 在地图上可以启用地籍图或其他 WMS 服务。</li>
 <li>控制点（🏁）有自己的板块：可以从 CSV 导入，也可以手动创建，测量前用校核功
 能实时查看 Δ北/Δ东/Δ高程 的偏差。</li>
+<li><kbd>水准手簿</kbd>是光学水准仪的野外记录簿：测站、后视和前视读数、从起始
+控制点算出的高程，并带闭合校核。用水准测量得到的点会带着自己的高程进入遗址，
+和 GNSS 测点一样。</li>
 </ol>
 <div class="schermate"><figure><img src="img/zh-Hans/03-rilievo.webp" alt="「测量」的 GNSS 面板" width="640" height="1391" loading="lazy"><figcaption>「测量」的 GNSS 面板</figcaption></figure><figure><img src="img/zh-Hans/04-mappa.webp" alt="地图上的测点与控制点" width="640" height="1391" loading="lazy"><figcaption>地图上的测点与控制点</figcaption></figure></div>
 <p class="nota">每个测点都会同时保存<strong>两种高程</strong>：椭球高和正高。使
@@ -83,16 +87,41 @@ Fix）。</li>
 <li>使用相机按钮拍照，或从相册导入。</li>
 <li>照片会自动按顺序命名（F001、F002……），并使用最近一次可用的 GNSS 位置进行
 地理定位。</li>
+<li>拍摄时应用还会记录来自罗盘的<strong>拍摄方向</strong>：在照片详情和报告中
+会看到“从SO拍摄 — 214°”这样的文字；对于垂直俯拍的照片（平面图、某个 US 的底
+部），则是带有上边朝向的俯拍说明。如果罗盘受到干扰，应用会提示你。</li>
 <li>点击一张照片可以添加标题和备注（例如“US 102，北向拍摄”）。</li>
+<li><kbd>分享资料卡</kbd> <span class="pro">PRO</span> 会生成<strong>照片资料
+卡</strong>：照片下方附有拍摄数据（遗址、编号、日期和时间、坐标、高程、方
+向），一张带有定位图钉和拍摄方向扇形的卫星视图，地图比例尺条，以及指北箭头。
+地图部分需要网络：没有网络时资料卡依然会生成，只是数据面板会相应放大。</li>
 </ol>
 <div class="schermate"><figure><img src="img/zh-Hans/05-media.webp" alt="照片图库" width="640" height="1391" loading="lazy"><figcaption>照片图库</figcaption></figure></div>
 
 <h3>✏️ 图纸（在媒体中）</h3>
 <ol class="passi">
-<li>创建一张新图纸，并选择一张遗址照片作为背景：这就是你的数字硫酸纸。</li>
+<li>创建一张新图纸，并选择一张遗址照片作为背景：这就是你的数字硫酸纸。图纸可以
+跨越多个发掘日继续绘制。</li>
 <li>用手指或 Apple Pencil 描摹地层、切割面和石块；调整照片的不透明度可以更清楚
-地看到笔迹。</li>
-<li>添加文本框用于标注（例如“US 1002”），以及指北箭头。</li>
+地看到笔迹。<strong>用两指捏合缩放</strong>（最高 6×，双指双击可回到 1×）。</li>
+<li><kbd>自动描摹</kbd> <span class="pro">PRO</span> 会识别你点触的对象的轮廓
+（一块石头、一层地层的边界），并把它变成线条：颜色和粗细可以直接更改，无需退
+出该模式。整个过程都在设备本地完成，无需联网。</li>
+<li>添加文本框用于标注（例如“US 1002”）：可以移动、用捏合手势调整大小，并可
+以在四种字体中选择。</li>
+<li>用<kbd>比例尺（标尺）</kbd>工具，点击一段已知长度的两个端点——例如标杆上
+的一段——然后输入真实距离：照片就获得了比例尺，此后所有导出结果都以米为单
+位。</li>
+<li>用<kbd>已知高程的点</kbd>，可以把遗址中某个 GNSS 测点（或手动输入的点）
+的十字标记放到照片上：名称、高程和坐标会显示在一个带引出线、可拖动的标签中。</li>
+<li><kbd>导出（含图例）</kbd> <span class="pro">PRO</span>：图片下方会附带一
+条白边——如果设置了比例尺，就有比例尺条；对于垂直俯拍的照片显示指北箭头；对
+于正面拍摄的照片则显示“从……拍摄”字样。</li>
+<li><kbd>导出矢量图</kbd> <span class="pro">PRO</span>：SVG 用于图纸，或者
+<strong>DXF</strong> 用于 GIS。在垂直俯拍的照片上至少放置两个间隔较开的带坐
+标的已知高程点，DXF 就会<strong>以 UTM 完成地理配准</strong>并在 QGIS 中自
+动定位到世界正确的位置；如果只有比例尺，则以本地米为单位导出；如果两者都没
+有，应用会告诉你，并且不会生成没有单位的文件。</li>
 <li>完成后隐藏照片：留下干净的图纸，可以直接用于报告。</li>
 </ol>
 <div class="schermate"><figure><img src="img/zh-Hans/06-disegno.webp" alt="数字硫酸纸" width="640" height="1391" loading="lazy"><figcaption>数字硫酸纸</figcaption></figure></div>
@@ -113,6 +142,9 @@ Fix）。</li>
 使应用界面使用简体中文，报告也可以用德语生成。</li>
 <li>生成 PDF，或者导出带有标志和照片的 DOCX <span class="pro">PRO</span>、测点
 的 CSV，以及用于 QGIS 的 GeoJSON <span class="pro">PRO</span>。</li>
+<li>当报告中启用了照片选项时，你可以选择<kbd>用资料卡替代照片</kbd>
+<span class="pro">PRO</span>：每张照片都会以带完整数据和地图的记录卡形式进
+入 PDF 和 DOCX，并使用报告所选的语言。</li>
 </ol>
 <div class="schermate"><figure><img src="img/zh-Hans/08-report.webp" alt="生成报告" width="640" height="1391" loading="lazy"><figcaption>生成报告</figcaption></figure></div>
 
@@ -150,6 +182,9 @@ iPhone 和 Android 之间互相导入。</li>
 <tr><td>GNSS</td><td>内置 GPS、MFi 接收机</td><td>+ BLE/NMEA、NTRIP</td></tr>
 <tr><td>报告</td><td>带水印的日报告</td><td>全部类型，无水印</td></tr>
 <tr><td>导出</td><td>PDF、CSV</td><td>+ 带标志和照片的 DOCX、GeoJSON</td></tr>
+<tr><td>图纸</td><td>硫酸纸、缩放、文字、比例尺、已知高程的点</td><td>+ 自动描摹、导出（含图例）、SVG/DXF</td></tr>
+<tr><td>水准手簿</td><td>✓</td><td>✓</td></tr>
+<tr><td>照片资料卡</td><td>—</td><td>分享，以及报告中的资料卡</td></tr>
 <tr><td>语音听写</td><td>✓</td><td>✓</td></tr>
 <tr><td>报告语言</td><td>14</td><td>14</td></tr>
 </table>
@@ -225,6 +260,27 @@ Apple ID 设置中进行管理或取消。</p>
 <li>如果出现「天气数据不可用」，说明没有网络，或者该遗址还没有可用来获取位置
 的 GNSS 测点——先采集一个测点，然后再试一次。</li>
 </ul></details>
+
+<details><summary>照片资料卡没有地图</summary>
+<p>卫星视图数据来自 Apple，需要联网：应用最多等待 15 秒，然后生成没有地图的资
+料卡（数据部分不等待网络）。在工地网络较慢的情况下，可能需要等满这段时间：请
+在 Wi-Fi 下重试。如果照片没有地理标记，地图本来就不会出现。</p></details>
+
+<details><summary>DXF 被拒绝，或在 GIS 中显示在“靠近原点”的位置</summary>
+<ul>
+<li>要生成<strong>已地理配准</strong>的 DXF，需要一张用应用相机垂直俯拍的照
+片，以及照片上至少两个间隔较开的<strong>带坐标的已知高程点</strong>；</li>
+<li>只有标杆比例尺时，DXF 会以<strong>本地米</strong>为单位导出：这是正确
+的，但 GIS 会把它显示在靠近原点的位置——应用会提前告诉你；</li>
+<li>既没有比例尺也没有点时，导出会被拒绝：没有单位的 DXF 在任何 GIS 中都无法
+被有意义地读取。</li>
+</ul></details>
+
+<details><summary>指北箭头没有出现在含图例的导出中</summary>
+<p>箭头只会出现在<strong>用应用相机垂直俯拍</strong>的照片上，因为这类照片会
+在拍摄时记录方位角。正面拍摄的照片会显示“从……拍摄”的文字（在立面图的平面上
+放一个指北箭头，在几何上就是一种误导）；从相册导入的照片则两者都不会出现，因
+为缺少拍摄数据。</p></details>
 
 <footer>
 <p>还有其他问题？请写信给

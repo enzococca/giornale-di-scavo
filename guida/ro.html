@@ -41,7 +41,9 @@ propriu, atingeți numele sitului din partea de sus (pictograma <kbd>🗺</kbd>)
 → <kbd>Sit nou…</kbd> și dați-i un nume (de ex. „Colle Sant'Angelo —
 Sondaj 3”).</li>
 <li>Numele sitului activ este mereu vizibil în partea de sus: toate filele
-afișează datele acelui sit. Pentru a schimba situl, atingeți din nou numele.</li>
+afișează datele acelui sit. Pentru a schimba situl, atingeți din nou numele:
+lista se află sub titlul „Siturile dumneavoastră”, iar cu <kbd>Redenumiți
+situl…</kbd> corectați un nume fără să pierdeți nimic.</li>
 <li>Acordați permisiunile atunci când vă sunt cerute: <em>locație</em>
 (pentru puncte), <em>cameră</em> (pentru fotografii), <em>microfon</em>
 (pentru dictare), <em>Bluetooth</em> (doar dacă folosiți un receptor extern).</li>
@@ -80,6 +82,10 @@ serviciu WMS.</li>
 <li>Reperele (🏁) au propria lor secțiune: importați-le din CSV sau
 creați-le, apoi folosiți verificarea pentru a urmări abaterile ΔN/ΔE/ΔZ în
 timp real înainte de a ridica.</li>
+<li><kbd>Carnetul de nivelment</kbd> este carnetul de teren pentru nivela
+optică: stații, citiri înapoi și înainte, altitudini calculate pornind de la
+un reper de plecare, cu controlul de închidere. Punctele nivelate intră în
+sit cu altitudinea lor, la fel ca cele GNSS.</li>
 </ol>
 <div class="schermate"><figure><img src="img/ro/03-rilievo.webp" alt="Panoul GNSS al Ridicării" width="640" height="1391" loading="lazy"><figcaption>Panoul GNSS al Ridicării</figcaption></figure><figure><img src="img/ro/04-mappa.webp" alt="Puncte și repere pe hartă" width="640" height="1391" loading="lazy"><figcaption>Puncte și repere pe hartă</figcaption></figure></div>
 <p class="nota">Fiecare punct salvează <strong>ambele altitudini</strong>:
@@ -92,17 +98,53 @@ receptor extern (vedeți mai jos).</p>
 <li>Fotografiați cu butonul camerei sau importați din galerie.</li>
 <li>Fotografiile primesc un nume progresiv (F001, F002…) și sunt
 georeferențiate cu ultima poziție GNSS disponibilă.</li>
+<li>La declanșare, aplicația înregistrează și <strong>direcția de
+fotografiere</strong> de la busolă: în detaliile fotografiei și în rapoarte
+veți citi „vedere dinspre SO — 214°”, iar pentru fotografiile verticale
+(plan, fundul unei US) apare mențiunea zenitală cu direcția marginii de sus.
+Dacă busola este perturbată, aplicația vă avertizează.</li>
 <li>Atingeți o fotografie pentru titlu și note (de ex. „US 102 dinspre nord”).</li>
+<li><kbd>Distribuie fișa</kbd> <span class="pro">PRO</span> generează
+<strong>fișa fotografică de documentare</strong>: fotografia cu datele de
+sub ea (sit, număr, dată și oră, coordonate, altitudine, direcție), o vedere
+din satelit cu marcatorul de poziție și conul de vizare, bara scării hărții
+și săgeata nordului. Harta necesită rețea: fără ea, fișa este generată
+oricum, cu panoul de date extins.</li>
 </ol>
 <div class="schermate"><figure><img src="img/ro/05-media.webp" alt="Galeria foto" width="640" height="1391" loading="lazy"><figcaption>Galeria foto</figcaption></figure></div>
 
 <h3>✏️ Desene (în Media)</h3>
 <ol class="passi">
 <li>Creați o planșă nouă și alegeți o fotografie a sitului ca fundal: este
-foaia dumneavoastră de calc digitală.</li>
+foaia dumneavoastră de calc digitală. Un desen poate continua pe parcursul
+mai multor zile.</li>
 <li>Decalcați straturile, secțiunile și pietrele cu degetul sau cu Apple
-Pencil; reglați opacitatea fotografiei pentru a vedea mai bine trăsăturile.</li>
-<li>Adăugați casete de text pentru etichete (de ex. „US 1002”) și săgeata nordului.</li>
+Pencil; reglați opacitatea fotografiei pentru a vedea mai bine trăsăturile.
+<strong>Ciupiți pentru a mări</strong> (până la 6×, atingere dublă cu două
+degete pentru a reveni la 1×).</li>
+<li><kbd>Decalcul automat</kbd> <span class="pro">PRO</span> recunoaște
+conturul obiectului pe care îl atingeți (o piatră, limita unui strat) și îl
+transformă în trăsătură: culoarea și grosimea se schimbă fără a ieși din
+mod. Totul se petrece pe dispozitiv, fără rețea.</li>
+<li>Adăugați casete de text pentru etichete (de ex. „US 1002”): se pot muta,
+se redimensionează prin ciupire și aveți patru fonturi din care puteți alege.</li>
+<li>Cu instrumentul <kbd>Scară</kbd> (riglă) atingeți cele două capete ale
+unei măsurători cunoscute — un segment al mirei topografice — și scrieți
+distanța reală: fotografia obține scara, iar de atunci exporturile vorbesc
+în metri.</li>
+<li>Cu <kbd>Punct cotat</kbd> puneți pe fotografie crucea unui punct GNSS al
+sitului (sau un punct introdus manual): numele, cota și coordonatele apar
+într-o etichetă care poate fi trasă, cu o linie de indicație.</li>
+<li><kbd>Exportă cu legendă</kbd> <span class="pro">PRO</span>: imaginea
+iese cu o bandă albă dedesubt — bara metrică (dacă există scara), săgeata
+nordului pentru fotografiile verticale, „vedere dinspre” pentru cele
+frontale.</li>
+<li><kbd>Exportă vectorial</kbd> <span class="pro">PRO</span>: SVG pentru
+desen, sau <strong>DXF</strong> pentru GIS. Cu cel puțin două puncte cotate
+cu coordonate pe o fotografie verticală, DXF-ul iese <strong>georeferențiat
+în UTM</strong> și în QGIS se poziționează singur pe glob; cu doar scara,
+iese în metri locali; fără niciuna dintre acestea, aplicația vă anunță și nu
+produce un fișier fără unități.</li>
 <li>Când ați terminat, ascundeți fotografia: rămâne desenul curat, gata pentru raport.</li>
 </ol>
 <div class="schermate"><figure><img src="img/ro/06-disegno.webp" alt="Foaia de calc digitală" width="640" height="1391" loading="lazy"><figcaption>Foaia de calc digitală</figcaption></figure></div>
@@ -125,6 +167,10 @@ aplicația în română.</li>
 <li>Generați PDF-ul, sau exportați DOCX cu logo și fotografii
 <span class="pro">PRO</span>, CSV al punctelor, GeoJSON pentru QGIS
 <span class="pro">PRO</span>.</li>
+<li>Cu fotografiile din rapoarte activate, puteți alege <kbd>Fișe fotografice
+în locul fotografiilor</kbd> <span class="pro">PRO</span>: fiecare fotografie
+intră în PDF și în DOCX ca o fișă de documentare completă, cu date și hartă,
+în limba raportului.</li>
 </ol>
 <div class="schermate"><figure><img src="img/ro/08-report.webp" alt="Generarea rapoartelor" width="640" height="1391" loading="lazy"><figcaption>Generarea rapoartelor</figcaption></figure></div>
 
@@ -165,6 +211,9 @@ arhivă ZIP dacă aveți dubii.</p>
 <tr><td>GNSS</td><td>GPS intern, receptoare MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Rapoarte</td><td>Zilnic cu filigran</td><td>Toate, fără filigran</td></tr>
 <tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX cu logo și fotografii, GeoJSON</td></tr>
+<tr><td>Desene</td><td>Calc digital, zoom, texte, scară, puncte cotate</td><td>+ Decalc automat, exportă cu legendă, SVG/DXF</td></tr>
+<tr><td>Carnet de nivelment</td><td>✓</td><td>✓</td></tr>
+<tr><td>Fișă fotografică</td><td>—</td><td>Distribuire și fișe în rapoarte</td></tr>
 <tr><td>Dictare vocală</td><td>✓</td><td>✓</td></tr>
 <tr><td>Limbi ale rapoartelor</td><td>14</td><td>14</td></tr>
 </table>
@@ -253,6 +302,33 @@ vremea poate fi preluată doar în ziua de azi;</li>
 încă un punct GNSS din care să preia poziția — înregistrați un punct și
 încercați din nou.</li>
 </ul></details>
+
+<details><summary>Fișa fotografică iese fără hartă</summary>
+<p>Vederea din satelit provine de la Apple și necesită rețea: aplicația
+așteaptă până la 15 secunde, apoi generează fișa fără hartă (datele nu
+așteaptă rețeaua). Pe rețele lente de pe șantier poate dura toată așteptarea:
+încercați din nou pe Wi-Fi. Fără geotag pe fotografie, harta lipsește prin
+definiție.</p></details>
+
+<details><summary>DXF-ul este respins, sau se deschide „lângă origine” în GIS</summary>
+<ul>
+<li>pentru DXF-ul <strong>georeferențiat</strong> este nevoie de o fotografie
+verticală făcută cu camera aplicației și de cel puțin <strong>două puncte
+cotate cu coordonate</strong> bine distanțate pe fotografie;</li>
+<li>cu doar scara mirei topografice, DXF-ul iese în <strong>metri
+locali</strong>: este corect, dar GIS-ul îl arată lângă origine — aplicația
+vă anunță în prealabil;</li>
+<li>fără scară și fără puncte, exportul este refuzat: un DXF fără unități de
+măsură nu ar putea fi citit în mod util de niciun GIS.</li>
+</ul></details>
+
+<details><summary>Săgeata nordului nu apare la exportul cu legendă</summary>
+<p>Săgeata apare doar pentru fotografiile <strong>verticale, făcute cu camera
+aplicației</strong>, care înregistrează azimutul la declanșare. Pentru
+fotografiile frontale apare mențiunea „vedere dinspre …” (o săgeată a
+nordului pe planul unei fațade ar fi o minciună geometrică); pentru
+fotografiile importate din galerie nu apare niciuna dintre cele două, pentru
+că lipsesc datele de fotografiere.</p></details>
 
 <footer>
 <p>Aveți întrebări sau probleme care nu apar aici? Scrieți la
