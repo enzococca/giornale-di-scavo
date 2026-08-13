@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kullanım kılavuzu — Giornale di Scavo</title>
+<link rel="stylesheet" href="stile.css">
+</head>
+<body>
+
+<p class="lingue"><a href="index.html">Italiano</a> <a href="en.html">English</a> <a href="de.html">Deutsch</a> <a href="es.html">Español</a>
+<a href="fr.html">Français</a> <a href="pt.html">Português</a> <a href="pl.html">Polski</a> <a href="ro.html">Română</a>
+<a href="hu.html">Magyar</a> <a href="ru.html">Русский</a> <a href="ar.html">العربية</a> <a href="zh-Hans.html">简体中文</a>
+<a href="ja.html">日本語</a> <a href="ko.html">한국어</a> <strong>Türkçe</strong> <a href="fa.html">فارسی</a>
+<a href="el.html">Ελληνικά</a></p>
+
+<h1>Giornale di Scavo — Kullanım kılavuzu</h1>
+<p class="sotto">iPhone ve iPad için dijital kazı günlüğü. %100 çevrimdışı: verileriniz cihazınızda kalır.</p>
+
+<h2>İki kelimeyle</h2>
+<p>Tek bir fikir var: <strong>her kazı günü bir sayfadır</strong> ve kendi
+kendini doldurur. Sen her şeyi olduğu yerde kaydedersin — Ölçüm'de bir GNSS
+noktası, Medya'da bir fotoğraf, Şantiye'de saatler — ve <kbd>Günlük</kbd>'teki
+o günün sayfası hepsini kendiliğinden toplar. Hafta sonunda ya da kazının
+sonunda raporlar bu sayfalardan kendi kendine oluşur.</p>
+
+<h2>Tipik bir gün</h2>
+<ol class="flusso">
+<li><b>Sabah</b>Günün sayfasını aç, havayı ve günlüğü yaz (<kbd>Dikte et</kbd> ile sesli de olur)</li>
+<li><b>Katılım</b><kbd>Şantiye</kbd>'de kimin geldiğini ve saatlerini kaydet</li>
+<li><b>Ölçüm</b>GNSS noktalarını al; RTK kullanıyorsan önce bir röperi kontrol et</li>
+<li><b>Fotoğraf</b><kbd>Medya</kbd>'dan çek: koordinatlar kendiliğinden eklenir</li>
+<li><b>Çizim</b>Kesiti ya da planı bir fotoğraf üzerine çiz (dijital “aydınger”)</li>
+<li><b>Akşam</b><kbd>Raporlar</kbd> sekmesinden günlük raporu oluştur: gönderilmeye hazır PDF</li>
+</ol>
+
+<h2>İlk adımlar</h2>
+<ol class="passi">
+<li>İlk açılışta hazır bir örnek kazı alanı bulursun. Kendi alanını oluşturmak
+için yukarıdaki kazı alanı adına dokun (<kbd>🗺</kbd> simgesi) →
+<kbd>Yeni kazı alanı…</kbd> ve bir ad ver (örn. “Colle Sant'Angelo —
+Sondaj 3”).</li>
+<li>Etkin kazı alanının adı her zaman yukarıda görünür: bütün sekmeler o alanın
+verilerini gösterir. Alan değiştirmek için ada yeniden dokun: liste
+“Kazı alanlarınız” başlığının altındadır ve <kbd>Kazı alanını yeniden
+adlandır…</kbd> ile bir adı hiçbir şey kaybetmeden düzeltirsin.</li>
+<li>İstendiğinde izinleri ver: <em>konum</em> (noktalar için),
+<em>kamera</em> (fotoğraflar için), <em>mikrofon</em> (dikte için),
+<em>Bluetooth</em> (yalnızca harici alıcı kullanıyorsan).</li>
+</ol>
+
+<h2>Beş sekme</h2>
+
+<h3>📓 Günlük</h3>
+<ol class="passi">
+<li>Sayfasını açmak için bir güne dokun: o günün günlüğü, havası, katılımları,
+noktaları, fotoğrafları ve çizimleri zaten oradadır.</li>
+<li>Günlüğü yaz ya da <kbd>Dikte et</kbd>'e dokunup konuş: yazıya dökme cihazda
+olur, ağ olmadan da çalışır.</li>
+<li>Hava elle yazılabilir (örn. “Açık, 28 °C, hafif rüzgâr”) ya da
+<kbd>Getir</kbd> ile alınır: bu düğme o anki koşulları Norveç meteoroloji
+servisine sorar. Ağ gerekir ve yalnızca bugünün sayfasında çalışır: dünün
+havası artık geri getirilemez. Öğleden sonra ikinci bir dokunuş bir ölçüm daha
+ekler. Elle yazdığın her zaman üstün gelir.</li>
+<li>Getirirken cihazdan yalnızca yaklaşık 11 metreye yuvarlanmış bölge konumu
+çıkar; raporlarda satır raporun dilinde görünür.</li>
+</ol>
+<div class="schermate"><figure><img src="img/tr/01-diario.webp" alt="Günlerin listesi" width="640" height="1391" loading="lazy"><figcaption>Günlerin listesi</figcaption></figure><figure><img src="img/tr/02-giornata.webp" alt="Bir günün sayfası" width="640" height="1391" loading="lazy"><figcaption>Bir günün sayfası</figcaption></figure></div>
+
+<h3>📍 Ölçüm</h3>
+<ol class="passi">
+<li>Yukarıdaki pano canlı konumu gösterir: koordinatlar, yükseklikler, duyarlık
+ve çözüm türü (GPS / RTK Float / RTK Fix).</li>
+<li>Çubuk kullanıyorsan <kbd>Anten yüksekliği (m)</kbd> değerini gir: noktanın
+yüksekliği kendiliğinden yere indirilir.</li>
+<li><kbd>NOKTA AL</kbd>'a dokun. Ad otomatik ilerler (P001, P002…) ama kendi
+adını da yazabilirsin (örn. “US 102 — çukur tabanı”) ve bir not
+ekleyebilirsin.</li>
+<li>Noktaları yerinde görmek için <kbd>Liste</kbd> ile <kbd>Harita</kbd>
+arasında geçiş yap; haritadan kadastroyu ya da başka bir WMS servisini
+açabilirsin.</li>
+<li>Röperlerin (🏁) kendi bölümü vardır: CSV'den içe aktar ya da oluştur, sonra
+ölçüme başlamadan önce <kbd>Anlık kontrol</kbd> ile
+ΔKuzey/ΔDoğu/ΔYükseklik farklarını canlı izle.</li>
+<li><kbd>Nivelman defterleri</kbd> optik nivo için saha defteridir: istasyonlar,
+geri ve ileri okumalar, bir başlangıç röperinden hesaplanan yükseklikler ve
+kapanma kontrolü. Nivelmanla bulunan noktalar, GNSS noktaları gibi kendi
+yükseklikleriyle kazı alanına girer.</li>
+</ol>
+<div class="schermate"><figure><img src="img/tr/03-rilievo.webp" alt="Ölçüm sekmesinin GNSS panosu" width="640" height="1391" loading="lazy"><figcaption>Ölçüm sekmesinin GNSS panosu</figcaption></figure><figure><img src="img/tr/04-mappa.webp" alt="Haritada noktalar ve röperler" width="640" height="1391" loading="lazy"><figcaption>Haritada noktalar ve röperler</figcaption></figure></div>
+<p class="nota">Her nokta <strong>iki yüksekliği birden</strong> saklar:
+elipsoidal ve ortometrik (d.s.y.). Telefonun dahili GPS'iyle d.s.y. yüksekliği
+bulunmayabilir: harici bir alıcı gerekir (aşağıya bak).</p>
+
+<h3>📷 Medya</h3>
+<ol class="passi">
+<li>Kamera düğmesiyle çek ya da fotoğraf kitaplığından içe aktar.</li>
+<li>Fotoğraflar sırayla adlandırılır (F001, F002…) ve son GNSS konumuyla
+coğrafi olarak etiketlenir.</li>
+<li>Çekimde uygulama pusuladan <strong>çekim yönünü</strong> de kaydeder:
+fotoğrafın ayrıntısında ve raporlarda “SO yönünden görünüm — 214°” yazar; tam
+tepeden çekilen kareler için (plan, bir US'nin tabanı) üst kenarın yönüyle
+birlikte düşey çekim ibaresi çıkar. Pusula etkileniyorsa uygulama bunu
+söyler.</li>
+<li>Başlık ve notlar için bir fotoğrafa dokun (örn. “US 102 kuzeyden”).</li>
+<li><kbd>Fotoğraf fişini paylaş</kbd> <span class="pro">PRO</span>
+<strong>fotoğraf belgeleme fişini</strong> üretir: fotoğrafın altında çekim
+verileri (kazı alanı, numara, tarih ve saat, koordinatlar, yükseklik, yön),
+iğnesi ve çekim konisiyle bir uydu görüntüsü, haritanın ölçek çubuğu ve kuzey
+oku. Harita ağ ister: ağ yoksa fiş yine çıkar, veri paneli genişletilmiş
+olarak.</li>
+</ol>
+<div class="schermate"><figure><img src="img/tr/05-media.webp" alt="Fotoğraf galerisi" width="640" height="1391" loading="lazy"><figcaption>Fotoğraf galerisi</figcaption></figure><figure><img src="img/tr/09-scheda.webp" alt="Coğrafi olarak etiketlenmiş bir fotoğrafın ayrıntısı" width="640" height="1391" loading="lazy"><figcaption>Bir fotoğrafın ayrıntısı: koordinatlar, yükseklik ve çekim yönü</figcaption></figure></div>
+
+<h3>✏️ Çizimler (Medya içinde)</h3>
+<ol class="passi">
+<li>Yeni bir tabaka oluştur ve arka plan olarak kazı alanının bir fotoğrafını
+seç: dijital “aydıngerin” budur. Bir çizim birden çok güne yayılabilir.</li>
+<li>Tabakaları, kesikleri ve taşları parmakla ya da Apple Pencil ile çiz;
+çizgini daha iyi görmek için fotoğrafın saydamlığını ayarla.
+<strong>Yakınlaştırmak için parmaklarını aç</strong> (6× kadar; 1×'e dönmek
+için iki parmakla çift dokunuş).</li>
+<li><kbd>Çizgi çıkarma</kbd> <span class="pro">PRO</span> dokunduğun nesnenin
+(bir taş, bir tabakanın sınırı) konturunu otomatik tanır ve çizgiye
+dönüştürür: renk ve
+kalınlık, kipten çıkmadan değiştirilir. Her şey cihazda olur, ağ
+gerekmez.</li>
+<li>Etiketler için metin kutuları ekle (örn. “US 1002”): taşınır, parmakla
+boyutlandırılır ve dört yazı tipi arasından seçilir.</li>
+<li><kbd>Fotoğraf ölçeği</kbd> aracıyla (cetvel) bilinen bir ölçünün iki ucuna
+dokunursun — jalonun bir bölümüne — ve gerçek uzaklığı yazarsın: fotoğraf
+ölçeğini kazanır, o andan sonra dışa aktarmalar metre konuşur.</li>
+<li><kbd>Yükseklikli nokta</kbd> ile kazı alanındaki bir GNSS noktasının (ya da
+elle yazılmış bir noktanın) artı işaretini fotoğrafa koyarsın: ad, yükseklik ve
+koordinatlar, kılavuz çizgili ve sürüklenebilir bir etikette görünür.</li>
+<li><kbd>Lejantla dışa aktar</kbd> <span class="pro">PRO</span>: görüntü altında
+beyaz bir şeritle çıkar — metrik ölçek çubuğu (ölçek varsa), tam tepeden
+çekilmiş fotoğraflar için kuzey oku, cepheden çekilenler için “… yönünden
+görünüm”.</li>
+<li><kbd>Vektörel dışa aktar</kbd> <span class="pro">PRO</span>: çizim için SVG
+ya da CBS için <strong>DXF</strong>. Tam tepeden çekilmiş bir fotoğrafta
+koordinatlı en az iki yükseklikli nokta varsa DXF <strong>UTM'de coğrafi
+referanslı</strong> çıkar ve QGIS'te kendiliğinden dünya üzerine oturur;
+yalnızca ölçek varsa yerel metre biriminde çıkar; ikisi de yoksa uygulama bunu
+söyler ve birimsiz bir dosya üretmez.</li>
+<li>Bitirdiğinde fotoğrafı gizle: geriye rapora hazır, temiz çizim kalır.</li>
+</ol>
+<div class="schermate"><figure><img src="img/tr/06-disegno.webp" alt="Dijital aydınger" width="640" height="1391" loading="lazy"><figcaption>Dijital aydınger</figcaption></figure></div>
+
+<h3>👷 Şantiye</h3>
+<ol class="passi">
+<li>Günün katılımlarını kaydet: her kişinin adı, görevi ve saatleri.</li>
+<li>Ekipman envanterini ve kime atandıklarını tut.</li>
+</ol>
+<div class="schermate"><figure><img src="img/tr/07-ore.webp" alt="Katılım ve saatler" width="640" height="1391" loading="lazy"><figcaption>Katılım ve saatler</figcaption></figure></div>
+
+<h3>📄 Raporlar</h3>
+<ol class="passi">
+<li>Türü seç: <strong>günlük</strong> (ücretsiz, filigranlı),
+<strong>haftalık</strong>, <strong>aylık</strong> ya da eksiksiz ekleriyle
+<strong>sonuç</strong> raporu <span class="pro">PRO</span>.</li>
+<li>Rapor dilini <strong>on yedi</strong> dil arasından seç; uygulamanın
+dilinden bağımsızdır: uygulamayı Türkçe kullanırken rapor Almanca
+çıkabilir.</li>
+<li>PDF oluştur ya da logo ve fotoğraflarla DOCX <span class="pro">PRO</span>,
+noktaların CSV'sini, QGIS için GeoJSON <span class="pro">PRO</span> dışa
+aktar.</li>
+<li>Raporlarda fotoğraflar açıkken <kbd>Fotoğrafların yerine fotoğraf
+fişleri</kbd> <span class="pro">PRO</span> seçeneğini kullanabilirsin: her
+fotoğraf, verileri ve haritasıyla eksiksiz bir belgeleme fişi olarak, raporun
+dilinde PDF'e ve DOCX'e girer.</li>
+</ol>
+<div class="schermate"><figure><img src="img/tr/08-report.webp" alt="Rapor oluşturma" width="640" height="1391" loading="lazy"><figcaption>Rapor oluşturma</figcaption></figure></div>
+
+<h2>Harici GNSS alıcısı ve NTRIP</h2>
+<p>Harici bir alıcıyla (santimetre duyarlıklı anten) uygulama RTK duyarlığına
+ulaşır. Dahili GPS her zaman yedek olarak kalır.</p>
+<ol class="passi">
+<li>Alıcıyı aç ve telefonun Bluetooth'unu etkinleştir.</li>
+<li><kbd>Ölçüm</kbd>'de konum kaynağını seç: <em>Harici GNSS (BLE/NMEA)</em>
+<span class="pro">PRO</span> ve alıcını listeden seç. MFi alıcılar (ücretsiz)
+ve NMEA'yı ağ üzerinden yayınlayanlar da desteklenir.</li>
+<li>RTK düzeltmeleri için <strong>NTRIP</strong>'i ayarla: caster adresi, port,
+mountpoint, kullanıcı ve parola (cihazın anahtar zincirinde kalır). Uygulama
+konumu caster'a gönderir ve düzeltmeleri alır.</li>
+<li><strong>RTK Fix</strong>'e geçmesini bekle: santimetre duyarlığı.
+Başlamadan önce bir röper üzerinde kontrol et.</li>
+</ol>
+
+<h2>Yedekleme ve veri alışverişi</h2>
+<ol class="passi">
+<li>Kazı alanı menüsünden <kbd>Kazı alanını dışa aktar (.zip)</kbd>'a dokun:
+içinde her şey var — günlük, noktalar, fotoğraflar, çizimler, saatler,
+röperler.</li>
+<li>ZIP'i istediğin yerde sakla (Dosyalar, Drive, e-posta…). Yedeğin odur:
+uygulamanın bulutu yok, bilerek.</li>
+<li><kbd>Kazı alanı içe aktar (.zip)…</kbd> kazı alanını başka bir cihazda
+yeniden oluşturur, iPhone ile Android arasında bile.</li>
+</ol>
+<p class="nota">⚠️ <kbd>Kazı alanını sil…</kbd> alanı bütün içeriğiyle siler ve
+<strong>geri alınamaz</strong>: kuşkun varsa önce bir ZIP dışa aktar.</p>
+
+<h2>Ücretsiz ve Pro</h2>
+<table>
+<tr><th></th><th>Ücretsiz</th><th>Pro</th></tr>
+<tr><td>Kazı alanı</td><td>1</td><td>Sınırsız</td></tr>
+<tr><td>GNSS</td><td>Dahili GPS, MFi alıcılar</td><td>+ BLE/NMEA, NTRIP</td></tr>
+<tr><td>Raporlar</td><td>Filigranlı günlük</td><td>Hepsi, filigransız</td></tr>
+<tr><td>Dışa aktarma</td><td>PDF, CSV</td><td>+ logo ve fotoğraflı DOCX, GeoJSON</td></tr>
+<tr><td>Çizimler</td><td>Aydınger, yakınlaştırma, metinler, ölçek, yükseklikli noktalar</td><td>+ Otomatik çizgi çıkarma, lejantla dışa aktarma, SVG/DXF</td></tr>
+<tr><td>Nivelman defteri</td><td>✓</td><td>✓</td></tr>
+<tr><td>Fotoğraf fişi</td><td>—</td><td>Paylaşım ve raporlarda fişler</td></tr>
+<tr><td>Sesli dikte</td><td>✓</td><td>✓</td></tr>
+<tr><td>Rapor dilleri</td><td>17</td><td>17</td></tr>
+</table>
+<p>Pro, kendiliğinden yenilenen aylık ya da yıllık bir aboneliktir; ya da tek
+seferlik, ömür boyu bir satın alım. Apple Kimliği ayarlarından yönetilir ve
+iptal edilir.</p>
+
+<h2>Sorun giderme</h2>
+
+<details><summary>Bluetooth alıcı görünmüyor ya da bağlanmıyor</summary>
+<p>Sırayla denetle:</p>
+<ul>
+<li>alıcı açık ve başka bir uygulamaya ya da telefona bağlı değil;</li>
+<li>sistemin Bluetooth'u açık ve uygulamanın Bluetooth izni var
+(Ayarlar → Giornale di Scavo);</li>
+<li>Ölçüm'de seçilen kaynak <em>Harici GNSS (BLE/NMEA)</em>;</li>
+<li>alıcıyı kapatıp yeniden aç, sonra aramayı yinele.</li>
+</ul></details>
+
+<details><summary>Bir türlü RTK Fix'e ulaşamıyorum</summary>
+<ul>
+<li>Etkin bir NTRIP bağlantısı gerekir: caster'ı, mountpoint'i ve kimlik
+bilgilerini denetle.</li>
+<li>Telefonun veri kapsamasını denetle: düzeltmeler internet üzerinden gelir.</li>
+<li>Açık gökyüzü: sık ağaçlar ve yakın duvarlar sinyali bozar. Kapsama kötüyse
+RTK Float'ta (desimetre) kalabilirsin.</li>
+<li>Yakın bir mountpoint (&lt; 30–40 km) ya da bir VRS ağı seç.</li>
+</ul></details>
+
+<details><summary>NTRIP bağlanmıyor</summary>
+<ul>
+<li>Adresi ve portu (çoğu kez 2101), bir de mountpoint'in var olduğunu denetle:
+çoğu caster listeyi yayımlar (sourcetable).</li>
+<li>Yanlış kullanıcı ya da parola 401/403 hatası verir: kimlik bilgilerini
+yeniden gözden geçir.</li>
+<li>Bazı ağlar konumun gönderilmesini ister (GGA): uygulama bunu kendiliğinden
+yapar, ama alıcının önce bir fix'i olmalı.</li>
+</ul></details>
+
+<details><summary>d.s.y. yüksekliği boş ya da sıfır</summary>
+<p>Telefonların dahili GPS'i yalnızca elipsoidal yükseklik verir. Ortometrik
+yükseklik (d.s.y.) harici bir alıcının GGA cümlesinden gelir. Alıcı yoksa
+noktalar yine de elipsoidal yüksekliği saklar.</p></details>
+
+<details><summary>Dikte çalışmıyor</summary>
+<ul>
+<li>Ayarlar'da mikrofon ve konuşma tanıma iznini denetle.</li>
+<li>Yazıya dökme cihazda olur: ilk seferinde sistem dil modelini indirmek
+zorunda kalabilir (bir kereliğine ağ gerekir, sonra çevrimdışı çalışır).</li>
+<li>Kısa cümlelerle konuş; metin günlüğün sonuna eklenir.</li>
+</ul></details>
+
+<details><summary>Kadastro haritası (WMS) görünmüyor</summary>
+<p>Uygulama çevrimdışıdır, ama WMS katmanları web servisleridir: bir bağlantı ve
+çalışan bir servis gerekir. İtalyan kadastrosu hazır gelir; başka ülkeler için
+ulusal servisin WMS uç noktasını gir (EPSG:3857 desteklemelidir). Veri
+kapsamasının dışında temel harita ve noktalar görünür kalır.</p></details>
+
+<details><summary>Fotoğrafların koordinatı yok</summary>
+<p>Fotoğraf konumunu son GNSS fix'inden alır: önce Ölçüm'ü aç ve konumun
+oturmasını bekle, sonra çek. Konum izni verilmemişse fotoğraflar koordinatsız
+kaydedilir.</p></details>
+
+<details><summary>Raporda fotoğraflar ya da logo eksik</summary>
+<p>Raporlardaki fotoğraflar, logo ve özel antet Pro'nun parçasıdır ve DOCX ile
+PDF için geçerlidir. Ücretsiz günlük raporda filigran vardır ve fotoğraflar yer
+almaz.</p></details>
+
+<details><summary>Yanlışlıkla bir kazı alanı sildim</summary>
+<p>Silme kesindir: veriler geri getirilemez (bulut yoktur). Daha önce dışa
+aktardığın bir ZIP varsa onu içe aktararak alanı o günkü haline döndürürsün.
+Öneri: gün sonunda bir ZIP dışa aktar.</p></details>
+
+<details><summary>Pro'yu satın aldım ama hâlâ kilitli görünüyor</summary>
+<p>Pro ekranında <kbd>Satın alımları geri yükle</kbd>'ye, satın alımı yaptığın
+Apple Kimliğiyle dokun. Cihaz değiştirdiysen geri yükleme aboneliği ya da ömür
+boyu lisansı geri getirir.</p></details>
+
+<details><summary>“Getir” sönük, ya da “Hava durumu kullanılamıyor” diyor</summary>
+<ul>
+<li>düğme sönükse geçmiş bir günün sayfasındasın: hava durumu yalnızca bugünün
+sayfasında getirilir;</li>
+<li>“Hava durumu kullanılamıyor” çıkıyorsa ağ yok, ya da kazı alanında konumu
+alacak bir GNSS noktası henüz yok — bir nokta al ve yeniden dene.</li>
+</ul></details>
+
+<details><summary>Fotoğraf fişi haritasız çıkıyor</summary>
+<p>Uydu görüntüsü Apple'dan gelir ve ağ ister: uygulama 15 saniyeye kadar
+bekler, sonra fişi haritasız üretir (veriler ağı beklemez). Yavaş şantiye
+ağlarında beklemenin tamamı gerekebilir: Wi-Fi altında yeniden dene. Fotoğrafta
+coğrafi etiket yoksa harita tanımı gereği olamaz.</p></details>
+
+<details><summary>DXF reddediliyor, ya da CBS'de “başlangıç noktasının yanında” açılıyor</summary>
+<ul>
+<li><strong>coğrafi referanslı</strong> DXF için uygulamanın kamerasıyla tam
+tepeden çekilmiş bir fotoğraf ve fotoğraf üzerinde iyi aralıklı,
+<strong>koordinatlı en az iki yükseklikli nokta</strong> gerekir;</li>
+<li>yalnızca jalonun ölçeğiyle DXF <strong>yerel metre</strong> biriminde
+çıkar: bu doğrudur, ama CBS onu başlangıç noktasının yanında gösterir —
+uygulama bunu önceden söyler;</li>
+<li>ne ölçek ne nokta varsa dışa aktarma reddedilir: birimsiz bir DXF hiçbir
+CBS'de anlamlı biçimde okunamazdı.</li>
+</ul></details>
+
+<details><summary>Lejantlı dışa aktarmada kuzey oku çıkmıyor</summary>
+<p>Ok yalnızca <strong>uygulamanın kamerasıyla tam tepeden çekilmiş</strong>
+fotoğraflarda görünür; o kamera çekim anında azimutu kaydeder. Cepheden
+çekilenlerde “… yönünden görünüm” yazısı çıkar (dikey bir cephe düzlemine kuzey
+oku koymak geometrik bir yalan olurdu); kitaplıktan içe aktarılan fotoğraflarda
+ise ikisi de yoktur, çünkü çekim verileri eksiktir.</p></details>
+
+<footer>
+<p>Burada olmayan bir soru ya da sorun mu var? Şuraya yaz:
+<a href="mailto:enzo.ccc@gmail.com">enzo.ccc@gmail.com</a> ·
+<a href="../index.html">Gizlilik politikası</a></p>
+</footer>
+
+</body>
+</html>
