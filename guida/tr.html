@@ -80,12 +80,19 @@ ekleyebilirsin.</li>
 arasında geçiş yap; haritadan kadastroyu ya da başka bir WMS servisini
 açabilirsin.</li>
 <li>Röperlerin (🏁) kendi bölümü vardır: CSV'den içe aktar ya da oluştur, sonra
-ölçüme başlamadan önce <kbd>Anlık kontrol</kbd> ile
-ΔKuzey/ΔDoğu/ΔYükseklik farklarını canlı izle.</li>
-<li><kbd>Nivelman defterleri</kbd> optik nivo için saha defteridir: istasyonlar,
-geri ve ileri okumalar, bir başlangıç röperinden hesaplanan yükseklikler ve
-kapanma kontrolü. Nivelmanla bulunan noktalar, GNSS noktaları gibi kendi
-yükseklikleriyle kazı alanına girer.</li>
+<kbd>Anlık kontrol</kbd>'ü aç ve ölçmeye başlamadan önce, uç demiri çivinin
+üzerindeyken ΔKuzey/ΔDoğu/ΔYükseklik farklarını denetle.</li>
+<li><kbd>Nivelman defterleri</kbd> altında optik nivo için saha defteri vardır:
+istasyonlar, geri ve ileri okumalar, bir başlangıç röperinden hesaplanan
+yükseklikler ve kapanma kontrolü. Nivelmanla bulunan noktalar, GNSS noktaları
+gibi kendi yükseklikleriyle kazı alanına girer.</li>
+<li>Panonun altında <kbd>NMEA kayıtları</kbd> yer alır: harici alıcının
+<span class="pro">PRO</span> ham akışı kendiliğinden dosyaya yazılır — kayıt
+anteni açtığında başlar, kapattığında kapanır; senin bunu hatırlaman gerekmez.
+Kuşkulu bir günü yeniden okumak ya da ham veriyi son işlemeyi yapacak kişiye
+vermek için işe yarar. Dosyalar paylaşılır ve silinir, yalnızca sürmekte olan
+kayıt dışında; liste alıcı kapalıyken de açılır, böylece dünkü dosyalar
+erişilebilir kalır.</li>
 </ol>
 <div class="schermate"><figure><img src="img/tr/03-rilievo.webp" alt="Ölçüm sekmesinin GNSS panosu" width="640" height="1391" loading="lazy"><figcaption>Ölçüm sekmesinin GNSS panosu</figcaption></figure><figure><img src="img/tr/04-mappa.webp" alt="Haritada noktalar ve röperler" width="640" height="1391" loading="lazy"><figcaption>Haritada noktalar ve röperler</figcaption></figure></div>
 <p class="nota">Her nokta <strong>iki yüksekliği birden</strong> saklar:
@@ -115,24 +122,63 @@ olarak.</li>
 <h3>✏️ Çizimler (Medya içinde)</h3>
 <ol class="passi">
 <li>Yeni bir tabaka oluştur ve arka plan olarak kazı alanının bir fotoğrafını
-seç: dijital “aydıngerin” budur. Bir çizim birden çok güne yayılabilir.</li>
-<li>Tabakaları, kesikleri ve taşları parmakla ya da Apple Pencil ile çiz;
-çizgini daha iyi görmek için fotoğrafın saydamlığını ayarla.
+seç: dijital “aydıngerin” budur. Bir çizim birden çok güne yayılabilir.
+Fotoğrafı hiç koymayabilirsin de: beyaz aydıngerin üzerine de aynı şekilde
+çizilir.</li>
+<li>Tabakaları, kesikleri ve taşları parmakla ya da Apple Pencil ile çiz.
 <strong>Yakınlaştırmak için parmaklarını aç</strong> (6× kadar; 1×'e dönmek
-için iki parmakla çift dokunuş).</li>
+için iki parmakla çift dokunuş). Fotoğraf çizgini örtüyorsa kamera menüsünden
+<kbd>Arka plan opaklığı…</kbd>'nı seç ve %5 ile %100 arasında istediğin yere
+getir: solan fotoğraftır, çizim değil. Bu seçim tabakada kalır ve PDF, DOCX,
+PNG ile <kbd>Lejantla dışa aktar</kbd> için de geçerlidir.</li>
+<li>Geri kalan her şey <kbd>Araçlar</kbd> altındadır (çubuktaki İngiliz
+anahtarı); orası altı kipin dizinidir: <kbd>Metin kutusu</kbd>, <kbd>Çizgi
+çıkarma</kbd> <span class="pro">PRO</span>, <kbd>Fotoğraf ölçeği</kbd>,
+<kbd>Yükseklikli nokta</kbd>, <kbd>Tarama</kbd> ve <kbd>Çizgi stili</kbd>. Aynı
+anda <strong>yalnızca biri</strong> açık kalır: onay işareti hangisi olduğunu
+söyler ve o açıkken parmak çizmez, o aracı yönetir — çizmeye dönmek için
+işaretli satıra yeniden dokun. Görüntü üzerinde çalışan üç satır (çizgi çıkarma,
+ölçek, yükseklikli nokta) yalnızca bir arka plan fotoğrafı varsa görünür.</li>
+<li><kbd>Metin kutusu</kbd> ile etiketleri koy (örn. “US 1002”): taşınır,
+parmakla boyutlandırılır ve dört yazı tipi arasından seçilir.</li>
 <li><kbd>Çizgi çıkarma</kbd> <span class="pro">PRO</span> dokunduğun nesnenin
-(bir taş, bir tabakanın sınırı) konturunu otomatik tanır ve çizgiye
-dönüştürür: renk ve
-kalınlık, kipten çıkmadan değiştirilir. Her şey cihazda olur, ağ
-gerekmez.</li>
-<li>Etiketler için metin kutuları ekle (örn. “US 1002”): taşınır, parmakla
-boyutlandırılır ve dört yazı tipi arasından seçilir.</li>
+(bir taş, bir tabakanın sınırı) konturunu tanır ve çizgiye dönüştürür: renk,
+kalınlık ve çizgi stili kipten çıkmadan değiştirilir, konturlar da basamaklı
+değil pürüzsüz çıkar. Her şey cihazda olur, ağ gerekmez.</li>
+<li>Çizgi çıkarmanın içinde <kbd>Tümünü çıkar</kbd> <span class="pro">PRO</span>
+bütün fotoğrafı kendi başına dolaşır. Başlangıç sayfasında görünümü seçersin —
+<kbd>Yalnızca konturlar</kbd> ya da bir tarama ve istersen bir <kbd>Renk
+katmanı</kbd> — ve <kbd>Başlat</kbd>'a basarsın: çubuk nerede olduğunu söyler ve
+birkaç on saniye sürer. Çıkan şey bir <strong>önizlemedir</strong>, çizim değil:
+bir biçimin içine dokunmak onu dışarıda bırakır, bir dokunuş daha geri alır (üst
+üste binen biçimler arasında parmağın altındaki en küçüğü kazanır), <kbd>İnce
+geçiş</kbd> yalnızca hiçbir şeyin bulunamadığı yerleri yeniden tarar ve
+<kbd>Uygula</kbd> kalanı çizime aktarır. Sen uygulamadıkça tabakaya
+dokunulmaz.</li>
 <li><kbd>Fotoğraf ölçeği</kbd> aracıyla (cetvel) bilinen bir ölçünün iki ucuna
 dokunursun — jalonun bir bölümüne — ve gerçek uzaklığı yazarsın: fotoğraf
 ölçeğini kazanır, o andan sonra dışa aktarmalar metre konuşur.</li>
 <li><kbd>Yükseklikli nokta</kbd> ile kazı alanındaki bir GNSS noktasının (ya da
 elle yazılmış bir noktanın) artı işaretini fotoğrafa koyarsın: ad, yükseklik ve
-koordinatlar, kılavuz çizgili ve sürüklenebilir bir etikette görünür.</li>
+koordinatlar, kılavuz çizgili ve sürüklenebilir bir etikette görünür. Değerler
+çizimi örttüğünde, seçili etiket üzerinde parmaklarını açıp kapayarak onu
+küçültür ya da büyütürsün.</li>
+<li><kbd>Tarama</kbd> biçimleri doldurur: kapalı bir biçimin
+<strong>içine</strong> dokunursun ve orası dolar. On adet geleneksel tarama
+vardır — <kbd>Duvar örgüsü / taş</kbd>, <kbd>Tuğla</kbd>, <kbd>Harç / sıva</kbd>,
+<kbd>Kil</kbd>, <kbd>Silt</kbd>, <kbd>Kum</kbd>, <kbd>Çakıl</kbd>,
+<kbd>Kömür / kül</kbd>, <kbd>Ana kaya</kbd>, <kbd>Ahşap</kbd> — bir de
+<kbd>Renk katmanı</kbd> (kendi opaklığı olan bir renk); tek başlarına ya da
+birlikte. Bir biçim bir başkasının içindeyse parmağın altındaki en küçüğü
+kazanır; <kbd>Dolguyu kaldır</kbd> onu temizler. Fotoğraf gerekmez: dolgu
+çizilen biçimler üzerinde çalışır, bu yüzden beyaz aydıngerde de işler.</li>
+<li><kbd>Çizgi stili</kbd> <strong>çizilmiş</strong> bir çizgiyi giydirir: ona
+dokunursun ve <kbd>Sürekli</kbd>, <kbd>Kesikli</kbd>, <kbd>Noktalı</kbd>,
+<kbd>Çizgi-nokta</kbd> arasından seçersin, kalınlığı da ayarlarsın. <kbd>Bu
+stille çiz</kbd> sonraki çizgilerin doğrudan giydirilmiş doğmasını sağlar;
+<kbd>Stili kaldır</kbd> çizgiyi düz hâline döndürür. Bu bir ekran efekti
+değildir: kesikler gerçek parçalardır ve PDF, DOCX, PNG, SVG ile DXF'te de öyle
+kalır.</li>
 <li><kbd>Lejantla dışa aktar</kbd> <span class="pro">PRO</span>: görüntü altında
 beyaz bir şeritle çıkar — metrik ölçek çubuğu (ölçek varsa), tam tepeden
 çekilmiş fotoğraflar için kuzey oku, cepheden çekilenler için “… yönünden
@@ -142,7 +188,9 @@ ya da CBS için <strong>DXF</strong>. Tam tepeden çekilmiş bir fotoğrafta
 koordinatlı en az iki yükseklikli nokta varsa DXF <strong>UTM'de coğrafi
 referanslı</strong> çıkar ve QGIS'te kendiliğinden dünya üzerine oturur;
 yalnızca ölçek varsa yerel metre biriminde çıkar; ikisi de yoksa uygulama bunu
-söyler ve birimsiz bir dosya üretmez.</li>
+söyler ve birimsiz bir dosya üretmez. Opaklık konusunda SVG bir istisnadır:
+özgün fotoğrafı olduğu gibi içine gömer, bu yüzden soluklaştırılmış arka plan
+orada tam güçle çıkar.</li>
 <li>Bitirdiğinde fotoğrafı gizle: geriye rapora hazır, temiz çizim kalır.</li>
 </ol>
 <div class="schermate"><figure><img src="img/tr/06-disegno.webp" alt="Dijital aydınger" width="640" height="1391" loading="lazy"><figcaption>Dijital aydınger</figcaption></figure></div>
@@ -186,6 +234,13 @@ konumu caster'a gönderir ve düzeltmeleri alır.</li>
 <li><strong>RTK Fix</strong>'e geçmesini bekle: santimetre duyarlığı.
 Başlamadan önce bir röper üzerinde kontrol et.</li>
 </ol>
+<p class="nota">Telefonun çekmediği yerlerde <strong>internetsiz</strong> bir yol
+da vardır: bilinen bir noktaya kurulmuş bir baz ile bir gezici, düzeltmeleri
+<strong>LoRa</strong> telsiziyle birbirine aktarır; ne caster ne SIM gerekir
+(ESP32 köprülü DFRobot RTK kiti). Uygulama açısından hiçbir şey değişmez —
+alıcıdan zaten düzeltilmiş NMEA gelir — köprünün kurulumu ise ayrıca kendi
+README dosyasında belgelenmiştir: burası uygulamanın kılavuzu olarak kalır, bir
+aygıt yazılımı el kitabı değil.</p>
 
 <h2>Yedekleme ve veri alışverişi</h2>
 <ol class="passi">
@@ -207,7 +262,9 @@ yeniden oluşturur, iPhone ile Android arasında bile.</li>
 <tr><td>GNSS</td><td>Dahili GPS, MFi alıcılar</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Raporlar</td><td>Filigranlı günlük</td><td>Hepsi, filigransız</td></tr>
 <tr><td>Dışa aktarma</td><td>PDF, CSV</td><td>+ logo ve fotoğraflı DOCX, GeoJSON</td></tr>
-<tr><td>Çizimler</td><td>Aydınger, yakınlaştırma, metinler, ölçek, yükseklikli noktalar</td><td>+ Otomatik çizgi çıkarma, lejantla dışa aktarma, SVG/DXF</td></tr>
+<tr><td>Çizimler</td><td>Aydınger, yakınlaştırma, metinler, ölçek, yükseklikli noktalar, <strong>taramalar, çizgi stilleri, arka plan opaklığı</strong></td><td>+ Lejantla dışa aktarma, SVG/DXF</td></tr>
+<tr><td>Otomatik çizgi çıkarma</td><td>—</td><td>Dokunuşla ve “Tümünü çıkar”</td></tr>
+<tr><td>NMEA kayıtları</td><td>Dosyaları yeniden okuma ve paylaşma</td><td>Kayıt (harici anten gerekir)</td></tr>
 <tr><td>Nivelman defteri</td><td>✓</td><td>✓</td></tr>
 <tr><td>Fotoğraf fişi</td><td>—</td><td>Paylaşım ve raporlarda fişler</td></tr>
 <tr><td>Sesli dikte</td><td>✓</td><td>✓</td></tr>
@@ -302,6 +359,58 @@ bekler, sonra fişi haritasız üretir (veriler ağı beklemez). Yavaş şantiye
 ağlarında beklemenin tamamı gerekebilir: Wi-Fi altında yeniden dene. Fotoğrafta
 coğrafi etiket yoksa harita tanımı gereği olamaz.</p></details>
 
+<details><summary>“Tümünü çıkar” hiçbir şey bulmuyor, ya da fazlasını buluyor</summary>
+<ul>
+<li>tarama arka plan fotoğrafı üzerinde çalışır: fotoğraf yoksa komut da yoktur
+ve “Fotoğraf hazırlanıyor…” yazdığı sürece model henüz hazır değildir —
+bekle;</li>
+<li>biçimler azsa <kbd>İnce geçiş</kbd>'e bas: yalnızca ilk turun hiçbir şey
+görmediği yerleri daha sık bir ızgarayla yeniden tarar ve bulduğunu ekler, senin
+dışarıda bıraktıklarını geri getirmeden;</li>
+<li>çok fazlaysa hepsini uygulama: önizlemede fazlalık biçimlere tek tek
+dokunarak onları dışarıda bırak, sonra <kbd>Uygula</kbd>. Dışarıda bıraktığın
+çizime girmez;</li>
+<li>düz fotoğraflar — düşük karşıtlık, öğle ışığı, baştan sona aynı renkte zemin
+— doğası gereği az kontur verir: orada nereye baktığını bilen tek dokunuşluk
+çizgi çıkarma daha iyidir;</li>
+<li>geriye bir sürü minik biçim kalıyorsa <kbd>Yalnızca konturlar</kbd> ile
+yeniden dene: daha iyi okunurlar, taramayı da sonradan elle her zaman
+serebilirsin.</li>
+</ul></details>
+
+<details><summary>Çizgi kendini giydirtmiyor</summary>
+<ul>
+<li>dokunuş, bir parmak ucu yarıçapı içindeki en yakın çizgiyi arar: çizgi
+inceyse ya da kalabalıksa <strong>yakınlaştır</strong> ve tam mürekkebin
+üzerine, daha kesin dokun;</li>
+<li>yalnızca <strong>çizgiler</strong> giydirilir. Dolgular, metin kutuları ve
+yükseklikli noktaların artı işaretleri çizgi değildir, parmağın altında yanıt
+vermezler;</li>
+<li>“Bu çizginin stili değiştirilemiyor” çıkıyorsa, dokunuşun topladığı çizgiler
+arasında çizgi olmayan biri vardır: duran bir dokunuşun bıraktığı nokta ya da
+içe aktarılmış bir arşivden bozuk gelmiş bir çizgi. Noktayı sil ve yeniden dene,
+ya da çizgiye ondan uzak bir yerinden dokun. Tek başına bir nokta zaten
+giydirilemez: bir noktayla kesikli çizgi yapmanın yolu yoktur;</li>
+<li>dokunuşla <kbd>Uygula</kbd> arasında bir şeyi geri aldıysan ya da başka bir
+şey çizdiysen, yanlış çizgiyi giydirmemek için seçim kendiliğinden çözülür:
+çizgiye yeniden dokun ve yinele.</li>
+</ul></details>
+
+<details><summary>Biçimin içine dokunduğumda tarama çıkmıyor</summary>
+<ul>
+<li>biçim <strong>kapalı</strong> olmalı, üstelik <strong>tek bir
+çizgiyle</strong> kapalı: parmağını kaldırmadan başla ve neredeyse aynı noktaya
+dön (birkaç milimetrelik açıklık hoş görülür). Uçlarından değen iki çizgi, iki
+açık çizgi olarak kalır; kimsenin çizmediği bir kenarın ötesine bir tabakayı
+doldurmak, hiç doldurmamaktan kötü olurdu;</li>
+<li><kbd>Çizgi çıkarma</kbd>'nın ürettiği konturlar yapıları gereği kapalıdır:
+onlar her zaman dolar;</li>
+<li>biçimler iç içeyse dokunuş, onu içine alan <strong>en küçüğünü</strong>
+seçer — büyüğünü doldurmak için küçüklerin dışında kalan bir yere dokun;</li>
+<li>biçimin içine mi dokundun, yoksa kenarına mı? Hedef alandır, çizgi
+değil.</li>
+</ul></details>
+
 <details><summary>DXF reddediliyor, ya da CBS'de “başlangıç noktasının yanında” açılıyor</summary>
 <ul>
 <li><strong>coğrafi referanslı</strong> DXF için uygulamanın kamerasıyla tam
@@ -313,6 +422,15 @@ uygulama bunu önceden söyler;</li>
 <li>ne ölçek ne nokta varsa dışa aktarma reddedilir: birimsiz bir DXF hiçbir
 CBS'de anlamlı biçimde okunamazdı.</li>
 </ul></details>
+
+<details><summary>Arka planı soluklaştırdım, ama SVG fotoğrafı tam güçle çıkarıyor</summary>
+<p>Böyledir ve böyle kalır: SVG, fotoğrafın solmuş bir kopyasını değil
+<strong>özgün dosyasını</strong> içine alır; onu soluklaştırmak yeniden
+sıkıştırmak demek olurdu — yani SVG'yi üzerinde çalışmak için açan herkes için
+bozmak. <kbd>Arka plan opaklığı…</kbd> düzenleyicide, PDF'te, DOCX'te, PNG'de ve
+<kbd>Lejantla dışa aktar</kbd>'da geçerlidir. Vektörü fotoğrafsız istiyorsan
+<kbd>SVG — yalnızca çizim</kbd>'i seç; soluklaştırılmış fotoğrafı istiyorsan PNG
+olarak dışa aktar ya da rapordan geç.</p></details>
 
 <details><summary>Lejantlı dışa aktarmada kuzey oku çıkmıyor</summary>
 <p>Ok yalnızca <strong>uygulamanın kamerasıyla tam tepeden çekilmiş</strong>
