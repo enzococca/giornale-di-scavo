@@ -43,7 +43,7 @@ Wykop 3”).</li>
 <li>Nazwa aktywnego stanowiska jest zawsze widoczna u góry: wszystkie zakładki
 pokazują dane tego stanowiska. Aby zmienić stanowisko, dotknąć nazwy
 ponownie: lista znajduje się pod nagłówkiem „Twoje stanowiska”, a dzięki
-<kbd>Zmień nazwę stanowiska…</kbd> można poprawić nazwę, nie tracąc
+<kbd>Przemianuj stanowisko…</kbd> można poprawić nazwę, nie tracąc
 niczego.</li>
 <li>Udzielić uprawnień, gdy zostaną poproszone: <em>lokalizacja</em> (dla
 punktów), <em>aparat</em> (dla zdjęć), <em>mikrofon</em> (dla dyktowania),
@@ -80,12 +80,21 @@ P002…), ale można wpisać własną (np. „JS 102 — dno jamy”) i dodać n
 <li>Przełączać się między <kbd>Lista</kbd> a <kbd>Mapa</kbd>, aby zobaczyć
 punkty w terenie; z mapy można włączyć katastr lub inną usługę WMS.</li>
 <li>Repery (🏁) mają własną sekcję: zaimportować je z CSV lub utworzyć, a
-następnie użyć <kbd>Weryfikacja</kbd>, aby na żywo obserwować odchyłki
-ΔPn./ΔWsch./ΔWys. przed pomiarem.</li>
-<li><kbd>Dziennik niwelacji</kbd> to dziennik polowy dla niwelatora
-optycznego: stanowiska niwelatora, odczyty wstecz i w przód, wysokości
-obliczane od repera początkowego, z kontrolą zamknięcia. Punkty niwelowane
-trafiają do stanowiska z wysokością, tak jak punkty GNSS.</li>
+następnie otworzyć <kbd>Weryfikacja na żywo</kbd> i obserwować odchyłki
+ΔPn./ΔWsch./ΔWys. z grotem tyczki opartym o reper, zanim zacznie się
+pomiar.</li>
+<li>Pod pozycją <kbd>Dzienniki niwelacji</kbd> kryje się dziennik polowy dla
+niwelatora optycznego: stanowiska niwelatora, odczyty wstecz i w przód,
+wysokości obliczane od repera początkowego, z kontrolą zamknięcia. Punkty
+niwelowane trafiają do stanowiska z wysokością, tak jak punkty GNSS.</li>
+<li>Pod panelem znajdują się <kbd>Nagrania NMEA</kbd>: surowy strumień
+zewnętrznego odbiornika <span class="pro">PRO</span> sam trafia do plików —
+nagrywanie zaczyna się po włączeniu anteny i kończy po jej wyłączeniu, bez
+potrzeby pamiętania o tym. Przydaje się do ponownego prześledzenia
+wątpliwego dnia albo do przekazania surowych danych osobie wykonującej
+postprocessing. Pliki można udostępniać i usuwać, poza plikiem trwającego
+nagrania; lista otwiera się także przy wyłączonym odbiorniku, więc wczorajsze
+pliki pozostają w zasięgu ręki.</li>
 </ol>
 <div class="schermate"><figure><img src="img/pl/03-rilievo.webp" alt="Panel GNSS zakładki Pomiar" width="640" height="1391" loading="lazy"><figcaption>Panel GNSS zakładki Pomiar</figcaption></figure><figure><img src="img/pl/04-mappa.webp" alt="Punkty i repery na mapie" width="640" height="1391" loading="lazy"><figcaption>Punkty i repery na mapie</figcaption></figure></div>
 <p class="nota">Każdy punkt zapisuje <strong>obie wysokości</strong>:
@@ -116,24 +125,67 @@ tak powstaje, z powiększonym panelem danych.</li>
 <h3>✏️ Rysunki (w Mediach)</h3>
 <ol class="passi">
 <li>Utworzyć nową planszę i wybrać zdjęcie stanowiska jako tło: to cyfrowa
-kalka. Rysunek może być kontynuowany przez kilka dni.</li>
-<li>Odrysować warstwy, przekopy i kamienie palcem lub Apple Pencil;
-wyregulować przezroczystość zdjęcia, aby lepiej widzieć linie. <strong>Uszczypnąć,
-aby powiększyć</strong> (do 6×, podwójne stuknięcie dwoma palcami, aby wrócić
-do 1×).</li>
-<li><kbd>Automatyczne odrysowywanie</kbd> <span class="pro">PRO</span>
-rozpoznaje kontur dotykanego obiektu (kamienia, granicy warstwy) i zamienia go
-w linię: kolor i grubość można zmieniać bez wychodzenia z trybu. Wszystko
-odbywa się na urządzeniu, bez sieci.</li>
-<li>Dodać pola tekstowe na etykiety (np. „JS 1002”): można je przesuwać,
-zmieniać rozmiar uszczypnięciem i wybierać spośród czterech czcionek.</li>
-<li>Za pomocą narzędzia <kbd>Skala</kbd> (linijka) dotknąć dwóch końców
-znanego odcinka — na przykład odcinka łaty mierniczej — i wpisać
+kalka. Rysunek może być kontynuowany przez kilka dni. Zdjęcia można też w
+ogóle nie wstawiać: na białej kalce rysuje się tak samo.</li>
+<li>Odrysować warstwy, przekopy i kamienie palcem lub Apple Pencil.
+<strong>Uszczypnąć, aby powiększyć</strong> (do 6×, podwójne stuknięcie dwoma
+palcami, aby wrócić do 1×). Jeśli zdjęcie zasłania kreskę, w menu aparatu
+wybrać <kbd>Krycie tła…</kbd> i ustawić je tam, gdzie potrzeba, od 5% do 100%:
+blednie zdjęcie, nie rysunek. Wybór zostaje przy planszy i obowiązuje także w
+PDF, DOCX, PNG oraz w <kbd>Eksportuj z legendą</kbd>.</li>
+<li>Cała reszta znajduje się w <kbd>Narzędzia</kbd> (klucz płaski na pasku),
+czyli w spisie sześciu trybów: <kbd>Pole tekstowe</kbd>,
+<kbd>Kalkowanie</kbd> <span class="pro">PRO</span>, <kbd>Skala zdjęcia</kbd>,
+<kbd>Punkt z wysokością</kbd>, <kbd>Deseń</kbd> i <kbd>Styl linii</kbd>.
+Włączony jest <strong>tylko jeden</strong> naraz: ptaszek pokazuje który, a
+dopóki jest włączony, palec nie rysuje, tylko steruje tym narzędziem — aby
+wrócić do rysowania, dotknąć ponownie zaznaczonej pozycji. Trzy tryby
+pracujące na obrazie (kalkowanie, skala, punkt wysokościowy) pojawiają się
+tylko wtedy, gdy jest zdjęcie w tle.</li>
+<li>Za pomocą <kbd>Pole tekstowe</kbd> wstawia się etykiety (np. „JS 1002”):
+można je przesuwać, zmieniać rozmiar uszczypnięciem i wybierać spośród
+czterech czcionek.</li>
+<li><kbd>Kalkowanie</kbd> <span class="pro">PRO</span> rozpoznaje kontur
+dotykanego obiektu (kamienia, granicy warstwy) i zamienia go w kreskę: kolor,
+grubość i styl linii można zmieniać bez wychodzenia z trybu, a kontury
+wychodzą gładkie zamiast schodkowych. Wszystko odbywa się na urządzeniu, bez
+sieci.</li>
+<li>Wewnątrz kalkowania <kbd>Skalkuj wszystko</kbd>
+<span class="pro">PRO</span> samo obchodzi całe zdjęcie. W arkuszu startowym
+wybiera się wygląd — <kbd>Tylko kontury</kbd> albo deseń i ewentualnie
+<kbd>Powłoka barwna</kbd> — i naciska <kbd>Rozpocznij</kbd>: pasek pokazuje,
+na jakim etapie jest praca, a trwa ona kilkadziesiąt sekund. To, co się
+pojawia, jest <strong>podglądem</strong>, a nie rysunkiem: dotknięcie wnętrza
+kształtu wyklucza go, kolejne przywraca (spośród nakładających się kształtów
+wygrywa najmniejszy pod palcem), <kbd>Przebieg dokładny</kbd> powtarza pracę
+tylko tam, gdzie nic nie znaleziono, a <kbd>Zastosuj</kbd> przenosi na rysunek
+to, co zostało. Dopóki się nie zastosuje, plansza pozostaje nietknięta.</li>
+<li>Za pomocą narzędzia <kbd>Skala zdjęcia</kbd> (linijka) dotknąć dwóch
+końców znanego odcinka — na przykład odcinka łaty mierniczej — i wpisać
 rzeczywistą odległość: zdjęcie uzyskuje skalę, a od tej chwili eksporty
 operują w metrach.</li>
-<li>Za pomocą <kbd>Punkt wysokościowy</kbd> umieścić na zdjęciu krzyżyk
+<li>Za pomocą <kbd>Punkt z wysokością</kbd> umieścić na zdjęciu krzyżyk
 punktu GNSS ze stanowiska (albo punktu wpisanego ręcznie): nazwa, wysokość i
-współrzędne pojawiają się w przeciągalnej etykiecie z linią odniesienia.</li>
+współrzędne pojawiają się w przeciągalnej etykiecie z linią odniesienia.
+Uszczypnięcie na zaznaczonej etykiecie zmniejsza ją lub powiększa, gdy
+wartości zasłaniają rysunek.</li>
+<li><kbd>Deseń</kbd> wypełnia kształty: dotknąć <strong>wnętrza</strong>
+zamkniętego kształtu, a ten się wypełni. Jest dziesięć deseni
+konwencjonalnych — <kbd>Mur / kamień</kbd>, <kbd>Cegła</kbd>, <kbd>Zaprawa /
+tynk</kbd>, <kbd>Glina</kbd>, <kbd>Muł</kbd>, <kbd>Piasek</kbd>,
+<kbd>Żwir</kbd>, <kbd>Węgiel drzewny / popiół</kbd>, <kbd>Skała
+macierzysta</kbd>, <kbd>Drewno</kbd> — oraz <kbd>Powłoka barwna</kbd> (kolor z
+własnym kryciem), osobno albo razem. Jeśli jeden kształt leży wewnątrz
+drugiego, wygrywa najmniejszy pod palcem; <kbd>Usuń wypełnienie</kbd> czyści
+go. Zdjęcie nie jest potrzebne: wypełnianie pracuje na narysowanych
+kształtach, więc działa też na białej kalce.</li>
+<li><kbd>Styl linii</kbd> ubiera kreskę <strong>już narysowaną</strong>:
+dotknąć jej i wybrać spośród <kbd>Ciągła</kbd>, <kbd>Kreskowana</kbd>,
+<kbd>Kropkowana</kbd> i <kbd>Kreska-kropka</kbd>, regulując grubość.
+<kbd>Rysuj tym stylem</kbd> sprawia, że kolejne kreski rodzą się już ubrane;
+<kbd>Usuń styl</kbd> przywraca linię pełną. To nie jest efekt ekranowy:
+kreseczki są prawdziwymi odcinkami i pozostają nimi w PDF, DOCX, PNG, SVG i
+DXF.</li>
 <li><kbd>Eksportuj z legendą</kbd> <span class="pro">PRO</span>: obraz
 wychodzi z białym paskiem na dole — pasek skali (jeśli skala jest ustawiona),
 strzałka północy dla zdjęć wykonanych pionowo, „widok z” dla zdjęć
@@ -144,7 +196,9 @@ wysokościowych ze współrzędnymi na zdjęciu wykonanym pionowo, DXF wychodzi
 <strong>georeferencjonowany w układzie UTM</strong> i w QGIS sam ustawia się
 na swoim miejscu na świecie; przy samej tylko skali wychodzi w metrach
 lokalnych; bez jednego i drugiego aplikacja to sygnalizuje i nie tworzy
-pliku bez jednostek.</li>
+pliku bez jednostek. SVG stanowi wyjątek co do krycia: osadza oryginalne
+zdjęcie w niezmienionej postaci, więc przygaszone tło wychodzi tam z pełną
+siłą.</li>
 <li>Po zakończeniu ukryć zdjęcie: pozostaje czysty rysunek, gotowy do
 raportu.</li>
 </ol>
@@ -192,6 +246,13 @@ urządzenia). Aplikacja wysyła pozycję do castera i odbiera poprawki.</li>
 <li>Poczekać na przejście do <strong>RTK Fix</strong>: dokładność
 centymetrowa. Przed rozpoczęciem sprawdzić na reperze.</li>
 </ol>
+<p class="nota">Tam, gdzie telefon nie ma zasięgu, istnieje też droga
+<strong>bez internetu</strong>: baza ustawiona na znanym punkcie i rower,
+które wymieniają się poprawkami przez radio <strong>LoRa</strong>, bez castera
+i bez karty SIM (zestaw RTK DFRobot z mostkiem ESP32). Dla aplikacji nic się
+nie zmienia — odbiera od odbiornika już poprawiony NMEA — a montaż mostka jest
+opisany osobno, we własnym pliku README: to pozostaje przewodnikiem po
+aplikacji, a nie podręcznikiem oprogramowania układowego.</p>
 
 <h2>Kopia zapasowa i wymiana</h2>
 <ol class="passi">
@@ -213,7 +274,9 @@ wątpliwości najpierw wyeksportować ZIP.</p>
 <tr><td>GNSS</td><td>GPS wewnętrzny, odbiorniki MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Raporty</td><td>Dzienny ze znakiem wodnym</td><td>Wszystkie, bez znaku wodnego</td></tr>
 <tr><td>Eksport</td><td>PDF, CSV</td><td>+ DOCX z logo i zdjęciami, GeoJSON</td></tr>
-<tr><td>Rysunki</td><td>Kalka, zoom, teksty, skala, punkty wysokościowe</td><td>+ Automatyczne odrysowywanie, eksport z legendą, SVG/DXF</td></tr>
+<tr><td>Rysunki</td><td>Kalka, zoom, teksty, skala, punkty wysokościowe, <strong>desenie, style linii, krycie tła</strong></td><td>+ Eksport z legendą, SVG/DXF</td></tr>
+<tr><td>Automatyczne kalkowanie</td><td>—</td><td>Dotknięciem i „Skalkuj wszystko”</td></tr>
+<tr><td>Nagrania NMEA</td><td>Odczyt i udostępnianie plików</td><td>Nagrywanie (wymaga anteny zewnętrznej)</td></tr>
 <tr><td>Dziennik niwelacji</td><td>✓</td><td>✓</td></tr>
 <tr><td>Karta fotograficzna</td><td>—</td><td>Udostępnianie i karty w raportach</td></tr>
 <tr><td>Dyktowanie głosowe</td><td>✓</td><td>✓</td></tr>
@@ -315,6 +378,60 @@ wolnych sieciach na wykopaliskach może być potrzebne pełne oczekiwanie:
 spróbować ponownie pod Wi-Fi. Bez geotagu na zdjęciu mapy z definicji nie
 będzie.</p></details>
 
+<details><summary>„Skalkuj wszystko” nic nie znajduje albo znajduje za dużo</summary>
+<ul>
+<li>obchód pracuje na zdjęciu w tle: bez zdjęcia polecenia w ogóle nie ma, a
+dopóki widnieje napis „Przygotowywanie zdjęcia…”, model nie jest jeszcze
+gotowy — poczekać;</li>
+<li>jeśli kształtów jest mało, nacisnąć <kbd>Przebieg dokładny</kbd>: powtarza
+pracę z gęstszą siatką tylko tam, gdzie pierwszy obchód niczego nie zobaczył,
+i dodaje to, co znajdzie, nie przywracając tego, co wcześniej wykluczono;</li>
+<li>jeśli jest ich za dużo, nie stosować wszystkiego: w podglądzie dotykać
+zbędnych kształtów, aby wykluczać je pojedynczo, a potem
+<kbd>Zastosuj</kbd>. To, co wykluczone, nie trafia na rysunek;</li>
+<li>zdjęcia płaskie — mały kontrast, południowe światło, grunt w jednym
+kolorze — z natury rzeczy dają mało konturów: tam lepiej sprawdza się
+kalkowanie pojedynczym dotknięciem, które wie, na co się patrzy;</li>
+<li>jeśli zostaje mnóstwo drobnych kształtów, spróbować ponownie z <kbd>Tylko
+kontury</kbd>: czyta się je lepiej, a deseń zawsze można nałożyć później,
+ręcznie.</li>
+</ul></details>
+
+<details><summary>Kreska nie daje się ubrać</summary>
+<ul>
+<li>dotknięcie szuka najbliższej linii w promieniu opuszka palca: jeśli kreska
+jest cienka albo gęsto otoczona innymi, <strong>powiększyć</strong> i dotknąć
+celniej, dokładnie na tuszu;</li>
+<li>ubrać można tylko <strong>kreski</strong>. Wypełnienia, pola tekstowe i
+krzyżyki punktów wysokościowych nie są liniami i pod palcem nie
+odpowiadają;</li>
+<li>jeśli pojawia się „Tej kreski nie można przestylizować”, wśród linii
+zebranych przez dotknięcie jest jedna, która linią nie jest: kropka
+pozostawiona przez nieruchome dotknięcie albo kreska, która przyszła
+uszkodzona z zaimportowanego archiwum. Usunąć kropkę i spróbować ponownie
+albo dotknąć linii w miejscu od niej odległym. Samotna kropka po prostu się
+nie ubiera: z punktu nie da się zrobić kreskowania;</li>
+<li>jeśli między dotknięciem a <kbd>Zastosuj</kbd> cofnięto coś albo
+narysowano coś innego, zaznaczenie rozwiązuje się samo, żeby nie ubrać
+niewłaściwej kreski: dotknąć linii ponownie i powtórzyć.</li>
+</ul></details>
+
+<details><summary>Deseń nie pojawia się, gdy dotykam wnętrza kształtu</summary>
+<ul>
+<li>kształt musi być <strong>zamknięty</strong>, i to zamknięty
+<strong>jedną kreską</strong>: zacząć i wrócić niemal w to samo miejsce bez
+odrywania palca (kilka milimetrów luzu jest tolerowanych). Dwie linie stykające
+się końcami pozostają dwiema liniami otwartymi, a wypełnienie planszy poza
+krawędzią, której nikt nie narysował, byłoby gorsze niż brak wypełnienia;</li>
+<li>kontury powstałe z <kbd>Kalkowanie</kbd> są zamknięte z samej swojej
+budowy: te wypełniają się zawsze;</li>
+<li>jeśli kształty leżą jeden w drugim, dotknięcie bierze
+<strong>najmniejszy</strong>, który je obejmuje — aby wypełnić duży, dotknąć w
+miejscu leżącym poza małymi;</li>
+<li>dotknięto wnętrza kształtu, a nie jego krawędzi? Celem jest powierzchnia,
+nie linia.</li>
+</ul></details>
+
 <details><summary>DXF jest odrzucany albo otwiera się „blisko początku układu” w GIS</summary>
 <ul>
 <li>dla DXF <strong>georeferencjonowanego</strong> potrzebne są zdjęcie
@@ -326,6 +443,15 @@ lokalnych</strong>: to poprawne, ale GIS pokazuje go blisko początku układu
 <li>bez skali i bez punktów eksport jest odrzucany: DXF bez jednostek nie
 byłby sensownie czytelny w żadnym GIS.</li>
 </ul></details>
+
+<details><summary>Przygaszono tło, a SVG wychodzi z pełnym zdjęciem</summary>
+<p>Tak jest i tak zostanie: SVG niesie w sobie <strong>oryginalny
+plik</strong> zdjęcia, a nie jego przygaszoną kopię, a rozjaśnienie oznaczałoby
+ponowną kompresję — czyli pogorszenie zdjęcia wszystkim, którzy otwierają SVG,
+żeby na nim pracować. <kbd>Krycie tła…</kbd> obowiązuje w edytorze, w PDF, w
+DOCX, w PNG i w <kbd>Eksportuj z legendą</kbd>. Jeśli potrzebna jest grafika
+wektorowa bez zdjęcia, wybrać <kbd>SVG — tylko rysunek</kbd>; jeśli potrzebne
+jest przygaszone zdjęcie, wyeksportować PNG albo skorzystać z raportu.</p></details>
 
 <details><summary>Strzałka północy nie pojawia się w eksporcie z legendą</summary>
 <p>Strzałka pojawia się tylko dla zdjęć <strong>wykonanych pionowo aparatem

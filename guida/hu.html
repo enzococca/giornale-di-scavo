@@ -83,12 +83,21 @@ alja”), és jegyzetet is hozzáadhat.</li>
 helyszíni megtekintéséhez; a térképről bekapcsolhatja a katasztert vagy egy
 másik WMS-szolgáltatást.</li>
 <li>Az alappontok (🏁) saját szakasszal rendelkeznek: importálja őket
-CSV-ből, vagy hozza létre őket, majd az <kbd>Ellenőrzés</kbd> gombbal kövesse
-élőben a ΔÉszak/ΔKelet/ΔMag. eltéréseket a felmérés előtt.</li>
-<li>A <kbd>Szintezési jegyzőkönyv</kbd> az optikai szintező műszer terepi
-jegyzőkönyve: állomások, hátra- és előremérések, egy kiinduló alapponttól
-számított magasságok, záróhiba-ellenőrzéssel. A szintezett pontok a
-magasságukkal kerülnek be a lelőhelyre, akárcsak a GNSS-pontok.</li>
+CSV-ből, vagy hozza létre őket, majd nyissa meg a <kbd>Valós idejű
+ellenőrzés</kbd> panelt, és kövesse a ΔÉszak/ΔKelet/ΔMag. eltéréseket a
+szöggel a szegen, mielőtt hozzáfogna a felméréshez.</li>
+<li>A <kbd>Szintezési füzetek</kbd> alatt van az optikai szintező műszer
+terepi jegyzőkönyve: állomások, hátra- és előremérések, egy kiinduló
+alapponttól számított magasságok, záróhiba-ellenőrzéssel. A szintezett pontok
+a magasságukkal kerülnek be a lelőhelyre, akárcsak a GNSS-pontok.</li>
+<li>A panel alatt találhatók az <kbd>NMEA-felvételek</kbd>: a külső vevő
+<span class="pro">PRO</span> nyers adatfolyama magától fájlba kerül — a
+felvétel akkor indul, amikor bekapcsolja az antennát, és akkor záródik le,
+amikor kikapcsolja, anélkül hogy erre emlékeznie kellene. Arra jó, hogy egy
+kétséges napot újra végig lehessen olvasni, vagy hogy a nyers adatot át
+lehessen adni annak, aki az utófeldolgozást végzi. A fájlok megoszthatók és
+törölhetők, kivéve a folyamatban lévő felvételét; a lista kikapcsolt vevővel
+is megnyílik, így a tegnapi fájlok elérhetők maradnak.</li>
 </ol>
 <div class="schermate"><figure><img src="img/hu/03-rilievo.webp" alt="A Felmérés GNSS-panelje" width="640" height="1391" loading="lazy"><figcaption>A Felmérés GNSS-panelje</figcaption></figure><figure><img src="img/hu/04-mappa.webp" alt="Pontok és alappontok a térképen" width="640" height="1391" loading="lazy"><figcaption>Pontok és alappontok a térképen</figcaption></figure></div>
 <p class="nota">Minden pont <strong>mindkét magasságot</strong> tárolja: az
@@ -107,7 +116,7 @@ felvételeknél (alaprajz, egy SE alja) pedig a zenitális felirat jelenik meg
 a felső szél irányával. Ha az iránytűt zavarás éri, az alkalmazás jelzi.</li>
 <li>Érintsen meg egy fényképet a cím és a megjegyzések megadásához (pl.
 „SE 102 északról”).</li>
-<li>A <kbd>Lap megosztása</kbd> <span class="pro">PRO</span> elkészíti a
+<li>Az <kbd>Adatlap megosztása</kbd> <span class="pro">PRO</span> elkészíti a
 <strong>dokumentációs fotólapot</strong>: a fényképet, alatta a felvétel
 adataival (lelőhely, szám, dátum és időpont, koordináták, magasság, irány),
 egy műholdas nézetet a helyjelölővel és a felvételi kúppal, a térkép
@@ -120,34 +129,81 @@ enélkül a lap akkor is elkészül, kibővített adatpanellel.</li>
 <ol class="passi">
 <li>Hozzon létre egy új lapot, és válasszon háttérnek egy lelőhelyi
 fényképet: ez lesz a digitális pauszpapírja. Egy rajz több napon át is
-folytatható.</li>
+folytatható. A fényképet el is lehet hagyni: a fehér pauszpapírra ugyanúgy
+lehet rajzolni.</li>
 <li>Pausolja át a rétegeket, metszeteket és köveket ujjal vagy Apple
-Pencillel; állítsa be a fénykép átlátszóságát, hogy jobban lássa a
-vonalakat. <strong>Csippentéssel nagyíthat</strong> (6×-ig, két ujjal való
-dupla koppintással vissza 1×-re).</li>
-<li>Az <kbd>Automatikus pausolás</kbd> <span class="pro">PRO</span>
-felismeri az érintett tárgy körvonalát (egy követ, egy réteg határát), és
-vonallá alakítja: a szín és a vastagság a mód elhagyása nélkül módosítható.
-Minden a készüléken történik, hálózat nélkül.</li>
-<li>Adjon hozzá szövegdobozokat a feliratokhoz (pl. „SE 1002”): mozgathatók,
-csippentéssel átméretezhetők, és négyféle betűtípus közül választhat.</li>
-<li>A <kbd>Lépték</kbd> eszközzel (vonalzó) érintse meg egy ismert méret két
-végpontját — egy mérőléc szakaszát —, és írja be a valós távolságot: a
+Pencillel. <strong>Csippentéssel nagyíthat</strong> (6×-ig, két ujjal való
+dupla koppintással vissza 1×-re). Ha a fénykép eltakarja a vonást, a kamera
+menüjéből válassza a <kbd>Háttér átlátszatlansága…</kbd> lehetőséget, és
+állítsa oda, ahová kell, 5% és 100% között: a fénykép halványul el, nem a
+rajz. A választás a lapon marad, és érvényes PDF-ben, DOCX-ben, PNG-ben és az
+<kbd>Exportálás jelmagyarázattal</kbd> esetén is.</li>
+<li>Minden más az <kbd>Eszközök</kbd> alatt van (a villáskulcs a sávban),
+amely a hat mód tartalomjegyzéke: <kbd>Szövegdoboz</kbd>,
+<kbd>Átrajzolás</kbd> <span class="pro">PRO</span>, <kbd>A fotó léptéke</kbd>,
+<kbd>Magassággal rendelkező pont</kbd>, <kbd>Sraffozás</kbd> és
+<kbd>Vonalstílus</kbd>. Egyszerre <strong>csak egy</strong> lehet bekapcsolva:
+a pipa mutatja, melyik, és amíg be van kapcsolva, az ujj nem rajzol, hanem azt
+az eszközt vezérli — a rajzoláshoz úgy tér vissza, hogy újra megérinti a
+kipipált menüpontot. A képen dolgozó három mód (átrajzolás, lépték, magassági
+pont) csak akkor jelenik meg, ha van háttérfénykép.</li>
+<li>A <kbd>Szövegdoboz</kbd> eszközzel helyezi el a feliratokat (pl.
+„SE 1002”): mozgathatók, csippentéssel átméretezhetők, és négyféle betűtípus
+közül választhat.</li>
+<li>Az <kbd>Átrajzolás</kbd> <span class="pro">PRO</span> felismeri az
+érintett tárgy körvonalát (egy követ, egy réteg határát), és vonallá
+alakítja: a szín, a vastagság és a vonal stílusa a mód elhagyása nélkül
+módosítható, a körvonalak pedig simán jönnek ki, nem lépcsőzetesen. Minden a
+készüléken történik, hálózat nélkül.</li>
+<li>Az átrajzoláson belül a <kbd>Mindent átrajzol</kbd>
+<span class="pro">PRO</span> magától végigmegy az egész fényképen. Az indító
+lapon dönti el a megjelenést — <kbd>Csak körvonalak</kbd>, vagy egy sraffozás
+és esetleg egy <kbd>Színfátyol</kbd> —, majd megnyomja az <kbd>Indítás</kbd>
+gombot: a sáv mutatja, hol tart, és néhány tíz másodpercet vesz igénybe. Ami
+megjelenik, az <strong>előnézet</strong>, nem a rajz: egy érintés a formán
+belül kizárja azt, egy újabb visszaveszi (az egymást átfedő formák közül az
+ujj alatti legkisebb nyer), a <kbd>Finom menet</kbd> csak ott megy végig újra,
+ahol semmit sem talált, az <kbd>Alkalmaz</kbd> pedig a rajzra teszi azt, ami
+megmaradt. Amíg nem alkalmazza, a lap érintetlen marad.</li>
+<li><kbd>A fotó léptéke</kbd> eszközzel (vonalzó) érintse meg egy ismert méret
+két végpontját — egy mérőléc szakaszát —, és írja be a valós távolságot: a
 fénykép megkapja a léptéket, és onnantól az exportált fájlok méterben
 beszélnek.</li>
-<li>A <kbd>Magassági pont</kbd> eszközzel a fényképre helyezi a lelőhely
-egy GNSS-pontjának (vagy egy kézzel megadott pontnak) a keresztjét: a név,
-a magasság és a koordináták egy húzható címkében jelennek meg,
-mutatóvonallal.</li>
+<li>A <kbd>Magassággal rendelkező pont</kbd> eszközzel a fényképre helyezi a
+lelőhely egy GNSS-pontjának (vagy egy kézzel megadott pontnak) a keresztjét: a
+név, a magasság és a koordináták egy húzható címkében jelennek meg,
+mutatóvonallal. A kijelölt címkén csippentve kicsinyítheti vagy nagyíthatja,
+amikor az értékek eltakarják a rajzot.</li>
+<li>A <kbd>Sraffozás</kbd> kitölti a formákat: érintse meg egy zárt forma
+<strong>belsejét</strong>, és az megtelik. Tíz egyezményes sraffozás áll
+rendelkezésre — <kbd>Falazat / kő</kbd>, <kbd>Tégla</kbd>, <kbd>Habarcs /
+vakolat</kbd>, <kbd>Agyag</kbd>, <kbd>Iszap</kbd>, <kbd>Homok</kbd>,
+<kbd>Kavics</kbd>, <kbd>Faszén / hamu</kbd>, <kbd>Alapkőzet</kbd>,
+<kbd>Fa</kbd> —, valamint a <kbd>Színfátyol</kbd> (egy szín a saját
+átlátszatlanságával), külön-külön vagy együtt. Ha egy forma egy másikon belül
+van, az ujj alatti legkisebb nyer; a <kbd>Kitöltés eltávolítása</kbd>
+kitisztítja. Fénykép nem kell: a kitöltés a megrajzolt formákon dolgozik, így
+a fehér pauszpapíron is működik.</li>
+<li>A <kbd>Vonalstílus</kbd> egy <strong>már megrajzolt</strong> vonást
+öltöztet fel: érintse meg, és válasszon a <kbd>Folytonos</kbd>,
+<kbd>Szaggatott</kbd>, <kbd>Pontozott</kbd> és <kbd>Vonal-pont</kbd> közül, a
+vastagságot is szabályozva. A <kbd>Rajzolás ezzel a stílussal</kbd> hatására a
+következő vonások már felöltöztetve születnek; a <kbd>Stílus
+eltávolítása</kbd> visszaadja a tele vonalat. Ez nem a képernyő trükkje: a
+vonalkák valódi szakaszok, és azok is maradnak PDF-ben, DOCX-ben, PNG-ben,
+SVG-ben és DXF-ben.</li>
 <li><kbd>Exportálás jelmagyarázattal</kbd> <span class="pro">PRO</span>: a
 kép alján fehér sáv jelenik meg — méterskála (ha van lépték), északi nyíl a
 függőlegesen készített fényképeknél, „nézet innen” a frontális felvételeknél.</li>
-<li><kbd>Vektoros exportálás</kbd> <span class="pro">PRO</span>: SVG a
+<li><kbd>Exportálás vektorosan</kbd> <span class="pro">PRO</span>: SVG a
 rajzhoz, vagy <strong>DXF</strong> a GIS-hez. Legalább két, koordinátákkal
 ellátott magassági ponttal egy függőlegesen készített fényképen a DXF
 <strong>UTM-ben georeferálva</strong> készül el, és a QGIS-ben magától a
 helyére kerül; csak léptékkel, helyi méterben készül el; egyik nélkül sem az
-alkalmazás jelzi ezt, és nem hoz létre mértékegység nélküli fájlt.</li>
+alkalmazás jelzi ezt, és nem hoz létre mértékegység nélküli fájlt. Az SVG az
+átlátszatlanság dolgában kivétel: az eredeti fényképet ágyazza be
+változatlanul, így az elhalványított háttér ott teljes erővel jelenik
+meg.</li>
 <li>Ha végzett, rejtse el a fényképet: a tiszta rajz megmarad, készen a
 jelentéshez.</li>
 </ol>
@@ -172,7 +228,7 @@ is, ha az alkalmazást magyarul használja.</li>
 <span class="pro">PRO</span>, CSV-t a pontokról, GeoJSON-t QGIS-hez
 <span class="pro">PRO</span>.</li>
 <li>A jelentésekben szereplő fényképek bekapcsolásával választhatja a
-<kbd>Fotólapok a fényképek helyett</kbd> <span class="pro">PRO</span>
+<kbd>Fotó-adatlapok a fényképek helyett</kbd> <span class="pro">PRO</span>
 lehetőséget: minden fénykép teljes, adatokkal és térképpel ellátott
 dokumentációs lapként kerül be a PDF-be és a DOCX-be, a jelentés nyelvén.</li>
 </ol>
@@ -194,6 +250,13 @@ casternek, és megkapja a korrekciókat.</li>
 <li>Várja meg az <strong>RTK Fix</strong> állapotot: centiméteres pontosság.
 Kezdés előtt ellenőrizze egy alapponton.</li>
 </ol>
+<p class="nota">Ahol a telefonnak nincs térereje, ott is van út
+<strong>internet nélkül</strong>: egy ismert pontra állított bázis és egy
+rover <strong>LoRa</strong> rádión cserélik egymás közt a korrekciókat, caster
+és SIM-kártya nélkül (DFRobot RTK-készlet ESP32-es híddal). Az alkalmazás
+számára semmi sem változik — a vevőtől már korrigált NMEA-t kap —, a híd
+összeállítása pedig külön, a saját README-jében van dokumentálva: ez továbbra
+is az alkalmazás útmutatója marad, nem firmware-kézikönyv.</p>
 
 <h2>Biztonsági mentés és csere</h2>
 <ol class="passi">
@@ -216,7 +279,9 @@ előbb exportáljon egy ZIP-et.</p>
 <tr><td>GNSS</td><td>Belső GPS, MFi-vevők</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Jelentés</td><td>Napi, vízjellel</td><td>Az összes, vízjel nélkül</td></tr>
 <tr><td>Exportálás</td><td>PDF, CSV</td><td>+ DOCX logóval és fényképekkel, GeoJSON</td></tr>
-<tr><td>Rajzok</td><td>Pauszpapír, nagyítás, szövegek, lépték, magassági pontok</td><td>+ Automatikus pausolás, exportálás jelmagyarázattal, SVG/DXF</td></tr>
+<tr><td>Rajzok</td><td>Pauszpapír, nagyítás, szövegek, lépték, magassági pontok, <strong>sraffozások, vonalstílusok, a háttér átlátszatlansága</strong></td><td>+ Exportálás jelmagyarázattal, SVG/DXF</td></tr>
+<tr><td>Automatikus átrajzolás</td><td>—</td><td>Érintéssel és a „Mindent átrajzol” paranccsal</td></tr>
+<tr><td>NMEA-felvételek</td><td>A fájlok újraolvasása és megosztása</td><td>A felvétel (külső antenna kell hozzá)</td></tr>
 <tr><td>Szintezési jegyzőkönyv</td><td>✓</td><td>✓</td></tr>
 <tr><td>Fotólap</td><td>—</td><td>Megosztás és lapok a jelentésekben</td></tr>
 <tr><td>Hangalapú diktálás</td><td>✓</td><td>✓</td></tr>
@@ -322,6 +387,61 @@ adatok nem várnak a hálózatra). Lassú, ásatási helyszíni hálózaton a te
 várakozási idő eltelhet: próbálja újra Wi-Fi hálózaton. Geotag nélküli
 fényképnél a térkép definíció szerint hiányzik.</p></details>
 
+<details><summary>A „Mindent átrajzol” semmit sem talál, vagy túl sokat talál</summary>
+<ul>
+<li>a körbejárás a háttérfényképen dolgozik: fénykép nélkül a parancs nincs
+is ott, és amíg a „Fénykép előkészítése…” felirat látszik, a modell még nincs
+kész — várjon;</li>
+<li>ha kevés a forma, nyomja meg a <kbd>Finom menet</kbd> gombot: sűrűbb
+ráccsal megy végig újra, de csak ott, ahol az első kör semmit sem látott, és
+azt teszi hozzá, amit talál, anélkül hogy visszahozná, amit Ön kizárt;</li>
+<li>ha túl sok, ne alkalmazza az egészet: az előnézetben érintse meg a
+fölösleges formákat, hogy egyenként kizárja őket, aztán <kbd>Alkalmaz</kbd>.
+Amit kizár, az nem kerül rá a rajzra;</li>
+<li>a lapos fényképek — kevés kontraszt, déli fény, mindenütt egyforma színű
+talaj — a dolog természetéből adódóan kevés körvonalat adnak: ott az egyetlen
+érintéssel végzett átrajzolás éri meg, amelyik tudja, hová néz;</li>
+<li>ha tele marad apró formákkal, próbálja újra a <kbd>Csak körvonalak</kbd>
+beállítással: jobban olvashatók, a sraffozást pedig utólag, kézzel bármikor
+fel lehet vinni.</li>
+</ul></details>
+
+<details><summary>A vonás nem hagyja magát felöltöztetni</summary>
+<ul>
+<li>az érintés egy ujjbegynyi sugáron belül keresi a legközelebbi vonalat: ha
+a vonás vékony vagy zsúfolt helyen van, <strong>nagyítson</strong>, és
+érintsen pontosabban, pontosan a tinta fölött;</li>
+<li>csak a <strong>vonások</strong> öltöztethetők fel. A kitöltések, a
+szövegdobozok és a magassági pontok keresztjei nem vonalak, és az ujj alatt
+nem válaszolnak;</li>
+<li>ha megjelenik az „Ennek a vonásnak nem módosítható a stílusa” üzenet,
+akkor az érintés által összeszedett vonalak közt van egy, amelyik nem vonal:
+az egy helyben tartott érintés hagyta pöttyöt, vagy egy importált archívumból
+hibásan érkezett vonást. Törölje a pöttyöt, és próbálja újra, vagy érintse meg
+a vonalat tőle távolabb. Egy magányos pöttyöt egyszerűen nem lehet
+felöltöztetni: egyetlen pontból nem lesz szaggatott vonal;</li>
+<li>ha az érintés és az <kbd>Alkalmaz</kbd> között visszavont vagy rajzolt
+valami mást, a kijelölés magától megszűnik, nehogy rossz vonás öltözzön fel:
+érintse meg újra a vonalat, és kezdje elölről.</li>
+</ul></details>
+
+<details><summary>Nem jelenik meg a sraffozás, amikor a forma belsejét érintem</summary>
+<ul>
+<li>a formának <strong>zártnak</strong> kell lennie, méghozzá <strong>egyetlen
+vonással</strong> zártnak: induljon el, és térjen vissza majdnem ugyanabba a
+pontba anélkül, hogy felemelné az ujját (néhány milliméternyi eltérés
+belefér). Két vonal, amely a végpontjainál összeér, két nyitott vonal marad, és
+egy lapot olyan határon túl kitölteni, amelyet senki sem rajzolt meg, rosszabb
+volna, mint nem kitölteni;</li>
+<li>az <kbd>Átrajzolás</kbd> által előállított körvonalak felépítésüknél fogva
+zártak: azok mindig kitölthetők;</li>
+<li>ha a formák egymásban vannak, az érintés a <strong>legkisebbet</strong>
+veszi, amelyik tartalmazza — a nagy kitöltéséhez olyan pontot érintsen, amely
+a kicsiken kívül esik;</li>
+<li>a forma belsejét érintette meg, nem a szélét? A célpont a felület, nem a
+vonal.</li>
+</ul></details>
+
 <details><summary>A DXF-et elutasítja, vagy „az origó közelében” nyílik meg a GIS-ben</summary>
 <ul>
 <li>a <strong>georeferált</strong> DXF-hez az alkalmazás kamerájával
@@ -333,6 +453,17 @@ előre jelzi ezt;</li>
 <li>lépték és pontok nélkül az exportálás elutasításra kerül: mértékegység
 nélküli DXF-et egyetlen GIS sem tudna értelmesen megjeleníteni.</li>
 </ul></details>
+
+<details><summary>Elhalványítottam a hátteret, de az SVG teli fényképpel jön ki</summary>
+<p>Ez így van, és így is marad: az SVG a fénykép <strong>eredeti
+fájlját</strong> viszi magával, nem annak elhalványított másolatát, a
+világosítás pedig újratömörítést jelentene — vagyis rontana rajta mindenki
+számára, aki az SVG-t munkára nyitja meg. A <kbd>Háttér
+átlátszatlansága…</kbd> a szerkesztőben, a PDF-ben, a DOCX-ben, a PNG-ben és
+az <kbd>Exportálás jelmagyarázattal</kbd> esetén érvényes. Ha a vektoros
+változat fénykép nélkül kell, válassza az <kbd>SVG — csak a rajz</kbd>
+lehetőséget; ha az elhalványított fénykép kell, exportáljon PNG-be, vagy
+menjen át a jelentésen.</p></details>
 
 <details><summary>Az északi nyíl nem jelenik meg a jelmagyarázattal történő exportálásnál</summary>
 <p>A nyíl csak az alkalmazás kamerájával <strong>függőlegesen készített

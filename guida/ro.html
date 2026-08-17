@@ -81,12 +81,20 @@ P002…), dar puteți introduce unul propriu (de ex. „US 102 — fundul gropii
 punctele la fața locului; din hartă puteți activa cadastrul sau un alt
 serviciu WMS.</li>
 <li>Reperele (🏁) au propria lor secțiune: importați-le din CSV sau
-creați-le, apoi folosiți verificarea pentru a urmări abaterile ΔN/ΔE/ΔZ în
-timp real înainte de a ridica.</li>
-<li><kbd>Carnetul de nivelment</kbd> este carnetul de teren pentru nivela
-optică: stații, citiri înapoi și înainte, altitudini calculate pornind de la
-un reper de plecare, cu controlul de închidere. Punctele nivelate intră în
-sit cu altitudinea lor, la fel ca cele GNSS.</li>
+creați-le, apoi deschideți <kbd>Verificare în timp real</kbd> și urmăriți
+abaterile ΔN/ΔE/ΔZ cu vârful jalonului pe bornă, înainte de a începe
+ridicarea.</li>
+<li>Sub <kbd>Carnete de nivelment</kbd> se află carnetul de teren pentru
+nivela optică: stații, citiri înapoi și înainte, altitudini calculate pornind
+de la un reper de plecare, cu controlul de închidere. Punctele nivelate intră
+în sit cu altitudinea lor, la fel ca cele GNSS.</li>
+<li>Sub panou se află <kbd>Înregistrări NMEA</kbd>: fluxul brut al receptorului
+extern <span class="pro">PRO</span> ajunge singur în fișiere — înregistrarea
+pornește când aprindeți antena și se închide când o stingeți, fără să fie
+nevoie să vă amintiți de ea. Folosește la recitirea unei zile îndoielnice sau
+la predarea datelor brute celui care face post-procesarea. Fișierele se
+distribuie și se șterg, în afară de cel al înregistrării în curs; lista se
+deschide și cu receptorul stins, așa că fișierele de ieri rămân la îndemână.</li>
 </ol>
 <div class="schermate"><figure><img src="img/ro/03-rilievo.webp" alt="Panoul GNSS al Ridicării" width="640" height="1391" loading="lazy"><figcaption>Panoul GNSS al Ridicării</figcaption></figure><figure><img src="img/ro/04-mappa.webp" alt="Puncte și repere pe hartă" width="640" height="1391" loading="lazy"><figcaption>Puncte și repere pe hartă</figcaption></figure></div>
 <p class="nota">Fiecare punct salvează <strong>ambele altitudini</strong>:
@@ -105,7 +113,7 @@ veți citi „vedere dinspre SO — 214°”, iar pentru fotografiile verticale
 (plan, fundul unei US) apare mențiunea zenitală cu direcția marginii de sus.
 Dacă busola este perturbată, aplicația vă avertizează.</li>
 <li>Atingeți o fotografie pentru titlu și note (de ex. „US 102 dinspre nord”).</li>
-<li><kbd>Distribuie fișa</kbd> <span class="pro">PRO</span> generează
+<li><kbd>Distribuiți fișa</kbd> <span class="pro">PRO</span> generează
 <strong>fișa fotografică de documentare</strong>: fotografia cu datele de
 sub ea (sit, număr, dată și oră, coordonate, altitudine, direcție), o vedere
 din satelit cu marcatorul de poziție și conul de vizare, bara scării hărții
@@ -118,34 +126,80 @@ oricum, cu panoul de date extins.</li>
 <ol class="passi">
 <li>Creați o planșă nouă și alegeți o fotografie a sitului ca fundal: este
 foaia dumneavoastră de calc digitală. Un desen poate continua pe parcursul
-mai multor zile.</li>
+mai multor zile. Puteți și să nu o puneți, fotografia: pe foaia de calc albă
+se desenează la fel de bine.</li>
 <li>Decalcați straturile, secțiunile și pietrele cu degetul sau cu Apple
-Pencil; reglați opacitatea fotografiei pentru a vedea mai bine trăsăturile.
-<strong>Ciupiți pentru a mări</strong> (până la 6×, atingere dublă cu două
-degete pentru a reveni la 1×).</li>
-<li><kbd>Decalcul automat</kbd> <span class="pro">PRO</span> recunoaște
-conturul obiectului pe care îl atingeți (o piatră, limita unui strat) și îl
-transformă în trăsătură: culoarea și grosimea se schimbă fără a ieși din
-mod. Totul se petrece pe dispozitiv, fără rețea.</li>
-<li>Adăugați casete de text pentru etichete (de ex. „US 1002”): se pot muta,
-se redimensionează prin ciupire și aveți patru fonturi din care puteți alege.</li>
-<li>Cu instrumentul <kbd>Scară</kbd> (riglă) atingeți cele două capete ale
-unei măsurători cunoscute — un segment al mirei topografice — și scrieți
-distanța reală: fotografia obține scara, iar de atunci exporturile vorbesc
-în metri.</li>
-<li>Cu <kbd>Punct cotat</kbd> puneți pe fotografie crucea unui punct GNSS al
-sitului (sau un punct introdus manual): numele, cota și coordonatele apar
-într-o etichetă care poate fi trasă, cu o linie de indicație.</li>
-<li><kbd>Exportă cu legendă</kbd> <span class="pro">PRO</span>: imaginea
+Pencil. <strong>Ciupiți pentru a mări</strong> (până la 6×, atingere dublă cu
+două degete pentru a reveni la 1×). Dacă fotografia vă acoperă trăsătura,
+alegeți din meniul camerei <kbd>Opacitatea fundalului…</kbd> și duceți-o unde
+aveți nevoie, de la 5% la 100%: se estompează fotografia, nu desenul. Alegerea
+rămâne pe planșă și este valabilă și în PDF, DOCX, PNG și în
+<kbd>Exportați cu legendă</kbd>.</li>
+<li>Tot restul se află sub <kbd>Instrumente</kbd> (cheia fixă din bară), care
+este cuprinsul celor șase moduri: <kbd>Casetă de text</kbd>,
+<kbd>Calchiere</kbd> <span class="pro">PRO</span>, <kbd>Scara
+fotografiei</kbd>, <kbd>Punct cu altitudine</kbd>, <kbd>Hașură</kbd> și
+<kbd>Stilul liniei</kbd>. Se ține <strong>unul singur</strong> o dată: bifa
+arată care, iar cât timp este aprins degetul nu desenează, ci comandă acel
+instrument — pentru a reveni la desen, atingeți din nou opțiunea bifată. Cele
+trei moduri care lucrează pe imagine (decalcul, scara, punctul cotat) apar
+numai dacă există o fotografie de fundal.</li>
+<li>Cu <kbd>Casetă de text</kbd> puneți etichetele (de ex. „US 1002”): se pot
+muta, se redimensionează prin ciupire și aveți patru fonturi din care puteți
+alege.</li>
+<li><kbd>Calchiere</kbd> <span class="pro">PRO</span> recunoaște conturul
+obiectului pe care îl atingeți (o piatră, limita unui strat) și îl transformă
+în trăsătură: culoarea, grosimea și stilul liniei se schimbă fără a ieși din
+mod, iar contururile ies netede, nu în trepte. Totul se petrece pe dispozitiv,
+fără rețea.</li>
+<li>În interiorul decalcului, <kbd>Calchiați tot</kbd>
+<span class="pro">PRO</span> face singur turul întregii fotografii. În foaia
+de pornire hotărâți veșmântul — <kbd>Doar contururi</kbd>, ori o hașură și
+poate un <kbd>Voal de culoare</kbd> — și apăsați <kbd>Porniți</kbd>: bara
+spune unde a ajuns, iar treaba durează câteva zeci de secunde. Ceea ce apare
+este o <strong>previzualizare</strong>, nu desenul: o atingere în interiorul
+unei forme o exclude, alta o readuce (între forme suprapuse câștigă cea mai
+mică de sub deget), <kbd>Trecere fină</kbd> reia doar acolo unde nu găsise
+nimic, iar <kbd>Aplicați</kbd> pune pe desen ceea ce a rămas. Până nu aplicați,
+planșa rămâne neatinsă.</li>
+<li>Cu instrumentul <kbd>Scara fotografiei</kbd> (riglă) atingeți cele două
+capete ale unei măsurători cunoscute — un segment al mirei topografice — și
+scrieți distanța reală: fotografia obține scara, iar de atunci exporturile
+vorbesc în metri.</li>
+<li>Cu <kbd>Punct cu altitudine</kbd> puneți pe fotografie crucea unui punct
+GNSS al sitului (sau un punct introdus manual): numele, cota și coordonatele
+apar într-o etichetă care poate fi trasă, cu o linie de indicație. Ciupiți pe
+eticheta selectată pentru a o micșora sau a o mări, atunci când valorile
+acoperă desenul.</li>
+<li><kbd>Hașură</kbd> umple formele: atingeți <strong>în interiorul</strong>
+unei forme închise și aceasta se umple. Există cele zece hașuri de convenție —
+<kbd>Zidărie / piatră</kbd>, <kbd>Cărămidă</kbd>, <kbd>Mortar /
+tencuială</kbd>, <kbd>Argilă</kbd>, <kbd>Silt</kbd>, <kbd>Nisip</kbd>,
+<kbd>Pietriș</kbd>, <kbd>Cărbune / cenușă</kbd>, <kbd>Rocă naturală</kbd>,
+<kbd>Lemn</kbd> — și <kbd>Voal de culoare</kbd> (o culoare cu opacitatea ei),
+singure sau împreună. Dacă o formă se află în interiorul alteia câștigă cea
+mai mică de sub deget; <kbd>Eliminați umplerea</kbd> o curăță. Nu e nevoie de
+fotografie: umplerea lucrează pe formele desenate, deci merge și pe foaia de
+calc albă.</li>
+<li><kbd>Stilul liniei</kbd> îmbracă o linie <strong>deja desenată</strong>:
+o atingeți și alegeți între <kbd>Continuă</kbd>, <kbd>Întreruptă</kbd>,
+<kbd>Punctată</kbd> și <kbd>Linie-punct</kbd>, reglând grosimea.
+<kbd>Desenează cu acest stil</kbd> face ca trăsăturile următoare să se nască
+deja îmbrăcate; <kbd>Elimină stilul</kbd> readuce linia plină. Nu este un
+efect al ecranului: liniuțele sunt segmente adevărate și rămân așa în PDF,
+DOCX, PNG, SVG și DXF.</li>
+<li><kbd>Exportați cu legendă</kbd> <span class="pro">PRO</span>: imaginea
 iese cu o bandă albă dedesubt — bara metrică (dacă există scara), săgeata
 nordului pentru fotografiile verticale, „vedere dinspre” pentru cele
 frontale.</li>
-<li><kbd>Exportă vectorial</kbd> <span class="pro">PRO</span>: SVG pentru
+<li><kbd>Exportați vectorial</kbd> <span class="pro">PRO</span>: SVG pentru
 desen, sau <strong>DXF</strong> pentru GIS. Cu cel puțin două puncte cotate
 cu coordonate pe o fotografie verticală, DXF-ul iese <strong>georeferențiat
 în UTM</strong> și în QGIS se poziționează singur pe glob; cu doar scara,
 iese în metri locali; fără niciuna dintre acestea, aplicația vă anunță și nu
-produce un fișier fără unități.</li>
+produce un fișier fără unități. SVG-ul face excepție la opacitate:
+încorporează fotografia originală ca atare, așa că fundalul estompat iese
+acolo la putere maximă.</li>
 <li>Când ați terminat, ascundeți fotografia: rămâne desenul curat, gata pentru raport.</li>
 </ol>
 <div class="schermate"><figure><img src="img/ro/06-disegno.webp" alt="Foaia de calc digitală" width="640" height="1391" loading="lazy"><figcaption>Foaia de calc digitală</figcaption></figure></div>
@@ -191,6 +245,13 @@ dumneavoastră către caster și primește corecțiile.</li>
 <li>Așteptați trecerea la <strong>RTK Fix</strong>: precizie centimetrică.
 Verificați pe un reper înainte de a începe.</li>
 </ol>
+<p class="nota">Acolo unde telefonul nu are semnal există și calea
+<strong>fără internet</strong>: o bază înfiptă într-un punct cunoscut și un
+rover care își trimit corecțiile prin radio <strong>LoRa</strong>, fără caster
+și fără cartelă SIM (kit RTK DFRobot cu punte ESP32). Pentru aplicație nu se
+schimbă nimic — primește de la receptor un NMEA deja corectat — iar montarea
+punții este documentată separat, în README-ul ei: acesta rămâne un ghid al
+aplicației, nu un manual de firmware.</p>
 
 <h2>Copie de siguranță și schimb</h2>
 <ol class="passi">
@@ -212,7 +273,9 @@ arhivă ZIP dacă aveți dubii.</p>
 <tr><td>GNSS</td><td>GPS intern, receptoare MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Rapoarte</td><td>Zilnic cu filigran</td><td>Toate, fără filigran</td></tr>
 <tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX cu logo și fotografii, GeoJSON</td></tr>
-<tr><td>Desene</td><td>Calc digital, zoom, texte, scară, puncte cotate</td><td>+ Decalc automat, exportă cu legendă, SVG/DXF</td></tr>
+<tr><td>Desene</td><td>Calc digital, zoom, texte, scară, puncte cotate, <strong>hașuri, stiluri de linie, opacitatea fundalului</strong></td><td>+ Exportați cu legendă, SVG/DXF</td></tr>
+<tr><td>Calchiere automată</td><td>—</td><td>La atingere și „Calchiați tot”</td></tr>
+<tr><td>Înregistrări NMEA</td><td>Recitirea și distribuirea fișierelor</td><td>Înregistrarea (necesită antena externă)</td></tr>
 <tr><td>Carnet de nivelment</td><td>✓</td><td>✓</td></tr>
 <tr><td>Fișă fotografică</td><td>—</td><td>Distribuire și fișe în rapoarte</td></tr>
 <tr><td>Dictare vocală</td><td>✓</td><td>✓</td></tr>
@@ -311,6 +374,60 @@ așteaptă rețeaua). Pe rețele lente de pe șantier poate dura toată aștepta
 încercați din nou pe Wi-Fi. Fără geotag pe fotografie, harta lipsește prin
 definiție.</p></details>
 
+<details><summary>„Calchiați tot” nu găsește nimic, sau găsește prea mult</summary>
+<ul>
+<li>turul lucrează pe fotografia de fundal: fără fotografie comanda nici nu
+există, iar cât timp se citește „Se pregătește fotografia…” modelul încă nu
+este gata — așteptați;</li>
+<li>dacă formele sunt puține, apăsați <kbd>Trecere fină</kbd>: reia cu o rețea
+mai deasă doar acolo unde primul tur nu văzuse nimic și adaugă ce găsește,
+fără să repună ceea ce excluseserăți;</li>
+<li>dacă sunt prea multe, nu aplicați tot: în previzualizare atingeți formele
+de prisos pentru a le exclude una câte una, apoi <kbd>Aplicați</kbd>. Ceea ce
+excludeți nu ajunge pe desen;</li>
+<li>fotografiile plate — contrast slab, lumină de amiază, teren de aceeași
+culoare peste tot — dau puține contururi, în mod firesc: acolo merită decalcul
+la o singură atingere, care știe unde vă uitați;</li>
+<li>dacă rămâne plin de forme mărunte, încercați din nou cu <kbd>Doar
+contururi</kbd>: se citesc mai bine, iar hașura se poate întinde oricând după
+aceea, de mână.</li>
+</ul></details>
+
+<details><summary>Trăsătura nu se lasă îmbrăcată</summary>
+<ul>
+<li>atingerea caută linia cea mai apropiată pe o rază cât un vârf de deget:
+dacă trăsătura este subțire sau zona aglomerată, <strong>măriți</strong> și
+atingeți mai precis, chiar deasupra cernelii;</li>
+<li>se îmbracă numai <strong>trăsăturile</strong>. Umplerile, casetele de text
+și crucile punctelor cotate nu sunt linii și nu răspund sub deget;</li>
+<li>dacă apare „Acestei linii nu i se poate schimba stilul”, printre liniile
+adunate de atingere se află una care linie nu este: punctulețul lăsat de o
+atingere pe loc, sau o trăsătură venită stricată dintr-o arhivă importată.
+Ștergeți punctulețul și încercați din nou, ori atingeți linia într-un loc
+departe de el. Un punctuleț singur nu se îmbracă și gata: nu ai cum să faci o
+linie întreruptă dintr-un punct;</li>
+<li>dacă între atingere și <kbd>Aplicați</kbd> ați anulat sau ați desenat
+altceva, selecția se desface singură ca să nu îmbrace trăsătura greșită:
+atingeți din nou linia și reluați.</li>
+</ul></details>
+
+<details><summary>Hașura nu apare când ating în interiorul formei</summary>
+<ul>
+<li>forma trebuie să fie <strong>închisă</strong>, și închisă dintr-o
+<strong>singură trăsătură</strong>: porniți și reveniți aproape în același
+punct fără să ridicați degetul (câțiva milimetri de abatere sunt tolerați).
+Două linii care se ating la capete rămân două linii deschise, iar a umple o
+planșă dincolo de o margine pe care nu a desenat-o nimeni ar fi mai rău decât
+a nu o umple deloc;</li>
+<li>contururile produse de <kbd>Calchiere</kbd> sunt închise prin construcție:
+acelea se umplu întotdeauna;</li>
+<li>dacă formele sunt una într-alta, atingerea o ia pe cea <strong>mai
+mică</strong> care o cuprinde — ca să umpleți forma mare, atingeți într-un
+punct care rămâne în afara celor mici;</li>
+<li>ați atins în interiorul formei, nu pe marginea ei? Ținta este suprafața,
+nu linia.</li>
+</ul></details>
+
 <details><summary>DXF-ul este respins, sau se deschide „lângă origine” în GIS</summary>
 <ul>
 <li>pentru DXF-ul <strong>georeferențiat</strong> este nevoie de o fotografie
@@ -322,6 +439,16 @@ vă anunță în prealabil;</li>
 <li>fără scară și fără puncte, exportul este refuzat: un DXF fără unități de
 măsură nu ar putea fi citit în mod util de niciun GIS.</li>
 </ul></details>
+
+<details><summary>Am estompat fundalul, dar SVG-ul iese cu fotografia întreagă</summary>
+<p>Așa este și așa rămâne: SVG-ul poartă în el <strong>fișierul
+original</strong> al fotografiei, nu o copie estompată a ei, iar deschiderea la
+culoare ar însemna recomprimarea ei — adică înrăutățirea ei pentru toți cei
+care deschid SVG-ul ca să lucreze. <kbd>Opacitatea fundalului…</kbd> este
+valabilă în editor, în PDF, în DOCX, în PNG și în <kbd>Exportați cu
+legendă</kbd>. Dacă vă trebuie vectorialul fără fotografie, alegeți <kbd>SVG —
+doar desenul</kbd>; dacă vă trebuie fotografia estompată, exportați în PNG sau
+treceți prin raport.</p></details>
 
 <details><summary>Săgeata nordului nu apare la exportul cu legendă</summary>
 <p>Săgeata apare doar pentru fotografiile <strong>verticale, făcute cu camera

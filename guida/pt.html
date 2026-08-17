@@ -78,12 +78,19 @@ acrescentar uma nota.</li>
 <li>Alterne entre <kbd>Lista</kbd> e <kbd>Mapa</kbd> para ver os pontos no
 terreno; a partir do mapa pode ativar o cadastro ou outro serviço WMS.</li>
 <li>Os marcos geodésicos (🏁) vivem na sua própria secção: importe-os de CSV
-ou crie-os, depois use a verificação para acompanhar os desvios ΔN/ΔE/ΔZ em
-tempo real antes de levantar.</li>
-<li>A <kbd>Caderneta de nivelamento</kbd> é a caderneta de campo do nível
+ou crie-os, depois abra a <kbd>Verificação em tempo real</kbd> e acompanhe os
+desvios ΔN/ΔE/ΔZ com a ponteira sobre o prego, antes de começar a levantar.</li>
+<li>Em <kbd>Cadernetas de nivelamento</kbd> está a caderneta de campo do nível
 ótico: estações, leituras de ré e de vante, altitudes calculadas a partir de
 um marco geodésico de partida, com o controlo de fecho. Os pontos nivelados
 entram no sítio com a sua altitude, tal como os pontos GNSS.</li>
+<li>Por baixo do painel estão as <kbd>Gravações NMEA</kbd>: o fluxo bruto do
+recetor externo <span class="pro">PRO</span> vai parar a ficheiros sozinho — a
+gravação começa quando liga a antena e fecha-se quando a desliga, sem que tenha
+de se lembrar disso. Serve para reler um dia duvidoso ou para entregar o bruto
+a quem faz o pós-processamento. Os ficheiros partilham-se e apagam-se, exceto o
+da gravação em curso; a lista abre-se mesmo com o recetor desligado, para que os
+ficheiros de ontem continuem acessíveis.</li>
 </ol>
 <div class="schermate"><figure><img src="img/pt/03-rilievo.webp" alt="O painel GNSS do Levantamento" width="640" height="1391" loading="lazy"><figcaption>O painel GNSS do Levantamento</figcaption></figure><figure><img src="img/pt/04-mappa.webp" alt="Pontos e marcos geodésicos no mapa" width="640" height="1391" loading="lazy"><figcaption>Pontos e marcos geodésicos no mapa</figcaption></figure></div>
 <p class="nota">Cada ponto guarda <strong>as duas altitudes</strong>:
@@ -114,24 +121,66 @@ ficha sai na mesma, com o painel de dados alargado.</li>
 <h3>✏️ Desenhos (em Media)</h3>
 <ol class="passi">
 <li>Crie uma nova prancha e escolha uma foto do sítio como fundo: é o seu
-papel vegetal digital. Um desenho pode continuar ao longo de vários dias.</li>
-<li>Decalque estratos, cortes e pedras com o dedo ou com a Apple Pencil;
-ajuste a opacidade da foto para ver melhor o traço. <strong>Belisque para
-ampliar</strong> (até 6×, toque duplo com dois dedos para voltar a 1×).</li>
-<li>O <kbd>Decalque automático</kbd> <span class="pro">PRO</span> reconhece
-o contorno do objeto que tocar (uma pedra, o limite de um estrato) e
-transforma-o em traço: a cor e a espessura mudam-se sem sair do modo. Tudo
-acontece no dispositivo, sem rede.</li>
-<li>Acrescente caixas de texto para as etiquetas (por ex., «UE 1002»):
+papel vegetal digital. Um desenho pode continuar ao longo de vários dias.
+Também pode não a pôr, a foto: sobre o papel vegetal branco desenha-se na
+mesma.</li>
+<li>Decalque estratos, cortes e pedras com o dedo ou com a Apple Pencil.
+<strong>Belisque para ampliar</strong> (até 6×, toque duplo com dois dedos para
+voltar a 1×). Se a foto lhe tapar o traço, no menu da câmara escolha
+<kbd>Opacidade do fundo…</kbd> e leve-a até onde precisar, de 5% a 100%: esbate
+a foto, não o desenho. A escolha fica na prancha e vale também em PDF, DOCX,
+PNG e <kbd>Exportar com legenda</kbd>.</li>
+<li>Todo o resto está em <kbd>Ferramentas</kbd> (a chave de bocas na barra),
+que é o índice dos seis modos: <kbd>Caixa de texto</kbd>, <kbd>Decalque</kbd>
+<span class="pro">PRO</span>, <kbd>Escala da foto</kbd>, <kbd>Ponto com
+altitude</kbd>, <kbd>Trama</kbd> e <kbd>Estilo da linha</kbd>. Mantém-se
+<strong>um só</strong> de cada vez: o visto diz qual, e enquanto estiver ligado
+o dedo não desenha, comanda essa ferramenta — para voltar a desenhar, toque
+novamente na entrada que tem o visto. Os três modos que trabalham sobre a
+imagem (decalque, escala, ponto cotado) só aparecem se houver uma foto de
+fundo.</li>
+<li>Com a <kbd>Caixa de texto</kbd> coloca as etiquetas (por ex., «UE 1002»):
 movem-se, redimensionam-se com o beliscão e há quatro tipos de letra à
 escolha.</li>
-<li>Com a ferramenta <kbd>Escala</kbd> (régua), toque nos dois extremos de
-uma medida conhecida — um segmento da baliza — e escreva a distância real: a
+<li>O <kbd>Decalque</kbd> <span class="pro">PRO</span> reconhece o contorno do
+objeto que tocar (uma pedra, o limite de um estrato) e transforma-o em traço:
+a cor, a espessura e o estilo da linha mudam-se sem sair do modo, e os
+contornos saem lisos em vez de aos degraus. Tudo acontece no dispositivo, sem
+rede.</li>
+<li>Dentro do decalque, <kbd>Decalcar tudo</kbd> <span class="pro">PRO</span>
+dá a volta sozinho a toda a foto. Na folha de arranque decide o aspeto —
+<kbd>Apenas contornos</kbd>, ou uma trama e talvez um <kbd>Véu de cor</kbd> — e
+prime <kbd>Iniciar</kbd>: a barra diz em que ponto vai, e leva algumas dezenas
+de segundos. O que aparece é uma <strong>pré-visualização</strong>, não o
+desenho: um toque dentro de uma forma exclui-a, outro volta a incluí-la (entre
+formas sobrepostas ganha a mais pequena sob o dedo), <kbd>Passagem fina</kbd>
+repassa apenas onde não tinha encontrado nada, e <kbd>Aplicar</kbd> põe no
+desenho o que sobrou. Enquanto não aplicar, a prancha fica intacta.</li>
+<li>Com a ferramenta <kbd>Escala da foto</kbd> (régua), toque nos dois extremos
+de uma medida conhecida — um segmento da baliza — e escreva a distância real: a
 foto adquire a escala, e a partir daí as exportações passam a falar em
 metros.</li>
-<li>Com <kbd>Ponto cotado</kbd>, coloque na foto a cruz de um ponto GNSS do
-sítio (ou um ponto introduzido manualmente): o nome, a altitude e as
-coordenadas aparecem numa etiqueta arrastável com a linha de chamada.</li>
+<li>Com <kbd>Ponto com altitude</kbd>, coloque na foto a cruz de um ponto GNSS
+do sítio (ou um ponto introduzido manualmente): o nome, a altitude e as
+coordenadas aparecem numa etiqueta arrastável com a linha de chamada. Belisque
+sobre a etiqueta selecionada para a diminuir ou aumentar, quando os valores
+tapam o desenho.</li>
+<li>A <kbd>Trama</kbd> preenche as formas: toca-se <strong>dentro</strong> de
+uma forma fechada e ela enche-se. Há as dez tramas de convenção —
+<kbd>Alvenaria / pedra</kbd>, <kbd>Tijolo</kbd>, <kbd>Argamassa / reboco</kbd>,
+<kbd>Argila</kbd>, <kbd>Silte</kbd>, <kbd>Areia</kbd>, <kbd>Cascalho</kbd>,
+<kbd>Carvão / cinza</kbd>, <kbd>Rocha natural</kbd>, <kbd>Madeira</kbd> — e o
+<kbd>Véu de cor</kbd> (uma cor com a sua opacidade), sozinhos ou juntos. Se uma
+forma estiver dentro de outra ganha a mais pequena sob o dedo; <kbd>Remover
+preenchimento</kbd> limpa-a. Não é precisa foto: o preenchimento trabalha sobre
+as formas desenhadas, por isso funciona também no papel vegetal branco.</li>
+<li>O <kbd>Estilo da linha</kbd> veste um traço <strong>já desenhado</strong>:
+toca-se nele e escolhe-se entre <kbd>Contínua</kbd>, <kbd>Tracejada</kbd>,
+<kbd>Pontilhada</kbd> e <kbd>Traço-ponto</kbd>, regulando a espessura.
+<kbd>Desenhar com este estilo</kbd> faz nascer já vestidos os traços seguintes;
+<kbd>Remover estilo</kbd> devolve a linha cheia. Não é um efeito do ecrã: os
+tracinhos são segmentos verdadeiros, e continuam a sê-lo em PDF, DOCX, PNG, SVG
+e DXF.</li>
 <li><kbd>Exportar com legenda</kbd> <span class="pro">PRO</span>: a
 imagem sai com uma faixa branca por baixo — barra métrica (se a escala
 existir), seta do norte para as fotos tiradas a prumo, «vista de» para as
@@ -141,7 +190,9 @@ desenho, ou <strong>DXF</strong> para o SIG. Com pelo menos dois pontos
 cotados com coordenadas numa foto a prumo, o DXF sai
 <strong>georreferenciado em UTM</strong> e no QGIS posiciona-se sozinho no
 mundo; apenas com a escala sai em metros locais; sem uma coisa nem outra, a
-aplicação avisa e não produz um ficheiro sem unidades.</li>
+aplicação avisa e não produz um ficheiro sem unidades. O SVG é a exceção
+quanto à opacidade: incorpora a foto original tal e qual, por isso o fundo
+esbatido sai ali com toda a força.</li>
 <li>Quando terminar, oculte a foto: fica o desenho limpo, pronto para o relatório.</li>
 </ol>
 <div class="schermate"><figure><img src="img/pt/06-disegno.webp" alt="O papel vegetal digital" width="640" height="1391" loading="lazy"><figcaption>O papel vegetal digital</figcaption></figure></div>
@@ -187,6 +238,13 @@ as correções.</li>
 <li>Aguarde a passagem a <strong>RTK Fix</strong>: precisão centimétrica.
 Verifique num marco geodésico antes de começar.</li>
 </ol>
+<p class="nota">Onde o telemóvel não apanha rede existe também o caminho
+<strong>sem internet</strong>: uma base fincada num ponto conhecido e um rover
+que trocam entre si as correções por rádio <strong>LoRa</strong>, sem caster e
+sem SIM (kit RTK DFRobot com ponte ESP32). Para a aplicação nada muda — recebe
+do recetor um NMEA já corrigido — e a montagem da ponte está documentada à
+parte, no seu README: isto continua a ser um guia da aplicação, não um manual
+de firmware.</p>
 
 <h2>Cópia de segurança e intercâmbio</h2>
 <ol class="passi">
@@ -207,7 +265,9 @@ conteúdo e é <strong>irreversível</strong>: exporte primeiro um ZIP em caso d
 <tr><td>GNSS</td><td>GPS interno, recetores MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Relatórios</td><td>Diário com marca de água</td><td>Todos, sem marca de água</td></tr>
 <tr><td>Exportação</td><td>PDF, CSV</td><td>+ DOCX com logótipo e fotos, GeoJSON</td></tr>
-<tr><td>Desenhos</td><td>Papel vegetal, zoom, textos, escala, pontos cotados</td><td>+ Decalque automático, exportar com legenda, SVG/DXF</td></tr>
+<tr><td>Desenhos</td><td>Papel vegetal, zoom, textos, escala, pontos cotados, <strong>tramas, estilos de linha, opacidade do fundo</strong></td><td>+ Exportar com legenda, SVG/DXF</td></tr>
+<tr><td>Decalque automático</td><td>—</td><td>Por toque e «Decalcar tudo»</td></tr>
+<tr><td>Gravações NMEA</td><td>Releitura e partilha dos ficheiros</td><td>A gravação (requer a antena externa)</td></tr>
 <tr><td>Caderneta de nivelamento</td><td>✓</td><td>✓</td></tr>
 <tr><td>Ficha fotográfica</td><td>—</td><td>Partilha e fichas nos relatórios</td></tr>
 <tr><td>Ditado por voz</td><td>✓</td><td>✓</td></tr>
@@ -301,6 +361,56 @@ Em redes lentas de estaleiro, pode ser necessária a espera completa: tente
 novamente sob Wi-Fi. Sem geolocalização na foto, o mapa não existe por
 definição.</p></details>
 
+<details><summary>«Decalcar tudo» não encontra nada, ou encontra de mais</summary>
+<ul>
+<li>a volta trabalha sobre a foto de fundo: sem foto o comando não existe, e
+enquanto se ler «A preparar a foto…» o modelo ainda não está pronto — aguarde;</li>
+<li>se as formas forem poucas, prima <kbd>Passagem fina</kbd>: repassa com uma
+grelha mais apertada só onde a primeira volta não tinha visto nada, e acrescenta
+o que encontra sem repor o que tinha excluído;</li>
+<li>se forem de mais, não aplique tudo: na pré-visualização toque nas formas a
+mais para as excluir uma a uma, depois <kbd>Aplicar</kbd>. O que excluir não vai
+parar ao desenho;</li>
+<li>as fotos chatas — pouco contraste, luz de meio-dia, terreno todo da mesma
+cor — dão poucos contornos, por força das coisas: aí compensa o decalque a
+toque único, que sabe para onde está a olhar;</li>
+<li>se ficar cheio de formas minúsculas, tente de novo com <kbd>Apenas
+contornos</kbd>: leem-se melhor, e a trama pode sempre estender-se depois, à
+mão.</li>
+</ul></details>
+
+<details><summary>O traço não se deixa vestir</summary>
+<ul>
+<li>o toque procura a linha mais próxima dentro do raio de uma ponta de dedo: se
+o traço for fino ou a zona estiver apinhada, <strong>amplie</strong> e toque com
+mais pontaria, mesmo por cima da tinta;</li>
+<li>só se vestem os <strong>traços</strong>. Preenchimentos, caixas de texto e
+cruzes dos pontos cotados não são linhas, e sob o dedo não respondem;</li>
+<li>se aparecer «Este traço não pode ser reestilizado», entre as linhas que o
+toque apanhou há uma que linha não é: o pontinho deixado por um toque parado, ou
+um traço que chegou estragado de um arquivo importado. Apague o pontinho e tente
+de novo, ou toque na linha num sítio afastado dele. Um pontinho sozinho não se
+veste, e pronto: não há maneira de fazer um tracejado com um ponto;</li>
+<li>se entre o toque e o <kbd>Aplicar</kbd> desfez ou desenhou outra coisa, a
+seleção desfaz-se sozinha para não vestir o traço errado: toque novamente na
+linha e repita.</li>
+</ul></details>
+
+<details><summary>A trama não aparece quando toco dentro da forma</summary>
+<ul>
+<li>a forma tem de estar <strong>fechada</strong>, e fechada por <strong>um só
+traço</strong>: parte-se e volta-se quase ao mesmo ponto sem levantar o dedo
+(alguns milímetros de folga são tolerados). Duas linhas que se tocam nas pontas
+continuam a ser duas linhas abertas, e encher uma prancha para lá de um bordo
+que ninguém desenhou seria pior do que não a encher;</li>
+<li>os contornos produzidos pelo <kbd>Decalque</kbd> são fechados por
+construção: esses preenchem-se sempre;</li>
+<li>se as formas estiverem umas dentro das outras, o toque apanha a <strong>mais
+pequena</strong> que o contém — para preencher a grande, toque num sítio que
+fique fora das pequenas;</li>
+<li>tocou dentro da forma, e não no seu bordo? O alvo é a área, não a linha.</li>
+</ul></details>
+
 <details><summary>O DXF é rejeitado, ou abre-se «perto da origem» no SIG</summary>
 <ul>
 <li>para o DXF <strong>georreferenciado</strong> são necessários uma foto
@@ -312,6 +422,15 @@ avisa antes;</li>
 <li>sem escala nem pontos, a exportação é recusada: um DXF sem unidades não
 seria legível com sentido por nenhum SIG.</li>
 </ul></details>
+
+<details><summary>Esbati o fundo, mas o SVG sai com a foto cheia</summary>
+<p>É assim e assim fica: o SVG leva lá dentro o <strong>ficheiro
+original</strong> da foto, não uma cópia esbatida dela, e clareá-la obrigaria a
+recomprimi-la — ou seja, a piorá-la para todos os que abrem o SVG para
+trabalhar. A <kbd>Opacidade do fundo…</kbd> vale no editor, no PDF, no DOCX, no
+PNG e em <kbd>Exportar com legenda</kbd>. Se precisar do vetorial sem foto,
+escolha <kbd>SVG — apenas o desenho</kbd>; se precisar da foto esbatida,
+exporte em PNG ou passe pelo relatório.</p></details>
 
 <details><summary>A seta do norte não aparece na exportação com legenda</summary>
 <p>A seta só aparece nas fotos <strong>tiradas a prumo com a câmara da
