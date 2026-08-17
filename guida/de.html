@@ -82,12 +82,21 @@ möglich.</li>
 <li>Wechseln Sie zwischen <kbd>Liste</kbd> und <kbd>Karte</kbd>; in der Karte
 lassen sich Kataster- oder andere WMS-Dienste einblenden.</li>
 <li>Festpunkte (🏁) haben ihren eigenen Bereich: aus CSV importieren oder
-anlegen, dann mit der Prüfung die Abweichungen ΔN/ΔE/ΔH live kontrollieren,
-bevor Sie messen.</li>
-<li>Die <kbd>Nivellierbücher</kbd> dienen als Feldbuch für das
+anlegen, dann die <kbd>Live-Kontrolle</kbd> öffnen und mit der Spitze auf dem
+Nagel die Abweichungen ΔN/ΔE/ΔH kontrollieren, bevor Sie zu messen
+beginnen.</li>
+<li>Unter <kbd>Nivellierbücher</kbd> steht das Feldbuch für das
 Nivelliergerät: Stationen, Rück- und Vorblicke, ab einem Ausgangsfestpunkt
 berechnete Höhen, mit Kontrolle des Schlussfehlers. Nivellierte Punkte kommen
 mit ihrer Höhe in den Fundplatz, genau wie GNSS-Punkte.</li>
+<li>Unter dem Feld stehen die <kbd>NMEA-Aufzeichnungen</kbd>: Der Rohdatenstrom
+des externen Empfängers <span class="pro">PRO</span> landet von selbst in einer
+Datei — die Aufzeichnung beginnt, wenn Sie die Antenne einschalten, und endet,
+wenn Sie sie ausschalten, ohne dass Sie daran denken müssen. Das dient zum
+Nachlesen eines zweifelhaften Tages oder zur Übergabe der Rohdaten an die
+Nachbearbeitung. Die Dateien lassen sich teilen und löschen, bis auf die
+gerade laufende Aufzeichnung; die Liste öffnet sich auch bei ausgeschaltetem
+Empfänger, so bleiben die Dateien von gestern erreichbar.</li>
 </ol>
 <div class="schermate"><figure><img src="img/de/03-rilievo.webp" alt="Das GNSS-Feld der Vermessung" width="640" height="1391" loading="lazy"><figcaption>Das GNSS-Feld der Vermessung</figcaption></figure><figure><img src="img/de/04-mappa.webp" alt="Punkte und Festpunkte auf der Karte" width="640" height="1391" loading="lazy"><figcaption>Punkte und Festpunkte auf der Karte</figcaption></figure></div>
 <p class="nota">Jeder Punkt speichert <strong>beide Höhen</strong>:
@@ -121,27 +130,70 @@ trotzdem, mit einem größeren Datenfeld.</li>
 <ol class="passi">
 <li>Neues Blatt anlegen und ein Grabungsfoto als Hintergrund wählen: Ihr
 digitales Transparentpapier. Eine Zeichnung kann sich über mehrere Tage
-erstrecken.</li>
+erstrecken. Man kann das Foto auch weglassen: Auf dem weißen Blatt zeichnet
+es sich genauso.</li>
 <li>Schichten, Befunde und Steine mit dem Finger oder dem Apple Pencil
-durchpausen; die Deckkraft des Fotos regeln, um die Linien besser zu sehen.
-<strong>Mit zwei Fingern zoomen</strong> (bis 6×, Doppeltipp mit zwei Fingern
-für zurück auf 1×).</li>
-<li><kbd>Automatisches Nachzeichnen</kbd> <span class="pro">PRO</span>
-erkennt die Kontur des Objekts, das Sie antippen (ein Stein, die Grenze einer
-Schicht), und verwandelt sie in eine Linie: Farbe und Strichstärke lassen
-sich ändern, ohne den Modus zu verlassen. Alles geschieht auf dem Gerät, ohne
-Netz.</li>
-<li>Textfelder für Beschriftungen (z. B. „Bef. 1002“) hinzufügen: Sie lassen
-sich verschieben, mit zwei Fingern skalieren und bieten vier Schriftarten zur
-Auswahl.</li>
-<li>Mit dem Werkzeug <kbd>Maßstab</kbd> (Lineal) tippen Sie die beiden Enden
-eines bekannten Maßes an — ein Abschnitt der Messlatte — und geben die wahre
-Entfernung ein: Das Foto erhält den Maßstab, und ab da sprechen die Exporte
-in Metern.</li>
+durchpausen. <strong>Mit zwei Fingern zoomen</strong> (bis 6×, Doppeltipp mit
+zwei Fingern für zurück auf 1×). Verdeckt das Foto Ihre Linien, wählen Sie im
+Kameramenü <kbd>Deckkraft des Hintergrunds…</kbd> und regeln Sie sie nach
+Bedarf, von 5% bis 100%: Es blasst das Foto aus, nicht die Zeichnung. Die
+Wahl bleibt am Blatt und gilt auch in PDF, DOCX, PNG und bei <kbd>Mit Legende
+exportieren</kbd>.</li>
+<li>Alles Übrige steht unter <kbd>Werkzeuge</kbd> (der Schraubenschlüssel in
+der Leiste), dem Verzeichnis der sechs Modi: <kbd>Textfeld</kbd>,
+<kbd>Nachzeichnen</kbd> <span class="pro">PRO</span>, <kbd>Fotomaßstab</kbd>,
+<kbd>Punkt mit Höhe</kbd>, <kbd>Schraffur</kbd> und <kbd>Linienstil</kbd>. Es
+gilt immer nur <strong>einer</strong>: Das Häkchen sagt, welcher, und solange
+er an ist, zeichnet der Finger nicht, sondern steuert dieses Werkzeug — zum
+Zeichnen tippen Sie den angehakten Eintrag erneut an. Die drei Einträge, die
+am Bild arbeiten (Nachzeichnen, Maßstab, Punkt mit Höhe), erscheinen nur, wenn
+ein Hintergrundfoto da ist.</li>
+<li>Mit <kbd>Textfeld</kbd> setzen Sie die Beschriftungen (z. B. „Bef. 1002“):
+Sie lassen sich verschieben, mit zwei Fingern skalieren und bieten vier
+Schriftarten zur Auswahl.</li>
+<li><kbd>Nachzeichnen</kbd> <span class="pro">PRO</span> erkennt die Kontur des
+Objekts, das Sie antippen (ein Stein, die Grenze einer Schicht), und verwandelt
+sie in eine Linie: Farbe, Strichstärke und Linienstil lassen sich ändern, ohne
+den Modus zu verlassen, und die Konturen kommen glatt heraus statt treppig.
+Alles geschieht auf dem Gerät, ohne Netz.</li>
+<li>Im Nachzeichnen geht <kbd>Alles nachzeichnen</kbd>
+<span class="pro">PRO</span> das ganze Foto von allein durch. Im Startblatt
+bestimmen Sie das Aussehen — <kbd>Nur Umrisse</kbd>, oder eine Schraffur und
+vielleicht ein <kbd>Farbschleier</kbd> — und drücken <kbd>Starten</kbd>: Die
+Leiste sagt, wie weit es ist, und es dauert einige Dutzend Sekunden. Was
+erscheint, ist eine <strong>Vorschau</strong>, nicht die Zeichnung: Ein Tipp in
+eine Form schließt sie aus, ein weiterer nimmt sie wieder auf (bei
+überlappenden Formen gewinnt die kleinste unter dem Finger),
+<kbd>Feindurchgang</kbd> geht nur dort noch einmal durch, wo nichts gefunden
+wurde, und <kbd>Anwenden</kbd> setzt das Verbliebene auf die Zeichnung. Bis Sie
+anwenden, bleibt das Blatt unberührt.</li>
+<li>Mit dem Werkzeug <kbd>Fotomaßstab</kbd> (Lineal) tippen Sie die beiden
+Enden eines bekannten Maßes an — ein Abschnitt der Messlatte — und geben die
+wahre Entfernung ein: Das Foto erhält den Maßstab, und ab da sprechen die
+Exporte in Metern.</li>
 <li>Mit <kbd>Punkt mit Höhe</kbd> setzen Sie auf dem Foto das Fadenkreuz
 eines GNSS-Punkts des Fundplatzes (oder eines von Hand eingegebenen Punkts):
 Name, Höhe und Koordinaten erscheinen in einem verschiebbaren Etikett mit
-Hinweislinie.</li>
+Hinweislinie. Mit zwei Fingern auf dem ausgewählten Etikett machen Sie es
+kleiner oder größer, wenn die Werte die Zeichnung verdecken.</li>
+<li>Die <kbd>Schraffur</kbd> füllt die Formen: Sie tippen
+<strong>innerhalb</strong> einer geschlossenen Form, und sie füllt sich. Es
+gibt die zehn Konventionsschraffuren — <kbd>Mauerwerk / Stein</kbd>,
+<kbd>Ziegel</kbd>, <kbd>Mörtel / Putz</kbd>, <kbd>Ton</kbd>,
+<kbd>Schluff</kbd>, <kbd>Sand</kbd>, <kbd>Kies</kbd>, <kbd>Holzkohle /
+Asche</kbd>, <kbd>Anstehender Fels</kbd>, <kbd>Holz</kbd> — und den
+<kbd>Farbschleier</kbd> (eine Farbe mit eigener Deckkraft), einzeln oder
+zusammen. Liegt eine Form in einer anderen, gewinnt die kleinste unter dem
+Finger; <kbd>Füllung entfernen</kbd> räumt sie wieder ab. Ein Foto braucht es
+dafür nicht: Die Füllung arbeitet an den gezeichneten Formen, also auch auf dem
+weißen Blatt.</li>
+<li>Der <kbd>Linienstil</kbd> kleidet eine <strong>bereits gezeichnete</strong>
+Linie ein: Sie tippen sie an und wählen zwischen <kbd>Durchgezogen</kbd>,
+<kbd>Gestrichelt</kbd>, <kbd>Gepunktet</kbd> und <kbd>Strichpunkt</kbd>, samt
+Strichstärke. <kbd>Mit diesem Stil zeichnen</kbd> lässt die folgenden Linien
+gleich eingekleidet entstehen; <kbd>Stil entfernen</kbd> macht die Linie wieder
+voll. Das ist kein Bildschirmeffekt: Die Striche sind echte Segmente und
+bleiben es in PDF, DOCX, PNG, SVG und DXF.</li>
 <li><kbd>Mit Legende exportieren</kbd> <span class="pro">PRO</span>: Das Bild
 bekommt unten einen weißen Streifen — Maßstabsbalken (falls der Maßstab
 gesetzt ist), Nordpfeil bei senkrecht aufgenommenen Fotos, „aufgenommen
@@ -151,7 +203,9 @@ die Zeichnung, oder <strong>DXF</strong> fürs GIS. Mit mindestens zwei
 Punkten mit Höhe und Koordinaten auf einem senkrecht aufgenommenen Foto kommt
 das DXF <strong>in UTM georeferenziert</strong> heraus und positioniert sich
 in QGIS von selbst; nur mit dem Maßstab kommt es in lokalen Metern heraus;
-ohne beides sagt die App das und erzeugt keine Datei ohne Einheit.</li>
+ohne beides sagt die App das und erzeugt keine Datei ohne Einheit. Beim SVG
+gilt die Deckkraft nicht: Es bettet das Originalfoto unverändert ein, also
+kommt der abgeschwächte Hintergrund dort in voller Stärke heraus.</li>
 <li>Am Ende das Foto ausblenden: Die saubere Zeichnung bleibt, fertig für den
 Bericht.</li>
 </ol>
@@ -198,6 +252,14 @@ Die App sendet die Position an den Caster und empfängt die Korrekturen.</li>
 <li>Auf <strong>RTK Fix</strong> warten: Zentimetergenauigkeit. Vor Beginn an
 einem Festpunkt prüfen.</li>
 </ol>
+<p class="nota">Wo das Telefon keinen Empfang hat, gibt es auch den Weg
+<strong>ohne Internet</strong>: eine auf einem bekannten Punkt aufgestellte
+Basis und ein Rover, die die Korrekturen per <strong>LoRa</strong>-Funk
+austauschen, ohne Caster und ohne SIM (RTK-Kit von DFRobot mit ESP32-Brücke).
+Für die App ändert sich nichts — sie empfängt vom Empfänger ein bereits
+korrigiertes NMEA —, und der Aufbau der Brücke ist gesondert dokumentiert, in
+ihrer eigenen README: Dies bleibt eine Anleitung zur App, kein
+Firmware-Handbuch.</p>
 
 <h2>Sicherung und Austausch</h2>
 <ol class="passi">
@@ -219,7 +281,9 @@ exportieren.</p>
 <tr><td>GNSS</td><td>Internes GPS, MFi-Empfänger</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Berichte</td><td>Tagesbericht mit Wasserzeichen</td><td>Alle, ohne Wasserzeichen</td></tr>
 <tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX mit Logo und Fotos, GeoJSON</td></tr>
-<tr><td>Zeichnungen</td><td>Transparentpapier, Zoom, Textfelder, Maßstab, Punkte mit Höhe</td><td>+ Automatisches Nachzeichnen, mit Legende exportieren, SVG/DXF</td></tr>
+<tr><td>Zeichnungen</td><td>Transparentpapier, Zoom, Textfelder, Maßstab, Punkte mit Höhe, <strong>Schraffuren, Linienstile, Deckkraft des Hintergrunds</strong></td><td>+ Mit Legende exportieren, SVG/DXF</td></tr>
+<tr><td>Automatisches Nachzeichnen</td><td>—</td><td>Per Tipp und „Alles nachzeichnen“</td></tr>
+<tr><td>NMEA-Aufzeichnungen</td><td>Nachlesen und Teilen der Dateien</td><td>Die Aufzeichnung (braucht die externe Antenne)</td></tr>
 <tr><td>Nivellierbücher</td><td>✓</td><td>✓</td></tr>
 <tr><td>Fotoblatt</td><td>—</td><td>Teilen und Blätter in Berichten</td></tr>
 <tr><td>Diktierfunktion</td><td>✓</td><td>✓</td></tr>
@@ -321,6 +385,64 @@ warten nicht auf das Netz). Bei langsamen Netzen auf der Grabung kann die
 ganze Wartezeit nötig sein: unter WLAN erneut versuchen. Ohne Koordinaten im
 Foto gibt es die Karte grundsätzlich nicht.</p></details>
 
+<details><summary>„Alles nachzeichnen“ findet nichts, oder findet zu viel</summary>
+<ul>
+<li>der Durchgang arbeitet am Hintergrundfoto: ohne Foto gibt es den Befehl
+nicht, und solange „Foto wird vorbereitet…“ zu lesen ist, ist das Modell noch
+nicht bereit — warten Sie;</li>
+<li>sind es zu wenige Formen, drücken Sie <kbd>Feindurchgang</kbd>: Er geht mit
+einem dichteren Raster nur dort noch einmal durch, wo der erste nichts gesehen
+hatte, und fügt hinzu, was er findet, ohne das Ausgeschlossene
+zurückzuholen;</li>
+<li>sind es zu viele, wenden Sie nicht alles an: Tippen Sie in der Vorschau die
+überzähligen Formen einzeln an, um sie auszuschließen, dann
+<kbd>Anwenden</kbd>. Was Sie ausschließen, kommt nicht auf die Zeichnung;</li>
+<li>flaue Fotos — wenig Kontrast, Mittagslicht, Boden durchweg in derselben
+Farbe — geben zwangsläufig wenige Konturen: Dort ist das Nachzeichnen mit
+einzelnem Tipp besser, denn es weiß, wohin Sie schauen;</li>
+<li>bleibt eine Menge winziger Formen übrig, versuchen Sie es erneut mit
+<kbd>Nur Umrisse</kbd>: Die lesen sich besser, und die Schraffur lässt sich
+immer noch später von Hand auftragen.</li>
+</ul></details>
+
+<details><summary>Die Linie lässt sich nicht einkleiden</summary>
+<ul>
+<li>der Tipp sucht die nächstgelegene Linie im Umkreis einer Fingerkuppe: Ist
+die Linie dünn oder die Stelle voll, <strong>zoomen</strong> Sie und tippen Sie
+genauer, direkt auf die Tinte;</li>
+<li>eingekleidet werden nur <strong>Linien</strong>. Füllungen, Textfelder und
+die Fadenkreuze der Punkte mit Höhe sind keine Linien und antworten unter dem
+Finger nicht;</li>
+<li>erscheint „Dieser Strich lässt sich nicht neu gestalten“, ist unter den
+Linien, die der Tipp erfasst hat, eine, die keine Linie ist: der Punkt, den ein
+stehender Tipp hinterlässt, oder eine Linie, die beschädigt aus einem
+importierten Archiv kam. Löschen Sie den Punkt und versuchen Sie es erneut,
+oder tippen Sie die Linie an einer weiter entfernten Stelle an. Ein einzelner
+Punkt lässt sich schlicht nicht einkleiden: Aus einem Punkt wird keine
+gestrichelte Linie;</li>
+<li>haben Sie zwischen dem Tipp und <kbd>Anwenden</kbd> etwas widerrufen oder
+etwas anderes gezeichnet, löst sich die Auswahl von selbst, um nicht die
+falsche Linie einzukleiden: Tippen Sie die Linie erneut an und versuchen Sie es
+noch einmal.</li>
+</ul></details>
+
+<details><summary>Die Schraffur erscheint nicht, wenn ich in die Form tippe</summary>
+<ul>
+<li>die Form muss <strong>geschlossen</strong> sein, und zwar durch
+<strong>eine einzige Linie</strong>: Beginnen Sie und kehren Sie fast zum
+selben Punkt zurück, ohne den Finger abzuheben (ein paar Millimeter Abstand
+sind erlaubt). Zwei Linien, die sich an den Enden berühren, bleiben zwei
+offene Linien, und ein Blatt über eine Kante hinaus zu fluten, die niemand
+gezeichnet hat, wäre schlimmer, als es gar nicht zu füllen;</li>
+<li>die vom <kbd>Nachzeichnen</kbd> erzeugten Konturen sind bauartbedingt
+geschlossen: Die füllen sich immer;</li>
+<li>liegen die Formen ineinander, nimmt der Tipp die <strong>kleinste</strong>,
+die ihn enthält — um die große zu füllen, tippen Sie an einer Stelle außerhalb
+der kleinen;</li>
+<li>haben Sie in die Form getippt und nicht auf ihren Rand? Das Ziel ist die
+Fläche, nicht die Linie.</li>
+</ul></details>
+
 <details><summary>Das DXF wird abgelehnt, oder öffnet sich „in der Nähe des Ursprungs“ im GIS</summary>
 <ul>
 <li>für ein <strong>georeferenziertes</strong> DXF sind ein mit der
@@ -332,6 +454,16 @@ des Ursprungs — die App sagt das vorher;</li>
 <li>ohne Maßstab und ohne Punkte wird der Export verweigert: ein DXF ohne
 Einheit wäre in keinem GIS sinnvoll lesbar.</li>
 </ul></details>
+
+<details><summary>Ich habe den Hintergrund abgeschwächt, aber das SVG kommt mit dem vollen Foto</summary>
+<p>Das ist so und bleibt so: Das SVG trägt die <strong>Originaldatei</strong>
+des Fotos in sich, keine ausgeblasste Kopie davon, und sie aufzuhellen hieße,
+sie neu zu komprimieren — sie also für alle zu verschlechtern, die das SVG zum
+Arbeiten öffnen. <kbd>Deckkraft des Hintergrunds…</kbd> gilt im Editor, im PDF,
+im DOCX, im PNG und bei <kbd>Mit Legende exportieren</kbd>. Brauchen Sie das
+Vektorbild ohne Foto, wählen Sie <kbd>SVG — nur die Zeichnung</kbd>; brauchen
+Sie das abgeschwächte Foto, exportieren Sie als PNG oder gehen Sie über den
+Bericht.</p></details>
 
 <details><summary>Der Nordpfeil erscheint nicht bei „Mit Legende exportieren“</summary>
 <p>Der Pfeil erscheint nur bei Fotos, die <strong>mit der App-Kamera

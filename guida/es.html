@@ -80,12 +80,19 @@ añadir una nota.</li>
 <li>Cambia entre <kbd>Lista</kbd> y <kbd>Mapa</kbd> para ver los puntos sobre
 el terreno; desde el mapa puedes activar el catastro u otro servicio WMS.</li>
 <li>Las bases de replanteo (🏁) tienen su propia sección: impórtalas de CSV o
-créalas, y usa la comprobación para vigilar los residuos ΔN/ΔE/ΔZ en vivo
-antes de medir.</li>
-<li>Las <kbd>Libretas de nivelación</kbd> son la libreta de campo del nivel
+créalas, y abre la <kbd>Comprobación en vivo</kbd> para vigilar los residuos
+ΔN/ΔE/ΔZ con la punta sobre el clavo, antes de empezar a medir.</li>
+<li>Bajo <kbd>Libretas de nivelación</kbd> está la libreta de campo del nivel
 óptico: estaciones, lecturas atrás y adelante, cotas calculadas desde una
 base de partida, con el control del error de cierre. Los puntos nivelados
 entran en el yacimiento con su cota, igual que los GNSS.</li>
+<li>Bajo el panel están las <kbd>Grabaciones NMEA</kbd>: el flujo bruto del
+receptor externo <span class="pro">PRO</span> acaba en un archivo por sí solo
+— la grabación arranca cuando enciendes la antena y se cierra cuando la apagas,
+sin que tengas que acordarte. Sirve para releer una jornada dudosa o para
+entregar el bruto a quien hace el posproceso. Los archivos se comparten y se
+borran, salvo el de la grabación en curso; la lista se abre también con el
+receptor apagado, así los archivos de ayer siguen al alcance.</li>
 </ol>
 <div class="schermate"><figure><img src="img/es/03-rilievo.webp" alt="El panel GNSS de Topografía" width="640" height="1391" loading="lazy"><figcaption>El panel GNSS de Topografía</figcaption></figure><figure><img src="img/es/04-mappa.webp" alt="Puntos y bases en el mapa" width="640" height="1391" loading="lazy"><figcaption>Puntos y bases en el mapa</figcaption></figure></div>
 <p class="nota">Cada punto guarda <strong>las dos cotas</strong>: elipsoidal y
@@ -116,23 +123,67 @@ ficha sale igualmente, con el panel de datos ampliado.</li>
 <h3>✏️ Dibujos (en Multimedia)</h3>
 <ol class="passi">
 <li>Crea una lámina nueva y elige una foto del yacimiento como fondo: es tu
-papel vegetal digital. Un dibujo puede continuar en varias jornadas.</li>
-<li>Calca estratos, cortes y piedras con el dedo o el Apple Pencil; regula la
-opacidad de la foto para ver mejor el trazo. <strong>Pellizca para hacer
-zoom</strong> (hasta 6×, doble toque con dos dedos para volver a 1×).</li>
-<li>El <kbd>Calco automático</kbd> <span class="pro">PRO</span> reconoce el
-contorno del objeto que tocas (una piedra, el límite de un estrato) y lo
-convierte en trazo: el color y el grosor se cambian sin salir del modo. Todo
-ocurre en el dispositivo, sin red.</li>
-<li>Añade cuadros de texto para las etiquetas (p. ej. «UE 1002»): se mueven,
-se redimensionan con el pellizco y tienen cuatro tipos de letra entre los que
-elegir.</li>
-<li>Con la herramienta <kbd>Escala</kbd> (regla) tocas los dos extremos de
-una medida conocida — un tramo del jalón — y escribes la distancia real: la
-foto adquiere la escala, y desde ahí las exportaciones hablan en metros.</li>
+papel vegetal digital. Un dibujo puede continuar en varias jornadas. También
+puedes no ponerla, la foto: sobre el papel vegetal en blanco se dibuja
+igual.</li>
+<li>Calca estratos, cortes y piedras con el dedo o el Apple Pencil.
+<strong>Pellizca para hacer zoom</strong> (hasta 6×, doble toque con dos dedos
+para volver a 1×). Si la foto te tapa el trazo, elige <kbd>Opacidad del
+fondo…</kbd> en el menú de la cámara y llévala donde haga falta, del 5% al
+100%: desvanece la foto, no el dibujo. La elección se queda en la lámina y vale
+también en PDF, DOCX, PNG y en <kbd>Exportar con leyenda</kbd>.</li>
+<li>Todo lo demás está bajo <kbd>Herramientas</kbd> (la llave inglesa de la
+barra), que es el índice de los seis modos: <kbd>Cuadro de texto</kbd>,
+<kbd>Calco</kbd> <span class="pro">PRO</span>, <kbd>Escala de la foto</kbd>,
+<kbd>Punto con cota</kbd>, <kbd>Trama</kbd> y <kbd>Estilo de línea</kbd>. Se
+mantiene <strong>uno solo</strong> a la vez: la marca dice cuál, y mientras
+está encendido el dedo no dibuja sino que gobierna esa herramienta — para
+volver a dibujar, toca de nuevo la entrada marcada. Las tres entradas que
+trabajan sobre la imagen (calco, escala, punto con cota) solo aparecen si hay
+una foto de fondo.</li>
+<li>Con <kbd>Cuadro de texto</kbd> pones las etiquetas (p. ej. «UE 1002»): se
+mueven, se redimensionan con el pellizco y tienen cuatro tipos de letra entre
+los que elegir.</li>
+<li>El <kbd>Calco</kbd> <span class="pro">PRO</span> reconoce el contorno del
+objeto que tocas (una piedra, el límite de un estrato) y lo convierte en trazo:
+el color, el grosor y el estilo de la línea se cambian sin salir del modo, y
+los contornos salen lisos en vez de escalonados. Todo ocurre en el dispositivo,
+sin red.</li>
+<li>Dentro del calco, <kbd>Calcar todo</kbd> <span class="pro">PRO</span>
+recorre él solo toda la foto. En la hoja de arranque decides el aspecto —
+<kbd>Solo contornos</kbd>, o una trama y quizá un <kbd>Velo de color</kbd> — y
+pulsas <kbd>Iniciar</kbd>: la barra dice por dónde va, y tarda algunas decenas
+de segundos. Lo que aparece es una <strong>vista previa</strong>, no el dibujo:
+un toque dentro de una forma la excluye, otro la recupera (entre formas
+superpuestas gana la más pequeña bajo el dedo), <kbd>Pasada fina</kbd> repasa
+solo donde no había encontrado nada, y <kbd>Aplicar</kbd> pone en el dibujo lo
+que ha quedado. Mientras no apliques, la lámina no se toca.</li>
+<li>Con la herramienta <kbd>Escala de la foto</kbd> (regla) tocas los dos
+extremos de una medida conocida — un tramo del jalón — y escribes la distancia
+real: la foto adquiere la escala, y desde ahí las exportaciones hablan en
+metros.</li>
 <li>Con <kbd>Punto con cota</kbd> pones sobre la foto la cruceta de un punto
 GNSS del yacimiento (o un punto escrito a mano): nombre, cota y coordenadas
-aparecen en una etiqueta arrastrable con línea de referencia.</li>
+aparecen en una etiqueta arrastrable con línea de referencia. Pellizca sobre la
+etiqueta seleccionada para achicarla o agrandarla, cuando los valores tapan el
+dibujo.</li>
+<li>La <kbd>Trama</kbd> rellena las formas: tocas <strong>dentro</strong> de
+una forma cerrada y esa se rellena. Están las diez tramas de convención —
+<kbd>Mampostería / piedra</kbd>, <kbd>Ladrillo</kbd>, <kbd>Mortero /
+revoque</kbd>, <kbd>Arcilla</kbd>, <kbd>Limo</kbd>, <kbd>Arena</kbd>,
+<kbd>Grava</kbd>, <kbd>Carbón / ceniza</kbd>, <kbd>Roca natural</kbd>,
+<kbd>Madera</kbd> — y el <kbd>Velo de color</kbd> (un color con su opacidad),
+solos o juntos. Si una forma está dentro de otra gana la más pequeña bajo el
+dedo; <kbd>Quitar relleno</kbd> la limpia. No hace falta la foto: el relleno
+trabaja sobre las formas dibujadas, así que funciona también sobre el papel
+vegetal en blanco.</li>
+<li>El <kbd>Estilo de línea</kbd> viste una línea <strong>ya
+dibujada</strong>: la tocas y eliges entre <kbd>Continua</kbd>,
+<kbd>Discontinua</kbd>, <kbd>Punteada</kbd> y <kbd>Raya y punto</kbd>,
+ajustando el grosor. <kbd>Dibujar con este estilo</kbd> hace que los trazos
+siguientes nazcan ya vestidos; <kbd>Quitar estilo</kbd> devuelve la línea
+llena. No es un efecto de pantalla: las rayas son segmentos de verdad, y lo
+siguen siendo en PDF, DOCX, PNG, SVG y DXF.</li>
 <li><kbd>Exportar con leyenda</kbd> <span class="pro">PRO</span>: la imagen
 sale con una franja blanca debajo — barra de escala (si hay escala), flecha
 del norte para las fotos tomadas en vertical, «vista desde» para las
@@ -142,7 +193,9 @@ dibujo, o <strong>DXF</strong> para el SIG. Con al menos dos puntos con cota
 y coordenadas sobre una foto tomada en vertical, el DXF sale
 <strong>georreferenciado en UTM</strong> y en QGIS se coloca solo en el
 mundo; con solo la escala sale en metros locales; sin ninguna de las dos
-cosas, la app lo indica y no genera un archivo sin unidades.</li>
+cosas, la app lo indica y no genera un archivo sin unidades. El SVG es la
+excepción en cuanto a la opacidad: incorpora la foto original tal cual, así que
+el fondo atenuado allí sale a plena fuerza.</li>
 <li>Al terminar, oculta la foto: queda el dibujo limpio, listo para el
 informe.</li>
 </ol>
@@ -189,6 +242,13 @@ correcciones.</li>
 <li>Espera al <strong>RTK Fix</strong>: precisión centimétrica. Comprueba una
 base antes de empezar.</li>
 </ol>
+<p class="nota">Donde el teléfono no tiene cobertura existe también el camino
+<strong>sin internet</strong>: una base plantada sobre un punto conocido y un
+rover que se intercambian las correcciones por radio <strong>LoRa</strong>, sin
+caster y sin SIM (kit RTK DFRobot con puente ESP32). Para la app no cambia
+nada — recibe del receptor un NMEA ya corregido — y el montaje del puente está
+documentado aparte, en su propio README: esta sigue siendo una guía de la app,
+no un manual de firmware.</p>
 
 <h2>Copia de seguridad e intercambio</h2>
 <ol class="passi">
@@ -210,7 +270,9 @@ ZIP.</p>
 <tr><td>GNSS</td><td>GPS interno, receptores MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Informes</td><td>Diario con marca de agua</td><td>Todos, sin marca de agua</td></tr>
 <tr><td>Exportación</td><td>PDF, CSV</td><td>+ DOCX con logotipo y fotos, GeoJSON</td></tr>
-<tr><td>Dibujos</td><td>Papel vegetal, zoom, cuadros de texto, escala, puntos con cota</td><td>+ Calco automático, exportar con leyenda, SVG/DXF</td></tr>
+<tr><td>Dibujos</td><td>Papel vegetal, zoom, cuadros de texto, escala, puntos con cota, <strong>tramas, estilos de línea, opacidad del fondo</strong></td><td>+ Exportar con leyenda, SVG/DXF</td></tr>
+<tr><td>Calco automático</td><td>—</td><td>Al toque y «Calcar todo»</td></tr>
+<tr><td>Grabaciones NMEA</td><td>Relectura y compartición de los archivos</td><td>La grabación (hace falta la antena externa)</td></tr>
 <tr><td>Libretas de nivelación</td><td>✓</td><td>✓</td></tr>
 <tr><td>Ficha fotográfica</td><td>—</td><td>Compartir y fichas en los informes</td></tr>
 <tr><td>Dictado por voz</td><td>✓</td><td>✓</td></tr>
@@ -310,6 +372,59 @@ En redes lentas de obra puede hacer falta toda la espera: vuelve a
 intentarlo con Wi-Fi. Sin coordenadas en la foto, el mapa no existe por
 definición.</p></details>
 
+<details><summary>«Calcar todo» no encuentra nada, o encuentra demasiado</summary>
+<ul>
+<li>el recorrido trabaja sobre la foto de fondo: sin foto el comando no está, y
+mientras se lee «Preparando la foto…» el modelo aún no está listo — espera;</li>
+<li>si las formas son pocas, pulsa <kbd>Pasada fina</kbd>: repasa con una
+retícula más tupida solo donde la primera pasada no había visto nada, y añade
+lo que encuentra sin volver a meter lo que habías excluido;</li>
+<li>si son demasiadas, no lo apliques todo: en la vista previa toca las formas
+sobrantes para excluirlas una a una, y luego <kbd>Aplicar</kbd>. Lo que
+excluyes no acaba en el dibujo;</li>
+<li>las fotos planas — poco contraste, luz de mediodía, terreno todo del mismo
+color — dan pocos contornos por fuerza: ahí conviene el calco de toque único,
+que sabe adónde estás mirando;</li>
+<li>si queda lleno de formas minúsculas, prueba otra vez con <kbd>Solo
+contornos</kbd>: se leen mejor, y la trama siempre se puede tender después, a
+mano.</li>
+</ul></details>
+
+<details><summary>El trazo no se deja vestir</summary>
+<ul>
+<li>el toque busca la línea más cercana dentro de un radio de una yema: si el
+trazo es fino o hay muchos juntos, <strong>haz zoom</strong> y toca con más
+precisión, justo sobre la tinta;</li>
+<li>solo se visten los <strong>trazos</strong>. Los rellenos, los cuadros de
+texto y las crucetas de los puntos con cota no son líneas, y bajo el dedo no
+responden;</li>
+<li>si aparece «Este trazo no se puede reestilizar», entre las líneas que el
+toque ha recogido hay una que no es una línea: el puntito que deja un toque
+quieto, o un trazo que ha llegado estropeado de un archivo importado. Borra el
+puntito y vuelve a intentarlo, o toca la línea en un punto alejado de él. Un
+puntito solo no se viste y ya está: no hay manera de hacer una línea
+discontinua con un punto;</li>
+<li>si entre el toque y <kbd>Aplicar</kbd> has deshecho o dibujado otra cosa,
+la selección se deshace sola para no vestir el trazo equivocado: toca de nuevo
+la línea y vuelve a intentarlo.</li>
+</ul></details>
+
+<details><summary>La trama no aparece cuando toco dentro de la forma</summary>
+<ul>
+<li>la forma tiene que estar <strong>cerrada</strong>, y cerrada por <strong>un
+solo trazo</strong>: sal y vuelve casi al mismo punto sin levantar el dedo (se
+tolera alguna holgura de milímetros). Dos líneas que se tocan por los extremos
+siguen siendo dos líneas abiertas, y rellenar una lámina más allá de un borde
+que nadie ha dibujado sería peor que no rellenarla;</li>
+<li>los contornos que produce el <kbd>Calco</kbd> están cerrados por
+construcción: esos se rellenan siempre;</li>
+<li>si las formas están una dentro de otra, el toque coge la <strong>más
+pequeña</strong> que lo contiene — para rellenar la grande, toca en un punto
+que quede fuera de las pequeñas;</li>
+<li>¿has tocado dentro de la forma, y no sobre su borde? El blanco es el área,
+no la línea.</li>
+</ul></details>
+
 <details><summary>El DXF se rechaza, o se abre «cerca del origen» en el SIG</summary>
 <ul>
 <li>para el DXF <strong>georreferenciado</strong> hacen falta una foto
@@ -321,6 +436,15 @@ app te lo advierte antes;</li>
 <li>sin escala ni puntos, la exportación se rechaza: un DXF sin unidades no
 sería legible con sentido por ningún SIG.</li>
 </ul></details>
+
+<details><summary>He atenuado el fondo, pero el SVG sale con la foto entera</summary>
+<p>Es así y así se queda: el SVG se lleva dentro el <strong>archivo
+original</strong> de la foto, no una copia desvaída, y aclararla querría decir
+recomprimirla — es decir, empeorarla para todos los que abren el SVG para
+trabajar. <kbd>Opacidad del fondo…</kbd> vale en el editor, en el PDF, en el
+DOCX, en el PNG y en <kbd>Exportar con leyenda</kbd>. Si necesitas el
+vectorial sin foto, elige <kbd>SVG — solo el dibujo</kbd>; si necesitas la foto
+atenuada, exporta en PNG o pasa por el informe.</p></details>
 
 <details><summary>La flecha del norte no aparece en la exportación con leyenda</summary>
 <p>La flecha aparece solo en las fotos <strong>tomadas en vertical con la

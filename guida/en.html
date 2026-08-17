@@ -77,12 +77,19 @@ can type your own (e.g. "SU 102 — pit bottom") and add a note.</li>
 <li>Switch between <kbd>List</kbd> and <kbd>Map</kbd> to see points in place;
 from the map you can enable a cadastre or another WMS service.</li>
 <li>Benchmarks (🏁) live in their own section: import them from CSV or create
-them, then use <kbd>Check</kbd> to watch the ΔN/ΔE/ΔZ residuals live before
-you survey.</li>
-<li><kbd>Level books</kbd> are the field book for the optical level: stations,
-backsights and foresights, elevations calculated from a starting benchmark,
-with a closure check. Levelled points enter the site with their elevation,
-just like GNSS ones.</li>
+them, then open <kbd>Live check</kbd> and watch the ΔN/ΔE/ΔZ residuals with the
+pole tip on the nail, before you start surveying.</li>
+<li>Under <kbd>Level books</kbd> you'll find the field book for the optical
+level: stations, backsights and foresights, elevations calculated from a
+starting benchmark, with a closure check. Levelled points enter the site with
+their elevation, just like GNSS ones.</li>
+<li>Below the panel sit the <kbd>NMEA recordings</kbd>: the raw stream from the
+external receiver <span class="pro">PRO</span> is written to file by itself —
+recording starts when you switch the antenna on and closes when you switch it
+off, with nothing for you to remember. It is there to re-read a doubtful day,
+or to hand the raw data to whoever post-processes it. Files can be shared and
+deleted, except the one being recorded right now; the list opens with the
+receiver off too, so yesterday's files stay within reach.</li>
 </ol>
 <div class="schermate"><figure><img src="img/en/03-rilievo.webp" alt="The Survey GNSS panel" width="640" height="1391" loading="lazy"><figcaption>The Survey GNSS panel</figcaption></figure><figure><img src="img/en/04-mappa.webp" alt="Points and benchmarks on the map" width="640" height="1391" loading="lazy"><figcaption>Points and benchmarks on the map</figcaption></figure></div>
 <p class="nota">Every point stores <strong>both elevations</strong>:
@@ -113,22 +120,62 @@ out, with a larger data panel.</li>
 <h3>✏️ Drawings (in Media)</h3>
 <ol class="passi">
 <li>Create a new sheet and pick a site photo as its background: that's your
-digital tracing sheet. A drawing can continue across several days.</li>
-<li>Trace layers, cuts and stones with a finger or Apple Pencil; adjust the
-photo's opacity to see your strokes better. <strong>Pinch to zoom</strong> (up
-to 6×, two-finger double-tap to return to 1×).</li>
-<li><kbd>Automatic tracing</kbd> <span class="pro">PRO</span> recognises the
-outline of the object you tap (a stone, the edge of a layer) and turns it
-into a stroke: colour and thickness can be changed without leaving the mode.
-Everything happens on the device, with no network.</li>
-<li>Add text boxes for labels (e.g. "SU 1002"): they can be moved, resized
-with a pinch, and come with four fonts to choose from.</li>
-<li>With the <kbd>Scale</kbd> tool (ruler) you tap the two ends of a known
-measurement — a length of the ranging pole — and enter the true distance: the
-photo picks up the scale, and from then on exports speak in metres.</li>
+digital tracing sheet. A drawing can continue across several days. You can
+also leave the photo out: a blank sheet draws just as well.</li>
+<li>Trace layers, cuts and stones with a finger or Apple Pencil.
+<strong>Pinch to zoom</strong> (up to 6×, two-finger double-tap to return to
+1×). If the photo covers your strokes, choose <kbd>Background opacity…</kbd>
+from the camera menu and take it wherever you need, from 5% to 100%: it fades
+the photo, not the drawing. The choice stays with the sheet and holds in PDF,
+DOCX, PNG and <kbd>Export with legend</kbd> too.</li>
+<li>Everything else sits under <kbd>Tools</kbd> (the spanner in the toolbar),
+which is the index of the six modes: <kbd>Text box</kbd>, <kbd>Trace</kbd>
+<span class="pro">PRO</span>, <kbd>Photo scale</kbd>, <kbd>Point with
+elevation</kbd>, <kbd>Hatch</kbd> and <kbd>Line style</kbd>. Only
+<strong>one</strong> is held at a time: the tick says which, and while it is on
+your finger doesn't draw but drives that tool — tap the ticked entry again to
+go back to drawing. The three entries that work on the image (trace, scale,
+point with elevation) only appear if a background photo is there.</li>
+<li>With <kbd>Text box</kbd> you place the labels (e.g. "SU 1002"): they can be
+moved, resized with a pinch, and come with four fonts to choose from.</li>
+<li><kbd>Trace</kbd> <span class="pro">PRO</span> recognises the outline of the
+object you tap (a stone, the edge of a layer) and turns it into a stroke:
+colour, thickness and line style can be changed without leaving the mode, and
+the outlines come out smooth instead of stepped. Everything happens on the
+device, with no network.</li>
+<li>Inside tracing, <kbd>Trace everything</kbd> <span class="pro">PRO</span>
+goes over the whole photo on its own. In the start sheet you decide the
+styling — <kbd>Outlines only</kbd>, or a hatch and perhaps a <kbd>Colour
+wash</kbd> — and press <kbd>Start</kbd>: the bar says how far along it is, and
+it takes some tens of seconds. What appears is a <strong>preview</strong>, not
+the drawing: a tap inside a shape excludes it, another brings it back (among
+overlapping shapes the smallest one under your finger wins), <kbd>Fine
+pass</kbd> goes over again only where it had found nothing, and
+<kbd>Apply</kbd> puts what is left onto the drawing. Until you apply, the sheet
+is untouched.</li>
+<li>With the <kbd>Photo scale</kbd> tool (ruler) you tap the two ends of a
+known measurement — a length of the ranging pole — and enter the true distance:
+the photo picks up the scale, and from then on exports speak in metres.</li>
 <li>With <kbd>Point with elevation</kbd> you place the crosshair of a GNSS
 point from the site (or a hand-entered point) on the photo: name, elevation
-and coordinates appear in a draggable label with a leader line.</li>
+and coordinates appear in a draggable label with a leader line. Pinch on the
+selected label to shrink or enlarge it, when the values cover the drawing.</li>
+<li>The <kbd>Hatch</kbd> fills shapes: you tap <strong>inside</strong> a closed
+shape and it fills. There are the ten conventional hatches —
+<kbd>Masonry / stone</kbd>, <kbd>Brick</kbd>, <kbd>Mortar / plaster</kbd>,
+<kbd>Clay</kbd>, <kbd>Silt</kbd>, <kbd>Sand</kbd>, <kbd>Gravel</kbd>,
+<kbd>Charcoal / ash</kbd>, <kbd>Bedrock</kbd>, <kbd>Wood</kbd> — and the
+<kbd>Colour wash</kbd> (a colour with its own opacity), on their own or
+together. If one shape sits inside another the smallest under your finger wins;
+<kbd>Remove fill</kbd> clears it. No photo is needed: filling works on the
+shapes you have drawn, so it works on a blank sheet too.</li>
+<li>The <kbd>Line style</kbd> dresses a stroke that is <strong>already
+drawn</strong>: you tap it and choose between <kbd>Continuous</kbd>,
+<kbd>Dashed</kbd>, <kbd>Dotted</kbd> and <kbd>Dash-dot</kbd>, adjusting the
+thickness. <kbd>Draw with this style</kbd> makes the strokes that follow come
+out dressed already; <kbd>Remove style</kbd> puts the line back to solid. It is
+not a screen effect: the dashes are real segments, and they stay that way in
+PDF, DOCX, PNG, SVG and DXF.</li>
 <li><kbd>Export with legend</kbd> <span class="pro">PRO</span>: the image
 comes out with a white band underneath — a metric scale bar (if the scale is
 set), a north arrow for photos taken straight down, “viewed from” for frontal
@@ -138,7 +185,9 @@ drawing, or <strong>DXF</strong> for the GIS. With at least two points with
 elevation and coordinates on a photo taken straight down, the DXF comes out
 <strong>georeferenced in UTM</strong> and positions itself in QGIS
 automatically; with only the scale set it comes out in local metres; with
-neither, the app says so and won't produce a file with no units.</li>
+neither, the app says so and won't produce a file with no units. The SVG is the
+exception on opacity: it embeds the original photo just as it is, so a faded
+background comes out there at full strength.</li>
 <li>When you're done, hide the photo: the clean drawing stays, ready for the
 report.</li>
 </ol>
@@ -184,6 +233,13 @@ sends your position to the caster and receives corrections.</li>
 <li>Wait for <strong>RTK Fix</strong>: centimetre accuracy. Check against a
 benchmark before you start.</li>
 </ol>
+<p class="nota">Where the phone has no signal, there is also the road
+<strong>without internet</strong>: a base planted on a known point and a rover
+swapping corrections over <strong>LoRa</strong> radio, with no caster and no
+SIM (DFRobot RTK kit with an ESP32 bridge). Nothing changes for the app — it
+receives already-corrected NMEA from the receiver — and building the bridge is
+documented separately, in its own README: this stays a guide to the app, not a
+firmware manual.</p>
 
 <h2>Backup and exchange</h2>
 <ol class="passi">
@@ -204,7 +260,9 @@ it and is <strong>irreversible</strong>: export a ZIP first if in doubt.</p>
 <tr><td>GNSS</td><td>Internal GPS, MFi receivers</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Reports</td><td>Daily, watermarked</td><td>All, no watermark</td></tr>
 <tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX with logo and photos, GeoJSON</td></tr>
-<tr><td>Drawings</td><td>Tracing sheet, zoom, text boxes, scale, points with elevation</td><td>+ Automatic tracing, export with legend, SVG/DXF</td></tr>
+<tr><td>Drawings</td><td>Tracing sheet, zoom, text boxes, scale, points with elevation, <strong>hatches, line styles, background opacity</strong></td><td>+ Export with legend, SVG/DXF</td></tr>
+<tr><td>Automatic tracing</td><td>—</td><td>By tap and “Trace everything”</td></tr>
+<tr><td>NMEA recordings</td><td>Re-reading and sharing the files</td><td>The recording (needs the external antenna)</td></tr>
 <tr><td>Level books</td><td>✓</td><td>✓</td></tr>
 <tr><td>Photo record</td><td>—</td><td>Sharing and records in reports</td></tr>
 <tr><td>Voice dictation</td><td>✓</td><td>✓</td></tr>
@@ -300,6 +358,59 @@ for the network). On slow site networks it can take the full wait: try again
 under Wi-Fi. Without coordinates on the photo, there is no map by
 definition.</p></details>
 
+<details><summary>“Trace everything” finds nothing, or finds too much</summary>
+<ul>
+<li>the pass works on the background photo: with no photo the command isn't
+there, and while it reads “Preparing the photo…” the model isn't ready yet —
+wait for it;</li>
+<li>if the shapes are too few, press <kbd>Fine pass</kbd>: it goes over again
+with a denser grid, only where the first pass had seen nothing, and adds what
+it finds without bringing back what you had excluded;</li>
+<li>if they are too many, don't apply everything: in the preview tap the extra
+shapes to exclude them one by one, then <kbd>Apply</kbd>. What you exclude
+never reaches the drawing;</li>
+<li>flat photos — little contrast, midday light, ground all the same colour —
+give few outlines, and there is no way round it: there the single-tap trace
+does better, because it knows where you are looking;</li>
+<li>if you are left with a mass of tiny shapes, try again with <kbd>Outlines
+only</kbd>: they read better, and the hatch can always be laid on afterwards,
+by hand.</li>
+</ul></details>
+
+<details><summary>The stroke won't take a style</summary>
+<ul>
+<li>the tap looks for the nearest line within a fingertip's radius: if the
+stroke is thin or the area crowded, <strong>zoom in</strong> and tap more
+precisely, right on the ink;</li>
+<li>only <strong>strokes</strong> can be dressed. Fills, text boxes and the
+crosshairs of points with elevation are not lines, and don't answer under your
+finger;</li>
+<li>if “This stroke cannot be restyled” appears, among the lines the tap
+gathered there is one that is not a line: the dot left by a still tap, or a
+stroke that arrived broken from an imported archive. Delete the dot and try
+again, or tap the line at a point far from it. A dot on its own simply cannot
+be dressed: there is no way to make a dashed line out of a point;</li>
+<li>if between the tap and <kbd>Apply</kbd> you undid something or drew
+something else, the selection releases itself so as not to dress the wrong
+stroke: tap the line again and retry.</li>
+</ul></details>
+
+<details><summary>The hatch doesn't appear when I tap inside the shape</summary>
+<ul>
+<li>the shape must be <strong>closed</strong>, and closed by <strong>a single
+stroke</strong>: start and come back almost to the same point without lifting
+your finger (a few millimetres of gap are tolerated). Two lines that touch at
+their ends stay two open lines, and flooding a sheet past an edge nobody drew
+would be worse than not filling it at all;</li>
+<li>the outlines produced by <kbd>Trace</kbd> are closed by construction: those
+always fill;</li>
+<li>if the shapes sit one inside another, the tap takes the
+<strong>smallest</strong> one containing it — to fill the large one, tap at a
+point that lies outside the small ones;</li>
+<li>did you tap inside the shape, and not on its edge? The target is the area,
+not the line.</li>
+</ul></details>
+
 <details><summary>The DXF is rejected, or opens “near the origin” in the GIS</summary>
 <ul>
 <li>a <strong>georeferenced</strong> DXF needs a photo taken straight down
@@ -311,6 +422,15 @@ app tells you beforehand;</li>
 <li>without scale or points, the export is refused: a DXF with no units
 wouldn't be meaningfully readable by any GIS.</li>
 </ul></details>
+
+<details><summary>I faded the background, but the SVG comes out with the photo at full strength</summary>
+<p>That is how it is and how it stays: the SVG carries the <strong>original
+file</strong> of the photo inside it, not a faded copy of it, and lightening it
+would mean re-compressing it — that is, making it worse for everyone who opens
+the SVG to work on it. <kbd>Background opacity…</kbd> holds in the editor, in
+the PDF, in the DOCX, in the PNG and in <kbd>Export with legend</kbd>. If you
+need the vector without the photo, choose <kbd>SVG — drawing only</kbd>; if you
+need the faded photo, export to PNG or go through the report.</p></details>
 
 <details><summary>The north arrow doesn't appear in the export with legend</summary>
 <p>The arrow only appears for photos <strong>taken straight down with the

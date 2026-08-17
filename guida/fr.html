@@ -81,12 +81,21 @@ ajouter une note.</li>
 <li>Passez de <kbd>Liste</kbd> à <kbd>Carte</kbd> pour voir les points sur
 place ; depuis la carte, vous pouvez activer le cadastre ou un autre service WMS.</li>
 <li>Les repères (🏁) vivent dans leur propre section : importez-les depuis un
-CSV ou créez-les, puis utilisez la vérification pour surveiller les écarts
-ΔN/ΔE/ΔZ en temps réel avant de lever.</li>
-<li>Le <kbd>Carnet de nivellement</kbd> est le carnet de terrain du niveau
-optique : stations, lectures arrière et avant, altitudes calculées à partir
-d'un repère de départ, avec le contrôle de fermeture. Les points nivelés
+CSV ou créez-les, puis ouvrez la <kbd>Vérification en temps réel</kbd> et
+surveillez les écarts ΔN/ΔE/ΔZ, la pointe sur le clou, avant de commencer à
+lever.</li>
+<li>Sous <kbd>Carnets de nivellement</kbd> se trouve le carnet de terrain du
+niveau optique : stations, lectures arrière et avant, altitudes calculées à
+partir d'un repère de départ, avec le contrôle de fermeture. Les points nivelés
 entrent dans le site avec leur altitude, comme les points GNSS.</li>
+<li>Sous le panneau se trouvent les <kbd>Enregistrements NMEA</kbd> : le flux
+brut du récepteur externe <span class="pro">PRO</span> part tout seul dans un
+fichier — l'enregistrement démarre quand vous allumez l'antenne et se ferme
+quand vous l'éteignez, sans que vous ayez à y penser. Cela sert à relire une
+journée douteuse ou à remettre le brut à qui fait le post-traitement. Les
+fichiers se partagent et se suppriment, sauf celui de l'enregistrement en
+cours ; la liste s'ouvre aussi récepteur éteint, ainsi les fichiers d'hier
+restent accessibles.</li>
 </ol>
 <div class="schermate"><figure><img src="img/fr/03-rilievo.webp" alt="Le panneau GNSS du Relevé" width="640" height="1391" loading="lazy"><figcaption>Le panneau GNSS du Relevé</figcaption></figure><figure><img src="img/fr/04-mappa.webp" alt="Points et repères sur la carte" width="640" height="1391" loading="lazy"><figcaption>Points et repères sur la carte</figcaption></figure></div>
 <p class="nota">Chaque point enregistre <strong>les deux altitudes</strong> :
@@ -120,25 +129,70 @@ quand même générée, avec le panneau de données agrandi.</li>
 <ol class="passi">
 <li>Créez une nouvelle planche et choisissez une photo du site comme fond :
 c'est votre calque numérique. Un dessin peut se poursuivre sur plusieurs
-journées.</li>
+journées. On peut aussi ne pas la mettre, la photo : sur le calque blanc, on
+dessine tout aussi bien.</li>
 <li>Décalquez les couches, les coupes et les pierres du doigt ou avec l'Apple
-Pencil ; réglez l'opacité de la photo pour mieux voir le tracé. <strong>Pincez
-pour zoomer</strong> (jusqu'à 6×, double-tapez à deux doigts pour revenir à
-1×).</li>
-<li>Le <kbd>Traçage automatique</kbd> <span class="pro">PRO</span> reconnaît
-le contour de l'objet que vous touchez (une pierre, la limite d'une couche) et
-le transforme en trait : la couleur et l'épaisseur se changent sans sortir du
-mode. Tout se passe sur l'appareil, sans réseau.</li>
-<li>Ajoutez des zones de texte pour les étiquettes (p. ex. « US 1002 ») :
+Pencil. <strong>Pincez pour zoomer</strong> (jusqu'à 6×, double-tapez à deux
+doigts pour revenir à 1×). Si la photo vous cache le tracé, choisissez
+<kbd>Opacité du fond…</kbd> dans le menu de l'appareil photo et amenez-la où il
+faut, de 5% à 100% : cela estompe la photo, pas le dessin. Le choix reste sur
+la planche et vaut aussi en PDF, DOCX, PNG et dans <kbd>Exporter avec
+légende</kbd>.</li>
+<li>Tout le reste se trouve sous <kbd>Outils</kbd> (la clé plate dans la
+barre), qui est l'index des six modes : <kbd>Zone de texte</kbd>,
+<kbd>Décalque</kbd> <span class="pro">PRO</span>, <kbd>Échelle de la
+photo</kbd>, <kbd>Point avec altitude</kbd>, <kbd>Trame</kbd> et <kbd>Style de
+trait</kbd>. On n'en tient qu'<strong>un seul</strong> à la fois : la coche dit
+lequel, et tant qu'il est actif le doigt ne dessine pas mais commande cet outil
+— pour revenir à dessiner, touchez de nouveau la ligne cochée. Les trois
+entrées qui travaillent sur l'image (décalque, échelle, point avec altitude)
+n'apparaissent que si une photo de fond est là.</li>
+<li>Avec <kbd>Zone de texte</kbd>, placez les étiquettes (p. ex. « US 1002 ») :
 elles se déplacent, se redimensionnent avec le pincement, et il y a quatre
 polices au choix.</li>
-<li>Avec l'outil <kbd>Échelle</kbd> (règle), touchez les deux extrémités
-d'une mesure connue — un segment du jalon — et indiquez la distance réelle :
-la photo acquiert l'échelle, et à partir de là les exportations parlent en
-mètres.</li>
-<li>Avec <kbd>Point coté</kbd>, placez sur la photo la croix d'un point GNSS
-du site (ou un point saisi à la main) : le nom, l'altitude et les coordonnées
-apparaissent dans une étiquette déplaçable avec son trait de rappel.</li>
+<li>Le <kbd>Décalque</kbd> <span class="pro">PRO</span> reconnaît le contour de
+l'objet que vous touchez (une pierre, la limite d'une couche) et le transforme
+en trait : la couleur, l'épaisseur et le style de la ligne se changent sans
+sortir du mode, et les contours sortent lisses au lieu d'être en escalier. Tout
+se passe sur l'appareil, sans réseau.</li>
+<li>Dans le décalque, <kbd>Tout décalquer</kbd> <span class="pro">PRO</span>
+fait le tour de toute la photo tout seul. Dans la feuille de départ, vous
+décidez l'habillage — <kbd>Contours seuls</kbd>, ou une trame et peut-être un
+<kbd>Voile de couleur</kbd> — et vous appuyez sur <kbd>Démarrer</kbd> : la
+barre dit où il en est, et il faut quelques dizaines de secondes. Ce qui
+apparaît est un <strong>aperçu</strong>, pas le dessin : une touche à
+l'intérieur d'une forme l'exclut, une autre la reprend (entre formes
+superposées, la plus petite sous le doigt l'emporte), <kbd>Passe fine</kbd>
+repasse seulement là où il n'avait rien trouvé, et <kbd>Appliquer</kbd> pose
+sur le dessin ce qui est resté. Tant que vous n'appliquez pas, la planche n'est
+pas touchée.</li>
+<li>Avec l'outil <kbd>Échelle de la photo</kbd> (règle), touchez les deux
+extrémités d'une mesure connue — un segment du jalon — et indiquez la distance
+réelle : la photo acquiert l'échelle, et à partir de là les exportations
+parlent en mètres.</li>
+<li>Avec <kbd>Point avec altitude</kbd>, placez sur la photo la croix d'un
+point GNSS du site (ou un point saisi à la main) : le nom, l'altitude et les
+coordonnées apparaissent dans une étiquette déplaçable avec son trait de
+rappel. Pincez sur l'étiquette sélectionnée pour la réduire ou l'agrandir,
+quand les valeurs recouvrent le dessin.</li>
+<li>La <kbd>Trame</kbd> remplit les formes : vous touchez
+<strong>à l'intérieur</strong> d'une forme fermée et elle se remplit. Il y a
+les dix trames de convention — <kbd>Maçonnerie / pierre</kbd>,
+<kbd>Brique</kbd>, <kbd>Mortier / enduit</kbd>, <kbd>Argile</kbd>,
+<kbd>Limon</kbd>, <kbd>Sable</kbd>, <kbd>Gravier</kbd>, <kbd>Charbon /
+cendre</kbd>, <kbd>Roche en place</kbd>, <kbd>Bois</kbd> — et le <kbd>Voile de
+couleur</kbd> (une couleur avec son opacité), seuls ou ensemble. Si une forme
+est dans une autre, la plus petite sous le doigt l'emporte ;
+<kbd>Supprimer le remplissage</kbd> la nettoie. Pas besoin de photo : le
+remplissage travaille sur les formes dessinées, donc il marche aussi sur le
+calque blanc.</li>
+<li>Le <kbd>Style de trait</kbd> habille une ligne <strong>déjà
+dessinée</strong> : vous la touchez et choisissez entre <kbd>Continu</kbd>,
+<kbd>Tiretée</kbd>, <kbd>Pointillée</kbd> et <kbd>Trait-point</kbd>, en
+réglant l'épaisseur. <kbd>Dessiner avec ce style</kbd> fait naître déjà
+habillés les traits suivants ; <kbd>Retirer le style</kbd> ramène la ligne
+pleine. Ce n'est pas un effet d'écran : les tirets sont de vrais segments, et
+ils le restent en PDF, DOCX, PNG, SVG et DXF.</li>
 <li><kbd>Exporter avec légende</kbd> <span class="pro">PRO</span> :
 l'image sort avec une bande blanche en bas — barre métrique (si l'échelle est
 définie), flèche du nord pour les photos prises à plomb, « vue depuis » pour
@@ -149,7 +203,8 @@ points cotés avec coordonnées sur une photo à plomb, le DXF sort
 <strong>géoréférencé en UTM</strong> et se positionne tout seul dans le monde
 sous QGIS ; avec la seule échelle, il sort en mètres locaux ; sans l'un ni
 l'autre, l'application le signale et ne produit pas de fichier sans
-unité.</li>
+unité. Le SVG fait exception sur l'opacité : il incorpore la photo d'origine
+telle quelle, donc le fond estompé y sort à pleine force.</li>
 <li>Une fois terminé, masquez la photo : le dessin propre reste, prêt pour le rapport.</li>
 </ol>
 <div class="schermate"><figure><img src="img/fr/06-disegno.webp" alt="Le calque numérique" width="640" height="1391" loading="lazy"><figcaption>Le calque numérique</figcaption></figure></div>
@@ -196,6 +251,13 @@ reçoit les corrections.</li>
 <li>Attendez le passage en <strong>RTK Fix</strong> : précision centimétrique.
 Vérifiez sur un repère avant de commencer.</li>
 </ol>
+<p class="nota">Là où le téléphone ne capte pas, il existe aussi la voie
+<strong>sans internet</strong> : une base plantée sur un point connu et un
+rover qui s'échangent les corrections par radio <strong>LoRa</strong>, sans
+caster et sans SIM (kit RTK DFRobot avec pont ESP32). Pour l'application, rien
+ne change — elle reçoit du récepteur un NMEA déjà corrigé — et le montage du
+pont est documenté à part, dans son propre README : ceci reste un guide de
+l'application, pas un manuel de firmware.</p>
 
 <h2>Sauvegarde et échange</h2>
 <ol class="passi">
@@ -216,7 +278,9 @@ contenu et c'est <strong>irréversible</strong> : exportez d'abord un ZIP en cas
 <tr><td>GNSS</td><td>GPS interne, récepteurs MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Rapports</td><td>Journalier avec filigrane</td><td>Tous, sans filigrane</td></tr>
 <tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX avec logo et photos, GeoJSON</td></tr>
-<tr><td>Dessins</td><td>Calque, zoom, textes, échelle, points cotés</td><td>+ Traçage automatique, export avec légende, SVG/DXF</td></tr>
+<tr><td>Dessins</td><td>Calque, zoom, textes, échelle, points cotés, <strong>trames, styles de trait, opacité du fond</strong></td><td>+ Export avec légende, SVG/DXF</td></tr>
+<tr><td>Traçage automatique</td><td>—</td><td>À la touche et « Tout décalquer »</td></tr>
+<tr><td>Enregistrements NMEA</td><td>Relecture et partage des fichiers</td><td>L'enregistrement (il faut l'antenne externe)</td></tr>
 <tr><td>Carnet de nivellement</td><td>✓</td><td>✓</td></tr>
 <tr><td>Fiche photographique</td><td>—</td><td>Partage et fiches dans les rapports</td></tr>
 <tr><td>Dictée vocale</td><td>✓</td><td>✓</td></tr>
@@ -313,6 +377,61 @@ n'attendent pas le réseau). Sur les réseaux lents de chantier, l'attente
 complète peut être nécessaire : réessayez sous Wi-Fi. Sans géolocalisation
 sur la photo, la carte est absente par définition.</p></details>
 
+<details><summary>« Tout décalquer » ne trouve rien, ou en trouve trop</summary>
+<ul>
+<li>le tour travaille sur la photo de fond : sans photo la commande n'est pas
+là, et tant qu'on lit « Préparation de la photo… » le modèle n'est pas encore
+prêt — attendez ;</li>
+<li>si les formes sont trop peu nombreuses, appuyez sur <kbd>Passe fine</kbd> :
+elle repasse avec une grille plus serrée seulement là où le premier tour
+n'avait rien vu, et ajoute ce qu'elle trouve sans remettre dedans ce que vous
+aviez exclu ;</li>
+<li>si elles sont trop nombreuses, n'appliquez pas tout : dans l'aperçu,
+touchez les formes en trop pour les exclure une à une, puis
+<kbd>Appliquer</kbd>. Ce que vous excluez n'arrive pas sur le dessin ;</li>
+<li>les photos plates — peu de contraste, lumière de midi, terrain tout d'une
+même couleur — donnent forcément peu de contours : là, le décalque à touche
+unique vaut mieux, car il sait où vous regardez ;</li>
+<li>s'il reste une nuée de formes minuscules, réessayez avec <kbd>Contours
+seuls</kbd> : elles se lisent mieux, et la trame peut toujours s'étendre après,
+à la main.</li>
+</ul></details>
+
+<details><summary>Le trait ne se laisse pas habiller</summary>
+<ul>
+<li>la touche cherche la ligne la plus proche dans un rayon d'un bout de doigt :
+si le trait est fin ou l'endroit encombré, <strong>zoomez</strong> et touchez
+plus précisément, juste sur l'encre ;</li>
+<li>seuls les <strong>traits</strong> s'habillent. Les remplissages, les zones
+de texte et les croix des points avec altitude ne sont pas des lignes, et ne
+répondent pas sous le doigt ;</li>
+<li>si « Ce trait ne peut pas être restylé » apparaît, parmi les lignes que la
+touche a récoltées il y en a une qui n'est pas une ligne : le point laissé par
+une touche immobile, ou un trait arrivé abîmé d'une archive importée. Effacez
+le point et réessayez, ou touchez la ligne en un endroit éloigné de lui. Un
+point tout seul ne s'habille pas, tout simplement : il n'y a pas moyen de faire
+un tireté avec un point ;</li>
+<li>si entre la touche et <kbd>Appliquer</kbd> vous avez annulé ou dessiné
+autre chose, la sélection se défait d'elle-même pour ne pas habiller le mauvais
+trait : touchez de nouveau la ligne et réessayez.</li>
+</ul></details>
+
+<details><summary>La trame n'apparaît pas quand je touche à l'intérieur de la forme</summary>
+<ul>
+<li>la forme doit être <strong>fermée</strong>, et fermée par <strong>un seul
+trait</strong> : partez et revenez presque au même point sans lever le doigt
+(quelques millimètres d'écart sont tolérés). Deux lignes qui se touchent par
+les extrémités restent deux lignes ouvertes, et remplir une planche au-delà
+d'un bord que personne n'a dessiné serait pire que de ne pas la remplir ;</li>
+<li>les contours produits par le <kbd>Décalque</kbd> sont fermés par
+construction : ceux-là se remplissent toujours ;</li>
+<li>si les formes sont l'une dans l'autre, la touche prend la <strong>plus
+petite</strong> qui la contient — pour remplir la grande, touchez en un point
+situé hors des petites ;</li>
+<li>avez-vous touché à l'intérieur de la forme, et non sur son bord ? La cible
+est l'aire, pas la ligne.</li>
+</ul></details>
+
 <details><summary>Le DXF est refusé, ou s'ouvre « près de l'origine » dans le SIG</summary>
 <ul>
 <li>pour le DXF <strong>géoréférencé</strong>, il faut une photo prise à
@@ -324,6 +443,16 @@ l'application vous le signale avant ;</li>
 <li>sans échelle ni points, l'exportation est refusée : un DXF sans unité ne
 serait lisible de façon sensée par aucun SIG.</li>
 </ul></details>
+
+<details><summary>J'ai estompé le fond, mais le SVG sort avec la photo pleine</summary>
+<p>C'est ainsi et cela reste ainsi : le SVG emporte en lui le <strong>fichier
+d'origine</strong> de la photo, pas une copie estompée, et l'éclaircir
+voudrait dire la recompresser — c'est-à-dire l'abîmer pour tous ceux qui
+ouvrent le SVG pour y travailler. <kbd>Opacité du fond…</kbd> vaut dans
+l'éditeur, dans le PDF, dans le DOCX, dans le PNG et dans <kbd>Exporter avec
+légende</kbd>. S'il vous faut le vectoriel sans photo, choisissez <kbd>SVG —
+dessin seul</kbd> ; s'il vous faut la photo estompée, exportez en PNG ou passez
+par le rapport.</p></details>
 
 <details><summary>La flèche du nord n'apparaît pas dans l'export avec légende</summary>
 <p>La flèche n'apparaît que pour les photos <strong>prises à plomb avec
