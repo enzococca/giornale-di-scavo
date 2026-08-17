@@ -83,6 +83,13 @@ prima di rilevare.</li>
 livello ottico: stazioni, letture indietro e avanti, quote calcolate da un
 caposaldo di partenza, con il controllo di chiusura. I punti livellati entrano
 nel sito con la loro quota, come quelli GNSS.</li>
+<li>Sotto il pannello ci sono le <kbd>Registrazioni NMEA</kbd>: il flusso grezzo
+del ricevitore esterno <span class="pro">PRO</span> finisce su file da sé — la
+registrazione parte quando accendi l'antenna e si chiude quando la spegni, senza
+che tu debba ricordartene. Serve per rileggere una giornata dubbia o per
+consegnare il grezzo a chi post-processa. I file si condividono e si eliminano,
+tranne quello della registrazione in corso; l'elenco si apre anche a ricevitore
+spento, così i file di ieri restano raggiungibili.</li>
 </ol>
 <div class="schermate"><figure><img src="img/it/03-rilievo.webp" alt="Il pannello GNSS del Rilievo" width="640" height="1391" loading="lazy"><figcaption>Il pannello GNSS del Rilievo</figcaption></figure><figure><img src="img/it/04-mappa.webp" alt="Punti e capisaldi sulla mappa" width="640" height="1391" loading="lazy"><figcaption>Punti e capisaldi sulla mappa</figcaption></figure></div>
 <p class="nota">Ogni punto salva <strong>entrambe le quote</strong>: ellissoidica
@@ -111,22 +118,62 @@ comunque, con il pannello dati allargato.</li>
 <h3>✏️ Disegni (nei Media)</h3>
 <ol class="passi">
 <li>Crea una nuova tavola e scegli una foto del sito come sfondo: è il tuo
-«lucido» digitale. Un disegno può proseguire su più giornate.</li>
-<li>Ricalca strati, tagli e pietre con il dito o con la Apple Pencil; regola
-l'opacità della foto per vedere meglio il tratto. <strong>Pizzica per
-zoomare</strong> (fino a 6×, doppio tocco a due dita per tornare a 1×).</li>
-<li>Il <kbd>Ricalco automatico</kbd> <span class="pro">PRO</span> riconosce il
-contorno dell'oggetto che tocchi (una pietra, il limite di uno strato) e lo
-trasforma in tratto: colore e spessore si cambiano senza uscire dalla
-modalità. Tutto avviene sul dispositivo, senza rete.</li>
-<li>Aggiungi caselle di testo per le etichette (es. «US 1002»): si spostano,
-si ridimensionano col pizzico e hanno quattro caratteri tra cui scegliere.</li>
-<li>Con lo strumento <kbd>Scala</kbd> (righello) tocchi i due estremi di una
-misura nota — un segmento della palina — e scrivi la distanza vera: la foto
-acquisisce la scala, e da lì in poi le esportazioni parlano in metri.</li>
+«lucido» digitale. Un disegno può proseguire su più giornate. Si può anche non
+metterla, la foto: sul lucido bianco si disegna lo stesso.</li>
+<li>Ricalca strati, tagli e pietre con il dito o con la Apple Pencil.
+<strong>Pizzica per zoomare</strong> (fino a 6×, doppio tocco a due dita per
+tornare a 1×). Se la foto ti copre il tratto, dal menu della fotocamera scegli
+<kbd>Opacità sfondo…</kbd> e portala dove serve, dal 5% al 100%: sbiadisce la
+foto, non il disegno. La scelta resta sulla tavola e vale anche in PDF, DOCX,
+PNG e <kbd>Esporta con legenda</kbd>.</li>
+<li>Tutto il resto sta sotto <kbd>Strumenti</kbd> (la chiave a forcella nella
+barra), che è l'indice delle sei modalità: <kbd>Casella di testo</kbd>,
+<kbd>Ricalco</kbd> <span class="pro">PRO</span>, <kbd>Scala della foto</kbd>,
+<kbd>Punto quotato</kbd>, <kbd>Retino</kbd> e <kbd>Stile del tratto</kbd>. Se ne
+tiene <strong>una sola</strong> alla volta: la spunta dice quale, e finché è
+accesa il dito non disegna ma comanda quello strumento — per tornare a disegnare
+tocca di nuovo la voce spuntata. Le tre voci che lavorano sull'immagine (ricalco,
+scala, punto quotato) compaiono solo se una foto di sfondo c'è.</li>
+<li>Con <kbd>Casella di testo</kbd> metti le etichette (es. «US 1002»): si
+spostano, si ridimensionano col pizzico e hanno quattro caratteri tra cui
+scegliere.</li>
+<li>Il <kbd>Ricalco</kbd> <span class="pro">PRO</span> riconosce il contorno
+dell'oggetto che tocchi (una pietra, il limite di uno strato) e lo trasforma in
+tratto: colore, spessore e stile della linea si cambiano senza uscire dalla
+modalità, e i contorni escono lisci invece che a scaletta. Tutto avviene sul
+dispositivo, senza rete.</li>
+<li>Dentro il ricalco, <kbd>Ricalca tutto</kbd> <span class="pro">PRO</span> fa
+il giro da solo su tutta la foto. Nel foglio di avvio decidi la veste —
+<kbd>Solo contorni</kbd>, oppure un retino e magari un <kbd>Velo di colore</kbd>
+— e premi <kbd>Avvia</kbd>: la barra dice a che punto è, e ci vogliono alcune
+decine di secondi. Quello che compare è un'<strong>anteprima</strong>, non il
+disegno: un tocco dentro una forma la esclude, un altro la riprende (fra forme
+sovrapposte vince la più piccola sotto il dito), <kbd>Passata fine</kbd> ripassa
+soltanto dove non aveva trovato niente, e <kbd>Applica</kbd> mette sul disegno
+quello che è rimasto. Finché non applichi, la tavola non è toccata.</li>
+<li>Con lo strumento <kbd>Scala della foto</kbd> (righello) tocchi i due estremi
+di una misura nota — un segmento della palina — e scrivi la distanza vera: la
+foto acquisisce la scala, e da lì in poi le esportazioni parlano in metri.</li>
 <li>Con <kbd>Punto quotato</kbd> metti sulla foto la crocetta di un punto GNSS
 del sito (o un punto scritto a mano): nome, quota e coordinate compaiono in
-un'etichetta trascinabile con la lineetta di richiamo.</li>
+un'etichetta trascinabile con la lineetta di richiamo. Pizzica sull'etichetta
+selezionata per rimpicciolirla o ingrandirla, quando i valori coprono il
+disegno.</li>
+<li>Il <kbd>Retino</kbd> campisce le forme: tocchi <strong>dentro</strong> una
+forma chiusa e quella si riempie. Ci sono i dieci retini di convenzione —
+<kbd>Muratura / pietra</kbd>, <kbd>Laterizi</kbd>, <kbd>Malta / intonaco</kbd>,
+<kbd>Argilla</kbd>, <kbd>Limo</kbd>, <kbd>Sabbia</kbd>, <kbd>Ghiaia</kbd>,
+<kbd>Carbone / cenere</kbd>, <kbd>Roccia naturale</kbd>, <kbd>Legno</kbd> — e il
+<kbd>Velo di colore</kbd> (un colore con la sua opacità), da soli o insieme. Se
+una forma sta dentro un'altra vince la più piccola sotto il dito;
+<kbd>Rimuovi riempimento</kbd> la ripulisce. Non serve la foto: la campitura
+lavora sulle forme disegnate, quindi funziona anche sul lucido bianco.</li>
+<li>Lo <kbd>Stile del tratto</kbd> veste una linea <strong>già disegnata</strong>:
+la tocchi e scegli fra <kbd>Continua</kbd>, <kbd>Tratteggiata</kbd>,
+<kbd>Punteggiata</kbd> e <kbd>Tratto e punto</kbd>, regolando lo spessore.
+<kbd>Disegna con questo stile</kbd> fa nascere già vestiti i tratti successivi;
+<kbd>Rimuovi veste</kbd> riporta la linea piena. Non è un effetto dello schermo:
+i trattini sono segmenti veri, e restano tali in PDF, DOCX, PNG, SVG e DXF.</li>
 <li><kbd>Esporta con legenda</kbd> <span class="pro">PRO</span>: l'immagine
 esce con una fascia bianca sotto — barra metrica (se la scala c'è), freccia
 del nord per le foto scattate a piombo, «vista da» per le frontali.</li>
@@ -135,7 +182,8 @@ disegno, oppure <strong>DXF</strong> per il GIS. Con almeno due punti quotati
 con coordinate su una foto a piombo, il DXF esce <strong>georeferenziato in
 UTM</strong> e in QGIS si posiziona da solo sul mondo; con la sola scala esce
 in metri locali; senza né l'una né gli altri l'app lo dice e non produce un
-file senza unità.</li>
+file senza unità. L'SVG fa eccezione sull'opacità: incorpora la foto originale
+tale e quale, quindi lo sfondo attenuato lì esce a piena forza.</li>
 <li>Quando hai finito, nascondi la foto: resta il disegno pulito, pronto per il
 report.</li>
 </ol>
@@ -180,6 +228,12 @@ dispositivo). L'app invia la posizione al caster e riceve le correzioni.</li>
 <li>Attendi il passaggio a <strong>RTK Fix</strong>: precisione centimetrica.
 Verifica su un caposaldo prima di iniziare.</li>
 </ol>
+<p class="nota">Dove il telefono non prende, esiste anche la strada
+<strong>senza internet</strong>: una base piantata su punto noto e un rover che
+si scambiano le correzioni via radio <strong>LoRa</strong>, senza caster e senza
+SIM (kit RTK DFRobot con ponte ESP32). All'app non cambia niente — riceve dal
+ricevitore un NMEA già corretto — e il montaggio del ponte è documentato a parte,
+nel suo README: questa resta una guida all'app, non un manuale di firmware.</p>
 
 <h2>Backup e scambio</h2>
 <ol class="passi">
@@ -200,7 +254,9 @@ contenuto ed è <strong>irreversibile</strong>: esporta prima uno ZIP se hai dub
 <tr><td>GNSS</td><td>GPS interno, ricevitori MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
 <tr><td>Report</td><td>Giornaliero con filigrana</td><td>Tutti, senza filigrana</td></tr>
 <tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX con logo e foto, GeoJSON</td></tr>
-<tr><td>Disegni</td><td>Lucido, zoom, testi, scala, punti quotati</td><td>+ Ricalco automatico, esporta con legenda, SVG/DXF</td></tr>
+<tr><td>Disegni</td><td>Lucido, zoom, testi, scala, punti quotati, <strong>retini, stili di linea, opacità dello sfondo</strong></td><td>+ Esporta con legenda, SVG/DXF</td></tr>
+<tr><td>Ricalco automatico</td><td>—</td><td>A tocco e «Ricalca tutto»</td></tr>
+<tr><td>Registrazioni NMEA</td><td>Rilettura e condivisione dei file</td><td>La registrazione (serve l'antenna esterna)</td></tr>
 <tr><td>Libretto livellazioni</td><td>✓</td><td>✓</td></tr>
 <tr><td>Scheda fotografica</td><td>—</td><td>Condivisione e schede nei report</td></tr>
 <tr><td>Dettatura vocale</td><td>✓</td><td>✓</td></tr>
@@ -292,6 +348,56 @@ a 15 secondi, poi genera la scheda senza mappa (i dati non aspettano la rete).
 Su reti lente da cantiere può volerci l'intera attesa: riprova sotto Wi-Fi.
 Senza geotag sulla foto, la mappa non c'è per definizione.</p></details>
 
+<details><summary>«Ricalca tutto» non trova niente, o trova troppo</summary>
+<ul>
+<li>il giro lavora sulla foto di sfondo: senza foto il comando non c'è, e finché
+si legge «Preparazione della foto…» il modello non è ancora pronto — aspetta;</li>
+<li>se le forme sono poche, premi <kbd>Passata fine</kbd>: ripassa con una griglia
+più fitta solo dove il primo giro non aveva visto niente, e aggiunge quello che
+trova senza rimettere dentro ciò che avevi escluso;</li>
+<li>se sono troppe, non applicare tutto: nell'anteprima tocca le forme di troppo
+per escluderle una a una, poi <kbd>Applica</kbd>. Quello che escludi non finisce
+sul disegno;</li>
+<li>le foto piatte — poco contrasto, luce a mezzogiorno, terreno tutto dello
+stesso colore — danno pochi contorni per forza di cose: lì conviene il ricalco a
+tocco singolo, che sa dove stai guardando;</li>
+<li>se resta pieno di forme minuscole, riprova con <kbd>Solo contorni</kbd>: si
+leggono meglio, e il retino si può sempre stendere dopo, a mano.</li>
+</ul></details>
+
+<details><summary>Il tratto non si lascia rivestire</summary>
+<ul>
+<li>il tocco cerca la linea più vicina entro un raggio di un polpastrello: se il
+tratto è sottile o affollato, <strong>zooma</strong> e tocca più preciso, proprio
+sopra l'inchiostro;</li>
+<li>si vestono solo i <strong>tratti</strong>. Campiture, caselle di testo e
+crocette dei punti quotati non sono linee, e sotto il dito non rispondono;</li>
+<li>se compare «Questo tratto non si può rivestire», fra le linee che il tocco ha
+raccolto ce n'è una che linea non è: il puntino lasciato da un tocco fermo, o un
+tratto arrivato guasto da un archivio importato. Cancella il puntino e riprova,
+oppure tocca la linea in un punto lontano da lui. Un puntino da solo non si veste
+e basta: non c'è verso di fare un tratteggio con un punto;</li>
+<li>se fra il tocco e <kbd>Applica</kbd> hai annullato o disegnato qualcos'altro,
+la selezione si scioglie da sé per non vestire il tratto sbagliato: tocca di
+nuovo la linea e riprova.</li>
+</ul></details>
+
+<details><summary>Il retino non compare quando tocco dentro la forma</summary>
+<ul>
+<li>la forma dev'essere <strong>chiusa</strong>, e chiusa da <strong>un solo
+tratto</strong>: parti e torna quasi allo stesso punto senza staccare il dito
+(qualche millimetro di scarto è tollerato). Due linee che si toccano agli estremi
+restano due linee aperte, e riempire una tavola oltre un bordo che nessuno ha
+disegnato sarebbe peggio che non riempirla;</li>
+<li>i contorni prodotti dal <kbd>Ricalco</kbd> sono chiusi per costruzione: quelli
+si campiscono sempre;</li>
+<li>se le forme sono una dentro l'altra, il tocco prende la <strong>più
+piccola</strong> che lo contiene — per campire quella grande, tocca in un punto
+che stia fuori dalle piccole;</li>
+<li>hai toccato dentro la forma, non sul suo bordo? Il bersaglio è l'area, non la
+linea.</li>
+</ul></details>
+
 <details><summary>Il DXF viene rifiutato, o si apre «vicino all'origine» nel GIS</summary>
 <ul>
 <li>per il DXF <strong>georeferenziato</strong> servono una foto scattata a
@@ -302,6 +408,15 @@ coordinate</strong> ben distanziati sulla foto;</li>
 <li>senza scala né punti l'esportazione si rifiuta: un DXF senza unità non
 sarebbe leggibile sensatamente da nessun GIS.</li>
 </ul></details>
+
+<details><summary>Ho attenuato lo sfondo, ma l'SVG esce con la foto piena</summary>
+<p>È così e resta così: l'SVG si porta dentro il <strong>file originale</strong>
+della foto, non una sua copia sbiadita, e schiarirlo vorrebbe dire
+ricomprimerla — cioè peggiorarla per tutti quelli che l'SVG lo aprono per
+lavorarci. <kbd>Opacità sfondo…</kbd> vale nell'editor, nel PDF, nel DOCX, nel
+PNG e in <kbd>Esporta con legenda</kbd>. Se ti serve il vettoriale senza foto,
+scegli <kbd>SVG — solo il disegno</kbd>; se ti serve la foto attenuata, esporta
+in PNG o passa dal report.</p></details>
 
 <details><summary>La freccia del nord non compare nell'esportazione con legenda</summary>
 <p>La freccia compare solo per le foto <strong>scattate a piombo con la
