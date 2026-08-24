@@ -31,6 +31,7 @@ semana ou da escavação, os relatórios geram-se sozinhos a partir das páginas
 <li><b>Levantamento</b>Capture pontos GNSS; verifique um marco geodésico primeiro se usar RTK</li>
 <li><b>Fotos</b>Fotografe a partir dos <kbd>Media</kbd>: as coordenadas anexam-se sozinhas</li>
 <li><b>Desenhos</b>Decalque o corte ou a planta sobre uma foto (papel vegetal digital)</li>
+<li><b>Espólio</b>Com as caixas à frente, registe o que saiu da escavação: <kbd>Obra</kbd> → <kbd>Espólio</kbd></li>
 <li><b>Tarde</b>No separador <kbd>Relatórios</kbd>, gere o relatório diário: um PDF pronto a enviar</li>
 </ol>
 
@@ -84,6 +85,19 @@ desvios ΔN/ΔE/ΔZ com a ponteira sobre o prego, antes de começar a levantar.<
 ótico: estações, leituras de ré e de vante, altitudes calculadas a partir de
 um marco geodésico de partida, com o controlo de fecho. Os pontos nivelados
 entram no sítio com a sua altitude, tal como os pontos GNSS.</li>
+<li>Nos dispositivos com scanner <strong>LiDAR</strong> (iPhone Pro do 12 em
+diante, iPad Pro) aparece <kbd>Medição 3D</kbd> <span class="pro">PRO</span>:
+enquadre devagar até a superfície se reconstruir, depois toque nos dois pontos
+a medir e leia a distância, a distância horizontal e o desnível. Com
+<kbd>Ancorar a um referencial</kbd> escolhe um marco geodésico de altitude
+conhecida e toca no seu ponto no terreno: daí em diante cada medição traz
+também a altitude ortométrica dos dois extremos. <kbd>Fixar</kbd> mantém a
+medição na cena, <kbd>Descartar medição</kbd> deita-a fora,
+<kbd>Levar para o diário</kbd> transforma-a num texto que corrige antes de
+confirmar. É uma medida ótica, e a aplicação di-lo escrevendo
+«LiDAR ±cm»: serve para um desnível ou um comprimento tirado à pressa no
+local, e não substitui o GNSS nem o nível. Nos dispositivos sem scanner o botão
+nem sequer existe.</li>
 <li>Por baixo do painel estão as <kbd>Gravações NMEA</kbd>: o fluxo bruto do
 recetor externo <span class="pro">PRO</span> vai parar a ficheiros sozinho — a
 gravação começa quando liga a antena e fecha-se quando a desliga, sem que tenha
@@ -115,8 +129,82 @@ dados do disparo (sítio, número, data e hora, coordenadas, altitude,
 direção), uma vista de satélite com o marcador de posição e o cone de visão,
 a barra de escala do mapa e a seta do norte. O mapa requer rede: sem rede, a
 ficha sai na mesma, com o painel de dados alargado.</li>
+<li><kbd>Escala virtual</kbd> põe sobre a foto as referências que no campo não
+tinha. Primeiro <kbd>Calibrar foto</kbd>: toca nos dois extremos de uma
+distância que conhece — um traço da régua, o lado de um tijolo — e declara-a em
+centímetros. Depois põe o que precisar: <kbd>Escala gráfica 5 cm</kbd>,
+<kbd>Escala gráfica 10 cm</kbd> ou <kbd>Escala gráfica 20 cm</kbd>,
+<kbd>Baliza 50 cm</kbd>, <kbd>Baliza 1 m</kbd> ou <kbd>Baliza 2 m</kbd>,
+<kbd>Quadrado 10×10 cm</kbd>, <kbd>Cruz de referência</kbd> e
+<kbd>Seta do norte</kbd>. Cada elemento tem o seu aspeto
+(<kbd>Barra plana</kbd>, <kbd>Baliza real</kbd>, <kbd>Régua com marcas</kbd>),
+o seu tamanho, a sua espessura e a sua rotação; para mover um,
+<strong>mantenha-o premido</strong> e arraste-o — assim o beliscão para
+ampliar não o desloca por engano.</li>
+<li><kbd>Adicionar medida</kbd> mede uma distância qualquer na foto com dois
+toques. O número nunca fica guardado: se recalibrar, todas as etiquetas se
+reescrevem sozinhas. Nas fotos tiradas a prumo com a aplicação, a seta do norte
+nasce já orientada pelo azimute registado, e o relatório declara-o; se for você
+a rodá-la, a indicação passa a «declarado». Com
+<kbd>Partilhar com escala</kbd> sai uma cópia da foto com o que lá pousou —
+<kbd>Partilhar foto</kbd> continua a ser o original nu, com o seu EXIF.</li>
+<li><kbd>Processar em série</kbd> <span class="pro">PRO</span> (menu no topo
+dos <kbd>Media</kbd>) pega num grupo de fotos da biblioteca e passa-as todas
+pelo contar e medir, uma a seguir à outra: cada foto passa a ser uma foto do
+sítio com a data do disparo, e cada uma terá a sua <strong>ficha de espólio
+nova</strong> por confirmar. O ecrã fica aceso durante toda a série. Se sair
+ou a interromper, as fotos já prontas ficam em rascunho e
+<kbd>Retomar a série</kbd> recomeça de onde ia. No fim, a revisão passa-lhe as
+fichas uma a uma: corrige proveniência, classe e quantidade, e confirma.</li>
 </ol>
 <div class="schermate"><figure><img src="img/pt/05-media.webp" alt="A galeria de fotos" width="640" height="1391" loading="lazy"><figcaption>A galeria de fotos</figcaption></figure><figure><img src="img/pt/09-scheda.webp" alt="O detalhe de uma foto georreferenciada" width="640" height="1391" loading="lazy"><figcaption>O detalhe de uma foto: coordenadas, altitude e direção de observação</figcaption></figure><figure class="larga"><img src="img/pt/10-scheda-esportata.webp" alt="A ficha fotográfica gerada" width="640" height="605" loading="lazy"><figcaption>A ficha exportada: os dados do disparo, a vista de satélite com o cone de visão, a barra de escala do mapa e a seta do norte</figcaption></figure></div>
+
+<h3>🧮 Contar e medir (em Media)</h3>
+<p>O tabuleiro de fragmentos fotografado de cima, e a aplicação a contá-los e
+a medi-los sozinha. Vive na foto de um registo de <strong>espólio</strong>:
+abre-a a partir da sua ficha e toca em <kbd>Contar e medir</kbd>
+<span class="pro">PRO</span>.</p>
+<ol class="passi">
+<li>Primeiro a escala. A aplicação procura sozinha a
+<strong>escala gráfica</strong> na foto: se a encontrar diz-lhe quantos
+quadrados leu, você declara quanto mede um quadrado (1, 2, 5 ou 10 cm) e toca
+em <kbd>Usar a proposta</kbd>. Se não a encontrar, toca à mão nos dois extremos
+de uma distância conhecida. Também pode escolher <kbd>Não calibrar</kbd>: então
+só se conta, e a aplicação escreve que as medidas não existem — não as
+inventa.</li>
+<li>O modelo recorta todas as formas da foto: pode demorar algumas dezenas de
+segundos. O que aparece é uma <strong>proposta</strong>, não um resultado: um
+toque exclui uma forma, outro volta a incluí-la. <kbd>Unir</kbd> funde numa só
+as formas que são a mesma peça partida em duas;
+<kbd>Limitar a uma área</kbd> deixa-o desenhar com o dedo o recinto do
+tabuleiro, e a procura fica lá dentro; <kbd>Passagem fina</kbd> repassa apenas
+onde não tinha encontrado nada. Os <strong>suspeitos</strong> — as formas que
+parecem fundo, a lona, a sombra — agrupam-se e excluem-se de uma só vez.</li>
+<li>Com <kbd>Material da forma</kbd> toca numa peça e diz o que é;
+<kbd>Material para todas</kbd> dá-o a todas de uma vez, ou só às que ficaram
+sem nada. <kbd>Propor o material</kbd> pede ao modelo do dispositivo que o
+adivinhe: é uma proposta a verificar, e a sua escolha ganha sempre.</li>
+<li><kbd>Avançar</kbd> abre a folha de confirmação com o texto já escrito: a
+contagem, as medidas (lado maior × lado menor, por esta ordem) e as
+declarações honestas — «dos quais N não têm uma medida fiável» quando uma
+forma não se deixa medir. Se houver uma <strong>etiqueta</strong> na foto, a
+aplicação tenta lê-la e diz-lho sempre: ou «Etiqueta lida: …», ou «Nenhum
+texto legível na foto».</li>
+<li>Os interruptores só aparecem onde há um campo vazio por preencher:
+<kbd>Usar a contagem como quantidade</kbd>, <kbd>Usar como sigla</kbd>,
+<kbd>Usar como proveniência</kbd>. O que já escreveu nunca é substituído, e as
+notas <strong>acrescentam-se</strong>: uma segunda volta põe-se a seguir à
+primeira, não no lugar dela. O texto é editável: nas notas entra o que ali
+ler.</li>
+<li>Depois, no detalhe da foto, <kbd>Números nas formas</kbd> mostra ou esconde
+os numerinhos — e tal como os vê ali, assim saem nas partilhas e nos
+relatórios. Toque numa forma para saber quem é: «7: 4,2×2,8 cm». Se a foto não
+estiver calibrada, a etiqueta di-lo, em vez de dar um número.</li>
+</ol>
+<p class="nota">A medida vale no <strong>plano</strong> dos dois pontos que
+calibrou: a foto tem de ser tirada a prumo, com o tabuleiro paralelo ao sensor.
+A referência declarada é de ±2 mm nas peças bem enquadradas; um fragmento ao
+alto ou na borda da foto está fora desse acordo.</p>
 
 <h3>✏️ Desenhos (em Media)</h3>
 <ol class="passi">
@@ -131,9 +219,10 @@ voltar a 1×). Se a foto lhe tapar o traço, no menu da câmara escolha
 a foto, não o desenho. A escolha fica na prancha e vale também em PDF, DOCX,
 PNG e <kbd>Exportar com legenda</kbd>.</li>
 <li>Todo o resto está em <kbd>Ferramentas</kbd> (a chave de bocas na barra),
-que é o índice dos seis modos: <kbd>Caixa de texto</kbd>, <kbd>Decalque</kbd>
-<span class="pro">PRO</span>, <kbd>Escala da foto</kbd>, <kbd>Ponto com
-altitude</kbd>, <kbd>Trama</kbd> e <kbd>Estilo da linha</kbd>. Mantém-se
+que é o índice dos sete modos: <kbd>Caixa de texto</kbd>, <kbd>Decalque</kbd>
+<span class="pro">PRO</span>, <kbd>Escala da foto</kbd>,
+<kbd>Ponto com altitude</kbd>, <kbd>Trama</kbd>, <kbd>Estilo da linha</kbd> e
+<kbd>Escala virtual</kbd>. Mantém-se
 <strong>um só</strong> de cada vez: o visto diz qual, e enquanto estiver ligado
 o dedo não desenha, comanda essa ferramenta — para voltar a desenhar, toque
 novamente na entrada que tem o visto. Os três modos que trabalham sobre a
@@ -181,6 +270,13 @@ toca-se nele e escolhe-se entre <kbd>Contínua</kbd>, <kbd>Tracejada</kbd>,
 <kbd>Remover estilo</kbd> devolve a linha cheia. Não é um efeito do ecrã: os
 tracinhos são segmentos verdadeiros, e continuam a sê-lo em PDF, DOCX, PNG, SVG
 e DXF.</li>
+<li>A <kbd>Escala virtual</kbd> leva para a prancha as mesmas referências das
+fotos: escala gráfica, baliza, quadrado, cruz, seta do norte e medidas com dois
+toques. Os tipos métricos exigem que a prancha tenha uma escala, ou seja a
+<kbd>Escala da foto</kbd>: sem uma distância conhecida, a aplicação explica em
+vez de desenhar. Em SVG e DXF <span class="pro">PRO</span> estes elementos saem
+como <strong>vetores</strong>, na sua própria camada, e a medida lida com a
+régua do SIG bate certo com a etiqueta.</li>
 <li><kbd>Exportar com legenda</kbd> <span class="pro">PRO</span>: a
 imagem sai com uma faixa branca por baixo — barra métrica (se a escala
 existir), seta do norte para as fotos tiradas a prumo, «vista de» para as
@@ -201,8 +297,46 @@ esbatido sai ali com toda a força.</li>
 <ol class="passi">
 <li>Registe as presenças do dia: nome, função e horas de cada pessoa.</li>
 <li>Mantenha o inventário dos equipamentos e a quem estão atribuídos.</li>
+<li>Em <kbd>Espólio</kbd> está o registo do que sai da escavação, com o número
+de linhas já registadas escrito por baixo do nome.</li>
 </ol>
 <div class="schermate"><figure><img src="img/pt/07-ore.webp" alt="Presenças e horas" width="640" height="1391" loading="lazy"><figcaption>Presenças e horas</figcaption></figure></div>
+
+<h3>📦 Espólio (na Obra)</h3>
+<p>O momento verdadeiro não é a câmara: é sentar-se ao fim do dia com as caixas
+à frente e despachá-las uma a uma, cansado e de mãos sujas. Tudo aqui foi feito
+para esse momento — e é <strong>gratuito</strong>, como registar os pontos:
+entregar o que se escavou é documentação de base.</p>
+<ol class="passi">
+<li><kbd>Obra</kbd> → <kbd>Espólio</kbd> → <kbd>+</kbd>. A ficha abre já com a
+data de hoje e com a <strong>última proveniência usada</strong>: da segunda
+linha em diante, registar é quase só tocar. O campo propõe as proveniências já
+usadas nesse sítio.</li>
+<li>Os campos estão pela ordem em que realmente se preenchem:
+<kbd>Proveniência</kbd> (por ex., «UE 102»), <kbd>Classe</kbd>,
+<kbd>Quantidade</kbd> com a sua <kbd>Unidade</kbd> (fragmentos, peças, sacos,
+caixas, gramas), a sigla da caixa ou do saco, <kbd>Estado</kbd>
+(<kbd>Por lavar</kbd>, <kbd>Lavado</kbd>, <kbd>Marcado</kbd>,
+<kbd>Entregue</kbd>), notas e data.</li>
+<li>As classes propostas são onze — <kbd>Cerâmica</kbd>, <kbd>Tijolo</kbd>,
+<kbd>Ossos de animais</kbd>, <kbd>Ossos humanos</kbd>, <kbd>Metal</kbd>,
+<kbd>Vidro</kbd>, <kbd>Indústria lítica</kbd>, <kbd>Argamassa e reboco</kbd>,
+<kbd>Madeira</kbd>, <kbd>Amostras</kbd>, <kbd>Outro</kbd> — mas pode escrever
+uma sua («Reboco pintado»): fica essa palavra em todos os idiomas, porque a
+aplicação só traduz as entradas que ela própria propõe.</li>
+<li>A quantidade pode ficar vazia: uma linha pode dizer «havia isto» sem o
+contar, e nas exportações essa célula fica vazia, nunca a zero.</li>
+<li>As fotos da ficha tiram-se com <kbd>Tirar foto</kbd>, vão buscar-se com
+<kbd>Da biblioteca de fotos</kbd> ou com <kbd>Do sítio</kbd>, que pesca entre as
+fotos já na galeria que ainda não têm ficha. São as mesmas fotos dos
+<kbd>Media</kbd>: apagar um registo de espólio <strong>não</strong> apaga as
+suas fotos, que apenas perdem a ligação.</li>
+<li>Na página do dia, a secção <kbd>Espólio</kbd> só aparece se nesse dia tiver
+registado alguma coisa. <kbd>Levar para o diário</kbd> propõe a linha de
+resumo, agrupada por proveniência e com as notas por inteiro: corrige-a e
+acrescenta-a ao fim do diário. Premido duas vezes escreve duas vezes — o
+diário nunca se reescreve sozinho.</li>
+</ol>
 
 <h3>📄 Relatórios</h3>
 <ol class="passi">
@@ -215,6 +349,13 @@ aplicação em português.</li>
 <li>Gere o PDF, ou exporte em DOCX com logótipo e fotos
 <span class="pro">PRO</span>, CSV dos pontos, GeoJSON para o QGIS
 <span class="pro">PRO</span>.</li>
+<li>No fim está <kbd>Exportação de espólio (sítio completo)</kbd>, gratuita:
+<kbd>Exportar CSV do espólio</kbd> para a folha de cálculo, e
+<kbd>Exportar HTML do espólio</kbd> para uma tabela com as miniaturas que se
+abre em qualquer navegador sem rede. Cabeçalhos, classes, unidades e estados
+saem no idioma escolhido para o relatório; o que você escreveu fica como o
+escreveu. No relatório final, o espólio tem o seu próprio apêndice, por
+proveniência.</li>
 <li>Com as fotos ativadas nos relatórios, pode escolher <kbd>Fichas
 fotográficas em vez das fotos</kbd> <span class="pro">PRO</span>: cada foto
 entra no PDF e no DOCX como uma ficha de documentação completa, com dados e
@@ -270,11 +411,19 @@ conteúdo e é <strong>irreversível</strong>: exporte primeiro um ZIP em caso d
 <tr><td>Gravações NMEA</td><td>Releitura e partilha dos ficheiros</td><td>A gravação (requer a antena externa)</td></tr>
 <tr><td>Caderneta de nivelamento</td><td>✓</td><td>✓</td></tr>
 <tr><td>Ficha fotográfica</td><td>—</td><td>Partilha e fichas nos relatórios</td></tr>
+<tr><td>Espólio</td><td>Registo, CSV e HTML</td><td>+ apêndice nos relatórios</td></tr>
+<tr><td>Escalas virtuais</td><td>Nas fotos e nas pranchas</td><td>+ vetores em SVG e DXF</td></tr>
+<tr><td>Contar e medir</td><td>—</td><td>Numa foto e em série</td></tr>
+<tr><td>Medição 3D (LiDAR)</td><td>—</td><td>Nos dispositivos com scanner</td></tr>
 <tr><td>Ditado por voz</td><td>✓</td><td>✓</td></tr>
 <tr><td>Idiomas dos relatórios</td><td>17</td><td>17</td></tr>
 </table>
 <p>Pro é uma subscrição mensal ou anual com renovação automática, ou uma
-compra única vitalícia. Gere-se e cancela-se nas definições do seu ID Apple.</p>
+compra única vitalícia. Gere-se e cancela-se nas definições do seu ID Apple.
+Quando tem direito a um período de experiência gratuita, o ecrã Pro escreve-lho
+antes da compra («7 dias grátis, depois …»): se não estiver escrito, não tem
+direito — a aplicação não promete uma experiência que a compra depois não
+cumpre.</p>
 
 <h2>Resolução de problemas</h2>
 
@@ -438,6 +587,91 @@ aplicação</strong>, que regista o azimute no momento do disparo. Nas fotos
 frontais surge a indicação «vista de …» (uma seta do norte no plano de um
 alçado seria uma mentira geométrica); nas fotos importadas da biblioteca não
 aparece nenhuma das duas, porque faltam os dados de disparo.</p></details>
+
+<details><summary>«Contar e medir» não aparece na foto</summary>
+<p>O comando só existe nas fotos de um registo de <strong>espólio</strong> — é
+aí que faz sentido recortar fragmentos — e abre-se a partir do detalhe da foto,
+não da ficha, que mostra apenas as miniaturas. Se o toque abrir o ecrã Pro, a
+função é essa mesma: faz parte do Pro, como o decalque.</p></details>
+
+<details><summary>A escala gráfica não é encontrada</summary>
+<ul>
+<li>reconhecem-se as <strong>escalas aos quadrados</strong> — branco/preto,
+amarelo/preto, vermelho/branco — e as réguas aos blocos; as cartas de cor e as
+réguas lisas, sem quadrados, não se reconhecem por princípio;</li>
+<li>a escala tem de ocupar pelo menos um décimo do lado maior da foto e estar
+toda dentro do enquadramento: cortada pela borda, não se lê;</li>
+<li>quantos quadrados leu, di-lo a aplicação; mas <strong>quanto mede um
+quadrado, di-lo você</strong>: da imagem não se deduz, e adivinhá-lo seria mentir
+sobre a escala;</li>
+<li>se não a encontrar, toca à mão nos dois extremos de uma distância
+conhecida. Com <kbd>Não calibrar</kbd> só se conta, e a aplicação declara que as
+medidas não existem.</li>
+</ul></details>
+
+<details><summary>A contagem não bate certo com o tabuleiro real</summary>
+<ul>
+<li>o que vê depois da volta é uma proposta: exclua com o toque a régua, a
+etiqueta, as sombras marcadas e tudo o que não é um achado, até o número bater
+certo com o que contou à mão;</li>
+<li>se um fragmento foi lido como duas peças, toque nas duas formas e
+<kbd>Unir</kbd>: passa a ser uma forma só, com um número só;</li>
+<li>se a volta também olhar para fora do tabuleiro, desenhe o recinto com
+<kbd>Limitar a uma área</kbd>: a procura fica lá dentro;</li>
+<li>se faltarem peças, <kbd>Passagem fina</kbd> repassa apenas onde não tinha
+encontrado nada, sem repor o que tinha excluído;</li>
+<li>o número que vai parar às notas é o que <strong>confirmou</strong> você, não
+o que o modelo tinha proposto.</li>
+</ul></details>
+
+<details><summary>A etiqueta não é lida, ou propõe a coisa errada</summary>
+<ul>
+<li>o resultado é sempre declarado: ou «Etiqueta lida: …», ou «Nenhum texto
+legível na foto» — silêncio não há;</li>
+<li>a leitura automática engana-se, sobretudo na letra à mão: é por isso que o
+texto da folha se <strong>corrige</strong> antes de confirmar;</li>
+<li><kbd>Usar como sigla</kbd> e <kbd>Usar como proveniência</kbd> só aparecem
+se esses campos estiverem vazios: o que já escreveu não se toca;</li>
+<li>duas etiquetas diferentes na mesma foto tornam o dado ambíguo, e então a
+aplicação não propõe nada: o texto lido vê-o na mesma, a escolha fica
+consigo.</li>
+</ul></details>
+
+<details><summary>A série parou, ou algumas fotos não entraram</summary>
+<ul>
+<li>as fotos da biblioteca que estão no iCloud e ainda não foram descarregadas
+não carregam: abra-as uma vez na aplicação Fotos, depois
+<kbd>Tentar novamente os erros</kbd>;</li>
+<li>se saiu da aplicação ou a interrompeu, as fotos já prontas ficam em
+rascunho e <kbd>Retomar a série</kbd> recomeça de onde ia, sem refazer o que
+estava feito;</li>
+<li>as fotos importadas ficam com a <strong>data do disparo</strong>, não com a
+de hoje: se não as vir, está no dia errado — passe a <kbd>Todas</kbd> ou vá ao
+dia delas.</li>
+</ul></details>
+
+<details><summary>A escala virtual não bate certo com a régua verdadeira</summary>
+<p>A escala vale no <strong>plano dos dois pontos</strong> que calibrou: se a
+foto for tirada de esguelha, um elemento pousado mais longe ou mais perto desse
+plano não pode bater certo. Fotografe a prumo, com o plano paralelo ao sensor,
+e calibre sobre uma distância que esteja nesse plano. Se o valor declarado
+estava errado, <kbd>Recalibrar</kbd>: todas as medidas já pousadas se reescrevem
+sozinhas, porque o número nunca fica guardado.</p></details>
+
+<details><summary>«Medição 3D» não aparece, ou a medida sai fora</summary>
+<ul>
+<li>é preciso o scanner <strong>LiDAR</strong>: nos iPhone e iPad que não o têm
+o botão nem sequer existe, em vez de ficar ali apagado sem explicação;</li>
+<li>se aparecer «Superfície ainda incompleta», a reconstrução não terminou:
+mova-se devagar e enquadre de vários ângulos antes de tocar nos pontos;</li>
+<li>sol a pino e superfícies brilhantes — mármore, azulejos, reboco pintado —
+degradam a leitura: continua a ser uma medida ótica, declarada
+«LiDAR ±cm»;</li>
+<li>se a sessão for interrompida (uma chamada, a aplicação posta de lado), uma
+eventual ancoragem a um marco geodésico <strong>caduca</strong> e a aplicação
+di-lo: mais vale refazê-la do que ficar com altitudes que já não são
+verdadeiras.</li>
+</ul></details>
 
 <footer>
 <p>Perguntas ou problemas não listados aqui? Escreva para

@@ -31,6 +31,7 @@ tygodnia lub wykopalisk raporty powstają same na podstawie stron.</p>
 <li><b>Pomiar</b>Zarejestrować punkty GNSS; przy RTK najpierw sprawdzić reper</li>
 <li><b>Zdjęcia</b>Fotografować w zakładce <kbd>Media</kbd>: współrzędne dołączają się same</li>
 <li><b>Rysunki</b>Odrysować przekrój lub plan na zdjęciu (cyfrowa kalka)</li>
+<li><b>Zabytki</b>Ze skrzynkami przed sobą zapisać, co wyszło z wykopu: <kbd>Stanowisko</kbd> → <kbd>Zabytki</kbd></li>
 <li><b>Wieczorem</b>Z zakładki <kbd>Raporty</kbd> wygenerować raport dzienny: PDF gotowy do wysłania</li>
 </ol>
 
@@ -87,6 +88,18 @@ pomiar.</li>
 niwelatora optycznego: stanowiska niwelatora, odczyty wstecz i w przód,
 wysokości obliczane od repera początkowego, z kontrolą zamknięcia. Punkty
 niwelowane trafiają do stanowiska z wysokością, tak jak punkty GNSS.</li>
+<li>Na urządzeniach ze skanerem <strong>LiDAR</strong> (iPhone Pro od 12
+wzwyż, iPad Pro) pojawia się <kbd>Pomiar 3D</kbd> <span class="pro">PRO</span>:
+kadrować powoli, aż powierzchnia się odtworzy, potem dotknąć dwóch mierzonych
+punktów i odczytać odległość, odległość poziomą oraz różnicę wysokości. Za
+pomocą <kbd>Zakotwicz do repera</kbd> wybiera się reper o znanej wysokości i
+dotyka jego punktu na gruncie: od tej chwili każdy pomiar niesie także wysokość
+n.p.m. obu końców. <kbd>Zatwierdź</kbd> zostawia pomiar w scenie,
+<kbd>Odrzuć pomiar</kbd> go wyrzuca, a <kbd>Przenieś do dziennika</kbd> robi z
+niego tekst, który przed potwierdzeniem można poprawić. To pomiar optyczny i
+aplikacja to deklaruje, pisząc „LiDAR ±cm”: przydaje się do różnicy wysokości
+albo do długości wziętej naprędce, na miejscu, i nie zastępuje ani GNSS, ani
+niwelatora. Na urządzeniach bez skanera przycisku nie ma w ogóle.</li>
 <li>Pod panelem znajdują się <kbd>Nagrania NMEA</kbd>: surowy strumień
 zewnętrznego odbiornika <span class="pro">PRO</span> sam trafia do plików —
 nagrywanie zaczyna się po włączeniu anteny i kończy po jej wyłączeniu, bez
@@ -119,8 +132,86 @@ wykonania (stanowisko, numer, data i godzina, współrzędne, wysokość,
 kierunek), widok satelitarny ze znacznikiem pozycji i stożkiem widzenia,
 pasek skali mapy oraz strzałka północy. Mapa wymaga sieci: bez niej karta i
 tak powstaje, z powiększonym panelem danych.</li>
+<li><kbd>Skala wirtualna</kbd> kładzie na zdjęciu te odniesienia, których nie
+było pod ręką w terenie. Najpierw <kbd>Skalibruj zdjęcie</kbd>: dotknąć dwóch
+końców znanej odległości — kreski na łacie, boku cegły — i podać ją w
+centymetrach. Potem położyć to, co potrzebne: <kbd>Linijka skali 5 cm</kbd>,
+<kbd>Linijka skali 10 cm</kbd> lub <kbd>Linijka skali 20 cm</kbd>,
+<kbd>Tyczka 50 cm</kbd>, <kbd>Tyczka 1 m</kbd> lub <kbd>Tyczka 2 m</kbd>,
+<kbd>Kwadrat 10×10 cm</kbd>, <kbd>Krzyż odniesienia</kbd> i
+<kbd>Strzałka północy</kbd>. Każdy element ma swój wygląd
+(<kbd>Płaski pasek</kbd>, <kbd>Prawdziwa tyczka</kbd>,
+<kbd>Linijka z kreskami</kbd>), wielkość, grubość i obrót; aby któryś
+przesunąć, <strong>przytrzymać go</strong> i przeciągnąć — dzięki temu
+uszczypnięcie do powiększania nie przesunie go przez pomyłkę.</li>
+<li><kbd>Dodaj pomiar</kbd> mierzy na zdjęciu dowolną odległość dwoma
+dotknięciami. Liczba nigdy nie jest zapisywana: po ponownej kalibracji wszystkie
+etykiety przepisują się same. Na zdjęciach wykonanych pionowo aparatem
+aplikacji strzałka północy rodzi się już zwrócona na zarejestrowany azymut, a
+raport to deklaruje; jeśli obróci się ją ręcznie, opis zmienia się na
+„zadeklarowany”. <kbd>Udostępnij ze skalą</kbd> wypuszcza kopię zdjęcia z tym,
+co na nim położono — <kbd>Udostępnij zdjęcie</kbd> pozostaje nagim oryginałem,
+ze swoim EXIF-em.</li>
+<li><kbd>Przetwarzaj seryjnie</kbd> <span class="pro">PRO</span> (menu u góry w
+<kbd>Media</kbd>) bierze z biblioteki grupę zdjęć i przepuszcza je wszystkie
+przez „Policz i zmierz”, jedno po drugim: każde zdjęcie staje się zdjęciem
+stanowiska z datą wykonania, a do każdego powstanie <strong>nowa karta
+zabytku</strong> do potwierdzenia. Ekran pozostaje włączony przez całą serię.
+Po wyjściu albo przerwaniu gotowe już zdjęcia zostają w wersji roboczej, a
+<kbd>Wznów serię</kbd> podejmuje pracę tam, gdzie się urwała. Na koniec przegląd
+podaje karty jedna po drugiej: poprawić pochodzenie, kategorię i ilość, i
+potwierdzić.</li>
 </ol>
 <div class="schermate"><figure><img src="img/pl/05-media.webp" alt="Galeria zdjęć" width="640" height="1391" loading="lazy"><figcaption>Galeria zdjęć</figcaption></figure><figure><img src="img/pl/09-scheda.webp" alt="Szczegóły zdjęcia georeferencjonowanego" width="640" height="1391" loading="lazy"><figcaption>Szczegóły zdjęcia: współrzędne, wysokość i kierunek patrzenia</figcaption></figure><figure class="larga"><img src="img/pl/10-scheda-esportata.webp" alt="Wygenerowana karta fotograficzna" width="640" height="605" loading="lazy"><figcaption>Wyeksportowana karta: dane wykonania, widok satelitarny ze stożkiem widzenia, pasek skali mapy i strzałka północy</figcaption></figure></div>
+
+<h3>🧮 Policz i zmierz (w Mediach)</h3>
+<p>Taca z fragmentami sfotografowana z góry — i aplikacja, która sama je liczy
+i mierzy. Funkcja żyje na zdjęciu <strong>zabytku</strong>: otwiera się je z jego
+karty i dotyka <kbd>Policz i zmierz</kbd> <span class="pro">PRO</span>.</p>
+<ol class="passi">
+<li>Najpierw skala. Aplikacja sama szuka na zdjęciu <strong>łaty
+mierniczej</strong>: jeśli ją znajdzie, mówi, ile pól odczytała, użytkownik
+podaje, ile mierzy jedno pole (1, 2, 5 albo 10 cm), i dotyka
+<kbd>Użyj propozycji</kbd>. Jeśli nie znajdzie, trzeba ręcznie dotknąć dwóch
+końców znanej odległości. Można też wybrać <kbd>Nie kalibruj</kbd>: wtedy tylko
+się liczy, a aplikacja pisze, że pomiarów nie ma — nie zmyśla ich.</li>
+<li>Model obrysowuje wszystkie kształty na zdjęciu: może to zająć kilkadziesiąt
+sekund. To, co się pojawia, jest <strong>propozycją</strong>, a nie wynikiem:
+jedno dotknięcie wyklucza kształt, kolejne go przywraca. <kbd>Połącz</kbd> scala
+w jeden te kształty, które są tym samym kawałkiem pękniętym na dwoje;
+<kbd>Ogranicz do obszaru</kbd> pozwala obrysować palcem brzeg tacy, a
+poszukiwanie zostaje w środku; <kbd>Przebieg dokładny</kbd> powtarza pracę tylko
+tam, gdzie nic nie znalazł. <strong>Podejrzane</strong> kształty — te, które
+wyglądają jak tło, plandeka, cień — grupują się i wyklucza się je jednym
+ruchem.</li>
+<li>Za pomocą <kbd>Materiał kształtu</kbd> dotyka się kawałka i mówi, czym on
+jest; <kbd>Materiał dla wszystkich</kbd> nadaje go wszystkim naraz albo tylko
+tym, które zostały bez materiału. <kbd>Zaproponuj materiał</kbd> prosi model na
+urządzeniu, żeby go odgadł: to propozycja do sprawdzenia, a wybór użytkownika
+zawsze wygrywa.</li>
+<li><kbd>Dalej</kbd> otwiera arkusz potwierdzenia z gotowym już tekstem: liczbą,
+pomiarami (bok dłuższy × bok krótszy, po kolei) i uczciwymi deklaracjami — „z
+czego N bez wiarygodnego pomiaru”, kiedy któryś kształt nie daje się zmierzyć.
+Jeśli na zdjęciu jest <strong>etykieta</strong>, aplikacja próbuje ją odczytać i
+zawsze o tym mówi: albo „Odczytana etykieta: …”, albo „Brak czytelnego tekstu na
+zdjęciu”.</li>
+<li>Przełączniki pojawiają się tylko tam, gdzie jest puste miejsce do
+wypełnienia: <kbd>Użyj liczby jako ilości</kbd>, <kbd>Użyj jako sygnatury</kbd>,
+<kbd>Użyj jako pochodzenia</kbd>. To, co użytkownik już wpisał, nigdy nie
+zostaje nadpisane, a notatki się <strong>wydłużają</strong>: drugie przejście
+dopisuje się na końcu pierwszego, a nie na jego miejsce. Tekst da się
+zredagować: do notatek trafia to, co się tam czyta.</li>
+<li>Potem, w szczegółach zdjęcia, <kbd>Numery na kształtach</kbd> pokazuje albo
+ukrywa numerki — i tak, jak się je tam widzi, wychodzą one również w
+udostępnieniach i w raportach. Dotknąć kształtu, żeby wiedzieć, czym jest:
+„7: 4,2×2,8 cm”. Jeśli zdjęcie nie jest skalibrowane, etykieta to mówi,
+zamiast podawać liczbę.</li>
+</ol>
+<p class="nota">Pomiar obowiązuje w <strong>płaszczyźnie</strong> tych dwóch
+punktów, na których dokonano kalibracji: zdjęcie trzeba wykonać pionowo, z tacą
+równoległą do matrycy. Deklarowane odniesienie to ±2 mm dla dobrze skadrowanych
+kawałków; fragment stojący albo leżący przy brzegu zdjęcia jest poza tą
+umową.</p>
 
 <h3>✏️ Rysunki (w Mediach)</h3>
 <ol class="passi">
@@ -134,9 +225,10 @@ wybrać <kbd>Krycie tła…</kbd> i ustawić je tam, gdzie potrzeba, od 5% do 10
 blednie zdjęcie, nie rysunek. Wybór zostaje przy planszy i obowiązuje także w
 PDF, DOCX, PNG oraz w <kbd>Eksportuj z legendą</kbd>.</li>
 <li>Cała reszta znajduje się w <kbd>Narzędzia</kbd> (klucz płaski na pasku),
-czyli w spisie sześciu trybów: <kbd>Pole tekstowe</kbd>,
+czyli w spisie siedmiu trybów: <kbd>Pole tekstowe</kbd>,
 <kbd>Kalkowanie</kbd> <span class="pro">PRO</span>, <kbd>Skala zdjęcia</kbd>,
-<kbd>Punkt z wysokością</kbd>, <kbd>Deseń</kbd> i <kbd>Styl linii</kbd>.
+<kbd>Punkt z wysokością</kbd>, <kbd>Deseń</kbd>, <kbd>Styl linii</kbd> i
+<kbd>Skala wirtualna</kbd>.
 Włączony jest <strong>tylko jeden</strong> naraz: ptaszek pokazuje który, a
 dopóki jest włączony, palec nie rysuje, tylko steruje tym narzędziem — aby
 wrócić do rysowania, dotknąć ponownie zaznaczonej pozycji. Trzy tryby
@@ -186,6 +278,13 @@ dotknąć jej i wybrać spośród <kbd>Ciągła</kbd>, <kbd>Kreskowana</kbd>,
 <kbd>Usuń styl</kbd> przywraca linię pełną. To nie jest efekt ekranowy:
 kreseczki są prawdziwymi odcinkami i pozostają nimi w PDF, DOCX, PNG, SVG i
 DXF.</li>
+<li><kbd>Skala wirtualna</kbd> przenosi na planszę te same odniesienia co na
+zdjęciach: linijkę skali, tyczkę, kwadrat, krzyż, strzałkę północy i pomiary
+dwoma dotknięciami. Typy metryczne wymagają, żeby plansza miała skalę, czyli
+<kbd>Skala zdjęcia</kbd>: bez znanej odległości aplikacja tłumaczy, zamiast
+rysować. W SVG i DXF <span class="pro">PRO</span> elementy te wychodzą jako
+<strong>wektory</strong>, na swojej warstwie, a odległość zmierzona linijką w
+GIS zgadza się z etykietą.</li>
 <li><kbd>Eksportuj z legendą</kbd> <span class="pro">PRO</span>: obraz
 wychodzi z białym paskiem na dole — pasek skali (jeśli skala jest ustawiona),
 strzałka północy dla zdjęć wykonanych pionowo, „widok z” dla zdjęć
@@ -209,8 +308,48 @@ raportu.</li>
 <li>Zarejestrować obecność danego dnia: imię i nazwisko, funkcję oraz godziny
 każdej osoby.</li>
 <li>Prowadzić ewidencję sprzętu i przypisania go do osób.</li>
+<li>Pod pozycją <kbd>Zabytki</kbd> jest rejestr tego, co wychodzi z wykopu, a
+pod nazwą widnieje liczba już zapisanych wierszy.</li>
 </ol>
 <div class="schermate"><figure><img src="img/pl/07-ore.webp" alt="Obecność i godziny" width="640" height="1391" loading="lazy"><figcaption>Obecność i godziny</figcaption></figure></div>
+
+<h3>📦 Zabytki (na Stanowisku)</h3>
+<p>Prawdziwy moment to nie aparat: to koniec dnia, ze skrzynkami przed sobą,
+kiedy wklepuje się je jedną po drugiej — ze zmęczeniem i brudnymi rękami. Wszystko
+tutaj jest zrobione pod tamten moment — i jest <strong>bezpłatne</strong>, tak
+jak rejestrowanie punktów: przekazanie tego, co się wykopało, to dokumentacja
+podstawowa.</p>
+<ol class="passi">
+<li><kbd>Stanowisko</kbd> → <kbd>Zabytki</kbd> → <kbd>+</kbd>. Karta otwiera się
+już z dzisiejszą datą i z <strong>ostatnio użytym pochodzeniem</strong>: od
+drugiego wiersza rejestrowanie to prawie samo dotykanie. Pole podpowiada
+pochodzenia już użyte na tym stanowisku.</li>
+<li>Pola idą w takiej kolejności, w jakiej naprawdę się je wypełnia:
+<kbd>Pochodzenie</kbd> (np. „JS 102”), <kbd>Kategoria</kbd>, <kbd>Ilość</kbd>
+wraz z polem <kbd>Jednostka</kbd> (fragmenty, sztuki, woreczki, skrzynki,
+gramy), sygnatura skrzynki lub woreczka, <kbd>Stan</kbd> (<kbd>Do mycia</kbd>,
+<kbd>Umyte</kbd>, <kbd>Oznaczone</kbd>, <kbd>Przekazane</kbd>), notatki i
+data.</li>
+<li>Proponowanych kategorii jest jedenaście — <kbd>Ceramika</kbd>,
+<kbd>Cegła</kbd>, <kbd>Kości zwierzęce</kbd>, <kbd>Kości ludzkie</kbd>,
+<kbd>Metal</kbd>, <kbd>Szkło</kbd>, <kbd>Wyroby kamienne</kbd>,
+<kbd>Zaprawa i tynk</kbd>, <kbd>Drewno</kbd>, <kbd>Próbki</kbd>,
+<kbd>Inne</kbd> — ale można wpisać własną („Tynk malowany”): zostanie tym samym
+słowem w każdym języku, bo aplikacja tłumaczy tylko te pozycje, które sama
+proponuje.</li>
+<li>Ilość można zostawić pustą: wiersz może powiedzieć „to tu było”, nie licząc
+tego, a w eksportach ta komórka zostaje pusta, nigdy zerowa.</li>
+<li>Zdjęcia karty robi się przyciskiem <kbd>Zrób zdjęcie</kbd>, bierze się je z
+<kbd>Z biblioteki</kbd> albo z <kbd>Ze stanowiska</kbd>, które łowi wśród zdjęć
+już zebranych w galerii te, które nie mają jeszcze karty. To te same zdjęcia co
+w <kbd>Media</kbd>: usunięcie zabytku <strong>nie</strong> usuwa jego zdjęć,
+tracą one tylko powiązanie.</li>
+<li>Na stronie dnia sekcja <kbd>Zabytki</kbd> pojawia się tylko wtedy, gdy tego
+dnia coś zarejestrowano. <kbd>Przenieś do dziennika</kbd> proponuje wiersz
+podsumowujący, pogrupowany według pochodzenia i z pełnymi notatkami: poprawić go
+i dodać na końcu dziennika. Naciśnięty dwa razy pisze dwa razy — dziennik nigdy
+nie przepisuje się sam.</li>
+</ol>
 
 <h3>📄 Raporty</h3>
 <ol class="passi">
@@ -223,6 +362,13 @@ aplikacja działa po polsku.</li>
 <li>Wygenerować PDF albo wyeksportować DOCX z logo i zdjęciami
 <span class="pro">PRO</span>, CSV punktów, GeoJSON dla QGIS
 <span class="pro">PRO</span>.</li>
+<li>Na dole jest bezpłatny <kbd>Eksport zabytków (całe stanowisko)</kbd>:
+<kbd>Eksportuj CSV zabytków</kbd> do arkusza kalkulacyjnego i
+<kbd>Eksportuj HTML zabytków</kbd> — tabela z miniaturami, którą otwiera
+dowolna przeglądarka bez sieci. Nagłówki, kategorie, jednostki i stany wychodzą
+w języku wybranym dla raportu; to, co wpisano ręcznie, zostaje tak, jak zostało
+wpisane. W raporcie końcowym zabytki mają własny załącznik, według
+pochodzenia.</li>
 <li>Przy włączonych zdjęciach w raportach można wybrać <kbd>Karty
 fotograficzne zamiast zdjęć</kbd> <span class="pro">PRO</span>: każde
 zdjęcie trafia do PDF i DOCX jako pełna karta dokumentacyjna z danymi i mapą,
@@ -279,12 +425,19 @@ wątpliwości najpierw wyeksportować ZIP.</p>
 <tr><td>Nagrania NMEA</td><td>Odczyt i udostępnianie plików</td><td>Nagrywanie (wymaga anteny zewnętrznej)</td></tr>
 <tr><td>Dziennik niwelacji</td><td>✓</td><td>✓</td></tr>
 <tr><td>Karta fotograficzna</td><td>—</td><td>Udostępnianie i karty w raportach</td></tr>
+<tr><td>Zabytki</td><td>Rejestr, CSV i HTML</td><td>+ załącznik w raportach</td></tr>
+<tr><td>Skale wirtualne</td><td>Na zdjęciach i na planszach</td><td>+ wektory w SVG i DXF</td></tr>
+<tr><td>Policz i zmierz</td><td>—</td><td>Na jednym zdjęciu i seryjnie</td></tr>
+<tr><td>Pomiar 3D (LiDAR)</td><td>—</td><td>Na urządzeniach ze skanerem</td></tr>
 <tr><td>Dyktowanie głosowe</td><td>✓</td><td>✓</td></tr>
 <tr><td>Języki raportów</td><td>17</td><td>17</td></tr>
 </table>
 <p>Pro to subskrypcja miesięczna lub roczna z automatycznym odnawianiem, albo
 jednorazowy zakup dożywotni. Zarządzanie i anulowanie jest możliwe w dowolnym
-momencie w ustawieniach identyfikatora Apple.</p>
+momencie w ustawieniach identyfikatora Apple. Jeśli przysługuje bezpłatny okres
+próbny, ekran Pro pisze o tym przed zakupem („7 dni za darmo, potem …”): jeśli
+nic tam nie ma, próba nie przysługuje — aplikacja nie obiecuje próby, której
+zakup potem nie dotrzyma.</p>
 
 <h2>Rozwiązywanie problemów</h2>
 
@@ -459,6 +612,95 @@ aplikacji</strong>, który rejestruje azymut w momencie zdjęcia. Dla zdjęć
 frontalnych pojawia się napis „widok z …” (strzałka północy na płaszczyźnie
 elewacji byłaby geometrycznym kłamstwem); dla zdjęć zaimportowanych z
 biblioteki nie pojawia się żadna z nich, bo brakuje danych zdjęcia.</p></details>
+
+<details><summary>„Policz i zmierz” nie pojawia się na zdjęciu</summary>
+<p>Polecenie żyje tylko na zdjęciach <strong>zabytku</strong> — to tam
+obrysowywanie fragmentów ma sens — i otwiera się je ze szczegółów zdjęcia, a nie
+z karty, która pokazuje same miniatury. Jeśli dotknięcie otwiera ekran Pro,
+funkcja jest właśnie taka: należy do Pro, tak jak kalkowanie.</p></details>
+
+<details><summary>Łata miernicza nie zostaje znaleziona</summary>
+<ul>
+<li>rozpoznawane są <strong>łaty z polami</strong> — biało-czarne, żółto-czarne,
+czerwono-białe — oraz linijki blokowe; wzorniki kolorów i gładkie linijki, bez
+pól, z zasady nie są rozpoznawane;</li>
+<li>łata musi zajmować co najmniej jedną dziesiątą dłuższego boku zdjęcia i
+mieścić się w kadrze w całości: ucięta przez brzeg, nie daje się odczytać;</li>
+<li>ile pól odczytała, mówi aplikacja, ale <strong>ile mierzy jedno pole, mówi
+użytkownik</strong>: z obrazu tego nie da się wywnioskować, a zgadywanie
+oznaczałoby kłamstwo o skali;</li>
+<li>jeśli jej nie znajdzie, trzeba ręcznie dotknąć dwóch końców znanej
+odległości. Przy <kbd>Nie kalibruj</kbd> tylko się liczy, a aplikacja deklaruje,
+że pomiarów nie ma.</li>
+</ul></details>
+
+<details><summary>Liczba nie zgadza się z prawdziwą tacą</summary>
+<ul>
+<li>to, co widać po przejściu, jest propozycją: dotknięciem wykluczyć linijkę,
+etykietę, ostre cienie i wszystko, co nie jest zabytkiem, aż liczba zgodzi się z
+tą policzoną ręcznie;</li>
+<li>jeśli jeden fragment został odczytany jako dwa kawałki, dotknąć obu
+kształtów i użyć <kbd>Połącz</kbd>: stanie się jednym kształtem, z jednym
+numerem;</li>
+<li>jeśli przejście zagląda też poza tacę, obrysować brzeg przez
+<kbd>Ogranicz do obszaru</kbd>: poszukiwanie zostaje w środku;</li>
+<li>jeśli brakuje kawałków, <kbd>Przebieg dokładny</kbd> powtarza pracę tylko
+tam, gdzie nic nie znalazł, i nie przywraca tego, co wcześniej wykluczono;</li>
+<li>liczba, która trafia do notatek, to ta <strong>potwierdzona</strong> przez
+użytkownika, a nie ta zaproponowana przez model.</li>
+</ul></details>
+
+<details><summary>Etykieta nie zostaje odczytana albo podpowiada coś złego</summary>
+<ul>
+<li>wynik jest zawsze zadeklarowany: albo „Odczytana etykieta: …”, albo „Brak
+czytelnego tekstu na zdjęciu” — milczenia nie ma;</li>
+<li>automatyczny odczyt się myli, zwłaszcza przy piśmie ręcznym: dlatego tekst
+arkusza <strong>poprawia się</strong> przed potwierdzeniem;</li>
+<li><kbd>Użyj jako sygnatury</kbd> i <kbd>Użyj jako pochodzenia</kbd> pojawiają
+się tylko wtedy, gdy te pola są puste: tego, co użytkownik już wpisał, nikt nie
+rusza;</li>
+<li>dwie różne etykiety na jednym zdjęciu czynią dane niejednoznacznymi i wtedy
+aplikacja nie proponuje niczego: odczytany tekst i tak widać, a wybór zostaje
+przy użytkowniku.</li>
+</ul></details>
+
+<details><summary>Seria się zatrzymała albo niektóre zdjęcia nie weszły</summary>
+<ul>
+<li>zdjęcia z biblioteki, które siedzą w iCloud i nie są jeszcze pobrane, nie
+wczytują się: otworzyć je raz w aplikacji Zdjęcia, a potem
+<kbd>Ponów błędy</kbd>;</li>
+<li>po wyjściu z aplikacji albo jej przerwaniu gotowe już zdjęcia zostają w
+wersji roboczej, a <kbd>Wznów serię</kbd> podejmuje pracę tam, gdzie się urwała,
+bez powtarzania tego, co było zrobione;</li>
+<li>zaimportowane zdjęcia przyjmują <strong>datę wykonania</strong>, a nie
+dzisiejszą: jeśli ich nie widać, to zły dzień — przejść na <kbd>Wszystkie</kbd>
+albo wrócić do ich dnia.</li>
+</ul></details>
+
+<details><summary>Wirtualna linijka skali nie zgadza się z prawdziwą</summary>
+<p>Skala obowiązuje w <strong>płaszczyźnie dwóch punktów</strong>, na których
+dokonano kalibracji: jeśli zdjęcie jest zrobione ukośnie, element położony dalej
+albo bliżej niż ta płaszczyzna nie może się zgadzać. Fotografować pionowo, z
+płaszczyzną równoległą do matrycy, i kalibrować na odległości leżącej w tej
+płaszczyźnie. Jeśli podana wartość była błędna —
+<kbd>Skalibruj ponownie</kbd>: wszystkie położone już pomiary przepisują się
+same, bo liczba nigdy nie jest zapisywana.</p></details>
+
+<details><summary>„Pomiar 3D” się nie pojawia albo pomiar odbiega</summary>
+<ul>
+<li>potrzebny jest skaner <strong>LiDAR</strong>: na iPhone'ach i iPadach, które
+go nie mają, przycisku nie ma w ogóle, zamiast stać tam wygaszony bez
+wyjaśnienia;</li>
+<li>jeśli pojawia się „Powierzchnia jeszcze niekompletna”, odtwarzanie nie jest
+skończone: poruszać się powoli i kadrować z kilku stron przed dotknięciem
+punktów;</li>
+<li>pełne słońce i błyszczące powierzchnie — marmur, płytki, malowany tynk —
+pogarszają odczyt: to nadal pomiar optyczny, deklarowany jako „LiDAR ±cm”;</li>
+<li>jeśli sesja zostanie przerwana (telefon, aplikacja odłożona na bok),
+ewentualne zakotwiczenie do repera <strong>wygasa</strong> i aplikacja o tym
+mówi: lepiej zrobić je od nowa, niż trzymać się wysokości, które przestały być
+prawdziwe.</li>
+</ul></details>
 
 <footer>
 <p>Pytania lub problemy, których tu nie ma? Napisać na

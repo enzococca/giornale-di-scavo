@@ -31,6 +31,7 @@ vagy a feltárás végén a jelentések maguktól elkészülnek az oldalak alapj
 <li><b>Felmérés</b>Vegye fel a GNSS-pontokat; RTK esetén előbb ellenőrizzen egy alappontot</li>
 <li><b>Fényképek</b>Fényképezzen a <kbd>Média</kbd>ból: a koordináták automatikusan hozzákapcsolódnak</li>
 <li><b>Rajzok</b>Pausolja át a metszetet vagy az alaprajzot egy fényképen (digitális pauszpapír)</li>
+<li><b>Leletek</b>A ládákkal maga előtt rögzítse, mi került elő: <kbd>Helyszín</kbd> → <kbd>Leletek</kbd></li>
 <li><b>Este</b>A <kbd>Jelentés</kbd> fülön készítse el a napi jelentést: a PDF küldésre kész</li>
 </ol>
 
@@ -90,6 +91,19 @@ szöggel a szegen, mielőtt hozzáfogna a felméréshez.</li>
 terepi jegyzőkönyve: állomások, hátra- és előremérések, egy kiinduló
 alapponttól számított magasságok, záróhiba-ellenőrzéssel. A szintezett pontok
 a magasságukkal kerülnek be a lelőhelyre, akárcsak a GNSS-pontok.</li>
+<li>A <strong>LiDAR</strong>-szkennerrel felszerelt készülékeken (iPhone Pro a
+12-estől fölfelé, iPad Pro) megjelenik a <kbd>3D mérés</kbd>
+<span class="pro">PRO</span>: pásztázzon lassan, amíg a felület fel nem épül,
+majd érintse meg a két mérendő pontot, és olvassa le a távolságot, a vízszintes
+távolságot és a szintkülönbséget. A <kbd>Rögzítés alappontra</kbd> gombbal
+kiválaszt egy ismert magasságú alappontot, és megérinti annak pontját a terepen:
+onnantól minden mérés a két végpont tszf. magasságát is magával hozza. A
+<kbd>Rögzítés</kbd> a jelenetben tartja a mérést, a <kbd>Mérés elvetése</kbd>
+eldobja, az <kbd>Átvezetés a naplóba</kbd> pedig szöveget csinál belőle,
+amelyet megerősítés előtt javíthat. Ez optikai mérés, és az alkalmazás ki is
+mondja, amikor „LiDAR ±cm”-t ír: egy szintkülönbséghez vagy egy helyben,
+sebtében vett hosszhoz jó, és nem helyettesíti sem a GNSS-t, sem a szintezőt. A
+szkenner nélküli készülékeken a gomb egyáltalán nincs ott.</li>
 <li>A panel alatt találhatók az <kbd>NMEA-felvételek</kbd>: a külső vevő
 <span class="pro">PRO</span> nyers adatfolyama magától fájlba kerül — a
 felvétel akkor indul, amikor bekapcsolja az antennát, és akkor záródik le,
@@ -122,8 +136,89 @@ adataival (lelőhely, szám, dátum és időpont, koordináták, magasság, irá
 egy műholdas nézetet a helyjelölővel és a felvételi kúppal, a térkép
 méretarány-sávjával és az északi nyíllal. A térképhez hálózat szükséges:
 enélkül a lap akkor is elkészül, kibővített adatpanellel.</li>
+<li>A <kbd>Virtuális lépték</kbd> ráteszi a fényképre azokat a viszonyítási
+elemeket, amelyek a terepen nem voltak kéznél. Először
+<kbd>Fénykép kalibrálása</kbd>: érintse meg egy ismert távolság két végpontját —
+egy mérőléc osztását, egy tégla oldalát —, és adja meg centiméterben. Aztán
+tegye rá, amire szüksége van: <kbd>Léptékvonalzó 5 cm</kbd>,
+<kbd>Léptékvonalzó 10 cm</kbd> vagy <kbd>Léptékvonalzó 20 cm</kbd>,
+<kbd>Mérőrúd 50 cm</kbd>, <kbd>Mérőrúd 1 m</kbd> vagy <kbd>Mérőrúd 2 m</kbd>,
+<kbd>Négyzet 10×10 cm</kbd>, <kbd>Referenciakereszt</kbd> és
+<kbd>Északi nyíl</kbd>. Minden elemnek megvan a saját megjelenése
+(<kbd>Lapos sáv</kbd>, <kbd>Valódi mérőrúd</kbd>,
+<kbd>Vonalzó jelölésekkel</kbd>), mérete, vastagsága és elforgatása; ha
+elmozdítaná valamelyiket, <strong>tartsa nyomva</strong>, és úgy húzza — így a
+nagyításhoz használt csippentés nem tolja el véletlenül.</li>
+<li>A <kbd>Mérés hozzáadása</kbd> két érintéssel megmér a fényképen bármilyen
+távolságot. A szám sosem mentődik el: ha újrakalibrál, minden címke magától
+újraíródik. Az alkalmazás kamerájával függőlegesen készített fényképeken az
+északi nyíl már a rögzített azimutra állítva születik meg, és a jelentés ezt ki
+is mondja; ha Ön forgatja el, a felirat „megadott”-ra vált. A
+<kbd>Megosztás léptékkel</kbd> a fénykép egy másolatát adja ki mindazzal, amit
+ráhelyezett — a <kbd>Fénykép megosztása</kbd> marad a csupasz eredeti, a saját
+EXIF-jével.</li>
+<li>A <kbd>Sorozatos feldolgozás</kbd> <span class="pro">PRO</span> (a
+<kbd>Média</kbd> felső menüjében) fényképek egy csoportját veszi ki a
+galériából, és mindet átengedi a „Számlálás és mérés” munkáján, egyiket a másik
+után: minden fényképből a lelőhely fényképe lesz, a felvétel dátumával, és
+mindegyikhez <strong>új leletlap</strong> készül, amelyet meg kell erősíteni. A
+képernyő az egész sorozat alatt bekapcsolva marad. Ha kilép vagy megszakítja, a
+már kész fényképek piszkozatban maradnak, és a <kbd>Sorozat folytatása</kbd>
+onnan indul újra, ahol abbamaradt. A végén az átnézés egyenként adja a lapokat:
+javítsa a származást, a kategóriát és a mennyiséget, majd erősítse meg.</li>
 </ol>
 <div class="schermate"><figure><img src="img/hu/05-media.webp" alt="A fényképgaléria" width="640" height="1391" loading="lazy"><figcaption>A fényképgaléria</figcaption></figure><figure><img src="img/hu/09-scheda.webp" alt="Egy georeferált fénykép részletei" width="640" height="1391" loading="lazy"><figcaption>Egy fénykép részletei: koordináták, magasság és a felvétel iránya</figcaption></figure><figure class="larga"><img src="img/hu/10-scheda-esportata.webp" alt="Az elkészült fotólap" width="640" height="605" loading="lazy"><figcaption>Az exportált lap: a felvétel adatai, a műholdas nézet a felvételi kúppal, a térkép méretarány-sávja és az északi nyíl</figcaption></figure></div>
+
+<h3>🧮 Számlálás és mérés (a Médiában)</h3>
+<p>A felülről lefényképezett, töredékekkel teli tálca — és az alkalmazás, amely
+magától megszámolja és megméri őket. Egy <strong>lelet</strong> fényképén él: az
+adatlapjáról nyitja meg, és megérinti a <kbd>Számlálás és mérés</kbd>
+<span class="pro">PRO</span> gombot.</p>
+<ol class="passi">
+<li>Először a lépték. Az alkalmazás magától keresi a fényképen a
+<strong>mérőlécet</strong>: ha megtalálja, megmondja, hány mezőt olvasott le, Ön
+megadja, mennyi egy mező (1, 2, 5 vagy 10 cm), és megérinti a
+<kbd>Javaslat használata</kbd> gombot. Ha nem találja, kézzel érinti meg egy
+ismert távolság két végpontját. Választhatja a <kbd>Ne kalibráld</kbd>
+lehetőséget is: akkor csak számlálás történik, és az alkalmazás le is írja, hogy
+méretek nincsenek — nem talál ki ilyeneket.</li>
+<li>A modell körberajzolja a fénykép összes alakzatát: ez több tíz másodpercig
+is eltarthat. Ami megjelenik, az <strong>javaslat</strong>, nem eredmény: egy
+érintés kizár egy alakzatot, egy újabb visszaveszi. Az <kbd>Egyesítés</kbd>
+eggyé olvasztja azokat az alakzatokat, amelyek ugyanannak a kettétört darabnak a
+felei; a <kbd>Korlátozás egy területre</kbd> ujjal rajzoltatja körbe a tálca
+peremét, és a keresés bent marad; a <kbd>Finom menet</kbd> csak ott megy végig
+újra, ahol semmit sem talált. A <strong>gyanús</strong> alakzatok — amelyek
+háttérnek, ponyvának, árnyéknak látszanak — egy csoportba kerülnek, és egyetlen
+mozdulattal kizárhatók.</li>
+<li><kbd>Az alakzat anyaga</kbd>: érintsen meg egy darabot, és mondja meg, mi
+az; az <kbd>Anyag mindegyikhez</kbd> egyszerre adja meg mindnek, vagy csak
+azoknak, amelyek anyag nélkül maradtak. Az <kbd>Anyag javasolása</kbd> a
+készüléken futó modellt kéri meg, hogy találja ki: ez ellenőrzendő javaslat, és
+az Ön választása mindig nyer.</li>
+<li>A <kbd>Tovább</kbd> megnyitja a megerősítő lapot a már megírt szöveggel: a
+darabszámmal, a méretekkel (hosszabb oldal × rövidebb oldal, sorban) és az
+őszinte kijelentésekkel — „amelyből N esetén nincs megbízható mérés”, amikor egy
+alakzat nem hagyja magát megmérni. Ha a fényképen <strong>címke</strong> van, az
+alkalmazás megpróbálja elolvasni, és mindig meg is mondja: vagy „Beolvasott
+címke: …”, vagy „Nincs olvasható szöveg a fotón”.</li>
+<li>A kapcsolók csak ott jelennek meg, ahol van egy üres hely, amit ki lehet
+tölteni: <kbd>A darabszám használata mennyiségként</kbd>,
+<kbd>Használat jelzetként</kbd>, <kbd>Használat származásként</kbd>. Amit Ön már
+beírt, azt soha semmi nem írja felül, a megjegyzések pedig
+<strong>hosszabbodnak</strong>: egy második kör az első végéhez fűződik, nem a
+helyére. A szöveg szerkeszthető: a megjegyzésbe az kerül, amit ott olvas.</li>
+<li>Utána, a fénykép részleteiben, a <kbd>Számok az alakzatokon</kbd> mutatja
+vagy elrejti a számokat — és ahogyan ott látja őket, úgy jönnek ki a
+megosztásokban és a jelentésekben is. Érintsen meg egy alakzatot, hogy megtudja,
+melyik: „7: 4,2×2,8 cm”. Ha a fénykép nincs kalibrálva, a címke ezt mondja
+meg, ahelyett hogy számot adna.</li>
+</ol>
+<p class="nota">A mérés annak a két pontnak a <strong>síkjában</strong>
+érvényes, amelyeken a kalibrálás történt: a fényképet függőlegesen kell
+készíteni, a tálcával a szenzorral párhuzamosan. A megadott viszonyítás ±2 mm a
+jól a képmezőbe eső darabokon; egy élére állított vagy a fénykép szélén fekvő
+töredék kívül esik ezen a megállapodáson.</p>
 
 <h3>✏️ Rajzok (a Médiában)</h3>
 <ol class="passi">
@@ -139,10 +234,11 @@ menüjéből válassza a <kbd>Háttér átlátszatlansága…</kbd> lehetősége
 rajz. A választás a lapon marad, és érvényes PDF-ben, DOCX-ben, PNG-ben és az
 <kbd>Exportálás jelmagyarázattal</kbd> esetén is.</li>
 <li>Minden más az <kbd>Eszközök</kbd> alatt van (a villáskulcs a sávban),
-amely a hat mód tartalomjegyzéke: <kbd>Szövegdoboz</kbd>,
+amely a hét mód tartalomjegyzéke: <kbd>Szövegdoboz</kbd>,
 <kbd>Átrajzolás</kbd> <span class="pro">PRO</span>, <kbd>A fotó léptéke</kbd>,
-<kbd>Magassággal rendelkező pont</kbd>, <kbd>Sraffozás</kbd> és
-<kbd>Vonalstílus</kbd>. Egyszerre <strong>csak egy</strong> lehet bekapcsolva:
+<kbd>Magassággal rendelkező pont</kbd>, <kbd>Sraffozás</kbd>,
+<kbd>Vonalstílus</kbd> és <kbd>Virtuális lépték</kbd>. Egyszerre
+<strong>csak egy</strong> lehet bekapcsolva:
 a pipa mutatja, melyik, és amíg be van kapcsolva, az ujj nem rajzol, hanem azt
 az eszközt vezérli — a rajzoláshoz úgy tér vissza, hogy újra megérinti a
 kipipált menüpontot. A képen dolgozó három mód (átrajzolás, lépték, magassági
@@ -192,6 +288,14 @@ következő vonások már felöltöztetve születnek; a <kbd>Stílus
 eltávolítása</kbd> visszaadja a tele vonalat. Ez nem a képernyő trükkje: a
 vonalkák valódi szakaszok, és azok is maradnak PDF-ben, DOCX-ben, PNG-ben,
 SVG-ben és DXF-ben.</li>
+<li>A <kbd>Virtuális lépték</kbd> a lapra hozza ugyanazokat a viszonyítási
+elemeket, mint a fényképeken: léptékvonalzót, mérőrudat, négyzetet, keresztet,
+északi nyilat és a két érintéssel felvett méreteket. A metrikus típusokhoz az
+kell, hogy a lapnak legyen léptéke, vagyis <kbd>A fotó léptéke</kbd>: ismert
+távolság nélkül az alkalmazás inkább elmagyarázza, semmint rajzoljon. SVG-ben és
+DXF-ben <span class="pro">PRO</span> ezek az elemek <strong>vektorként</strong>
+kerülnek ki, a saját rétegükön, és a GIS vonalzójával mért távolság egyezik a
+címkével.</li>
 <li><kbd>Exportálás jelmagyarázattal</kbd> <span class="pro">PRO</span>: a
 kép alján fehér sáv jelenik meg — méterskála (ha van lépték), északi nyíl a
 függőlegesen készített fényképeknél, „nézet innen” a frontális felvételeknél.</li>
@@ -213,8 +317,48 @@ jelentéshez.</li>
 <ol class="passi">
 <li>Rögzítse a nap létszámát: mindenki nevét, feladatkörét és óráit.</li>
 <li>Vezesse a felszerelés nyilvántartását és azt, hogy kihez van rendelve.</li>
+<li>A <kbd>Leletek</kbd> alatt van annak a nyilvántartása, ami a feltárásból
+előkerül, a neve alatt a már rögzített sorok számával.</li>
 </ol>
 <div class="schermate"><figure><img src="img/hu/07-ore.webp" alt="Létszám és órák" width="640" height="1391" loading="lazy"><figcaption>Létszám és órák</figcaption></figure></div>
+
+<h3>📦 Leletek (a Helyszínen)</h3>
+<p>Az igazi pillanat nem a fényképezőgépé: az a nap vége, amikor leül a ládák
+elé, és egymás után beviszi őket, fáradtan és piszkos kézzel. Itt minden
+arra a pillanatra készült — és <strong>ingyenes</strong>, akárcsak a pontok
+rögzítése: átadni azt, amit kiástunk, alapdokumentáció.</p>
+<ol class="passi">
+<li><kbd>Helyszín</kbd> → <kbd>Leletek</kbd> → <kbd>+</kbd>. A lap már a mai
+dátummal és a <strong>legutóbb használt származással</strong> nyílik meg: a
+második sortól kezdve a rögzítés szinte csak érintés. A mező felajánlja az adott
+lelőhelyen már használt származásokat.</li>
+<li>A mezők abban a sorrendben követik egymást, ahogyan valóban kitöltjük őket:
+<kbd>Származás</kbd> (pl. „SE 102”), <kbd>Kategória</kbd>,
+<kbd>Mennyiség</kbd> a hozzá tartozó <kbd>Egység</kbd> mezővel (töredék, darab,
+zacskó, láda, gramm), a láda vagy a zacskó jelzete, <kbd>Állapot</kbd>
+(<kbd>Mosandó</kbd>, <kbd>Mosott</kbd>, <kbd>Jelölt</kbd>, <kbd>Átadva</kbd>),
+megjegyzés és dátum.</li>
+<li>A felajánlott kategóriák száma tizenegy — <kbd>Kerámia</kbd>,
+<kbd>Tégla</kbd>, <kbd>Állatcsont</kbd>, <kbd>Embercsont</kbd>, <kbd>Fém</kbd>,
+<kbd>Üveg</kbd>, <kbd>Kőeszközök</kbd>, <kbd>Habarcs és vakolat</kbd>,
+<kbd>Fa</kbd>, <kbd>Minták</kbd>, <kbd>Egyéb</kbd> —, de sajátot is beírhat
+(„Festett vakolat”): az minden nyelven ugyanaz a szó marad, mert az alkalmazás
+csak a saját maga felajánlotta tételeket fordítja le.</li>
+<li>A mennyiséget üresen is hagyhatja: egy sor mondhatja azt is, hogy „ez itt
+volt”, anélkül hogy megszámolnánk, és az exportokban az a cella üres marad,
+soha nem nulla.</li>
+<li>A lap fényképei háromféleképpen kerülnek be: <kbd>Fényképezés</kbd>,
+<kbd>A galériából</kbd>, vagy <kbd>A lelőhelyről</kbd>, amely a galériában már
+meglévő, még laphoz nem tartozó fényképek közül halászik. Ezek ugyanazok a
+fényképek, mint a <kbd>Média</kbd> fülön: egy
+lelet törlése <strong>nem</strong> törli a fényképeit, azok csak a kapcsolatukat
+veszítik el.</li>
+<li>A nap oldalán a <kbd>Leletek</kbd> szakasz csak akkor jelenik meg, ha aznap
+rögzített is ilyet. Az <kbd>Átvezetés a naplóba</kbd> felajánlja az összefoglaló
+sort, származás szerint csoportosítva és a megjegyzésekkel együtt: javítsa ki,
+és fűzze a napló végéhez. Kétszer megnyomva kétszer ír — a napló soha nem írja
+át magát.</li>
+</ol>
 
 <h3>📄 Jelentés</h3>
 <ol class="passi">
@@ -227,6 +371,13 @@ is, ha az alkalmazást magyarul használja.</li>
 <li>Készítsen PDF-et, vagy exportáljon DOCX-et logóval és fényképekkel
 <span class="pro">PRO</span>, CSV-t a pontokról, GeoJSON-t QGIS-hez
 <span class="pro">PRO</span>.</li>
+<li>Legalul található a <kbd>Leletek exportálása (teljes lelőhely)</kbd>, ez
+ingyenes: a <kbd>Leletek CSV exportálása</kbd> a táblázatkezelőhöz, a
+<kbd>Leletek HTML exportálása</kbd> pedig egy bélyegképes táblázathoz, amely
+hálózat nélkül bármelyik böngészőben megnyílik. A fejlécek, a kategóriák, az
+egységek és az állapotok a jelentéshez választott nyelven jönnek ki; amit Ön írt
+be, az úgy marad, ahogyan beírta. A záró jelentésben a leletek saját függeléket
+kapnak, származás szerint.</li>
 <li>A jelentésekben szereplő fényképek bekapcsolásával választhatja a
 <kbd>Fotó-adatlapok a fényképek helyett</kbd> <span class="pro">PRO</span>
 lehetőséget: minden fénykép teljes, adatokkal és térképpel ellátott
@@ -284,12 +435,18 @@ előbb exportáljon egy ZIP-et.</p>
 <tr><td>NMEA-felvételek</td><td>A fájlok újraolvasása és megosztása</td><td>A felvétel (külső antenna kell hozzá)</td></tr>
 <tr><td>Szintezési jegyzőkönyv</td><td>✓</td><td>✓</td></tr>
 <tr><td>Fotólap</td><td>—</td><td>Megosztás és lapok a jelentésekben</td></tr>
+<tr><td>Leletek</td><td>Nyilvántartás, CSV és HTML</td><td>+ függelék a jelentésekben</td></tr>
+<tr><td>Virtuális léptékek</td><td>Fényképeken és lapokon</td><td>+ vektorok SVG-ben és DXF-ben</td></tr>
+<tr><td>Számlálás és mérés</td><td>—</td><td>Egy fényképen és sorozatban</td></tr>
+<tr><td>3D mérés (LiDAR)</td><td>—</td><td>Szkennerrel rendelkező készülékeken</td></tr>
 <tr><td>Hangalapú diktálás</td><td>✓</td><td>✓</td></tr>
 <tr><td>Jelentés nyelvei</td><td>17</td><td>17</td></tr>
 </table>
 <p>A Pro havi vagy éves, automatikusan megújuló előfizetés, vagy egyszeri,
-örökös vásárlás. Az Apple ID beállításaiban bármikor kezelhető és
-lemondható.</p>
+örökös vásárlás. Az Apple ID beállításaiban bármikor kezelhető és lemondható.
+Ha ingyenes próbaidőszak jár Önnek, a Pro képernyő ezt a vásárlás előtt le is
+írja („7 nap ingyenes, utána …”): ha nincs ott kiírva, akkor nem jár — az
+alkalmazás nem ígér olyan próbaidőt, amit a vásárlás aztán nem tart meg.</p>
 
 <h2>Hibaelhárítás</h2>
 
@@ -472,6 +629,97 @@ pillanatában. A frontális fényképeknél a „nézet innen …” felirat jel
 (egy homlokzat síkján az északi nyíl geometriai hazugság lenne); a
 fényképtárból importált fényképeknél egyik sem jelenik meg, mivel hiányoznak
 a felvételi adatok.</p></details>
+
+<details><summary>A „Számlálás és mérés” nem jelenik meg a fényképen</summary>
+<p>A parancs csak egy <strong>lelet</strong> fényképein él — ott van értelme
+töredékeket körberajzolni —, és a fénykép részleteiből nyílik meg, nem az
+adatlapról, amely csak a bélyegképeket mutatja. Ha az érintésre a Pro képernyő
+nyílik meg, akkor a funkció éppen olyan: a Pro része, akárcsak az
+átrajzolás.</p></details>
+
+<details><summary>Nem találja meg a mérőlécet</summary>
+<ul>
+<li>a <strong>mezős mérőlécek</strong> ismerhetők fel — fehér-fekete,
+sárga-fekete, piros-fehér —, valamint a tömbökre osztott vonalzók; a
+színkártyák és a sima, mezők nélküli vonalzók elvből nem ismerhetők fel;</li>
+<li>a mérőlécnek legalább a fénykép hosszabb oldalának egytizedét el kell
+foglalnia, és teljes egészében a képmezőben kell lennie: ha a szél levágja, nem
+olvasható le;</li>
+<li>hogy hány mezőt olvasott le, azt az alkalmazás mondja meg, de
+<strong>hogy egy mező mennyit ér, azt Ön mondja meg</strong>: a képből nem
+következtethető ki, és kitalálni annyi volna, mint hazudni a léptékről;</li>
+<li>ha nem találja meg, kézzel érinti meg egy ismert távolság két végpontját. A
+<kbd>Ne kalibráld</kbd> mellett csak számlálás történik, és az alkalmazás
+kijelenti, hogy méretek nincsenek.</li>
+</ul></details>
+
+<details><summary>A darabszám nem egyezik a valódi tálcával</summary>
+<ul>
+<li>amit a kör után lát, az javaslat: érintéssel zárja ki a vonalzót, a címkét,
+az éles árnyékokat és mindent, ami nem lelet, amíg a szám nem egyezik azzal,
+amit kézzel megszámolt;</li>
+<li>ha egy töredéket két darabnak olvasott, érintse meg a két alakzatot, és
+<kbd>Egyesítés</kbd>: egyetlen alakzat lesz belőlük, egyetlen számmal;</li>
+<li>ha a kör a tálcán kívülre is elnéz, rajzolja körbe a peremet a
+<kbd>Korlátozás egy területre</kbd> segítségével: a keresés bent marad;</li>
+<li>ha darabok hiányoznak, a <kbd>Finom menet</kbd> csak ott megy végig újra,
+ahol semmit sem talált, anélkül hogy visszahozná, amit Ön kizárt;</li>
+<li>a megjegyzésbe az a szám kerül, amelyet Ön
+<strong>megerősített</strong>, nem az, amelyet a modell javasolt.</li>
+</ul></details>
+
+<details><summary>A címkét nem olvassa be, vagy rosszat javasol</summary>
+<ul>
+<li>az eredmény mindig ki van mondva: vagy „Beolvasott címke: …”, vagy „Nincs
+olvasható szöveg a fotón” — hallgatás nincs;</li>
+<li>az automatikus felismerés téved, főleg a kézíráson: ezért a lap szövege
+megerősítés előtt <strong>javítható</strong>;</li>
+<li>a <kbd>Használat jelzetként</kbd> és a <kbd>Használat származásként</kbd>
+csak akkor jelenik meg, ha azok a mezők üresek: amit Ön már beírt, ahhoz semmi
+sem nyúl;</li>
+<li>két különböző címke ugyanazon a fényképen kétértelművé teszi az adatot, és
+akkor az alkalmazás nem javasol semmit: a beolvasott szöveget így is látja, a
+döntés pedig Öné marad.</li>
+</ul></details>
+
+<details><summary>A sorozat megállt, vagy néhány fénykép nem került be</summary>
+<ul>
+<li>a galéria azon fényképei, amelyek az iCloudban vannak, és még nincsenek
+letöltve, nem töltődnek be: nyissa meg őket egyszer a Fotók alkalmazásban,
+aztán <kbd>Hibák újrapróbálása</kbd>;</li>
+<li>ha kilépett az alkalmazásból vagy megszakította, a már kész fényképek
+piszkozatban maradnak, és a <kbd>Sorozat folytatása</kbd> onnan indul újra, ahol
+abbamaradt, anélkül hogy újracsinálná, ami kész volt;</li>
+<li>az importált fényképek a <strong>felvétel dátumát</strong> kapják, nem a
+maiét: ha nem látja őket, rossz napon jár — váltson az <kbd>Összes</kbd>
+nézetre, vagy menjen a saját napjukra.</li>
+</ul></details>
+
+<details><summary>A virtuális léptékvonalzó nem egyezik a valódival</summary>
+<p>A lépték annak a <strong>két pontnak a síkjában</strong> érvényes, amelyeken
+a kalibrálás történt: ha a fénykép ferdén készült, egy olyan elem, amely ennél a
+síknál távolabb vagy közelebb fekszik, nem is egyezhet. Fényképezzen
+függőlegesen, a síkkal a szenzorral párhuzamosan, és olyan távolságon
+kalibráljon, amely abban a síkban van. Ha a megadott érték volt hibás:
+<kbd>Újrakalibrálás</kbd> — minden már lerakott méret magától újraíródik, mert a
+szám sosem mentődik el.</p></details>
+
+<details><summary>A „3D mérés” nincs ott, vagy a mérés elcsúszik</summary>
+<ul>
+<li><strong>LiDAR</strong>-szkenner kell hozzá: azokon az iPhone-okon és
+iPadeken, amelyeken nincs, a gomb egyáltalán nem létezik, ahelyett hogy
+magyarázat nélkül, kiszürkítve ott állna;</li>
+<li>ha az alkalmazás azt írja: „A felület még hiányos”, a felépítés nincs kész:
+mozogjon lassan, és pásztázzon több irányból, mielőtt megérintené a
+pontokat;</li>
+<li>a tűző nap és a fényes felületek — márvány, csempe, festett vakolat —
+rontják a leolvasást: ez optikai mérés marad, amit az alkalmazás „LiDAR ±cm”-nek
+mond;</li>
+<li>ha a munkamenet megszakad (egy telefonhívás, az alkalmazás félretétele), az
+esetleges alappontra rögzítés <strong>érvényét veszti</strong>, és az alkalmazás
+ezt meg is mondja: jobb újra elvégezni, mint már nem igaz magasságokhoz
+ragaszkodni.</li>
+</ul></details>
 
 <footer>
 <p>Van olyan kérdése vagy problémája, ami itt nem szerepel? Írjon a

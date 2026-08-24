@@ -32,6 +32,7 @@ pornind de la pagini.</p>
 <li><b>Ridicare</b>Achiziționați punctele GNSS; verificați un reper dacă folosiți RTK</li>
 <li><b>Fotografii</b>Fotografiați din <kbd>Media</kbd>: coordonatele se atașează singure</li>
 <li><b>Desene</b>Decalcați secțiunea sau planul pe o fotografie (calc digital)</li>
+<li><b>Materiale</b>Cu lăzile în față, înregistrați ce a ieșit din săpătură: <kbd>Șantier</kbd> → <kbd>Materiale</kbd></li>
 <li><b>Seara</b>Din fila <kbd>Rapoarte</kbd> generați raportul zilnic: un PDF gata de trimis</li>
 </ol>
 
@@ -88,6 +89,19 @@ ridicarea.</li>
 nivela optică: stații, citiri înapoi și înainte, altitudini calculate pornind
 de la un reper de plecare, cu controlul de închidere. Punctele nivelate intră
 în sit cu altitudinea lor, la fel ca cele GNSS.</li>
+<li>Pe dispozitivele cu scaner <strong>LiDAR</strong> (iPhone Pro de la 12 în
+sus, iPad Pro) apare <kbd>Măsurare 3D</kbd> <span class="pro">PRO</span>:
+încadrați încet până când suprafața se reconstruiește, apoi atingeți cele două
+puncte de măsurat și citiți distanța, distanța orizontală și diferența de
+nivel. Cu <kbd>Ancorați la un reper</kbd> alegeți un reper cu altitudine
+cunoscută și îi atingeți punctul de pe teren: de atunci înainte fiecare
+măsurătoare aduce și altitudinea ortometrică a celor două capete.
+<kbd>Fixați</kbd> ține măsurătoarea în scenă, <kbd>Anulați măsurătoarea</kbd> o
+aruncă, <kbd>Trece în jurnal</kbd> face din ea un text pe care îl corectați
+înainte de a confirma. Este o măsură optică, iar aplicația o spune scriind
+„LiDAR ±cm”: folosește la o diferență de nivel sau la o lungime luată în grabă
+pe loc, și nu înlocuiește nici GNSS-ul, nici nivela. Pe dispozitivele fără
+scaner butonul nici nu există.</li>
 <li>Sub panou se află <kbd>Înregistrări NMEA</kbd>: fluxul brut al receptorului
 extern <span class="pro">PRO</span> ajunge singur în fișiere — înregistrarea
 pornește când aprindeți antena și se închide când o stingeți, fără să fie
@@ -119,8 +133,86 @@ sub ea (sit, număr, dată și oră, coordonate, altitudine, direcție), o veder
 din satelit cu marcatorul de poziție și conul de vizare, bara scării hărții
 și săgeata nordului. Harta necesită rețea: fără ea, fișa este generată
 oricum, cu panoul de date extins.</li>
+<li><kbd>Scară virtuală</kbd> așază pe fotografie reperele pe care pe teren nu
+le-ați avut. Mai întâi <kbd>Calibrați fotografia</kbd>: atingeți cele două
+capete ale unei distanțe cunoscute — o diviziune a riglei, latura unei
+cărămizi — și o declarați în centimetri. Apoi puneți ce vă trebuie:
+<kbd>Riglă de scară 5 cm</kbd>, <kbd>Riglă de scară 10 cm</kbd> sau
+<kbd>Riglă de scară 20 cm</kbd>, <kbd>Jalon 50 cm</kbd>, <kbd>Jalon 1 m</kbd>
+sau <kbd>Jalon 2 m</kbd>, <kbd>Pătrat 10×10 cm</kbd>,
+<kbd>Cruce de referință</kbd> și <kbd>Săgeata nordului</kbd>. Fiecare element
+are înfățișarea lui (<kbd>Bară plată</kbd>, <kbd>Jalon real</kbd>,
+<kbd>Riglă cu repere</kbd>), mărimea, grosimea și rotația lui; ca să mutați
+unul, <strong>țineți-l apăsat</strong> și trageți-l — așa ciupitul pentru mărire
+nu îl mută din greșeală.</li>
+<li><kbd>Adăugați o măsurătoare</kbd> măsoară pe fotografie o distanță oarecare
+din două atingeri. Numărul nu se salvează niciodată: dacă recalibrați, toate
+etichetele se rescriu singure. La fotografiile verticale făcute cu aplicația,
+săgeata nordului se naște deja orientată după azimutul înregistrat, iar
+raportul o spune; dacă o rotiți dumneavoastră, mențiunea devine „declarat”. Cu
+<kbd>Distribuiți cu scară</kbd> iese o copie a fotografiei cu tot ce ați așezat
+pe ea — <kbd>Distribuiți fotografia</kbd> rămâne originalul gol, cu EXIF-ul
+lui.</li>
+<li><kbd>Prelucrare în serie</kbd> <span class="pro">PRO</span> (meniul de sus
+din <kbd>Media</kbd>) ia un grup de fotografii din bibliotecă și le trece pe
+toate prin numărat și măsurat, una după alta: fiecare fotografie devine o
+fotografie a sitului cu data declanșării, iar fiecare va avea <strong>fișa ei
+nouă de material</strong> de confirmat. Ecranul rămâne aprins pe toată durata
+seriei. Dacă ieșiți sau o întrerupeți, fotografiile deja gata rămân în ciornă,
+iar <kbd>Reia seria</kbd> pornește de unde a rămas. La final, revizuirea vă dă
+fișele una câte una: corectați proveniența, categoria și cantitatea și
+confirmați.</li>
 </ol>
 <div class="schermate"><figure><img src="img/ro/05-media.webp" alt="Galeria foto" width="640" height="1391" loading="lazy"><figcaption>Galeria foto</figcaption></figure><figure><img src="img/ro/09-scheda.webp" alt="Detaliul unei fotografii georeferențiate" width="640" height="1391" loading="lazy"><figcaption>Detaliile unei fotografii: coordonate, altitudine și direcția de fotografiere</figcaption></figure><figure class="larga"><img src="img/ro/10-scheda-esportata.webp" alt="Fișa fotografică generată" width="640" height="605" loading="lazy"><figcaption>Fișa exportată: datele fotografiei, vederea din satelit cu conul de vizare, bara scării hărții și săgeata nordului</figcaption></figure></div>
+
+<h3>🧮 Numărați și măsurați (în Media)</h3>
+<p>Tava cu fragmente fotografiată de sus, iar aplicația le numără și le măsoară
+singură. Trăiește pe fotografia unui <strong>material</strong>: o deschideți
+din fișa lui și atingeți <kbd>Numărați și măsurați</kbd>
+<span class="pro">PRO</span>.</p>
+<ol class="passi">
+<li>Mai întâi scara. Aplicația caută singură <strong>rigla de scară</strong> din
+fotografie: dacă o găsește vă spune câte căsuțe a citit, dumneavoastră
+declarați cât măsoară o căsuță (1, 2, 5 sau 10 cm) și atingeți
+<kbd>Folosiți propunerea</kbd>. Dacă nu o găsește, atingeți manual cele două
+capete ale unei distanțe cunoscute. Puteți alege și <kbd>Nu calibra</kbd>:
+atunci se numără doar, iar aplicația scrie că măsurătorile lipsesc — nu le
+inventează.</li>
+<li>Modelul decupează toate formele din fotografie: poate dura câteva zeci de
+secunde. Ceea ce apare este o <strong>propunere</strong>, nu un rezultat: o
+atingere exclude o formă, alta o readuce. <kbd>Unește</kbd> contopește
+într-una singură formele care sunt aceeași piesă ruptă în două;
+<kbd>Limitați la o zonă</kbd> vă lasă să desenați cu degetul marginea tăvii,
+iar căutarea rămâne înăuntru; <kbd>Trecere fină</kbd> reia doar acolo unde nu
+găsise nimic. Formele <strong>suspecte</strong> — cele care par fundal,
+prelata, umbra — se grupează și se exclud dintr-o singură mișcare.</li>
+<li>Cu <kbd>Materialul formei</kbd> atingeți o piesă și spuneți ce este;
+<kbd>Material pentru toate</kbd> îl dă tuturor deodată, ori doar celor rămase
+fără. <kbd>Propune materialul</kbd> cere modelului de pe dispozitiv să îl
+ghicească: este o propunere de verificat, iar alegerea dumneavoastră câștigă
+întotdeauna.</li>
+<li><kbd>Înainte</kbd> deschide fișa de confirmare cu textul deja scris:
+numărătoarea, măsurile (latura mare × latura mică, în această ordine) și
+declarațiile oneste — „dintre care N fără o măsură fiabilă” atunci când o formă
+nu se lasă măsurată. Dacă în fotografie există o <strong>etichetă</strong>,
+aplicația încearcă să o citească și v-o spune de fiecare dată: fie
+„Etichetă citită: …”, fie „Niciun text lizibil în fotografie”.</li>
+<li>Comutatoarele apar doar acolo unde este un loc gol de umplut:
+<kbd>Utilizați numărul ca cantitate</kbd>, <kbd>Utilizați ca siglă</kbd>,
+<kbd>Utilizați ca proveniență</kbd>. Ceea ce ați scris dumneavoastră nu se
+suprascrie niciodată, iar notele se <strong>lungesc</strong>: o a doua rundă se
+așază după prima, nu în locul ei. Textul se poate modifica: în note intră ceea
+ce citiți acolo.</li>
+<li>Apoi, în detaliile fotografiei, <kbd>Numere pe forme</kbd> arată sau
+ascunde numerele mici — și așa cum le vedeți acolo ies și în distribuiri, și în
+rapoarte. Atingeți o formă ca să aflați cine este: „7: 4,2×2,8 cm”. Dacă
+fotografia nu este calibrată, eticheta o spune, în loc să dea un număr.</li>
+</ol>
+<p class="nota">Măsura este valabilă în <strong>planul</strong> celor două
+puncte pe care le-ați calibrat: fotografia trebuie făcută vertical, cu tava
+paralelă cu senzorul. Referința declarată este de ±2 mm la piesele bine
+încadrate; un fragment în picioare sau pe marginea fotografiei este în afara
+acestei înțelegeri.</p>
 
 <h3>✏️ Desene (în Media)</h3>
 <ol class="passi">
@@ -136,10 +228,11 @@ aveți nevoie, de la 5% la 100%: se estompează fotografia, nu desenul. Alegerea
 rămâne pe planșă și este valabilă și în PDF, DOCX, PNG și în
 <kbd>Exportați cu legendă</kbd>.</li>
 <li>Tot restul se află sub <kbd>Instrumente</kbd> (cheia fixă din bară), care
-este cuprinsul celor șase moduri: <kbd>Casetă de text</kbd>,
-<kbd>Calchiere</kbd> <span class="pro">PRO</span>, <kbd>Scara
-fotografiei</kbd>, <kbd>Punct cu altitudine</kbd>, <kbd>Hașură</kbd> și
-<kbd>Stilul liniei</kbd>. Se ține <strong>unul singur</strong> o dată: bifa
+este cuprinsul celor șapte moduri: <kbd>Casetă de text</kbd>,
+<kbd>Calchiere</kbd> <span class="pro">PRO</span>,
+<kbd>Scara fotografiei</kbd>, <kbd>Punct cu altitudine</kbd>,
+<kbd>Hașură</kbd>, <kbd>Stilul liniei</kbd> și <kbd>Scară virtuală</kbd>. Se
+ține <strong>unul singur</strong> o dată: bifa
 arată care, iar cât timp este aprins degetul nu desenează, ci comandă acel
 instrument — pentru a reveni la desen, atingeți din nou opțiunea bifată. Cele
 trei moduri care lucrează pe imagine (decalcul, scara, punctul cotat) apar
@@ -188,6 +281,13 @@ o atingeți și alegeți între <kbd>Continuă</kbd>, <kbd>Întreruptă</kbd>,
 deja îmbrăcate; <kbd>Elimină stilul</kbd> readuce linia plină. Nu este un
 efect al ecranului: liniuțele sunt segmente adevărate și rămân așa în PDF,
 DOCX, PNG, SVG și DXF.</li>
+<li><kbd>Scară virtuală</kbd> aduce pe planșă aceleași repere ca la
+fotografii: riglă de scară, jalon, pătrat, cruce, săgeata nordului și
+măsurători din două atingeri. Tipurile metrice cer ca planșa să aibă o scară,
+adică <kbd>Scara fotografiei</kbd>: fără o distanță cunoscută, aplicația
+explică în loc să deseneze. În SVG și DXF <span class="pro">PRO</span> aceste
+elemente ies ca <strong>vectori</strong>, pe stratul lor, iar măsura citită cu
+rigla din GIS se potrivește cu eticheta.</li>
 <li><kbd>Exportați cu legendă</kbd> <span class="pro">PRO</span>: imaginea
 iese cu o bandă albă dedesubt — bara metrică (dacă există scara), săgeata
 nordului pentru fotografiile verticale, „vedere dinspre” pentru cele
@@ -208,8 +308,49 @@ acolo la putere maximă.</li>
 <ol class="passi">
 <li>Înregistrați prezențele zilei: numele, ocupația și orele fiecăruia.</li>
 <li>Țineți inventarul echipamentelor și cui îi sunt atribuite.</li>
+<li>Sub <kbd>Materiale</kbd> se află registrul a ceea ce iese din săpătură, cu
+numărul rândurilor deja înregistrate scris sub nume.</li>
 </ol>
 <div class="schermate"><figure><img src="img/ro/07-ore.webp" alt="Prezențe și ore" width="640" height="1391" loading="lazy"><figcaption>Prezențe și ore</figcaption></figure></div>
+
+<h3>📦 Materiale (în Șantier)</h3>
+<p>Momentul adevărat nu este camera foto: este să vă așezați la sfârșitul zilei
+cu lăzile în față și să le treceți una după alta, obosit și cu mâinile murdare.
+Tot ce se află aici este făcut pentru acel moment — și este
+<strong>gratuit</strong>, ca și înregistrarea punctelor: a preda ceea ce s-a
+săpat este documentație de bază.</p>
+<ol class="passi">
+<li><kbd>Șantier</kbd> → <kbd>Materiale</kbd> → <kbd>+</kbd>. Fișa se deschide
+deja cu data de azi și cu <strong>ultima proveniență folosită</strong>: de la al
+doilea rând încolo, a înregistra înseamnă aproape numai a atinge. Câmpul propune
+proveniențele deja folosite pe situl acela.</li>
+<li>Câmpurile sunt în ordinea în care se completează cu adevărat:
+<kbd>Proveniență</kbd> (de ex. „US 102”), <kbd>Categorie</kbd>,
+<kbd>Cantitate</kbd> împreună cu <kbd>Unitate</kbd> (fragmente, piese, pungi,
+lăzi, grame), sigla lăzii sau a pungii, <kbd>Stare</kbd>
+(<kbd>De spălat</kbd>, <kbd>Spălat</kbd>, <kbd>Marcat</kbd>,
+<kbd>Predat</kbd>), note și dată.</li>
+<li>Categoriile propuse sunt unsprezece — <kbd>Ceramică</kbd>,
+<kbd>Cărămidă</kbd>, <kbd>Oase de animale</kbd>, <kbd>Oase umane</kbd>,
+<kbd>Metal</kbd>, <kbd>Sticlă</kbd>, <kbd>Industrie litică</kbd>,
+<kbd>Mortar și tencuială</kbd>, <kbd>Lemn</kbd>, <kbd>Probe</kbd>,
+<kbd>Altele</kbd> — dar puteți scrie una a dumneavoastră („Tencuială
+pictată”): va rămâne cuvântul acela în orice limbă, pentru că aplicația traduce
+doar opțiunile propuse de ea.</li>
+<li>Cantitatea poate rămâne goală: un rând poate spune „a ieșit și lucrul
+acesta” fără a-l număra, iar în exporturi celula aceea rămâne goală, niciodată
+zero.</li>
+<li>Fotografiile fișei se fac cu <kbd>Faceți o fotografie</kbd>, se iau cu
+<kbd>Din bibliotecă</kbd> sau cu <kbd>Din sit</kbd>, care pescuiește dintre
+fotografiile deja aflate în galerie pe cele care nu au încă o fișă. Sunt
+aceleași fotografii din <kbd>Media</kbd>: ștergerea unui material
+<strong>nu</strong> șterge și fotografiile lui, care pierd doar legătura.</li>
+<li>În pagina zilei, secțiunea <kbd>Materiale</kbd> apare numai dacă în ziua
+aceea ați înregistrat ceva. <kbd>Trece în jurnal</kbd> propune rândul de
+sinteză, grupat pe proveniență și cu notele întregi: îl corectați și îl
+adăugați la finalul jurnalului. Apăsat de două ori scrie de două ori — jurnalul
+nu se rescrie niciodată singur.</li>
+</ol>
 
 <h3>📄 Rapoarte</h3>
 <ol class="passi">
@@ -222,6 +363,13 @@ aplicația în română.</li>
 <li>Generați PDF-ul, sau exportați DOCX cu logo și fotografii
 <span class="pro">PRO</span>, CSV al punctelor, GeoJSON pentru QGIS
 <span class="pro">PRO</span>.</li>
+<li>La final se află <kbd>Export materiale (întregul sit)</kbd>, gratuit:
+<kbd>Exportați CSV materiale</kbd> pentru foaia de calcul și
+<kbd>Exportați HTML materiale</kbd> pentru un tabel cu miniaturi care se
+deschide în orice browser, fără rețea. Antetele, categoriile, unitățile și
+stările ies în limba aleasă pentru raport; ceea ce ați scris dumneavoastră
+rămâne așa cum l-ați scris. În raportul final, materialele au anexa lor, pe
+proveniențe.</li>
 <li>Cu fotografiile din rapoarte activate, puteți alege <kbd>Fișe fotografice
 în locul fotografiilor</kbd> <span class="pro">PRO</span>: fiecare fotografie
 intră în PDF și în DOCX ca o fișă de documentare completă, cu date și hartă,
@@ -278,12 +426,19 @@ arhivă ZIP dacă aveți dubii.</p>
 <tr><td>Înregistrări NMEA</td><td>Recitirea și distribuirea fișierelor</td><td>Înregistrarea (necesită antena externă)</td></tr>
 <tr><td>Carnet de nivelment</td><td>✓</td><td>✓</td></tr>
 <tr><td>Fișă fotografică</td><td>—</td><td>Distribuire și fișe în rapoarte</td></tr>
+<tr><td>Materiale</td><td>Registru, CSV și HTML</td><td>+ anexă în rapoarte</td></tr>
+<tr><td>Scări virtuale</td><td>Pe fotografii și pe planșe</td><td>+ vectori în SVG și DXF</td></tr>
+<tr><td>Numărat și măsurat</td><td>—</td><td>Pe o fotografie și în serie</td></tr>
+<tr><td>Măsurare 3D (LiDAR)</td><td>—</td><td>Pe dispozitivele cu scaner</td></tr>
 <tr><td>Dictare vocală</td><td>✓</td><td>✓</td></tr>
 <tr><td>Limbi ale rapoartelor</td><td>17</td><td>17</td></tr>
 </table>
 <p>Pro este un abonament lunar sau anual cu reînnoire automată, sau o
 achiziție unică pe viață. Se gestionează și se anulează din setările
-ID-ului dumneavoastră Apple.</p>
+ID-ului dumneavoastră Apple. Când vi se cuvine o perioadă de probă gratuită,
+ecranul Pro v-o scrie înainte de achiziție („7 zile gratuit, apoi …”): dacă nu
+scrie nimic, nu vi se cuvine — aplicația nu promite o probă pe care apoi
+achiziția nu o ține.</p>
 
 <h2>Rezolvarea problemelor</h2>
 
@@ -457,6 +612,96 @@ fotografiile frontale apare mențiunea „vedere dinspre …” (o săgeată a
 nordului pe planul unei fațade ar fi o minciună geometrică); pentru
 fotografiile importate din galerie nu apare niciuna dintre cele două, pentru
 că lipsesc datele de fotografiere.</p></details>
+
+<details><summary>„Numărați și măsurați” nu apare pe fotografie</summary>
+<p>Comanda trăiește numai pe fotografiile unui <strong>material</strong> —
+acolo are sens decuparea fragmentelor — și se deschide din detaliile
+fotografiei, nu din fișă, care arată doar miniaturile. Dacă atingerea deschide
+ecranul Pro, funcția este chiar aceea: face parte din Pro, ca și
+calchierea.</p></details>
+
+<details><summary>Rigla de scară nu este găsită</summary>
+<ul>
+<li>se recunosc <strong>riglele cu căsuțe</strong> — alb/negru, galben/negru,
+roșu/alb — și riglele cu blocuri; cartelele de culoare și riglele netede, fără
+căsuțe, nu se recunosc din principiu;</li>
+<li>rigla trebuie să ocupe cel puțin o zecime din latura lungă a fotografiei și
+să fie toată în cadru: tăiată de margine, nu se citește;</li>
+<li>câte căsuțe a citit vă spune aplicația, dar <strong>cât măsoară o căsuță
+spuneți dumneavoastră</strong>: din imagine nu se deduce, iar a o ghici ar
+însemna o minciună despre scară;</li>
+<li>dacă nu o găsește, atingeți manual cele două capete ale unei distanțe
+cunoscute. Cu <kbd>Nu calibra</kbd> se numără doar, iar aplicația declară că
+măsurătorile lipsesc.</li>
+</ul></details>
+
+<details><summary>Numărătoarea nu se potrivește cu tava adevărată</summary>
+<ul>
+<li>ceea ce vedeți după tur este o propunere: excludeți cu degetul rigla,
+eticheta, umbrele nete și tot ce nu este un artefact, până când numărul se
+potrivește cu cel numărat de mână;</li>
+<li>dacă un fragment a fost citit ca două piese, atingeți cele două forme și
+<kbd>Unește</kbd>: devine o singură formă, cu un singur număr;</li>
+<li>dacă turul se uită și în afara tăvii, desenați marginea cu
+<kbd>Limitați la o zonă</kbd>: căutarea rămâne înăuntru;</li>
+<li>dacă lipsesc piese, <kbd>Trecere fină</kbd> reia doar acolo unde nu găsise
+nimic, fără să repună ceea ce excluseserăți;</li>
+<li>numărul care ajunge în note este cel pe care l-ați
+<strong>confirmat</strong> dumneavoastră, nu cel propus de model.</li>
+</ul></details>
+
+<details><summary>Eticheta nu este citită sau propune altceva decât trebuie</summary>
+<ul>
+<li>rezultatul este întotdeauna declarat: fie „Etichetă citită: …”, fie
+„Niciun text lizibil în fotografie” — tăcere nu există;</li>
+<li>citirea automată greșește, mai ales la scrisul de mână: de aceea textul
+fișei se <strong>corectează</strong> înainte de confirmare;</li>
+<li><kbd>Utilizați ca siglă</kbd> și <kbd>Utilizați ca proveniență</kbd> apar
+numai dacă acele câmpuri sunt goale: ceea ce ați scris dumneavoastră nu se
+atinge;</li>
+<li>două etichete diferite în aceeași fotografie fac informația ambiguă, iar
+atunci aplicația nu propune nimic: textul citit îl vedeți oricum, alegerea
+rămâne a dumneavoastră.</li>
+</ul></details>
+
+<details><summary>Seria s-a oprit sau unele fotografii nu au intrat</summary>
+<ul>
+<li>fotografiile din bibliotecă care stau pe iCloud și nu au fost încă
+descărcate nu se încarcă: deschideți-le o dată în aplicația Fotografii, apoi
+<kbd>Reîncearcă erorile</kbd>;</li>
+<li>dacă ați ieșit din aplicație sau ați întrerupt-o, fotografiile deja gata
+rămân în ciornă, iar <kbd>Reia seria</kbd> pornește de unde a rămas, fără să
+refacă ceea ce era făcut;</li>
+<li>fotografiile importate primesc <strong>data declanșării</strong>, nu pe cea
+de azi: dacă nu le vedeți, sunteți în ziua greșită — treceți la
+<kbd>Toate</kbd> sau mergeți în ziua lor.</li>
+</ul></details>
+
+<details><summary>Rigla virtuală nu se potrivește cu rigla adevărată</summary>
+<p>Scara este valabilă în <strong>planul celor două puncte</strong> pe care
+le-ați calibrat: dacă fotografia este luată pieziș, un element așezat mai
+departe sau mai aproape de acel plan nu are cum să se potrivească. Fotografiați
+vertical, cu planul paralel cu senzorul, și calibrați pe o distanță care se
+află în acel plan. Dacă valoarea declarată era greșită,
+<kbd>Recalibrați</kbd>: toate măsurile deja așezate se rescriu singure, pentru
+că numărul nu este niciodată salvat.</p></details>
+
+<details><summary>„Măsurare 3D” nu apare sau măsura iese din limite</summary>
+<ul>
+<li>este nevoie de scanerul <strong>LiDAR</strong>: pe iPhone-urile și
+iPad-urile care nu îl au butonul nici nu există, în loc să stea acolo stins,
+fără explicație;</li>
+<li>dacă apare „Suprafață încă incompletă”, reconstrucția nu s-a terminat:
+mișcați-vă încet și încadrați din mai multe unghiuri înainte de a atinge
+punctele;</li>
+<li>soarele puternic și suprafețele lucioase — marmură, gresie, tencuială
+vopsită — degradează citirea: rămâne o măsură optică, declarată
+„LiDAR ±cm”;</li>
+<li>dacă sesiunea se întrerupe (un telefon, aplicația pusă deoparte), o
+eventuală ancorare la un reper <strong>își pierde valabilitatea</strong>, iar
+aplicația o spune: mai bine o refaceți decât să păstrați cote care nu mai sunt
+adevărate.</li>
+</ul></details>
 
 <footer>
 <p>Aveți întrebări sau probleme care nu apar aici? Scrieți la

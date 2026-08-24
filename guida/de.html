@@ -31,6 +31,7 @@ Woche oder der Grabung entstehen die Berichte von selbst aus den Seiten.</p>
 <li><b>Vermessung</b>GNSS-Punkte aufnehmen; bei RTK zuerst einen Festpunkt prüfen</li>
 <li><b>Fotos</b>Aus den <kbd>Medien</kbd> fotografieren: Koordinaten werden automatisch angehängt</li>
 <li><b>Zeichnungen</b>Profil oder Planum auf einem Foto durchpausen (digitales Transparentpapier)</li>
+<li><b>Funde</b>Mit den Kisten vor sich erfassen, was herausgekommen ist: <kbd>Grabung</kbd> → <kbd>Funde</kbd></li>
 <li><b>Abends</b>Unter <kbd>Berichte</kbd> den Tagesbericht erzeugen: ein PDF, fertig zum Versand</li>
 </ol>
 
@@ -89,6 +90,20 @@ beginnen.</li>
 Nivelliergerät: Stationen, Rück- und Vorblicke, ab einem Ausgangsfestpunkt
 berechnete Höhen, mit Kontrolle des Schlussfehlers. Nivellierte Punkte kommen
 mit ihrer Höhe in den Fundplatz, genau wie GNSS-Punkte.</li>
+<li>Auf Geräten mit <strong>LiDAR</strong>-Scanner (iPhone Pro ab dem 12,
+iPad Pro) erscheint <kbd>3D-Messung</kbd> <span class="pro">PRO</span>:
+langsam schwenken, bis die Oberfläche rekonstruiert ist, dann die beiden zu
+messenden Punkte antippen und Strecke, Horizontalstrecke und Höhenunterschied
+ablesen. Mit <kbd>An Festpunkt verankern</kbd> wählen Sie einen Festpunkt
+bekannter Höhe und tippen seinen Punkt am Boden an: Von da an trägt jede
+Messung auch die Höhe ü. NN beider Enden. <kbd>Fixieren</kbd> hält die Messung
+in der Szene, <kbd>Messung verwerfen</kbd> wirft sie weg,
+<kbd>In das Tagebuch übernehmen</kbd> macht daraus einen Text, den Sie vor dem
+Bestätigen korrigieren. Es ist eine optische Messung, und die App sagt das,
+indem sie „LiDAR ±cm“ schreibt: Sie taugt für einen Höhenunterschied oder eine
+schnell vor Ort genommene Länge, und sie ersetzt weder das GNSS noch das
+Nivelliergerät. Auf Geräten ohne Scanner gibt es die Schaltfläche gar
+nicht.</li>
 <li>Unter dem Feld stehen die <kbd>NMEA-Aufzeichnungen</kbd>: Der Rohdatenstrom
 des externen Empfängers <span class="pro">PRO</span> landet von selbst in einer
 Datei — die Aufzeichnung beginnt, wenn Sie die Antenne einschalten, und endet,
@@ -123,8 +138,90 @@ darunter (Fundplatz, Nummer, Datum und Uhrzeit, Koordinaten, Höhe, Richtung),
 eine Satellitenansicht mit Markierung und Aufnahmekegel, dem Kartenmaßstab
 und dem Nordpfeil. Die Karte braucht ein Netz: ohne Netz entsteht das Blatt
 trotzdem, mit einem größeren Datenfeld.</li>
+<li><kbd>Virtueller Maßstab</kbd> legt auf das Foto die Referenzen, die Sie im
+Feld nicht dabeihatten. Zuerst <kbd>Foto kalibrieren</kbd>: Sie tippen die
+beiden Enden einer bekannten Strecke an — eine Kerbe des Lineals, die Kante
+eines Ziegels — und geben sie in Zentimetern an. Dann setzen Sie, was Sie
+brauchen: <kbd>Maßstabsleiste 5 cm</kbd>, <kbd>Maßstabsleiste 10 cm</kbd> oder
+<kbd>Maßstabsleiste 20 cm</kbd>, <kbd>Fluchtstab 50 cm</kbd>,
+<kbd>Fluchtstab 1 m</kbd> oder <kbd>Fluchtstab 2 m</kbd>,
+<kbd>Quadrat 10×10 cm</kbd>, <kbd>Referenzkreuz</kbd> und <kbd>Nordpfeil</kbd>.
+Jedes Element hat seine eigene Darstellung (<kbd>Flache Leiste</kbd>,
+<kbd>Echter Fluchtstab</kbd>, <kbd>Lineal mit Kerben</kbd>), Größe, Stärke und
+Drehung; zum Verschieben <strong>halten Sie es gedrückt</strong> und ziehen —
+so verschiebt es die Zoom-Geste nicht aus Versehen.</li>
+<li><kbd>Messung hinzufügen</kbd> misst mit zwei Tipps eine beliebige Strecke
+auf dem Foto. Die Zahl wird nie gespeichert: Kalibrieren Sie neu, schreiben
+sich alle Etiketten von selbst um. Bei senkrecht mit der App aufgenommenen
+Fotos entsteht der Nordpfeil schon nach dem aufgezeichneten Azimut
+ausgerichtet, und der Bericht sagt das; drehen Sie ihn selbst, wechselt die
+Angabe auf „angegeben“. <kbd>Mit Maßstab teilen</kbd> gibt eine Kopie des Fotos
+mit allem heraus, was Sie daraufgelegt haben — <kbd>Foto teilen</kbd> bleibt
+das nackte Original, mit seinem EXIF.</li>
+<li><kbd>Stapelverarbeitung</kbd> <span class="pro">PRO</span> (Menü oben in
+den <kbd>Medien</kbd>) nimmt eine Gruppe von Fotos aus der Mediathek und gibt
+sie alle nacheinander an das Zählen und Messen weiter: Jedes Foto wird zu einem
+Grabungsfoto mit dem Aufnahmedatum, und jedes bekommt seine <strong>eigene
+neue Fundkarte</strong> zum Bestätigen. Der Bildschirm bleibt während des
+ganzen Stapels an. Verlassen Sie die App oder brechen Sie ab, bleiben die schon
+fertigen Fotos als Entwurf, und <kbd>Stapel fortsetzen</kbd> macht dort weiter,
+wo er aufgehört hatte. Am Ende reicht Ihnen die Durchsicht die Karten eine nach
+der anderen: Herkunft, Fundgattung und Menge korrigieren und bestätigen.</li>
 </ol>
 <div class="schermate"><figure><img src="img/de/05-media.webp" alt="Die Fotogalerie" width="640" height="1391" loading="lazy"><figcaption>Die Fotogalerie</figcaption></figure><figure><img src="img/de/09-scheda.webp" alt="Die Detailansicht eines georeferenzierten Fotos" width="640" height="1391" loading="lazy"><figcaption>Die Fotodetailansicht: Koordinaten, Höhe und Aufnahmerichtung</figcaption></figure><figure class="larga"><img src="img/de/10-scheda-esportata.webp" alt="Das erzeugte Fotoblatt" width="640" height="605" loading="lazy"><figcaption>Das exportierte Blatt: die Aufnahmedaten, die Satellitenansicht mit dem Aufnahmekegel, der Kartenmaßstab und der Nordpfeil</figcaption></figure></div>
+
+<h3>🧮 Zählen und messen (in den Medien)</h3>
+<p>Die von oben fotografierte Schale mit den Scherben, und die App zählt und
+misst die Stücke von selbst. Das lebt am Foto eines
+<strong>Fundes</strong>: Sie öffnen es
+aus seiner Karte und tippen <kbd>Zählen und messen</kbd>
+<span class="pro">PRO</span>.</p>
+<ol class="passi">
+<li>Zuerst der Maßstab. Die App sucht die <strong>Maßstabsleiste</strong> im
+Foto von selbst: Findet sie eine, sagt sie Ihnen, wie viele Felder sie gelesen
+hat, Sie geben an, wie viel ein Feld misst (1, 2, 5 oder 10 cm), und tippen
+<kbd>Vorschlag übernehmen</kbd>. Findet sie keine, tippen Sie die beiden Enden
+einer bekannten Strecke von Hand an. Sie können auch
+<kbd>Nicht kalibrieren</kbd> wählen: Dann wird nur gezählt, und die App
+schreibt, dass die Maße fehlen — sie erfindet sie nicht.</li>
+<li>Das Modell umreißt alle Formen im Foto: Das kann einige Dutzend Sekunden
+dauern. Was erscheint, ist ein <strong>Vorschlag</strong>, kein Ergebnis: Ein
+Tipp schließt eine Form aus, ein weiterer nimmt sie wieder auf.
+<kbd>Zusammenführen</kbd> verschmilzt zu einer, was ein und dasselbe, in zwei
+Teile zerbrochene Stück ist; <kbd>Auf einen Bereich beschränken</kbd> lässt Sie
+mit dem Finger die Umgrenzung der Schale zeichnen, und die Suche bleibt darin;
+<kbd>Feindurchgang</kbd> geht nur dort noch einmal durch, wo nichts gefunden
+wurde. Die <strong>Verdachtsfälle</strong> — die Formen, die nach Hintergrund
+aussehen, die Plane, der Schatten — lassen sich gruppieren und in einem Zug
+ausschließen.</li>
+<li>Mit <kbd>Material der Form</kbd> tippen Sie ein Stück an und sagen, was es
+ist; <kbd>Material für alle</kbd> gibt es allen zusammen, oder nur denen, die
+noch keines haben. <kbd>Material vorschlagen</kbd> bittet das Modell auf dem
+Gerät, es zu erraten: Das ist ein Vorschlag zum Prüfen, und Ihre Wahl gewinnt
+immer.</li>
+<li><kbd>Weiter</kbd> öffnet das Bestätigungsblatt mit dem schon geschriebenen
+Text: die Zählung, die Maße (längere Seite × kürzere Seite, in dieser
+Reihenfolge) und die ehrlichen Angaben — „davon N ohne zuverlässiges Maß“,
+wenn eine Form sich nicht messen lässt. Ist im Foto ein
+<strong>Etikett</strong>, versucht die App es zu lesen und sagt es Ihnen immer:
+entweder „Etikett gelesen: …“ oder „Kein lesbarer Text im Foto“.</li>
+<li>Die Schalter erscheinen nur dort, wo es ein leeres Feld zu füllen gibt:
+<kbd>Anzahl als Menge verwenden</kbd>, <kbd>Als Kürzel verwenden</kbd>,
+<kbd>Als Herkunft verwenden</kbd>. Was Sie selbst schon geschrieben haben, wird
+nie überschrieben, und die Notizen <strong>wachsen</strong>: Ein zweiter
+Durchgang hängt sich an den ersten an, statt an seine Stelle zu treten. Der
+Text ist änderbar: In die Notizen kommt das, was Sie dort lesen.</li>
+<li>Danach zeigt oder verbirgt <kbd>Nummern auf den Formen</kbd> in der
+Fotodetailansicht die kleinen Nummern — und wie Sie sie dort sehen, so kommen
+sie auch beim Teilen und in den Berichten heraus. Tippen Sie eine Form an, um
+zu erfahren, welche es ist: „7: 4,2×2,8 cm“. Ist das Foto nicht
+kalibriert, sagt das Etikett genau das, statt eine Zahl zu nennen.</li>
+</ol>
+<p class="nota">Das Maß gilt in der <strong>Ebene</strong> der beiden Punkte,
+die Sie kalibriert haben: Das Foto muss senkrecht aufgenommen sein, mit der
+Schale parallel zum Sensor. Der angegebene Richtwert ist ±2 mm bei gut
+erfassten Stücken; ein hochkant stehendes Fragment oder eines am Bildrand
+liegt außerhalb dieser Abmachung.</p>
 
 <h3>✏️ Zeichnungen (in den Medien)</h3>
 <ol class="passi">
@@ -140,9 +237,10 @@ Bedarf, von 5% bis 100%: Es blasst das Foto aus, nicht die Zeichnung. Die
 Wahl bleibt am Blatt und gilt auch in PDF, DOCX, PNG und bei <kbd>Mit Legende
 exportieren</kbd>.</li>
 <li>Alles Übrige steht unter <kbd>Werkzeuge</kbd> (der Schraubenschlüssel in
-der Leiste), dem Verzeichnis der sechs Modi: <kbd>Textfeld</kbd>,
+der Leiste), dem Verzeichnis der sieben Modi: <kbd>Textfeld</kbd>,
 <kbd>Nachzeichnen</kbd> <span class="pro">PRO</span>, <kbd>Fotomaßstab</kbd>,
-<kbd>Punkt mit Höhe</kbd>, <kbd>Schraffur</kbd> und <kbd>Linienstil</kbd>. Es
+<kbd>Punkt mit Höhe</kbd>, <kbd>Schraffur</kbd>, <kbd>Linienstil</kbd> und
+<kbd>Virtueller Maßstab</kbd>. Es
 gilt immer nur <strong>einer</strong>: Das Häkchen sagt, welcher, und solange
 er an ist, zeichnet der Finger nicht, sondern steuert dieses Werkzeug — zum
 Zeichnen tippen Sie den angehakten Eintrag erneut an. Die drei Einträge, die
@@ -194,6 +292,14 @@ Strichstärke. <kbd>Mit diesem Stil zeichnen</kbd> lässt die folgenden Linien
 gleich eingekleidet entstehen; <kbd>Stil entfernen</kbd> macht die Linie wieder
 voll. Das ist kein Bildschirmeffekt: Die Striche sind echte Segmente und
 bleiben es in PDF, DOCX, PNG, SVG und DXF.</li>
+<li><kbd>Virtueller Maßstab</kbd> bringt auf das Blatt dieselben Referenzen wie
+auf die Fotos: Maßstabsleiste, Fluchtstab, Quadrat, Kreuz, Nordpfeil und
+Messungen mit zwei Tipps. Die metrischen Typen verlangen, dass das Blatt einen
+Maßstab hat, also den <kbd>Fotomaßstab</kbd>: ohne eine bekannte Strecke
+erklärt die App, statt zu zeichnen. In SVG und DXF <span class="pro">PRO</span>
+kommen diese Elemente als <strong>Vektoren</strong> heraus, auf ihrer eigenen
+Ebene, und das mit dem Lineal des GIS gemessene Maß stimmt mit dem Etikett
+überein.</li>
 <li><kbd>Mit Legende exportieren</kbd> <span class="pro">PRO</span>: Das Bild
 bekommt unten einen weißen Streifen — Maßstabsbalken (falls der Maßstab
 gesetzt ist), Nordpfeil bei senkrecht aufgenommenen Fotos, „aufgenommen
@@ -215,8 +321,49 @@ Bericht.</li>
 <ol class="passi">
 <li>Anwesenheit des Tages erfassen: Name, Aufgabe und Stunden jeder Person.</li>
 <li>Geräte-Inventar führen, samt Zuordnung.</li>
+<li>Unter <kbd>Funde</kbd> steht das Verzeichnis dessen, was aus der Grabung
+herauskommt, mit der Zahl der bereits erfassten Zeilen unter dem Namen.</li>
 </ol>
 <div class="schermate"><figure><img src="img/de/07-ore.webp" alt="Team und Stunden" width="640" height="1391" loading="lazy"><figcaption>Team und Stunden</figcaption></figure></div>
+
+<h3>📦 Funde (in der Grabung)</h3>
+<p>Der eigentliche Moment ist nicht die Kamera: Es ist das Sitzen am Abend mit
+den Kisten vor sich, eine nach der anderen abgearbeitet, müde und mit
+schmutzigen Händen. Alles hier ist für diesen Moment gemacht — und es ist
+<strong>gratis</strong>, wie das Erfassen der Punkte: abzugeben, was man
+ausgegraben hat, ist Grunddokumentation.</p>
+<ol class="passi">
+<li><kbd>Grabung</kbd> → <kbd>Funde</kbd> → <kbd>+</kbd>. Die Karte öffnet sich
+schon mit dem heutigen Datum und mit der <strong>zuletzt verwendeten
+Herkunft</strong>: Ab der zweiten Zeile ist Erfassen fast nur noch Tippen. Das
+Feld schlägt die auf diesem Fundplatz bereits verwendeten Herkünfte vor.</li>
+<li>Die Felder stehen in der Reihenfolge, in der man wirklich ausfüllt:
+<kbd>Herkunft</kbd> (z. B. „SE 102“), <kbd>Fundgattung</kbd>, <kbd>Menge</kbd>
+mit ihrer <kbd>Einheit</kbd> (Fragmente, Stücke, Beutel, Kisten, Gramm), das
+Kürzel der Kiste oder des Beutels, <kbd>Zustand</kbd> (<kbd>Zu waschen</kbd>,
+<kbd>Gewaschen</kbd>, <kbd>Beschriftet</kbd>, <kbd>Übergeben</kbd>), Notizen
+und Datum.</li>
+<li>Vorgeschlagen werden elf Fundgattungen — <kbd>Keramik</kbd>,
+<kbd>Ziegel</kbd>, <kbd>Tierknochen</kbd>, <kbd>Menschliche Knochen</kbd>,
+<kbd>Metall</kbd>, <kbd>Glas</kbd>, <kbd>Steinartefakte</kbd>,
+<kbd>Mörtel und Putz</kbd>, <kbd>Holz</kbd>, <kbd>Proben</kbd>,
+<kbd>Sonstiges</kbd> —, aber Sie können eine eigene schreiben („Bemalter
+Putz“): Sie bleibt in jeder Sprache genau dieses Wort, denn die App übersetzt
+nur die Einträge, die sie selbst vorschlägt.</li>
+<li>Die Menge darf leer bleiben: Eine Zeile kann sagen „das war da“, ohne es zu
+zählen, und in den Exporten bleibt diese Zelle leer, nie null.</li>
+<li>Die Fotos der Karte entstehen mit <kbd>Aufnehmen</kbd>, kommen mit
+<kbd>Aus der Mediathek</kbd> oder mit <kbd>Aus der Grabung</kbd>, das unter den
+Fotos der Galerie fischt, die noch keine Karte haben. Es sind dieselben Fotos
+wie in den <kbd>Medien</kbd>: Einen Fund zu löschen, löscht
+<strong>nicht</strong> seine Fotos, sie verlieren nur die Verbindung.</li>
+<li>Auf der Tagesseite erscheint der Abschnitt <kbd>Funde</kbd> nur, wenn Sie
+an jenem Tag welche erfasst haben. <kbd>In das Tagebuch übernehmen</kbd>
+schlägt die zusammenfassende Zeile vor, nach Herkunft gruppiert und mit den
+Notizen im vollen Wortlaut: Sie korrigieren sie und hängen sie ans Tagebuch an.
+Zweimal gedrückt, schreibt sie zweimal — das Tagebuch schreibt sich nie von
+selbst um.</li>
+</ol>
 
 <h3>📄 Berichte</h3>
 <ol class="passi">
@@ -230,6 +377,13 @@ auf Deutsch verwenden.</li>
 <li>PDF erzeugen, oder DOCX mit Logo und Fotos exportieren
 <span class="pro">PRO</span>, CSV der Punkte, GeoJSON für QGIS
 <span class="pro">PRO</span>.</li>
+<li>Ganz unten steht <kbd>Fundexport (gesamter Fundplatz)</kbd>, gratis:
+<kbd>Funde-CSV exportieren</kbd> für die Tabellenkalkulation und
+<kbd>Funde-HTML exportieren</kbd> für eine Tabelle mit Miniaturen, die sich in
+jedem Browser ohne Netz öffnet. Überschriften, Fundgattungen, Einheiten und
+Zustände kommen in der für den Bericht gewählten Sprache heraus; was Sie selbst
+geschrieben haben, bleibt, wie Sie es geschrieben haben. Im Abschlussbericht
+haben die Funde ihren eigenen Anhang, nach Herkunft.</li>
 <li>Bei aktivierten Fotos in Berichten können Sie <kbd>Fotoblätter statt
 Fotos</kbd> <span class="pro">PRO</span> wählen: Jedes Foto kommt als
 vollständiges Dokumentationsblatt mit Daten und Karte ins PDF und DOCX, in
@@ -286,12 +440,19 @@ exportieren.</p>
 <tr><td>NMEA-Aufzeichnungen</td><td>Nachlesen und Teilen der Dateien</td><td>Die Aufzeichnung (braucht die externe Antenne)</td></tr>
 <tr><td>Nivellierbücher</td><td>✓</td><td>✓</td></tr>
 <tr><td>Fotoblatt</td><td>—</td><td>Teilen und Blätter in Berichten</td></tr>
+<tr><td>Funde</td><td>Verzeichnis, CSV und HTML</td><td>+ Anhang in den Berichten</td></tr>
+<tr><td>Virtuelle Maßstäbe</td><td>Auf Fotos und auf Zeichenblättern</td><td>+ Vektoren in SVG und DXF</td></tr>
+<tr><td>Zählen und messen</td><td>—</td><td>Auf einem Foto und im Stapel</td></tr>
+<tr><td>3D-Messung (LiDAR)</td><td>—</td><td>Auf Geräten mit Scanner</td></tr>
 <tr><td>Diktierfunktion</td><td>✓</td><td>✓</td></tr>
 <tr><td>Berichtssprachen</td><td>17</td><td>17</td></tr>
 </table>
 <p>Pro gibt es als Monats- oder Jahresabo mit automatischer Verlängerung oder
 als einmaligen Lifetime-Kauf. Verwaltung und Kündigung jederzeit in den
-Einstellungen des Apple-Kontos.</p>
+Einstellungen des Apple-Kontos. Steht Ihnen ein kostenloser Probezeitraum zu,
+schreibt der Pro-Bildschirm das vor dem Kauf hin („7 Tage kostenlos, dann …“):
+Steht dort nichts, steht er Ihnen nicht zu — die App verspricht keine
+Probezeit, die der Kauf dann nicht einlöst.</p>
 
 <h2>Problemlösung</h2>
 
@@ -472,6 +633,98 @@ aufgezeichnet wird. Bei Frontalaufnahmen erscheint stattdessen der Schriftzug
 „aufgenommen aus …“ (ein Nordpfeil auf der Fläche eines Aufrisses wäre
 geometrisch unsinnig); bei aus der Fotobibliothek importierten Fotos fehlt
 beides, weil die Aufnahmedaten fehlen.</p></details>
+
+<details><summary>„Zählen und messen“ erscheint nicht am Foto</summary>
+<p>Der Befehl lebt nur an den Fotos eines <strong>Fundes</strong> — dort hat
+das Umreißen von Fragmenten seinen Sinn — und öffnet sich aus der
+Fotodetailansicht, nicht aus der Karte, die nur die Miniaturen zeigt. Öffnet
+der Tipp den Pro-Bildschirm, ist das die Funktion: Sie gehört zu Pro, wie das
+Nachzeichnen.</p></details>
+
+<details><summary>Die Maßstabsleiste wird nicht gefunden</summary>
+<ul>
+<li>erkannt werden <strong>Leisten mit Feldern</strong> — schwarz/weiß,
+schwarz/gelb, rot/weiß — und Lineale mit Blöcken; Farbkarten und glatte
+Lineale ohne Felder werden grundsätzlich nicht erkannt;</li>
+<li>die Leiste muss mindestens ein Zehntel der langen Bildseite einnehmen und
+ganz im Bild liegen: vom Rand angeschnitten, lässt sie sich nicht lesen;</li>
+<li>wie viele Felder sie gelesen hat, sagt die App, aber <strong>wie viel ein
+Feld misst, sagen Sie</strong>: Aus dem Bild lässt sich das nicht ableiten, und
+es zu raten hieße, über den Maßstab zu lügen;</li>
+<li>findet sie keine, tippen Sie die beiden Enden einer bekannten Strecke von
+Hand an. Mit <kbd>Nicht kalibrieren</kbd> wird nur gezählt, und die App gibt
+an, dass die Maße fehlen.</li>
+</ul></details>
+
+<details><summary>Die Zählung stimmt nicht mit der echten Schale überein</summary>
+<ul>
+<li>was Sie nach dem Durchgang sehen, ist ein Vorschlag: Schließen Sie mit dem
+Tipp das Lineal, das Etikett, die harten Schatten und alles aus, was kein Fund
+ist, bis die Zahl mit Ihrer Handzählung übereinstimmt;</li>
+<li>wurde ein Fragment als zwei Stücke gelesen, tippen Sie die beiden Formen an
+und <kbd>Zusammenführen</kbd>: Daraus wird eine einzige Form mit einer einzigen
+Nummer;</li>
+<li>schaut der Durchgang auch außerhalb der Schale, zeichnen Sie die Umgrenzung
+mit <kbd>Auf einen Bereich beschränken</kbd>: Die Suche bleibt darin;</li>
+<li>fehlen Stücke, geht <kbd>Feindurchgang</kbd> nur dort noch einmal durch, wo
+nichts gefunden wurde, ohne das Ausgeschlossene zurückzuholen;</li>
+<li>die Zahl, die in den Notizen landet, ist die, die Sie
+<strong>bestätigt</strong> haben, nicht die, die das Modell vorgeschlagen
+hatte.</li>
+</ul></details>
+
+<details><summary>Das Etikett wird nicht gelesen, oder es schlägt das Falsche vor</summary>
+<ul>
+<li>das Ergebnis wird immer angegeben: entweder „Etikett gelesen: …“ oder
+„Kein lesbarer Text im Foto“ — Schweigen gibt es nicht;</li>
+<li>das automatische Lesen irrt sich, vor allem bei Handschrift: Darum wird der
+Text des Blattes vor dem Bestätigen <strong>korrigiert</strong>;</li>
+<li><kbd>Als Kürzel verwenden</kbd> und <kbd>Als Herkunft verwenden</kbd>
+erscheinen nur, wenn diese Felder leer sind: Was Sie selbst geschrieben haben,
+wird nicht angerührt;</li>
+<li>zwei verschiedene Etiketten im selben Foto machen die Angabe mehrdeutig,
+und dann schlägt die App nichts vor: Den gelesenen Text sehen Sie trotzdem, die
+Wahl bleibt bei Ihnen.</li>
+</ul></details>
+
+<details><summary>Der Stapel ist stehen geblieben, oder einige Fotos fehlen</summary>
+<ul>
+<li>Fotos aus der Mediathek, die in iCloud liegen und noch nicht
+heruntergeladen sind, laden nicht: einmal in der Fotos-App öffnen, dann
+<kbd>Fehler erneut versuchen</kbd>;</li>
+<li>haben Sie die App verlassen oder abgebrochen, bleiben die schon fertigen
+Fotos als Entwurf, und <kbd>Stapel fortsetzen</kbd> macht dort weiter, wo er
+aufgehört hatte, ohne Fertiges noch einmal zu tun;</li>
+<li>importierte Fotos übernehmen das <strong>Aufnahmedatum</strong>, nicht das
+von heute: Sehen Sie sie nicht, sind Sie am falschen Tag — wechseln Sie zu
+<kbd>Alle</kbd> oder gehen Sie an ihren Tag.</li>
+</ul></details>
+
+<details><summary>Die virtuelle Maßstabsleiste stimmt nicht mit dem echten Lineal überein</summary>
+<p>Der Maßstab gilt in der <strong>Ebene der beiden Punkte</strong>, die Sie
+kalibriert haben: Ist das Foto schräg aufgenommen, kann ein Element, das weiter
+weg oder näher als diese Ebene liegt, nicht übereinstimmen. Fotografieren Sie
+senkrecht, mit der Ebene parallel zum Sensor, und kalibrieren Sie auf eine
+Strecke, die in dieser Ebene liegt. War der angegebene Wert falsch,
+<kbd>Neu kalibrieren</kbd>: Alle schon gesetzten Maße schreiben sich von selbst
+um, denn die Zahl wird nie gespeichert.</p></details>
+
+<details><summary>„3D-Messung“ gibt es nicht, oder die Messung geht daneben</summary>
+<ul>
+<li>es braucht den <strong>LiDAR</strong>-Scanner: Auf iPhones und iPads ohne
+Scanner gibt es die Schaltfläche gar nicht, statt dass sie ohne Erklärung
+ausgegraut dasteht;</li>
+<li>erscheint „Oberfläche noch unvollständig“, ist die Rekonstruktion nicht
+fertig: langsam bewegen und aus mehreren Winkeln erfassen, bevor Sie die Punkte
+antippen;</li>
+<li>pralle Sonne und glänzende Flächen — Marmor, Fliesen, lackierter Putz —
+verschlechtern die Messung: Es bleibt eine optische Messung, angegeben als
+„LiDAR ±cm“;</li>
+<li>bricht die Sitzung ab (ein Anruf, die App beiseitegelegt),
+<strong>verfällt</strong> eine etwaige Verankerung an einem Festpunkt, und die
+App sagt das: besser neu verankern, als Höhen zu behalten, die nicht mehr
+stimmen.</li>
+</ul></details>
 
 <footer>
 <p>Fragen, die hier fehlen? Schreiben Sie an

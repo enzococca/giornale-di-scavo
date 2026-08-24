@@ -32,6 +32,7 @@ génèrent tout seuls à partir des pages.</p>
 <li><b>Relevé</b>Acquérez les points GNSS ; vérifiez un repère au préalable si vous utilisez le RTK</li>
 <li><b>Photos</b>Photographiez depuis les <kbd>Médias</kbd> : les coordonnées s'attachent automatiquement</li>
 <li><b>Dessins</b>Décalquez la coupe ou le plan sur une photo (calque numérique)</li>
+<li><b>Mobilier</b>Les caisses devant vous, enregistrez ce qui est sorti : <kbd>Chantier</kbd> → <kbd>Mobilier</kbd></li>
 <li><b>Soir</b>Depuis l'onglet <kbd>Rapports</kbd>, générez le rapport journalier : un PDF prêt à envoyer</li>
 </ol>
 
@@ -88,6 +89,20 @@ lever.</li>
 niveau optique : stations, lectures arrière et avant, altitudes calculées à
 partir d'un repère de départ, avec le contrôle de fermeture. Les points nivelés
 entrent dans le site avec leur altitude, comme les points GNSS.</li>
+<li>Sur les appareils dotés d'un scanner <strong>LiDAR</strong> (iPhone Pro à
+partir du 12, iPad Pro) apparaît <kbd>Mesure 3D</kbd>
+<span class="pro">PRO</span> : cadrez lentement jusqu'à ce que la surface se
+reconstruise, puis touchez les deux points à mesurer et lisez la distance, la
+distance horizontale et le dénivelé. Avec <kbd>Ancrer à un repère</kbd> vous
+choisissez un repère d'altitude connue et vous touchez son point au sol : à
+partir de là, chaque mesure porte aussi l'altitude orthométrique des deux
+extrémités. <kbd>Fixer</kbd> garde la mesure dans la scène,
+<kbd>Rejeter la mesure</kbd> la jette, <kbd>Reporter dans le journal</kbd> en
+fait un texte que vous corrigez avant de confirmer. C'est une mesure optique,
+et l'application le déclare en écrivant « LiDAR ±cm » : cela sert pour un
+dénivelé ou une longueur prise à la volée sur place, et cela ne remplace ni le
+GNSS ni le niveau. Sur les appareils sans scanner, le bouton n'existe pas du
+tout.</li>
 <li>Sous le panneau se trouvent les <kbd>Enregistrements NMEA</kbd> : le flux
 brut du récepteur externe <span class="pro">PRO</span> part tout seul dans un
 fichier — l'enregistrement démarre quand vous allumez l'antenne et se ferme
@@ -122,8 +137,87 @@ coordonnées, altitude, direction), une vue satellite avec l'épingle de
 position et le cône de prise de vue, la barre d'échelle de la carte et la
 flèche du nord. La carte nécessite le réseau : sans réseau, la fiche est
 quand même générée, avec le panneau de données agrandi.</li>
+<li><kbd>Échelle virtuelle</kbd> pose sur la photo les repères métriques que
+vous n'aviez pas sur le terrain. D'abord <kbd>Calibrer la photo</kbd> : vous
+touchez les deux extrémités d'une distance connue — une graduation de la règle,
+le côté d'une brique — et vous la déclarez en centimètres. Ensuite vous posez ce
+qu'il faut : <kbd>Réglette graduée 5 cm</kbd>, <kbd>Réglette graduée 10 cm</kbd>
+ou <kbd>Réglette graduée 20 cm</kbd>, <kbd>Jalon 50 cm</kbd>,
+<kbd>Jalon 1 m</kbd> ou <kbd>Jalon 2 m</kbd>, <kbd>Carré 10×10 cm</kbd>,
+<kbd>Croix de référence</kbd> et <kbd>Flèche du nord</kbd>. Chaque élément a son
+rendu (<kbd>Barre plate</kbd>, <kbd>Jalon réel</kbd>, <kbd>Règle graduée</kbd>),
+sa taille, son épaisseur et sa rotation ; pour en déplacer un,
+<strong>maintenez-le appuyé</strong> et faites-le glisser — ainsi le pincement
+du zoom ne le déplace pas par erreur.</li>
+<li><kbd>Ajouter une mesure</kbd> mesure n'importe quelle distance sur la photo
+en deux touches. Le nombre n'est jamais enregistré : si vous recalibrez, toutes
+les étiquettes se réécrivent toutes seules. Sur les photos prises à plomb avec
+l'application, la flèche du nord naît déjà orientée sur l'azimut enregistré, et
+le rapport le déclare ; si c'est vous qui la tournez, la mention devient
+« déclarée ». <kbd>Partager avec l'échelle</kbd> sort une copie de la photo avec
+dessus ce que vous avez posé — <kbd>Partager la photo</kbd> reste l'original nu,
+avec son EXIF.</li>
+<li><kbd>Traiter en série</kbd> <span class="pro">PRO</span> (menu en haut dans
+les <kbd>Médias</kbd>) prend un groupe de photos de la photothèque et les passe
+toutes au compter et mesurer, l'une après l'autre : chaque photo devient une
+photo du site à la date de la prise de vue, et chacune aura sa <strong>nouvelle
+fiche de mobilier</strong> à confirmer. L'écran reste allumé pendant toute la
+série. Si vous sortez ou si vous l'interrompez, les photos déjà prêtes restent
+en brouillon et <kbd>Reprendre la série</kbd> repart de là où elle en était. À
+la fin, la révision vous passe les fiches une par une : vous corrigez la
+provenance, la catégorie et la quantité, puis vous confirmez.</li>
 </ol>
 <div class="schermate"><figure><img src="img/fr/05-media.webp" alt="La galerie photo" width="640" height="1391" loading="lazy"><figcaption>La galerie photo</figcaption></figure><figure><img src="img/fr/09-scheda.webp" alt="Le détail d'une photo géoréférencée" width="640" height="1391" loading="lazy"><figcaption>Le détail d'une photo : coordonnées, altitude et direction de prise de vue</figcaption></figure><figure class="larga"><img src="img/fr/10-scheda-esportata.webp" alt="La fiche photographique générée" width="640" height="605" loading="lazy"><figcaption>La fiche exportée : les données de prise de vue, la vue satellite avec le cône de prise de vue, la barre d'échelle de la carte et la flèche du nord</figcaption></figure></div>
+
+<h3>🧮 Compter et mesurer (dans les Médias)</h3>
+<p>Le plateau de fragments photographié d'en haut, et l'application qui les
+compte et les mesure toute seule. La fonction vit sur la photo d'un <strong>lot
+de mobilier</strong> : vous l'ouvrez depuis sa fiche et vous touchez
+<kbd>Compter et mesurer</kbd> <span class="pro">PRO</span>.</p>
+<ol class="passi">
+<li>L'échelle d'abord. L'application cherche toute seule la <strong>réglette
+graduée</strong> sur la photo : si elle la trouve, elle vous dit combien de
+cases elle a lues, vous déclarez ce que mesure une case (1, 2, 5 ou 10 cm) et
+vous touchez <kbd>Utiliser la proposition</kbd>. Si elle ne la trouve pas, vous
+touchez à la main les deux extrémités d'une distance connue. Vous pouvez aussi
+choisir <kbd>Ne pas calibrer</kbd> : alors on compte seulement, et l'application
+écrit que les mesures ne sont pas là — elle ne les invente pas.</li>
+<li>Le modèle détoure toutes les formes de la photo : cela peut prendre quelques
+dizaines de secondes. Ce qui apparaît est une <strong>proposition</strong>, pas
+un résultat : une touche exclut une forme, une autre la reprend.
+<kbd>Fusionner</kbd> réunit en une seule les formes qui sont la même pièce
+cassée en deux ; <kbd>Limiter à une zone</kbd> vous fait dessiner du doigt
+l'enclos du plateau, et la recherche reste là-dedans ; <kbd>Passe fine</kbd>
+repasse seulement là où elle n'avait rien trouvé. Les <strong>suspects</strong>
+— les formes qui ressemblent au fond, à la bâche, à l'ombre — se regroupent et
+s'excluent d'un seul coup.</li>
+<li>Avec <kbd>Matériau de la forme</kbd> vous touchez une pièce et vous dites ce
+que c'est ; <kbd>Matériau pour toutes</kbd> le donne à toutes ensemble, ou
+seulement à celles qui en sont restées dépourvues.
+<kbd>Proposer le matériau</kbd> demande au modèle embarqué de le deviner :
+c'est une proposition à vérifier, et votre choix l'emporte toujours.</li>
+<li><kbd>Suivant</kbd> ouvre la feuille de confirmation avec le texte déjà
+écrit : le comptage, les mesures (grand côté × petit côté, dans cet ordre) et
+les déclarations honnêtes — « dont N n'ont pas de mesure fiable » quand une
+forme ne se laisse pas mesurer. S'il y a une <strong>étiquette</strong> sur la
+photo, l'application essaie de la lire et vous le dit toujours : soit
+« Étiquette lue : … », soit « Aucun texte lisible sur la photo ».</li>
+<li>Les interrupteurs n'apparaissent que là où il y a une place vide à remplir :
+<kbd>Utiliser le nombre comme quantité</kbd>, <kbd>Utiliser comme sigle</kbd>,
+<kbd>Utiliser comme provenance</kbd>. Ce que vous avez déjà écrit n'est jamais
+écrasé, et les notes s'<strong>allongent</strong> : un second tour se met à la
+suite du premier, pas à sa place. Le texte est modifiable : ce qui entre dans
+les notes, c'est ce que vous lisez là.</li>
+<li>Ensuite, dans le détail de la photo, <kbd>Numéros sur les formes</kbd>
+affiche ou masque les petits numéros — et tels que vous les voyez là, ils
+sortent aussi dans les partages et dans les rapports. Touchez une forme pour
+savoir qui elle est : « 7: 4,2×2,8 cm ». Si la photo n'est pas calibrée,
+l'étiquette le dit, au lieu de donner un nombre.</li>
+</ol>
+<p class="nota">La mesure vaut dans le <strong>plan</strong> des deux points que
+vous avez calibrés : la photo doit être prise à plomb, le plateau parallèle au
+capteur. La référence déclarée est de ±2 mm sur les pièces bien cadrées ; un
+fragment debout ou au bord de la photo est hors de ce pacte.</p>
 
 <h3>✏️ Dessins (dans les Médias)</h3>
 <ol class="passi">
@@ -139,10 +233,11 @@ faut, de 5% à 100% : cela estompe la photo, pas le dessin. Le choix reste sur
 la planche et vaut aussi en PDF, DOCX, PNG et dans <kbd>Exporter avec
 légende</kbd>.</li>
 <li>Tout le reste se trouve sous <kbd>Outils</kbd> (la clé plate dans la
-barre), qui est l'index des six modes : <kbd>Zone de texte</kbd>,
+barre), qui est l'index des sept modes : <kbd>Zone de texte</kbd>,
 <kbd>Décalque</kbd> <span class="pro">PRO</span>, <kbd>Échelle de la
-photo</kbd>, <kbd>Point avec altitude</kbd>, <kbd>Trame</kbd> et <kbd>Style de
-trait</kbd>. On n'en tient qu'<strong>un seul</strong> à la fois : la coche dit
+photo</kbd>, <kbd>Point avec altitude</kbd>, <kbd>Trame</kbd>, <kbd>Style de
+trait</kbd> et <kbd>Échelle virtuelle</kbd>. On n'en tient qu'<strong>un
+seul</strong> à la fois : la coche dit
 lequel, et tant qu'il est actif le doigt ne dessine pas mais commande cet outil
 — pour revenir à dessiner, touchez de nouveau la ligne cochée. Les trois
 entrées qui travaillent sur l'image (décalque, échelle, point avec altitude)
@@ -193,6 +288,14 @@ réglant l'épaisseur. <kbd>Dessiner avec ce style</kbd> fait naître déjà
 habillés les traits suivants ; <kbd>Retirer le style</kbd> ramène la ligne
 pleine. Ce n'est pas un effet d'écran : les tirets sont de vrais segments, et
 ils le restent en PDF, DOCX, PNG, SVG et DXF.</li>
+<li>L'<kbd>Échelle virtuelle</kbd> apporte sur la planche les mêmes repères
+métriques que sur les photos : réglette, jalon, carré, croix, flèche du nord et
+mesures à deux touches. Les types métriques demandent que la planche ait une
+échelle, c'est-à-dire l'<kbd>Échelle de la photo</kbd> : sans une distance
+connue, l'application explique au lieu de dessiner. En SVG et en DXF
+<span class="pro">PRO</span>, ces éléments sortent en <strong>vecteurs</strong>,
+sur leur propre calque, et la mesure lue à la règle du SIG coïncide avec
+l'étiquette.</li>
 <li><kbd>Exporter avec légende</kbd> <span class="pro">PRO</span> :
 l'image sort avec une bande blanche en bas — barre métrique (si l'échelle est
 définie), flèche du nord pour les photos prises à plomb, « vue depuis » pour
@@ -213,8 +316,49 @@ telle quelle, donc le fond estompé y sort à pleine force.</li>
 <ol class="passi">
 <li>Enregistrez les présences du jour : nom, fonction et heures de chacun.</li>
 <li>Tenez l'inventaire des équipements et à qui ils sont attribués.</li>
+<li>Sous <kbd>Mobilier</kbd> se trouve le registre de ce qui sort de la fouille,
+avec le nombre de lignes déjà enregistrées écrit sous le nom.</li>
 </ol>
 <div class="schermate"><figure><img src="img/fr/07-ore.webp" alt="Présences et heures" width="640" height="1391" loading="lazy"><figcaption>Présences et heures</figcaption></figure></div>
+
+<h3>📦 Mobilier (dans le Chantier)</h3>
+<p>Le vrai moment n'est pas celui de l'appareil photo : c'est celui où l'on
+s'assoit en fin de journée, les caisses devant soi, et où on les dépouille l'une
+après l'autre, fatigué et les mains sales. Tout ici est fait pour ce moment-là —
+et c'est <strong>gratuit</strong>, comme l'enregistrement des points : remettre
+ce que l'on a fouillé fait partie de la documentation de base.</p>
+<ol class="passi">
+<li><kbd>Chantier</kbd> → <kbd>Mobilier</kbd> → <kbd>+</kbd>. La fiche s'ouvre
+déjà avec la date du jour et avec la <strong>dernière provenance
+utilisée</strong> : dès la deuxième ligne, enregistrer se réduit presque à
+toucher. Le champ propose les provenances déjà utilisées sur ce site.</li>
+<li>Les champs sont dans l'ordre où on les remplit vraiment :
+<kbd>Provenance</kbd> (p. ex. « US 102 »), <kbd>Catégorie</kbd>,
+<kbd>Quantité</kbd> avec son <kbd>Unité</kbd> (fragments, pièces, sachets,
+caisses, grammes), le sigle de la caisse ou du sachet, <kbd>État</kbd>
+(<kbd>À laver</kbd>, <kbd>Lavé</kbd>, <kbd>Marqué</kbd>, <kbd>Remis</kbd>),
+les notes et la date.</li>
+<li>Les catégories proposées sont au nombre de onze — <kbd>Céramique</kbd>,
+<kbd>Brique</kbd>, <kbd>Ossements animaux</kbd>, <kbd>Ossements humains</kbd>,
+<kbd>Métal</kbd>, <kbd>Verre</kbd>, <kbd>Industrie lithique</kbd>,
+<kbd>Mortier et enduit</kbd>, <kbd>Bois</kbd>, <kbd>Échantillons</kbd>,
+<kbd>Autre</kbd> — mais vous pouvez en écrire une à vous (« Enduit peint ») :
+ce sera ce mot-là dans toutes les langues, car l'application ne traduit que les
+entrées qu'elle propose elle-même.</li>
+<li>La quantité peut rester vide : une ligne peut dire « il y avait ça » sans le
+compter, et dans les exportations cette cellule reste vide, jamais à zéro.</li>
+<li>Les photos de la fiche se prennent avec <kbd>Prendre une photo</kbd>, se
+récupèrent avec <kbd>Depuis la photothèque</kbd> ou avec <kbd>Du site</kbd>, qui
+pêche parmi les photos déjà dans la galerie qui n'ont pas encore de fiche. Ce
+sont les mêmes photos que dans les <kbd>Médias</kbd> : supprimer un lot de
+mobilier ne supprime <strong>pas</strong> ses photos, qui perdent seulement le
+lien.</li>
+<li>Dans la page de la journée, la section <kbd>Mobilier</kbd> n'apparaît que si
+vous en avez enregistré ce jour-là. <kbd>Reporter dans le journal</kbd> propose
+la ligne de synthèse, groupée par provenance et avec les notes en entier : vous
+la corrigez et vous l'ajoutez à la fin du journal. Appuyé deux fois, il écrit
+deux fois — le journal ne se réécrit jamais tout seul.</li>
+</ol>
 
 <h3>📄 Rapports</h3>
 <ol class="passi">
@@ -227,6 +371,13 @@ italien même si vous utilisez l'application en français.</li>
 <li>Générez le PDF, ou exportez en DOCX avec logo et photos
 <span class="pro">PRO</span>, CSV des points, GeoJSON pour QGIS
 <span class="pro">PRO</span>.</li>
+<li>Tout en bas se trouve <kbd>Export du mobilier (site entier)</kbd>, gratuit :
+<kbd>Exporter le CSV du mobilier</kbd> pour le tableur, et
+<kbd>Exporter le HTML du mobilier</kbd> pour un tableau avec les vignettes qui
+s'ouvre dans n'importe quel navigateur, sans réseau. Les en-têtes, les catégories, les unités et les
+états sortent dans la langue choisie pour le rapport ; ce que vous avez écrit
+vous-même reste tel que vous l'avez écrit. Dans le rapport de fin de chantier,
+le mobilier a son annexe, par provenance.</li>
 <li>Avec les photos activées dans les rapports, vous pouvez choisir
 <kbd>Fiches photographiques à la place des photos</kbd>
 <span class="pro">PRO</span> : chaque photo entre dans le PDF et le DOCX
@@ -283,12 +434,19 @@ contenu et c'est <strong>irréversible</strong> : exportez d'abord un ZIP en cas
 <tr><td>Enregistrements NMEA</td><td>Relecture et partage des fichiers</td><td>L'enregistrement (il faut l'antenne externe)</td></tr>
 <tr><td>Carnet de nivellement</td><td>✓</td><td>✓</td></tr>
 <tr><td>Fiche photographique</td><td>—</td><td>Partage et fiches dans les rapports</td></tr>
+<tr><td>Mobilier</td><td>Registre, CSV et HTML</td><td>+ annexe dans les rapports</td></tr>
+<tr><td>Échelles virtuelles</td><td>Sur les photos et sur les planches</td><td>+ vecteurs en SVG et DXF</td></tr>
+<tr><td>Compter et mesurer</td><td>—</td><td>Sur une photo et en série</td></tr>
+<tr><td>Mesure 3D (LiDAR)</td><td>—</td><td>Sur les appareils à scanner</td></tr>
 <tr><td>Dictée vocale</td><td>✓</td><td>✓</td></tr>
 <tr><td>Langues des rapports</td><td>17</td><td>17</td></tr>
 </table>
 <p>Pro est un abonnement mensuel ou annuel à renouvellement automatique, ou un
 achat unique à vie. Il se gère et se résilie depuis les réglages de votre
-identifiant Apple.</p>
+identifiant Apple. Quand une période d'essai gratuite vous revient, l'écran Pro
+vous l'écrit avant l'achat (« 7 jours gratuits, puis … ») : si ce n'est pas
+écrit, elle ne vous revient pas — l'application ne promet pas un essai que
+l'achat ne tiendrait pas.</p>
 
 <h2>Résolution des problèmes</h2>
 
@@ -461,6 +619,96 @@ de la prise de vue. Pour les photos frontales, c'est la mention « vue depuis
 … » qui sort (une flèche du nord sur le plan d'une élévation serait un
 mensonge géométrique) ; pour les photos importées de la pellicule, ni l'une
 ni l'autre n'apparaît, car les données de prise de vue manquent.</p></details>
+
+<details><summary>« Compter et mesurer » n'apparaît pas sur la photo</summary>
+<p>La commande ne vit que sur les photos d'un <strong>lot de mobilier</strong> —
+c'est là qu'il y a un sens à détourer des fragments — et elle s'ouvre depuis le
+détail de la photo, pas depuis la fiche, qui ne montre que les vignettes. Si la
+touche ouvre l'écran Pro, c'est bien cela : la fonction fait partie de Pro,
+comme le décalque.</p></details>
+
+<details><summary>La réglette graduée n'est pas trouvée</summary>
+<ul>
+<li>on reconnaît les <strong>réglettes à cases</strong> — blanches/noires,
+jaunes/noires, rouges/blanches — et les règles à blocs ; les chartes de couleurs
+et les règles lisses, sans cases, ne se reconnaissent pas par principe ;</li>
+<li>la réglette doit occuper au moins un dixième du grand côté de la photo et
+tenir entière dans le cadre : coupée par le bord, elle ne se lit pas ;</li>
+<li>combien de cases elle a lues, c'est l'application qui le dit, mais
+<strong>ce que mesure une case, c'est vous</strong> : de l'image cela ne se
+déduit pas, et le deviner reviendrait à mentir sur l'échelle ;</li>
+<li>si elle ne la trouve pas, vous touchez à la main les deux extrémités d'une
+distance connue. Avec <kbd>Ne pas calibrer</kbd>, on compte seulement, et
+l'application déclare que les mesures ne sont pas là.</li>
+</ul></details>
+
+<details><summary>Le comptage ne colle pas avec le plateau réel</summary>
+<ul>
+<li>ce que vous voyez après le tour est une proposition : excluez d'une touche
+la règle, l'étiquette, les ombres nettes et tout ce qui n'est pas du mobilier,
+jusqu'à ce que le nombre colle avec celui que vous avez compté à la main ;</li>
+<li>si un fragment a été lu comme deux pièces, touchez les deux formes et
+<kbd>Fusionner</kbd> : cela devient une seule forme, avec un seul numéro ;</li>
+<li>si le tour regarde aussi hors du plateau, dessinez l'enclos avec
+<kbd>Limiter à une zone</kbd> : la recherche reste là-dedans ;</li>
+<li>s'il manque des pièces, <kbd>Passe fine</kbd> repasse seulement là où elle
+n'avait rien trouvé, sans remettre dedans ce que vous aviez exclu ;</li>
+<li>le nombre qui finit dans les notes est celui que vous avez
+<strong>confirmé</strong>, pas celui que le modèle avait proposé.</li>
+</ul></details>
+
+<details><summary>L'étiquette n'est pas lue, ou propose la mauvaise chose</summary>
+<ul>
+<li>le résultat est toujours déclaré : soit « Étiquette lue : … », soit
+« Aucun texte lisible sur la photo » — le silence n'existe pas ;</li>
+<li>la lecture automatique se trompe, surtout sur l'écriture à la main : c'est
+pour cela que le texte de la feuille se <strong>corrige</strong> avant de
+confirmer ;</li>
+<li><kbd>Utiliser comme sigle</kbd> et <kbd>Utiliser comme provenance</kbd>
+n'apparaissent que si ces champs sont vides : ce que vous avez déjà écrit n'est
+pas touché ;</li>
+<li>deux étiquettes différentes sur la même photo rendent la donnée ambiguë, et
+alors l'application ne propose rien : le texte lu, vous le voyez quand même, le
+choix reste à vous.</li>
+</ul></details>
+
+<details><summary>La série s'est arrêtée, ou certaines photos ne sont pas entrées</summary>
+<ul>
+<li>les photos de la photothèque qui sont sur iCloud et pas encore téléchargées
+ne se chargent pas : ouvrez-les une fois dans l'app Photos, puis
+<kbd>Réessayer les erreurs</kbd> ;</li>
+<li>si vous êtes sorti de l'application ou si vous l'avez interrompue, les
+photos déjà prêtes restent en brouillon et <kbd>Reprendre la série</kbd> repart
+de là où elle en était, sans refaire ce qui était fait ;</li>
+<li>les photos importées prennent la <strong>date de la prise de vue</strong>,
+pas celle d'aujourd'hui : si vous ne les voyez pas, vous êtes au mauvais jour —
+passez à <kbd>Toutes</kbd> ou allez à leur jour.</li>
+</ul></details>
+
+<details><summary>La réglette virtuelle ne coïncide pas avec la règle réelle</summary>
+<p>L'échelle vaut dans le <strong>plan des deux points</strong> que vous avez
+calibrés : si la photo est prise de biais, un élément posé plus loin ou plus
+près de ce plan ne peut pas coïncider. Photographiez à plomb, le plan parallèle
+au capteur, et calibrez sur une distance qui se trouve dans ce plan. Si la
+valeur déclarée était fausse, <kbd>Recalibrer</kbd> : toutes les mesures déjà
+posées se réécrivent toutes seules, car le nombre n'est jamais
+enregistré.</p></details>
+
+<details><summary>« Mesure 3D » n'est pas là, ou la mesure déborde</summary>
+<ul>
+<li>il faut le scanner <strong>LiDAR</strong> : sur les iPhone et les iPad qui
+ne l'ont pas, le bouton n'existe pas du tout, plutôt que de rester là, éteint et
+sans explication ;</li>
+<li>si « Surface encore incomplète » apparaît, la reconstruction n'est pas
+finie : déplacez-vous lentement et cadrez sous plusieurs angles avant de toucher
+les points ;</li>
+<li>plein soleil et surfaces brillantes — marbre, carrelage, enduit peint —
+dégradent la lecture : cela reste une mesure optique, déclarée
+« LiDAR ±cm » ;</li>
+<li>si la session s'interrompt (un appel, l'application mise de côté), un
+éventuel ancrage à un repère <strong>tombe</strong> et l'application le dit :
+mieux vaut le refaire que de garder des altitudes qui ne sont plus vraies.</li>
+</ul></details>
 
 <footer>
 <p>Des questions ou des problèmes non répertoriés ? Écrivez à

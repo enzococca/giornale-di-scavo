@@ -32,6 +32,7 @@ de las páginas.</p>
 <li><b>Topografía</b>Captura puntos GNSS; comprueba una base antes si usas RTK</li>
 <li><b>Fotos</b>Dispara desde <kbd>Multimedia</kbd>: las coordenadas se añaden solas</li>
 <li><b>Dibujos</b>Calca la sección o la planta sobre una foto (papel vegetal digital)</li>
+<li><b>Materiales</b>Con las cajas delante, registra lo que ha salido: <kbd>Obra</kbd> → <kbd>Materiales</kbd></li>
 <li><b>Tarde</b>Desde <kbd>Informes</kbd>, genera el diario: un PDF listo para enviar</li>
 </ol>
 
@@ -86,6 +87,18 @@ créalas, y abre la <kbd>Comprobación en vivo</kbd> para vigilar los residuos
 óptico: estaciones, lecturas atrás y adelante, cotas calculadas desde una
 base de partida, con el control del error de cierre. Los puntos nivelados
 entran en el yacimiento con su cota, igual que los GNSS.</li>
+<li>En los dispositivos con escáner <strong>LiDAR</strong> (iPhone Pro del 12 en
+adelante, iPad Pro) aparece <kbd>Medición 3D</kbd> <span class="pro">PRO</span>:
+encuadra despacio hasta que la superficie se reconstruya, luego toca los dos
+puntos que quieres medir y lee la distancia, la distancia horizontal y el
+desnivel. Con <kbd>Anclar a un hito</kbd> eliges una base de cota conocida y
+tocas su punto sobre el terreno: de ahí en adelante cada medida lleva también la
+cota s. n. m. de los dos extremos. <kbd>Fijar</kbd> deja la medida en la escena,
+<kbd>Descartar medición</kbd> la tira, <kbd>Llevar al diario</kbd> la convierte
+en un texto que corriges antes de confirmar. Es una medida óptica, y la app lo
+declara escribiendo «LiDAR ±cm»: sirve para un desnivel o una longitud tomada
+deprisa sobre el terreno, y no sustituye al GNSS ni al nivel. En los
+dispositivos sin escáner el botón no está en absoluto.</li>
 <li>Bajo el panel están las <kbd>Grabaciones NMEA</kbd>: el flujo bruto del
 receptor externo <span class="pro">PRO</span> acaba en un archivo por sí solo
 — la grabación arranca cuando enciendes la antena y se cierra cuando la apagas,
@@ -117,8 +130,84 @@ la toma debajo (yacimiento, número, fecha y hora, coordenadas, cota,
 dirección), una vista satélite con el marcador y el cono de toma, la barra de
 escala del mapa y la flecha del norte. El mapa necesita red: sin ella, la
 ficha sale igualmente, con el panel de datos ampliado.</li>
+<li><kbd>Escala virtual</kbd> pone sobre la foto las referencias métricas que en
+el campo no tenías. Primero <kbd>Calibrar foto</kbd>: tocas los dos extremos de
+una distancia que conoces — una marca de la regla, el lado de un ladrillo — y la
+declaras en centímetros. Luego pones lo que haga falta:
+<kbd>Escala gráfica 5 cm</kbd>, <kbd>Escala gráfica 10 cm</kbd> o
+<kbd>Escala gráfica 20 cm</kbd>, <kbd>Jalón 50 cm</kbd>, <kbd>Jalón 1 m</kbd> o
+<kbd>Jalón 2 m</kbd>, <kbd>Cuadrado 10×10 cm</kbd>,
+<kbd>Cruz de referencia</kbd> y <kbd>Flecha del norte</kbd>. Cada elemento tiene
+su aspecto (<kbd>Barra plana</kbd>, <kbd>Jalón real</kbd>,
+<kbd>Regla con marcas</kbd>), su tamaño, su grosor y su giro; para mover uno
+<strong>mantenlo pulsado</strong> y arrástralo — así el pellizco del zoom no lo
+desplaza por error.</li>
+<li><kbd>Añadir medida</kbd> mide una distancia cualquiera sobre la foto con dos
+toques. El número no se guarda nunca: si recalibras, todas las etiquetas se
+reescriben solas. En las fotos tomadas en vertical con la app, la flecha del
+norte nace ya orientada según el acimut registrado, y el informe lo declara; si
+la giras tú, la indicación pasa a «declarada». <kbd>Compartir con escala</kbd>
+saca una copia de la foto con encima lo que has puesto —
+<kbd>Compartir foto</kbd> sigue siendo el original desnudo, con su EXIF.</li>
+<li><kbd>Procesar en serie</kbd> <span class="pro">PRO</span> (menú de arriba en
+<kbd>Multimedia</kbd>) coge un grupo de fotos de la fototeca y las pasa todas
+por contar y medir, una tras otra: cada foto se convierte en una foto del
+yacimiento con la fecha de la toma, y cada una tendrá su <strong>ficha de
+material nueva</strong> por confirmar. La pantalla se queda encendida durante
+toda la serie. Si sales o la interrumpes, las fotos ya listas quedan en borrador
+y <kbd>Reanudar la serie</kbd> arranca desde donde estaba. Al final la revisión
+te pasa las fichas una por una: corriges procedencia, clase y cantidad, y
+confirmas.</li>
 </ol>
 <div class="schermate"><figure><img src="img/es/05-media.webp" alt="La galería de fotos" width="640" height="1391" loading="lazy"><figcaption>La galería de fotos</figcaption></figure><figure><img src="img/es/09-scheda.webp" alt="El detalle de una foto georreferenciada" width="640" height="1391" loading="lazy"><figcaption>El detalle de una foto: coordenadas, cota y dirección de la toma</figcaption></figure><figure class="larga"><img src="img/es/10-scheda-esportata.webp" alt="La ficha fotográfica generada" width="640" height="605" loading="lazy"><figcaption>La ficha exportada: los datos de la toma, la vista satélite con el cono de toma, la barra de escala del mapa y la flecha del norte</figcaption></figure></div>
+
+<h3>🧮 Contar y medir (en Multimedia)</h3>
+<p>La bandeja de fragmentos fotografiada desde arriba, y la app que los cuenta y
+los mide sola. La función vive en la foto de un <strong>material</strong>: la
+abres desde su ficha y tocas <kbd>Contar y medir</kbd>
+<span class="pro">PRO</span>.</p>
+<ol class="passi">
+<li>Primero la escala. La app busca sola la <strong>escala gráfica</strong> en
+la foto: si la encuentra te dice cuántas casillas ha leído, tú declaras cuánto
+mide una casilla (1, 2, 5 o 10 cm) y tocas <kbd>Usar la propuesta</kbd>. Si no
+la encuentra, tocas a mano los dos extremos de una distancia conocida. También
+puedes elegir <kbd>No calibrar</kbd>: entonces solo se cuenta, y la app escribe
+que las medidas no están — no se las inventa.</li>
+<li>El modelo recorta todas las formas de la foto: puede tardar algunas decenas
+de segundos. Lo que aparece es una <strong>propuesta</strong>, no un resultado:
+un toque excluye una forma, otro la recupera. <kbd>Unir</kbd> funde en una sola
+las formas que son la misma pieza partida en dos; <kbd>Limitar a un área</kbd>
+te deja dibujar con el dedo el cerco de la bandeja, y la búsqueda se queda ahí
+dentro; <kbd>Pasada fina</kbd> repasa solo donde no había encontrado nada. Los
+<strong>sospechosos</strong> — las formas que parecen fondo, la lona, la
+sombra — se agrupan y se excluyen de una vez.</li>
+<li>Con <kbd>Material de la forma</kbd> tocas una pieza y dices qué es;
+<kbd>Material para todas</kbd> se lo da a todas juntas, o solo a las que se han
+quedado sin él. <kbd>Proponer el material</kbd> le pide al modelo del
+dispositivo que lo adivine: es una propuesta por verificar, y tu elección gana
+siempre.</li>
+<li><kbd>Siguiente</kbd> abre la hoja de confirmación con el texto ya escrito:
+el recuento, las medidas (lado mayor × lado menor, en ese orden) y las
+declaraciones honestas — «de los cuales N no tienen una medida fiable» cuando
+una forma no se deja medir. Si en la foto hay una <strong>etiqueta</strong>, la
+app intenta leerla y te lo dice siempre: o «Etiqueta leída: …», o «No hay texto
+legible en la foto».</li>
+<li>Los interruptores aparecen solo donde hay un hueco que rellenar:
+<kbd>Usar el recuento como cantidad</kbd>, <kbd>Usar como sigla</kbd>,
+<kbd>Usar como procedencia</kbd>. Lo que ya has escrito tú no se sobrescribe
+nunca, y las notas se <strong>alargan</strong>: una segunda vuelta se pone a
+continuación de la primera, no en su lugar. El texto es modificable: en las
+notas entra lo que lees ahí.</li>
+<li>Después, en el detalle de la foto, <kbd>Números en las formas</kbd> muestra
+u oculta los numeritos — y tal como los ves ahí salen también en las
+comparticiones y en los informes. Toca una forma para saber quién es:
+«7: 4,2×2,8 cm». Si la foto no está calibrada, la etiqueta lo dice en vez de
+dar un número.</li>
+</ol>
+<p class="nota">La medida vale en el <strong>plano</strong> de los dos puntos que
+has calibrado: la foto hay que tomarla en vertical, con la bandeja paralela al
+sensor. La referencia declarada es de ±2 mm en las piezas bien encuadradas; un
+fragmento de pie o en el borde de la foto queda fuera de ese pacto.</p>
 
 <h3>✏️ Dibujos (en Multimedia)</h3>
 <ol class="passi">
@@ -133,9 +222,10 @@ fondo…</kbd> en el menú de la cámara y llévala donde haga falta, del 5% al
 100%: desvanece la foto, no el dibujo. La elección se queda en la lámina y vale
 también en PDF, DOCX, PNG y en <kbd>Exportar con leyenda</kbd>.</li>
 <li>Todo lo demás está bajo <kbd>Herramientas</kbd> (la llave inglesa de la
-barra), que es el índice de los seis modos: <kbd>Cuadro de texto</kbd>,
+barra), que es el índice de los siete modos: <kbd>Cuadro de texto</kbd>,
 <kbd>Calco</kbd> <span class="pro">PRO</span>, <kbd>Escala de la foto</kbd>,
-<kbd>Punto con cota</kbd>, <kbd>Trama</kbd> y <kbd>Estilo de línea</kbd>. Se
+<kbd>Punto con cota</kbd>, <kbd>Trama</kbd>, <kbd>Estilo de línea</kbd> y
+<kbd>Escala virtual</kbd>. Se
 mantiene <strong>uno solo</strong> a la vez: la marca dice cuál, y mientras
 está encendido el dedo no dibuja sino que gobierna esa herramienta — para
 volver a dibujar, toca de nuevo la entrada marcada. Las tres entradas que
@@ -184,6 +274,13 @@ ajustando el grosor. <kbd>Dibujar con este estilo</kbd> hace que los trazos
 siguientes nazcan ya vestidos; <kbd>Quitar estilo</kbd> devuelve la línea
 llena. No es un efecto de pantalla: las rayas son segmentos de verdad, y lo
 siguen siendo en PDF, DOCX, PNG, SVG y DXF.</li>
+<li>La <kbd>Escala virtual</kbd> lleva a la lámina las mismas referencias
+métricas de las fotos: escala gráfica, jalón, cuadrado, cruz, flecha del norte y
+medidas a dos toques. Los tipos métricos exigen que la lámina tenga escala, es
+decir la <kbd>Escala de la foto</kbd>: sin una distancia conocida la app te lo
+explica en vez de dibujar. En SVG y DXF <span class="pro">PRO</span> estos
+elementos salen como <strong>vectores</strong>, en su propia capa, y la medida
+leída con la regla del SIG coincide con la etiqueta.</li>
 <li><kbd>Exportar con leyenda</kbd> <span class="pro">PRO</span>: la imagen
 sale con una franja blanca debajo — barra de escala (si hay escala), flecha
 del norte para las fotos tomadas en vertical, «vista desde» para las
@@ -205,8 +302,47 @@ informe.</li>
 <ol class="passi">
 <li>Registra la asistencia del día: nombre, tarea y horas de cada persona.</li>
 <li>Lleva el inventario del equipamiento y a quién está asignado.</li>
+<li>Bajo <kbd>Materiales</kbd> está el registro de lo que sale de la excavación,
+con el número de líneas ya registradas escrito bajo el nombre.</li>
 </ol>
 <div class="schermate"><figure><img src="img/es/07-ore.webp" alt="Equipo y horas" width="640" height="1391" loading="lazy"><figcaption>Equipo y horas</figcaption></figure></div>
+
+<h3>📦 Materiales (en la Obra)</h3>
+<p>El momento de verdad no es la cámara: es sentarse al final de la jornada con
+las cajas delante y despacharlas una tras otra, cansado y con las manos sucias.
+Todo aquí está hecho para ese momento — y es <strong>gratis</strong>, como
+registrar los puntos: entregar lo que se ha excavado es documentación de
+base.</p>
+<ol class="passi">
+<li><kbd>Obra</kbd> → <kbd>Materiales</kbd> → <kbd>+</kbd>. La ficha se abre ya
+con la fecha de hoy y con la <strong>última procedencia usada</strong>: de la
+segunda línea en adelante, registrar es casi solo tocar. El campo propone las
+procedencias ya usadas en ese yacimiento.</li>
+<li>Los campos están en el orden en que de verdad se rellenan:
+<kbd>Procedencia</kbd> (p. ej. «UE 102»), <kbd>Clase</kbd>, <kbd>Cantidad</kbd>
+con su <kbd>Unidad</kbd> (fragmentos, piezas, bolsas, cajas, gramos),
+la sigla de la caja o de la bolsa, <kbd>Estado</kbd>
+(<kbd>Por lavar</kbd>, <kbd>Lavado</kbd>, <kbd>Siglado</kbd>,
+<kbd>Entregado</kbd>), notas y fecha.</li>
+<li>Las clases propuestas son once — <kbd>Cerámica</kbd>, <kbd>Ladrillo</kbd>,
+<kbd>Huesos de animales</kbd>, <kbd>Huesos humanos</kbd>, <kbd>Metal</kbd>,
+<kbd>Vidrio</kbd>, <kbd>Industria lítica</kbd>, <kbd>Mortero y enlucido</kbd>,
+<kbd>Madera</kbd>, <kbd>Muestras</kbd>, <kbd>Otro</kbd> — pero puedes escribir
+una tuya («Enlucido pintado»): se quedará esa palabra en todos los idiomas,
+porque la app solo traduce las voces que propone ella.</li>
+<li>La cantidad se puede dejar vacía: una línea puede decir «había esta cosa»
+sin contarla, y en las exportaciones esa celda se queda vacía, nunca a cero.</li>
+<li>Las fotos de la ficha se hacen con <kbd>Tomar foto</kbd>, se cogen con
+<kbd>Desde la fototeca</kbd> o con <kbd>Del yacimiento</kbd>, que pesca entre
+las fotos ya en la galería que aún no tienen ficha. Son las mismas fotos de
+<kbd>Multimedia</kbd>: borrar un material <strong>no</strong> borra sus fotos,
+que solo pierden el vínculo.</li>
+<li>En la página de la jornada, la sección <kbd>Materiales</kbd> aparece solo si
+ese día has registrado alguno. <kbd>Llevar al diario</kbd> propone la línea
+resumen, agrupada por procedencia y con las notas enteras: la corriges y la
+añades al final del diario. Pulsado dos veces escribe dos veces — el diario
+nunca se reescribe solo.</li>
+</ol>
 
 <h3>📄 Informes</h3>
 <ol class="passi">
@@ -219,6 +355,13 @@ español.</li>
 <li>Genera el PDF, o exporta DOCX con logotipo y fotos
 <span class="pro">PRO</span>, CSV de los puntos, GeoJSON para QGIS
 <span class="pro">PRO</span>.</li>
+<li>Al final está <kbd>Exportación de materiales (todo el yacimiento)</kbd>,
+gratuita: <kbd>Exportar CSV de materiales</kbd> para la hoja de cálculo, y
+<kbd>Exportar HTML de materiales</kbd> para una tabla con las miniaturas que se
+abre en cualquier navegador sin red. Encabezados, clases, unidades y estados
+salen en el idioma elegido para el informe; lo que has escrito tú se queda como
+lo escribiste. En el informe final los materiales tienen su propio apéndice, por
+procedencia.</li>
 <li>Con las fotos en los informes activadas, puedes elegir <kbd>Fichas
 fotográficas en lugar de las fotos</kbd> <span class="pro">PRO</span>: cada
 foto entra en el PDF y el DOCX como ficha de documentación completa con
@@ -275,12 +418,18 @@ ZIP.</p>
 <tr><td>Grabaciones NMEA</td><td>Relectura y compartición de los archivos</td><td>La grabación (hace falta la antena externa)</td></tr>
 <tr><td>Libretas de nivelación</td><td>✓</td><td>✓</td></tr>
 <tr><td>Ficha fotográfica</td><td>—</td><td>Compartir y fichas en los informes</td></tr>
+<tr><td>Materiales</td><td>Registro, CSV y HTML</td><td>+ apéndice en los informes</td></tr>
+<tr><td>Escalas virtuales</td><td>En las fotos y en las láminas</td><td>+ vectores en SVG y DXF</td></tr>
+<tr><td>Contar y medir</td><td>—</td><td>En una foto y en serie</td></tr>
+<tr><td>Medición 3D (LiDAR)</td><td>—</td><td>En los dispositivos con escáner</td></tr>
 <tr><td>Dictado por voz</td><td>✓</td><td>✓</td></tr>
 <tr><td>Idiomas de informe</td><td>17</td><td>17</td></tr>
 </table>
 <p>Pro es una suscripción mensual o anual con renovación automática, o una
 compra única de por vida. Se gestiona y cancela en los ajustes de la cuenta de
-Apple.</p>
+Apple. Cuando te corresponde un periodo de prueba gratuito, la pantalla Pro te
+lo escribe antes de la compra («7 días gratis, luego …»): si no lo pone, no te
+corresponde — la app no promete una prueba que luego la compra no cumple.</p>
 
 <h2>Solución de problemas</h2>
 
@@ -453,6 +602,90 @@ En las fotos frontales sale el texto «vista desde …» (una flecha del norte
 en el plano de un alzado sería una mentira geométrica); en las fotos
 importadas del carrete no aparece ninguna de las dos, porque faltan los
 datos de la toma.</p></details>
+
+<details><summary>«Contar y medir» no aparece en la foto</summary>
+<p>El comando vive solo en las fotos de un <strong>material</strong> — es ahí
+donde tiene sentido recortar fragmentos — y se abre desde el detalle de la foto,
+no desde la ficha, que solo muestra las miniaturas. Si el toque abre la pantalla
+Pro, la función es esa: forma parte de Pro, como el calco.</p></details>
+
+<details><summary>No se encuentra la escala gráfica</summary>
+<ul>
+<li>se reconocen las <strong>escalas de casillas</strong> — blanco/negras,
+amarillo/negras, rojo/blancas — y las reglas de bloques; las cartas de color y
+las reglas lisas, sin casillas, no se reconocen por principio;</li>
+<li>la escala tiene que ocupar al menos una décima parte del lado largo de la
+foto y estar entera dentro del encuadre: cortada por el borde, no se lee;</li>
+<li>cuántas casillas ha leído lo dice la app, pero <strong>cuánto mide una
+casilla lo dices tú</strong>: de la imagen no se deduce, y adivinarlo sería
+mentir sobre la escala;</li>
+<li>si no la encuentra, tocas a mano los dos extremos de una distancia conocida.
+Con <kbd>No calibrar</kbd> solo se cuenta, y la app declara que las medidas no
+están.</li>
+</ul></details>
+
+<details><summary>El recuento no cuadra con la bandeja real</summary>
+<ul>
+<li>lo que ves después de la vuelta es una propuesta: excluye con el toque la
+regla, la etiqueta, las sombras marcadas y todo lo que no sea un hallazgo, hasta
+que el número coincida con el que has contado a mano;</li>
+<li>si un fragmento se ha leído como dos piezas, toca las dos formas y
+<kbd>Unir</kbd>: se convierte en una sola forma, con un solo número;</li>
+<li>si la vuelta mira también fuera de la bandeja, dibuja el cerco con
+<kbd>Limitar a un área</kbd>: la búsqueda se queda ahí dentro;</li>
+<li>si faltan piezas, <kbd>Pasada fina</kbd> repasa solo donde no había
+encontrado nada, sin volver a meter lo que habías excluido;</li>
+<li>el número que acaba en las notas es el que has <strong>confirmado</strong>
+tú, no el que el modelo había propuesto.</li>
+</ul></details>
+
+<details><summary>La etiqueta no se lee, o propone algo equivocado</summary>
+<ul>
+<li>el resultado se declara siempre: o «Etiqueta leída: …», o «No hay texto
+legible en la foto» — silencio no hay;</li>
+<li>la lectura automática se equivoca, sobre todo con la escritura a mano: por
+eso el texto de la hoja se <strong>corrige</strong> antes de confirmar;</li>
+<li><kbd>Usar como sigla</kbd> y <kbd>Usar como procedencia</kbd> aparecen solo
+si esos campos están vacíos: lo que ya has escrito tú no se toca;</li>
+<li>dos etiquetas distintas en la misma foto vuelven el dato ambiguo, y entonces
+la app no propone nada: el texto leído lo ves igualmente, la elección sigue
+siendo tuya.</li>
+</ul></details>
+
+<details><summary>La serie se ha parado, o algunas fotos no han entrado</summary>
+<ul>
+<li>las fotos de la fototeca que están en iCloud y aún no se han descargado no
+se cargan: ábrelas una vez en la app Fotos, y luego
+<kbd>Reintentar los errores</kbd>;</li>
+<li>si has salido de la app o la has interrumpido, las fotos ya listas quedan en
+borrador y <kbd>Reanudar la serie</kbd> arranca desde donde estaba, sin rehacer
+lo que ya estaba hecho;</li>
+<li>las fotos importadas toman la <strong>fecha de la toma</strong>, no la de
+hoy: si no las ves, estás en el día equivocado — pasa a <kbd>Todas</kbd> o ve a
+su día.</li>
+</ul></details>
+
+<details><summary>La escala gráfica virtual no coincide con la regla real</summary>
+<p>La escala vale en el <strong>plano de los dos puntos</strong> que has
+calibrado: si la foto está tomada de sesgo, un elemento colocado más lejos o más
+cerca de ese plano no puede coincidir. Fotografía en vertical, con el plano
+paralelo al sensor, y calibra sobre una distancia que esté en ese plano. Si el
+valor declarado era erróneo, <kbd>Recalibrar</kbd>: todas las medidas ya
+colocadas se reescriben solas, porque el número no se guarda nunca.</p></details>
+
+<details><summary>«Medición 3D» no está, o la medida se pasa</summary>
+<ul>
+<li>hace falta el escáner <strong>LiDAR</strong>: en los iPhone y iPad que no lo
+tienen el botón no existe en absoluto, en vez de estar ahí apagado sin
+explicación;</li>
+<li>si aparece «Superficie aún incompleta», la reconstrucción no ha terminado:
+muévete despacio y encuadra desde varios ángulos antes de tocar los puntos;</li>
+<li>sol pleno y superficies brillantes — mármol, azulejos, enlucido pintado —
+degradan la lectura: sigue siendo una medida óptica, declarada «LiDAR ±cm»;</li>
+<li>si la sesión se interrumpe (una llamada, la app apartada), un eventual
+anclaje a una base <strong>decae</strong> y la app lo dice: mejor rehacerlo que
+quedarse con cotas que ya no son verdad.</li>
+</ul></details>
 
 <footer>
 <p>¿Dudas que no están aquí? Escribe a

@@ -31,6 +31,7 @@ sonunda raporlar bu sayfalardan kendi kendine oluşur.</p>
 <li><b>Ölçüm</b>GNSS noktalarını al; RTK kullanıyorsan önce bir röperi kontrol et</li>
 <li><b>Fotoğraf</b><kbd>Medya</kbd>'dan çek: koordinatlar kendiliğinden eklenir</li>
 <li><b>Çizim</b>Kesiti ya da planı bir fotoğraf üzerine çiz (dijital “aydınger”)</li>
+<li><b>Buluntular</b>Kasalar önündeyken çıkanları kaydet: <kbd>Şantiye</kbd> → <kbd>Buluntular</kbd></li>
 <li><b>Akşam</b><kbd>Raporlar</kbd> sekmesinden günlük raporu oluştur: gönderilmeye hazır PDF</li>
 </ol>
 
@@ -86,6 +87,18 @@ açabilirsin.</li>
 istasyonlar, geri ve ileri okumalar, bir başlangıç röperinden hesaplanan
 yükseklikler ve kapanma kontrolü. Nivelmanla bulunan noktalar, GNSS noktaları
 gibi kendi yükseklikleriyle kazı alanına girer.</li>
+<li><strong>LiDAR</strong> tarayıcısı olan cihazlarda (12'den itibaren
+iPhone Pro, iPad Pro) <kbd>3D Ölçüm</kbd> <span class="pro">PRO</span> görünür:
+yüzey yeniden oluşana kadar yavaşça gez, sonra ölçmek istediğin iki noktaya
+dokun ve mesafeyi, yatay mesafeyi ve yükseklik farkını oku.
+<kbd>Sabit noktaya bağla</kbd> ile yüksekliği bilinen bir röper seçip onun
+yerdeki noktasına dokunursun: o andan sonra her ölçüm iki ucun d.s.y.
+yüksekliğini de taşır. <kbd>Sabitle</kbd> ölçümü sahnede tutar,
+<kbd>Ölçümü iptal et</kbd> onu atar, <kbd>Günlüğe aktar</kbd> ondan,
+onaylamadan önce düzelttiğin bir metin yapar. Bu optik bir ölçümdür ve uygulama
+bunu “LiDAR ±cm” yazarak açıkça söyler: bir yükseklik farkı ya da yerinde
+çabucak alınmış bir uzunluk için işe yarar, ve ne GNSS'in ne de nivonun yerini
+tutar. Tarayıcısı olmayan cihazlarda düğme hiç yoktur.</li>
 <li>Panonun altında <kbd>NMEA kayıtları</kbd> yer alır: harici alıcının
 <span class="pro">PRO</span> ham akışı kendiliğinden dosyaya yazılır — kayıt
 anteni açtığında başlar, kapattığında kapanır; senin bunu hatırlaman gerekmez.
@@ -116,8 +129,81 @@ verileri (kazı alanı, numara, tarih ve saat, koordinatlar, yükseklik, yön),
 iğnesi ve çekim konisiyle bir uydu görüntüsü, haritanın ölçek çubuğu ve kuzey
 oku. Harita ağ ister: ağ yoksa fiş yine çıkar, veri paneli genişletilmiş
 olarak.</li>
+<li><kbd>Sanal ölçek</kbd> sahada yanında olmayan referansları fotoğrafın
+üzerine koyar. Önce <kbd>Fotoğrafı kalibre et</kbd>: bildiğin bir uzaklığın iki
+ucuna dokunursun — cetvelin bir bölümü, bir tuğlanın kenarı — ve onu santimetre
+olarak bildirirsin. Sonra gerekeni koyarsın: <kbd>5 cm cetvel</kbd>,
+<kbd>10 cm cetvel</kbd> ya da <kbd>20 cm cetvel</kbd>, <kbd>50 cm mira</kbd>,
+<kbd>1 m mira</kbd> ya da <kbd>2 m mira</kbd>, <kbd>10×10 cm kare</kbd>,
+<kbd>Referans artısı</kbd> ve <kbd>Kuzey oku</kbd>. Her öğenin kendi görünümü
+(<kbd>Düz şerit</kbd>, <kbd>Gerçek mira</kbd>, <kbd>Çentikli cetvel</kbd>),
+boyutu, kalınlığı ve dönüşü vardır; birini taşımak için
+<strong>basılı tut</strong> ve sürükle — böylece yakınlaştırmak için yaptığın
+hareket onu yanlışlıkla kaydırmaz.</li>
+<li><kbd>Ölçüm ekle</kbd> fotoğraf üzerinde herhangi bir uzaklığı iki dokunuşla
+ölçer. Sayı hiçbir zaman saklanmaz: yeniden kalibre edersen bütün etiketler
+kendiliğinden yeniden yazılır. Uygulamanın tam tepeden çektiği fotoğraflarda
+kuzey oku, kaydedilmiş azimuta göre zaten dönmüş doğar ve rapor bunu belirtir;
+oku sen çevirirsen ibare “beyan edilen” olur. <kbd>Ölçekle paylaş</kbd>
+fotoğrafın üzerine koyduklarınla birlikte bir kopyasını çıkarır —
+<kbd>Fotoğrafı paylaş</kbd> ise EXIF'iyle çıplak özgün dosya olarak kalır.</li>
+<li><kbd>Seri işle</kbd> <span class="pro">PRO</span> (<kbd>Medya</kbd>'da
+yukarıdaki menü) kitaplıktan bir grup fotoğraf alır ve hepsini birbiri ardına
+say ve ölç işleminden geçirir: her fotoğraf, çekim tarihiyle kazı alanının bir fotoğrafı
+olur ve her birinin onaylayacağın <strong>yeni bir buluntu fişi</strong> olur.
+Seri boyunca ekran açık kalır. Çıkarsan ya da yarıda kesersen hazır olan
+fotoğraflar taslakta kalır ve <kbd>Seriye devam et</kbd> kaldığı yerden sürer.
+Sonunda gözden geçirme fişleri tek tek önüne getirir: geliş yerini, türü ve
+miktarı düzeltir ve onaylarsın.</li>
 </ol>
 <div class="schermate"><figure><img src="img/tr/05-media.webp" alt="Fotoğraf galerisi" width="640" height="1391" loading="lazy"><figcaption>Fotoğraf galerisi</figcaption></figure><figure><img src="img/tr/09-scheda.webp" alt="Coğrafi olarak etiketlenmiş bir fotoğrafın ayrıntısı" width="640" height="1391" loading="lazy"><figcaption>Bir fotoğrafın ayrıntısı: koordinatlar, yükseklik ve çekim yönü</figcaption></figure><figure class="larga"><img src="img/tr/10-scheda-esportata.webp" alt="Üretilen fotoğraf fişi" width="640" height="605" loading="lazy"><figcaption>Dışa aktarılan fiş: çekim verileri, çekim konisiyle uydu görüntüsü, haritanın ölçek çubuğu ve kuzey oku</figcaption></figure></div>
+
+<h3>🧮 Say ve ölç (Medya içinde)</h3>
+<p>Yukarıdan fotoğraflanmış bir parça tepsisi, ve onları kendi kendine sayıp
+ölçen bir uygulama. Bir <strong>buluntu</strong> fotoğrafı üzerinde yaşar:
+fotoğrafı fişinden açar ve <kbd>Say ve ölç</kbd> <span class="pro">PRO</span>
+düğmesine dokunursun.</p>
+<ol class="passi">
+<li>Önce ölçek. Uygulama fotoğraftaki <strong>metrik çubuğu</strong> kendi
+arar: bulursa kaç kare okuduğunu söyler, bir karenin kaç santimetre olduğunu
+(1, 2, 5 ya da 10 cm) sen bildirirsin ve <kbd>Öneriyi kullan</kbd>'a
+dokunursun. Bulamazsa bilinen bir uzaklığın iki ucuna elle dokunursun.
+<kbd>Kalibre etme</kbd>'yi de seçebilirsin: o zaman yalnızca sayılır ve
+uygulama ölçülerin olmadığını yazar — onları uydurmaz.</li>
+<li>Model fotoğraftaki bütün şekillerin konturunu çıkarır: birkaç on saniye
+sürebilir. Çıkan şey bir <strong>öneridir</strong>, bir sonuç değil: bir dokunuş
+bir şekli dışarıda bırakır, bir dokunuş daha onu geri alır.
+<kbd>Birleştir</kbd> ikiye ayrılmış aynı parçanın iki şeklini tek bir şekle
+indirir; <kbd>Bir alana sınırla</kbd> tepsinin çevresini parmakla çizdirir ve
+arama orada kalır; <kbd>İnce geçiş</kbd> yalnızca hiçbir şey bulunmamış yerleri
+yeniden tarar. <strong>Şüpheliler</strong> — arka plana, örtüye, gölgeye
+benzeyen şekiller — bir arada toplanır ve tek hamlede dışarıda bırakılır.</li>
+<li><kbd>Şeklin malzemesi</kbd> ile bir parçaya dokunur ve ne olduğunu
+söylersin; <kbd>Tümü için malzeme</kbd> onu hepsine birden verir, ya da yalnızca
+boş kalanlara. <kbd>Malzemeyi öner</kbd> cihazdaki modelden bunu tahmin etmesini
+ister: doğrulanacak bir öneridir, ve senin seçimin her zaman üstün gelir.</li>
+<li><kbd>İleri</kbd> metni hazır yazılmış onay sayfasını açar: sayım, ölçüler
+(sırayla büyük kenar × küçük kenar) ve dürüst bildirimler — bir şekil kendini
+ölçtürmediğinde “bunlardan N güvenilir ölçüsü yok”. Fotoğrafta bir
+<strong>etiket</strong> varsa uygulama onu okumayı dener ve sonucu her zaman
+söyler: ya “Okunan etiket: …”, ya “Fotoğrafta okunabilir metin yok”.</li>
+<li>Seçenekler yalnızca doldurulacak boş bir yer varsa görünür:
+<kbd>Sayımı miktar olarak kullan</kbd>, <kbd>Kod olarak kullan</kbd>,
+<kbd>Geliş yeri olarak kullan</kbd>. Senin yazdığının üzerine hiçbir zaman
+yazılmaz, ve notlar <strong>uzar</strong>: ikinci bir tur birincinin ardına
+eklenir, onun yerine geçmez. Metin düzenlenebilir: notlara orada okuduğun
+girer.</li>
+<li>Sonra, fotoğrafın ayrıntısında <kbd>Şekillerdeki numaralar</kbd> küçük
+numaraları gösterir ya da gizler — ve onları orada nasıl görüyorsan
+paylaşımlarda ve raporlarda da öyle çıkarlar. Bir şeklin kim olduğunu öğrenmek
+için ona dokun: “7: 4,2×2,8 cm”. Fotoğraf kalibre değilse etiket bir sayı
+vermek yerine bunu söyler.</li>
+</ol>
+<p class="nota">Ölçü, kalibre ettiğin iki noktanın
+<strong>düzleminde</strong> geçerlidir: fotoğraf tam tepeden, tepsi sensöre
+paralel olacak şekilde çekilmelidir. Bildirilen referans, iyi kadrajlanmış
+parçalarda ±2 mm'dir; dik duran ya da fotoğrafın kenarında kalan bir parça bu
+anlaşmanın dışındadır.</p>
 
 <h3>✏️ Çizimler (Medya içinde)</h3>
 <ol class="passi">
@@ -132,9 +218,10 @@ için iki parmakla çift dokunuş). Fotoğraf çizgini örtüyorsa kamera menüs
 getir: solan fotoğraftır, çizim değil. Bu seçim tabakada kalır ve PDF, DOCX,
 PNG ile <kbd>Lejantla dışa aktar</kbd> için de geçerlidir.</li>
 <li>Geri kalan her şey <kbd>Araçlar</kbd> altındadır (çubuktaki İngiliz
-anahtarı); orası altı kipin dizinidir: <kbd>Metin kutusu</kbd>, <kbd>Çizgi
+anahtarı); orası yedi kipin dizinidir: <kbd>Metin kutusu</kbd>, <kbd>Çizgi
 çıkarma</kbd> <span class="pro">PRO</span>, <kbd>Fotoğraf ölçeği</kbd>,
-<kbd>Yükseklikli nokta</kbd>, <kbd>Tarama</kbd> ve <kbd>Çizgi stili</kbd>. Aynı
+<kbd>Yükseklikli nokta</kbd>, <kbd>Tarama</kbd>, <kbd>Çizgi stili</kbd> ve
+<kbd>Sanal ölçek</kbd>. Aynı
 anda <strong>yalnızca biri</strong> açık kalır: onay işareti hangisi olduğunu
 söyler ve o açıkken parmak çizmez, o aracı yönetir — çizmeye dönmek için
 işaretli satıra yeniden dokun. Görüntü üzerinde çalışan üç satır (çizgi çıkarma,
@@ -179,6 +266,13 @@ stille çiz</kbd> sonraki çizgilerin doğrudan giydirilmiş doğmasını sağla
 <kbd>Stili kaldır</kbd> çizgiyi düz hâline döndürür. Bu bir ekran efekti
 değildir: kesikler gerçek parçalardır ve PDF, DOCX, PNG, SVG ile DXF'te de öyle
 kalır.</li>
+<li><kbd>Sanal ölçek</kbd> fotoğraflardaki aynı referansları tabakaya da
+taşır: cetvel, mira, kare, artı, kuzey oku ve iki dokunuşluk ölçüler. Metrik
+türler tabakanın bir ölçeği olmasını ister, yani <kbd>Fotoğraf ölçeği</kbd>'ni:
+bilinen bir uzaklık olmadan uygulama çizmek yerine açıklama yapar. SVG ile
+DXF'te <span class="pro">PRO</span> bu öğeler kendi katmanlarında
+<strong>vektör</strong> olarak çıkar, ve CBS'nin cetveliyle okunan ölçü
+etiketle çakışır.</li>
 <li><kbd>Lejantla dışa aktar</kbd> <span class="pro">PRO</span>: görüntü altında
 beyaz bir şeritle çıkar — metrik ölçek çubuğu (ölçek varsa), tam tepeden
 çekilmiş fotoğraflar için kuzey oku, cepheden çekilenler için “… yönünden
@@ -199,8 +293,46 @@ orada tam güçle çıkar.</li>
 <ol class="passi">
 <li>Günün katılımlarını kaydet: her kişinin adı, görevi ve saatleri.</li>
 <li>Ekipman envanterini ve kime atandıklarını tut.</li>
+<li><kbd>Buluntular</kbd> altında kazıdan çıkanların kaydı vardır; adının
+altında kayıtlı satır sayısı yazar.</li>
 </ol>
 <div class="schermate"><figure><img src="img/tr/07-ore.webp" alt="Katılım ve saatler" width="640" height="1391" loading="lazy"><figcaption>Katılım ve saatler</figcaption></figure></div>
+
+<h3>📦 Buluntular (Şantiye içinde)</h3>
+<p>Asıl an fotoğraf makinesinin anı değildir: gün sonunda kasalar önünde
+oturup, yorgun ve elleri kirli, onları birer birer kaydetmenin anıdır.
+Buradaki
+her şey o an için yapılmıştır — ve noktaları kaydetmek gibi
+<strong>ücretsizdir</strong>: kazılanı teslim etmek temel belgelemedir.</p>
+<ol class="passi">
+<li><kbd>Şantiye</kbd> → <kbd>Buluntular</kbd> → <kbd>+</kbd>. Fiş, bugünün
+tarihiyle ve <strong>en son kullanılan geliş yeriyle</strong> açılır: ikinci
+satırdan sonra kaydetmek neredeyse yalnızca dokunmaktır. Alan, o kazı alanında
+daha önce kullanılmış geliş yerlerini önerir.</li>
+<li>Alanlar gerçekten doldurulduğu sıradadır: <kbd>Geliş yeri</kbd>
+(örn. “US 102”), <kbd>Tür</kbd>, <kbd>Miktar</kbd> ve onun
+<kbd>Birim</kbd>'i (parça, adet, poşet, kasa, gram), kasanın ya da poşetin
+kodu, <kbd>Durum</kbd> (<kbd>Yıkanacak</kbd>, <kbd>Yıkandı</kbd>,
+<kbd>Etiketlendi</kbd>, <kbd>Teslim edildi</kbd>), notlar ve tarih.</li>
+<li>Önerilen türler on bir tanedir — <kbd>Seramik</kbd>, <kbd>Tuğla</kbd>,
+<kbd>Hayvan kemiği</kbd>, <kbd>İnsan kemiği</kbd>, <kbd>Metal</kbd>,
+<kbd>Cam</kbd>, <kbd>Taş aletler</kbd>, <kbd>Harç ve sıva</kbd>,
+<kbd>Ahşap</kbd>, <kbd>Örnekler</kbd>, <kbd>Diğer</kbd> — ama kendi türünü de
+yazabilirsin (“Boyalı sıva”): o sözcük her dilde olduğu gibi kalır, çünkü
+uygulama yalnızca kendi önerdiği seçenekleri çevirir.</li>
+<li>Miktar boş bırakılabilir: bir satır saymadan da “bu şeyler vardı”
+diyebilir, ve dışa aktarmalarda o hücre boş kalır, asla sıfır olmaz.</li>
+<li>Fişin fotoğrafları <kbd>Fotoğraf çek</kbd> ile çekilir,
+<kbd>Kitaplıktan</kbd> ya da <kbd>Alandan</kbd> ile alınır; sonuncusu galeride
+olup da henüz bir fişi olmayan fotoğrafları getirir. Bunlar
+<kbd>Medya</kbd>'daki fotoğrafların ta kendisidir: bir buluntuyu silmek onun
+fotoğraflarını <strong>silmez</strong>, yalnızca bağlarını koparır.</li>
+<li>Günün sayfasında <kbd>Buluntular</kbd> bölümü yalnızca o gün kayıt
+yaptıysan görünür. <kbd>Günlüğe aktar</kbd> geliş yerine göre gruplanmış,
+notları eksiksiz özet satırını önerir: onu düzeltir ve günlüğün sonuna
+eklersin. İki kez basınca iki kez yazar — günlük hiçbir zaman kendi kendini
+yeniden yazmaz.</li>
+</ol>
 
 <h3>📄 Raporlar</h3>
 <ol class="passi">
@@ -213,6 +345,13 @@ dilinden bağımsızdır: uygulamayı Türkçe kullanırken rapor Almanca
 <li>PDF oluştur ya da logo ve fotoğraflarla DOCX <span class="pro">PRO</span>,
 noktaların CSV'sini, QGIS için GeoJSON <span class="pro">PRO</span> dışa
 aktar.</li>
+<li>En altta, ücretsiz olan
+<kbd>Buluntuları dışa aktar (tüm kazı alanı)</kbd> vardır: hesap tablosu için
+<kbd>Buluntu CSV'sini dışa aktar</kbd>, ağ olmadan herhangi bir tarayıcıda
+açılan, küçük resimli bir tablo için
+<kbd>Buluntu HTML'sini dışa aktar</kbd>. Başlıklar, türler, birimler ve
+durumlar rapor için seçilen dilde çıkar; senin yazdığın ise yazdığın gibi
+kalır. Sonuç raporunda buluntuların geliş yerine göre kendi eki vardır.</li>
 <li>Raporlarda fotoğraflar açıkken <kbd>Fotoğrafların yerine fotoğraf
 fişleri</kbd> <span class="pro">PRO</span> seçeneğini kullanabilirsin: her
 fotoğraf, verileri ve haritasıyla eksiksiz bir belgeleme fişi olarak, raporun
@@ -267,12 +406,18 @@ yeniden oluşturur, iPhone ile Android arasında bile.</li>
 <tr><td>NMEA kayıtları</td><td>Dosyaları yeniden okuma ve paylaşma</td><td>Kayıt (harici anten gerekir)</td></tr>
 <tr><td>Nivelman defteri</td><td>✓</td><td>✓</td></tr>
 <tr><td>Fotoğraf fişi</td><td>—</td><td>Paylaşım ve raporlarda fişler</td></tr>
+<tr><td>Buluntular</td><td>Kayıt, CSV ve HTML</td><td>+ raporlarda ek</td></tr>
+<tr><td>Sanal ölçekler</td><td>Fotoğraflarda ve tabakalarda</td><td>+ SVG ve DXF'te vektörler</td></tr>
+<tr><td>Say ve ölç</td><td>—</td><td>Tek bir fotoğrafta ve seri olarak</td></tr>
+<tr><td>3D Ölçüm (LiDAR)</td><td>—</td><td>Tarayıcısı olan cihazlarda</td></tr>
 <tr><td>Sesli dikte</td><td>✓</td><td>✓</td></tr>
 <tr><td>Rapor dilleri</td><td>17</td><td>17</td></tr>
 </table>
 <p>Pro, kendiliğinden yenilenen aylık ya da yıllık bir aboneliktir; ya da tek
 seferlik, ömür boyu bir satın alım. Apple Kimliği ayarlarından yönetilir ve
-iptal edilir.</p>
+iptal edilir. Ücretsiz bir deneme süresi hakkın varsa Pro ekranı bunu satın
+almadan önce yazar (“7 gün ücretsiz, ardından …”): yazmıyorsa hakkın yok
+demektir — uygulama, satın alımın tutmayacağı bir denemeyi vaat etmez.</p>
 
 <h2>Sorun giderme</h2>
 
@@ -438,6 +583,88 @@ fotoğraflarda görünür; o kamera çekim anında azimutu kaydeder. Cepheden
 çekilenlerde “… yönünden görünüm” yazısı çıkar (dikey bir cephe düzlemine kuzey
 oku koymak geometrik bir yalan olurdu); kitaplıktan içe aktarılan fotoğraflarda
 ise ikisi de yoktur, çünkü çekim verileri eksiktir.</p></details>
+
+<details><summary>“Say ve ölç” fotoğrafta görünmüyor</summary>
+<p>Komut yalnızca bir <strong>buluntu</strong> fotoğrafında bulunur —
+parçaların konturunu çıkarmanın anlamlı olduğu yer orasıdır — ve fotoğrafın
+ayrıntısından açılır, yalnızca küçük resimleri gösteren fişten değil. Dokunuş
+Pro ekranını açıyorsa işlev odur: çizgi çıkarma gibi Pro'nun parçasıdır.</p></details>
+
+<details><summary>Metrik çubuk bulunamıyor</summary>
+<ul>
+<li><strong>kareli çubuklar</strong> tanınır — beyaz/siyah, sarı/siyah,
+kırmızı/beyaz — ve bloklu cetveller; renk kartları ile karesiz düz cetveller
+ilke gereği tanınmaz;</li>
+<li>çubuk, fotoğrafın uzun kenarının en az onda birini kaplamalı ve tamamen
+kadrajın içinde olmalıdır: kenardan kesilmişse okunmaz;</li>
+<li>kaç kare okuduğunu uygulama söyler, ama <strong>bir karenin kaç santimetre
+olduğunu sen söylersin</strong>: bu görüntüden çıkarılamaz, tahmin etmek ölçek
+konusunda yalan söylemek olurdu;</li>
+<li>bulamazsa bilinen bir uzaklığın iki ucuna elle dokunursun.
+<kbd>Kalibre etme</kbd> ile yalnızca sayılır ve uygulama ölçülerin olmadığını
+bildirir.</li>
+</ul></details>
+
+<details><summary>Sayım gerçek tepsiyle uyuşmuyor</summary>
+<ul>
+<li>turdan sonra gördüğün şey bir öneridir: cetveli, etiketi, keskin
+gölgeleri ve buluntu olmayan her şeyi dokunarak dışarıda bırak, ta ki sayı elle
+saydığınla çakışsın;</li>
+<li>bir parça iki parça olarak okunmuşsa iki şekle dokun ve
+<kbd>Birleştir</kbd>: tek numarası olan tek bir şekil olur;</li>
+<li>tur tepsinin dışına da bakıyorsa çevresini <kbd>Bir alana sınırla</kbd> ile
+çiz: arama orada kalır;</li>
+<li>parçalar eksikse <kbd>İnce geçiş</kbd> yalnızca hiçbir şey bulunmamış
+yerleri yeniden tarar, dışarıda bıraktıklarını geri getirmeden;</li>
+<li>notlara giren sayı, modelin önerdiği değil senin
+<strong>onayladığın</strong> sayıdır.</li>
+</ul></details>
+
+<details><summary>Etiket okunmuyor, ya da yanlış şeyi öneriyor</summary>
+<ul>
+<li>sonuç her zaman bildirilir: ya “Okunan etiket: …”, ya “Fotoğrafta okunabilir
+metin yok” — sessizlik yoktur;</li>
+<li>otomatik okuma yanılır, hele el yazısında: metin bu yüzden onaylamadan önce
+sayfada <strong>düzeltilir</strong>;</li>
+<li><kbd>Kod olarak kullan</kbd> ile <kbd>Geliş yeri olarak kullan</kbd>
+yalnızca o alanlar boşsa görünür: senin yazdığına dokunulmaz;</li>
+<li>aynı fotoğraftaki iki ayrı etiket veriyi belirsiz kılar, o zaman uygulama
+hiçbir şey önermez: okunan metni yine de görürsün, seçim sende kalır.</li>
+</ul></details>
+
+<details><summary>Seri durdu, ya da bazı fotoğraflar girmedi</summary>
+<ul>
+<li>kitaplıkta iCloud'da duran ve henüz indirilmemiş fotoğraflar yüklenmez:
+onları Fotoğraflar uygulamasında bir kez aç, sonra
+<kbd>Hataları yeniden dene</kbd>;</li>
+<li>uygulamadan çıktıysan ya da onu yarıda kestiysen hazır olan fotoğraflar
+taslakta kalır ve <kbd>Seriye devam et</kbd>, yapılmış olanı yeniden yapmadan
+kaldığı yerden sürer;</li>
+<li>içe aktarılan fotoğraflar bugünün değil <strong>çekim tarihini</strong>
+alır: onları görmüyorsan yanlış gündesin — <kbd>Tümü</kbd>'ne geç ya da kendi
+günlerine git.</li>
+</ul></details>
+
+<details><summary>Sanal cetvel gerçek cetvelle uyuşmuyor</summary>
+<p>Ölçek, kalibre ettiğin <strong>iki noktanın düzleminde</strong> geçerlidir:
+fotoğraf eğik çekilmişse, o düzlemden daha uzağa ya da daha yakına konmuş bir
+öğe uyuşamaz. Tam tepeden, düzlem sensöre paralel olacak şekilde fotoğrafla ve
+o düzlemde duran bir uzaklık üzerinde kalibre et. Bildirdiğin değer yanlışsa
+<kbd>Yeniden kalibre et</kbd>: koyulmuş bütün ölçüler kendiliğinden yeniden
+yazılır, çünkü sayı hiçbir zaman saklanmaz.</p></details>
+
+<details><summary>“3D Ölçüm” yok, ya da ölçü şaşıyor</summary>
+<ul>
+<li><strong>LiDAR</strong> tarayıcısı gerekir: onu taşımayan iPhone ve
+iPad'lerde düğme, açıklamasız sönük durmak yerine hiç yoktur;</li>
+<li>“Yüzey henüz tamamlanmadı” çıkıyorsa yeniden oluşturma bitmemiştir:
+noktalara dokunmadan önce yavaş hareket et ve birden çok açıdan bak;</li>
+<li>tam güneş ve parlak yüzeyler — mermer, karo, boyalı sıva — okumayı bozar:
+bu optik bir ölçüm olarak kalır, “LiDAR ±cm” diye bildirilir;</li>
+<li>oturum kesilirse (bir telefon çağrısı, uygulamanın bir kenara bırakılması)
+varsa röpere bağlama <strong>düşer</strong> ve uygulama bunu söyler: artık doğru
+olmayan yükseklikleri tutmaktansa bağlamayı yeniden yapmak daha iyidir.</li>
+</ul></details>
 
 <footer>
 <p>Burada olmayan bir soru ya da sorun mu var? Şuraya yaz:

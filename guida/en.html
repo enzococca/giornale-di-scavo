@@ -31,6 +31,7 @@ the excavation, reports build themselves from the pages.</p>
 <li><b>Survey</b>Capture GNSS points; check a benchmark first if you use RTK</li>
 <li><b>Photos</b>Shoot from <kbd>Media</kbd>: coordinates are attached automatically</li>
 <li><b>Drawings</b>Trace the section or plan over a photo (digital tracing sheet)</li>
+<li><b>Finds</b>With the boxes in front of you, record what came out: <kbd>Site</kbd> → <kbd>Finds</kbd></li>
 <li><b>Evening</b>From <kbd>Reports</kbd>, generate the daily report: a PDF ready to send</li>
 </ol>
 
@@ -83,6 +84,19 @@ pole tip on the nail, before you start surveying.</li>
 level: stations, backsights and foresights, elevations calculated from a
 starting benchmark, with a closure check. Levelled points enter the site with
 their elevation, just like GNSS ones.</li>
+<li>On devices with a <strong>LiDAR</strong> scanner (iPhone Pro from the 12
+on, iPad Pro) <kbd>3D Measurement</kbd> <span class="pro">PRO</span> appears:
+pan slowly until the surface has been reconstructed, then tap the two points
+you want and read off distance, horizontal distance and height difference. With
+<kbd>Anchor to benchmark</kbd> you pick a benchmark of known elevation and tap
+its point on the ground: from then on every measurement also carries the
+a.s.l. elevation of both ends. <kbd>Fix</kbd> keeps the measurement in the
+scene, <kbd>Discard measurement</kbd> throws it away,
+<kbd>Write into the diary</kbd> turns it into a text you correct before
+confirming. It is an optical measurement, and the app says so by writing
+“LiDAR ±cm”: it is there for a height difference or a length taken quickly
+on the spot, and it replaces neither the GNSS nor the level. On devices without
+the scanner the button isn't there at all.</li>
 <li>Below the panel sit the <kbd>NMEA recordings</kbd>: the raw stream from the
 external receiver <span class="pro">PRO</span> is written to file by itself —
 recording starts when you switch the antenna on and closes when you switch it
@@ -114,8 +128,86 @@ below it (site, number, date and time, coordinates, elevation, direction), a
 satellite view with a pin and the shooting cone, the map's scale bar and the
 north arrow. The map needs a network: without one, the record still comes
 out, with a larger data panel.</li>
+<li><kbd>Virtual scale</kbd> lays on the photo the references you didn't have
+in the field. First <kbd>Calibrate photo</kbd>: you tap the two ends of a
+distance you know — one division of the ruler, the side of a brick — and
+declare it in centimetres. Then you place what you need:
+<kbd>Scale bar 5 cm</kbd>, <kbd>Scale bar 10 cm</kbd> or
+<kbd>Scale bar 20 cm</kbd>, <kbd>Ranging rod 50 cm</kbd>,
+<kbd>Ranging rod 1 m</kbd> or <kbd>Ranging rod 2 m</kbd>,
+<kbd>Square 10×10 cm</kbd>, <kbd>Reference cross</kbd> and
+<kbd>North arrow</kbd>. Every element has its own rendering
+(<kbd>Flat bar</kbd>, <kbd>Real rod</kbd>, <kbd>Tick ruler</kbd>), size,
+thickness and rotation; to move one, <strong>press and hold</strong> it and
+drag — that way the pinch to zoom doesn't shift it by mistake.</li>
+<li><kbd>Add measurement</kbd> measures any distance on the photo with two
+taps. The number is never saved: if you recalibrate, all the labels rewrite
+themselves. On photos taken straight down with the app the north arrow starts
+out already oriented on the recorded azimuth, and the report says so; if you
+turn it yourself, the caption switches to “declared”.
+<kbd>Share with scale</kbd> gives you a copy of the photo with what you have
+laid on it —
+<kbd>Share photo</kbd> stays the bare original, with its EXIF.</li>
+<li><kbd>Batch process</kbd> <span class="pro">PRO</span> (the menu at the top
+of <kbd>Media</kbd>) takes a group of photos from the library and passes them
+all through count and measure, one after another: each photo becomes a site
+photo with the date it was shot, and each will have its <strong>own new finds
+record</strong> to confirm. The screen stays on for the whole batch. If you
+leave or interrupt it, the photos already done stay as drafts and
+<kbd>Resume the batch</kbd> starts again from where it was. At the end the
+review hands you the records one by one: correct provenance, class and
+quantity, and confirm.</li>
 </ol>
 <div class="schermate"><figure><img src="img/en/05-media.webp" alt="The photo gallery" width="640" height="1391" loading="lazy"><figcaption>The photo gallery</figcaption></figure><figure><img src="img/en/09-scheda.webp" alt="The detail view of a geotagged photo" width="640" height="1391" loading="lazy"><figcaption>A photo's detail view: coordinates, elevation and shooting direction</figcaption></figure><figure class="larga"><img src="img/en/10-scheda-esportata.webp" alt="The generated photo record" width="640" height="605" loading="lazy"><figcaption>The exported record: the shot's data, the satellite view with the shooting cone, the map's scale bar and the north arrow</figcaption></figure></div>
+
+<h3>🧮 Count and measure (in Media)</h3>
+<p>The tray of sherds photographed from above, and the app counting and
+measuring them by itself. It lives on the photo of a <strong>find</strong>: you
+open it from its record and tap <kbd>Count and measure</kbd>
+<span class="pro">PRO</span>.</p>
+<ol class="passi">
+<li>The scale first. The app looks for the <strong>scale bar</strong> in the
+photo by itself: if it finds one it tells you how many squares it read, you
+declare how much one square measures (1, 2, 5 or 10 cm) and tap
+<kbd>Use the proposal</kbd>. If it doesn't find one, you tap the two ends of a
+known distance by hand. You can also choose <kbd>Do not calibrate</kbd>: then
+it only counts, and the app writes that the measurements are not there — it
+doesn't invent them.</li>
+<li>The model outlines every shape in the photo: that can take a few tens of
+seconds. What appears is a <strong>proposal</strong>, not a result: one tap
+excludes a shape, another brings it back. <kbd>Merge</kbd> fuses into one the
+shapes that are the same piece broken in two; <kbd>Limit to an area</kbd> lets
+you draw the tray's fence with your finger, and the search stays inside it;
+<kbd>Fine pass</kbd> goes over again only where it had found nothing. The
+<strong>suspects</strong> — the shapes that look like background, the sheet,
+the shadow — are grouped and excluded in one go.</li>
+<li>With <kbd>Material of the shape</kbd> you tap a piece and say what it is;
+<kbd>Material for all</kbd> gives it to all of them at once, or only to those
+left without. <kbd>Propose the material</kbd> asks the model on the device to
+guess it: it is a proposal to be checked, and your choice always wins.</li>
+<li><kbd>Next</kbd> opens the confirmation sheet with the text already written:
+the count, the measurements (longer side × shorter side, in that order), and
+the honest declarations — “of which N without a reliable measurement” when a
+shape won't let itself be measured. If there is a <strong>label</strong> in the
+photo, the app tries to read it and always tells you: either
+“Label read: …”, or “No readable text in the photo”.</li>
+<li>The switches only appear where there is an empty slot to fill:
+<kbd>Use the count as quantity</kbd>, <kbd>Use as code</kbd>,
+<kbd>Use as provenance</kbd>. What you have already written is never
+overwritten, and the notes <strong>grow</strong>: a second round goes after the
+first, not in its place. The text can be edited: what goes into the notes is
+what you read there.</li>
+<li>Afterwards, in the photo's detail view, <kbd>Numbers on shapes</kbd> shows
+or hides the little numbers — and the way you see them there is the way they
+come out in shares and in reports too. Tap a shape to know which one it is:
+“7: 4.2×2.8 cm”. If the photo is not calibrated the label says so,
+instead of giving a number.</li>
+</ol>
+<p class="nota">The measurement holds in the <strong>plane</strong> of the two
+points you calibrated: the photo must be taken straight down, with the tray
+parallel to the sensor. The declared reference is ±2 mm on well-framed pieces;
+a fragment standing on end or on the edge of the photo is outside that
+bargain.</p>
 
 <h3>✏️ Drawings (in Media)</h3>
 <ol class="passi">
@@ -129,9 +221,10 @@ from the camera menu and take it wherever you need, from 5% to 100%: it fades
 the photo, not the drawing. The choice stays with the sheet and holds in PDF,
 DOCX, PNG and <kbd>Export with legend</kbd> too.</li>
 <li>Everything else sits under <kbd>Tools</kbd> (the spanner in the toolbar),
-which is the index of the six modes: <kbd>Text box</kbd>, <kbd>Trace</kbd>
-<span class="pro">PRO</span>, <kbd>Photo scale</kbd>, <kbd>Point with
-elevation</kbd>, <kbd>Hatch</kbd> and <kbd>Line style</kbd>. Only
+which is the index of the seven modes: <kbd>Text box</kbd>, <kbd>Trace</kbd>
+<span class="pro">PRO</span>, <kbd>Photo scale</kbd>,
+<kbd>Point with elevation</kbd>, <kbd>Hatch</kbd>, <kbd>Line style</kbd> and
+<kbd>Virtual scale</kbd>. Only
 <strong>one</strong> is held at a time: the tick says which, and while it is on
 your finger doesn't draw but drives that tool — tap the ticked entry again to
 go back to drawing. The three entries that work on the image (trace, scale,
@@ -176,6 +269,13 @@ thickness. <kbd>Draw with this style</kbd> makes the strokes that follow come
 out dressed already; <kbd>Remove style</kbd> puts the line back to solid. It is
 not a screen effect: the dashes are real segments, and they stay that way in
 PDF, DOCX, PNG, SVG and DXF.</li>
+<li>The <kbd>Virtual scale</kbd> brings onto the sheet the same references as
+the photos have: scale bar, ranging rod, square, cross, north arrow and
+measurements with two taps. The metric types ask the sheet to have a scale,
+that is the <kbd>Photo scale</kbd>: with no known distance the app explains
+instead of drawing. In SVG and DXF <span class="pro">PRO</span> these elements
+come out as <strong>vectors</strong>, on their own layer, and the measurement
+read with the GIS ruler matches the label.</li>
 <li><kbd>Export with legend</kbd> <span class="pro">PRO</span>: the image
 comes out with a white band underneath — a metric scale bar (if the scale is
 set), a north arrow for photos taken straight down, “viewed from” for frontal
@@ -197,8 +297,48 @@ report.</li>
 <ol class="passi">
 <li>Record the day's attendance: each person's name, role and hours.</li>
 <li>Keep the equipment inventory and who each item is assigned to.</li>
+<li>Under <kbd>Finds</kbd> sits the register of what comes out of the
+excavation, with the number of rows already recorded written under the
+name.</li>
 </ol>
 <div class="schermate"><figure><img src="img/en/07-ore.webp" alt="Crew and hours" width="640" height="1391" loading="lazy"><figcaption>Crew and hours</figcaption></figure></div>
+
+<h3>📦 Finds (in Site)</h3>
+<p>The real moment isn't the camera: it is sitting down at the end of the day
+with the boxes in front of you and working through them one after another,
+tired and with dirty hands. Everything here is made for that moment — and it is
+<strong>free</strong>, like recording points: handing over what you have dug is
+basic documentation.</p>
+<ol class="passi">
+<li><kbd>Site</kbd> → <kbd>Finds</kbd> → <kbd>+</kbd>. The record opens with
+today's date already in it and with the <strong>last provenance used</strong>:
+from the second row on, recording is almost only tapping. The field suggests
+the provenances already used on that site.</li>
+<li>The fields are in the order you really fill them in:
+<kbd>Provenance</kbd> (e.g. “SU 102”), <kbd>Class</kbd>, <kbd>Quantity</kbd>
+with its <kbd>Unit</kbd> (fragments, pieces, bags, boxes, grams), the code of
+the box or the bag, <kbd>Status</kbd> (<kbd>To be washed</kbd>,
+<kbd>Washed</kbd>, <kbd>Marked</kbd>, <kbd>Delivered</kbd>), notes and
+date.</li>
+<li>Eleven classes are offered — <kbd>Pottery</kbd>, <kbd>Brick</kbd>,
+<kbd>Animal bone</kbd>, <kbd>Human bone</kbd>, <kbd>Metal</kbd>,
+<kbd>Glass</kbd>, <kbd>Lithics</kbd>, <kbd>Mortar and plaster</kbd>,
+<kbd>Wood</kbd>, <kbd>Samples</kbd>, <kbd>Other</kbd> — but you can write one
+of your own (“Painted plaster”): it will stay that word in every language,
+because the app only translates the entries it offers itself.</li>
+<li>The quantity can be left empty: a row can say “this stuff was there”
+without counting it, and in the exports that cell stays empty, never zero.</li>
+<li>A record's photos are taken with <kbd>Take Photo</kbd>, picked with
+<kbd>From library</kbd> or with <kbd>From the site</kbd>, which fishes among
+the photos already in the gallery that don't have a record yet. They are the
+same photos as in <kbd>Media</kbd>: deleting a find does <strong>not</strong>
+delete its photos, which only lose the link.</li>
+<li>On the day's page the <kbd>Finds</kbd> section appears only if you recorded
+some that day. <kbd>Write into the diary</kbd> offers the summary line, grouped
+by provenance and with the notes in full: you correct it and add it to the end
+of the diary. Pressed twice it writes twice — the diary never rewrites
+itself.</li>
+</ol>
 
 <h3>📄 Reports</h3>
 <ol class="passi">
@@ -211,6 +351,12 @@ English.</li>
 <li>Generate the PDF, or export DOCX with your logo and photos
 <span class="pro">PRO</span>, CSV of the points, GeoJSON for QGIS
 <span class="pro">PRO</span>.</li>
+<li>At the bottom sits <kbd>Finds export (whole site)</kbd>, free:
+<kbd>Export Finds CSV</kbd> for the spreadsheet, and
+<kbd>Export Finds HTML</kbd> for a table with thumbnails that opens in any
+browser with no network. Headings, classes, units and statuses come out in the
+language chosen for the report; what you wrote yourself stays as you wrote it.
+In the final report the finds have their own appendix, by provenance.</li>
 <li>With photos in reports switched on, you can choose <kbd>Photo records
 instead of photos</kbd> <span class="pro">PRO</span>: every photo enters the
 PDF and DOCX as a full documentation record with data and map, in the
@@ -265,12 +411,18 @@ it and is <strong>irreversible</strong>: export a ZIP first if in doubt.</p>
 <tr><td>NMEA recordings</td><td>Re-reading and sharing the files</td><td>The recording (needs the external antenna)</td></tr>
 <tr><td>Level books</td><td>✓</td><td>✓</td></tr>
 <tr><td>Photo record</td><td>—</td><td>Sharing and records in reports</td></tr>
+<tr><td>Finds</td><td>Register, CSV and HTML</td><td>+ appendix in the reports</td></tr>
+<tr><td>Virtual scales</td><td>On photos and on drawing sheets</td><td>+ vectors in SVG and DXF</td></tr>
+<tr><td>Count and measure</td><td>—</td><td>On one photo and in batches</td></tr>
+<tr><td>3D Measurement (LiDAR)</td><td>—</td><td>On devices with the scanner</td></tr>
 <tr><td>Voice dictation</td><td>✓</td><td>✓</td></tr>
 <tr><td>Report languages</td><td>17</td><td>17</td></tr>
 </table>
 <p>Pro is a monthly or yearly auto-renewing subscription, or a one-time
 lifetime purchase. Manage or cancel it any time in your Apple Account
-settings.</p>
+settings. When a free trial is due to you, the Pro screen writes it before the
+purchase (“7 days free, then …”): if it isn't written there, it isn't due to
+you — the app doesn't promise a trial that the purchase then won't honour.</p>
 
 <h2>Troubleshooting</h2>
 
@@ -438,6 +590,89 @@ app's camera</strong>, which records the azimuth at the moment of the shot.
 Frontal photos get the “viewed from …” caption instead (a north arrow on the
 plane of a front elevation would be a geometric lie); photos imported from
 the library get neither, because the shooting data is missing.</p></details>
+
+<details><summary>“Count and measure” doesn't appear on the photo</summary>
+<p>The command lives only on the photos of a <strong>find</strong> — that is
+where outlining fragments makes sense — and it opens from the photo's detail
+view, not from the record, which only shows the thumbnails. If the tap opens
+the Pro screen, that is the feature: it is part of Pro, like tracing.</p></details>
+
+<details><summary>The scale bar isn't found</summary>
+<ul>
+<li>what is recognised are the <strong>checkered bars</strong> — black/white,
+black/yellow, red/white — and block rulers; colour charts and plain rulers,
+with no squares, are not recognised on principle;</li>
+<li>the bar must take up at least a tenth of the photo's long side and be
+wholly inside the frame: cut off by the edge, it can't be read;</li>
+<li>how many squares it read is for the app to say, but <strong>how much one
+square measures is for you to say</strong>: it can't be deduced from the image,
+and guessing it would mean lying about the scale;</li>
+<li>if it doesn't find one, you tap the two ends of a known distance by hand.
+With <kbd>Do not calibrate</kbd> it only counts, and the app declares that the
+measurements are not there.</li>
+</ul></details>
+
+<details><summary>The count doesn't match the real tray</summary>
+<ul>
+<li>what you see after the pass is a proposal: tap to exclude the ruler, the
+label, the hard shadows and everything that isn't a find, until the number
+matches the one you counted by hand;</li>
+<li>if a fragment was read as two pieces, tap the two shapes and
+<kbd>Merge</kbd>: it becomes one single shape, with one single number;</li>
+<li>if the pass looks outside the tray as well, draw the fence with
+<kbd>Limit to an area</kbd>: the search stays inside it;</li>
+<li>if pieces are missing, <kbd>Fine pass</kbd> goes over again only where it
+had found nothing, without bringing back what you had excluded;</li>
+<li>the number that ends up in the notes is the one you
+<strong>confirmed</strong>, not the one the model had proposed.</li>
+</ul></details>
+
+<details><summary>The label isn't read, or it proposes the wrong thing</summary>
+<ul>
+<li>the outcome is always declared: either “Label read: …”, or “No readable
+text in the photo” — silence isn't an option;</li>
+<li>automatic reading gets things wrong, above all on handwriting: that is why
+the sheet's text is <strong>corrected</strong> before you confirm;</li>
+<li><kbd>Use as code</kbd> and <kbd>Use as provenance</kbd> appear only if
+those fields are empty: what you have already written is not touched;</li>
+<li>two different labels in the same photo make the datum ambiguous, and then
+the app proposes nothing: you still see the text it read, the choice stays
+yours.</li>
+</ul></details>
+
+<details><summary>The batch stopped, or some photos didn't come in</summary>
+<ul>
+<li>library photos that are in iCloud and not yet downloaded won't load: open
+them once in the Photos app, then <kbd>Retry the errors</kbd>;</li>
+<li>if you left the app or interrupted it, the photos already done stay as
+drafts and <kbd>Resume the batch</kbd> starts again from where it was, without
+redoing what was done;</li>
+<li>imported photos take the <strong>date they were shot</strong>, not today's:
+if you can't see them, you are on the wrong day — switch to <kbd>All</kbd> or
+go to their day.</li>
+</ul></details>
+
+<details><summary>The virtual scale bar doesn't match the real ruler</summary>
+<p>The scale holds in the <strong>plane of the two points</strong> you
+calibrated: if the photo is taken at an angle, an element laid further away or
+nearer than that plane cannot match. Shoot straight down, with the plane
+parallel to the sensor, and calibrate on a distance that lies in that plane. If
+the value you declared was wrong, <kbd>Recalibrate</kbd>: every measurement
+already laid rewrites itself, because the number is never saved.</p></details>
+
+<details><summary>“3D Measurement” isn't there, or the measurement is off</summary>
+<ul>
+<li>the <strong>LiDAR</strong> scanner is needed: on the iPhones and iPads that
+don't have one the button doesn't exist at all, instead of sitting there
+greyed out with no explanation;</li>
+<li>if “Surface not yet complete” appears, the reconstruction isn't finished:
+move slowly and frame it from several angles before tapping the points;</li>
+<li>full sun and shiny surfaces — marble, tiles, painted plaster — degrade the
+reading: it stays an optical measurement, declared “LiDAR ±cm”;</li>
+<li>if the session is interrupted (a phone call, the app put aside) any anchor
+to a benchmark <strong>lapses</strong>, and the app says so: better to redo it
+than to keep elevations that are no longer true.</li>
+</ul></details>
 
 <footer>
 <p>Questions not covered here? Write to
