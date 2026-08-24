@@ -31,6 +31,7 @@ scavo, i report si generano da soli a partire dalle pagine.</p>
 <li><b>Rilievo</b>Acquisisci i punti GNSS; verifica un caposaldo se usi l'RTK</li>
 <li><b>Foto</b>Scatta dai <kbd>Media</kbd>: le coordinate si agganciano da sole</li>
 <li><b>Disegni</b>Ricalca la sezione o la pianta su una foto («lucido»)</li>
+<li><b>Materiali</b>Con le cassette davanti, registra quello che è uscito: <kbd>Cantiere</kbd> → <kbd>Materiali</kbd></li>
 <li><b>Sera</b>Dal tab <kbd>Report</kbd> genera il giornaliero: PDF pronto da inviare</li>
 </ol>
 
@@ -83,6 +84,17 @@ il puntale sul chiodo, prima di cominciare a rilevare.</li>
 livello ottico: stazioni, letture indietro e avanti, quote calcolate da un
 caposaldo di partenza, con il controllo di chiusura. I punti livellati entrano
 nel sito con la loro quota, come quelli GNSS.</li>
+<li>Sui dispositivi con scanner <strong>LiDAR</strong> (iPhone Pro dal 12 in
+su, iPad Pro) compare <kbd>Misura 3D</kbd> <span class="pro">PRO</span>:
+inquadra lentamente finché la superficie si ricostruisce, poi tocca i due punti
+da misurare e leggi distanza, distanza orizzontale e dislivello. Con
+<kbd>Ancora a caposaldo</kbd> scegli un caposaldo di quota nota e tocchi il suo
+punto sul terreno: da lì in poi ogni misura porta anche la quota s.l.m. dei due
+estremi. <kbd>Fissa</kbd> tiene la misura nella scena, <kbd>Scarta</kbd> la
+butta, <kbd>Riporta nel diario</kbd> ne fa un testo che correggi prima di
+confermare. È una misura ottica, e l'app lo dichiara scrivendo «LiDAR ±cm»:
+serve per un dislivello o una lunghezza in traccia, non sostituisce il GNSS né
+il livello. Sui dispositivi senza scanner il pulsante non c'è affatto.</li>
 <li>Sotto il pannello ci sono le <kbd>Registrazioni NMEA</kbd>: il flusso grezzo
 del ricevitore esterno <span class="pro">PRO</span> finisce su file da sé — la
 registrazione parte quando accendi l'antenna e si chiude quando la spegni, senza
@@ -112,8 +124,79 @@ di scatto (sito, numero, data e ora, coordinate, quota, direzione), una vista
 satellitare con il segnaposto e il cono di ripresa, la barra della scala della
 mappa e la freccia del nord. La mappa richiede la rete: senza, la scheda esce
 comunque, con il pannello dati allargato.</li>
+<li><kbd>Scala virtuale</kbd> posa sulla foto i riferimenti che sul campo non
+avevi. Prima <kbd>Calibra la foto</kbd>: tocchi i due estremi di una distanza
+che conosci — una tacca del righello, il lato di un mattone — e la dichiari in
+centimetri. Poi metti quello che serve: <kbd>Metrino 5 cm</kbd>,
+<kbd>Metrino 10 cm</kbd> o <kbd>Metrino 20 cm</kbd>, <kbd>Palina 50 cm</kbd>,
+<kbd>Palina 1 m</kbd> o <kbd>Palina 2 m</kbd>, <kbd>Quadrato 10×10 cm</kbd>,
+<kbd>Crocetta di riferimento</kbd> e <kbd>Freccia del nord</kbd>. Ogni elemento ha la sua resa (<kbd>Barra
+piatta</kbd>, <kbd>Asta reale</kbd>, <kbd>Righello a tacche</kbd>), grandezza,
+spessore e rotazione; per spostarne uno <strong>tienilo premuto</strong> e
+trascinalo — così il pizzico per zoomare non lo sposta per sbaglio.</li>
+<li><kbd>Aggiungi misura</kbd> misura una distanza qualunque sulla foto con due
+tocchi. Il numero non viene mai salvato: se ricalibri, tutte le etichette si
+riscrivono da sole. Sulle foto scattate a piombo dall'app la freccia del nord
+nasce già orientata sull'azimut registrato, e il report lo dichiara; se la ruoti
+tu, la dicitura passa a «dichiarato». <kbd>Condividi con scala</kbd> esce una
+copia della foto con sopra quello che hai posato — <kbd>Condividi foto</kbd>
+resta l'originale nudo, col suo EXIF.</li>
+<li><kbd>Elabora in serie</kbd> <span class="pro">PRO</span> (menu in alto nei
+<kbd>Media</kbd>) prende un gruppo di foto dalla libreria e le passa tutte al
+conta e misura, una dopo l'altra: ogni foto diventa una foto del sito con la
+data dello scatto, e ognuna avrà la sua <strong>scheda materiale nuova</strong>
+da confermare. Lo schermo resta acceso per tutta la serie. Se esci o la
+interrompi, le foto già pronte restano in bozza e <kbd>Riprendi la serie</kbd>
+riparte da dove era. Alla fine la revisione ti passa le schede una per una:
+correggi provenienza, classe e quantità, e confermi.</li>
 </ol>
 <div class="schermate"><figure><img src="img/it/05-media.webp" alt="La galleria delle foto" width="640" height="1391" loading="lazy"><figcaption>La galleria delle foto</figcaption></figure><figure><img src="img/it/09-scheda.webp" alt="Il dettaglio di una foto georeferenziata" width="640" height="1391" loading="lazy"><figcaption>Il dettaglio di una foto: coordinate, quota e direzione di ripresa</figcaption></figure><figure class="larga"><img src="img/it/10-scheda-esportata.webp" alt="La scheda fotografica generata" width="640" height="605" loading="lazy"><figcaption>La scheda esportata: i dati di scatto, la vista satellitare con il cono di ripresa, la scala della mappa e la freccia del nord</figcaption></figure></div>
+
+<h3>🧮 Conta e misura (nei Media)</h3>
+<p>Il vassoio di frammenti fotografato dall'alto, e l'app che li conta e li
+misura da sola. Vive sulla foto di un <strong>materiale</strong>: la apri dalla
+sua scheda e tocchi <kbd>Conta e misura</kbd> <span class="pro">PRO</span>.</p>
+<ol class="passi">
+<li>Prima la scala. L'app cerca da sé la <strong>stecca metrica</strong> nella
+foto: se la trova ti dice quante caselle ha letto, tu dichiari quanto misura
+una casella (1, 2, 5 o 10 cm) e tocchi <kbd>Usa la proposta</kbd>. Se non la
+trova, tocchi a mano i due estremi di una distanza nota. Puoi anche scegliere
+<kbd>Non calibrare</kbd>: allora si conta soltanto, e l'app scrive che le
+misure non ci sono — non le inventa.</li>
+<li>Il modello scontorna tutte le forme della foto: può volerci qualche decina
+di secondi. Quello che compare è una <strong>proposta</strong>, non un
+risultato: un tocco esclude una forma, un altro la riprende.
+<kbd>Unisci</kbd> fonde in una sola le forme che sono lo stesso pezzo spezzato
+in due; <kbd>Limita a un'area</kbd> ti fa disegnare col dito il recinto del
+vassoio, e la ricerca resta lì dentro; <kbd>Passata fine</kbd> ripassa solo
+dove non aveva trovato niente. I <strong>sospetti</strong> — le forme che
+sembrano sfondo, il telo, l'ombra — si raggruppano e si escludono in un colpo
+solo.</li>
+<li>Con <kbd>Materiale della forma</kbd> tocchi un pezzo e dici cos'è;
+<kbd>Materiale per tutte</kbd> lo dà a tutte insieme, o solo a quelle rimaste
+senza. <kbd>Proponi il materiale</kbd> chiede al modello sul dispositivo di
+indovinarlo: è una proposta da verificare, e la tua scelta vince sempre.</li>
+<li><kbd>Avanti</kbd> apre il foglio di conferma con il testo già scritto:
+il conteggio, le misure (lato maggiore × lato minore, in ordine), e le
+dichiarazioni oneste — «di cui N senza misura attendibile» quando una forma
+non si lascia misurare. Se nella foto c'è un <strong>cartellino</strong>, l'app
+prova a leggerlo e te lo dice sempre: o «Cartellino letto: …», o «Nessun testo
+leggibile nella foto».</li>
+<li>Gli interruttori compaiono solo dove c'è un posto vuoto da riempire:
+<kbd>Usa il conteggio come quantità</kbd>, <kbd>Usa come sigla</kbd>,
+<kbd>Usa come provenienza</kbd>. Quello che hai già scritto tu non viene mai
+sovrascritto, e le note si <strong>allungano</strong>: un secondo giro si mette
+in coda al primo, non al suo posto. Il testo è modificabile: nelle note entra
+quello che leggi lì.</li>
+<li>Dopo, nel dettaglio della foto, <kbd>Numeri sulle forme</kbd> mostra o
+nasconde i numerini — e come li vedi lì escono anche nelle condivisioni e nei
+report. Tocca una forma per sapere chi è: «n. 7 — 4,2 × 2,8 cm». Se la foto non
+è calibrata l'etichetta lo dice, invece di dare un numero.</li>
+</ol>
+<p class="nota">La misura vale nel <strong>piano</strong> dei due punti che hai
+calibrato: la foto va scattata a piombo, col vassoio parallelo al sensore. Il
+riferimento dichiarato è ±2 mm sui pezzi ben inquadrati; un frammento in
+piedi o sul bordo della foto è fuori da quel patto.</p>
 
 <h3>✏️ Disegni (nei Media)</h3>
 <ol class="passi">
@@ -127,9 +210,10 @@ tornare a 1×). Se la foto ti copre il tratto, dal menu della fotocamera scegli
 foto, non il disegno. La scelta resta sulla tavola e vale anche in PDF, DOCX,
 PNG e <kbd>Esporta con legenda</kbd>.</li>
 <li>Tutto il resto sta sotto <kbd>Strumenti</kbd> (la chiave a forcella nella
-barra), che è l'indice delle sei modalità: <kbd>Casella di testo</kbd>,
+barra), che è l'indice delle sette modalità: <kbd>Casella di testo</kbd>,
 <kbd>Ricalco</kbd> <span class="pro">PRO</span>, <kbd>Scala della foto</kbd>,
-<kbd>Punto quotato</kbd>, <kbd>Retino</kbd> e <kbd>Stile del tratto</kbd>. Se ne
+<kbd>Punto quotato</kbd>, <kbd>Retino</kbd>, <kbd>Stile del tratto</kbd> e
+<kbd>Scala virtuale</kbd>. Se ne
 tiene <strong>una sola</strong> alla volta: la spunta dice quale, e finché è
 accesa il dito non disegna ma comanda quello strumento — per tornare a disegnare
 tocca di nuovo la voce spuntata. Le tre voci che lavorano sull'immagine (ricalco,
@@ -174,6 +258,13 @@ la tocchi e scegli fra <kbd>Continua</kbd>, <kbd>Tratteggiata</kbd>,
 <kbd>Disegna con questo stile</kbd> fa nascere già vestiti i tratti successivi;
 <kbd>Rimuovi veste</kbd> riporta la linea piena. Non è un effetto dello schermo:
 i trattini sono segmenti veri, e restano tali in PDF, DOCX, PNG, SVG e DXF.</li>
+<li>La <kbd>Scala virtuale</kbd> porta sulla tavola gli stessi riferimenti
+delle foto: metrino, palina, quadrato, crocetta, freccia del nord e misure a
+due tocchi. I tipi metrici chiedono che la tavola abbia una scala, cioè la
+<kbd>Scala della foto</kbd>: senza una distanza nota l'app spiega invece di
+disegnare. In SVG e DXF <span class="pro">PRO</span> questi elementi escono
+come <strong>vettori</strong>, sul loro layer, e la misura letta col righello
+del GIS combacia con l'etichetta.</li>
 <li><kbd>Esporta con legenda</kbd> <span class="pro">PRO</span>: l'immagine
 esce con una fascia bianca sotto — barra metrica (se la scala c'è), freccia
 del nord per le foto scattate a piombo, «vista da» per le frontali.</li>
@@ -193,8 +284,47 @@ report.</li>
 <ol class="passi">
 <li>Registra le presenze del giorno: nome, mansione e ore di ciascuno.</li>
 <li>Tieni l'inventario delle attrezzature e a chi sono assegnate.</li>
+<li>Sotto <kbd>Materiali</kbd> c'è il registro di quello che esce dallo scavo,
+col numero delle righe già registrate scritto sotto il nome.</li>
 </ol>
 <div class="schermate"><figure><img src="img/it/07-ore.webp" alt="Presenze e ore" width="640" height="1391" loading="lazy"><figcaption>Presenze e ore</figcaption></figure></div>
+
+<h3>📦 Materiali (nel Cantiere)</h3>
+<p>Il momento vero non è la fotocamera: è sedersi a fine giornata con le
+cassette davanti e batterle una dopo l'altra, stanchi e con le mani sporche.
+Tutto qui è fatto per quel momento — ed è <strong>gratis</strong>, come
+registrare i punti: consegnare quello che si è scavato è documentazione di
+base.</p>
+<ol class="passi">
+<li><kbd>Cantiere</kbd> → <kbd>Materiali</kbd> → <kbd>+</kbd>. La scheda si apre
+già con la data di oggi e con l'<strong>ultima provenienza usata</strong>: dalla
+seconda riga in poi registrare è quasi solo toccare. Il campo propone le
+provenienze già usate su quel sito.</li>
+<li>I campi sono nell'ordine in cui si compila davvero: <kbd>Provenienza</kbd>
+(es. «US 102»), <kbd>Classe</kbd>, <kbd>Quantità</kbd> con la sua
+<kbd>Unità</kbd> (frammenti, pezzi, sacchetti, cassette, grammi),
+la sigla della cassetta o del sacchetto, <kbd>Stato</kbd>
+(<kbd>Da lavare</kbd>, <kbd>Lavato</kbd>, <kbd>Siglato</kbd>,
+<kbd>Consegnato</kbd>), note e data.</li>
+<li>Le classi proposte sono undici — <kbd>Ceramica</kbd>, <kbd>Laterizi</kbd>,
+<kbd>Ossa animali</kbd>, <kbd>Ossa umane</kbd>, <kbd>Metallo</kbd>,
+<kbd>Vetro</kbd>, <kbd>Industria litica</kbd>, <kbd>Malta e intonaco</kbd>,
+<kbd>Legno</kbd>, <kbd>Campioni</kbd>, <kbd>Altro</kbd> — ma puoi scriverne una
+tua («Intonaco dipinto»): resterà quella parola in ogni lingua, perché l'app
+traduce solo le voci che propone lei.</li>
+<li>La quantità si può lasciare vuota: una riga può dire «c'era questa roba»
+senza contarla, e nelle esportazioni quella cella resta vuota, mai zero.</li>
+<li>Le foto della scheda si fanno con <kbd>Scatta</kbd>, si prendono con
+<kbd>Dalla libreria</kbd> oppure con <kbd>Dal sito</kbd>, che pesca fra le foto
+già in galleria che non hanno ancora una scheda. Sono le stesse foto dei
+<kbd>Media</kbd>: cancellare un materiale <strong>non</strong> cancella le sue
+foto, che perdono solo il legame.</li>
+<li>Nella pagina della giornata la sezione <kbd>Materiali</kbd> compare solo se
+quel giorno ne hai registrati. <kbd>Riporta nel diario</kbd> propone la riga
+riassuntiva, raggruppata per provenienza e con le note per intero: la correggi
+e la aggiungi in coda al diario. Premuto due volte scrive due volte — il diario
+non si riscrive mai da solo.</li>
+</ol>
 
 <h3>📄 Report</h3>
 <ol class="passi">
@@ -206,6 +336,13 @@ indipendente dalla lingua dell'app: la relazione può uscire in tedesco anche se
 l'app la usi in italiano.</li>
 <li>Genera il PDF, oppure esporta DOCX con logo e foto <span class="pro">PRO</span>,
 CSV dei punti, GeoJSON per QGIS <span class="pro">PRO</span>.</li>
+<li>In fondo c'è <kbd>Export materiali (tutto il sito)</kbd>, gratuito:
+<kbd>Esporta CSV materiali</kbd> per il foglio di calcolo, e
+<kbd>Esporta HTML materiali</kbd> per una tabella con le miniature che si apre
+in qualunque browser senza rete. Intestazioni, classi, unità e stati escono
+nella lingua scelta per il report; quello che hai scritto tu resta come l'hai
+scritto. Nel report di fine lavoro i materiali hanno la loro appendice, per
+provenienza.</li>
 <li>Con le foto nei report attive puoi scegliere <kbd>Schede fotografiche al
 posto delle foto</kbd> <span class="pro">PRO</span>: ogni foto entra nel PDF e
 nel DOCX come scheda di documentazione completa di dati e mappa, nella lingua
@@ -259,11 +396,18 @@ contenuto ed è <strong>irreversibile</strong>: esporta prima uno ZIP se hai dub
 <tr><td>Registrazioni NMEA</td><td>Rilettura e condivisione dei file</td><td>La registrazione (serve l'antenna esterna)</td></tr>
 <tr><td>Libretto livellazioni</td><td>✓</td><td>✓</td></tr>
 <tr><td>Scheda fotografica</td><td>—</td><td>Condivisione e schede nei report</td></tr>
+<tr><td>Materiali</td><td>Registro, CSV e HTML</td><td>+ appendice nei report</td></tr>
+<tr><td>Scale virtuali</td><td>Sulle foto e sulle tavole</td><td>+ vettori in SVG e DXF</td></tr>
+<tr><td>Conta e misura</td><td>—</td><td>Su una foto e in serie</td></tr>
+<tr><td>Misura 3D (LiDAR)</td><td>—</td><td>Sui dispositivi con scanner</td></tr>
 <tr><td>Dettatura vocale</td><td>✓</td><td>✓</td></tr>
 <tr><td>Lingue dei report</td><td>17</td><td>17</td></tr>
 </table>
 <p>Pro è un abbonamento mensile o annuale con rinnovo automatico, oppure un
-acquisto unico a vita. Si gestisce e si disdice dalle impostazioni dell'ID Apple.</p>
+acquisto unico a vita. Si gestisce e si disdice dalle impostazioni dell'ID Apple.
+Quando ti spetta un periodo di prova gratuita, la schermata Pro te lo scrive
+prima dell'acquisto («7 giorni gratis, poi …»): se non c'è scritto, non ti
+spetta — l'app non promette una prova che poi l'acquisto non mantiene.</p>
 
 <h2>Risoluzione dei problemi</h2>
 
@@ -424,6 +568,89 @@ fotocamera dell'app</strong>, che registra l'azimut nello scatto. Per le foto
 frontali esce la scritta «vista da …» (una freccia del nord sul piano di un
 prospetto sarebbe una bugia geometrica); per le foto importate dal rullino non
 c'è nessuna delle due, perché mancano i dati di ripresa.</p></details>
+
+<details><summary>«Conta e misura» non compare sulla foto</summary>
+<p>Il comando vive solo sulle foto di un <strong>materiale</strong> — è lì che
+ha senso scontornare frammenti — e si apre dal dettaglio della foto, non dalla
+scheda, che mostra soltanto le miniature. Se il tocco apre la schermata Pro, la
+funzione è quella: fa parte di Pro, come il ricalco.</p></details>
+
+<details><summary>La stecca metrica non viene trovata</summary>
+<ul>
+<li>si riconoscono le <strong>stecche a caselle</strong> — bianco/nere,
+giallo/nere, rosso/bianche — e i righelli a blocchi; le schede colori e i
+righelli lisci, senza caselle, non si riconoscono per principio;</li>
+<li>la stecca deve occupare almeno un decimo del lato lungo della foto ed
+essere tutta dentro l'inquadratura: tagliata dal bordo, non si legge;</li>
+<li>quante caselle ha letto lo dice l'app, ma <strong>quanto misura una
+casella lo dici tu</strong>: dall'immagine non si deduce, e indovinarlo
+vorrebbe dire mentire sulla scala;</li>
+<li>se non la trova, tocchi a mano i due estremi di una distanza nota. Con
+<kbd>Non calibrare</kbd> si conta soltanto, e l'app dichiara che le misure non
+ci sono.</li>
+</ul></details>
+
+<details><summary>Il conteggio non torna col vassoio vero</summary>
+<ul>
+<li>quello che vedi dopo il giro è una proposta: escludi col tocco il righello,
+il cartellino, le ombre nette e tutto ciò che non è un reperto, finché il numero
+combacia con quello che hai contato a mano;</li>
+<li>se un frammento è stato letto come due pezzi, tocca le due forme e
+<kbd>Unisci</kbd>: diventa una forma sola, con un numero solo;</li>
+<li>se il giro guarda anche fuori dal vassoio, disegna il recinto con
+<kbd>Limita a un'area</kbd>: la ricerca resta lì dentro;</li>
+<li>se mancano pezzi, <kbd>Passata fine</kbd> ripassa solo dove non aveva
+trovato niente, senza rimettere dentro quello che avevi escluso;</li>
+<li>il numero che finisce nelle note è quello che hai <strong>confermato</strong>
+tu, non quello che il modello aveva proposto.</li>
+</ul></details>
+
+<details><summary>Il cartellino non viene letto, o propone la cosa sbagliata</summary>
+<ul>
+<li>l'esito è sempre dichiarato: o «Cartellino letto: …», o «Nessun testo
+leggibile nella foto» — il silenzio non c'è;</li>
+<li>la lettura automatica sbaglia, soprattutto sulla scrittura a mano: per
+questo il testo del foglio si <strong>corregge</strong> prima di confermare;</li>
+<li><kbd>Usa come sigla</kbd> e <kbd>Usa come provenienza</kbd> compaiono solo
+se quei campi sono vuoti: quello che hai già scritto tu non si tocca;</li>
+<li>due cartellini diversi nella stessa foto rendono il dato ambiguo, e allora
+l'app non propone niente: il testo letto lo vedi lo stesso, la scelta resta a
+te.</li>
+</ul></details>
+
+<details><summary>La serie si è fermata, o alcune foto non sono entrate</summary>
+<ul>
+<li>le foto della libreria che stanno su iCloud e non sono ancora scaricate non
+si caricano: aprile una volta nell'app Foto, poi <kbd>Riprova gli errori</kbd>;</li>
+<li>se sei uscito dall'app o l'hai interrotta, le foto già pronte restano in
+bozza e <kbd>Riprendi la serie</kbd> riparte da dove era, senza rifare quello
+che era fatto;</li>
+<li>le foto importate prendono la <strong>data dello scatto</strong>, non quella
+di oggi: se non le vedi, sei sul giorno sbagliato — passa a <kbd>Tutte</kbd>
+oppure vai al loro giorno.</li>
+</ul></details>
+
+<details><summary>Il metrino virtuale non combacia col righello vero</summary>
+<p>La scala vale nel <strong>piano dei due punti</strong> che hai calibrato: se
+la foto è presa di sbieco, un elemento posato più lontano o più vicino di quel
+piano non può combaciare. Fotografa a piombo, col piano parallelo al sensore, e
+calibra su una distanza che sta in quel piano. Se il valore dichiarato era
+sbagliato, <kbd>Ricalibra</kbd>: tutte le misure già posate si riscrivono da
+sole, perché il numero non è mai salvato.</p></details>
+
+<details><summary>«Misura 3D» non c'è, o la misura sfora</summary>
+<ul>
+<li>serve lo scanner <strong>LiDAR</strong>: sugli iPhone e iPad che non ce
+l'hanno il pulsante non esiste affatto, invece di stare lì spento senza
+spiegazione;</li>
+<li>se compare «Superficie ancora incompleta», la ricostruzione non è finita:
+muoviti lentamente e inquadra da più angoli prima di toccare i punti;</li>
+<li>sole pieno e superfici lucide — marmo, piastrelle, intonaco verniciato —
+degradano la lettura: resta una misura ottica, dichiarata «LiDAR ±cm»;</li>
+<li>se la sessione si interrompe (una telefonata, l'app messa da parte) un
+eventuale ancoraggio a caposaldo <strong>decade</strong> e l'app lo dice: meglio
+rifarlo che tenersi quote non più vere.</li>
+</ul></details>
 
 <footer>
 <p>Domande o problemi non elencati? Scrivi a
