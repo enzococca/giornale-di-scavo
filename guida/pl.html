@@ -31,6 +31,7 @@ tygodnia lub wykopalisk raporty powstają same na podstawie stron.</p>
 <li><b>Pomiar</b>Zarejestrować punkty GNSS; przy RTK najpierw sprawdzić reper</li>
 <li><b>Zdjęcia</b>Fotografować w zakładce <kbd>Media</kbd>: współrzędne dołączają się same</li>
 <li><b>Rysunki</b>Odrysować przekrój lub plan na zdjęciu (cyfrowa kalka)</li>
+<li><b>JS</b>Zaktualizować karty wyeksplorowanych JS i ich relacje: <kbd>JS</kbd></li>
 <li><b>Zabytki</b>Ze skrzynkami przed sobą zapisać, co wyszło z wykopu: <kbd>Stanowisko</kbd> → <kbd>Zabytki</kbd></li>
 <li><b>Wieczorem</b>Z zakładki <kbd>Raporty</kbd> wygenerować raport dzienny: PDF gotowy do wysłania</li>
 </ol>
@@ -51,7 +52,7 @@ punktów), <em>aparat</em> (dla zdjęć), <em>mikrofon</em> (dla dyktowania),
 <em>Bluetooth</em> (tylko przy użyciu zewnętrznego odbiornika).</li>
 </ol>
 
-<h2>Pięć zakładek</h2>
+<h2>Sześć zakładek</h2>
 
 <h3>📓 Dziennik</h3>
 <ol class="passi">
@@ -69,6 +70,43 @@ zawsze ma pierwszeństwo.</li>
 około 11 metrów, a w raportach wiersz pojawia się w języku raportu.</li>
 </ol>
 <div class="schermate"><figure><img src="img/pl/01-diario.webp" alt="Lista dni" width="640" height="1391" loading="lazy"><figcaption>Lista dni</figcaption></figure><figure><img src="img/pl/02-giornata.webp" alt="Strona dnia" width="640" height="1391" loading="lazy"><figcaption>Strona dnia</figcaption></figure></div>
+
+<h3>🧱 JS — karty stratygraficzne</h3>
+<p>Jedna karta dla każdej jednostki stratygraficznej, z relacjami między JS
+zapisanymi jako powiązania: stąd pochodzą karty JS do dokumentacji i macierz
+Harrisa.</p>
+<ol class="passi">
+<li>Na zakładce <kbd>JS</kbd> dotknąć <kbd>+</kbd>: aplikacja proponuje kolejny
+numer (można go zmienić) i pyta o typ i określenie. Numer jest unikalny w
+obrębie stanowiska; później zmienia się go przyciskiem <kbd>Zmień</kbd>, a
+skrzynki z tym pochodzeniem podążają za nim.</li>
+<li>Karta obejmuje identyfikację (typ, określenie, obszar lub sektor, ar),
+wymiary i wysokości (długość, szerokość, miąższość, wysokość minimalna i
+maksymalna), opis (kolor, konsystencja, składniki), interpretację, datowanie,
+daty otwarcia i zamknięcia oraz osobę odpowiedzialną. Zapisuje się sama w
+trakcie pisania.</li>
+<li>Obok określenia, koloru, konsystencji, składników, interpretacji i
+datowania jest przycisk <strong>tezaurusa</strong> (książeczka): wybiera się ze
+standardowego słownika albo z własnych terminów, dzięki czemu karta pozostaje
+jednolita bez względu na to, kto kopie. W składnikach można wybrać więcej niż
+jeden. Jeśli szukanego słowa nie ma, arkusz proponuje jego dodanie. Własne
+terminy obowiązują na wszystkich stanowiskach i zarządza się nimi w
+<kbd>Tezaurus</kbd>, w menu ⋯ karty JS.</li>
+<li><kbd>Dodaj relację</kbd>: wybrać relację (przykrywa, przecina, wypełnia,
+przylega do, związana z, tożsama z oraz ich odwrotności) i wpisać numer drugiej
+JS. Relację zapisuje się tylko raz, a na drugiej karcie pojawia się odwrócona:
+jeśli 101 przykrywa 102, na karcie 102 widnieje „przykryta przez 101”. Jeśli
+druga JS nie ma jeszcze karty, zostaje utworzona pusta. Relacja sprzeczna z już
+zapisaną sekwencją zostaje odrzucona, z wyjaśnieniem.</li>
+<li>Sekcja zabytków pokazuje skrzynki, których pochodzenie wymienia daną JS
+(„JS 102”, „JSM 12”): nie trzeba niczego łączyć ręcznie.
+<kbd>Dodaj zabytek</kbd> otwiera kartę zabytku z już wpisanym
+pochodzeniem.</li>
+<li>Z menu ⋯ <kbd>Macierz Harrisa</kbd> rysuje sekwencję na podstawie relacji:
+najmłodsza JS na górze, JS tożsame lub związane w jednym prostokącie,
+przecięcia linią przerywaną, jednostki murowane na szarym tle. Powiększa się ją
+dwoma palcami i udostępnia jako obraz.</li>
+</ol>
 
 <h3>📍 Pomiar</h3>
 <ol class="passi">
@@ -89,7 +127,7 @@ niwelatora optycznego: stanowiska niwelatora, odczyty wstecz i w przód,
 wysokości obliczane od repera początkowego, z kontrolą zamknięcia. Punkty
 niwelowane trafiają do stanowiska z wysokością, tak jak punkty GNSS.</li>
 <li>Na urządzeniach ze skanerem <strong>LiDAR</strong> (iPhone Pro od 12
-wzwyż, iPad Pro) pojawia się <kbd>Pomiar 3D</kbd> <span class="pro">PRO</span>:
+wzwyż, iPad Pro) pojawia się <kbd>Pomiar 3D</kbd>:
 kadrować powoli, aż powierzchnia się odtworzy, potem dotknąć dwóch mierzonych
 punktów i odczytać odległość, odległość poziomą oraz różnicę wysokości. Za
 pomocą <kbd>Zakotwicz do repera</kbd> wybiera się reper o znanej wysokości i
@@ -101,7 +139,7 @@ aplikacja to deklaruje, pisząc „LiDAR ±cm”: przydaje się do różnicy wys
 albo do długości wziętej naprędce, na miejscu, i nie zastępuje ani GNSS, ani
 niwelatora. Na urządzeniach bez skanera przycisku nie ma w ogóle.</li>
 <li>Pod panelem znajdują się <kbd>Nagrania NMEA</kbd>: surowy strumień
-zewnętrznego odbiornika <span class="pro">PRO</span> sam trafia do plików —
+zewnętrznego odbiornika sam trafia do plików —
 nagrywanie zaczyna się po włączeniu anteny i kończy po jej wyłączeniu, bez
 potrzeby pamiętania o tym. Przydaje się do ponownego prześledzenia
 wątpliwego dnia albo do przekazania surowych danych osobie wykonującej
@@ -126,7 +164,7 @@ opis „widok z SO — 214°”, a dla zdjęć wykonanych pionowo (rzut, dno war
 opis zenitalny z kierunkiem górnej krawędzi. Jeśli kompas jest zakłócony,
 aplikacja to sygnalizuje.</li>
 <li>Dotknąć zdjęcia, aby nadać tytuł i notatki (np. „JS 102 od północy”).</li>
-<li><kbd>Udostępnij kartę</kbd> <span class="pro">PRO</span> generuje
+<li><kbd>Udostępnij kartę</kbd> generuje
 <strong>fotograficzną kartę dokumentacyjną</strong>: zdjęcie, a pod nim dane
 wykonania (stanowisko, numer, data i godzina, współrzędne, wysokość,
 kierunek), widok satelitarny ze znacznikiem pozycji i stożkiem widzenia,
@@ -152,7 +190,7 @@ raport to deklaruje; jeśli obróci się ją ręcznie, opis zmienia się na
 „zadeklarowany”. <kbd>Udostępnij ze skalą</kbd> wypuszcza kopię zdjęcia z tym,
 co na nim położono — <kbd>Udostępnij zdjęcie</kbd> pozostaje nagim oryginałem,
 ze swoim EXIF-em.</li>
-<li><kbd>Przetwarzaj seryjnie</kbd> <span class="pro">PRO</span> (menu u góry w
+<li><kbd>Przetwarzaj seryjnie</kbd> (menu u góry w
 <kbd>Media</kbd>) bierze z biblioteki grupę zdjęć i przepuszcza je wszystkie
 przez „Policz i zmierz”, jedno po drugim: każde zdjęcie staje się zdjęciem
 stanowiska z datą wykonania, a do każdego powstanie <strong>nowa karta
@@ -167,7 +205,7 @@ potwierdzić.</li>
 <h3>🧮 Policz i zmierz (w Mediach)</h3>
 <p>Taca z fragmentami sfotografowana z góry — i aplikacja, która sama je liczy
 i mierzy. Funkcja żyje na zdjęciu <strong>zabytku</strong>: otwiera się je z jego
-karty i dotyka <kbd>Policz i zmierz</kbd> <span class="pro">PRO</span>.</p>
+karty i dotyka <kbd>Policz i zmierz</kbd>.</p>
 <ol class="passi">
 <li>Najpierw skala. Aplikacja sama szuka na zdjęciu <strong>łaty
 mierniczej</strong>: jeśli ją znajdzie, mówi, ile pól odczytała, użytkownik
@@ -226,7 +264,7 @@ blednie zdjęcie, nie rysunek. Wybór zostaje przy planszy i obowiązuje także 
 PDF, DOCX, PNG oraz w <kbd>Eksportuj z legendą</kbd>.</li>
 <li>Cała reszta znajduje się w <kbd>Narzędzia</kbd> (klucz płaski na pasku),
 czyli w spisie siedmiu trybów: <kbd>Pole tekstowe</kbd>,
-<kbd>Kalkowanie</kbd> <span class="pro">PRO</span>, <kbd>Skala zdjęcia</kbd>,
+<kbd>Kalkowanie</kbd>, <kbd>Skala zdjęcia</kbd>,
 <kbd>Punkt z wysokością</kbd>, <kbd>Deseń</kbd>, <kbd>Styl linii</kbd> i
 <kbd>Skala wirtualna</kbd>.
 Włączony jest <strong>tylko jeden</strong> naraz: ptaszek pokazuje który, a
@@ -237,13 +275,12 @@ tylko wtedy, gdy jest zdjęcie w tle.</li>
 <li>Za pomocą <kbd>Pole tekstowe</kbd> wstawia się etykiety (np. „JS 1002”):
 można je przesuwać, zmieniać rozmiar uszczypnięciem i wybierać spośród
 czterech czcionek.</li>
-<li><kbd>Kalkowanie</kbd> <span class="pro">PRO</span> rozpoznaje kontur
+<li><kbd>Kalkowanie</kbd> rozpoznaje kontur
 dotykanego obiektu (kamienia, granicy warstwy) i zamienia go w kreskę: kolor,
 grubość i styl linii można zmieniać bez wychodzenia z trybu, a kontury
 wychodzą gładkie zamiast schodkowych. Wszystko odbywa się na urządzeniu, bez
 sieci.</li>
-<li>Wewnątrz kalkowania <kbd>Skalkuj wszystko</kbd>
-<span class="pro">PRO</span> samo obchodzi całe zdjęcie. W arkuszu startowym
+<li>Wewnątrz kalkowania <kbd>Skalkuj wszystko</kbd> samo obchodzi całe zdjęcie. W arkuszu startowym
 wybiera się wygląd — <kbd>Tylko kontury</kbd> albo deseń i ewentualnie
 <kbd>Powłoka barwna</kbd> — i naciska <kbd>Rozpocznij</kbd>: pasek pokazuje,
 na jakim etapie jest praca, a trwa ona kilkadziesiąt sekund. To, co się
@@ -280,14 +317,14 @@ DXF.</li>
 zdjęciach: linijkę skali, tyczkę, kwadrat, krzyż, strzałkę północy i pomiary
 dwoma dotknięciami. Typy metryczne wymagają, żeby plansza miała skalę, czyli
 <kbd>Skala zdjęcia</kbd>: bez znanej odległości aplikacja tłumaczy, zamiast
-rysować. W SVG i DXF <span class="pro">PRO</span> elementy te wychodzą jako
+rysować. W SVG i DXF elementy te wychodzą jako
 <strong>wektory</strong>, na swojej warstwie, a odległość zmierzona linijką w
 GIS zgadza się z etykietą.</li>
-<li><kbd>Eksportuj z legendą</kbd> <span class="pro">PRO</span>: obraz
+<li><kbd>Eksportuj z legendą</kbd>: obraz
 wychodzi z białym paskiem na dole — pasek skali (jeśli skala jest ustawiona),
 strzałka północy dla zdjęć wykonanych pionowo, „widok z” dla zdjęć
 frontalnych.</li>
-<li><kbd>Eksportuj wektorowo</kbd> <span class="pro">PRO</span>: SVG dla
+<li><kbd>Eksportuj wektorowo</kbd>: SVG dla
 rysunku albo <strong>DXF</strong> dla GIS. Przy co najmniej dwóch punktach
 wysokościowych ze współrzędnymi na zdjęciu wykonanym pionowo, DXF wychodzi
 <strong>georeferencjonowany w układzie UTM</strong> i w QGIS sam ustawia się
@@ -314,9 +351,7 @@ pod nazwą widnieje liczba już zapisanych wierszy.</li>
 <h3>📦 Zabytki (na Stanowisku)</h3>
 <p>Prawdziwy moment to nie aparat: to koniec dnia, ze skrzynkami przed sobą,
 kiedy wklepuje się je jedną po drugiej — ze zmęczeniem i brudnymi rękami. Wszystko
-tutaj jest zrobione pod tamten moment — i jest <strong>bezpłatne</strong>, tak
-jak rejestrowanie punktów: przekazanie tego, co się wykopało, to dokumentacja
-podstawowa.</p>
+tutaj jest zrobione pod tamten moment.</p>
 <ol class="passi">
 <li><kbd>Stanowisko</kbd> → <kbd>Zabytki</kbd> → <kbd>+</kbd>. Karta otwiera się
 już z dzisiejszą datą i z <strong>ostatnio użytym pochodzeniem</strong>: od
@@ -351,23 +386,24 @@ nie przepisuje się sam.</li>
 
 <h3>📄 Raporty</h3>
 <ol class="passi">
-<li>Wybrać typ: <strong>dzienny</strong> (bezpłatny, ze znakiem wodnym),
+<li>Wybrać typ: <strong>dzienny</strong>,
 <strong>tygodniowy</strong>, <strong>miesięczny</strong> lub
-<strong>końcowy</strong> z pełnymi załącznikami <span class="pro">PRO</span>.</li>
+<strong>końcowy</strong> z pełnymi załącznikami.</li>
 <li>Wybrać język raportu spośród <strong>siedemnastu</strong>, niezależnie od
 języka aplikacji: raport może zostać wygenerowany po angielsku, nawet jeśli
 aplikacja działa po polsku.</li>
-<li>Wygenerować PDF albo wyeksportować DOCX z logo i zdjęciami
-<span class="pro">PRO</span>, CSV punktów, GeoJSON dla QGIS
-<span class="pro">PRO</span>.</li>
-<li>Na dole jest bezpłatny <kbd>Eksport zabytków (całe stanowisko)</kbd>:
+<li>Wygenerować PDF albo wyeksportować DOCX z logo i zdjęciami, CSV punktów, GeoJSON dla QGIS.</li>
+<li>Na dole jest <kbd>Eksport zabytków (całe stanowisko)</kbd>:
 <kbd>Eksportuj CSV zabytków</kbd> do arkusza kalkulacyjnego i
 <kbd>Eksportuj HTML zabytków</kbd> — tabela z miniaturami, którą otwiera
 dowolna przeglądarka bez sieci. Nagłówki, kategorie, jednostki i stany wychodzą
 w języku wybranym dla raportu; to, co wpisano ręcznie, zostaje tak, jak zostało
 wpisane. W raporcie końcowym zabytki mają własny załącznik, według
 pochodzenia.</li>
-<li>Przy włączonych zdjęciach w raportach można wybrać <kbd>Karty fotograficzne zamiast zdjęć</kbd> <span class="pro">PRO</span>: każde
+<li>JS trafiają do raportów: te otwarte i zamknięte w danym okresie — do
+dziennego, tygodniowego i miesięcznego; w raporcie końcowym jest załącznik ze
+wszystkimi kartami i macierzą Harrisa.</li>
+<li>Przy włączonych zdjęciach w raportach można wybrać <kbd>Karty fotograficzne zamiast zdjęć</kbd>: każde
 zdjęcie trafia do PDF i DOCX jako pełna karta dokumentacyjna z danymi i mapą,
 w języku raportu.</li>
 </ol>
@@ -380,8 +416,8 @@ rozwiązanie zapasowe.</p>
 <ol class="passi">
 <li>Włączyć odbiornik i aktywować Bluetooth w telefonie.</li>
 <li>Na zakładce <kbd>Pomiar</kbd> wybrać źródło pozycji: <em>GNSS zewnętrzny
-(BLE/NMEA)</em> <span class="pro">PRO</span> i wybrać odbiornik z listy.
-Obsługiwane są też odbiorniki MFi (bezpłatnie) oraz odbiorniki udostępniające
+(BLE/NMEA)</em> i wybrać odbiornik z listy.
+Obsługiwane są też odbiorniki MFi oraz odbiorniki udostępniające
 NMEA w sieci.</li>
 <li>Do poprawek RTK skonfigurować <strong>NTRIP</strong>: adres castera, port,
 mountpoint, nazwę użytkownika i hasło (przechowywane w pęku kluczy
@@ -400,41 +436,22 @@ aplikacji, a nie podręcznikiem oprogramowania układowego.</p>
 <h2>Kopia zapasowa i wymiana</h2>
 <ol class="passi">
 <li>Z menu stanowiska dotknąć <kbd>Eksportuj stanowisko (.zip)</kbd>: w środku
-jest wszystko — dziennik, punkty, zdjęcia, rysunki, godziny, repery.</li>
+jest wszystko — dziennik, punkty, zdjęcia, rysunki, godziny, repery, zabytki i karty JS.</li>
 <li>Przechowywać ZIP, gdzie się chce (Pliki, Drive, e-mail…). To kopia
 zapasowa: aplikacja celowo nie ma chmury.</li>
 <li><kbd>Importuj stanowisko (.zip)…</kbd> odtwarza stanowisko na innym
-urządzeniu, także między iPhone'em a Androidem.</li>
+urządzeniu, także między iPhone'em a Androidem. Import nigdy niczego nie nadpisuje ani
+nie scala: zawsze tworzy nowe stanowisko obok istniejących, z
+„(zaimportowano)” w nazwie, jeśli takie samo już istnieje.</li>
 </ol>
 <p class="nota">⚠️ <kbd>Usuń stanowisko…</kbd> usuwa stanowisko wraz z całą
 zawartością i jest to działanie <strong>nieodwracalne</strong>: w razie
 wątpliwości najpierw wyeksportować ZIP.</p>
 
-<h2>Bezpłatna i Pro</h2>
-<table>
-<tr><th></th><th>Bezpłatna</th><th>Pro</th></tr>
-<tr><td>Stanowiska</td><td>1</td><td>Bez ograniczeń</td></tr>
-<tr><td>GNSS</td><td>GPS wewnętrzny, odbiorniki MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
-<tr><td>Raporty</td><td>Dzienny ze znakiem wodnym</td><td>Wszystkie, bez znaku wodnego</td></tr>
-<tr><td>Eksport</td><td>PDF, CSV</td><td>+ DOCX z logo i zdjęciami, GeoJSON</td></tr>
-<tr><td>Rysunki</td><td>Kalka, zoom, teksty, skala, punkty wysokościowe, <strong>desenie, style linii, krycie tła</strong></td><td>+ Eksport z legendą, SVG/DXF</td></tr>
-<tr><td>Automatyczne kalkowanie</td><td>—</td><td>Dotknięciem i „Skalkuj wszystko”</td></tr>
-<tr><td>Nagrania NMEA</td><td>Odczyt i udostępnianie plików</td><td>Nagrywanie (wymaga anteny zewnętrznej)</td></tr>
-<tr><td>Dziennik niwelacji</td><td>✓</td><td>✓</td></tr>
-<tr><td>Karta fotograficzna</td><td>—</td><td>Udostępnianie i karty w raportach</td></tr>
-<tr><td>Zabytki</td><td>Rejestr, CSV i HTML</td><td>+ załącznik w raportach</td></tr>
-<tr><td>Skale wirtualne</td><td>Na zdjęciach i na planszach</td><td>+ wektory w SVG i DXF</td></tr>
-<tr><td>Policz i zmierz</td><td>—</td><td>Na jednym zdjęciu i seryjnie</td></tr>
-<tr><td>Pomiar 3D (LiDAR)</td><td>—</td><td>Na urządzeniach ze skanerem</td></tr>
-<tr><td>Dyktowanie głosowe</td><td>✓</td><td>✓</td></tr>
-<tr><td>Języki raportów</td><td>17</td><td>17</td></tr>
-</table>
-<p>Pro to subskrypcja miesięczna lub roczna z automatycznym odnawianiem, albo
-jednorazowy zakup dożywotni. Zarządzanie i anulowanie jest możliwe w dowolnym
-momencie w ustawieniach identyfikatora Apple. Jeśli przysługuje bezpłatny okres
-próbny, ekran Pro pisze o tym przed zakupem („7 dni za darmo, potem …”): jeśli
-nic tam nie ma, próba nie przysługuje — aplikacja nie obiecuje próby, której
-zakup potem nie dotrzyma.</p>
+<h2>Bezpłatna</h2>
+<p>Giornale di Scavo jest <strong>bezpłatna i kompletna</strong>: wszystkie
+funkcje opisane w tym przewodniku są dostępne, bez subskrypcji, bez zakupów w
+aplikacji i bez znaku wodnego, z nieograniczoną liczbą stanowisk.</p>
 
 <h2>Rozwiązywanie problemów</h2>
 
@@ -497,20 +514,15 @@ poczekać na pozycję, dopiero potem fotografować. Przy odmowie uprawnienia do
 lokalizacji zdjęcia są zapisywane bez współrzędnych.</p></details>
 
 <details><summary>W raporcie brakuje zdjęć lub logo</summary>
-<p>Zdjęcia w raportach, logo i niestandardowy nagłówek są częścią Pro i
-dotyczą zarówno DOCX, jak i PDF. Bezpłatny raport dzienny zawiera znak wodny
-i nie obejmuje zdjęć.</p></details>
+<p>Sprawdzić, czy włączone jest <kbd>Uwzględnij zdjęcia i rysunki w raporcie</kbd>
+i czy logo jest wybrane w <kbd>Nagłówek i logo</kbd>: dotyczy to zarówno PDF,
+jak i DOCX.</p></details>
 
 <details><summary>Przez pomyłkę usunięto stanowisko</summary>
 <p>Usunięcie jest ostateczne: dane nie podlegają odzyskaniu (nie ma chmury).
 Jeśli wcześniej wyeksportowano ZIP, można go zaimportować, aby przywrócić
 stanowisko z tamtej daty. Wskazówka: eksportować ZIP na koniec każdego
 dnia.</p></details>
-
-<details><summary>Zakupiono Pro, a funkcje nadal są zablokowane</summary>
-<p>Dotknąć <kbd>Przywróć zakupy</kbd> na ekranie Pro, używając tego samego
-identyfikatora Apple co przy zakupie. W razie zmiany urządzenia przywrócenie
-odzyskuje subskrypcję lub licencję dożywotnią.</p></details>
 
 <details><summary>„Pobierz” jest wyszarzony albo pojawia się „Pogoda niedostępna”</summary>
 <ul>
@@ -612,8 +624,7 @@ biblioteki nie pojawia się żadna z nich, bo brakuje danych zdjęcia.</p></deta
 <details><summary>„Policz i zmierz” nie pojawia się na zdjęciu</summary>
 <p>Polecenie żyje tylko na zdjęciach <strong>zabytku</strong> — to tam
 obrysowywanie fragmentów ma sens — i otwiera się je ze szczegółów zdjęcia, a nie
-z karty, która pokazuje same miniatury. Jeśli dotknięcie otwiera ekran Pro,
-funkcja jest właśnie taka: należy do Pro, tak jak kalkowanie.</p></details>
+z karty, która pokazuje same miniatury.</p></details>
 
 <details><summary>Łata miernicza nie zostaje znaleziona</summary>
 <ul>

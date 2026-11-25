@@ -31,6 +31,7 @@ the excavation, reports build themselves from the pages.</p>
 <li><b>Survey</b>Capture GNSS points; check a benchmark first if you use RTK</li>
 <li><b>Photos</b>Shoot from <kbd>Media</kbd>: coordinates are attached automatically</li>
 <li><b>Drawings</b>Trace the section or plan over a photo (digital tracing sheet)</li>
+<li><b>SU</b>Update the records of the SUs you dug and their relationships: <kbd>SU</kbd></li>
 <li><b>Finds</b>With the boxes in front of you, record what came out: <kbd>Site</kbd> → <kbd>Finds</kbd></li>
 <li><b>Evening</b>From <kbd>Reports</kbd>, generate the daily report: a PDF ready to send</li>
 </ol>
@@ -49,7 +50,7 @@ losing anything.</li>
 <em>Bluetooth</em> (only if you use an external receiver).</li>
 </ol>
 
-<h2>The five tabs</h2>
+<h2>The six tabs</h2>
 
 <h3>📓 Diary</h3>
 <ol class="passi">
@@ -66,6 +67,43 @@ adds another measurement. Anything you type by hand always wins.</li>
 11 metres, and in reports the line appears in the report's language.</li>
 </ol>
 <div class="schermate"><figure><img src="img/en/01-diario.webp" alt="The list of dig days" width="640" height="1391" loading="lazy"><figcaption>The list of dig days</figcaption></figure><figure><img src="img/en/02-giornata.webp" alt="A day's page" width="640" height="1391" loading="lazy"><figcaption>A day's page</figcaption></figure></div>
+
+<h3>🧱 SU — stratigraphic unit records</h3>
+<p>One record for each stratigraphic unit, with the relationships between SUs
+recorded as links: this is where the SU records of the documentation and the
+Harris matrix come from.</p>
+<ol class="passi">
+<li>In the <kbd>SU</kbd> tab tap <kbd>+</kbd>: the app suggests the next number
+(you can change it) and asks for type and definition. The number is unique
+within the site; later you change it with <kbd>Change</kbd>, and the boxes with
+that provenance follow it.</li>
+<li>The record gathers identification (type, definition, area or sector, grid
+square), dimensions and elevations (length, width, thickness, minimum and
+maximum elevation), description (colour, compaction, inclusions),
+interpretation, dating, opening and closing dates and the person in charge. It
+saves itself as you write.</li>
+<li>Next to definition, colour, compaction, inclusions, interpretation and
+dating there is the <strong>thesaurus</strong> button (the booklet): choose from
+the standard vocabulary or from your own terms, and the record stays consistent
+among everyone digging. For inclusions you can pick more than one. If the word
+you are looking for isn't there, the sheet offers to add it. Your terms apply to
+all sites and are managed from <kbd>Thesaurus</kbd>, in the ⋯ menu of the SU
+tab.</li>
+<li><kbd>Add relationship</kbd>: choose the relationship (covers, cuts, fills,
+abuts, bonded with, same as, and their inverses) and type the number of the
+other SU. The relationship is recorded only once and appears reversed in the
+other record: if 101 covers 102, in 102 you read “covered by 101”. If the other
+SU doesn't have a record yet, an empty one is created. A relationship that
+contradicts the sequence already recorded is refused, with the explanation.</li>
+<li>The finds section shows the boxes whose provenance names the SU (“SU 102”,
+“MSU 12”): there is nothing to link by hand.
+<kbd>Add find</kbd> opens the find record with the provenance already filled
+in.</li>
+<li>From the ⋯ menu, <kbd>Harris matrix</kbd> draws the sequence from the
+relationships: the most recent SU at the top, SUs that are the same or bonded in
+a single box, cuts dashed, masonry units on a grey background. Pinch to zoom,
+and share it as an image.</li>
+</ol>
 
 <h3>📍 Survey</h3>
 <ol class="passi">
@@ -85,7 +123,7 @@ level: stations, backsights and foresights, elevations calculated from a
 starting benchmark, with a closure check. Levelled points enter the site with
 their elevation, just like GNSS ones.</li>
 <li>On devices with a <strong>LiDAR</strong> scanner (iPhone Pro from the 12
-on, iPad Pro) <kbd>3D Measurement</kbd> <span class="pro">PRO</span> appears:
+on, iPad Pro) <kbd>3D Measurement</kbd> appears:
 pan slowly until the surface has been reconstructed, then tap the two points
 you want and read off distance, horizontal distance and height difference. With
 <kbd>Anchor to benchmark</kbd> you pick a benchmark of known elevation and tap
@@ -98,7 +136,7 @@ confirming. It is an optical measurement, and the app says so by writing
 on the spot, and it replaces neither the GNSS nor the level. On devices without
 the scanner the button isn't there at all.</li>
 <li>Below the panel sit the <kbd>NMEA recordings</kbd>: the raw stream from the
-external receiver <span class="pro">PRO</span> is written to file by itself —
+external receiver is written to file by itself —
 recording starts when you switch the antenna on and closes when you switch it
 off, with nothing for you to remember. It is there to re-read a doubtful day,
 or to hand the raw data to whoever post-processes it. Files can be shared and
@@ -122,7 +160,7 @@ SO — 214°”, and for shots taken straight down (plan view, the bottom of an 
 a nadir caption with the direction of the top edge. If the compass is
 disturbed, the app tells you.</li>
 <li>Tap a photo to set its title and notes (e.g. "SU 102 from north").</li>
-<li><kbd>Share photo record</kbd> <span class="pro">PRO</span> generates the
+<li><kbd>Share photo record</kbd> generates the
 <strong>photo documentation record</strong>: the photo with the shot's data
 below it (site, number, date and time, coordinates, elevation, direction), a
 satellite view with a pin and the shooting cone, the map's scale bar and the
@@ -148,7 +186,7 @@ turn it yourself, the caption switches to “declared”.
 <kbd>Share with scale</kbd> gives you a copy of the photo with what you have
 laid on it —
 <kbd>Share photo</kbd> stays the bare original, with its EXIF.</li>
-<li><kbd>Batch process</kbd> <span class="pro">PRO</span> (the menu at the top
+<li><kbd>Batch process</kbd> (the menu at the top
 of <kbd>Media</kbd>) takes a group of photos from the library and passes them
 all through count and measure, one after another: each photo becomes a site
 photo with the date it was shot, and each will have its <strong>own new finds
@@ -163,8 +201,7 @@ quantity, and confirm.</li>
 <h3>🧮 Count and measure (in Media)</h3>
 <p>The tray of sherds photographed from above, and the app counting and
 measuring them by itself. It lives on the photo of a <strong>find</strong>: you
-open it from its record and tap <kbd>Count and measure</kbd>
-<span class="pro">PRO</span>.</p>
+open it from its record and tap <kbd>Count and measure</kbd>.</p>
 <ol class="passi">
 <li>The scale first. The app looks for the <strong>scale bar</strong> in the
 photo by itself: if it finds one it tells you how many squares it read, you
@@ -221,8 +258,7 @@ from the camera menu and take it wherever you need, from 5% to 100%: it fades
 the photo, not the drawing. The choice stays with the sheet and holds in PDF,
 DOCX, PNG and <kbd>Export with legend</kbd> too.</li>
 <li>Everything else sits under <kbd>Tools</kbd> (the spanner in the toolbar),
-which is the index of the seven modes: <kbd>Text box</kbd>, <kbd>Trace</kbd>
-<span class="pro">PRO</span>, <kbd>Photo scale</kbd>,
+which is the index of the seven modes: <kbd>Text box</kbd>, <kbd>Trace</kbd>, <kbd>Photo scale</kbd>,
 <kbd>Point with elevation</kbd>, <kbd>Hatch</kbd>, <kbd>Line style</kbd> and
 <kbd>Virtual scale</kbd>. Only
 <strong>one</strong> is held at a time: the tick says which, and while it is on
@@ -231,12 +267,12 @@ go back to drawing. The three entries that work on the image (trace, scale,
 point with elevation) only appear if a background photo is there.</li>
 <li>With <kbd>Text box</kbd> you place the labels (e.g. "SU 1002"): they can be
 moved, resized with a pinch, and come with four fonts to choose from.</li>
-<li><kbd>Trace</kbd> <span class="pro">PRO</span> recognises the outline of the
+<li><kbd>Trace</kbd> recognises the outline of the
 object you tap (a stone, the edge of a layer) and turns it into a stroke:
 colour, thickness and line style can be changed without leaving the mode, and
 the outlines come out smooth instead of stepped. Everything happens on the
 device, with no network.</li>
-<li>Inside tracing, <kbd>Trace everything</kbd> <span class="pro">PRO</span>
+<li>Inside tracing, <kbd>Trace everything</kbd>
 goes over the whole photo on its own. In the start sheet you decide the
 styling — <kbd>Outlines only</kbd>, or a hatch and perhaps a <kbd>Colour wash</kbd> — and press <kbd>Start</kbd>: the bar says how far along it is, and
 it takes some tens of seconds. What appears is a <strong>preview</strong>, not
@@ -271,14 +307,14 @@ PDF, DOCX, PNG, SVG and DXF.</li>
 the photos have: scale bar, ranging rod, square, cross, north arrow and
 measurements with two taps. The metric types ask the sheet to have a scale,
 that is the <kbd>Photo scale</kbd>: with no known distance the app explains
-instead of drawing. In SVG and DXF <span class="pro">PRO</span> these elements
+instead of drawing. In SVG and DXF these elements
 come out as <strong>vectors</strong>, on their own layer, and the measurement
 read with the GIS ruler matches the label.</li>
-<li><kbd>Export with legend</kbd> <span class="pro">PRO</span>: the image
+<li><kbd>Export with legend</kbd>: the image
 comes out with a white band underneath — a metric scale bar (if the scale is
 set), a north arrow for photos taken straight down, “viewed from” for frontal
 ones.</li>
-<li><kbd>Export vector</kbd> <span class="pro">PRO</span>: SVG for the
+<li><kbd>Export vector</kbd>: SVG for the
 drawing, or <strong>DXF</strong> for the GIS. With at least two points with
 elevation and coordinates on a photo taken straight down, the DXF comes out
 <strong>georeferenced in UTM</strong> and positions itself in QGIS
@@ -304,9 +340,7 @@ name.</li>
 <h3>📦 Finds (in Site)</h3>
 <p>The real moment isn't the camera: it is sitting down at the end of the day
 with the boxes in front of you and working through them one after another,
-tired and with dirty hands. Everything here is made for that moment — and it is
-<strong>free</strong>, like recording points: handing over what you have dug is
-basic documentation.</p>
+tired and with dirty hands. Everything here is made for that moment.</p>
 <ol class="passi">
 <li><kbd>Site</kbd> → <kbd>Finds</kbd> → <kbd>+</kbd>. The record opens with
 today's date already in it and with the <strong>last provenance used</strong>:
@@ -340,22 +374,23 @@ itself.</li>
 
 <h3>📄 Reports</h3>
 <ol class="passi">
-<li>Pick the type: <strong>daily</strong> (free, watermarked),
+<li>Pick the type: <strong>daily</strong>,
 <strong>weekly</strong>, <strong>monthly</strong> or <strong>final</strong>
-with full appendices <span class="pro">PRO</span>.</li>
+with full appendices.</li>
 <li>Pick the report language from <strong>seventeen</strong>, independent of the
 app's language: the report can come out in German even if you use the app in
 English.</li>
-<li>Generate the PDF, or export DOCX with your logo and photos
-<span class="pro">PRO</span>, CSV of the points, GeoJSON for QGIS
-<span class="pro">PRO</span>.</li>
-<li>At the bottom sits <kbd>Finds export (whole site)</kbd>, free:
+<li>Generate the PDF, or export DOCX with your logo and photos, CSV of the points, GeoJSON for QGIS.</li>
+<li>At the bottom sits <kbd>Finds export (whole site)</kbd>:
 <kbd>Export Finds CSV</kbd> for the spreadsheet, and
 <kbd>Export Finds HTML</kbd> for a table with thumbnails that opens in any
 browser with no network. Headings, classes, units and statuses come out in the
 language chosen for the report; what you wrote yourself stays as you wrote it.
 In the final report the finds have their own appendix, by provenance.</li>
-<li>With photos in reports switched on, you can choose <kbd>Photo records instead of photos</kbd> <span class="pro">PRO</span>: every photo enters the
+<li>SUs go into the reports: those opened and closed in the period in the
+daily, weekly and monthly reports; the final report has the appendix with all
+the records and the Harris matrix.</li>
+<li>With photos in reports switched on, you can choose <kbd>Photo records instead of photos</kbd>: every photo enters the
 PDF and DOCX as a full documentation record with data and map, in the
 report's language.</li>
 </ol>
@@ -367,8 +402,8 @@ accuracy. The internal GPS always remains available as a fallback.</p>
 <ol class="passi">
 <li>Turn the receiver on and enable Bluetooth on the phone.</li>
 <li>In <kbd>Survey</kbd>, choose the position source: <em>External GNSS
-(BLE/NMEA)</em> <span class="pro">PRO</span> and pick your receiver from the
-list. MFi receivers (free) and receivers that stream NMEA over the network are
+(BLE/NMEA)</em> and pick your receiver from the
+list. MFi receivers and receivers that stream NMEA over the network are
 supported too.</li>
 <li>For RTK corrections configure <strong>NTRIP</strong>: caster address, port,
 mountpoint, username and password (stored in the device keychain). The app
@@ -387,39 +422,21 @@ firmware manual.</p>
 <h2>Backup and exchange</h2>
 <ol class="passi">
 <li>From the site menu tap <kbd>Export site (.zip)</kbd>: everything is inside
-— diary, points, photos, drawings, hours, benchmarks.</li>
+— diary, points, photos, drawings, hours, benchmarks, finds and SU records.</li>
 <li>Keep the ZIP wherever you like (Files, Drive, e-mail…). It is your backup:
 the app has no cloud, by design.</li>
 <li><kbd>Import site (.zip)…</kbd> recreates the site on another device, even
-between iPhone and Android.</li>
+between iPhone and Android. Importing never overwrites and never merges: it
+always creates a new site next to yours, with “(imported)” in the name if you
+already have one with the same name.</li>
 </ol>
 <p class="nota">⚠️ <kbd>Delete site…</kbd> removes the site with everything in
 it and is <strong>irreversible</strong>: export a ZIP first if in doubt.</p>
 
-<h2>Free and Pro</h2>
-<table>
-<tr><th></th><th>Free</th><th>Pro</th></tr>
-<tr><td>Sites</td><td>1</td><td>Unlimited</td></tr>
-<tr><td>GNSS</td><td>Internal GPS, MFi receivers</td><td>+ BLE/NMEA, NTRIP</td></tr>
-<tr><td>Reports</td><td>Daily, watermarked</td><td>All, no watermark</td></tr>
-<tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX with logo and photos, GeoJSON</td></tr>
-<tr><td>Drawings</td><td>Tracing sheet, zoom, text boxes, scale, points with elevation, <strong>hatches, line styles, background opacity</strong></td><td>+ Export with legend, SVG/DXF</td></tr>
-<tr><td>Automatic tracing</td><td>—</td><td>By tap and “Trace everything”</td></tr>
-<tr><td>NMEA recordings</td><td>Re-reading and sharing the files</td><td>The recording (needs the external antenna)</td></tr>
-<tr><td>Level books</td><td>✓</td><td>✓</td></tr>
-<tr><td>Photo record</td><td>—</td><td>Sharing and records in reports</td></tr>
-<tr><td>Finds</td><td>Register, CSV and HTML</td><td>+ appendix in the reports</td></tr>
-<tr><td>Virtual scales</td><td>On photos and on drawing sheets</td><td>+ vectors in SVG and DXF</td></tr>
-<tr><td>Count and measure</td><td>—</td><td>On one photo and in batches</td></tr>
-<tr><td>3D Measurement (LiDAR)</td><td>—</td><td>On devices with the scanner</td></tr>
-<tr><td>Voice dictation</td><td>✓</td><td>✓</td></tr>
-<tr><td>Report languages</td><td>17</td><td>17</td></tr>
-</table>
-<p>Pro is a monthly or yearly auto-renewing subscription, or a one-time
-lifetime purchase. Manage or cancel it any time in your Apple Account
-settings. When a free trial is due to you, the Pro screen writes it before the
-purchase (“7 days free, then …”): if it isn't written there, it isn't due to
-you — the app doesn't promise a trial that the purchase then won't honour.</p>
+<h2>Free</h2>
+<p>Giornale di Scavo is <strong>free and complete</strong>: every feature
+described in this guide is included, with no subscriptions, no in-app purchases
+and no watermark, and with unlimited sites.</p>
 
 <h2>Troubleshooting</h2>
 
@@ -478,19 +495,14 @@ wait for a position, then shoot. If the location permission is denied, photos
 are saved without coordinates.</p></details>
 
 <details><summary>Photos or the logo are missing from a report</summary>
-<p>Photos in reports, the logo and the custom header are part of Pro and apply
-to DOCX and PDF. The free daily report carries a watermark and does not include
-photos.</p></details>
+<p>Check that <kbd>Include photos and drawings in the report</kbd> is on and
+that the logo is chosen in <kbd>Header and logo</kbd>: both apply to the PDF and
+to the DOCX.</p></details>
 
 <details><summary>I deleted a site by mistake</summary>
 <p>Deletion is final: the data cannot be recovered (there is no cloud). If you
 exported a ZIP earlier, import it to restore the site as of that date. Tip:
 export a ZIP at the end of each day.</p></details>
-
-<details><summary>I bought Pro but it's still locked</summary>
-<p>Tap <kbd>Restore purchases</kbd> on the Pro screen, using the same Apple
-Account as the purchase. If you changed device, restoring recovers the
-subscription or the lifetime licence.</p></details>
 
 <details><summary>“Fetch” is greyed out, or says “Weather unavailable”</summary>
 <ul>
@@ -590,8 +602,7 @@ the library get neither, because the shooting data is missing.</p></details>
 <details><summary>“Count and measure” doesn't appear on the photo</summary>
 <p>The command lives only on the photos of a <strong>find</strong> — that is
 where outlining fragments makes sense — and it opens from the photo's detail
-view, not from the record, which only shows the thumbnails. If the tap opens
-the Pro screen, that is the feature: it is part of Pro, like tracing.</p></details>
+view, not from the record, which only shows the thumbnails.</p></details>
 
 <details><summary>The scale bar isn't found</summary>
 <ul>

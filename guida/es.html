@@ -32,6 +32,7 @@ de las páginas.</p>
 <li><b>Topografía</b>Captura puntos GNSS; comprueba una base antes si usas RTK</li>
 <li><b>Fotos</b>Dispara desde <kbd>Multimedia</kbd>: las coordenadas se añaden solas</li>
 <li><b>Dibujos</b>Calca la sección o la planta sobre una foto (papel vegetal digital)</li>
+<li><b>UE</b>Actualiza las fichas de las UE excavadas y sus relaciones: <kbd>UE</kbd></li>
 <li><b>Materiales</b>Con las cajas delante, registra lo que ha salido: <kbd>Obra</kbd> → <kbd>Materiales</kbd></li>
 <li><b>Tarde</b>Desde <kbd>Informes</kbd>, genera el diario: un PDF listo para enviar</li>
 </ol>
@@ -51,7 +52,7 @@ nombre: la lista está bajo el título «Tus yacimientos», y con
 <em>Bluetooth</em> (solo si usas un receptor externo).</li>
 </ol>
 
-<h2>Las cinco pestañas</h2>
+<h2>Las seis pestañas</h2>
 
 <h3>📓 Diario</h3>
 <ol class="passi">
@@ -68,6 +69,43 @@ otra medida. Lo que escribes a mano siempre gana.</li>
 unos 11 metros, y en los informes la línea aparece en el idioma del informe.</li>
 </ol>
 <div class="schermate"><figure><img src="img/es/01-diario.webp" alt="La lista de jornadas" width="640" height="1391" loading="lazy"><figcaption>La lista de jornadas</figcaption></figure><figure><img src="img/es/02-giornata.webp" alt="La página de una jornada" width="640" height="1391" loading="lazy"><figcaption>La página de una jornada</figcaption></figure></div>
+
+<h3>🧱 UE — fichas estratigráficas</h3>
+<p>Una ficha por cada unidad estratigráfica, con las relaciones entre las UE
+registradas como enlaces: de aquí salen las fichas de UE de la documentación y
+la matriz de Harris.</p>
+<ol class="passi">
+<li>En la pestaña <kbd>UE</kbd> toca <kbd>+</kbd>: la app propone el número
+siguiente (lo puedes cambiar) y pide tipo y definición. El número es único en
+el yacimiento; más tarde lo cambias con <kbd>Cambiar</kbd>, y las cajas con esa
+procedencia lo siguen.</li>
+<li>La ficha recoge identificación (tipo, definición, área o sector,
+cuadrícula), dimensiones y cotas (longitud, anchura, potencia, cota mínima y
+máxima), descripción (color, consistencia, componentes), interpretación,
+datación, fechas de apertura y cierre y responsable. Se guarda sola mientras
+escribes.</li>
+<li>Junto a definición, color, consistencia, componentes, interpretación y
+datación está el botón del <strong>tesauro</strong> (el librito): elige del
+léxico estándar o de tus propios términos, y la ficha queda uniforme entre
+quienes excavan. En los componentes se puede elegir más de uno. Si la palabra
+que buscas no está, la hoja propone añadirla. Tus términos valen para todos los
+yacimientos y se gestionan desde <kbd>Tesauro</kbd>, en el menú ⋯ de la pestaña
+UE.</li>
+<li><kbd>Añadir relación</kbd>: elige la relación (cubre, corta, rellena, se
+apoya en, se une a, igual a, y sus inversas) y escribe el número de la otra UE.
+La relación se registra una sola vez y aparece invertida en la otra ficha: si la
+101 cubre la 102, en la 102 lees «cubierta por 101». Si la otra UE aún no tiene
+ficha, se crea vacía. Una relación que contradice la secuencia ya registrada se
+rechaza, con la explicación.</li>
+<li>La sección de materiales muestra las cajas cuya procedencia nombra la UE
+(«UE 102», «UEM 12»): no hay nada que enlazar a mano.
+<kbd>Añadir material</kbd> abre la ficha del material con la procedencia ya
+escrita.</li>
+<li>Desde el menú ⋯, <kbd>Matriz de Harris</kbd> dibuja la secuencia a partir de
+las relaciones: la UE más reciente arriba, las UE iguales o unidas en un solo
+recuadro, los cortes discontinuos, las murarias sobre fondo gris. Se amplía con
+dos dedos y se comparte como imagen.</li>
+</ol>
 
 <h3>📍 Topografía</h3>
 <ol class="passi">
@@ -88,7 +126,7 @@ créalas, y abre la <kbd>Comprobación en vivo</kbd> para vigilar los residuos
 base de partida, con el control del error de cierre. Los puntos nivelados
 entran en el yacimiento con su cota, igual que los GNSS.</li>
 <li>En los dispositivos con escáner <strong>LiDAR</strong> (iPhone Pro del 12 en
-adelante, iPad Pro) aparece <kbd>Medición 3D</kbd> <span class="pro">PRO</span>:
+adelante, iPad Pro) aparece <kbd>Medición 3D</kbd>:
 encuadra despacio hasta que la superficie se reconstruya, luego toca los dos
 puntos que quieres medir y lee la distancia, la distancia horizontal y el
 desnivel. Con <kbd>Anclar a una base</kbd> eliges una base de cota conocida y
@@ -100,7 +138,7 @@ declara escribiendo «LiDAR ±cm»: sirve para un desnivel o una longitud tomada
 deprisa sobre el terreno, y no sustituye al GNSS ni al nivel. En los
 dispositivos sin escáner el botón no está en absoluto.</li>
 <li>Bajo el panel están las <kbd>Grabaciones NMEA</kbd>: el flujo bruto del
-receptor externo <span class="pro">PRO</span> acaba en un archivo por sí solo
+receptor externo acaba en un archivo por sí solo
 — la grabación arranca cuando enciendes la antena y se cierra cuando la apagas,
 sin que tengas que acordarte. Sirve para releer una jornada dudosa o para
 entregar el bruto a quien hace el posproceso. Los archivos se comparten y se
@@ -124,7 +162,7 @@ UE) la indicación nadir con la dirección del borde superior. Si la brújula
 está perturbada, la app lo indica.</li>
 <li>Toca una foto para ponerle título y notas (p. ej. «UE 102 desde el
 norte»).</li>
-<li><kbd>Compartir ficha</kbd> <span class="pro">PRO</span> genera la
+<li><kbd>Compartir ficha</kbd> genera la
 <strong>ficha fotográfica de documentación</strong>: la foto con los datos de
 la toma debajo (yacimiento, número, fecha y hora, coordenadas, cota,
 dirección), una vista satélite con el marcador y el cono de toma, la barra de
@@ -149,7 +187,7 @@ norte nace ya orientada según el acimut registrado, y el informe lo declara; si
 la giras tú, la indicación pasa a «declarada». <kbd>Compartir con escala</kbd>
 saca una copia de la foto con encima lo que has puesto —
 <kbd>Compartir foto</kbd> sigue siendo el original desnudo, con su EXIF.</li>
-<li><kbd>Procesar en serie</kbd> <span class="pro">PRO</span> (menú de arriba en
+<li><kbd>Procesar en serie</kbd> (menú de arriba en
 <kbd>Multimedia</kbd>) coge un grupo de fotos de la fototeca y las pasa todas
 por contar y medir, una tras otra: cada foto se convierte en una foto del
 yacimiento con la fecha de la toma, y cada una tendrá su <strong>ficha de
@@ -164,8 +202,7 @@ confirmas.</li>
 <h3>🧮 Contar y medir (en Multimedia)</h3>
 <p>La bandeja de fragmentos fotografiada desde arriba, y la app que los cuenta y
 los mide sola. La función vive en la foto de un <strong>material</strong>: la
-abres desde su ficha y tocas <kbd>Contar y medir</kbd>
-<span class="pro">PRO</span>.</p>
+abres desde su ficha y tocas <kbd>Contar y medir</kbd>.</p>
 <ol class="passi">
 <li>Primero la escala. La app busca sola la <strong>escala gráfica</strong> en
 la foto: si la encuentra te dice cuántas casillas ha leído, tú declaras cuánto
@@ -222,7 +259,7 @@ para volver a 1×). Si la foto te tapa el trazo, elige <kbd>Opacidad del fondo�
 también en PDF, DOCX, PNG y en <kbd>Exportar con leyenda</kbd>.</li>
 <li>Todo lo demás está bajo <kbd>Herramientas</kbd> (la llave inglesa de la
 barra), que es el índice de los siete modos: <kbd>Cuadro de texto</kbd>,
-<kbd>Calco</kbd> <span class="pro">PRO</span>, <kbd>Escala de la foto</kbd>,
+<kbd>Calco</kbd>, <kbd>Escala de la foto</kbd>,
 <kbd>Punto con cota</kbd>, <kbd>Trama</kbd>, <kbd>Estilo de línea</kbd> y
 <kbd>Escala virtual</kbd>. Se
 mantiene <strong>uno solo</strong> a la vez: la marca dice cuál, y mientras
@@ -233,12 +270,12 @@ una foto de fondo.</li>
 <li>Con <kbd>Cuadro de texto</kbd> pones las etiquetas (p. ej. «UE 1002»): se
 mueven, se redimensionan con el pellizco y tienen cuatro tipos de letra entre
 los que elegir.</li>
-<li>El <kbd>Calco</kbd> <span class="pro">PRO</span> reconoce el contorno del
+<li>El <kbd>Calco</kbd> reconoce el contorno del
 objeto que tocas (una piedra, el límite de un estrato) y lo convierte en trazo:
 el color, el grosor y el estilo de la línea se cambian sin salir del modo, y
 los contornos salen lisos en vez de escalonados. Todo ocurre en el dispositivo,
 sin red.</li>
-<li>Dentro del calco, <kbd>Calcar todo</kbd> <span class="pro">PRO</span>
+<li>Dentro del calco, <kbd>Calcar todo</kbd>
 recorre él solo toda la foto. En la hoja de arranque decides el aspecto —
 <kbd>Solo contornos</kbd>, o una trama y quizá un <kbd>Velo de color</kbd> — y
 pulsas <kbd>Iniciar</kbd>: la barra dice por dónde va, y tarda algunas decenas
@@ -276,14 +313,14 @@ siguen siendo en PDF, DOCX, PNG, SVG y DXF.</li>
 métricas de las fotos: escala gráfica, jalón, cuadrado, cruz, flecha del norte y
 medidas a dos toques. Los tipos métricos exigen que la lámina tenga escala, es
 decir la <kbd>Escala de la foto</kbd>: sin una distancia conocida la app te lo
-explica en vez de dibujar. En SVG y DXF <span class="pro">PRO</span> estos
+explica en vez de dibujar. En SVG y DXF estos
 elementos salen como <strong>vectores</strong>, en su propia capa, y la medida
 leída con la regla del SIG coincide con la etiqueta.</li>
-<li><kbd>Exportar con leyenda</kbd> <span class="pro">PRO</span>: la imagen
+<li><kbd>Exportar con leyenda</kbd>: la imagen
 sale con una franja blanca debajo — barra de escala (si hay escala), flecha
 del norte para las fotos tomadas en vertical, «vista desde» para las
 frontales.</li>
-<li><kbd>Exportar vectorial</kbd> <span class="pro">PRO</span>: SVG para el
+<li><kbd>Exportar vectorial</kbd>: SVG para el
 dibujo, o <strong>DXF</strong> para el SIG. Con al menos dos puntos con cota
 y coordenadas sobre una foto tomada en vertical, el DXF sale
 <strong>georreferenciado en UTM</strong> y en QGIS se coloca solo en el
@@ -308,9 +345,7 @@ con el número de líneas ya registradas escrito bajo el nombre.</li>
 <h3>📦 Materiales (en la Obra)</h3>
 <p>El momento de verdad no es la cámara: es sentarse al final de la jornada con
 las cajas delante y despacharlas una tras otra, cansado y con las manos sucias.
-Todo aquí está hecho para ese momento — y es <strong>gratis</strong>, como
-registrar los puntos: entregar lo que se ha excavado es documentación de
-base.</p>
+Todo aquí está hecho para ese momento.</p>
 <ol class="passi">
 <li><kbd>Obra</kbd> → <kbd>Materiales</kbd> → <kbd>+</kbd>. La ficha se abre ya
 con la fecha de hoy y con la <strong>última procedencia usada</strong>: de la
@@ -344,23 +379,23 @@ nunca se reescribe solo.</li>
 
 <h3>📄 Informes</h3>
 <ol class="passi">
-<li>Elige el tipo: <strong>diario</strong> (gratis, con marca de agua),
+<li>Elige el tipo: <strong>diario</strong>,
 <strong>semanal</strong>, <strong>mensual</strong> o <strong>final</strong>
-con apéndices completos <span class="pro">PRO</span>.</li>
+con apéndices completos.</li>
 <li>Elige el idioma del informe entre <strong>diecisiete</strong>, independiente
 del idioma de la app: el informe puede salir en alemán aunque uses la app en
 español.</li>
-<li>Genera el PDF, o exporta DOCX con logotipo y fotos
-<span class="pro">PRO</span>, CSV de los puntos, GeoJSON para QGIS
-<span class="pro">PRO</span>.</li>
-<li>Al final está <kbd>Exportación de materiales (todo el yacimiento)</kbd>,
-gratuita: <kbd>Exportar CSV de materiales</kbd> para la hoja de cálculo, y
+<li>Genera el PDF, o exporta DOCX con logotipo y fotos, CSV de los puntos, GeoJSON para QGIS.</li>
+<li>Al final está <kbd>Exportación de materiales (todo el yacimiento)</kbd>: <kbd>Exportar CSV de materiales</kbd> para la hoja de cálculo, y
 <kbd>Exportar HTML de materiales</kbd> para una tabla con las miniaturas que se
 abre en cualquier navegador sin red. Encabezados, clases, unidades y estados
 salen en el idioma elegido para el informe; lo que has escrito tú se queda como
 lo escribiste. En el informe final los materiales tienen su propio apéndice, por
 procedencia.</li>
-<li>Con las fotos en los informes activadas, puedes elegir <kbd>Fichas fotográficas en lugar de las fotos</kbd> <span class="pro">PRO</span>: cada
+<li>Las UE entran en los informes: las abiertas y cerradas en el periodo en el
+diario, el semanal y el mensual; en el informe final está el apéndice con todas
+las fichas y la matriz de Harris.</li>
+<li>Con las fotos en los informes activadas, puedes elegir <kbd>Fichas fotográficas en lugar de las fotos</kbd>: cada
 foto entra en el PDF y el DOCX como ficha de documentación completa con
 datos y mapa, en el idioma del informe.</li>
 </ol>
@@ -372,8 +407,8 @@ El GPS interno queda siempre disponible como respaldo.</p>
 <ol class="passi">
 <li>Enciende el receptor y activa el Bluetooth del teléfono.</li>
 <li>En <kbd>Topografía</kbd> elige la fuente de posición: <em>GNSS externo
-(BLE/NMEA)</em> <span class="pro">PRO</span> y selecciona tu receptor en la
-lista. También se admiten receptores MFi (gratis) y receptores que emiten NMEA
+(BLE/NMEA)</em> y selecciona tu receptor en la
+lista. También se admiten receptores MFi y receptores que emiten NMEA
 por red.</li>
 <li>Para las correcciones RTK configura el <strong>NTRIP</strong>: dirección
 del caster, puerto, mountpoint, usuario y contraseña (se guardan en el llavero
@@ -393,40 +428,22 @@ no un manual de firmware.</p>
 <h2>Copia de seguridad e intercambio</h2>
 <ol class="passi">
 <li>En el menú del yacimiento toca <kbd>Exportar yacimiento (.zip)</kbd>:
-dentro va todo — diario, puntos, fotos, dibujos, horas, bases.</li>
+dentro va todo — diario, puntos, fotos, dibujos, horas, bases, materiales y fichas de UE.</li>
 <li>Guarda el ZIP donde quieras (Archivos, Drive, correo…). Es tu copia de
 seguridad: la app no tiene nube, por diseño.</li>
 <li><kbd>Importar yacimiento (.zip)…</kbd> recrea el yacimiento en otro
-dispositivo, incluso entre iPhone y Android.</li>
+dispositivo, incluso entre iPhone y Android. La importación nunca sobrescribe
+ni fusiona: crea siempre un yacimiento nuevo junto a los tuyos, con
+«(importado)» en el nombre si ya tienes uno igual.</li>
 </ol>
 <p class="nota">⚠️ <kbd>Eliminar yacimiento…</kbd> borra el yacimiento con todo
 su contenido y es <strong>irreversible</strong>: si dudas, exporta antes un
 ZIP.</p>
 
-<h2>Gratis y Pro</h2>
-<table>
-<tr><th></th><th>Gratis</th><th>Pro</th></tr>
-<tr><td>Yacimientos</td><td>1</td><td>Ilimitados</td></tr>
-<tr><td>GNSS</td><td>GPS interno, receptores MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
-<tr><td>Informes</td><td>Diario con marca de agua</td><td>Todos, sin marca de agua</td></tr>
-<tr><td>Exportación</td><td>PDF, CSV</td><td>+ DOCX con logotipo y fotos, GeoJSON</td></tr>
-<tr><td>Dibujos</td><td>Papel vegetal, zoom, cuadros de texto, escala, puntos con cota, <strong>tramas, estilos de línea, opacidad del fondo</strong></td><td>+ Exportar con leyenda, SVG/DXF</td></tr>
-<tr><td>Calco automático</td><td>—</td><td>Al toque y «Calcar todo»</td></tr>
-<tr><td>Grabaciones NMEA</td><td>Relectura y compartición de los archivos</td><td>La grabación (hace falta la antena externa)</td></tr>
-<tr><td>Libretas de nivelación</td><td>✓</td><td>✓</td></tr>
-<tr><td>Ficha fotográfica</td><td>—</td><td>Compartir y fichas en los informes</td></tr>
-<tr><td>Materiales</td><td>Registro, CSV y HTML</td><td>+ apéndice en los informes</td></tr>
-<tr><td>Escalas virtuales</td><td>En las fotos y en las láminas</td><td>+ vectores en SVG y DXF</td></tr>
-<tr><td>Contar y medir</td><td>—</td><td>En una foto y en serie</td></tr>
-<tr><td>Medición 3D (LiDAR)</td><td>—</td><td>En los dispositivos con escáner</td></tr>
-<tr><td>Dictado por voz</td><td>✓</td><td>✓</td></tr>
-<tr><td>Idiomas de informe</td><td>17</td><td>17</td></tr>
-</table>
-<p>Pro es una suscripción mensual o anual con renovación automática, o una
-compra única de por vida. Se gestiona y cancela en los ajustes de la cuenta de
-Apple. Cuando te corresponde un periodo de prueba gratuito, la pantalla Pro te
-lo escribe antes de la compra («7 días gratis, luego …»): si no lo pone, no te
-corresponde — la app no promete una prueba que luego la compra no cumple.</p>
+<h2>Gratuita</h2>
+<p>Giornale di Scavo es <strong>gratuita y completa</strong>: todas las
+funciones descritas en esta guía están incluidas, sin suscripciones, sin compras
+dentro de la app y sin marca de agua, con yacimientos ilimitados.</p>
 
 <h2>Solución de problemas</h2>
 
@@ -489,19 +506,14 @@ posición; después dispara. Si el permiso de ubicación está denegado, las fot
 se guardan sin coordenadas.</p></details>
 
 <details><summary>En el informe faltan fotos o el logotipo</summary>
-<p>Las fotos en los informes, el logotipo y el encabezado personalizado son de
-Pro y valen para DOCX y PDF. El informe diario gratuito lleva marca de agua y
-no incluye fotos.</p></details>
+<p>Comprueba que esté activado <kbd>Incluir fotos y dibujos en el informe</kbd>
+y que el logotipo esté elegido en <kbd>Encabezado y logotipo</kbd>: valen tanto
+para el PDF como para el DOCX.</p></details>
 
 <details><summary>He borrado un yacimiento por error</summary>
 <p>El borrado es definitivo: los datos no se pueden recuperar (no hay nube).
 Si exportaste antes un ZIP, impórtalo para restaurar el yacimiento a esa
 fecha. Consejo: exporta un ZIP al final de cada jornada.</p></details>
-
-<details><summary>He comprado Pro pero sigue bloqueado</summary>
-<p>Toca <kbd>Restaurar compras</kbd> en la pantalla Pro, con la misma cuenta de
-Apple de la compra. Si cambiaste de dispositivo, la restauración recupera la
-suscripción o la licencia de por vida.</p></details>
 
 <details><summary>«Obtener» está apagado, o dice «Meteo no disponible»</summary>
 <ul>
@@ -602,8 +614,7 @@ datos de la toma.</p></details>
 <details><summary>«Contar y medir» no aparece en la foto</summary>
 <p>El comando vive solo en las fotos de un <strong>material</strong> — es ahí
 donde tiene sentido recortar fragmentos — y se abre desde el detalle de la foto,
-no desde la ficha, que solo muestra las miniaturas. Si el toque abre la pantalla
-Pro, la función es esa: forma parte de Pro, como el calco.</p></details>
+no desde la ficha, que solo muestra las miniaturas.</p></details>
 
 <details><summary>No se encuentra la escala gráfica</summary>
 <ul>

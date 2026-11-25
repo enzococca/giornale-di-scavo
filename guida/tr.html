@@ -31,6 +31,7 @@ sonunda raporlar bu sayfalardan kendi kendine oluşur.</p>
 <li><b>Ölçüm</b>GNSS noktalarını al; RTK kullanıyorsan önce bir röperi kontrol et</li>
 <li><b>Fotoğraf</b><kbd>Medya</kbd>'dan çek: koordinatlar kendiliğinden eklenir</li>
 <li><b>Çizim</b>Kesiti ya da planı bir fotoğraf üzerine çiz (dijital “aydınger”)</li>
+<li><b>SB</b>Kazılan SB’lerin kartlarını ve ilişkilerini güncelle: <kbd>SB</kbd></li>
 <li><b>Buluntular</b>Kasalar önündeyken çıkanları kaydet: <kbd>Şantiye</kbd> → <kbd>Buluntular</kbd></li>
 <li><b>Akşam</b><kbd>Raporlar</kbd> sekmesinden günlük raporu oluştur: gönderilmeye hazır PDF</li>
 </ol>
@@ -49,7 +50,7 @@ verilerini gösterir. Alan değiştirmek için ada yeniden dokun: liste
 <em>Bluetooth</em> (yalnızca harici alıcı kullanıyorsan).</li>
 </ol>
 
-<h2>Beş sekme</h2>
+<h2>Altı sekme</h2>
 
 <h3>📓 Günlük</h3>
 <ol class="passi">
@@ -66,6 +67,40 @@ ekler. Elle yazdığın her zaman üstün gelir.</li>
 çıkar; raporlarda satır raporun dilinde görünür.</li>
 </ol>
 <div class="schermate"><figure><img src="img/tr/01-diario.webp" alt="Günlerin listesi" width="640" height="1391" loading="lazy"><figcaption>Günlerin listesi</figcaption></figure><figure><img src="img/tr/02-giornata.webp" alt="Bir günün sayfası" width="640" height="1391" loading="lazy"><figcaption>Bir günün sayfası</figcaption></figure></div>
+
+<h3>🧱 SB — stratigrafik birim kartları</h3>
+<p>Her stratigrafik birim için bir kart, SB’ler arasındaki ilişkiler de bağlantı
+olarak kayıtlı: belgelemenin SB kartları ve Harris matrisi buradan çıkar.</p>
+<ol class="passi">
+<li><kbd>SB</kbd> sekmesinde <kbd>+</kbd>’ya dokun: uygulama sıradaki numarayı
+önerir (değiştirebilirsin) ve türü ile tanımı sorar. Numara kazı alanında
+tektir; sonradan <kbd>Değiştir</kbd> ile değiştirirsin ve o geliş yerini taşıyan
+kasalar da onu izler.</li>
+<li>Kart; tanımlamayı (tür, tanım, alan ya da sektör, plankare), boyutları ve
+yükseklikleri (uzunluk, genişlik, kalınlık, en düşük ve en yüksek kot),
+betimlemeyi (renk, sertlik, bileşenler), yorumu, tarihlemeyi, açılış ve kapanış
+tarihlerini ve sorumluyu toplar. Sen yazarken kendiliğinden kaydedilir.</li>
+<li>Tanım, renk, sertlik, bileşenler, yorum ve tarihlemenin yanında
+<strong>eş anlamlılar sözlüğü</strong> düğmesi (küçük kitap) vardır: standart
+sözcük dağarcığından ya da kendi terimlerinden seçersin, ve kart kazan herkes
+arasında tutarlı kalır. Bileşenlerde birden fazlası seçilir. Aradığın sözcük
+yoksa sayfa onu eklemeyi önerir. Kendi terimlerin bütün kazı alanlarında
+geçerlidir ve SB sekmesinin ⋯ menüsündeki <kbd>Eş anlamlılar sözlüğü</kbd>’nden
+yönetilir.</li>
+<li><kbd>İlişki ekle</kbd>: ilişkiyi seç (örter, keser, doldurur, dayanır,
+bağlantılı, aynı ve bunların tersleri) ve öbür SB’nin numarasını yaz. İlişki
+yalnızca bir kez kaydedilir ve öbür kartta ters çevrilmiş olarak görünür: 101,
+102’yi örtüyorsa 102’de “101 tarafından örtülür” okursun. Öbür SB’nin henüz kartı
+yoksa boş olarak oluşturulur. Önceden kaydedilmiş sırayla çelişen bir ilişki,
+açıklamasıyla birlikte reddedilir.</li>
+<li>Buluntular bölümü, geliş yeri SB’yi anan kasaları gösterir (“SB 102”,
+“DSB 12”): elle bağlanacak bir şey yoktur. <kbd>Buluntu ekle</kbd>, geliş yeri
+önceden yazılmış buluntu fişini açar.</li>
+<li>⋯ menüsünden <kbd>Harris matrisi</kbd> sırayı ilişkilerden çizer: en geç SB
+en üstte, aynı ya da bağlantılı SB’ler tek bir kutuda, kesikler kesik çizgili,
+duvar SB’leri gri zemin üzerinde. İki parmakla büyütülür ve görüntü olarak
+paylaşılır.</li>
+</ol>
 
 <h3>📍 Ölçüm</h3>
 <ol class="passi">
@@ -87,7 +122,7 @@ istasyonlar, geri ve ileri okumalar, bir başlangıç röperinden hesaplanan
 yükseklikler ve kapanma kontrolü. Nivelmanla bulunan noktalar, GNSS noktaları
 gibi kendi yükseklikleriyle kazı alanına girer.</li>
 <li><strong>LiDAR</strong> tarayıcısı olan cihazlarda (12'den itibaren
-iPhone Pro, iPad Pro) <kbd>3D Ölçüm</kbd> <span class="pro">PRO</span> görünür:
+iPhone Pro, iPad Pro) <kbd>3D Ölçüm</kbd> görünür:
 yüzey yeniden oluşana kadar yavaşça gez, sonra ölçmek istediğin iki noktaya
 dokun ve mesafeyi, yatay mesafeyi ve yükseklik farkını oku.
 <kbd>Röpere bağla</kbd> ile yüksekliği bilinen bir röper seçip onun
@@ -99,7 +134,7 @@ bunu “LiDAR ±cm” yazarak açıkça söyler: bir yükseklik farkı ya da yer
 çabucak alınmış bir uzunluk için işe yarar, ve ne GNSS'in ne de nivonun yerini
 tutar. Tarayıcısı olmayan cihazlarda düğme hiç yoktur.</li>
 <li>Panonun altında <kbd>NMEA kayıtları</kbd> yer alır: harici alıcının
-<span class="pro">PRO</span> ham akışı kendiliğinden dosyaya yazılır — kayıt
+ham akışı kendiliğinden dosyaya yazılır — kayıt
 anteni açtığında başlar, kapattığında kapanır; senin bunu hatırlaman gerekmez.
 Kuşkulu bir günü yeniden okumak ya da ham veriyi son işlemeyi yapacak kişiye
 vermek için işe yarar. Dosyalar paylaşılır ve silinir, yalnızca sürmekte olan
@@ -122,7 +157,7 @@ tepeden çekilen kareler için (plan, bir US'nin tabanı) üst kenarın yönüyl
 birlikte düşey çekim ibaresi çıkar. Pusula etkileniyorsa uygulama bunu
 söyler.</li>
 <li>Başlık ve notlar için bir fotoğrafa dokun (örn. “US 102 kuzeyden”).</li>
-<li><kbd>Fotoğraf fişini paylaş</kbd> <span class="pro">PRO</span>
+<li><kbd>Fotoğraf fişini paylaş</kbd>
 <strong>fotoğraf belgeleme fişini</strong> üretir: fotoğrafın altında çekim
 verileri (kazı alanı, numara, tarih ve saat, koordinatlar, yükseklik, yön),
 iğnesi ve çekim konisiyle bir uydu görüntüsü, haritanın ölçek çubuğu ve kuzey
@@ -146,7 +181,7 @@ kuzey oku, kaydedilmiş azimuta göre zaten dönmüş doğar ve rapor bunu belir
 oku sen çevirirsen ibare “beyan edilen” olur. <kbd>Ölçekle paylaş</kbd>
 fotoğrafın üzerine koyduklarınla birlikte bir kopyasını çıkarır —
 <kbd>Fotoğrafı paylaş</kbd> ise EXIF'iyle çıplak özgün dosya olarak kalır.</li>
-<li><kbd>Seri işle</kbd> <span class="pro">PRO</span> (<kbd>Medya</kbd>'da
+<li><kbd>Seri işle</kbd> (<kbd>Medya</kbd>'da
 yukarıdaki menü) kitaplıktan bir grup fotoğraf alır ve hepsini birbiri ardına
 say ve ölç işleminden geçirir: her fotoğraf, çekim tarihiyle kazı alanının bir fotoğrafı
 olur ve her birinin onaylayacağın <strong>yeni bir buluntu fişi</strong> olur.
@@ -160,7 +195,7 @@ miktarı düzeltir ve onaylarsın.</li>
 <h3>🧮 Say ve ölç (Medya içinde)</h3>
 <p>Yukarıdan fotoğraflanmış bir parça tepsisi, ve onları kendi kendine sayıp
 ölçen bir uygulama. Bir <strong>buluntu</strong> fotoğrafı üzerinde yaşar:
-fotoğrafı fişinden açar ve <kbd>Say ve ölç</kbd> <span class="pro">PRO</span>
+fotoğrafı fişinden açar ve <kbd>Say ve ölç</kbd>
 düğmesine dokunursun.</p>
 <ol class="passi">
 <li>Önce ölçek. Uygulama fotoğraftaki <strong>metrik çubuğu</strong> kendi
@@ -217,7 +252,7 @@ için iki parmakla çift dokunuş). Fotoğraf çizgini örtüyorsa kamera menüs
 getir: solan fotoğraftır, çizim değil. Bu seçim tabakada kalır ve PDF, DOCX,
 PNG ile <kbd>Lejantla dışa aktar</kbd> için de geçerlidir.</li>
 <li>Geri kalan her şey <kbd>Araçlar</kbd> altındadır (çubuktaki İngiliz
-anahtarı); orası yedi kipin dizinidir: <kbd>Metin kutusu</kbd>, <kbd>Çizgi çıkarma</kbd> <span class="pro">PRO</span>, <kbd>Fotoğraf ölçeği</kbd>,
+anahtarı); orası yedi kipin dizinidir: <kbd>Metin kutusu</kbd>, <kbd>Çizgi çıkarma</kbd>, <kbd>Fotoğraf ölçeği</kbd>,
 <kbd>Yükseklikli nokta</kbd>, <kbd>Tarama</kbd>, <kbd>Çizgi stili</kbd> ve
 <kbd>Sanal ölçek</kbd>. Aynı
 anda <strong>yalnızca biri</strong> açık kalır: onay işareti hangisi olduğunu
@@ -226,11 +261,11 @@ işaretli satıra yeniden dokun. Görüntü üzerinde çalışan üç satır (ç
 ölçek, yükseklikli nokta) yalnızca bir arka plan fotoğrafı varsa görünür.</li>
 <li><kbd>Metin kutusu</kbd> ile etiketleri koy (örn. “US 1002”): taşınır,
 parmakla boyutlandırılır ve dört yazı tipi arasından seçilir.</li>
-<li><kbd>Çizgi çıkarma</kbd> <span class="pro">PRO</span> dokunduğun nesnenin
+<li><kbd>Çizgi çıkarma</kbd> dokunduğun nesnenin
 (bir taş, bir tabakanın sınırı) konturunu tanır ve çizgiye dönüştürür: renk,
 kalınlık ve çizgi stili kipten çıkmadan değiştirilir, konturlar da basamaklı
 değil pürüzsüz çıkar. Her şey cihazda olur, ağ gerekmez.</li>
-<li>Çizgi çıkarmanın içinde <kbd>Tümünü çıkar</kbd> <span class="pro">PRO</span>
+<li>Çizgi çıkarmanın içinde <kbd>Tümünü çıkar</kbd>
 bütün fotoğrafı kendi başına dolaşır. Başlangıç sayfasında görünümü seçersin —
 <kbd>Yalnızca konturlar</kbd> ya da bir tarama ve istersen bir <kbd>Renk katmanı</kbd> — ve <kbd>Başlat</kbd>'a basarsın: çubuk nerede olduğunu söyler ve
 birkaç on saniye sürer. Çıkan şey bir <strong>önizlemedir</strong>, çizim değil:
@@ -265,14 +300,14 @@ kalır.</li>
 taşır: cetvel, mira, kare, artı, kuzey oku ve iki dokunuşluk ölçüler. Metrik
 türler tabakanın bir ölçeği olmasını ister, yani <kbd>Fotoğraf ölçeği</kbd>'ni:
 bilinen bir uzaklık olmadan uygulama çizmek yerine açıklama yapar. SVG ile
-DXF'te <span class="pro">PRO</span> bu öğeler kendi katmanlarında
+DXF'te bu öğeler kendi katmanlarında
 <strong>vektör</strong> olarak çıkar, ve CBS'nin cetveliyle okunan ölçü
 etiketle çakışır.</li>
-<li><kbd>Lejantla dışa aktar</kbd> <span class="pro">PRO</span>: görüntü altında
+<li><kbd>Lejantla dışa aktar</kbd>: görüntü altında
 beyaz bir şeritle çıkar — metrik ölçek çubuğu (ölçek varsa), tam tepeden
 çekilmiş fotoğraflar için kuzey oku, cepheden çekilenler için “… yönünden
 görünüm”.</li>
-<li><kbd>Vektörel dışa aktar</kbd> <span class="pro">PRO</span>: çizim için SVG
+<li><kbd>Vektörel dışa aktar</kbd>: çizim için SVG
 ya da CBS için <strong>DXF</strong>. Tam tepeden çekilmiş bir fotoğrafta
 koordinatlı en az iki yükseklikli nokta varsa DXF <strong>UTM'de coğrafi
 referanslı</strong> çıkar ve QGIS'te kendiliğinden dünya üzerine oturur;
@@ -297,8 +332,7 @@ altında kayıtlı satır sayısı yazar.</li>
 <p>Asıl an fotoğraf makinesinin anı değildir: gün sonunda kasalar önünde
 oturup, yorgun ve elleri kirli, onları birer birer kaydetmenin anıdır.
 Buradaki
-her şey o an için yapılmıştır — ve noktaları kaydetmek gibi
-<strong>ücretsizdir</strong>: kazılanı teslim etmek temel belgelemedir.</p>
+her şey o an için yapılmıştır.</p>
 <ol class="passi">
 <li><kbd>Şantiye</kbd> → <kbd>Buluntular</kbd> → <kbd>+</kbd>. Fiş, bugünün
 tarihiyle ve <strong>en son kullanılan geliş yeriyle</strong> açılır: ikinci
@@ -331,23 +365,25 @@ yeniden yazmaz.</li>
 
 <h3>📄 Raporlar</h3>
 <ol class="passi">
-<li>Türü seç: <strong>günlük</strong> (ücretsiz, filigranlı),
+<li>Türü seç: <strong>günlük</strong>,
 <strong>haftalık</strong>, <strong>aylık</strong> ya da eksiksiz ekleriyle
-<strong>sonuç</strong> raporu <span class="pro">PRO</span>.</li>
+<strong>sonuç</strong> raporu.</li>
 <li>Rapor dilini <strong>on yedi</strong> dil arasından seç; uygulamanın
 dilinden bağımsızdır: uygulamayı Türkçe kullanırken rapor Almanca
 çıkabilir.</li>
-<li>PDF oluştur ya da logo ve fotoğraflarla DOCX <span class="pro">PRO</span>,
-noktaların CSV'sini, QGIS için GeoJSON <span class="pro">PRO</span> dışa
+<li>PDF oluştur ya da logo ve fotoğraflarla DOCX,
+noktaların CSV'sini, QGIS için GeoJSON dışa
 aktar.</li>
-<li>En altta, ücretsiz olan
+<li>En altta
 <kbd>Buluntuları dışa aktar (tüm kazı alanı)</kbd> vardır: hesap tablosu için
 <kbd>Buluntu CSV'sini dışa aktar</kbd>, ağ olmadan herhangi bir tarayıcıda
 açılan, küçük resimli bir tablo için
 <kbd>Buluntu HTML'sini dışa aktar</kbd>. Başlıklar, türler, birimler ve
 durumlar rapor için seçilen dilde çıkar; senin yazdığın ise yazdığın gibi
 kalır. Sonuç raporunda buluntuların geliş yerine göre kendi eki vardır.</li>
-<li>Raporlarda fotoğraflar açıkken <kbd>Fotoğrafların yerine fotoğraf fişleri</kbd> <span class="pro">PRO</span> seçeneğini kullanabilirsin: her
+<li>SB’ler raporlara girer: günlük, haftalık ve aylık raporda dönem içinde açılıp
+kapanan SB’ler; sonuç raporunda bütün kartları ve Harris matrisini içeren ek.</li>
+<li>Raporlarda fotoğraflar açıkken <kbd>Fotoğrafların yerine fotoğraf fişleri</kbd> seçeneğini kullanabilirsin: her
 fotoğraf, verileri ve haritasıyla eksiksiz bir belgeleme fişi olarak, raporun
 dilinde PDF'e ve DOCX'e girer.</li>
 </ol>
@@ -359,7 +395,7 @@ ulaşır. Dahili GPS her zaman yedek olarak kalır.</p>
 <ol class="passi">
 <li>Alıcıyı aç ve telefonun Bluetooth'unu etkinleştir.</li>
 <li><kbd>Ölçüm</kbd>'de konum kaynağını seç: <em>Harici GNSS (BLE/NMEA)</em>
-<span class="pro">PRO</span> ve alıcını listeden seç. MFi alıcılar (ücretsiz)
+ve alıcını listeden seç. MFi alıcılar
 ve NMEA'yı ağ üzerinden yayınlayanlar da desteklenir.</li>
 <li>RTK düzeltmeleri için <strong>NTRIP</strong>'i ayarla: caster adresi, port,
 mountpoint, kullanıcı ve parola (cihazın anahtar zincirinde kalır). Uygulama
@@ -379,39 +415,21 @@ aygıt yazılımı el kitabı değil.</p>
 <ol class="passi">
 <li>Kazı alanı menüsünden <kbd>Kazı alanını dışa aktar (.zip)</kbd>'a dokun:
 içinde her şey var — günlük, noktalar, fotoğraflar, çizimler, saatler,
-röperler.</li>
+röperler, buluntular ve SB kartları.</li>
 <li>ZIP'i istediğin yerde sakla (Dosyalar, Drive, e-posta…). Yedeğin odur:
 uygulamanın bulutu yok, bilerek.</li>
 <li><kbd>Kazı alanı içe aktar (.zip)…</kbd> kazı alanını başka bir cihazda
-yeniden oluşturur, iPhone ile Android arasında bile.</li>
+yeniden oluşturur, iPhone ile Android arasında bile. İçe aktarma hiçbir zaman üzerine yazmaz ve
+birleştirmez: her zaman seninkilerin yanında yeni bir kazı alanı oluşturur, aynı
+adlı bir alanın varsa adına “(içe aktarılmış)” eklenir.</li>
 </ol>
 <p class="nota">⚠️ <kbd>Kazı alanını sil…</kbd> alanı bütün içeriğiyle siler ve
 <strong>geri alınamaz</strong>: kuşkun varsa önce bir ZIP dışa aktar.</p>
 
-<h2>Ücretsiz ve Pro</h2>
-<table>
-<tr><th></th><th>Ücretsiz</th><th>Pro</th></tr>
-<tr><td>Kazı alanı</td><td>1</td><td>Sınırsız</td></tr>
-<tr><td>GNSS</td><td>Dahili GPS, MFi alıcılar</td><td>+ BLE/NMEA, NTRIP</td></tr>
-<tr><td>Raporlar</td><td>Filigranlı günlük</td><td>Hepsi, filigransız</td></tr>
-<tr><td>Dışa aktarma</td><td>PDF, CSV</td><td>+ logo ve fotoğraflı DOCX, GeoJSON</td></tr>
-<tr><td>Çizimler</td><td>Aydınger, yakınlaştırma, metinler, ölçek, yükseklikli noktalar, <strong>taramalar, çizgi stilleri, arka plan opaklığı</strong></td><td>+ Lejantla dışa aktarma, SVG/DXF</td></tr>
-<tr><td>Otomatik çizgi çıkarma</td><td>—</td><td>Dokunuşla ve “Tümünü çıkar”</td></tr>
-<tr><td>NMEA kayıtları</td><td>Dosyaları yeniden okuma ve paylaşma</td><td>Kayıt (harici anten gerekir)</td></tr>
-<tr><td>Nivelman defteri</td><td>✓</td><td>✓</td></tr>
-<tr><td>Fotoğraf fişi</td><td>—</td><td>Paylaşım ve raporlarda fişler</td></tr>
-<tr><td>Buluntular</td><td>Kayıt, CSV ve HTML</td><td>+ raporlarda ek</td></tr>
-<tr><td>Sanal ölçekler</td><td>Fotoğraflarda ve tabakalarda</td><td>+ SVG ve DXF'te vektörler</td></tr>
-<tr><td>Say ve ölç</td><td>—</td><td>Tek bir fotoğrafta ve seri olarak</td></tr>
-<tr><td>3D Ölçüm (LiDAR)</td><td>—</td><td>Tarayıcısı olan cihazlarda</td></tr>
-<tr><td>Sesli dikte</td><td>✓</td><td>✓</td></tr>
-<tr><td>Rapor dilleri</td><td>17</td><td>17</td></tr>
-</table>
-<p>Pro, kendiliğinden yenilenen aylık ya da yıllık bir aboneliktir; ya da tek
-seferlik, ömür boyu bir satın alım. Apple Kimliği ayarlarından yönetilir ve
-iptal edilir. Ücretsiz bir deneme süresi hakkın varsa Pro ekranı bunu satın
-almadan önce yazar (“7 gün ücretsiz, ardından …”): yazmıyorsa hakkın yok
-demektir — uygulama, satın alımın tutmayacağı bir denemeyi vaat etmez.</p>
+<h2>Ücretsiz</h2>
+<p>Giornale di Scavo <strong>ücretsiz ve eksiksizdir</strong>: bu kılavuzda
+anlatılan bütün işlevler dahildir; abonelik, uygulama içi satın alma ve filigran
+yoktur, kazı alanı sayısı sınırsızdır.</p>
 
 <h2>Sorun giderme</h2>
 
@@ -470,19 +488,14 @@ oturmasını bekle, sonra çek. Konum izni verilmemişse fotoğraflar koordinats
 kaydedilir.</p></details>
 
 <details><summary>Raporda fotoğraflar ya da logo eksik</summary>
-<p>Raporlardaki fotoğraflar, logo ve özel antet Pro'nun parçasıdır ve DOCX ile
-PDF için geçerlidir. Ücretsiz günlük raporda filigran vardır ve fotoğraflar yer
-almaz.</p></details>
+<p><kbd>Fotoğrafları ve çizimleri rapora ekle</kbd> seçeneğinin açık olduğunu
+ve logonun <kbd>Antet ve logo</kbd>’da seçildiğini denetle: ikisi de hem PDF hem
+DOCX için geçerlidir.</p></details>
 
 <details><summary>Yanlışlıkla bir kazı alanı sildim</summary>
 <p>Silme kesindir: veriler geri getirilemez (bulut yoktur). Daha önce dışa
 aktardığın bir ZIP varsa onu içe aktararak alanı o günkü haline döndürürsün.
 Öneri: gün sonunda bir ZIP dışa aktar.</p></details>
-
-<details><summary>Pro'yu satın aldım ama hâlâ kilitli görünüyor</summary>
-<p>Pro ekranında <kbd>Satın alımları geri yükle</kbd>'ye, satın alımı yaptığın
-Apple Kimliğiyle dokun. Cihaz değiştirdiysen geri yükleme aboneliği ya da ömür
-boyu lisansı geri getirir.</p></details>
 
 <details><summary>“Getir” sönük, ya da “Hava durumu kullanılamıyor” diyor</summary>
 <ul>
@@ -581,8 +594,7 @@ ise ikisi de yoktur, çünkü çekim verileri eksiktir.</p></details>
 <details><summary>“Say ve ölç” fotoğrafta görünmüyor</summary>
 <p>Komut yalnızca bir <strong>buluntu</strong> fotoğrafında bulunur —
 parçaların konturunu çıkarmanın anlamlı olduğu yer orasıdır — ve fotoğrafın
-ayrıntısından açılır, yalnızca küçük resimleri gösteren fişten değil. Dokunuş
-Pro ekranını açıyorsa işlev odur: çizgi çıkarma gibi Pro'nun parçasıdır.</p></details>
+ayrıntısından açılır, yalnızca küçük resimleri gösteren fişten değil.</p></details>
 
 <details><summary>Metrik çubuk bulunamıyor</summary>
 <ul>

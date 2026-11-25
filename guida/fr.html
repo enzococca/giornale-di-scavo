@@ -32,6 +32,7 @@ génèrent tout seuls à partir des pages.</p>
 <li><b>Relevé</b>Acquérez les points GNSS ; vérifiez un repère au préalable si vous utilisez le RTK</li>
 <li><b>Photos</b>Photographiez depuis les <kbd>Médias</kbd> : les coordonnées s'attachent automatiquement</li>
 <li><b>Dessins</b>Décalquez la coupe ou le plan sur une photo (calque numérique)</li>
+<li><b>US</b>Mettez à jour les fiches des US fouillées et leurs relations : <kbd>US</kbd></li>
 <li><b>Mobilier</b>Les caisses devant vous, enregistrez ce qui est sorti : <kbd>Chantier</kbd> → <kbd>Mobilier</kbd></li>
 <li><b>Soir</b>Depuis l'onglet <kbd>Rapports</kbd>, générez le rapport journalier : un PDF prêt à envoyer</li>
 </ol>
@@ -50,7 +51,7 @@ nom : la liste se trouve sous le titre « Vos sites », et avec
 (pour la dictée), <em>Bluetooth</em> (seulement si vous utilisez un récepteur externe).</li>
 </ol>
 
-<h2>Les cinq onglets</h2>
+<h2>Les six onglets</h2>
 
 <h3>📓 Journal</h3>
 <ol class="passi">
@@ -69,6 +70,45 @@ main l'emporte toujours.</li>
 langue du rapport.</li>
 </ol>
 <div class="schermate"><figure><img src="img/fr/01-diario.webp" alt="La liste des journées" width="640" height="1391" loading="lazy"><figcaption>La liste des journées</figcaption></figure><figure><img src="img/fr/02-giornata.webp" alt="La page d'une journée" width="640" height="1391" loading="lazy"><figcaption>La page d'une journée</figcaption></figure></div>
+
+<h3>🧱 US — fiches stratigraphiques</h3>
+<p>Une fiche pour chaque unité stratigraphique, avec les relations entre les US
+enregistrées comme des liens : c'est de là que sortent les fiches US de la
+documentation et le diagramme de Harris.</p>
+<ol class="passi">
+<li>Dans l'onglet <kbd>US</kbd>, touchez <kbd>+</kbd> : l'application propose
+le numéro suivant (vous pouvez le changer) et demande le type et la définition.
+Le numéro est unique dans le site ; plus tard, vous le changez avec
+<kbd>Changer</kbd>, et les caisses de cette provenance le suivent.</li>
+<li>La fiche rassemble l'identification (type, définition, zone ou secteur,
+carré), les dimensions et les altitudes (longueur, largeur, épaisseur, altitude
+minimale et maximale), la description (couleur, consistance, composants),
+l'interprétation, la datation, les dates d'ouverture et de fermeture et le
+responsable. Elle s'enregistre toute seule pendant que vous écrivez.</li>
+<li>À côté de la définition, de la couleur, de la consistance, des composants,
+de l'interprétation et de la datation se trouve le bouton du
+<strong>thésaurus</strong> (le petit livre) : choisissez dans le lexique
+standard ou parmi vos propres termes, et la fiche reste homogène entre tous ceux
+qui fouillent. Pour les composants, on peut en choisir plusieurs. Si le mot que
+vous cherchez n'y est pas, la feuille propose de l'ajouter. Vos termes valent
+pour tous les sites et se gèrent depuis <kbd>Thésaurus</kbd>, dans le menu ⋯ de
+l'onglet US.</li>
+<li><kbd>Ajouter une relation</kbd> : choisissez la relation (recouvre, coupe,
+comble, s'appuie contre, liée à, égale à, et leurs inverses) et saisissez le
+numéro de l'autre US. La relation n'est enregistrée qu'une fois et apparaît
+inversée dans l'autre fiche : si la 101 recouvre la 102, dans la 102 vous lisez
+« recouverte par 101 ». Si l'autre US n'a pas encore de fiche, une fiche vide est
+créée. Une relation qui contredit la séquence déjà enregistrée est refusée, avec
+l'explication.</li>
+<li>La section du mobilier montre les caisses dont la provenance nomme l'US
+(« US 102 », « USM 12 ») : il n'y a rien à relier à la main.
+<kbd>Ajouter du mobilier</kbd> ouvre la fiche du lot avec la provenance déjà
+écrite.</li>
+<li>Depuis le menu ⋯, <kbd>Matrice de Harris</kbd> dessine la séquence à partir
+des relations : l'US la plus récente en haut, les US égales ou liées dans un
+seul cadre, les creusements en pointillés, les maçonneries sur fond gris. On
+l'agrandit avec deux doigts et on la partage comme image.</li>
+</ol>
 
 <h3>📍 Relevé</h3>
 <ol class="passi">
@@ -90,8 +130,7 @@ niveau optique : stations, lectures arrière et avant, altitudes calculées à
 partir d'un repère de départ, avec le contrôle de fermeture. Les points nivelés
 entrent dans le site avec leur altitude, comme les points GNSS.</li>
 <li>Sur les appareils dotés d'un scanner <strong>LiDAR</strong> (iPhone Pro à
-partir du 12, iPad Pro) apparaît <kbd>Mesure 3D</kbd>
-<span class="pro">PRO</span> : cadrez lentement jusqu'à ce que la surface se
+partir du 12, iPad Pro) apparaît <kbd>Mesure 3D</kbd> : cadrez lentement jusqu'à ce que la surface se
 reconstruise, puis touchez les deux points à mesurer et lisez la distance, la
 distance horizontale et le dénivelé. Avec <kbd>Ancrer à un repère</kbd> vous
 choisissez un repère d'altitude connue et vous touchez son point au sol : à
@@ -104,7 +143,7 @@ dénivelé ou une longueur prise à la volée sur place, et cela ne remplace ni 
 GNSS ni le niveau. Sur les appareils sans scanner, le bouton n'existe pas du
 tout.</li>
 <li>Sous le panneau se trouvent les <kbd>Enregistrements NMEA</kbd> : le flux
-brut du récepteur externe <span class="pro">PRO</span> part tout seul dans un
+brut du récepteur externe part tout seul dans un
 fichier — l'enregistrement démarre quand vous allumez l'antenne et se ferme
 quand vous l'éteignez, sans que vous ayez à y penser. Cela sert à relire une
 journée douteuse ou à remettre le brut à qui fait le post-traitement. Les
@@ -130,7 +169,7 @@ prises de vue à plomb (plan, fond d'une US), la mention zénithale avec la
 direction du bord haut. Si la boussole est perturbée, l'application le
 signale.</li>
 <li>Touchez une photo pour son titre et ses notes (p. ex. « US 102 depuis le nord »).</li>
-<li><kbd>Partager la fiche</kbd> <span class="pro">PRO</span> génère la
+<li><kbd>Partager la fiche</kbd> génère la
 <strong>fiche photographique de documentation</strong> : la photo avec, en
 dessous, les données de prise de vue (site, numéro, date et heure,
 coordonnées, altitude, direction), une vue satellite avec l'épingle de
@@ -157,7 +196,7 @@ le rapport le déclare ; si c'est vous qui la tournez, la mention devient
 « déclarée ». <kbd>Partager avec l'échelle</kbd> sort une copie de la photo avec
 dessus ce que vous avez posé — <kbd>Partager la photo</kbd> reste l'original nu,
 avec son EXIF.</li>
-<li><kbd>Traiter en série</kbd> <span class="pro">PRO</span> (menu en haut dans
+<li><kbd>Traiter en série</kbd> (menu en haut dans
 les <kbd>Médias</kbd>) prend un groupe de photos de la photothèque et les passe
 toutes au compter et mesurer, l'une après l'autre : chaque photo devient une
 photo du site à la date de la prise de vue, et chacune aura sa <strong>nouvelle
@@ -173,7 +212,7 @@ provenance, la catégorie et la quantité, puis vous confirmez.</li>
 <p>Le plateau de fragments photographié d'en haut, et l'application qui les
 compte et les mesure toute seule. La fonction vit sur la photo d'un <strong>lot
 de mobilier</strong> : vous l'ouvrez depuis sa fiche et vous touchez
-<kbd>Compter et mesurer</kbd> <span class="pro">PRO</span>.</p>
+<kbd>Compter et mesurer</kbd>.</p>
 <ol class="passi">
 <li>L'échelle d'abord. L'application cherche toute seule la <strong>réglette
 graduée</strong> sur la photo : si elle la trouve, elle vous dit combien de
@@ -233,7 +272,7 @@ faut, de 5% à 100% : cela estompe la photo, pas le dessin. Le choix reste sur
 la planche et vaut aussi en PDF, DOCX, PNG et dans <kbd>Exporter avec légende</kbd>.</li>
 <li>Tout le reste se trouve sous <kbd>Outils</kbd> (la clé plate dans la
 barre), qui est l'index des sept modes : <kbd>Zone de texte</kbd>,
-<kbd>Décalque</kbd> <span class="pro">PRO</span>, <kbd>Échelle de la photo</kbd>, <kbd>Point avec altitude</kbd>, <kbd>Trame</kbd>, <kbd>Style de trait</kbd> et <kbd>Échelle virtuelle</kbd>. On n'en tient qu'<strong>un
+<kbd>Décalque</kbd>, <kbd>Échelle de la photo</kbd>, <kbd>Point avec altitude</kbd>, <kbd>Trame</kbd>, <kbd>Style de trait</kbd> et <kbd>Échelle virtuelle</kbd>. On n'en tient qu'<strong>un
 seul</strong> à la fois : la coche dit
 lequel, et tant qu'il est actif le doigt ne dessine pas mais commande cet outil
 — pour revenir à dessiner, touchez de nouveau la ligne cochée. Les trois
@@ -242,12 +281,12 @@ n'apparaissent que si une photo de fond est là.</li>
 <li>Avec <kbd>Zone de texte</kbd>, placez les étiquettes (p. ex. « US 1002 ») :
 elles se déplacent, se redimensionnent avec le pincement, et il y a quatre
 polices au choix.</li>
-<li>Le <kbd>Décalque</kbd> <span class="pro">PRO</span> reconnaît le contour de
+<li>Le <kbd>Décalque</kbd> reconnaît le contour de
 l'objet que vous touchez (une pierre, la limite d'une couche) et le transforme
 en trait : la couleur, l'épaisseur et le style de la ligne se changent sans
 sortir du mode, et les contours sortent lisses au lieu d'être en escalier. Tout
 se passe sur l'appareil, sans réseau.</li>
-<li>Dans le décalque, <kbd>Tout décalquer</kbd> <span class="pro">PRO</span>
+<li>Dans le décalque, <kbd>Tout décalquer</kbd>
 fait le tour de toute la photo tout seul. Dans la feuille de départ, vous
 décidez l'habillage — <kbd>Contours seuls</kbd>, ou une trame et peut-être un
 <kbd>Voile de couleur</kbd> — et vous appuyez sur <kbd>Démarrer</kbd> : la
@@ -287,15 +326,14 @@ ils le restent en PDF, DOCX, PNG, SVG et DXF.</li>
 métriques que sur les photos : réglette, jalon, carré, croix, flèche du nord et
 mesures à deux touches. Les types métriques demandent que la planche ait une
 échelle, c'est-à-dire l'<kbd>Échelle de la photo</kbd> : sans une distance
-connue, l'application explique au lieu de dessiner. En SVG et en DXF
-<span class="pro">PRO</span>, ces éléments sortent en <strong>vecteurs</strong>,
+connue, l'application explique au lieu de dessiner. En SVG et en DXF, ces éléments sortent en <strong>vecteurs</strong>,
 sur leur propre calque, et la mesure lue à la règle du SIG coïncide avec
 l'étiquette.</li>
-<li><kbd>Exporter avec légende</kbd> <span class="pro">PRO</span> :
+<li><kbd>Exporter avec légende</kbd> :
 l'image sort avec une bande blanche en bas — barre métrique (si l'échelle est
 définie), flèche du nord pour les photos prises à plomb, « vue depuis » pour
 les frontales.</li>
-<li><kbd>Exporter en vectoriel</kbd> <span class="pro">PRO</span> : SVG
+<li><kbd>Exporter en vectoriel</kbd> : SVG
 pour le dessin, ou <strong>DXF</strong> pour le SIG. Avec au moins deux
 points cotés avec coordonnées sur une photo à plomb, le DXF sort
 <strong>géoréférencé en UTM</strong> et se positionne tout seul dans le monde
@@ -319,9 +357,7 @@ avec le nombre de lignes déjà enregistrées écrit sous le nom.</li>
 <h3>📦 Mobilier (dans le Chantier)</h3>
 <p>Le vrai moment n'est pas celui de l'appareil photo : c'est celui où l'on
 s'assoit en fin de journée, les caisses devant soi, et où on les dépouille l'une
-après l'autre, fatigué et les mains sales. Tout ici est fait pour ce moment-là —
-et c'est <strong>gratuit</strong>, comme l'enregistrement des points : remettre
-ce que l'on a fouillé fait partie de la documentation de base.</p>
+après l'autre, fatigué et les mains sales. Tout ici est fait pour ce moment-là.</p>
 <ol class="passi">
 <li><kbd>Chantier</kbd> → <kbd>Mobilier</kbd> → <kbd>+</kbd>. La fiche s'ouvre
 déjà avec la date du jour et avec la <strong>dernière provenance
@@ -357,25 +393,25 @@ deux fois — le journal ne se réécrit jamais tout seul.</li>
 
 <h3>📄 Rapports</h3>
 <ol class="passi">
-<li>Choisissez le type : <strong>journalier</strong> (gratuit, avec filigrane),
+<li>Choisissez le type : <strong>journalier</strong>,
 <strong>hebdomadaire</strong>, <strong>mensuel</strong> ou <strong>final</strong>
-avec annexes complètes <span class="pro">PRO</span>.</li>
+avec annexes complètes.</li>
 <li>Choisissez la langue du rapport parmi <strong>dix-sept</strong>,
 indépendante de la langue de l'application : le rapport peut sortir en
 italien même si vous utilisez l'application en français.</li>
-<li>Générez le PDF, ou exportez en DOCX avec logo et photos
-<span class="pro">PRO</span>, CSV des points, GeoJSON pour QGIS
-<span class="pro">PRO</span>.</li>
-<li>Tout en bas se trouve <kbd>Export du mobilier (site entier)</kbd>, gratuit :
+<li>Générez le PDF, ou exportez en DOCX avec logo et photos, CSV des points, GeoJSON pour QGIS.</li>
+<li>Tout en bas se trouve <kbd>Export du mobilier (site entier)</kbd>:
 <kbd>Exporter le CSV du mobilier</kbd> pour le tableur, et
 <kbd>Exporter le HTML du mobilier</kbd> pour un tableau avec les vignettes qui
 s'ouvre dans n'importe quel navigateur, sans réseau. Les en-têtes, les catégories, les unités et les
 états sortent dans la langue choisie pour le rapport ; ce que vous avez écrit
 vous-même reste tel que vous l'avez écrit. Dans le rapport de fin de chantier,
 le mobilier a son annexe, par provenance.</li>
+<li>Les US entrent dans les rapports : celles ouvertes et fermées dans la
+période dans le journalier, l'hebdomadaire et le mensuel ; dans le rapport final
+se trouve l'annexe avec toutes les fiches et le diagramme de Harris.</li>
 <li>Avec les photos activées dans les rapports, vous pouvez choisir
-<kbd>Fiches photographiques à la place des photos</kbd>
-<span class="pro">PRO</span> : chaque photo entre dans le PDF et le DOCX
+<kbd>Fiches photographiques à la place des photos</kbd> : chaque photo entre dans le PDF et le DOCX
 comme une fiche de documentation complète avec données et carte, dans la
 langue du rapport.</li>
 </ol>
@@ -387,8 +423,8 @@ précision RTK. Le GPS interne reste toujours disponible en solution de repli.</
 <ol class="passi">
 <li>Allumez le récepteur et activez le Bluetooth du téléphone.</li>
 <li>Dans le <kbd>Relevé</kbd>, choisissez la source de position : <em>GNSS
-externe (BLE/NMEA)</em> <span class="pro">PRO</span> et sélectionnez votre
-récepteur dans la liste. Les récepteurs MFi (gratuits) et ceux qui diffusent le
+externe (BLE/NMEA)</em> et sélectionnez votre
+récepteur dans la liste. Les récepteurs MFi et ceux qui diffusent le
 NMEA sur le réseau sont aussi pris en charge.</li>
 <li>Pour les corrections RTK, configurez le <strong>NTRIP</strong> : adresse du
 caster, port, mountpoint, utilisateur et mot de passe (conservés dans le
@@ -408,40 +444,21 @@ l'application, pas un manuel de firmware.</p>
 <h2>Sauvegarde et échange</h2>
 <ol class="passi">
 <li>Depuis le menu du site, touchez <kbd>Exporter le site (.zip)</kbd> : tout
-s'y trouve — journal, points, photos, dessins, heures, repères.</li>
+s'y trouve — journal, points, photos, dessins, heures, repères, mobilier et fiches US.</li>
 <li>Conservez le ZIP où vous voulez (Fichiers, Drive, e-mail…). C'est votre
 sauvegarde : l'application n'a pas de cloud, par choix.</li>
 <li><kbd>Importer le site (.zip)…</kbd> recrée le site sur un autre appareil,
-même entre iPhone et Android.</li>
+même entre iPhone et Android. L'importation n'écrase jamais et ne fusionne
+pas : elle crée toujours un nouveau site à côté des vôtres, avec « (importé) »
+dans le nom si vous en avez déjà un du même nom.</li>
 </ol>
 <p class="nota">⚠️ <kbd>Supprimer le site…</kbd> efface le site avec tout son
 contenu et c'est <strong>irréversible</strong> : exportez d'abord un ZIP en cas de doute.</p>
 
-<h2>Gratuit et Pro</h2>
-<table>
-<tr><th></th><th>Gratuit</th><th>Pro</th></tr>
-<tr><td>Sites</td><td>1</td><td>Illimités</td></tr>
-<tr><td>GNSS</td><td>GPS interne, récepteurs MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
-<tr><td>Rapports</td><td>Journalier avec filigrane</td><td>Tous, sans filigrane</td></tr>
-<tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX avec logo et photos, GeoJSON</td></tr>
-<tr><td>Dessins</td><td>Calque, zoom, textes, échelle, points cotés, <strong>trames, styles de trait, opacité du fond</strong></td><td>+ Export avec légende, SVG/DXF</td></tr>
-<tr><td>Traçage automatique</td><td>—</td><td>À la touche et « Tout décalquer »</td></tr>
-<tr><td>Enregistrements NMEA</td><td>Relecture et partage des fichiers</td><td>L'enregistrement (il faut l'antenne externe)</td></tr>
-<tr><td>Carnet de nivellement</td><td>✓</td><td>✓</td></tr>
-<tr><td>Fiche photographique</td><td>—</td><td>Partage et fiches dans les rapports</td></tr>
-<tr><td>Mobilier</td><td>Registre, CSV et HTML</td><td>+ annexe dans les rapports</td></tr>
-<tr><td>Échelles virtuelles</td><td>Sur les photos et sur les planches</td><td>+ vecteurs en SVG et DXF</td></tr>
-<tr><td>Compter et mesurer</td><td>—</td><td>Sur une photo et en série</td></tr>
-<tr><td>Mesure 3D (LiDAR)</td><td>—</td><td>Sur les appareils à scanner</td></tr>
-<tr><td>Dictée vocale</td><td>✓</td><td>✓</td></tr>
-<tr><td>Langues des rapports</td><td>17</td><td>17</td></tr>
-</table>
-<p>Pro est un abonnement mensuel ou annuel à renouvellement automatique, ou un
-achat unique à vie. Il se gère et se résilie depuis les réglages de votre
-identifiant Apple. Quand une période d'essai gratuite vous revient, l'écran Pro
-vous l'écrit avant l'achat (« Gratuit pendant 7 jours, puis … ») : si ce n'est pas
-écrit, elle ne vous revient pas — l'application ne promet pas un essai que
-l'achat ne tiendrait pas.</p>
+<h2>Gratuite</h2>
+<p>Giornale di Scavo est <strong>gratuite et complète</strong> : toutes les
+fonctions décrites dans ce guide sont incluses, sans abonnement, sans achats
+intégrés et sans filigrane, avec des sites illimités.</p>
 
 <h2>Résolution des problèmes</h2>
 
@@ -501,19 +518,14 @@ et attendez que la position soit acquise, puis photographiez. Si la permission
 de position est refusée, les photos s'enregistrent sans coordonnées.</p></details>
 
 <details><summary>Il manque des photos ou le logo dans le rapport</summary>
-<p>Les photos dans les rapports, le logo et l'en-tête personnalisé font partie
-de Pro et s'appliquent au DOCX et au PDF. Le rapport journalier gratuit porte
-un filigrane et les photos n'y sont pas incluses.</p></details>
+<p>Vérifiez que <kbd>Inclure les photos et les dessins dans le rapport</kbd> est
+activé et que le logo est choisi dans <kbd>En-tête et logo</kbd> : cela vaut
+pour le PDF comme pour le DOCX.</p></details>
 
 <details><summary>J'ai supprimé un site par erreur</summary>
 <p>La suppression est définitive : les données ne sont pas récupérables (il
 n'y a pas de cloud). Si vous avez exporté un ZIP auparavant, importez-le pour
 restaurer le site à cette date. Conseil : exportez un ZIP en fin de journée.</p></details>
-
-<details><summary>J'ai acheté Pro mais c'est encore verrouillé</summary>
-<p>Touchez <kbd>Restaurer les achats</kbd> sur l'écran Pro, avec le même
-identifiant Apple que celui de l'achat. Si vous avez changé d'appareil, la
-restauration récupère l'abonnement ou la licence à vie.</p></details>
 
 <details><summary>« Récupérer » est grisé, ou indique « Météo non disponible »</summary>
 <ul>
@@ -615,9 +627,7 @@ ni l'autre n'apparaît, car les données de prise de vue manquent.</p></details>
 <details><summary>« Compter et mesurer » n'apparaît pas sur la photo</summary>
 <p>La commande ne vit que sur les photos d'un <strong>lot de mobilier</strong> —
 c'est là qu'il y a un sens à détourer des fragments — et elle s'ouvre depuis le
-détail de la photo, pas depuis la fiche, qui ne montre que les vignettes. Si la
-touche ouvre l'écran Pro, c'est bien cela : la fonction fait partie de Pro,
-comme le décalque.</p></details>
+détail de la photo, pas depuis la fiche, qui ne montre que les vignettes.</p></details>
 
 <details><summary>La réglette graduée n'est pas trouvée</summary>
 <ul>

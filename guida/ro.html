@@ -32,6 +32,7 @@ pornind de la pagini.</p>
 <li><b>Ridicare</b>Achiziționați punctele GNSS; verificați un reper dacă folosiți RTK</li>
 <li><b>Fotografii</b>Fotografiați din <kbd>Media</kbd>: coordonatele se atașează singure</li>
 <li><b>Desene</b>Decalcați secțiunea sau planul pe o fotografie (calc digital)</li>
+<li><b>US</b>Actualizați fișele US săpate și relațiile lor: <kbd>US</kbd></li>
 <li><b>Materiale</b>Cu lăzile în față, înregistrați ce a ieșit din săpătură: <kbd>Șantier</kbd> → <kbd>Materiale</kbd></li>
 <li><b>Seara</b>Din fila <kbd>Rapoarte</kbd> generați raportul zilnic: un PDF gata de trimis</li>
 </ol>
@@ -50,7 +51,7 @@ lista se află sub titlul „Siturile dumneavoastră”, iar cu <kbd>Redenumiți
 (pentru dictare), <em>Bluetooth</em> (doar dacă folosiți un receptor extern).</li>
 </ol>
 
-<h2>Cele cinci file</h2>
+<h2>Cele șase file</h2>
 
 <h3>📓 Jurnal</h3>
 <ol class="passi">
@@ -67,6 +68,43 @@ adaugă o nouă măsurătoare. Ceea ce scrieți manual are întotdeauna priorita
 aproximativ 11 metri, iar în rapoarte rândul apare în limba raportului.</li>
 </ol>
 <div class="schermate"><figure><img src="img/ro/01-diario.webp" alt="Lista zilelor" width="640" height="1391" loading="lazy"><figcaption>Lista zilelor</figcaption></figure><figure><img src="img/ro/02-giornata.webp" alt="Pagina unei zile" width="640" height="1391" loading="lazy"><figcaption>Pagina unei zile</figcaption></figure></div>
+
+<h3>🧱 US — fișe stratigrafice</h3>
+<p>O fișă pentru fiecare unitate stratigrafică, cu relațiile dintre US
+înregistrate ca legături: de aici ies fișele US ale documentației și matricea
+Harris.</p>
+<ol class="passi">
+<li>În fila <kbd>US</kbd> atingeți <kbd>+</kbd>: aplicația propune numărul
+următor (îl puteți schimba) și cere tipul și definiția. Numărul este unic în
+sit; mai târziu îl schimbați cu <kbd>Schimbă</kbd>, iar lăzile cu acea
+proveniență îl urmează.</li>
+<li>Fișa reunește identificarea (tip, definiție, zonă sau sector, carou),
+dimensiunile și cotele (lungime, lățime, grosime, cotă minimă și maximă),
+descrierea (culoare, consistență, componente), interpretarea, datarea, datele
+de deschidere și de închidere și responsabilul. Se salvează singură în timp ce
+scrieți.</li>
+<li>Lângă definiție, culoare, consistență, componente, interpretare și datare
+se află butonul <strong>tezaurului</strong> (cărticica): alegeți din lexicul
+standard sau din termenii dumneavoastră, iar fișa rămâne uniformă între cei
+care sapă. La componente se pot alege mai mulți. Dacă termenul căutat nu
+există, foaia propune să-l adăugați. Termenii dumneavoastră sunt valabili
+pentru toate siturile și se gestionează din <kbd>Tezaur</kbd>, în meniul ⋯ al
+filei US.</li>
+<li><kbd>Adaugă relație</kbd>: alegeți relația (acoperă, taie, umple, se
+sprijină pe, legată de, egală cu, și inversele lor) și scrieți numărul
+celeilalte US. Relația se înregistrează o singură dată și apare inversată în
+cealaltă fișă: dacă 101 acoperă 102, în fișa 102 citiți „acoperită de 101”.
+Dacă cealaltă US nu are încă o fișă, aceasta este creată goală. O relație care
+contrazice secvența deja înregistrată este refuzată, cu explicația.</li>
+<li>Secțiunea materialelor arată lăzile a căror proveniență numește US
+(„US 102”, „USM 12”): nu este nimic de legat de mână.
+<kbd>Adaugă material</kbd> deschide fișa materialului cu proveniența deja
+scrisă.</li>
+<li>Din meniul ⋯, <kbd>Matricea Harris</kbd> desenează secvența din relații:
+US cea mai recentă sus, US egale sau legate într-un singur chenar, tăieturile
+cu linie întreruptă, cele de zidărie pe fond gri. Se mărește cu două degete și
+se partajează ca imagine.</li>
+</ol>
 
 <h3>📍 Ridicare</h3>
 <ol class="passi">
@@ -89,7 +127,7 @@ nivela optică: stații, citiri înapoi și înainte, altitudini calculate porni
 de la un reper de plecare, cu controlul de închidere. Punctele nivelate intră
 în sit cu altitudinea lor, la fel ca cele GNSS.</li>
 <li>Pe dispozitivele cu scaner <strong>LiDAR</strong> (iPhone Pro de la 12 în
-sus, iPad Pro) apare <kbd>Măsurare 3D</kbd> <span class="pro">PRO</span>:
+sus, iPad Pro) apare <kbd>Măsurare 3D</kbd>:
 încadrați încet până când suprafața se reconstruiește, apoi atingeți cele două
 puncte de măsurat și citiți distanța, distanța orizontală și diferența de
 nivel. Cu <kbd>Ancorați la un reper</kbd> alegeți un reper cu altitudine
@@ -102,7 +140,7 @@ aruncă, <kbd>Trece în jurnal</kbd> face din ea un text pe care îl corectați
 pe loc, și nu înlocuiește nici GNSS-ul, nici nivela. Pe dispozitivele fără
 scaner butonul nici nu există.</li>
 <li>Sub panou se află <kbd>Înregistrări NMEA</kbd>: fluxul brut al receptorului
-extern <span class="pro">PRO</span> ajunge singur în fișiere — înregistrarea
+extern ajunge singur în fișiere — înregistrarea
 pornește când aprindeți antena și se închide când o stingeți, fără să fie
 nevoie să vă amintiți de ea. Folosește la recitirea unei zile îndoielnice sau
 la predarea datelor brute celui care face post-procesarea. Fișierele se
@@ -126,7 +164,7 @@ veți citi „vedere dinspre SO — 214°”, iar pentru fotografiile verticale
 (plan, fundul unei US) apare mențiunea zenitală cu direcția marginii de sus.
 Dacă busola este perturbată, aplicația vă avertizează.</li>
 <li>Atingeți o fotografie pentru titlu și note (de ex. „US 102 dinspre nord”).</li>
-<li><kbd>Distribuiți fișa</kbd> <span class="pro">PRO</span> generează
+<li><kbd>Distribuiți fișa</kbd> generează
 <strong>fișa fotografică de documentare</strong>: fotografia cu datele de
 sub ea (sit, număr, dată și oră, coordonate, altitudine, direcție), o vedere
 din satelit cu marcatorul de poziție și conul de vizare, bara scării hărții
@@ -152,7 +190,7 @@ raportul o spune; dacă o rotiți dumneavoastră, mențiunea devine „declarat�
 <kbd>Distribuiți cu scară</kbd> iese o copie a fotografiei cu tot ce ați așezat
 pe ea — <kbd>Distribuiți fotografia</kbd> rămâne originalul gol, cu EXIF-ul
 lui.</li>
-<li><kbd>Prelucrare în serie</kbd> <span class="pro">PRO</span> (meniul de sus
+<li><kbd>Prelucrare în serie</kbd> (meniul de sus
 din <kbd>Media</kbd>) ia un grup de fotografii din bibliotecă și le trece pe
 toate prin numărat și măsurat, una după alta: fiecare fotografie devine o
 fotografie a sitului cu data declanșării, iar fiecare va avea <strong>fișa ei
@@ -167,8 +205,7 @@ confirmați.</li>
 <h3>🧮 Numărați și măsurați (în Media)</h3>
 <p>Tava cu fragmente fotografiată de sus, iar aplicația le numără și le măsoară
 singură. Trăiește pe fotografia unui <strong>material</strong>: o deschideți
-din fișa lui și atingeți <kbd>Numărați și măsurați</kbd>
-<span class="pro">PRO</span>.</p>
+din fișa lui și atingeți <kbd>Numărați și măsurați</kbd>.</p>
 <ol class="passi">
 <li>Mai întâi scara. Aplicația caută singură <strong>rigla de scară</strong> din
 fotografie: dacă o găsește vă spune câte căsuțe a citit, dumneavoastră
@@ -228,7 +265,7 @@ rămâne pe planșă și este valabilă și în PDF, DOCX, PNG și în
 <kbd>Exportați cu legendă</kbd>.</li>
 <li>Tot restul se află sub <kbd>Instrumente</kbd> (cheia fixă din bară), care
 este cuprinsul celor șapte moduri: <kbd>Casetă de text</kbd>,
-<kbd>Calchiere</kbd> <span class="pro">PRO</span>,
+<kbd>Calchiere</kbd>,
 <kbd>Scara fotografiei</kbd>, <kbd>Punct cu altitudine</kbd>,
 <kbd>Hașură</kbd>, <kbd>Stilul liniei</kbd> și <kbd>Scară virtuală</kbd>. Se
 ține <strong>unul singur</strong> o dată: bifa
@@ -239,13 +276,12 @@ numai dacă există o fotografie de fundal.</li>
 <li>Cu <kbd>Casetă de text</kbd> puneți etichetele (de ex. „US 1002”): se pot
 muta, se redimensionează prin ciupire și aveți patru fonturi din care puteți
 alege.</li>
-<li><kbd>Calchiere</kbd> <span class="pro">PRO</span> recunoaște conturul
+<li><kbd>Calchiere</kbd> recunoaște conturul
 obiectului pe care îl atingeți (o piatră, limita unui strat) și îl transformă
 în trăsătură: culoarea, grosimea și stilul liniei se schimbă fără a ieși din
 mod, iar contururile ies netede, nu în trepte. Totul se petrece pe dispozitiv,
 fără rețea.</li>
-<li>În interiorul decalcului, <kbd>Calchiați tot</kbd>
-<span class="pro">PRO</span> face singur turul întregii fotografii. În foaia
+<li>În interiorul decalcului, <kbd>Calchiați tot</kbd> face singur turul întregii fotografii. În foaia
 de pornire hotărâți veșmântul — <kbd>Doar contururi</kbd>, ori o hașură și
 poate un <kbd>Voal de culoare</kbd> — și apăsați <kbd>Porniți</kbd>: bara
 spune unde a ajuns, iar treaba durează câteva zeci de secunde. Ceea ce apare
@@ -283,14 +319,14 @@ DOCX, PNG, SVG și DXF.</li>
 fotografii: riglă de scară, jalon, pătrat, cruce, săgeata nordului și
 măsurători din două atingeri. Tipurile metrice cer ca planșa să aibă o scară,
 adică <kbd>Scara fotografiei</kbd>: fără o distanță cunoscută, aplicația
-explică în loc să deseneze. În SVG și DXF <span class="pro">PRO</span> aceste
+explică în loc să deseneze. În SVG și DXF aceste
 elemente ies ca <strong>vectori</strong>, pe stratul lor, iar măsura citită cu
 rigla din GIS se potrivește cu eticheta.</li>
-<li><kbd>Exportați cu legendă</kbd> <span class="pro">PRO</span>: imaginea
+<li><kbd>Exportați cu legendă</kbd>: imaginea
 iese cu o bandă albă dedesubt — bara metrică (dacă există scara), săgeata
 nordului pentru fotografiile verticale, „vedere dinspre” pentru cele
 frontale.</li>
-<li><kbd>Exportați vectorial</kbd> <span class="pro">PRO</span>: SVG pentru
+<li><kbd>Exportați vectorial</kbd>: SVG pentru
 desen, sau <strong>DXF</strong> pentru GIS. Cu cel puțin două puncte cotate
 cu coordonate pe o fotografie verticală, DXF-ul iese <strong>georeferențiat
 în UTM</strong> și în QGIS se poziționează singur pe glob; cu doar scara,
@@ -314,9 +350,7 @@ numărul rândurilor deja înregistrate scris sub nume.</li>
 <h3>📦 Materiale (în Șantier)</h3>
 <p>Momentul adevărat nu este camera foto: este să vă așezați la sfârșitul zilei
 cu lăzile în față și să le treceți una după alta, obosit și cu mâinile murdare.
-Tot ce se află aici este făcut pentru acel moment — și este
-<strong>gratuit</strong>, ca și înregistrarea punctelor: a preda ceea ce s-a
-săpat este documentație de bază.</p>
+Tot ce se află aici este făcut pentru acel moment.</p>
 <ol class="passi">
 <li><kbd>Șantier</kbd> → <kbd>Materiale</kbd> → <kbd>+</kbd>. Fișa se deschide
 deja cu data de azi și cu <strong>ultima proveniență folosită</strong>: de la al
@@ -352,23 +386,24 @@ nu se rescrie niciodată singur.</li>
 
 <h3>📄 Rapoarte</h3>
 <ol class="passi">
-<li>Alegeți tipul: <strong>zilnic</strong> (gratuit, cu filigran),
+<li>Alegeți tipul: <strong>zilnic</strong>,
 <strong>săptămânal</strong>, <strong>lunar</strong> sau <strong>final</strong>
-cu anexe complete <span class="pro">PRO</span>.</li>
+cu anexe complete.</li>
 <li>Alegeți limba raportului dintre <strong>șaptesprezece</strong>, independentă
 de limba aplicației: raportul poate ieși în germană chiar dacă folosiți
 aplicația în română.</li>
-<li>Generați PDF-ul, sau exportați DOCX cu logo și fotografii
-<span class="pro">PRO</span>, CSV al punctelor, GeoJSON pentru QGIS
-<span class="pro">PRO</span>.</li>
-<li>La final se află <kbd>Export materiale (întregul sit)</kbd>, gratuit:
+<li>Generați PDF-ul, sau exportați DOCX cu logo și fotografii, CSV al punctelor, GeoJSON pentru QGIS.</li>
+<li>La final se află <kbd>Export materiale (întregul sit)</kbd>:
 <kbd>Exportați CSV materiale</kbd> pentru foaia de calcul și
 <kbd>Exportați HTML materiale</kbd> pentru un tabel cu miniaturi care se
 deschide în orice browser, fără rețea. Antetele, categoriile, unitățile și
 stările ies în limba aleasă pentru raport; ceea ce ați scris dumneavoastră
 rămâne așa cum l-ați scris. În raportul final, materialele au anexa lor, pe
 proveniențe.</li>
-<li>Cu fotografiile din rapoarte activate, puteți alege <kbd>Fișe fotografice în locul fotografiilor</kbd> <span class="pro">PRO</span>: fiecare fotografie
+<li>US intră în rapoarte: cele deschise și închise în perioada respectivă în
+raportul zilnic, săptămânal și lunar; în raportul final există anexa cu toate
+fișele și matricea Harris.</li>
+<li>Cu fotografiile din rapoarte activate, puteți alege <kbd>Fișe fotografice în locul fotografiilor</kbd>: fiecare fotografie
 intră în PDF și în DOCX ca o fișă de documentare completă, cu date și hartă,
 în limba raportului.</li>
 </ol>
@@ -380,8 +415,8 @@ precizia RTK. GPS-ul intern rămâne mereu disponibil ca soluție de rezervă.</
 <ol class="passi">
 <li>Porniți receptorul și activați Bluetooth-ul telefonului.</li>
 <li>În <kbd>Ridicare</kbd> alegeți sursa poziției: <em>GNSS extern
-(BLE/NMEA)</em> <span class="pro">PRO</span> și selectați receptorul
-dumneavoastră din listă. Sunt acceptate și receptoarele MFi (gratuite),
+(BLE/NMEA)</em> și selectați receptorul
+dumneavoastră din listă. Sunt acceptate și receptoarele MFi,
 precum și cele care transmit NMEA prin rețea.</li>
 <li>Pentru corecțiile RTK configurați <strong>NTRIP</strong>: adresa
 caster-ului, portul, mountpoint-ul, utilizatorul și parola (rămân în
@@ -401,41 +436,22 @@ aplicației, nu un manual de firmware.</p>
 <h2>Copie de siguranță și schimb</h2>
 <ol class="passi">
 <li>Din meniul sitului atingeți <kbd>Exportați situl (.zip)</kbd>: înăuntru
-este totul — jurnalul, punctele, fotografiile, desenele, orele, reperele.</li>
+este totul — jurnalul, punctele, fotografiile, desenele, orele, reperele, materialele și fișele US.</li>
 <li>Păstrați arhiva ZIP unde doriți (Fișiere, Drive, e-mail…). Este copia
 dumneavoastră de siguranță: aplicația nu are cloud, în mod deliberat.</li>
 <li><kbd>Importați situl (.zip)…</kbd> recreează situl pe alt dispozitiv,
-chiar și între iPhone și Android.</li>
+chiar și între iPhone și Android. Importul nu suprascrie și nu combină
+niciodată: creează întotdeauna un sit nou alături de ale dumneavoastră, cu
+„(importat)” în nume dacă aveți deja unul la fel.</li>
 </ol>
 <p class="nota">⚠️ <kbd>Ștergeți situl…</kbd> elimină situl împreună cu tot
 conținutul său și este <strong>ireversibil</strong>: exportați mai întâi o
 arhivă ZIP dacă aveți dubii.</p>
 
-<h2>Gratuit și Pro</h2>
-<table>
-<tr><th></th><th>Gratuit</th><th>Pro</th></tr>
-<tr><td>Situri</td><td>1</td><td>Nelimitate</td></tr>
-<tr><td>GNSS</td><td>GPS intern, receptoare MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
-<tr><td>Rapoarte</td><td>Zilnic cu filigran</td><td>Toate, fără filigran</td></tr>
-<tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX cu logo și fotografii, GeoJSON</td></tr>
-<tr><td>Desene</td><td>Calc digital, zoom, texte, scară, puncte cotate, <strong>hașuri, stiluri de linie, opacitatea fundalului</strong></td><td>+ Exportați cu legendă, SVG/DXF</td></tr>
-<tr><td>Calchiere automată</td><td>—</td><td>La atingere și „Calchiați tot”</td></tr>
-<tr><td>Înregistrări NMEA</td><td>Recitirea și distribuirea fișierelor</td><td>Înregistrarea (necesită antena externă)</td></tr>
-<tr><td>Carnet de nivelment</td><td>✓</td><td>✓</td></tr>
-<tr><td>Fișă fotografică</td><td>—</td><td>Distribuire și fișe în rapoarte</td></tr>
-<tr><td>Materiale</td><td>Registru, CSV și HTML</td><td>+ anexă în rapoarte</td></tr>
-<tr><td>Scări virtuale</td><td>Pe fotografii și pe planșe</td><td>+ vectori în SVG și DXF</td></tr>
-<tr><td>Numărat și măsurat</td><td>—</td><td>Pe o fotografie și în serie</td></tr>
-<tr><td>Măsurare 3D (LiDAR)</td><td>—</td><td>Pe dispozitivele cu scaner</td></tr>
-<tr><td>Dictare vocală</td><td>✓</td><td>✓</td></tr>
-<tr><td>Limbi ale rapoartelor</td><td>17</td><td>17</td></tr>
-</table>
-<p>Pro este un abonament lunar sau anual cu reînnoire automată, sau o
-achiziție unică pe viață. Se gestionează și se anulează din setările
-ID-ului dumneavoastră Apple. Când vi se cuvine o perioadă de probă gratuită,
-ecranul Pro v-o scrie înainte de achiziție („Gratuit timp de 7 zile, apoi …”): dacă nu
-scrie nimic, nu vi se cuvine — aplicația nu promite o probă pe care apoi
-achiziția nu o ține.</p>
+<h2>Gratuită</h2>
+<p>Giornale di Scavo este <strong>gratuită și completă</strong>: toate
+funcțiile descrise în acest ghid sunt incluse, fără abonamente, fără achiziții
+în aplicație și fără filigran, cu situri nelimitate.</p>
 
 <h2>Rezolvarea problemelor</h2>
 
@@ -496,19 +512,14 @@ Ridicarea și așteptați ca poziția să fie obținută, apoi fotografiați. Cu
 permisiunea de locație refuzată, fotografiile se salvează fără coordonate.</p></details>
 
 <details><summary>Lipsesc fotografiile sau logo-ul din raport</summary>
-<p>Fotografiile din rapoarte, logo-ul și antetul personalizat fac parte din
-Pro și se aplică la DOCX și PDF. Raportul zilnic gratuit are filigran și nu
-include fotografii.</p></details>
+<p>Verificați că este activat <kbd>Includeți fotografiile și desenele în raport</kbd>
+și că logo-ul este ales în <kbd>Antet și logo</kbd>: se aplică atât la PDF, cât
+și la DOCX.</p></details>
 
 <details><summary>Am șters un sit din greșeală</summary>
 <p>Ștergerea este definitivă: datele nu pot fi recuperate (nu există cloud).
 Dacă ați exportat anterior o arhivă ZIP, importați-o pentru a restaura situl
 la acea dată. Sfat: exportați o arhivă ZIP la sfârșitul fiecărei zile.</p></details>
-
-<details><summary>Am cumpărat Pro, dar este încă blocat</summary>
-<p>Atingeți <kbd>Restaurați achizițiile</kbd> pe ecranul Pro, folosind
-același ID Apple cu care ați făcut achiziția. Dacă ați schimbat dispozitivul,
-restaurarea recuperează abonamentul sau licența pe viață.</p></details>
 
 <details><summary>„Preluați” este dezactivat sau afișează „Vreme indisponibilă”</summary>
 <ul>
@@ -610,9 +621,7 @@ că lipsesc datele de fotografiere.</p></details>
 <details><summary>„Numărați și măsurați” nu apare pe fotografie</summary>
 <p>Comanda trăiește numai pe fotografiile unui <strong>material</strong> —
 acolo are sens decuparea fragmentelor — și se deschide din detaliile
-fotografiei, nu din fișă, care arată doar miniaturile. Dacă atingerea deschide
-ecranul Pro, funcția este chiar aceea: face parte din Pro, ca și
-calchierea.</p></details>
+fotografiei, nu din fișă, care arată doar miniaturile.</p></details>
 
 <details><summary>Rigla de scară nu este găsită</summary>
 <ul>

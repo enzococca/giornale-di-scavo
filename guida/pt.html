@@ -31,6 +31,7 @@ semana ou da escavação, os relatórios geram-se sozinhos a partir das páginas
 <li><b>Levantamento</b>Capture pontos GNSS; verifique um marco geodésico primeiro se usar RTK</li>
 <li><b>Fotos</b>Fotografe a partir dos <kbd>Media</kbd>: as coordenadas anexam-se sozinhas</li>
 <li><b>Desenhos</b>Decalque o corte ou a planta sobre uma foto (papel vegetal digital)</li>
+<li><b>UE</b>Atualize as fichas das UE escavadas e as respetivas relações: <kbd>UE</kbd></li>
 <li><b>Espólio</b>Com as caixas à frente, registe o que saiu da escavação: <kbd>Obra</kbd> → <kbd>Espólio</kbd></li>
 <li><b>Tarde</b>No separador <kbd>Relatórios</kbd>, gere o relatório diário: um PDF pronto a enviar</li>
 </ol>
@@ -49,7 +50,7 @@ pontos), <em>câmara</em> (para as fotos), <em>microfone</em> (para o ditado),
 <em>Bluetooth</em> (apenas se usar um recetor externo).</li>
 </ol>
 
-<h2>Os cinco separadores</h2>
+<h2>Os seis separadores</h2>
 
 <h3>📓 Diário</h3>
 <ol class="passi">
@@ -66,6 +67,41 @@ uma nova medição. O que escrever à mão prevalece sempre.</li>
 dispositivo, e nos relatórios a linha aparece no idioma do relatório.</li>
 </ol>
 <div class="schermate"><figure><img src="img/pt/01-diario.webp" alt="A lista dos dias" width="640" height="1391" loading="lazy"><figcaption>A lista dos dias</figcaption></figure><figure><img src="img/pt/02-giornata.webp" alt="A página de um dia" width="640" height="1391" loading="lazy"><figcaption>A página de um dia</figcaption></figure></div>
+
+<h3>🧱 UE — fichas estratigráficas</h3>
+<p>Uma ficha para cada unidade estratigráfica, com as relações entre as UE
+registadas como ligações: é daqui que saem as fichas de UE da documentação e a
+matriz de Harris.</p>
+<ol class="passi">
+<li>No separador <kbd>UE</kbd> toque em <kbd>+</kbd>: a aplicação propõe o
+número seguinte (pode alterá-lo) e pede o tipo e a definição. O número é único
+no sítio; mais tarde altera-o com <kbd>Alterar</kbd>, e as caixas com essa
+proveniência acompanham-no.</li>
+<li>A ficha reúne identificação (tipo, definição, área ou setor, quadrícula),
+dimensões e cotas (comprimento, largura, espessura, cota mínima e máxima),
+descrição (cor, compacidade, componentes), interpretação, datação, datas de
+abertura e de fecho e responsável. Guarda-se sozinha enquanto escreve.</li>
+<li>Ao lado de definição, cor, compacidade, componentes, interpretação e
+datação está o botão do <strong>tesauro</strong> (o livrinho): escolha do
+léxico normalizado ou dos seus termos, e a ficha mantém-se uniforme entre quem
+escava. Nos componentes pode escolher mais do que um. Se a palavra que procura
+não existe, a folha propõe acrescentá-la. Os seus termos valem para todos os
+sítios e gerem-se em <kbd>Tesauro</kbd>, no menu ⋯ da ficha de UE.</li>
+<li><kbd>Adicionar relação</kbd>: escolha a relação (cobre, corta, preenche,
+encosta a, liga-se a, igual a, e as respetivas inversas) e escreva o número da
+outra UE. A relação regista-se uma só vez e aparece invertida na outra ficha:
+se a 101 cobre a 102, na 102 lê «coberta por 101». Se a outra UE ainda não tem
+ficha, é criada vazia. Uma relação que contradiga a sequência já registada é
+recusada, com a explicação.</li>
+<li>A secção do espólio mostra as caixas cuja proveniência nomeia a UE
+(«UE 102», «UEM 12»): não há nada a ligar à mão.
+<kbd>Adicionar material</kbd> abre a ficha do espólio com a proveniência já
+escrita.</li>
+<li>No menu ⋯, <kbd>Matriz de Harris</kbd> desenha a sequência a partir das
+relações: a UE mais recente em cima, as UE iguais ou ligadas num só
+retângulo, os cortes a tracejado, as murárias sobre fundo cinzento. Amplia-se
+com dois dedos e partilha-se como imagem.</li>
+</ol>
 
 <h3>📍 Levantamento</h3>
 <ol class="passi">
@@ -86,7 +122,7 @@ desvios ΔN/ΔE/ΔZ com a ponteira sobre o prego, antes de começar a levantar.<
 um marco geodésico de partida, com o controlo de fecho. Os pontos nivelados
 entram no sítio com a sua altitude, tal como os pontos GNSS.</li>
 <li>Nos dispositivos com scanner <strong>LiDAR</strong> (iPhone Pro do 12 em
-diante, iPad Pro) aparece <kbd>Medição 3D</kbd> <span class="pro">PRO</span>:
+diante, iPad Pro) aparece <kbd>Medição 3D</kbd>:
 enquadre devagar até a superfície se reconstruir, depois toque nos dois pontos
 a medir e leia a distância, a distância horizontal e o desnível. Com
 <kbd>Ancorar a um marco geodésico</kbd> escolhe um marco geodésico de altitude
@@ -99,7 +135,7 @@ confirmar. É uma medida ótica, e a aplicação di-lo escrevendo
 local, e não substitui o GNSS nem o nível. Nos dispositivos sem scanner o botão
 nem sequer existe.</li>
 <li>Por baixo do painel estão as <kbd>Gravações NMEA</kbd>: o fluxo bruto do
-recetor externo <span class="pro">PRO</span> vai parar a ficheiros sozinho — a
+recetor externo vai parar a ficheiros sozinho — a
 gravação começa quando liga a antena e fecha-se quando a desliga, sem que tenha
 de se lembrar disso. Serve para reler um dia duvidoso ou para entregar o bruto
 a quem faz o pós-processamento. Os ficheiros partilham-se e apagam-se, exceto o
@@ -123,7 +159,7 @@ lê-se «vista de SO — 214°», e para as fotos tiradas a prumo (planta, fundo
 de uma UE) a indicação zenital com a direção do bordo superior. Se a bússola
 estiver perturbada, a aplicação avisa.</li>
 <li>Toque numa foto para lhe dar título e notas (por ex., «UE 102 vista do norte»).</li>
-<li><kbd>Partilhar ficha</kbd> <span class="pro">PRO</span> gera a
+<li><kbd>Partilhar ficha</kbd> gera a
 <strong>ficha fotográfica de documentação</strong>: a foto com, por baixo, os
 dados do disparo (sítio, número, data e hora, coordenadas, altitude,
 direção), uma vista de satélite com o marcador de posição e o cone de visão,
@@ -148,7 +184,7 @@ nasce já orientada pelo azimute registado, e o relatório declara-o; se for voc
 a rodá-la, a indicação passa a «declarado». Com
 <kbd>Partilhar com escala</kbd> sai uma cópia da foto com o que lá pousou —
 <kbd>Partilhar foto</kbd> continua a ser o original nu, com o seu EXIF.</li>
-<li><kbd>Processar em série</kbd> <span class="pro">PRO</span> (menu no topo
+<li><kbd>Processar em série</kbd> (menu no topo
 dos <kbd>Media</kbd>) pega num grupo de fotos da biblioteca e passa-as todas
 pelo contar e medir, uma a seguir à outra: cada foto passa a ser uma foto do
 sítio com a data do disparo, e cada uma terá a sua <strong>ficha de espólio
@@ -162,8 +198,7 @@ fichas uma a uma: corrige proveniência, classe e quantidade, e confirma.</li>
 <h3>🧮 Contar e medir (em Media)</h3>
 <p>O tabuleiro de fragmentos fotografado de cima, e a aplicação a contá-los e
 a medi-los sozinha. Vive na foto de um registo de <strong>espólio</strong>:
-abre-a a partir da sua ficha e toca em <kbd>Contar e medir</kbd>
-<span class="pro">PRO</span>.</p>
+abre-a a partir da sua ficha e toca em <kbd>Contar e medir</kbd>.</p>
 <ol class="passi">
 <li>Primeiro a escala. A aplicação procura sozinha a
 <strong>escala gráfica</strong> na foto: se a encontrar diz-lhe quantos
@@ -219,8 +254,7 @@ voltar a 1×). Se a foto lhe tapar o traço, no menu da câmara escolha
 a foto, não o desenho. A escolha fica na prancha e vale também em PDF, DOCX,
 PNG e <kbd>Exportar com legenda</kbd>.</li>
 <li>Todo o resto está em <kbd>Ferramentas</kbd> (a chave de bocas na barra),
-que é o índice dos sete modos: <kbd>Caixa de texto</kbd>, <kbd>Decalque</kbd>
-<span class="pro">PRO</span>, <kbd>Escala da foto</kbd>,
+que é o índice dos sete modos: <kbd>Caixa de texto</kbd>, <kbd>Decalque</kbd>, <kbd>Escala da foto</kbd>,
 <kbd>Ponto com altitude</kbd>, <kbd>Trama</kbd>, <kbd>Estilo da linha</kbd> e
 <kbd>Escala virtual</kbd>. Mantém-se
 <strong>um só</strong> de cada vez: o visto diz qual, e enquanto estiver ligado
@@ -231,12 +265,12 @@ fundo.</li>
 <li>Com a <kbd>Caixa de texto</kbd> coloca as etiquetas (por ex., «UE 1002»):
 movem-se, redimensionam-se com o beliscão e há quatro tipos de letra à
 escolha.</li>
-<li>O <kbd>Decalque</kbd> <span class="pro">PRO</span> reconhece o contorno do
+<li>O <kbd>Decalque</kbd> reconhece o contorno do
 objeto que tocar (uma pedra, o limite de um estrato) e transforma-o em traço:
 a cor, a espessura e o estilo da linha mudam-se sem sair do modo, e os
 contornos saem lisos em vez de aos degraus. Tudo acontece no dispositivo, sem
 rede.</li>
-<li>Dentro do decalque, <kbd>Decalcar tudo</kbd> <span class="pro">PRO</span>
+<li>Dentro do decalque, <kbd>Decalcar tudo</kbd>
 dá a volta sozinho a toda a foto. Na folha de arranque decide o aspeto —
 <kbd>Apenas contornos</kbd>, ou uma trama e talvez um <kbd>Véu de cor</kbd> — e
 prime <kbd>Iniciar</kbd>: a barra diz em que ponto vai, e leva algumas dezenas
@@ -273,14 +307,14 @@ e DXF.</li>
 fotos: escala gráfica, baliza, quadrado, cruz, seta do norte e medidas com dois
 toques. Os tipos métricos exigem que a prancha tenha uma escala, ou seja a
 <kbd>Escala da foto</kbd>: sem uma distância conhecida, a aplicação explica em
-vez de desenhar. Em SVG e DXF <span class="pro">PRO</span> estes elementos saem
+vez de desenhar. Em SVG e DXF estes elementos saem
 como <strong>vetores</strong>, na sua própria camada, e a medida lida com a
 régua do SIG bate certo com a etiqueta.</li>
-<li><kbd>Exportar com legenda</kbd> <span class="pro">PRO</span>: a
+<li><kbd>Exportar com legenda</kbd>: a
 imagem sai com uma faixa branca por baixo — barra métrica (se a escala
 existir), seta do norte para as fotos tiradas a prumo, «vista de» para as
 frontais.</li>
-<li><kbd>Exportar vetorial</kbd> <span class="pro">PRO</span>: SVG para o
+<li><kbd>Exportar vetorial</kbd>: SVG para o
 desenho, ou <strong>DXF</strong> para o SIG. Com pelo menos dois pontos
 cotados com coordenadas numa foto a prumo, o DXF sai
 <strong>georreferenciado em UTM</strong> e no QGIS posiciona-se sozinho no
@@ -304,8 +338,7 @@ de linhas já registadas escrito por baixo do nome.</li>
 <h3>📦 Espólio (na Obra)</h3>
 <p>O momento verdadeiro não é a câmara: é sentar-se ao fim do dia com as caixas
 à frente e despachá-las uma a uma, cansado e de mãos sujas. Tudo aqui foi feito
-para esse momento — e é <strong>gratuito</strong>, como registar os pontos:
-entregar o que se escavou é documentação de base.</p>
+para esse momento.</p>
 <ol class="passi">
 <li><kbd>Obra</kbd> → <kbd>Espólio</kbd> → <kbd>+</kbd>. A ficha abre já com a
 data de hoje e com a <strong>última proveniência usada</strong>: da segunda
@@ -339,23 +372,24 @@ diário nunca se reescreve sozinho.</li>
 
 <h3>📄 Relatórios</h3>
 <ol class="passi">
-<li>Escolha o tipo: <strong>diário</strong> (gratuito, com marca de água),
+<li>Escolha o tipo: <strong>diário</strong>,
 <strong>semanal</strong>, <strong>mensal</strong> ou <strong>final</strong>
-com apêndices completos <span class="pro">PRO</span>.</li>
+com apêndices completos.</li>
 <li>Escolha o idioma do relatório entre <strong>dezassete</strong>, independente
 do idioma da aplicação: o relatório pode sair em espanhol mesmo que utilize a
 aplicação em português.</li>
-<li>Gere o PDF, ou exporte em DOCX com logótipo e fotos
-<span class="pro">PRO</span>, CSV dos pontos, GeoJSON para o QGIS
-<span class="pro">PRO</span>.</li>
-<li>No fim está <kbd>Exportação de espólio (sítio completo)</kbd>, gratuita:
+<li>Gere o PDF, ou exporte em DOCX com logótipo e fotos, CSV dos pontos, GeoJSON para o QGIS.</li>
+<li>No fim está <kbd>Exportação de espólio (sítio completo)</kbd>:
 <kbd>Exportar CSV do espólio</kbd> para a folha de cálculo, e
 <kbd>Exportar HTML do espólio</kbd> para uma tabela com as miniaturas que se
 abre em qualquer navegador sem rede. Cabeçalhos, classes, unidades e estados
 saem no idioma escolhido para o relatório; o que você escreveu fica como o
 escreveu. No relatório final, o espólio tem o seu próprio apêndice, por
 proveniência.</li>
-<li>Com as fotos ativadas nos relatórios, pode escolher <kbd>Fichas fotográficas em vez das fotos</kbd> <span class="pro">PRO</span>: cada foto
+<li>As UE entram nos relatórios: as abertas e fechadas no período, no
+diário, no semanal e no mensal; no relatório final há o apêndice com todas as
+fichas e a matriz de Harris.</li>
+<li>Com as fotos ativadas nos relatórios, pode escolher <kbd>Fichas fotográficas em vez das fotos</kbd>: cada foto
 entra no PDF e no DOCX como uma ficha de documentação completa, com dados e
 mapa, no idioma do relatório.</li>
 </ol>
@@ -367,8 +401,8 @@ precisão RTK. O GPS interno permanece sempre disponível como alternativa.</p>
 <ol class="passi">
 <li>Ligue o recetor e ative o Bluetooth do telemóvel.</li>
 <li>No <kbd>Levantamento</kbd>, escolha a origem da posição: <em>GNSS externo
-(BLE/NMEA)</em> <span class="pro">PRO</span> e selecione o seu recetor na
-lista. Os recetores MFi (gratuitos) e os que transmitem NMEA em rede também
+(BLE/NMEA)</em> e selecione o seu recetor na
+lista. Os recetores MFi e os que transmitem NMEA em rede também
 são suportados.</li>
 <li>Para as correções RTK, configure o <strong>NTRIP</strong>: endereço do
 caster, porta, mountpoint, utilizador e palavra-passe (ficam guardados no
@@ -388,40 +422,21 @@ de firmware.</p>
 <h2>Cópia de segurança e intercâmbio</h2>
 <ol class="passi">
 <li>No menu do sítio, toque em <kbd>Exportar sítio (.zip)</kbd>: lá dentro
-está tudo — diário, pontos, fotos, desenhos, horas, marcos geodésicos.</li>
+está tudo — diário, pontos, fotos, desenhos, horas, marcos geodésicos, espólio e fichas de UE.</li>
 <li>Guarde o ZIP onde quiser (Ficheiros, Drive, e-mail…). É a sua cópia de
 segurança: a aplicação não tem nuvem, por opção de conceção.</li>
 <li><kbd>Importar sítio (.zip)…</kbd> recria o sítio noutro dispositivo,
-mesmo entre iPhone e Android.</li>
+mesmo entre iPhone e Android. A importação nunca substitui nem junta:
+cria sempre um sítio novo ao lado dos seus, com «(importado)» no nome se já
+tiver um igual.</li>
 </ol>
 <p class="nota">⚠️ <kbd>Eliminar sítio…</kbd> apaga o sítio com todo o seu
 conteúdo e é <strong>irreversível</strong>: exporte primeiro um ZIP em caso de dúvida.</p>
 
-<h2>Gratuito e Pro</h2>
-<table>
-<tr><th></th><th>Gratuito</th><th>Pro</th></tr>
-<tr><td>Sítios</td><td>1</td><td>Ilimitados</td></tr>
-<tr><td>GNSS</td><td>GPS interno, recetores MFi</td><td>+ BLE/NMEA, NTRIP</td></tr>
-<tr><td>Relatórios</td><td>Diário com marca de água</td><td>Todos, sem marca de água</td></tr>
-<tr><td>Exportação</td><td>PDF, CSV</td><td>+ DOCX com logótipo e fotos, GeoJSON</td></tr>
-<tr><td>Desenhos</td><td>Papel vegetal, zoom, textos, escala, pontos cotados, <strong>tramas, estilos de linha, opacidade do fundo</strong></td><td>+ Exportar com legenda, SVG/DXF</td></tr>
-<tr><td>Decalque automático</td><td>—</td><td>Por toque e «Decalcar tudo»</td></tr>
-<tr><td>Gravações NMEA</td><td>Releitura e partilha dos ficheiros</td><td>A gravação (requer a antena externa)</td></tr>
-<tr><td>Caderneta de nivelamento</td><td>✓</td><td>✓</td></tr>
-<tr><td>Ficha fotográfica</td><td>—</td><td>Partilha e fichas nos relatórios</td></tr>
-<tr><td>Espólio</td><td>Registo, CSV e HTML</td><td>+ apêndice nos relatórios</td></tr>
-<tr><td>Escalas virtuais</td><td>Nas fotos e nas pranchas</td><td>+ vetores em SVG e DXF</td></tr>
-<tr><td>Contar e medir</td><td>—</td><td>Numa foto e em série</td></tr>
-<tr><td>Medição 3D (LiDAR)</td><td>—</td><td>Nos dispositivos com scanner</td></tr>
-<tr><td>Ditado por voz</td><td>✓</td><td>✓</td></tr>
-<tr><td>Idiomas dos relatórios</td><td>17</td><td>17</td></tr>
-</table>
-<p>Pro é uma subscrição mensal ou anual com renovação automática, ou uma
-compra única vitalícia. Gere-se e cancela-se nas definições do seu ID Apple.
-Quando tem direito a um período de experiência gratuita, o ecrã Pro escreve-lho
-antes da compra («7 dias grátis, depois …»): se não estiver escrito, não tem
-direito — a aplicação não promete uma experiência que a compra depois não
-cumpre.</p>
+<h2>Gratuita</h2>
+<p>O Giornale di Scavo é <strong>gratuito e completo</strong>: todas as funções
+descritas neste guia estão incluídas, sem subscrições, sem compras na aplicação
+e sem marca de água, com sítios ilimitados.</p>
 
 <h2>Resolução de problemas</h2>
 
@@ -479,19 +494,14 @@ aguarde que a posição seja obtida, depois fotografe. Com a permissão de
 localização negada, as fotos são guardadas sem coordenadas.</p></details>
 
 <details><summary>Faltam fotos ou o logótipo no relatório</summary>
-<p>As fotos nos relatórios, o logótipo e o cabeçalho personalizado fazem
-parte do Pro e aplicam-se ao DOCX e ao PDF. O relatório diário gratuito tem
-marca de água e não inclui fotos.</p></details>
+<p>Verifique se está ativado <kbd>Incluir fotos e desenhos no relatório</kbd>
+e se o logótipo está escolhido em <kbd>Cabeçalho e logótipo</kbd>: valem tanto
+para o PDF como para o DOCX.</p></details>
 
 <details><summary>Eliminei um sítio por engano</summary>
 <p>A eliminação é definitiva: os dados não são recuperáveis (não existe
 nuvem). Se exportou um ZIP anteriormente, importe-o para restaurar o sítio a
 essa data. Sugestão: exporte um ZIP no final de cada dia.</p></details>
-
-<details><summary>Comprei o Pro mas continua bloqueado</summary>
-<p>Toque em <kbd>Restaurar compras</kbd> no ecrã Pro, com o mesmo ID Apple da
-compra. Se mudou de dispositivo, a restauração recupera a subscrição ou a
-licença vitalícia.</p></details>
 
 <details><summary>«Obter» está desativado, ou indica «Tempo indisponível»</summary>
 <ul>
@@ -588,8 +598,7 @@ aparece nenhuma das duas, porque faltam os dados de disparo.</p></details>
 <details><summary>«Contar e medir» não aparece na foto</summary>
 <p>O comando só existe nas fotos de um registo de <strong>espólio</strong> — é
 aí que faz sentido recortar fragmentos — e abre-se a partir do detalhe da foto,
-não da ficha, que mostra apenas as miniaturas. Se o toque abrir o ecrã Pro, a
-função é essa mesma: faz parte do Pro, como o decalque.</p></details>
+não da ficha, que mostra apenas as miniaturas.</p></details>
 
 <details><summary>A escala gráfica não é encontrada</summary>
 <ul>

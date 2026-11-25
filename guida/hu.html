@@ -31,6 +31,7 @@ vagy a feltárás végén a jelentések maguktól elkészülnek az oldalak alapj
 <li><b>Felmérés</b>Vegye fel a GNSS-pontokat; RTK esetén előbb ellenőrizzen egy alappontot</li>
 <li><b>Fényképek</b>Fényképezzen a <kbd>Média</kbd>ból: a koordináták automatikusan hozzákapcsolódnak</li>
 <li><b>Rajzok</b>Pausolja át a metszetet vagy az alaprajzot egy fényképen (digitális pauszpapír)</li>
+<li><b>SE</b>Frissítse a feltárt SE-k adatlapjait és kapcsolataikat: <kbd>SE</kbd></li>
 <li><b>Leletek</b>A ládákkal maga előtt rögzítse, mi került elő: <kbd>Helyszín</kbd> → <kbd>Leletek</kbd></li>
 <li><b>Este</b>A <kbd>Jelentés</kbd> fülön készítse el a napi jelentést: a PDF küldésre kész</li>
 </ol>
@@ -50,7 +51,7 @@ bármit is elveszítene.</li>
 <em>Bluetooth</em> (csak külső vevő használatakor).</li>
 </ol>
 
-<h2>Az öt fül</h2>
+<h2>A hat fül</h2>
 
 <h3>📓 Napló</h3>
 <ol class="passi">
@@ -69,6 +70,45 @@ elsőbbséget élvez.</li>
 készüléket, a jelentésekben pedig a sor a jelentés nyelvén jelenik meg.</li>
 </ol>
 <div class="schermate"><figure><img src="img/hu/01-diario.webp" alt="A napok listája" width="640" height="1391" loading="lazy"><figcaption>A napok listája</figcaption></figure><figure><img src="img/hu/02-giornata.webp" alt="Egy nap oldala" width="640" height="1391" loading="lazy"><figcaption>Egy nap oldala</figcaption></figure></div>
+
+<h3>🧱 SE — rétegtani adatlapok</h3>
+<p>Minden rétegtani egységnek saját adatlapja van, az SE-k közötti
+kapcsolatokat hivatkozásként rögzíti: innen készülnek a dokumentáció
+SE-adatlapjai és a Harris-mátrix.</p>
+<ol class="passi">
+<li>Az <kbd>SE</kbd> fülön érintse meg a <kbd>+</kbd> gombot: az alkalmazás
+felajánlja a következő számot (módosíthatja), és megkérdezi a típust és a
+meghatározást. A szám a lelőhelyen belül egyedi; később a
+<kbd>Módosítás</kbd> gombbal változtathatja meg, és az ilyen származású ládák
+követik.</li>
+<li>Az adatlap tartalmazza az azonosítást (típus, meghatározás, terület vagy
+szektor, négyzet), a méreteket és a magasságokat (hosszúság, szélesség,
+vastagság, legkisebb és legnagyobb magasság), a leírást (szín, állag,
+összetevők), az értelmezést, a keltezést, a nyitás és a lezárás dátumát és a
+felelőst. Írás közben magától mentődik.</li>
+<li>A meghatározás, a szín, az állag, az összetevők, az értelmezés és a
+keltezés mellett ott van a <strong>tezaurusz</strong> gombja (a kis könyv):
+válasszon a szabványos szókincsből vagy a saját kifejezései közül, így az
+adatlap egységes marad, bárki ásson is. Az összetevőknél több is választható.
+Ha a keresett szó nincs benne, a lap felajánlja a hozzáadását. A saját
+kifejezések minden lelőhelyre érvényesek, és a <kbd>Tezaurusz</kbd> alatt
+kezelhetők, az SE-adatlap ⋯ menüjében.</li>
+<li><kbd>Kapcsolat hozzáadása</kbd>: válassza ki a kapcsolatot (fedi,
+átvágja, kitölti, nekitámaszkodik, összekötve ezzel, azonos ezzel, és ezek
+fordítottjai), és írja be a másik SE számát. A kapcsolatot csak egyszer kell
+rögzíteni, és a másik adatlapon megfordítva jelenik meg: ha a 101 fedi a 102-t,
+a 102-ben ezt olvassa: „fedi őt 101”. Ha a másik SE-nek még nincs adatlapja,
+üresen jön létre. A már rögzített sorrendnek ellentmondó kapcsolatot az
+alkalmazás elutasítja, magyarázattal.</li>
+<li>A leletek szakasza azokat a ládákat mutatja, amelyeknek a származása
+megnevezi az SE-t („SE 102”, „FSE 12”): semmit sem kell kézzel összekapcsolni.
+A <kbd>Lelet hozzáadása</kbd> a már kitöltött származással nyitja meg a lelet
+adatlapját.</li>
+<li>A ⋯ menüből a <kbd>Harris-mátrix</kbd> a kapcsolatokból rajzolja meg a
+sorrendet: a legfiatalabb SE felül, az azonos vagy összekötött SE-k egyetlen
+keretben, a beásások szaggatott vonallal, a falazott egységek szürke alapon.
+Két ujjal nagyítható, és képként megosztható.</li>
+</ol>
 
 <h3>📍 Felmérés</h3>
 <ol class="passi">
@@ -90,8 +130,7 @@ terepi jegyzőkönyve: állomások, hátra- és előremérések, egy kiinduló
 alapponttól számított magasságok, záróhiba-ellenőrzéssel. A szintezett pontok
 a magasságukkal kerülnek be a lelőhelyre, akárcsak a GNSS-pontok.</li>
 <li>A <strong>LiDAR</strong>-szkennerrel felszerelt készülékeken (iPhone Pro a
-12-estől fölfelé, iPad Pro) megjelenik a <kbd>3D mérés</kbd>
-<span class="pro">PRO</span>: pásztázzon lassan, amíg a felület fel nem épül,
+12-estől fölfelé, iPad Pro) megjelenik a <kbd>3D mérés</kbd>: pásztázzon lassan, amíg a felület fel nem épül,
 majd érintse meg a két mérendő pontot, és olvassa le a távolságot, a vízszintes
 távolságot és a szintkülönbséget. A <kbd>Horgonyzás alapponthoz</kbd> gombbal
 kiválaszt egy ismert magasságú alappontot, és megérinti annak pontját a terepen:
@@ -102,8 +141,7 @@ amelyet megerősítés előtt javíthat. Ez optikai mérés, és az alkalmazás 
 mondja, amikor „LiDAR ±cm”-t ír: egy szintkülönbséghez vagy egy helyben,
 sebtében vett hosszhoz jó, és nem helyettesíti sem a GNSS-t, sem a szintezőt. A
 szkenner nélküli készülékeken a gomb egyáltalán nincs ott.</li>
-<li>A panel alatt találhatók az <kbd>NMEA-felvételek</kbd>: a külső vevő
-<span class="pro">PRO</span> nyers adatfolyama magától fájlba kerül — a
+<li>A panel alatt találhatók az <kbd>NMEA-felvételek</kbd>: a külső vevő nyers adatfolyama magától fájlba kerül — a
 felvétel akkor indul, amikor bekapcsolja az antennát, és akkor záródik le,
 amikor kikapcsolja, anélkül hogy erre emlékeznie kellene. Arra jó, hogy egy
 kétséges napot újra végig lehessen olvasni, vagy hogy a nyers adatot át
@@ -128,7 +166,7 @@ felvételeknél (alaprajz, egy SE alja) pedig a zenitális felirat jelenik meg
 a felső szél irányával. Ha az iránytűt zavarás éri, az alkalmazás jelzi.</li>
 <li>Érintsen meg egy fényképet a cím és a megjegyzések megadásához (pl.
 „SE 102 északról”).</li>
-<li>Az <kbd>Adatlap megosztása</kbd> <span class="pro">PRO</span> elkészíti a
+<li>Az <kbd>Adatlap megosztása</kbd> elkészíti a
 <strong>dokumentációs fotólapot</strong>: a fényképet, alatta a felvétel
 adataival (lelőhely, szám, dátum és időpont, koordináták, magasság, irány),
 egy műholdas nézetet a helyjelölővel és a felvételi kúppal, a térkép
@@ -155,7 +193,7 @@ is mondja; ha Ön forgatja el, a felirat „megadott”-ra vált. A
 <kbd>Megosztás léptékkel</kbd> a fénykép egy másolatát adja ki mindazzal, amit
 ráhelyezett — a <kbd>Fénykép megosztása</kbd> marad a csupasz eredeti, a saját
 EXIF-jével.</li>
-<li>A <kbd>Sorozatos feldolgozás</kbd> <span class="pro">PRO</span> (a
+<li>A <kbd>Sorozatos feldolgozás</kbd> (a
 <kbd>Média</kbd> felső menüjében) fényképek egy csoportját veszi ki a
 galériából, és mindet átengedi a „Számlálás és mérés” munkáján, egyiket a másik
 után: minden fényképből a lelőhely fényképe lesz, a felvétel dátumával, és
@@ -170,8 +208,7 @@ javítsa a származást, a kategóriát és a mennyiséget, majd erősítse meg.
 <h3>🧮 Számlálás és mérés (a Médiában)</h3>
 <p>A felülről lefényképezett, töredékekkel teli tálca — és az alkalmazás, amely
 magától megszámolja és megméri őket. Egy <strong>lelet</strong> fényképén él: az
-adatlapjáról nyitja meg, és megérinti a <kbd>Számlálás és mérés</kbd>
-<span class="pro">PRO</span> gombot.</p>
+adatlapjáról nyitja meg, és megérinti a <kbd>Számlálás és mérés</kbd> gombot.</p>
 <ol class="passi">
 <li>Először a lépték. Az alkalmazás magától keresi a fényképen a
 <strong>mérőlécet</strong>: ha megtalálja, megmondja, hány mezőt olvasott le, Ön
@@ -233,7 +270,7 @@ rajz. A választás a lapon marad, és érvényes PDF-ben, DOCX-ben, PNG-ben és
 <kbd>Exportálás jelmagyarázattal</kbd> esetén is.</li>
 <li>Minden más az <kbd>Eszközök</kbd> alatt van (a villáskulcs a sávban),
 amely a hét mód tartalomjegyzéke: <kbd>Szövegdoboz</kbd>,
-<kbd>Átrajzolás</kbd> <span class="pro">PRO</span>, <kbd>A fotó léptéke</kbd>,
+<kbd>Átrajzolás</kbd>, <kbd>A fotó léptéke</kbd>,
 <kbd>Magassággal rendelkező pont</kbd>, <kbd>Sraffozás</kbd>,
 <kbd>Vonalstílus</kbd> és <kbd>Virtuális lépték</kbd>. Egyszerre
 <strong>csak egy</strong> lehet bekapcsolva:
@@ -244,13 +281,12 @@ pont) csak akkor jelenik meg, ha van háttérfénykép.</li>
 <li>A <kbd>Szövegdoboz</kbd> eszközzel helyezi el a feliratokat (pl.
 „SE 1002”): mozgathatók, csippentéssel átméretezhetők, és négyféle betűtípus
 közül választhat.</li>
-<li>Az <kbd>Átrajzolás</kbd> <span class="pro">PRO</span> felismeri az
+<li>Az <kbd>Átrajzolás</kbd> felismeri az
 érintett tárgy körvonalát (egy követ, egy réteg határát), és vonallá
 alakítja: a szín, a vastagság és a vonal stílusa a mód elhagyása nélkül
 módosítható, a körvonalak pedig simán jönnek ki, nem lépcsőzetesen. Minden a
 készüléken történik, hálózat nélkül.</li>
-<li>Az átrajzoláson belül a <kbd>Mindent átrajzol</kbd>
-<span class="pro">PRO</span> magától végigmegy az egész fényképen. Az indító
+<li>Az átrajzoláson belül a <kbd>Mindent átrajzol</kbd> magától végigmegy az egész fényképen. Az indító
 lapon dönti el a megjelenést — <kbd>Csak körvonalak</kbd>, vagy egy sraffozás
 és esetleg egy <kbd>Színfátyol</kbd> —, majd megnyomja az <kbd>Indítás</kbd>
 gombot: a sáv mutatja, hol tart, és néhány tíz másodpercet vesz igénybe. Ami
@@ -289,13 +325,13 @@ elemeket, mint a fényképeken: léptékvonalzót, mérőrudat, négyzetet, kere
 északi nyilat és a két érintéssel felvett méreteket. A metrikus típusokhoz az
 kell, hogy a lapnak legyen léptéke, vagyis <kbd>A fotó léptéke</kbd>: ismert
 távolság nélkül az alkalmazás inkább elmagyarázza, semmint rajzoljon. SVG-ben és
-DXF-ben <span class="pro">PRO</span> ezek az elemek <strong>vektorként</strong>
+DXF-ben ezek az elemek <strong>vektorként</strong>
 kerülnek ki, a saját rétegükön, és a GIS vonalzójával mért távolság egyezik a
 címkével.</li>
-<li><kbd>Exportálás jelmagyarázattal</kbd> <span class="pro">PRO</span>: a
+<li><kbd>Exportálás jelmagyarázattal</kbd>: a
 kép alján fehér sáv jelenik meg — méterskála (ha van lépték), északi nyíl a
 függőlegesen készített fényképeknél, „nézet innen” a frontális felvételeknél.</li>
-<li><kbd>Exportálás vektorosan</kbd> <span class="pro">PRO</span>: SVG a
+<li><kbd>Exportálás vektorosan</kbd>: SVG a
 rajzhoz, vagy <strong>DXF</strong> a GIS-hez. Legalább két, koordinátákkal
 ellátott magassági ponttal egy függőlegesen készített fényképen a DXF
 <strong>UTM-ben georeferálva</strong> készül el, és a QGIS-ben magától a
@@ -321,8 +357,7 @@ előkerül, a neve alatt a már rögzített sorok számával.</li>
 <h3>📦 Leletek (a Helyszínen)</h3>
 <p>Az igazi pillanat nem a fényképezőgépé: az a nap vége, amikor leül a ládák
 elé, és egymás után beviszi őket, fáradtan és piszkos kézzel. Itt minden
-arra a pillanatra készült — és <strong>ingyenes</strong>, akárcsak a pontok
-rögzítése: átadni azt, amit kiástunk, alapdokumentáció.</p>
+arra a pillanatra készült.</p>
 <ol class="passi">
 <li><kbd>Helyszín</kbd> → <kbd>Leletek</kbd> → <kbd>+</kbd>. A lap már a mai
 dátummal és a <strong>legutóbb használt származással</strong> nyílik meg: a
@@ -358,24 +393,24 @@ sort, származás szerint csoportosítva és a megjegyzésekkel együtt: javíts
 
 <h3>📄 Jelentés</h3>
 <ol class="passi">
-<li>Válassza ki a típust: <strong>napi</strong> (ingyenes, vízjellel),
+<li>Válassza ki a típust: <strong>napi</strong>,
 <strong>heti</strong>, <strong>havi</strong> vagy <strong>záró</strong>
-jelentés teljes függelékekkel <span class="pro">PRO</span>.</li>
+jelentés teljes függelékekkel.</li>
 <li>Válassza ki a jelentés nyelvét a <strong>tizenhét</strong> közül,
 függetlenül az alkalmazás nyelvétől: a jelentés angolul is elkészülhet, akkor
 is, ha az alkalmazást magyarul használja.</li>
-<li>Készítsen PDF-et, vagy exportáljon DOCX-et logóval és fényképekkel
-<span class="pro">PRO</span>, CSV-t a pontokról, GeoJSON-t QGIS-hez
-<span class="pro">PRO</span>.</li>
-<li>Legalul található a <kbd>Leletek exportálása (teljes lelőhely)</kbd>, ez
-ingyenes: a <kbd>Leletek CSV exportálása</kbd> a táblázatkezelőhöz, a
+<li>Készítsen PDF-et, vagy exportáljon DOCX-et logóval és fényképekkel, CSV-t a pontokról, GeoJSON-t QGIS-hez.</li>
+<li>Legalul található a <kbd>Leletek exportálása (teljes lelőhely)</kbd>: a <kbd>Leletek CSV exportálása</kbd> a táblázatkezelőhöz, a
 <kbd>Leletek HTML exportálása</kbd> pedig egy bélyegképes táblázathoz, amely
 hálózat nélkül bármelyik böngészőben megnyílik. A fejlécek, a kategóriák, az
 egységek és az állapotok a jelentéshez választott nyelven jönnek ki; amit Ön írt
 be, az úgy marad, ahogyan beírta. A záró jelentésben a leletek saját függeléket
 kapnak, származás szerint.</li>
+<li>Az SE-k bekerülnek a jelentésekbe: az adott időszakban megnyitottak és
+lezártak a napi, a heti és a havi jelentésbe; a záró jelentésben függelék
+szerepel az összes adatlappal és a Harris-mátrixszal.</li>
 <li>A jelentésekben szereplő fényképek bekapcsolásával választhatja a
-<kbd>Fotó-adatlapok a fényképek helyett</kbd> <span class="pro">PRO</span>
+<kbd>Fotó-adatlapok a fényképek helyett</kbd>
 lehetőséget: minden fénykép teljes, adatokkal és térképpel ellátott
 dokumentációs lapként kerül be a PDF-be és a DOCX-be, a jelentés nyelvén.</li>
 </ol>
@@ -387,8 +422,8 @@ pontosságot. A belső GPS mindig elérhető marad tartalékként.</p>
 <ol class="passi">
 <li>Kapcsolja be a vevőt, és aktiválja a Bluetooth-ot a telefonon.</li>
 <li>A <kbd>Felmérés</kbd>ben válassza ki a helyzetforrást: <em>Külső GNSS
-(BLE/NMEA)</em> <span class="pro">PRO</span>, majd válassza ki a vevőt a
-listából. Az MFi-vevők (ingyenesek) és a hálózaton NMEA-t közvetítő vevők is
+(BLE/NMEA)</em>, majd válassza ki a vevőt a
+listából. Az MFi-vevők és a hálózaton NMEA-t közvetítő vevők is
 támogatottak.</li>
 <li>Az RTK-korrekciókhoz állítsa be az <strong>NTRIP</strong>-et: a caster
 címét, a portot, a mountpointot, a felhasználónevet és a jelszót (ezek a
@@ -409,40 +444,22 @@ is az alkalmazás útmutatója marad, nem firmware-kézikönyv.</p>
 <ol class="passi">
 <li>A lelőhely menüjéből érintse meg a <kbd>Lelőhely exportálása (.zip)</kbd>
 lehetőséget: minden benne van — napló, pontok, fényképek, rajzok, órák,
-alappontok.</li>
+alappontok, leletek és SE-adatlapok.</li>
 <li>Őrizze meg a ZIP-fájlt bárhol (Fájlok, Drive, e-mail…). Ez a biztonsági
 mentése: az alkalmazásnak szándékosan nincs felhője.</li>
 <li>A <kbd>Lelőhely importálása (.zip)…</kbd> újra létrehozza a lelőhelyet
-egy másik készüléken, akár iPhone és Android között is.</li>
+egy másik készüléken, akár iPhone és Android között is. Az importálás soha nem
+ír felül és nem egyesít: mindig új lelőhelyet hoz létre a meglévők mellett, a
+nevében „(importált)” jelöléssel, ha már van egy ugyanilyen.</li>
 </ol>
 <p class="nota">⚠️ A <kbd>Lelőhely törlése…</kbd> a teljes tartalmával együtt
 törli a lelőhelyet, és <strong>visszafordíthatatlan</strong>: kétség esetén
 előbb exportáljon egy ZIP-et.</p>
 
-<h2>Ingyenes és Pro</h2>
-<table>
-<tr><th></th><th>Ingyenes</th><th>Pro</th></tr>
-<tr><td>Lelőhelyek</td><td>1</td><td>Korlátlan</td></tr>
-<tr><td>GNSS</td><td>Belső GPS, MFi-vevők</td><td>+ BLE/NMEA, NTRIP</td></tr>
-<tr><td>Jelentés</td><td>Napi, vízjellel</td><td>Az összes, vízjel nélkül</td></tr>
-<tr><td>Exportálás</td><td>PDF, CSV</td><td>+ DOCX logóval és fényképekkel, GeoJSON</td></tr>
-<tr><td>Rajzok</td><td>Pauszpapír, nagyítás, szövegek, lépték, magassági pontok, <strong>sraffozások, vonalstílusok, a háttér átlátszatlansága</strong></td><td>+ Exportálás jelmagyarázattal, SVG/DXF</td></tr>
-<tr><td>Automatikus átrajzolás</td><td>—</td><td>Érintéssel és a „Mindent átrajzol” paranccsal</td></tr>
-<tr><td>NMEA-felvételek</td><td>A fájlok újraolvasása és megosztása</td><td>A felvétel (külső antenna kell hozzá)</td></tr>
-<tr><td>Szintezési jegyzőkönyv</td><td>✓</td><td>✓</td></tr>
-<tr><td>Fotólap</td><td>—</td><td>Megosztás és lapok a jelentésekben</td></tr>
-<tr><td>Leletek</td><td>Nyilvántartás, CSV és HTML</td><td>+ függelék a jelentésekben</td></tr>
-<tr><td>Virtuális léptékek</td><td>Fényképeken és lapokon</td><td>+ vektorok SVG-ben és DXF-ben</td></tr>
-<tr><td>Számlálás és mérés</td><td>—</td><td>Egy fényképen és sorozatban</td></tr>
-<tr><td>3D mérés (LiDAR)</td><td>—</td><td>Szkennerrel rendelkező készülékeken</td></tr>
-<tr><td>Hangalapú diktálás</td><td>✓</td><td>✓</td></tr>
-<tr><td>Jelentés nyelvei</td><td>17</td><td>17</td></tr>
-</table>
-<p>A Pro havi vagy éves, automatikusan megújuló előfizetés, vagy egyszeri,
-örökös vásárlás. Az Apple ID beállításaiban bármikor kezelhető és lemondható.
-Ha ingyenes próbaidőszak jár Önnek, a Pro képernyő ezt a vásárlás előtt le is
-írja („7 nap ingyenes, utána …”): ha nincs ott kiírva, akkor nem jár — az
-alkalmazás nem ígér olyan próbaidőt, amit a vásárlás aztán nem tart meg.</p>
+<h2>Ingyenes</h2>
+<p>A Giornale di Scavo <strong>ingyenes és teljes</strong>: az útmutatóban
+leírt összes funkció benne van, előfizetés, alkalmazáson belüli vásárlás és
+vízjel nélkül, korlátlan számú lelőhellyel.</p>
 
 <h2>Hibaelhárítás</h2>
 
@@ -508,21 +525,15 @@ helyadat-engedély meg van tagadva, a fényképek koordináták nélkül kerüln
 mentésre.</p></details>
 
 <details><summary>A jelentésből hiányoznak a fényképek vagy a logó</summary>
-<p>A jelentésekben szereplő fényképek, a logó és az egyéni fejléc a Pro
-részét képezik, és a DOCX-re és a PDF-re egyaránt vonatkoznak. Az ingyenes
-napi jelentés vízjelet tartalmaz, és nem foglal magában fényképeket.</p></details>
+<p>Ellenőrizze, hogy be van-e kapcsolva a <kbd>Fényképek és rajzok beillesztése a jelentésbe</kbd>
+lehetőség, és hogy a logó ki van-e választva a <kbd>Fejléc és logó</kbd>
+alatt: mindkettő a PDF-re és a DOCX-re is vonatkozik.</p></details>
 
 <details><summary>Véletlenül töröltem egy lelőhelyet</summary>
 <p>A törlés végleges: az adatok nem állíthatók vissza (nincs felhő). Ha
 korábban exportált egy ZIP-et, importálja azt a lelőhely adott dátum
 szerinti visszaállításához. Tanács: minden nap végén exportáljon egy
 ZIP-et.</p></details>
-
-<details><summary>Megvásároltam a Pro-t, de még mindig zárolva van</summary>
-<p>Érintse meg a <kbd>Vásárlások visszaállítása</kbd> gombot a Pro képernyőn,
-ugyanazzal az Apple ID-vel, amellyel a vásárlás történt. Ha készüléket
-váltott, a visszaállítás helyreállítja az előfizetést vagy az örökös
-licencet.</p></details>
 
 <details><summary>A „Lekérés” szürkén jelenik meg, vagy azt írja: „Az időjárás nem elérhető”</summary>
 <ul>
@@ -628,9 +639,7 @@ a felvételi adatok.</p></details>
 <details><summary>A „Számlálás és mérés” nem jelenik meg a fényképen</summary>
 <p>A parancs csak egy <strong>lelet</strong> fényképein él — ott van értelme
 töredékeket körberajzolni —, és a fénykép részleteiből nyílik meg, nem az
-adatlapról, amely csak a bélyegképeket mutatja. Ha az érintésre a Pro képernyő
-nyílik meg, akkor a funkció éppen olyan: a Pro része, akárcsak az
-átrajzolás.</p></details>
+adatlapról, amely csak a bélyegképeket mutatja.</p></details>
 
 <details><summary>Nem találja meg a mérőlécet</summary>
 <ul>

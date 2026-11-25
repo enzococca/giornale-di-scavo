@@ -31,6 +31,7 @@ Woche oder der Grabung entstehen die Berichte von selbst aus den Seiten.</p>
 <li><b>Vermessung</b>GNSS-Punkte aufnehmen; bei RTK zuerst einen Festpunkt prüfen</li>
 <li><b>Fotos</b>Aus den <kbd>Medien</kbd> fotografieren: Koordinaten werden automatisch angehängt</li>
 <li><b>Zeichnungen</b>Profil oder Planum auf einem Foto durchpausen (digitales Transparentpapier)</li>
+<li><b>SE</b>Die Karten der ausgegrabenen SE und ihre Beziehungen aktualisieren: <kbd>SE</kbd></li>
 <li><b>Funde</b>Mit den Kisten vor sich erfassen, was herausgekommen ist: <kbd>Grabung</kbd> → <kbd>Funde</kbd></li>
 <li><b>Abends</b>Unter <kbd>Berichte</kbd> den Tagesbericht erzeugen: ein PDF, fertig zum Versand</li>
 </ol>
@@ -49,7 +50,7 @@ unter der Überschrift „Ihre Fundplätze“, und mit <kbd>Fundplatz umbenennen
 Empfänger).</li>
 </ol>
 
-<h2>Die fünf Reiter</h2>
+<h2>Die sechs Reiter</h2>
 
 <h3>📓 Tagebuch</h3>
 <ol class="passi">
@@ -69,6 +70,44 @@ Gegend das Gerät; in den Berichten erscheint die Zeile in der Sprache des
 Berichts.</li>
 </ol>
 <div class="schermate"><figure><img src="img/de/01-diario.webp" alt="Die Liste der Grabungstage" width="640" height="1391" loading="lazy"><figcaption>Die Liste der Grabungstage</figcaption></figure><figure><img src="img/de/02-giornata.webp" alt="Die Seite eines Tages" width="640" height="1391" loading="lazy"><figcaption>Die Seite eines Tages</figcaption></figure></div>
+
+<h3>🧱 SE — stratigraphische Einheiten</h3>
+<p>Eine Karte für jede stratigraphische Einheit, die Beziehungen zwischen den SE
+als Verknüpfungen erfasst: Von hier kommen die SE-Karten der Dokumentation und
+die Harris-Matrix.</p>
+<ol class="passi">
+<li>Im Reiter <kbd>SE</kbd> auf <kbd>+</kbd> tippen: Die App schlägt die
+nächste Nummer vor (Sie können sie ändern) und fragt nach Typ und Ansprache.
+Die Nummer ist im Fundplatz eindeutig; später ändern Sie sie mit
+<kbd>Ändern</kbd>, und die Kisten mit dieser Herkunft gehen mit.</li>
+<li>Die Karte umfasst Identifikation (Typ, Ansprache, Fläche oder Sektor,
+Quadrant), Maße und Höhen (Länge, Breite, Mächtigkeit, minimale und maximale
+Höhe), Beschreibung (Farbe, Konsistenz, Bestandteile), Interpretation,
+Datierung, Öffnungs- und Schließungsdatum und Verantwortliche. Sie speichert
+sich beim Schreiben von selbst.</li>
+<li>Neben Ansprache, Farbe, Konsistenz, Bestandteilen, Interpretation und
+Datierung sitzt die Schaltfläche des <strong>Thesaurus</strong> (das Büchlein):
+Wählen Sie aus dem Standardvokabular oder aus Ihren eigenen Begriffen, und die
+Karte bleibt unter allen, die graben, einheitlich. Bei den Bestandteilen lassen
+sich mehrere wählen. Fehlt das gesuchte Wort, bietet das Blatt an, es
+hinzuzufügen. Ihre Begriffe gelten für alle Fundplätze und werden unter
+<kbd>Thesaurus</kbd> verwaltet, im ⋯-Menü des SE-Reiters.</li>
+<li><kbd>Beziehung hinzufügen</kbd>: Beziehung wählen (überdeckt, schneidet,
+verfüllt, stößt an, im Verband mit, gleich mit, und ihre Umkehrungen) und die
+Nummer der anderen SE eingeben. Die Beziehung wird nur einmal erfasst und
+erscheint umgekehrt in der anderen Karte: Wenn 101 die 102 überdeckt, lesen Sie
+in der 102 „überdeckt von 101“. Hat die andere SE noch keine Karte, wird eine
+leere angelegt. Eine Beziehung, die der bereits erfassten Abfolge
+widerspricht, wird abgelehnt, mit Erklärung.</li>
+<li>Der Abschnitt der Funde zeigt die Kisten, deren Herkunft die SE nennt
+(„SE 102“, „MSE 12“): Von Hand ist nichts zu verknüpfen.
+<kbd>Fund hinzufügen</kbd> öffnet die Fundkarte mit bereits eingetragener
+Herkunft.</li>
+<li>Im ⋯-Menü zeichnet <kbd>Harris-Matrix</kbd> die Abfolge aus den
+Beziehungen: die jüngste SE oben, gleiche oder im Verband stehende SE in einem
+einzigen Kasten, Interfaces gestrichelt, Mauer-SE auf grauem Grund. Sie lässt
+sich mit zwei Fingern vergrößern und als Bild teilen.</li>
+</ol>
 
 <h3>📍 Vermessung</h3>
 <ol class="passi">
@@ -90,7 +129,7 @@ Nivelliergerät: Stationen, Rück- und Vorblicke, ab einem Ausgangsfestpunkt
 berechnete Höhen, mit Kontrolle des Schlussfehlers. Nivellierte Punkte kommen
 mit ihrer Höhe in den Fundplatz, genau wie GNSS-Punkte.</li>
 <li>Auf Geräten mit <strong>LiDAR</strong>-Scanner (iPhone Pro ab dem 12,
-iPad Pro) erscheint <kbd>3D-Messung</kbd> <span class="pro">PRO</span>:
+iPad Pro) erscheint <kbd>3D-Messung</kbd>:
 langsam schwenken, bis die Oberfläche rekonstruiert ist, dann die beiden zu
 messenden Punkte antippen und Strecke, Horizontalstrecke und Höhenunterschied
 ablesen. Mit <kbd>An Festpunkt verankern</kbd> wählen Sie einen Festpunkt
@@ -104,7 +143,7 @@ schnell vor Ort genommene Länge, und sie ersetzt weder das GNSS noch das
 Nivelliergerät. Auf Geräten ohne Scanner gibt es die Schaltfläche gar
 nicht.</li>
 <li>Unter dem Feld stehen die <kbd>NMEA-Aufzeichnungen</kbd>: Der Rohdatenstrom
-des externen Empfängers <span class="pro">PRO</span> landet von selbst in einer
+des externen Empfängers landet von selbst in einer
 Datei — die Aufzeichnung beginnt, wenn Sie die Antenne einschalten, und endet,
 wenn Sie sie ausschalten, ohne dass Sie daran denken müssen. Das dient zum
 Nachlesen eines zweifelhaften Tages oder zur Übergabe der Rohdaten an die
@@ -131,7 +170,7 @@ Sohle eines Befunds) die Nadir-Angabe mit der Richtung der Oberkante. Ist der
 Kompass gestört, sagt die App das.</li>
 <li>Tippen Sie auf ein Foto für Titel und Notizen (z. B. „Bef. 102 von
 Norden“).</li>
-<li><kbd>Fotoblatt teilen</kbd> <span class="pro">PRO</span> erzeugt das
+<li><kbd>Fotoblatt teilen</kbd> erzeugt das
 <strong>Foto-Dokumentationsblatt</strong>: das Foto mit den Aufnahmedaten
 darunter (Fundplatz, Nummer, Datum und Uhrzeit, Koordinaten, Höhe, Richtung),
 eine Satellitenansicht mit Markierung und Aufnahmekegel, dem Kartenmaßstab
@@ -157,7 +196,7 @@ ausgerichtet, und der Bericht sagt das; drehen Sie ihn selbst, wechselt die
 Angabe auf „angegeben“. <kbd>Mit Maßstab teilen</kbd> gibt eine Kopie des Fotos
 mit allem heraus, was Sie daraufgelegt haben — <kbd>Foto teilen</kbd> bleibt
 das nackte Original, mit seinem EXIF.</li>
-<li><kbd>Stapelverarbeitung</kbd> <span class="pro">PRO</span> (Menü oben in
+<li><kbd>Stapelverarbeitung</kbd> (Menü oben in
 den <kbd>Medien</kbd>) nimmt eine Gruppe von Fotos aus der Mediathek und gibt
 sie alle nacheinander an das Zählen und Messen weiter: Jedes Foto wird zu einem
 Grabungsfoto mit dem Aufnahmedatum, und jedes bekommt seine <strong>eigene
@@ -173,8 +212,7 @@ der anderen: Herkunft, Fundgattung und Menge korrigieren und bestätigen.</li>
 <p>Die von oben fotografierte Schale mit den Scherben, und die App zählt und
 misst die Stücke von selbst. Das lebt am Foto eines
 <strong>Fundes</strong>: Sie öffnen es
-aus seiner Karte und tippen <kbd>Zählen und messen</kbd>
-<span class="pro">PRO</span>.</p>
+aus seiner Karte und tippen <kbd>Zählen und messen</kbd>.</p>
 <ol class="passi">
 <li>Zuerst der Maßstab. Die App sucht die <strong>Maßstabsleiste</strong> im
 Foto von selbst: Findet sie eine, sagt sie Ihnen, wie viele Felder sie gelesen
@@ -236,7 +274,7 @@ Bedarf, von 5% bis 100%: Es blasst das Foto aus, nicht die Zeichnung. Die
 Wahl bleibt am Blatt und gilt auch in PDF, DOCX, PNG und bei <kbd>Mit Legende exportieren</kbd>.</li>
 <li>Alles Übrige steht unter <kbd>Werkzeuge</kbd> (der Schraubenschlüssel in
 der Leiste), dem Verzeichnis der sieben Modi: <kbd>Textfeld</kbd>,
-<kbd>Nachzeichnen</kbd> <span class="pro">PRO</span>, <kbd>Fotomaßstab</kbd>,
+<kbd>Nachzeichnen</kbd>, <kbd>Fotomaßstab</kbd>,
 <kbd>Punkt mit Höhe</kbd>, <kbd>Schraffur</kbd>, <kbd>Linienstil</kbd> und
 <kbd>Virtueller Maßstab</kbd>. Es
 gilt immer nur <strong>einer</strong>: Das Häkchen sagt, welcher, und solange
@@ -247,13 +285,12 @@ ein Hintergrundfoto da ist.</li>
 <li>Mit <kbd>Textfeld</kbd> setzen Sie die Beschriftungen (z. B. „Bef. 1002“):
 Sie lassen sich verschieben, mit zwei Fingern skalieren und bieten vier
 Schriftarten zur Auswahl.</li>
-<li><kbd>Nachzeichnen</kbd> <span class="pro">PRO</span> erkennt die Kontur des
+<li><kbd>Nachzeichnen</kbd> erkennt die Kontur des
 Objekts, das Sie antippen (ein Stein, die Grenze einer Schicht), und verwandelt
 sie in eine Linie: Farbe, Strichstärke und Linienstil lassen sich ändern, ohne
 den Modus zu verlassen, und die Konturen kommen glatt heraus statt treppig.
 Alles geschieht auf dem Gerät, ohne Netz.</li>
-<li>Im Nachzeichnen geht <kbd>Alles nachzeichnen</kbd>
-<span class="pro">PRO</span> das ganze Foto von allein durch. Im Startblatt
+<li>Im Nachzeichnen geht <kbd>Alles nachzeichnen</kbd> das ganze Foto von allein durch. Im Startblatt
 bestimmen Sie das Aussehen — <kbd>Nur Umrisse</kbd>, oder eine Schraffur und
 vielleicht ein <kbd>Farbschleier</kbd> — und drücken <kbd>Starten</kbd>: Die
 Leiste sagt, wie weit es ist, und es dauert einige Dutzend Sekunden. Was
@@ -293,15 +330,15 @@ bleiben es in PDF, DOCX, PNG, SVG und DXF.</li>
 auf die Fotos: Maßstabsleiste, Fluchtstab, Quadrat, Kreuz, Nordpfeil und
 Messungen mit zwei Tipps. Die metrischen Typen verlangen, dass das Blatt einen
 Maßstab hat, also den <kbd>Fotomaßstab</kbd>: ohne eine bekannte Strecke
-erklärt die App, statt zu zeichnen. In SVG und DXF <span class="pro">PRO</span>
+erklärt die App, statt zu zeichnen. In SVG und DXF
 kommen diese Elemente als <strong>Vektoren</strong> heraus, auf ihrer eigenen
 Ebene, und das mit dem Lineal des GIS gemessene Maß stimmt mit dem Etikett
 überein.</li>
-<li><kbd>Mit Legende exportieren</kbd> <span class="pro">PRO</span>: Das Bild
+<li><kbd>Mit Legende exportieren</kbd>: Das Bild
 bekommt unten einen weißen Streifen — Maßstabsbalken (falls der Maßstab
 gesetzt ist), Nordpfeil bei senkrecht aufgenommenen Fotos, „aufgenommen
 aus“ bei Frontalaufnahmen.</li>
-<li><kbd>Als Vektor exportieren</kbd> <span class="pro">PRO</span>: SVG für
+<li><kbd>Als Vektor exportieren</kbd>: SVG für
 die Zeichnung, oder <strong>DXF</strong> fürs GIS. Mit mindestens zwei
 Punkten mit Höhe und Koordinaten auf einem senkrecht aufgenommenen Foto kommt
 das DXF <strong>in UTM georeferenziert</strong> heraus und positioniert sich
@@ -326,9 +363,7 @@ herauskommt, mit der Zahl der bereits erfassten Zeilen unter dem Namen.</li>
 <h3>📦 Funde (in der Grabung)</h3>
 <p>Der eigentliche Moment ist nicht die Kamera: Es ist das Sitzen am Abend mit
 den Kisten vor sich, eine nach der anderen abgearbeitet, müde und mit
-schmutzigen Händen. Alles hier ist für diesen Moment gemacht — und es ist
-<strong>gratis</strong>, wie das Erfassen der Punkte: abzugeben, was man
-ausgegraben hat, ist Grunddokumentation.</p>
+schmutzigen Händen. Alles hier ist für diesen Moment gemacht.</p>
 <ol class="passi">
 <li><kbd>Grabung</kbd> → <kbd>Funde</kbd> → <kbd>+</kbd>. Die Karte öffnet sich
 schon mit dem heutigen Datum und mit der <strong>zuletzt verwendeten
@@ -364,24 +399,24 @@ selbst um.</li>
 
 <h3>📄 Berichte</h3>
 <ol class="passi">
-<li>Typ wählen: <strong>täglich</strong> (gratis, mit Wasserzeichen),
+<li>Typ wählen: <strong>täglich</strong>,
 <strong>wöchentlich</strong>, <strong>monatlich</strong> oder
-<strong>Abschlussbericht</strong> mit vollständigen Anhängen
-<span class="pro">PRO</span>.</li>
+<strong>Abschlussbericht</strong> mit vollständigen Anhängen.</li>
 <li>Berichtssprache aus <strong>siebzehn</strong> wählen, unabhängig von der
 App-Sprache: der Bericht kann auf Italienisch erscheinen, auch wenn Sie die App
 auf Deutsch verwenden.</li>
-<li>PDF erzeugen, oder DOCX mit Logo und Fotos exportieren
-<span class="pro">PRO</span>, CSV der Punkte, GeoJSON für QGIS
-<span class="pro">PRO</span>.</li>
-<li>Ganz unten steht <kbd>Fundexport (gesamter Fundplatz)</kbd>, gratis:
+<li>PDF erzeugen, oder DOCX mit Logo und Fotos exportieren, CSV der Punkte, GeoJSON für QGIS.</li>
+<li>Ganz unten steht <kbd>Fundexport (gesamter Fundplatz)</kbd>:
 <kbd>Funde-CSV exportieren</kbd> für die Tabellenkalkulation und
 <kbd>Funde-HTML exportieren</kbd> für eine Tabelle mit Miniaturen, die sich in
 jedem Browser ohne Netz öffnet. Überschriften, Fundgattungen, Einheiten und
 Zustände kommen in der für den Bericht gewählten Sprache heraus; was Sie selbst
 geschrieben haben, bleibt, wie Sie es geschrieben haben. Im Abschlussbericht
 haben die Funde ihren eigenen Anhang, nach Herkunft.</li>
-<li>Bei aktivierten Fotos in Berichten können Sie <kbd>Fotoblätter statt Fotos</kbd> <span class="pro">PRO</span> wählen: Jedes Foto kommt als
+<li>Die SE kommen in die Berichte: die im Zeitraum geöffneten und geschlossenen
+in den Tages-, Wochen- und Monatsbericht; im Abschlussbericht gibt es den Anhang
+mit allen Karten und der Harris-Matrix.</li>
+<li>Bei aktivierten Fotos in Berichten können Sie <kbd>Fotoblätter statt Fotos</kbd> wählen: Jedes Foto kommt als
 vollständiges Dokumentationsblatt mit Daten und Karte ins PDF und DOCX, in
 der Sprache des Berichts.</li>
 </ol>
@@ -393,8 +428,8 @@ RTK-Genauigkeit. Das interne GPS bleibt immer als Rückfallebene verfügbar.</p>
 <ol class="passi">
 <li>Empfänger einschalten und Bluetooth am Telefon aktivieren.</li>
 <li>In der <kbd>Vermessung</kbd> die Positionsquelle wählen: <em>Externes GNSS
-(BLE/NMEA)</em> <span class="pro">PRO</span> und den Empfänger aus der Liste
-auswählen. Auch MFi-Empfänger (gratis) und Empfänger mit NMEA über Netzwerk
+(BLE/NMEA)</em> und den Empfänger aus der Liste
+auswählen. Auch MFi-Empfänger und Empfänger mit NMEA über Netzwerk
 werden unterstützt.</li>
 <li>Für RTK-Korrekturen <strong>NTRIP</strong> einrichten: Caster-Adresse,
 Port, Mountpoint, Benutzer und Passwort (bleiben im Schlüsselbund des Geräts).
@@ -414,41 +449,23 @@ Firmware-Handbuch.</p>
 <h2>Sicherung und Austausch</h2>
 <ol class="passi">
 <li>Im Fundplatz-Menü <kbd>Fundplatz exportieren (.zip)</kbd> antippen: Alles
-ist enthalten — Tagebuch, Punkte, Fotos, Zeichnungen, Stunden, Festpunkte.</li>
+ist enthalten — Tagebuch, Punkte, Fotos, Zeichnungen, Stunden, Festpunkte, Funde und SE-Karten.</li>
 <li>Die ZIP-Datei beliebig aufbewahren (Dateien, Drive, E-Mail…). Sie ist Ihre
 Sicherung: Die App hat bewusst keine Cloud.</li>
 <li><kbd>Fundplatz importieren (.zip)…</kbd> stellt den Fundplatz auf einem
-anderen Gerät wieder her, auch zwischen iPhone und Android.</li>
+anderen Gerät wieder her, auch zwischen iPhone und Android. Der Import
+überschreibt nie und führt nichts zusammen: Er legt immer einen neuen Fundplatz
+neben Ihren an, mit „(importiert)“ im Namen, wenn Sie schon einen gleichnamigen
+haben.</li>
 </ol>
 <p class="nota">⚠️ <kbd>Fundplatz löschen…</kbd> entfernt den Fundplatz mit
 allem Inhalt und ist <strong>unumkehrbar</strong>: im Zweifel vorher eine ZIP
 exportieren.</p>
 
-<h2>Gratis und Pro</h2>
-<table>
-<tr><th></th><th>Gratis</th><th>Pro</th></tr>
-<tr><td>Fundplätze</td><td>1</td><td>Unbegrenzt</td></tr>
-<tr><td>GNSS</td><td>Internes GPS, MFi-Empfänger</td><td>+ BLE/NMEA, NTRIP</td></tr>
-<tr><td>Berichte</td><td>Tagesbericht mit Wasserzeichen</td><td>Alle, ohne Wasserzeichen</td></tr>
-<tr><td>Export</td><td>PDF, CSV</td><td>+ DOCX mit Logo und Fotos, GeoJSON</td></tr>
-<tr><td>Zeichnungen</td><td>Transparentpapier, Zoom, Textfelder, Maßstab, Punkte mit Höhe, <strong>Schraffuren, Linienstile, Deckkraft des Hintergrunds</strong></td><td>+ Mit Legende exportieren, SVG/DXF</td></tr>
-<tr><td>Automatisches Nachzeichnen</td><td>—</td><td>Per Tipp und „Alles nachzeichnen“</td></tr>
-<tr><td>NMEA-Aufzeichnungen</td><td>Nachlesen und Teilen der Dateien</td><td>Die Aufzeichnung (braucht die externe Antenne)</td></tr>
-<tr><td>Nivellierbücher</td><td>✓</td><td>✓</td></tr>
-<tr><td>Fotoblatt</td><td>—</td><td>Teilen und Blätter in Berichten</td></tr>
-<tr><td>Funde</td><td>Verzeichnis, CSV und HTML</td><td>+ Anhang in den Berichten</td></tr>
-<tr><td>Virtuelle Maßstäbe</td><td>Auf Fotos und auf Zeichenblättern</td><td>+ Vektoren in SVG und DXF</td></tr>
-<tr><td>Zählen und messen</td><td>—</td><td>Auf einem Foto und im Stapel</td></tr>
-<tr><td>3D-Messung (LiDAR)</td><td>—</td><td>Auf Geräten mit Scanner</td></tr>
-<tr><td>Diktierfunktion</td><td>✓</td><td>✓</td></tr>
-<tr><td>Berichtssprachen</td><td>17</td><td>17</td></tr>
-</table>
-<p>Pro gibt es als Monats- oder Jahresabo mit automatischer Verlängerung oder
-als einmaligen Lifetime-Kauf. Verwaltung und Kündigung jederzeit in den
-Einstellungen des Apple-Kontos. Steht Ihnen ein kostenloser Probezeitraum zu,
-schreibt der Pro-Bildschirm das vor dem Kauf hin („7 Tage kostenlos, dann …“):
-Steht dort nichts, steht er Ihnen nicht zu — die App verspricht keine
-Probezeit, die der Kauf dann nicht einlöst.</p>
+<h2>Kostenlos</h2>
+<p>Giornale di Scavo ist <strong>kostenlos und vollständig</strong>: Alle in
+dieser Anleitung beschriebenen Funktionen sind enthalten, ohne Abos, ohne
+In-App-Käufe und ohne Wasserzeichen, mit unbegrenzt vielen Fundplätzen.</p>
 
 <h2>Problemlösung</h2>
 
@@ -511,20 +528,15 @@ sichtbar.</p></details>
 Standort-Berechtigung werden Fotos ohne Koordinaten gespeichert.</p></details>
 
 <details><summary>Im Bericht fehlen Fotos oder das Logo</summary>
-<p>Fotos in Berichten, Logo und eigene Kopfzeile gehören zu Pro und gelten für
-DOCX und PDF. Der kostenlose Tagesbericht trägt ein Wasserzeichen und enthält
-keine Fotos.</p></details>
+<p>Prüfen Sie, ob <kbd>Fotos und Zeichnungen in den Bericht aufnehmen</kbd>
+aktiviert ist und das Logo unter <kbd>Kopfzeile und Logo</kbd> gewählt ist: Beides
+gilt für PDF und DOCX.</p></details>
 
 <details><summary>Ich habe einen Fundplatz versehentlich gelöscht</summary>
 <p>Das Löschen ist endgültig: Die Daten sind nicht wiederherstellbar (es gibt
 keine Cloud). Mit einer früher exportierten ZIP lässt sich der Stand jenes
 Tages wieder importieren. Tipp: am Ende jedes Tages eine ZIP
 exportieren.</p></details>
-
-<details><summary>Ich habe Pro gekauft, es ist aber noch gesperrt</summary>
-<p>Auf dem Pro-Bildschirm <kbd>Käufe wiederherstellen</kbd> antippen, mit
-demselben Apple-Konto wie beim Kauf. Nach einem Gerätewechsel stellt das die
-Mitgliedschaft oder die Lifetime-Lizenz wieder her.</p></details>
 
 <details><summary>„Abrufen“ ist ausgegraut oder meldet „Wetter nicht verfügbar“</summary>
 <ul>
@@ -633,9 +645,7 @@ beides, weil die Aufnahmedaten fehlen.</p></details>
 <details><summary>„Zählen und messen“ erscheint nicht am Foto</summary>
 <p>Der Befehl lebt nur an den Fotos eines <strong>Fundes</strong> — dort hat
 das Umreißen von Fragmenten seinen Sinn — und öffnet sich aus der
-Fotodetailansicht, nicht aus der Karte, die nur die Miniaturen zeigt. Öffnet
-der Tipp den Pro-Bildschirm, ist das die Funktion: Sie gehört zu Pro, wie das
-Nachzeichnen.</p></details>
+Fotodetailansicht, nicht aus der Karte, die nur die Miniaturen zeigt.</p></details>
 
 <details><summary>Die Maßstabsleiste wird nicht gefunden</summary>
 <ul>
