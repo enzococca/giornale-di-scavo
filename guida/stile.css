@@ -72,3 +72,10 @@ footer { margin-top: 3rem; border-top: 1px solid var(--bordo);
 /* La scheda fotografica esportata è quasi quadrata e piena di dettagli
    (mappa, cono, barra): a 15rem si leggerebbe solo la sagoma. */
 .schermate figure.larga { flex: 1 1 20rem; max-width: 30rem; }
+
+.sostieni { background: var(--carta); border: 2px solid var(--accento);
+  border-radius: .6rem; padding: .4rem 1rem; margin: 1.2rem 0; }
+.sostieni p { margin: .5rem 0; }
+.bottone { display: inline-block; background: var(--accento); color: #fff;
+  font-weight: 700; text-decoration: none; padding: .45rem 1.1rem; border-radius: 2rem; }
+.bottone:hover { filter: brightness(1.08); }
