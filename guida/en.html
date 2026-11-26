@@ -78,18 +78,27 @@ Harris matrix come from.</p>
 (you can change it) and asks for type and definition. The number is unique
 within the site; later you change it with <kbd>Change</kbd>, and the boxes with
 that provenance follow it.</li>
-<li>The record gathers identification (type, definition, area or sector, grid
-square), dimensions and elevations (length, width, thickness, minimum and
-maximum elevation), description (colour, compaction, inclusions),
-interpretation, dating, opening and closing dates and the person in charge. It
-saves itself as you write.</li>
-<li>Next to definition, colour, compaction, inclusions, interpretation and
-dating there is the <strong>thesaurus</strong> button (the booklet): choose from
-the standard vocabulary or from your own terms, and the record stays consistent
-among everyone digging. For inclusions you can pick more than one. If the word
-you are looking for isn't there, the sheet offers to add it. Your terms apply to
-all sites and are managed from <kbd>Thesaurus</kbd>, in the ⋯ menu of the SU
-tab.</li>
+<li>The record gathers identification (type, subtype, definition, area or
+sector, grid square, trench, excavation method: manual, mechanical or
+<kbd>Unexcavated</kbd> for SUs recorded but not excavated), dimensions and
+elevations (length, width, thickness, minimum and maximum elevation),
+description (colour, Munsell, sediment type, compaction, inclusions, deposit
+structure, and three yes/no questions: <kbd>Sealed</kbd>,
+<kbd>Surface weathering</kbd>, <kbd>Bioturbation</kbd>), finds present,
+interpretation (activity, phase, dating, dating evidence), opening and closing
+dates and the person in charge. It saves itself as you write. At the bottom you
+also find the photos and survey points that name the SU in their title, name or
+note (“SU 102 from north”).</li>
+<li>Next to definition, colour, sediment type, compaction, inclusions, finds
+present, interpretation, activity and dating there is the
+<strong>thesaurus</strong> button (the booklet): choose from the standard
+vocabulary or from your own terms, and the record stays consistent among
+everyone digging. For inclusions and finds you can pick more than one. If the
+word you are looking for isn't there, the sheet offers to add it. Your terms
+apply to all sites and are managed from <kbd>Thesaurus</kbd>, in the ⋯ menu of
+the SU tab. There you also choose the <kbd>Site chronology</kbd>:
+<kbd>Mediterranean</kbd> or <kbd>Arabian Gulf (DCT)</kbd>, with the periods of
+the DCT form (Hafit, Umm an-Nar, Wadi Suq…) offered for dating.</li>
 <li><kbd>Add relationship</kbd>: choose the relationship (covers, cuts, fills,
 abuts, bonded with, same as, and their inverses) and type the number of the
 other SU. The relationship is recorded only once and appears reversed in the
@@ -104,6 +113,21 @@ in.</li>
 relationships: the most recent SU at the top, SUs that are the same or bonded in
 a single box, cuts dashed, masonry units on a grey background. Pinch to zoom,
 and share it as an image.</li>
+<li><strong>Printed record</strong>: inside a record, the share button at the
+top offers <kbd>Record as PDF</kbd> and <kbd>Record as DOCX (Word)</kbd>; from
+the ⋯ menu of the list, <kbd>All records as PDF</kbd> and
+<kbd>All records as DOCX (Word)</kbd> put all the SUs of the site in a single
+file, one per page. It is the archive form: tables with the fields,
+relationships, finds, logos and report header, in the language chosen for
+reports.</li>
+<li><strong>Survey123 / DCT</strong>: <kbd>Export CSV (DCT SU form)</kbd> writes
+a CSV with the same columns and the same codes as the Survey123 form of the DCT
+SU record, ready to hand over or upload. <kbd>Import CSV (DCT SU form)…</kbd>
+does the reverse: it reads a CSV exported from Survey123 (or from the app) and
+creates the records with their relationships. SUs that already have a record in
+the site stay as they were, and at the end the app tells you how many records
+and relationships it added. If the file contains the Gulf periods, the site
+chronology switches to <kbd>Arabian Gulf (DCT)</kbd>.</li>
 </ol>
 
 <h3>📍 Survey</h3>
@@ -381,7 +405,11 @@ with full appendices.</li>
 <li>Pick the report language from <strong>seventeen</strong>, independent of the
 app's language: the report can come out in German even if you use the app in
 English.</li>
-<li>Generate the PDF, or export DOCX with your logo and photos, CSV of the points, GeoJSON for QGIS.</li>
+<li>Generate the PDF, or export DOCX with your logos and photos, CSV of the points, GeoJSON for QGIS.</li>
+<li>In <kbd>Header and logos</kbd> type the header and choose one or more logos
+(<kbd>Choose company logo</kbd>, then <kbd>Add another logo</kbd>): they appear
+at the top of every report and of the SU records, in the order of the list,
+which you change with the <kbd>Move up</kbd> arrows.</li>
 <li>At the bottom sits <kbd>Finds export (whole site)</kbd>:
 <kbd>Export Finds CSV</kbd> for the spreadsheet, and
 <kbd>Export Finds HTML</kbd> for a table with thumbnails that opens in any
@@ -390,7 +418,8 @@ language chosen for the report; what you wrote yourself stays as you wrote it.
 In the final report the finds have their own appendix, by provenance.</li>
 <li>SUs go into the reports: those opened and closed in the period in the
 daily, weekly and monthly reports; the final report has the appendix with all
-the records and the Harris matrix.</li>
+the records, the Harris matrix and a summary table of the SUs (number, type,
+definition, dating, covers, covered by).</li>
 <li>With photos in reports switched on, you can choose <kbd>Photo records instead of photos</kbd>: every photo enters the
 PDF and DOCX as a full documentation record with data and map, in the
 report's language.</li>
@@ -497,8 +526,8 @@ are saved without coordinates.</p></details>
 
 <details><summary>Photos or the logo are missing from a report</summary>
 <p>Check that <kbd>Include photos and drawings in the report</kbd> is on and
-that the logo is chosen in <kbd>Header and logo</kbd>: both apply to the PDF and
-to the DOCX.</p></details>
+that at least one logo is chosen in <kbd>Header and logos</kbd>: both apply to
+the PDF and to the DOCX, and the logos also to the printed SU records.</p></details>
 
 <details><summary>I deleted a site by mistake</summary>
 <p>Deletion is final: the data cannot be recovered (there is no cloud). If you

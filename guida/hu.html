@@ -82,18 +82,27 @@ felajánlja a következő számot (módosíthatja), és megkérdezi a típust é
 meghatározást. A szám a lelőhelyen belül egyedi; később a
 <kbd>Módosítás</kbd> gombbal változtathatja meg, és az ilyen származású ládák
 követik.</li>
-<li>Az adatlap tartalmazza az azonosítást (típus, meghatározás, terület vagy
-szektor, négyzet), a méreteket és a magasságokat (hosszúság, szélesség,
-vastagság, legkisebb és legnagyobb magasság), a leírást (szín, állag,
-összetevők), az értelmezést, a keltezést, a nyitás és a lezárás dátumát és a
-felelőst. Írás közben magától mentődik.</li>
-<li>A meghatározás, a szín, az állag, az összetevők, az értelmezés és a
-keltezés mellett ott van a <strong>tezaurusz</strong> gombja (a kis könyv):
-válasszon a szabványos szókincsből vagy a saját kifejezései közül, így az
-adatlap egységes marad, bárki ásson is. Az összetevőknél több is választható.
-Ha a keresett szó nincs benne, a lap felajánlja a hozzáadását. A saját
-kifejezések minden lelőhelyre érvényesek, és a <kbd>Tezaurusz</kbd> alatt
-kezelhetők, az SE-adatlap ⋯ menüjében.</li>
+<li>Az adatlap tartalmazza az azonosítást (típus, altípus, meghatározás,
+terület vagy szektor, négyzet, szelvény, feltárási módszer: kézi, gépi vagy
+<kbd>Fel nem tárt</kbd> a dokumentált, de fel nem tárt SE-knél), a méreteket és
+a magasságokat (hosszúság, szélesség, vastagság, legkisebb és legnagyobb
+magasság), a leírást (szín, Munsell, üledéktípus, állag, összetevők, üledékszerkezet, valamint három igen/nem kérdés: <kbd>Lezárt</kbd>,
+<kbd>Felszíni mállás</kbd>, <kbd>Bioturbáció</kbd>), a jelen lévő leleteket, az
+értelmezést (tevékenység, fázis, keltezés, keltező elemek), a nyitás és a
+lezárás dátumát és a felelőst. Írás közben magától mentődik. Alul azok a
+fényképek és felmérési pontok is megjelennek, amelyek a címükben, a nevükben
+vagy a megjegyzésükben megnevezik az SE-t („SE 102 északról”).</li>
+<li>A meghatározás, a szín, az üledéktípus, az állag, az összetevők, a jelen
+lévő leletek, az értelmezés, a tevékenység és a keltezés mellett ott van a
+<strong>tezaurusz</strong> gombja (a kis könyv): válasszon a szabványos
+szókincsből vagy a saját kifejezései közül, így az adatlap egységes marad, bárki
+ásson is. Az összetevőknél és a leleteknél több is választható. Ha a keresett
+szó nincs benne, a lap felajánlja a hozzáadását. A saját kifejezések minden
+lelőhelyre érvényesek, és a <kbd>Tezaurusz</kbd> alatt kezelhetők, az
+SE-adatlap ⋯ menüjében. Ugyanott választható ki
+<kbd>A lelőhely kronológiája</kbd> is: <kbd>Mediterrán</kbd> vagy
+<kbd>Arab-öböl (DCT)</kbd>, utóbbinál a keltezésnél a DCT-adatlap időszakai
+(Hafit, Umm an-Nar, Wadi Suq…) jelennek meg.</li>
 <li><kbd>Kapcsolat hozzáadása</kbd>: válassza ki a kapcsolatot (fedi,
 átvágja, kitölti, nekitámaszkodik, összekötve ezzel, azonos ezzel, és ezek
 fordítottjai), és írja be a másik SE számát. A kapcsolatot csak egyszer kell
@@ -109,6 +118,23 @@ adatlapját.</li>
 sorrendet: a legfiatalabb SE felül, az azonos vagy összekötött SE-k egyetlen
 keretben, a beásások szaggatott vonallal, a falazott egységek szürke alapon.
 Két ujjal nagyítható, és képként megosztható.</li>
+<li><strong>Nyomtatott adatlap</strong>: egy adatlapon belül a fenti megosztás
+gomb a <kbd>Lap PDF-ben</kbd> és a <kbd>Lap DOCX-ben (Word)</kbd> lehetőséget
+kínálja; a lista ⋯ menüjéből a <kbd>Minden lap PDF-ben</kbd> és a
+<kbd>Minden lap DOCX-ben (Word)</kbd> a lelőhely összes SE-jét egyetlen fájlba
+teszi, oldalanként egyet. Ez az archív űrlap: táblázatok a mezőkkel,
+kapcsolatok, leletek, a jelentés logói és fejléce, a jelentésekhez választott
+nyelven.</li>
+<li><strong>Survey123 / DCT</strong>: a
+<kbd>CSV exportálása (DCT SE-adatlap)</kbd> olyan CSV-t ír, amelynek oszlopai
+és kódjai megegyeznek a DCT-adatlap Survey123-űrlapjáéval, így azonnal átadható
+vagy feltölthető. A <kbd>CSV importálása (DCT SE-adatlap)…</kbd> az
+ellenkezőjét teszi: beolvas egy Survey123-ból (vagy az alkalmazásból)
+exportált CSV-t, és létrehozza az adatlapokat a kapcsolataikkal együtt. Azok az
+SE-k, amelyeknek már van adatlapjuk a lelőhelyen, változatlanok maradnak, a
+végén pedig az alkalmazás megmondja, hány adatlapot és hány kapcsolatot adott
+hozzá. Ha a fájlban az Öböl időszakai szerepelnek, a lelőhely kronológiája
+<kbd>Arab-öböl (DCT)</kbd> lesz.</li>
 </ol>
 
 <h3>📍 Felmérés</h3>
@@ -400,7 +426,12 @@ jelentés teljes függelékekkel.</li>
 <li>Válassza ki a jelentés nyelvét a <strong>tizenhét</strong> közül,
 függetlenül az alkalmazás nyelvétől: a jelentés angolul is elkészülhet, akkor
 is, ha az alkalmazást magyarul használja.</li>
-<li>Készítsen PDF-et, vagy exportáljon DOCX-et logóval és fényképekkel, CSV-t a pontokról, GeoJSON-t QGIS-hez.</li>
+<li>Készítsen PDF-et, vagy exportáljon DOCX-et logókkal és fényképekkel, CSV-t a pontokról, GeoJSON-t QGIS-hez.</li>
+<li>A <kbd>Fejléc és logók</kbd> alatt írja be a fejlécet, és válasszon egy
+vagy több logót (<kbd>Válassza ki a cég logóját</kbd>, majd
+<kbd>Újabb logó hozzáadása</kbd>): ezek minden jelentés és SE-adatlap tetején
+megjelennek, a lista sorrendjében, amelyet az <kbd>Előrébb</kbd> nyilakkal
+módosíthat.</li>
 <li>Legalul található a <kbd>Leletek exportálása (teljes lelőhely)</kbd>: a <kbd>Leletek CSV exportálása</kbd> a táblázatkezelőhöz, a
 <kbd>Leletek HTML exportálása</kbd> pedig egy bélyegképes táblázathoz, amely
 hálózat nélkül bármelyik böngészőben megnyílik. A fejlécek, a kategóriák, az
@@ -409,7 +440,8 @@ be, az úgy marad, ahogyan beírta. A záró jelentésben a leletek saját függ
 kapnak, származás szerint.</li>
 <li>Az SE-k bekerülnek a jelentésekbe: az adott időszakban megnyitottak és
 lezártak a napi, a heti és a havi jelentésbe; a záró jelentésben függelék
-szerepel az összes adatlappal és a Harris-mátrixszal.</li>
+szerepel az összes adatlappal, a Harris-mátrixszal és egy SE-összesítő
+táblázattal (szám, típus, meghatározás, keltezés, fedi, fedi őt).</li>
 <li>A jelentésekben szereplő fényképek bekapcsolásával választhatja a
 <kbd>Fotó-adatlapok a fényképek helyett</kbd>
 lehetőséget: minden fénykép teljes, adatokkal és térképpel ellátott
@@ -527,8 +559,9 @@ mentésre.</p></details>
 
 <details><summary>A jelentésből hiányoznak a fényképek vagy a logó</summary>
 <p>Ellenőrizze, hogy be van-e kapcsolva a <kbd>Fényképek és rajzok beillesztése a jelentésbe</kbd>
-lehetőség, és hogy a logó ki van-e választva a <kbd>Fejléc és logó</kbd>
-alatt: mindkettő a PDF-re és a DOCX-re is vonatkozik.</p></details>
+lehetőség, és hogy legalább egy logó ki van-e választva a
+<kbd>Fejléc és logók</kbd> alatt: mindkettő a PDF-re és a DOCX-re is
+vonatkozik, a logók pedig a nyomtatott SE-adatlapokra is.</p></details>
 
 <details><summary>Véletlenül töröltem egy lelőhelyet</summary>
 <p>A törlés végleges: az adatok nem állíthatók vissza (nincs felhő). Ha

@@ -81,18 +81,28 @@ die Harris-Matrix.</p>
 nächste Nummer vor (Sie können sie ändern) und fragt nach Typ und Ansprache.
 Die Nummer ist im Fundplatz eindeutig; später ändern Sie sie mit
 <kbd>Ändern</kbd>, und die Kisten mit dieser Herkunft gehen mit.</li>
-<li>Die Karte umfasst Identifikation (Typ, Ansprache, Fläche oder Sektor,
-Quadrant), Maße und Höhen (Länge, Breite, Mächtigkeit, minimale und maximale
-Höhe), Beschreibung (Farbe, Konsistenz, Bestandteile), Interpretation,
-Datierung, Öffnungs- und Schließungsdatum und Verantwortliche. Sie speichert
-sich beim Schreiben von selbst.</li>
-<li>Neben Ansprache, Farbe, Konsistenz, Bestandteilen, Interpretation und
-Datierung sitzt die Schaltfläche des <strong>Thesaurus</strong> (das Büchlein):
-Wählen Sie aus dem Standardvokabular oder aus Ihren eigenen Begriffen, und die
-Karte bleibt unter allen, die graben, einheitlich. Bei den Bestandteilen lassen
-sich mehrere wählen. Fehlt das gesuchte Wort, bietet das Blatt an, es
-hinzuzufügen. Ihre Begriffe gelten für alle Fundplätze und werden unter
-<kbd>Thesaurus</kbd> verwaltet, im ⋯-Menü des SE-Reiters.</li>
+<li>Die Karte umfasst Identifikation (Typ, Untertyp, Ansprache, Fläche oder
+Sektor, Quadrant, Schnitt, Grabungsmethode: manuell, maschinell oder
+<kbd>Nicht ausgegraben</kbd> für SE, die dokumentiert, aber nicht ausgegraben
+sind), Maße und Höhen (Länge, Breite, Mächtigkeit, minimale und maximale Höhe),
+Beschreibung (Farbe, Munsell, Sedimentart, Konsistenz, Bestandteile, Struktur
+der Ablagerung und drei Ja/Nein-Fragen: <kbd>Versiegelt</kbd>,
+<kbd>Oberflächenverwitterung</kbd>, <kbd>Bioturbation</kbd>), vorhandene Funde,
+Interpretation (Aktivität, Phase, Datierung, datierende Elemente), Öffnungs- und
+Schließungsdatum und Verantwortliche. Sie speichert sich beim Schreiben von
+selbst. Ganz unten finden Sie auch die Fotos und Vermessungspunkte, die die SE
+im Titel, im Namen oder in der Notiz nennen („SE 102 von Norden“).</li>
+<li>Neben Ansprache, Farbe, Sedimentart, Konsistenz, Bestandteilen, vorhandenen
+Funden, Interpretation, Aktivität und Datierung sitzt die Schaltfläche des
+<strong>Thesaurus</strong> (das Büchlein): Wählen Sie aus dem Standardvokabular
+oder aus Ihren eigenen Begriffen, und die Karte bleibt unter allen, die graben,
+einheitlich. Bei den Bestandteilen und den Funden lassen sich mehrere wählen.
+Fehlt das gesuchte Wort, bietet das Blatt an, es hinzuzufügen. Ihre Begriffe
+gelten für alle Fundplätze und werden unter <kbd>Thesaurus</kbd> verwaltet, im
+⋯-Menü des SE-Reiters. Dort wählen Sie auch die
+<kbd>Chronologie des Fundplatzes</kbd>: <kbd>Mittelmeerraum</kbd> oder
+<kbd>Arabischer Golf (DCT)</kbd>, mit den Perioden des DCT-Bogens (Hafit, Umm
+an-Nar, Wadi Suq…) als Vorschläge bei der Datierung.</li>
 <li><kbd>Beziehung hinzufügen</kbd>: Beziehung wählen (überdeckt, schneidet,
 verfüllt, stößt an, im Verband mit, gleich mit, und ihre Umkehrungen) und die
 Nummer der anderen SE eingeben. Die Beziehung wird nur einmal erfasst und
@@ -108,6 +118,22 @@ Herkunft.</li>
 Beziehungen: die jüngste SE oben, gleiche oder im Verband stehende SE in einem
 einzigen Kasten, Interfaces gestrichelt, Mauer-SE auf grauem Grund. Sie lässt
 sich mit zwei Fingern vergrößern und als Bild teilen.</li>
+<li><strong>Gedruckte Karte</strong>: In einer Karte bietet die Teilen-Taste
+oben <kbd>Blatt als PDF</kbd> und <kbd>Blatt als DOCX (Word)</kbd>; im ⋯-Menü
+der Liste legen <kbd>Alle Blätter als PDF</kbd> und
+<kbd>Alle Blätter als DOCX (Word)</kbd> alle SE des Fundplatzes in eine einzige
+Datei, eine pro Seite. Das ist das Archivformular: Tabellen mit den Feldern,
+Beziehungen, Funde, Logos und Kopfzeile des Berichts, in der für die Berichte
+gewählten Sprache.</li>
+<li><strong>Survey123 / DCT</strong>: <kbd>CSV exportieren (DCT-SE-Bogen)</kbd>
+schreibt eine CSV mit denselben Spalten und denselben Codes wie das
+Survey123-Formular des DCT-SE-Bogens, bereit zur Abgabe oder zum Hochladen.
+<kbd>CSV importieren (DCT-SE-Bogen)…</kbd> macht das Umgekehrte: Es liest eine
+aus Survey123 (oder aus der App) exportierte CSV und legt die Karten mit ihren
+Beziehungen an. SE, die im Fundplatz schon eine Karte haben, bleiben, wie sie
+waren, und am Ende sagt die App, wie viele Karten und wie viele Beziehungen sie
+hinzugefügt hat. Enthält die Datei die Perioden des Golfs, wechselt die
+Chronologie des Fundplatzes zu <kbd>Arabischer Golf (DCT)</kbd>.</li>
 </ol>
 
 <h3>📍 Vermessung</h3>
@@ -406,7 +432,12 @@ selbst um.</li>
 <li>Berichtssprache aus <strong>siebzehn</strong> wählen, unabhängig von der
 App-Sprache: der Bericht kann auf Italienisch erscheinen, auch wenn Sie die App
 auf Deutsch verwenden.</li>
-<li>PDF erzeugen, oder DOCX mit Logo und Fotos exportieren, CSV der Punkte, GeoJSON für QGIS.</li>
+<li>PDF erzeugen, oder DOCX mit Logos und Fotos exportieren, CSV der Punkte, GeoJSON für QGIS.</li>
+<li>Unter <kbd>Kopfzeile und Logos</kbd> schreiben Sie die Kopfzeile und wählen
+ein oder mehrere Logos (<kbd>Firmenlogo wählen</kbd>, dann
+<kbd>Weiteres Logo hinzufügen</kbd>): Sie erscheinen oben in allen Berichten und
+auf den SE-Karten, in der Reihenfolge der Liste, die Sie mit den Pfeilen
+<kbd>Nach vorne verschieben</kbd> ändern.</li>
 <li>Ganz unten steht <kbd>Fundexport (gesamter Fundplatz)</kbd>:
 <kbd>Funde-CSV exportieren</kbd> für die Tabellenkalkulation und
 <kbd>Funde-HTML exportieren</kbd> für eine Tabelle mit Miniaturen, die sich in
@@ -416,7 +447,8 @@ geschrieben haben, bleibt, wie Sie es geschrieben haben. Im Abschlussbericht
 haben die Funde ihren eigenen Anhang, nach Herkunft.</li>
 <li>Die SE kommen in die Berichte: die im Zeitraum geöffneten und geschlossenen
 in den Tages-, Wochen- und Monatsbericht; im Abschlussbericht gibt es den Anhang
-mit allen Karten und der Harris-Matrix.</li>
+mit allen Karten, der Harris-Matrix und einer Übersichtstabelle der SE
+(Nummer, Typ, Ansprache, Datierung, überdeckt, überdeckt von).</li>
 <li>Bei aktivierten Fotos in Berichten können Sie <kbd>Fotoblätter statt Fotos</kbd> wählen: Jedes Foto kommt als
 vollständiges Dokumentationsblatt mit Daten und Karte ins PDF und DOCX, in
 der Sprache des Berichts.</li>
@@ -530,8 +562,9 @@ Standort-Berechtigung werden Fotos ohne Koordinaten gespeichert.</p></details>
 
 <details><summary>Im Bericht fehlen Fotos oder das Logo</summary>
 <p>Prüfen Sie, ob <kbd>Fotos und Zeichnungen in den Bericht aufnehmen</kbd>
-aktiviert ist und das Logo unter <kbd>Kopfzeile und Logo</kbd> gewählt ist: Beides
-gilt für PDF und DOCX.</p></details>
+aktiviert ist und mindestens ein Logo unter <kbd>Kopfzeile und Logos</kbd>
+gewählt ist: Beides gilt für PDF und DOCX, die Logos auch für die gedruckten
+SE-Karten.</p></details>
 
 <details><summary>Ich habe einen Fundplatz versehentlich gelöscht</summary>
 <p>Das Löschen ist endgültig: Die Daten sind nicht wiederherstellbar (es gibt

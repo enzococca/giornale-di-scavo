@@ -77,17 +77,26 @@ olarak kayıtlı: belgelemenin SB kartları ve Harris matrisi buradan çıkar.</
 önerir (değiştirebilirsin) ve türü ile tanımı sorar. Numara kazı alanında
 tektir; sonradan <kbd>Değiştir</kbd> ile değiştirirsin ve o geliş yerini taşıyan
 kasalar da onu izler.</li>
-<li>Kart; tanımlamayı (tür, tanım, alan ya da sektör, plankare), boyutları ve
-yükseklikleri (uzunluk, genişlik, kalınlık, en düşük ve en yüksek kot),
-betimlemeyi (renk, sertlik, bileşenler), yorumu, tarihlemeyi, açılış ve kapanış
-tarihlerini ve sorumluyu toplar. Sen yazarken kendiliğinden kaydedilir.</li>
-<li>Tanım, renk, sertlik, bileşenler, yorum ve tarihlemenin yanında
-<strong>eş anlamlılar sözlüğü</strong> düğmesi (küçük kitap) vardır: standart
-sözcük dağarcığından ya da kendi terimlerinden seçersin, ve kart kazan herkes
-arasında tutarlı kalır. Bileşenlerde birden fazlası seçilir. Aradığın sözcük
-yoksa sayfa onu eklemeyi önerir. Kendi terimlerin bütün kazı alanlarında
-geçerlidir ve SB sekmesinin ⋯ menüsündeki <kbd>Eş anlamlılar sözlüğü</kbd>’nden
-yönetilir.</li>
+<li>Kart; tanımlamayı (tür, alt tür, tanım, alan ya da sektör, plankare, açma,
+kazı yöntemi: elle, makineyle ya da belgelenip kazılmayan SB’ler için
+<kbd>Kazılmadı</kbd>), boyutları ve yükseklikleri (uzunluk, genişlik, kalınlık,
+en düşük ve en yüksek kot), betimlemeyi (renk, Munsell, tortu türü, sertlik,
+bileşenler, dolgunun yapısı ve üç evet/hayır sorusu: <kbd>Mühürlü</kbd>,
+<kbd>Yüzey aşınması</kbd>, <kbd>Biyotürbasyon</kbd>), mevcut buluntuları, yorumu
+(etkinlik, evre, tarihleme, tarihleyici öğeler), açılış ve kapanış tarihlerini ve
+sorumluyu toplar. Sen yazarken kendiliğinden kaydedilir. En altta, başlığında,
+adında ya da notunda SB’yi anan fotoğrafları ve ölçüm noktalarını da bulursun
+(“SB 102 kuzeyden”).</li>
+<li>Tanım, renk, tortu türü, sertlik, bileşenler, mevcut buluntular, yorum,
+etkinlik ve tarihlemenin yanında <strong>eş anlamlılar sözlüğü</strong> düğmesi
+(küçük kitap) vardır: standart sözcük dağarcığından ya da kendi terimlerinden
+seçersin, ve kart kazan herkes arasında tutarlı kalır. Bileşenlerde ve
+buluntularda birden fazlası seçilir. Aradığın sözcük yoksa sayfa onu eklemeyi
+önerir. Kendi terimlerin bütün kazı alanlarında geçerlidir ve SB sekmesinin ⋯
+menüsündeki <kbd>Eş anlamlılar sözlüğü</kbd>’nden yönetilir. Orada
+<kbd>Kazı alanının kronolojisi</kbd> da seçilir: <kbd>Akdeniz</kbd> ya da
+<kbd>Arap Körfezi (DCT)</kbd>; ikincisinde DCT kartının dönemleri (Hafit, Umm
+an-Nar, Wadi Suq…) tarihlemede önerilir.</li>
 <li><kbd>İlişki ekle</kbd>: ilişkiyi seç (örter, keser, doldurur, dayanır,
 bağlantılı, aynı ve bunların tersleri) ve öbür SB’nin numarasını yaz. İlişki
 yalnızca bir kez kaydedilir ve öbür kartta ters çevrilmiş olarak görünür: 101,
@@ -101,6 +110,21 @@ açıklamasıyla birlikte reddedilir.</li>
 en üstte, aynı ya da bağlantılı SB’ler tek bir kutuda, kesikler kesik çizgili,
 duvar SB’leri gri zemin üzerinde. İki parmakla büyütülür ve görüntü olarak
 paylaşılır.</li>
+<li><strong>Basılı kart</strong>: bir kartın içinde, üstteki paylaş düğmesi
+<kbd>Form PDF olarak</kbd> ve <kbd>Form DOCX (Word) olarak</kbd> seçeneklerini
+sunar; listenin ⋯ menüsünden <kbd>Tüm formlar PDF olarak</kbd> ve
+<kbd>Tüm formlar DOCX (Word) olarak</kbd>, kazı alanının bütün SB’lerini her
+sayfaya bir tane olmak üzere tek bir dosyada toplar. Arşiv formudur: alanlarla
+tablolar, ilişkiler, buluntular, raporun logoları ve anteti, raporlar için
+seçilen dilde.</li>
+<li><strong>Survey123 / DCT</strong>: <kbd>CSV dışa aktar (DCT SB formu)</kbd>,
+DCT kartının Survey123 formuyla aynı sütunları ve aynı kodları taşıyan, teslim
+etmeye ya da yüklemeye hazır bir CSV yazar.
+<kbd>CSV içe aktar (DCT SB formu)…</kbd> tersini yapar: Survey123’ten (ya da
+uygulamadan) dışa aktarılmış bir CSV’yi okur ve kartları ilişkileriyle birlikte
+oluşturur. Kazı alanında zaten kartı olan SB’ler olduğu gibi kalır ve sonunda
+uygulama kaç kart ve kaç ilişki eklediğini söyler. Dosyada Körfez dönemleri
+varsa kazı alanının kronolojisi <kbd>Arap Körfezi (DCT)</kbd> olur.</li>
 </ol>
 
 <h3>📍 Ölçüm</h3>
@@ -372,9 +396,13 @@ yeniden yazmaz.</li>
 <li>Rapor dilini <strong>on yedi</strong> dil arasından seç; uygulamanın
 dilinden bağımsızdır: uygulamayı Türkçe kullanırken rapor Almanca
 çıkabilir.</li>
-<li>PDF oluştur ya da logo ve fotoğraflarla DOCX,
+<li>PDF oluştur ya da logolar ve fotoğraflarla DOCX,
 noktaların CSV'sini, QGIS için GeoJSON dışa
 aktar.</li>
+<li><kbd>Antet ve logolar</kbd>’da anteti yaz ve bir ya da birkaç logo seç
+(<kbd>Kurum logosunu seç</kbd>, sonra <kbd>Başka bir logo ekle</kbd>): bütün
+raporların ve SB kartlarının başında, listedeki sırayla çıkarlar; sırayı
+<kbd>Öne taşı</kbd> oklarıyla değiştirirsin.</li>
 <li>En altta
 <kbd>Buluntuları dışa aktar (tüm kazı alanı)</kbd> vardır: hesap tablosu için
 <kbd>Buluntu CSV'sini dışa aktar</kbd>, ağ olmadan herhangi bir tarayıcıda
@@ -383,7 +411,8 @@ açılan, küçük resimli bir tablo için
 durumlar rapor için seçilen dilde çıkar; senin yazdığın ise yazdığın gibi
 kalır. Sonuç raporunda buluntuların geliş yerine göre kendi eki vardır.</li>
 <li>SB’ler raporlara girer: günlük, haftalık ve aylık raporda dönem içinde açılıp
-kapanan SB’ler; sonuç raporunda bütün kartları ve Harris matrisini içeren ek.</li>
+kapanan SB’ler; sonuç raporunda bütün kartları, Harris matrisini ve SB’lerin
+özet tablosunu (numara, tür, tanım, tarihleme, örter, örtülür) içeren ek.</li>
 <li>Raporlarda fotoğraflar açıkken <kbd>Fotoğrafların yerine fotoğraf fişleri</kbd> seçeneğini kullanabilirsin: her
 fotoğraf, verileri ve haritasıyla eksiksiz bir belgeleme fişi olarak, raporun
 dilinde PDF'e ve DOCX'e girer.</li>
@@ -490,8 +519,8 @@ kaydedilir.</p></details>
 
 <details><summary>Raporda fotoğraflar ya da logo eksik</summary>
 <p><kbd>Fotoğrafları ve çizimleri rapora ekle</kbd> seçeneğinin açık olduğunu
-ve logonun <kbd>Antet ve logo</kbd>’da seçildiğini denetle: ikisi de hem PDF hem
-DOCX için geçerlidir.</p></details>
+ve <kbd>Antet ve logolar</kbd>’da en az bir logonun seçildiğini denetle: ikisi de
+hem PDF hem DOCX için geçerlidir, logolar basılı SB kartları için de.</p></details>
 
 <details><summary>Yanlışlıkla bir kazı alanı sildim</summary>
 <p>Silme kesindir: veriler geri getirilemez (bulut yoktur). Daha önce dışa

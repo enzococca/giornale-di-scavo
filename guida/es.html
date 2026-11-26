@@ -80,18 +80,27 @@ la matriz de Harris.</p>
 siguiente (lo puedes cambiar) y pide tipo y definición. El número es único en
 el yacimiento; más tarde lo cambias con <kbd>Cambiar</kbd>, y las cajas con esa
 procedencia lo siguen.</li>
-<li>La ficha recoge identificación (tipo, definición, área o sector,
-cuadrícula), dimensiones y cotas (longitud, anchura, potencia, cota mínima y
-máxima), descripción (color, consistencia, componentes), interpretación,
-datación, fechas de apertura y cierre y responsable. Se guarda sola mientras
-escribes.</li>
-<li>Junto a definición, color, consistencia, componentes, interpretación y
-datación está el botón del <strong>tesauro</strong> (el librito): elige del
-léxico estándar o de tus propios términos, y la ficha queda uniforme entre
-quienes excavan. En los componentes se puede elegir más de uno. Si la palabra
-que buscas no está, la hoja propone añadirla. Tus términos valen para todos los
+<li>La ficha recoge identificación (tipo, subtipo, definición, área o sector,
+cuadrícula, trinchera, método de excavación: manual, mecánico o
+<kbd>No excavada</kbd> para las UE documentadas pero no excavadas), dimensiones
+y cotas (longitud, anchura, potencia, cota mínima y máxima), descripción (color,
+Munsell, tipo de sedimento, consistencia, componentes, estructura del depósito,
+y tres preguntas sí/no: <kbd>Sellada</kbd>, <kbd>Alteración superficial</kbd>,
+<kbd>Bioturbación</kbd>), materiales presentes, interpretación (actividad,
+fase, datación, elementos datantes), fechas de apertura y cierre y responsable.
+Se guarda sola mientras escribes. Al final encuentras también las fotos y los
+puntos topográficos que nombran la UE en el título, en el nombre o en la nota
+(«UE 102 desde el norte»).</li>
+<li>Junto a definición, color, tipo de sedimento, consistencia, componentes,
+materiales presentes, interpretación, actividad y datación está el botón del
+<strong>tesauro</strong> (el librito): elige del léxico estándar o de tus
+propios términos, y la ficha queda uniforme entre quienes excavan. En los
+componentes y en los materiales se puede elegir más de uno. Si la palabra que
+buscas no está, la hoja propone añadirla. Tus términos valen para todos los
 yacimientos y se gestionan desde <kbd>Tesauro</kbd>, en el menú ⋯ de la pestaña
-UE.</li>
+UE. Allí eliges también la <kbd>Cronología del yacimiento</kbd>:
+<kbd>Mediterránea</kbd> o <kbd>Golfo Arábigo (DCT)</kbd>, con los periodos de
+la ficha DCT (Hafit, Umm an-Nar, Wadi Suq…) propuestos en la datación.</li>
 <li><kbd>Añadir relación</kbd>: elige la relación (cubre, corta, rellena, se
 apoya en, se une a, igual a, y sus inversas) y escribe el número de la otra UE.
 La relación se registra una sola vez y aparece invertida en la otra ficha: si la
@@ -106,6 +115,22 @@ escrita.</li>
 las relaciones: la UE más reciente arriba, las UE iguales o unidas en un solo
 recuadro, los cortes discontinuos, las murarias sobre fondo gris. Se amplía con
 dos dedos y se comparte como imagen.</li>
+<li><strong>Ficha impresa</strong>: dentro de una ficha, el botón de compartir
+de arriba ofrece <kbd>Ficha en PDF</kbd> y <kbd>Ficha en DOCX (Word)</kbd>;
+desde el menú ⋯ de la lista, <kbd>Todas las fichas en PDF</kbd> y
+<kbd>Todas las fichas en DOCX (Word)</kbd> ponen todas las UE del yacimiento en
+un solo archivo, una por página. Es el modelo de archivo: tablas con los campos,
+relaciones, materiales, logotipos y encabezado del informe, en el idioma elegido
+para los informes.</li>
+<li><strong>Survey123 / DCT</strong>: <kbd>Exportar CSV (ficha UE del DCT)</kbd>
+escribe un CSV con las mismas columnas y los mismos códigos que el formulario
+Survey123 de la ficha DCT, listo para entregar o subir.
+<kbd>Importar CSV (ficha UE del DCT)…</kbd> hace lo contrario: lee un CSV
+exportado desde Survey123 (o desde la app) y crea las fichas con sus relaciones.
+Las UE que ya tienen ficha en el yacimiento se quedan como estaban, y al final la
+app dice cuántas fichas y cuántas relaciones ha añadido. Si en el archivo están
+los periodos del Golfo, la cronología del yacimiento pasa a
+<kbd>Golfo Arábigo (DCT)</kbd>.</li>
 </ol>
 
 <h3>📍 Topografía</h3>
@@ -386,7 +411,12 @@ con apéndices completos.</li>
 <li>Elige el idioma del informe entre <strong>diecisiete</strong>, independiente
 del idioma de la app: el informe puede salir en alemán aunque uses la app en
 español.</li>
-<li>Genera el PDF, o exporta DOCX con logotipo y fotos, CSV de los puntos, GeoJSON para QGIS.</li>
+<li>Genera el PDF, o exporta DOCX con logotipos y fotos, CSV de los puntos, GeoJSON para QGIS.</li>
+<li>En <kbd>Encabezado y logotipos</kbd> escribe el encabezado y elige uno o
+varios logotipos (<kbd>Elegir logotipo de la empresa</kbd>, luego
+<kbd>Añadir otro logotipo</kbd>): salen arriba en todos los informes y en las
+fichas UE, en el orden de la lista, que cambias con las flechas
+<kbd>Mover antes</kbd>.</li>
 <li>Al final está <kbd>Exportación de materiales (todo el yacimiento)</kbd>: <kbd>Exportar CSV de materiales</kbd> para la hoja de cálculo, y
 <kbd>Exportar HTML de materiales</kbd> para una tabla con las miniaturas que se
 abre en cualquier navegador sin red. Encabezados, clases, unidades y estados
@@ -395,7 +425,8 @@ lo escribiste. En el informe final los materiales tienen su propio apéndice, po
 procedencia.</li>
 <li>Las UE entran en los informes: las abiertas y cerradas en el periodo en el
 diario, el semanal y el mensual; en el informe final está el apéndice con todas
-las fichas y la matriz de Harris.</li>
+las fichas, la matriz de Harris y una tabla resumen de las UE (número, tipo,
+definición, datación, cubre, cubierta por).</li>
 <li>Con las fotos en los informes activadas, puedes elegir <kbd>Fichas fotográficas en lugar de las fotos</kbd>: cada
 foto entra en el PDF y el DOCX como ficha de documentación completa con
 datos y mapa, en el idioma del informe.</li>
@@ -508,8 +539,9 @@ se guardan sin coordenadas.</p></details>
 
 <details><summary>En el informe faltan fotos o el logotipo</summary>
 <p>Comprueba que esté activado <kbd>Incluir fotos y dibujos en el informe</kbd>
-y que el logotipo esté elegido en <kbd>Encabezado y logotipo</kbd>: valen tanto
-para el PDF como para el DOCX.</p></details>
+y que al menos un logotipo esté elegido en <kbd>Encabezado y logotipos</kbd>:
+valen tanto para el PDF como para el DOCX, y los logotipos también para las
+fichas UE impresas.</p></details>
 
 <details><summary>He borrado un yacimiento por error</summary>
 <p>El borrado es definitivo: los datos no se pueden recuperar (no hay nube).

@@ -78,16 +78,27 @@ matriz de Harris.</p>
 número seguinte (pode alterá-lo) e pede o tipo e a definição. O número é único
 no sítio; mais tarde altera-o com <kbd>Alterar</kbd>, e as caixas com essa
 proveniência acompanham-no.</li>
-<li>A ficha reúne identificação (tipo, definição, área ou setor, quadrícula),
-dimensões e cotas (comprimento, largura, espessura, cota mínima e máxima),
-descrição (cor, compacidade, componentes), interpretação, datação, datas de
-abertura e de fecho e responsável. Guarda-se sozinha enquanto escreve.</li>
-<li>Ao lado de definição, cor, compacidade, componentes, interpretação e
-datação está o botão do <strong>tesauro</strong> (o livrinho): escolha do
-léxico normalizado ou dos seus termos, e a ficha mantém-se uniforme entre quem
-escava. Nos componentes pode escolher mais do que um. Se a palavra que procura
-não existe, a folha propõe acrescentá-la. Os seus termos valem para todos os
-sítios e gerem-se em <kbd>Tesauro</kbd>, no menu ⋯ da ficha de UE.</li>
+<li>A ficha reúne identificação (tipo, subtipo, definição, área ou setor,
+quadrícula, sanja, método de escavação: manual, mecânico ou
+<kbd>Não escavada</kbd> para as UE documentadas mas não escavadas), dimensões e
+cotas (comprimento, largura, espessura, cota mínima e máxima), descrição (cor,
+Munsell, tipo de sedimento, compacidade, componentes, estrutura do depósito, e
+três perguntas sim/não: <kbd>Selada</kbd>, <kbd>Alteração superficial</kbd>,
+<kbd>Bioturbação</kbd>), espólio presente, interpretação (atividade, fase,
+datação, elementos datantes), datas de abertura e de fecho e responsável.
+Guarda-se sozinha enquanto escreve. No fundo encontra também as fotos e os
+pontos de levantamento que nomeiam a UE no título, no nome ou na nota («UE 102
+de norte»).</li>
+<li>Ao lado de definição, cor, tipo de sedimento, compacidade, componentes,
+espólio presente, interpretação, atividade e datação está o botão do
+<strong>tesauro</strong> (o livrinho): escolha do léxico normalizado ou dos seus
+termos, e a ficha mantém-se uniforme entre quem escava. Nos componentes e no
+espólio pode escolher mais do que um. Se a palavra que procura não existe, a
+folha propõe acrescentá-la. Os seus termos valem para todos os sítios e
+gerem-se em <kbd>Tesauro</kbd>, no menu ⋯ da ficha de UE. Aí escolhe também a
+<kbd>Cronologia do sítio</kbd>: <kbd>Mediterrânica</kbd> ou
+<kbd>Golfo Arábico (DCT)</kbd>, com os períodos da ficha DCT (Hafit, Umm
+an-Nar, Wadi Suq…) propostos na datação.</li>
 <li><kbd>Adicionar relação</kbd>: escolha a relação (cobre, corta, preenche,
 encosta a, liga-se a, igual a, e as respetivas inversas) e escreva o número da
 outra UE. A relação regista-se uma só vez e aparece invertida na outra ficha:
@@ -102,6 +113,22 @@ escrita.</li>
 relações: a UE mais recente em cima, as UE iguais ou ligadas num só
 retângulo, os cortes a tracejado, as murárias sobre fundo cinzento. Amplia-se
 com dois dedos e partilha-se como imagem.</li>
+<li><strong>Ficha impressa</strong>: dentro de uma ficha, o botão de partilha
+em cima oferece <kbd>Ficha em PDF</kbd> e <kbd>Ficha em DOCX (Word)</kbd>; no
+menu ⋯ da lista, <kbd>Todas as fichas em PDF</kbd> e
+<kbd>Todas as fichas em DOCX (Word)</kbd> põem todas as UE do sítio num só
+ficheiro, uma por página. É o modelo de arquivo: tabelas com os campos,
+relações, espólio, logótipos e cabeçalho do relatório, no idioma escolhido para
+os relatórios.</li>
+<li><strong>Survey123 / DCT</strong>: <kbd>Exportar CSV (ficha UE do DCT)</kbd>
+escreve um CSV com as mesmas colunas e os mesmos códigos do formulário Survey123
+da ficha DCT, pronto a entregar ou a carregar.
+<kbd>Importar CSV (ficha UE do DCT)…</kbd> faz o contrário: lê um CSV exportado
+do Survey123 (ou da aplicação) e cria as fichas com as respetivas relações. As
+UE que já têm ficha no sítio ficam como estavam, e no fim a aplicação indica
+quantas fichas e quantas relações acrescentou. Se no ficheiro estiverem os
+períodos do Golfo, a cronologia do sítio passa a
+<kbd>Golfo Arábico (DCT)</kbd>.</li>
 </ol>
 
 <h3>📍 Levantamento</h3>
@@ -379,7 +406,12 @@ com apêndices completos.</li>
 <li>Escolha o idioma do relatório entre <strong>dezassete</strong>, independente
 do idioma da aplicação: o relatório pode sair em espanhol mesmo que utilize a
 aplicação em português.</li>
-<li>Gere o PDF, ou exporte em DOCX com logótipo e fotos, CSV dos pontos, GeoJSON para o QGIS.</li>
+<li>Gere o PDF, ou exporte em DOCX com logótipos e fotos, CSV dos pontos, GeoJSON para o QGIS.</li>
+<li>Em <kbd>Cabeçalho e logótipos</kbd> escreva o cabeçalho e escolha um ou
+mais logótipos (<kbd>Escolher logótipo da empresa</kbd>, depois
+<kbd>Adicionar outro logótipo</kbd>): saem no topo de todos os relatórios e das
+fichas de UE, pela ordem da lista, que altera com as setas
+<kbd>Mover para antes</kbd>.</li>
 <li>No fim está <kbd>Exportação de espólio (sítio completo)</kbd>:
 <kbd>Exportar CSV do espólio</kbd> para a folha de cálculo, e
 <kbd>Exportar HTML do espólio</kbd> para uma tabela com as miniaturas que se
@@ -389,7 +421,8 @@ escreveu. No relatório final, o espólio tem o seu próprio apêndice, por
 proveniência.</li>
 <li>As UE entram nos relatórios: as abertas e fechadas no período, no
 diário, no semanal e no mensal; no relatório final há o apêndice com todas as
-fichas e a matriz de Harris.</li>
+fichas, a matriz de Harris e uma tabela-resumo das UE (número, tipo,
+definição, datação, cobre, coberta por).</li>
 <li>Com as fotos ativadas nos relatórios, pode escolher <kbd>Fichas fotográficas em vez das fotos</kbd>: cada foto
 entra no PDF e no DOCX como uma ficha de documentação completa, com dados e
 mapa, no idioma do relatório.</li>
@@ -496,8 +529,9 @@ localização negada, as fotos são guardadas sem coordenadas.</p></details>
 
 <details><summary>Faltam fotos ou o logótipo no relatório</summary>
 <p>Verifique se está ativado <kbd>Incluir fotos e desenhos no relatório</kbd>
-e se o logótipo está escolhido em <kbd>Cabeçalho e logótipo</kbd>: valem tanto
-para o PDF como para o DOCX.</p></details>
+e se pelo menos um logótipo está escolhido em <kbd>Cabeçalho e logótipos</kbd>:
+valem tanto para o PDF como para o DOCX, e os logótipos também para as fichas de
+UE impressas.</p></details>
 
 <details><summary>Eliminei um sítio por engano</summary>
 <p>A eliminação é definitiva: os dados não são recuperáveis (não existe

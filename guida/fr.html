@@ -81,19 +81,30 @@ documentation et le diagramme de Harris.</p>
 le numéro suivant (vous pouvez le changer) et demande le type et la définition.
 Le numéro est unique dans le site ; plus tard, vous le changez avec
 <kbd>Changer</kbd>, et les caisses de cette provenance le suivent.</li>
-<li>La fiche rassemble l'identification (type, définition, zone ou secteur,
-carré), les dimensions et les altitudes (longueur, largeur, épaisseur, altitude
-minimale et maximale), la description (couleur, consistance, composants),
-l'interprétation, la datation, les dates d'ouverture et de fermeture et le
-responsable. Elle s'enregistre toute seule pendant que vous écrivez.</li>
-<li>À côté de la définition, de la couleur, de la consistance, des composants,
-de l'interprétation et de la datation se trouve le bouton du
-<strong>thésaurus</strong> (le petit livre) : choisissez dans le lexique
-standard ou parmi vos propres termes, et la fiche reste homogène entre tous ceux
-qui fouillent. Pour les composants, on peut en choisir plusieurs. Si le mot que
-vous cherchez n'y est pas, la feuille propose de l'ajouter. Vos termes valent
-pour tous les sites et se gèrent depuis <kbd>Thésaurus</kbd>, dans le menu ⋯ de
-l'onglet US.</li>
+<li>La fiche rassemble l'identification (type, sous-type, définition, zone ou
+secteur, carré, tranchée, méthode de fouille : manuelle, mécanique ou
+<kbd>Non fouillée</kbd> pour les US documentées mais non fouillées), les
+dimensions et les altitudes (longueur, largeur, épaisseur, altitude minimale et
+maximale), la description (couleur, Munsell, type de sédiment, consistance,
+composants, structure du dépôt, et trois questions oui/non :
+<kbd>Scellée</kbd>, <kbd>Altération de surface</kbd>,
+<kbd>Bioturbation</kbd>), le mobilier présent, l'interprétation (activité,
+phase, datation, éléments datants), les dates d'ouverture et de fermeture et le
+responsable. Elle s'enregistre toute seule pendant que vous écrivez. Tout en bas
+se trouvent aussi les photos et les points de relevé qui nomment l'US dans leur
+titre, leur nom ou leur note (« US 102 depuis le nord »).</li>
+<li>À côté de la définition, de la couleur, du type de sédiment, de la
+consistance, des composants, du mobilier présent, de l'interprétation, de
+l'activité et de la datation se trouve le bouton du <strong>thésaurus</strong>
+(le petit livre) : choisissez dans le lexique standard ou parmi vos propres
+termes, et la fiche reste homogène entre tous ceux qui fouillent. Pour les
+composants et le mobilier, on peut en choisir plusieurs. Si le mot que vous
+cherchez n'y est pas, la feuille propose de l'ajouter. Vos termes valent pour
+tous les sites et se gèrent depuis <kbd>Thésaurus</kbd>, dans le menu ⋯ de
+l'onglet US. C'est là aussi que vous choisissez la
+<kbd>Chronologie du site</kbd> : <kbd>Méditerranéenne</kbd> ou
+<kbd>Golfe Arabique (DCT)</kbd>, avec les périodes de la fiche DCT (Hafit, Umm
+an-Nar, Wadi Suq…) proposées pour la datation.</li>
 <li><kbd>Ajouter une relation</kbd> : choisissez la relation (recouvre, coupe,
 comble, s'appuie contre, liée à, égale à, et leurs inverses) et saisissez le
 numéro de l'autre US. La relation n'est enregistrée qu'une fois et apparaît
@@ -109,6 +120,22 @@ l'explication.</li>
 des relations : l'US la plus récente en haut, les US égales ou liées dans un
 seul cadre, les creusements en pointillés, les maçonneries sur fond gris. On
 l'agrandit avec deux doigts et on la partage comme image.</li>
+<li><strong>Fiche imprimée</strong> : dans une fiche, le bouton de partage en
+haut propose <kbd>Fiche en PDF</kbd> et <kbd>Fiche en DOCX (Word)</kbd> ; depuis
+le menu ⋯ de la liste, <kbd>Toutes les fiches en PDF</kbd> et
+<kbd>Toutes les fiches en DOCX (Word)</kbd> mettent toutes les US du site dans
+un seul fichier, une par page. C'est le formulaire d'archive : tableaux avec les
+champs, relations, mobilier, logos et en-tête du rapport, dans la langue choisie
+pour les rapports.</li>
+<li><strong>Survey123 / DCT</strong> :
+<kbd>Exporter le CSV (fiche US du DCT)</kbd> écrit un CSV avec les mêmes
+colonnes et les mêmes codes que le formulaire Survey123 de la fiche DCT, prêt à
+remettre ou à téléverser. <kbd>Importer le CSV (fiche US du DCT)…</kbd> fait
+l'inverse : il lit un CSV exporté depuis Survey123 (ou depuis l'application) et
+crée les fiches avec leurs relations. Les US qui ont déjà une fiche dans le site
+restent telles quelles, et à la fin l'application indique combien de fiches et
+de relations elle a ajoutées. Si le fichier contient les périodes du Golfe, la
+chronologie du site passe à <kbd>Golfe Arabique (DCT)</kbd>.</li>
 </ol>
 
 <h3>📍 Relevé</h3>
@@ -400,7 +427,12 @@ avec annexes complètes.</li>
 <li>Choisissez la langue du rapport parmi <strong>dix-sept</strong>,
 indépendante de la langue de l'application : le rapport peut sortir en
 italien même si vous utilisez l'application en français.</li>
-<li>Générez le PDF, ou exportez en DOCX avec logo et photos, CSV des points, GeoJSON pour QGIS.</li>
+<li>Générez le PDF, ou exportez en DOCX avec logos et photos, CSV des points, GeoJSON pour QGIS.</li>
+<li>Dans <kbd>En-tête et logos</kbd>, écrivez l'en-tête et choisissez un ou
+plusieurs logos (<kbd>Choisir le logo de la société</kbd>, puis
+<kbd>Ajouter un autre logo</kbd>) : ils apparaissent en tête de tous les
+rapports et des fiches US, dans l'ordre de la liste, que vous changez avec les
+flèches <kbd>Déplacer avant</kbd>.</li>
 <li>Tout en bas se trouve <kbd>Export du mobilier (site entier)</kbd>:
 <kbd>Exporter le CSV du mobilier</kbd> pour le tableur, et
 <kbd>Exporter le HTML du mobilier</kbd> pour un tableau avec les vignettes qui
@@ -410,7 +442,9 @@ vous-même reste tel que vous l'avez écrit. Dans le rapport de fin de chantier,
 le mobilier a son annexe, par provenance.</li>
 <li>Les US entrent dans les rapports : celles ouvertes et fermées dans la
 période dans le journalier, l'hebdomadaire et le mensuel ; dans le rapport final
-se trouve l'annexe avec toutes les fiches et le diagramme de Harris.</li>
+se trouve l'annexe avec toutes les fiches, le diagramme de Harris et un tableau
+récapitulatif des US (numéro, type, définition, datation, recouvre, recouverte
+par).</li>
 <li>Avec les photos activées dans les rapports, vous pouvez choisir
 <kbd>Fiches photographiques à la place des photos</kbd> : chaque photo entre dans le PDF et le DOCX
 comme une fiche de documentation complète avec données et carte, dans la
@@ -520,8 +554,9 @@ de position est refusée, les photos s'enregistrent sans coordonnées.</p></deta
 
 <details><summary>Il manque des photos ou le logo dans le rapport</summary>
 <p>Vérifiez que <kbd>Inclure les photos et les dessins dans le rapport</kbd> est
-activé et que le logo est choisi dans <kbd>En-tête et logo</kbd> : cela vaut
-pour le PDF comme pour le DOCX.</p></details>
+activé et qu'au moins un logo est choisi dans <kbd>En-tête et logos</kbd> :
+cela vaut pour le PDF comme pour le DOCX, et les logos aussi pour les fiches US
+imprimées.</p></details>
 
 <details><summary>J'ai supprimé un site par erreur</summary>
 <p>La suppression est définitive : les données ne sont pas récupérables (il

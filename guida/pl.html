@@ -81,18 +81,27 @@ Harrisa.</p>
 numer (można go zmienić) i pyta o typ i określenie. Numer jest unikalny w
 obrębie stanowiska; później zmienia się go przyciskiem <kbd>Zmień</kbd>, a
 skrzynki z tym pochodzeniem podążają za nim.</li>
-<li>Karta obejmuje identyfikację (typ, określenie, obszar lub sektor, ar),
+<li>Karta obejmuje identyfikację (typ, podtyp, określenie, obszar lub sektor,
+ar, wykop, metoda eksploracji: ręczna, mechaniczna lub
+<kbd>Niewyeksplorowana</kbd> dla JS udokumentowanych, ale niewyeksplorowanych),
 wymiary i wysokości (długość, szerokość, miąższość, wysokość minimalna i
-maksymalna), opis (kolor, konsystencja, składniki), interpretację, datowanie,
-daty otwarcia i zamknięcia oraz osobę odpowiedzialną. Zapisuje się sama w
-trakcie pisania.</li>
-<li>Obok określenia, koloru, konsystencji, składników, interpretacji i
-datowania jest przycisk <strong>tezaurusa</strong> (książeczka): wybiera się ze
-standardowego słownika albo z własnych terminów, dzięki czemu karta pozostaje
-jednolita bez względu na to, kto kopie. W składnikach można wybrać więcej niż
-jeden. Jeśli szukanego słowa nie ma, arkusz proponuje jego dodanie. Własne
-terminy obowiązują na wszystkich stanowiskach i zarządza się nimi w
-<kbd>Tezaurus</kbd>, w menu ⋯ karty JS.</li>
+maksymalna), opis (kolor, Munsell, rodzaj osadu, konsystencja, składniki,
+struktura depozytu oraz trzy pytania tak/nie: <kbd>Zapieczętowana</kbd>,
+<kbd>Wietrzenie powierzchni</kbd>, <kbd>Bioturbacja</kbd>), obecne zabytki,
+interpretację (działalność, faza, datowanie, elementy datujące), daty otwarcia
+i zamknięcia oraz osobę odpowiedzialną. Zapisuje się sama w trakcie pisania. Na
+dole są też zdjęcia i punkty pomiarowe, które wymieniają JS w tytule, nazwie
+lub notatce („JS 102 od północy”).</li>
+<li>Obok określenia, koloru, rodzaju osadu, konsystencji, składników, obecnych
+zabytków, interpretacji, działalności i datowania jest przycisk
+<strong>tezaurusa</strong> (książeczka): wybiera się ze standardowego słownika
+albo z własnych terminów, dzięki czemu karta pozostaje jednolita bez względu na
+to, kto kopie. W składnikach i zabytkach można wybrać więcej niż jeden. Jeśli
+szukanego słowa nie ma, arkusz proponuje jego dodanie. Własne terminy obowiązują
+na wszystkich stanowiskach i zarządza się nimi w <kbd>Tezaurus</kbd>, w menu ⋯
+karty JS. Tam wybiera się też <kbd>Chronologia stanowiska</kbd>:
+<kbd>Śródziemnomorska</kbd> albo <kbd>Zatoka Arabska (DCT)</kbd>, z okresami
+karty DCT (Hafit, Umm an-Nar, Wadi Suq…) proponowanymi przy datowaniu.</li>
 <li><kbd>Dodaj relację</kbd>: wybrać relację (przykrywa, przecina, wypełnia,
 przylega do, związana z, tożsama z oraz ich odwrotności) i wpisać numer drugiej
 JS. Relację zapisuje się tylko raz, a na drugiej karcie pojawia się odwrócona:
@@ -107,6 +116,21 @@ pochodzeniem.</li>
 najmłodsza JS na górze, JS tożsame lub związane w jednym prostokącie,
 przecięcia linią przerywaną, jednostki murowane na szarym tle. Powiększa się ją
 dwoma palcami i udostępnia jako obraz.</li>
+<li><strong>Karta drukowana</strong>: wewnątrz karty przycisk udostępniania u
+góry oferuje <kbd>Karta w PDF</kbd> i <kbd>Karta w DOCX (Word)</kbd>; z menu ⋯
+listy <kbd>Wszystkie karty w PDF</kbd> i
+<kbd>Wszystkie karty w DOCX (Word)</kbd> umieszczają wszystkie JS stanowiska w
+jednym pliku, po jednej na stronę. To formularz archiwalny: tabele z polami,
+relacje, zabytki, loga i nagłówek raportu, w języku wybranym dla raportów.</li>
+<li><strong>Survey123 / DCT</strong>: <kbd>Eksportuj CSV (karta JS DCT)</kbd>
+zapisuje plik CSV z tymi samymi kolumnami i kodami co formularz Survey123 karty
+DCT, gotowy do przekazania lub wczytania.
+<kbd>Importuj CSV (karta JS DCT)…</kbd> działa odwrotnie: wczytuje CSV
+wyeksportowany z Survey123 (lub z aplikacji) i tworzy karty wraz z ich
+relacjami. JS, które mają już kartę na stanowisku, pozostają bez zmian, a na
+koniec aplikacja podaje, ile kart i ile relacji dodała. Jeśli w pliku są okresy
+Zatoki, chronologia stanowiska zmienia się na
+<kbd>Zatoka Arabska (DCT)</kbd>.</li>
 </ol>
 
 <h3>📍 Pomiar</h3>
@@ -393,7 +417,11 @@ nie przepisuje się sam.</li>
 <li>Wybrać język raportu spośród <strong>siedemnastu</strong>, niezależnie od
 języka aplikacji: raport może zostać wygenerowany po angielsku, nawet jeśli
 aplikacja działa po polsku.</li>
-<li>Wygenerować PDF albo wyeksportować DOCX z logo i zdjęciami, CSV punktów, GeoJSON dla QGIS.</li>
+<li>Wygenerować PDF albo wyeksportować DOCX z logami i zdjęciami, CSV punktów, GeoJSON dla QGIS.</li>
+<li>W <kbd>Nagłówek i loga</kbd> wpisać nagłówek i wybrać jedno lub więcej
+logo (<kbd>Wybierz logo firmy</kbd>, potem <kbd>Dodaj kolejne logo</kbd>):
+pojawiają się na górze wszystkich raportów i kart JS, w kolejności z listy,
+którą zmienia się strzałkami <kbd>Przesuń wyżej</kbd>.</li>
 <li>Na dole jest <kbd>Eksport zabytków (całe stanowisko)</kbd>:
 <kbd>Eksportuj CSV zabytków</kbd> do arkusza kalkulacyjnego i
 <kbd>Eksportuj HTML zabytków</kbd> — tabela z miniaturami, którą otwiera
@@ -403,7 +431,8 @@ wpisane. W raporcie końcowym zabytki mają własny załącznik, według
 pochodzenia.</li>
 <li>JS trafiają do raportów: te otwarte i zamknięte w danym okresie — do
 dziennego, tygodniowego i miesięcznego; w raporcie końcowym jest załącznik ze
-wszystkimi kartami i macierzą Harrisa.</li>
+wszystkimi kartami, macierzą Harrisa i tabelą zbiorczą JS (numer, typ,
+określenie, datowanie, przykrywa, przykryta przez).</li>
 <li>Przy włączonych zdjęciach w raportach można wybrać <kbd>Karty fotograficzne zamiast zdjęć</kbd>: każde
 zdjęcie trafia do PDF i DOCX jako pełna karta dokumentacyjna z danymi i mapą,
 w języku raportu.</li>
@@ -516,8 +545,8 @@ lokalizacji zdjęcia są zapisywane bez współrzędnych.</p></details>
 
 <details><summary>W raporcie brakuje zdjęć lub logo</summary>
 <p>Sprawdzić, czy włączone jest <kbd>Uwzględnij zdjęcia i rysunki w raporcie</kbd>
-i czy logo jest wybrane w <kbd>Nagłówek i logo</kbd>: dotyczy to zarówno PDF,
-jak i DOCX.</p></details>
+i czy wybrano co najmniej jedno logo w <kbd>Nagłówek i loga</kbd>: dotyczy to
+zarówno PDF, jak i DOCX, a loga także drukowanych kart JS.</p></details>
 
 <details><summary>Przez pomyłkę usunięto stanowisko</summary>
 <p>Usunięcie jest ostateczne: dane nie podlegają odzyskaniu (nie ma chmury).

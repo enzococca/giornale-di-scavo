@@ -78,17 +78,26 @@ diagramma di Harris.</p>
 successivo (lo puoi cambiare) e chiede tipo e definizione. Il numero è unico nel
 sito; più tardi lo cambi con <kbd>Cambia</kbd>, e le cassette con quella
 provenienza lo seguono.</li>
-<li>La scheda raccoglie identificazione (tipo, definizione, area o settore,
-quadrato), dimensioni e quote (lunghezza, larghezza, potenza, quota minima e
-massima), descrizione (colore, consistenza, componenti), interpretazione,
-datazione, date di apertura e chiusura e responsabile. Si salva da sola mentre
-scrivi.</li>
-<li>Accanto a definizione, colore, consistenza, componenti, interpretazione e
-datazione c'è il pulsante del <strong>thesaurus</strong> (il libretto): scegli
-dal lessico standard o dai tuoi termini, e la scheda resta uniforme fra chi
-scava. Nei componenti se ne scelgono più d'uno. Se la parola che cerchi non c'è,
-il foglio propone di aggiungerla. I tuoi termini valgono per tutti i siti e si
-gestiscono da <kbd>Thesaurus</kbd>, nel menu ⋯ della scheda US.</li>
+<li>La scheda raccoglie identificazione (tipo, sottotipo, definizione, area o
+settore, quadrato, trincea, metodo di scavo: manuale, meccanico o
+<kbd>Non scavata</kbd> per le US documentate ma non scavate), dimensioni e quote
+(lunghezza, larghezza, potenza, quota minima e massima), descrizione (colore,
+Munsell, tipo di sedimento, consistenza, componenti, struttura del deposito, e
+tre domande sì/no: <kbd>Sigillata</kbd>, <kbd>Alterazione superficiale</kbd>,
+<kbd>Bioturbazione</kbd>), reperti presenti, interpretazione (attività, fase,
+datazione, elementi datanti), date di apertura e chiusura e responsabile. Si
+salva da sola mentre scrivi. In fondo trovi anche le foto e i punti di rilievo
+che nominano la US nel titolo, nel nome o nella nota («US 102 da nord»).</li>
+<li>Accanto a definizione, colore, tipo di sedimento, consistenza, componenti,
+reperti presenti, interpretazione, attività e datazione c'è il pulsante del
+<strong>thesaurus</strong> (il libretto): scegli dal lessico standard o dai tuoi
+termini, e la scheda resta uniforme fra chi scava. Nei componenti e nei reperti
+se ne scelgono più d'uno. Se la parola che cerchi non c'è, il foglio propone di
+aggiungerla. I tuoi termini valgono per tutti i siti e si gestiscono da
+<kbd>Thesaurus</kbd>, nel menu ⋯ della scheda US. Lì scegli anche la
+<kbd>Cronologia del sito</kbd>: <kbd>Mediterranea</kbd> oppure
+<kbd>Golfo arabico (DCT)</kbd>, con i periodi della scheda DCT (Hafit, Umm
+an-Nar, Wadi Suq…) proposti nella datazione.</li>
 <li><kbd>Aggiungi rapporto</kbd>: scegli il rapporto (copre, taglia, riempie, si
 appoggia a, si lega a, uguale a, e i loro inversi) e scrivi il numero dell'altra
 US. Il rapporto si registra una volta sola e compare girato nell'altra scheda: se
@@ -103,6 +112,21 @@ già scritta.</li>
 la US più recente in alto, le US uguali o legate in un riquadro solo, i tagli
 tratteggiati, le murarie su fondo grigio. Si ingrandisce con due dita e si
 condivide come immagine.</li>
+<li><strong>Scheda stampata</strong>: dentro una scheda, il pulsante di
+condivisione in alto offre <kbd>Scheda in PDF</kbd> e
+<kbd>Scheda in DOCX (Word)</kbd>; dal menu ⋯ dell'elenco,
+<kbd>Tutte le schede in PDF</kbd> e <kbd>Tutte le schede in DOCX (Word)</kbd>
+mettono tutte le US del sito in un solo file, una per pagina. È il modulo da
+archivio: tabelle con i campi, rapporti, materiali, loghi e intestazione del
+report, nella lingua scelta per i report.</li>
+<li><strong>Survey123 / DCT</strong>: <kbd>Esporta CSV (scheda DCT)</kbd> scrive
+un CSV con le stesse colonne e gli stessi codici del modulo Survey123 della scheda
+DCT, pronto da consegnare o da caricare. <kbd>Importa CSV (scheda DCT)…</kbd> fa
+il contrario: legge un CSV esportato da Survey123 (o dall'app) e crea le schede
+con i loro rapporti. Le US che hanno già una scheda nel sito restano com'erano,
+e alla fine l'app dice quante schede e quanti rapporti ha aggiunto. Se nel file
+ci sono i periodi del Golfo, la cronologia del sito passa a
+<kbd>Golfo arabico (DCT)</kbd>.</li>
 </ol>
 
 <h3>📍 Rilievo</h3>
@@ -371,8 +395,12 @@ con appendici complete.</li>
 <li>Scegli la lingua del report fra <strong>diciassette</strong>,
 indipendente dalla lingua dell'app: la relazione può uscire in tedesco anche se
 l'app la usi in italiano.</li>
-<li>Genera il PDF, oppure esporta DOCX con logo e foto,
+<li>Genera il PDF, oppure esporta DOCX con loghi e foto,
 CSV dei punti, GeoJSON per QGIS.</li>
+<li>In <kbd>Intestazione e loghi</kbd> scrivi l'intestazione e scegli uno o più
+loghi (<kbd>Scegli logo aziendale</kbd>, poi <kbd>Aggiungi un altro logo</kbd>):
+escono in testa a tutti i report e alle schede US, nell'ordine dell'elenco, che
+cambi con le frecce <kbd>Sposta prima</kbd>.</li>
 <li>In fondo c'è <kbd>Export materiali (tutto il sito)</kbd>:
 <kbd>Esporta CSV materiali</kbd> per il foglio di calcolo, e
 <kbd>Esporta HTML materiali</kbd> per una tabella con le miniature che si apre
@@ -382,7 +410,8 @@ scritto. Nel report di fine lavoro i materiali hanno la loro appendice, per
 provenienza.</li>
 <li>Le US entrano nei report: quelle aperte e chiuse nel periodo nel giornaliero,
 nel settimanale e nel mensile; nel report finale c'è l'appendice con tutte le
-schede e il diagramma di Harris.</li>
+schede, il diagramma di Harris e una tabella riassuntiva delle US (numero, tipo,
+definizione, datazione, copre, coperta da).</li>
 <li>Con le foto nei report attive puoi scegliere <kbd>Schede fotografiche al posto delle foto</kbd>: ogni foto entra nel PDF e
 nel DOCX come scheda di documentazione completa di dati e mappa, nella lingua
 del report.</li>
@@ -486,8 +515,8 @@ negato, le foto si salvano senza coordinate.</p></details>
 
 <details><summary>Nel report mancano foto o logo</summary>
 <p>Controlla che sia attivo <kbd>Includi foto e disegni nel report</kbd> e che
-il logo sia scelto in <kbd>Intestazione e logo</kbd>: valgono sia per il PDF sia
-per il DOCX.</p></details>
+almeno un logo sia scelto in <kbd>Intestazione e loghi</kbd>: valgono sia per il
+PDF sia per il DOCX, e i loghi anche per le schede US stampate.</p></details>
 
 <details><summary>Ho eliminato un sito per errore</summary>
 <p>L'eliminazione è definitiva: i dati non sono recuperabili (non esiste un

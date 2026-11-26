@@ -79,18 +79,27 @@ Harris.</p>
 următor (îl puteți schimba) și cere tipul și definiția. Numărul este unic în
 sit; mai târziu îl schimbați cu <kbd>Schimbă</kbd>, iar lăzile cu acea
 proveniență îl urmează.</li>
-<li>Fișa reunește identificarea (tip, definiție, zonă sau sector, carou),
-dimensiunile și cotele (lungime, lățime, grosime, cotă minimă și maximă),
-descrierea (culoare, consistență, componente), interpretarea, datarea, datele
-de deschidere și de închidere și responsabilul. Se salvează singură în timp ce
-scrieți.</li>
-<li>Lângă definiție, culoare, consistență, componente, interpretare și datare
-se află butonul <strong>tezaurului</strong> (cărticica): alegeți din lexicul
-standard sau din termenii dumneavoastră, iar fișa rămâne uniformă între cei
-care sapă. La componente se pot alege mai mulți. Dacă termenul căutat nu
+<li>Fișa reunește identificarea (tip, subtip, definiție, zonă sau sector,
+carou, secțiune, metodă de săpătură: manuală, mecanică sau
+<kbd>Nesăpată</kbd> pentru US documentate, dar nesăpate), dimensiunile și
+cotele (lungime, lățime, grosime, cotă minimă și maximă), descrierea (culoare,
+Munsell, tip de sediment, consistență, componente, structura depozitului și trei
+întrebări da/nu: <kbd>Sigilată</kbd>, <kbd>Alterare superficială</kbd>,
+<kbd>Bioturbație</kbd>), materialele prezente, interpretarea (activitate, fază,
+datare, elemente de datare), datele de deschidere și de închidere și
+responsabilul. Se salvează singură în timp ce scrieți. Jos găsiți și
+fotografiile și punctele de ridicare care numesc US în titlu, în nume sau în
+notă („US 102 dinspre nord”).</li>
+<li>Lângă definiție, culoare, tip de sediment, consistență, componente,
+materiale prezente, interpretare, activitate și datare se află butonul
+<strong>tezaurului</strong> (cărticica): alegeți din lexicul standard sau din
+termenii dumneavoastră, iar fișa rămâne uniformă între cei care sapă. La
+componente și la materiale se pot alege mai mulți. Dacă termenul căutat nu
 există, foaia propune să-l adăugați. Termenii dumneavoastră sunt valabili
 pentru toate siturile și se gestionează din <kbd>Tezaur</kbd>, în meniul ⋯ al
-filei US.</li>
+filei US. Tot acolo alegeți și <kbd>Cronologia sitului</kbd>:
+<kbd>Mediteraneeană</kbd> sau <kbd>Golful Arabic (DCT)</kbd>, cu perioadele
+fișei DCT (Hafit, Umm an-Nar, Wadi Suq…) propuse la datare.</li>
 <li><kbd>Adaugă relație</kbd>: alegeți relația (acoperă, taie, umple, se
 sprijină pe, legată de, egală cu, și inversele lor) și scrieți numărul
 celeilalte US. Relația se înregistrează o singură dată și apare inversată în
@@ -105,6 +114,21 @@ scrisă.</li>
 US cea mai recentă sus, US egale sau legate într-un singur chenar, tăieturile
 cu linie întreruptă, cele de zidărie pe fond gri. Se mărește cu două degete și
 se partajează ca imagine.</li>
+<li><strong>Fișa tipărită</strong>: într-o fișă, butonul de partajare de sus
+oferă <kbd>Fișa în PDF</kbd> și <kbd>Fișa în DOCX (Word)</kbd>; din meniul ⋯ al
+listei, <kbd>Toate fișele în PDF</kbd> și
+<kbd>Toate fișele în DOCX (Word)</kbd> pun toate US ale sitului într-un singur
+fișier, câte una pe pagină. Este formularul de arhivă: tabele cu câmpurile,
+relații, materiale, logo-urile și antetul raportului, în limba aleasă pentru
+rapoarte.</li>
+<li><strong>Survey123 / DCT</strong>: <kbd>Exportați CSV (fișa US DCT)</kbd>
+scrie un CSV cu aceleași coloane și aceleași coduri ca formularul Survey123 al
+fișei DCT, gata de predat sau de încărcat.
+<kbd>Importați CSV (fișa US DCT)…</kbd> face invers: citește un CSV exportat
+din Survey123 (sau din aplicație) și creează fișele cu relațiile lor. US care
+au deja o fișă în sit rămân neschimbate, iar la final aplicația spune câte fișe
+și câte relații a adăugat. Dacă în fișier există perioadele Golfului,
+cronologia sitului trece la <kbd>Golful Arabic (DCT)</kbd>.</li>
 </ol>
 
 <h3>📍 Ridicare</h3>
@@ -393,7 +417,12 @@ cu anexe complete.</li>
 <li>Alegeți limba raportului dintre <strong>șaptesprezece</strong>, independentă
 de limba aplicației: raportul poate ieși în germană chiar dacă folosiți
 aplicația în română.</li>
-<li>Generați PDF-ul, sau exportați DOCX cu logo și fotografii, CSV al punctelor, GeoJSON pentru QGIS.</li>
+<li>Generați PDF-ul, sau exportați DOCX cu logo-uri și fotografii, CSV al punctelor, GeoJSON pentru QGIS.</li>
+<li>În <kbd>Antet și logo-uri</kbd> scrieți antetul și alegeți unul sau mai
+multe logo-uri (<kbd>Alegeți logo-ul companiei</kbd>, apoi
+<kbd>Adăugați încă un logo</kbd>): apar în partea de sus a tuturor rapoartelor
+și a fișelor US, în ordinea din listă, pe care o schimbați cu săgețile
+<kbd>Mută înainte</kbd>.</li>
 <li>La final se află <kbd>Export materiale (întregul sit)</kbd>:
 <kbd>Exportați CSV materiale</kbd> pentru foaia de calcul și
 <kbd>Exportați HTML materiale</kbd> pentru un tabel cu miniaturi care se
@@ -403,7 +432,8 @@ rămâne așa cum l-ați scris. În raportul final, materialele au anexa lor, pe
 proveniențe.</li>
 <li>US intră în rapoarte: cele deschise și închise în perioada respectivă în
 raportul zilnic, săptămânal și lunar; în raportul final există anexa cu toate
-fișele și matricea Harris.</li>
+fișele, matricea Harris și un tabel rezumativ al US (număr, tip, definiție,
+datare, acoperă, acoperită de).</li>
 <li>Cu fotografiile din rapoarte activate, puteți alege <kbd>Fișe fotografice în locul fotografiilor</kbd>: fiecare fotografie
 intră în PDF și în DOCX ca o fișă de documentare completă, cu date și hartă,
 în limba raportului.</li>
@@ -514,8 +544,8 @@ permisiunea de locație refuzată, fotografiile se salvează fără coordonate.<
 
 <details><summary>Lipsesc fotografiile sau logo-ul din raport</summary>
 <p>Verificați că este activat <kbd>Includeți fotografiile și desenele în raport</kbd>
-și că logo-ul este ales în <kbd>Antet și logo</kbd>: se aplică atât la PDF, cât
-și la DOCX.</p></details>
+și că cel puțin un logo este ales în <kbd>Antet și logo-uri</kbd>: se aplică
+atât la PDF, cât și la DOCX, iar logo-urile și la fișele US tipărite.</p></details>
 
 <details><summary>Am șters un sit din greșeală</summary>
 <p>Ștergerea este definitivă: datele nu pot fi recuperate (nu există cloud).
